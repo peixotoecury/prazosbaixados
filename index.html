@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Baixas de Prazos — Peixoto & Cury</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0D2137;--bg2:#132d45;--bg3:#1a3a5c;--bg4:#1e4570;
+  --tx:#e8edf3;--tx2:#7a9bb5;--tlt:#b0c4de;
+  --cyan:#00AEEF;--red:#C0392B;--org:#E67E22;--yel:#F1C40F;
+  --blu:#2980B9;--grn:#117A65;
+}
+body{background:var(--bg);color:var(--tx);font-family:Arial,sans-serif;font-size:13px;min-height:100vh}
+.hdr{background:var(--bg2);border-bottom:2px solid var(--cyan);display:flex;align-items:center;gap:16px;padding:12px 20px;position:sticky;top:0;z-index:50}
+.logo-svg{width:38px;height:38px;flex-shrink:0}
+.hdr-info h1{font-size:15px;font-weight:700}
+.hdr-info p{font-size:11px;color:var(--tx2)}
+.hbadge{margin-left:auto;display:flex;align-items:center;gap:10px}
+.bp{background:rgba(0,174,239,.1);border:1px solid rgba(0,174,239,.3);color:var(--cyan);border-radius:20px;padding:4px 12px;font-size:10px;font-weight:600}
+.ba{background:rgba(192,57,43,.15);border:1px solid rgba(192,57,43,.4);color:#e74c3c;border-radius:20px;padding:4px 12px;font-size:10px;font-weight:700}
+.main{padding:18px 20px;max-width:1500px;margin:0 auto}
+.kpis{display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap}
+.kpi{background:var(--bg2);border:1px solid rgba(0,174,239,.15);border-radius:8px;padding:12px 16px;min-width:110px;flex:1}
+.klbl{font-size:9px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--tx2);margin-bottom:6px}
+.kval{font-size:28px;font-weight:700;line-height:1}
+.ksub{font-size:10px;color:var(--tx2);margin-top:4px}
+.red{color:#e74c3c}.org{color:var(--org)}.yel{color:var(--yel)}.blu{color:var(--cyan)}.grn{color:#27AE60}.wh{color:var(--tx)}
+.ptitle{background:var(--bg3);border-radius:6px 6px 0 0;padding:10px 16px;font-size:12px;font-weight:700;letter-spacing:.3px;display:flex;align-items:center;gap:8px}
+.ptitle.re{border-left:3px solid #e74c3c}
+.ptitle.ore{border-left:3px solid var(--org)}
+.ptitle.ble{border-left:3px solid var(--cyan)}
+.ptitle.grne{border-left:3px solid #27AE60}
+.pcnt{margin-left:auto;font-size:10px;color:var(--tx2);font-weight:400}
+.pnl{background:var(--bg2);border-radius:8px;overflow:hidden;border:1px solid rgba(0,174,239,.1)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;padding:7px 10px;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--tx2);background:var(--bg3);border-bottom:1px solid rgba(255,255,255,.06);white-space:nowrap}
+th.c{text-align:center}
+td{padding:7px 10px;border-bottom:1px solid rgba(255,255,255,.04);font-size:11px;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:rgba(255,255,255,.015)}
+tr:hover td{background:rgba(0,174,239,.04)}
+td.c{text-align:center}
+.vbad{display:inline-block;border-radius:4px;padding:2px 8px;font-size:10px;font-weight:700;text-align:center;min-width:28px}
+.vbad.red{background:rgba(192,57,43,.2);color:#e74c3c;border:1px solid rgba(192,57,43,.3)}
+.vbad.org{background:rgba(230,126,34,.15);color:var(--org);border:1px solid rgba(230,126,34,.25)}
+.vbad.yel{background:rgba(241,196,15,.12);color:#d4a017;border:1px solid rgba(241,196,15,.2)}
+.vbad.blu{background:rgba(0,174,239,.1);color:var(--cyan);border:1px solid rgba(0,174,239,.2)}
+.vbad.grn{background:rgba(39,174,96,.12);color:#27AE60;border:1px solid rgba(39,174,96,.2)}
+.vbad.muted{background:rgba(255,255,255,.05);color:var(--tx2)}
+.vbad.alert{background:rgba(192,57,43,.25);color:#e74c3c;border:1px solid rgba(192,57,43,.5);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 6px rgba(192,57,43,.3)}50%{box-shadow:0 0 14px rgba(192,57,43,.6)}}
+.hr-pill{display:inline-block;border-radius:12px;padding:2px 9px;font-size:10px;font-weight:700;font-family:monospace}
+.hr-pill.night{background:rgba(192,57,43,.18);color:#e74c3c;border:1px solid rgba(192,57,43,.35)}
+.hr-pill.late{background:rgba(230,126,34,.12);color:var(--org);border:1px solid rgba(230,126,34,.25)}
+.scr{overflow-y:auto;max-height:340px}
+.scr::-webkit-scrollbar{width:3px}
+.scr::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:2px}
+.zrow td{background:rgba(39,174,96,.03)!important}
+.zrow:hover td{background:rgba(39,174,96,.07)!important}
+.hr-bars{display:flex;align-items:flex-end;gap:3px;height:70px;padding:12px 16px 0}
+.hr-b{flex:1;border-radius:2px 2px 0 0;min-height:2px}
+.hr-b.comercial{background:#2471A3;opacity:.7}
+.hr-b.fora{background:#C0392B;opacity:.85}
+.hr-xlbl{display:flex;gap:3px;padding:2px 16px 4px}
+.hr-xlbl span{flex:1;text-align:center;font-size:7px;color:var(--tx2)}
+.hr-leg{display:flex;gap:14px;padding:6px 16px 12px;font-size:10px;color:var(--tx2)}
+.hr-leg span{display:flex;align-items:center;gap:5px}
+.ldot{width:8px;height:4px;border-radius:2px;flex-shrink:0}
+@media(max-width:900px){.g2{grid-template-columns:1fr}.kpi{min-width:calc(50% - 5px);flex:unset}}
+</style>
+</head>
+<body>
+<div class="hdr">
+<img src="https://www.peixotoecury.com.br/assets/images/ui/logo-light.png" style="height:42px;width:auto;object-fit:contain;" alt="Peixoto e Cury Advogados">
+  <div class="hdr-info">
+    <h1>⚖ Baixas de Prazos — Análise Semanal</h1>
+    <p>Controladoria Jurídica · Área Trabalhista · 16/04/2026 a 26/04/2026</p>
+  </div>
+  <div class="hbadge">
+    <span class="bp">1.059 BAIXAS</span>
+    <span class="ba">⚠ 282 FATAIS · 11 FORA HORÁRIO</span>
+  </div>
+</div>
+
+<div class="main">
+<div class="kpis">
+  <div class="kpi"><div class="klbl">Total Baixado</div><div class="kval wh">1.059</div><div class="ksub">prazos realizados</div></div>
+  <div class="kpi"><div class="klbl">Fatais</div><div class="kval org">282</div><div class="ksub">26,6% — protocolado no dia fatal</div></div>
+  <div class="kpi"><div class="klbl">Vencidos</div><div class="kval red">56</div><div class="ksub">5,3% — após vencimento</div></div>
+  <div class="kpi"><div class="klbl">D-1 (no dia)</div><div class="kval yel">276</div><div class="ksub">cumpridos no prazo</div></div>
+  <div class="kpi"><div class="klbl">Antecipados</div><div class="kval grn">445</div><div class="ksub">42% — antes do prazo</div></div>
+  <div class="kpi"><div class="klbl">Fora do Horário</div><div class="kval org"&#x200B;/div><div class="ksub">antes 9h ou após 19h</div></div>
+  <div class="kpi"><div class="klbl">Fatal + Fora Hora</div><div class="kval red">11</div><div class="ksub">⚠ caso crítico</div></div>
+</div>
+
+<div class="g2">
+  <div class="pnl">
+    <div class="ptitle ore">🔥 Quem Mais Protocola no Fatal <span class="pcnt">ordenado por nº de fatais</span></div>
+    <div class="scr"><table>
+      <thead><tr><th>#</th><th>Responsável</th><th>Grupo</th><th class="c">Fatal</th><th class="c">Vencido</th><th class="c">D-1</th><th class="c">Total</th><th class="c">% Fatal</th></tr></thead>
+      <tbody id="tb-fatal"></tbody>
+    </table></div>
+  </div>
+  <div class="pnl">
+    <div class="ptitle re">🚨 Quem Mais Realiza com Vencido <span class="pcnt">prazos após o vencimento</span></div>
+    <div class="scr"><table>
+      <thead><tr><th>#</th><th>Responsável</th><th>Grupo</th><th class="c">Vencido</th><th class="c">Fatal</th><th class="c">D-1</th><th class="c">Total</th><th class="c">% Vencido</th></tr></thead>
+      <tbody id="tb-vencido"></tbody>
+    </table></div>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="pnl">
+    <div class="ptitle re">⏰ Fatal Fora do Horário — Por Profissional <span class="pcnt">fatais antes das 9h ou após as 19h</span></div>
+    <div class="scr"><table>
+      <thead><tr><th>#</th><th>Responsável</th><th>Grupo</th><th class="c">Fat+Fora</th><th class="c">Tot.Fora</th><th class="c">Fatais</th><th class="c">Total</th></tr></thead>
+      <tbody id="tb-fatfora"></tbody>
+    </table></div>
+  </div>
+  <div class="pnl">
+    <div class="ptitle grne">✅ Quem Cumpre o D-1 — Zero Fatal <span class="pcnt">profissionais sem fatal e sem vencido</span></div>
+    <div class="scr"><table>
+      <thead><tr><th>#</th><th>Responsável</th><th>Grupo</th><th class="c">D-1</th><th class="c">D-2</th><th class="c">Antecip.</th><th class="c">Total</th><th class="c">% D-1</th></tr></thead>
+      <tbody id="tb-zero"></tbody>
+    </table></div>
+  </div>
+</div>
+
+<div class="g2">
+  <div class="pnl">
+    <div class="ptitle re">📋 Registro Detalhado — Fatais & Vencidos Fora do Horário <span class="pcnt">11 registros</span></div>
+    <div class="scr"><table>
+      <thead><tr><th>Resp.</th><th>Grupo</th><th>Horário</th><th>Status</th><th>Prazo Agend.</th><th>Processo</th></tr></thead>
+      <tbody id="tb-detail"></tbody>
+    </table></div>
+  </div>
+  <div class="pnl">
+    <div class="ptitle ble">🕐 Distribuição por Hora de Realização</div>
+    <div class="hr-bars" id="hr-bars"></div>
+    <div class="hr-xlbl" id="hr-xlbl"></div>
+    <div class="hr-leg">
+      <span><div class="ldot" style="background:#2471A3"></div>Horário comercial (9–18h)</span>
+      <span><div class="ldot" style="background:#C0392B"></div>Fora do horário</span>
+    </div>
+    <div style="padding:0 16px 12px;border-top:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:10px;color:var(--tx2);font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:10px 0 8px">Fora de Horário por Grupo</div>
+      <table><thead><tr><th>Grupo</th><th class="c">Fora Hr.</th><th class="c">Total</th><th class="c">%</th></tr></thead>
+      <tbody id="tb-grpfora"></tbody></table>
+    </div>
+  </div>
+</div>
+
+<div class="g2">
+  <!-- Distribuição por grupo: fatais e vencidos -->
+  <div class="pnl">
+    <div class="ptitle ore">🏢 Fatais & Vencidos por Grupo <span class="pcnt">% sobre total do grupo</span></div>
+    <table>
+      <thead><tr>
+        <th>Grupo</th>
+        <th class="c">Total</th>
+        <th class="c">Fatal</th>
+        <th class="c">% Fat</th>
+        <th class="c">Vencido</th>
+        <th class="c">% Ven</th>
+        <th class="c">D-1</th>
+        <th class="c">Fora Hr.</th>
+        <th class="c">Fat+Fora</th>
+      </tr></thead>
+      <tbody id="tb-grp-fat"></tbody>
+    </table>
+  </div>
+
+  <!-- Zero fatal por grupo -->
+  <div class="pnl">
+    <div class="ptitle grne">✅ Quem Cumpre o D-1 por Grupo <span class="pcnt">profissionais sem fatal e sem vencido</span></div>
+    <div class="scr"><table>
+      <thead><tr>
+        <th>Grupo</th>
+        <th>Responsável</th>
+        <th class="c">D-1</th>
+        <th class="c">Total</th>
+        <th class="c">% D-1</th>
+      </tr></thead>
+      <tbody id="tb-grp-zero"></tbody>
+    </table></div>
+  </div>
+</div>
+</div>
+
+<script>
+const RESP=[
+  {n:'RFE',fat:30,ven:2,d1:17,d2:5,fut:18,fora:0,ff:0,tot:72,grp:'Grupo B1'},
+  {n:'RYL',fat:29,ven:9,d1:9,d2:3,fut:9,fora:3,ff:0,tot:59,grp:'Grupo E2'},
+  {n:'BCF',fat:26,ven:0,d1:4,d2:2,fut:8,fora:0,ff:0,tot:40,grp:'Grupo B2'},
+  {n:'CAL',fat:22,ven:0,d1:1,d2:3,fut:12,fora:0,ff:0,tot:38,grp:'Grupo E2'},
+  {n:'RRU',fat:21,ven:11,d1:8,d2:5,fut:28,fora:5,ff:0,tot:73,grp:'Grupo E2'},
+  {n:'JJS',fat:21,ven:1,d1:18,d2:2,fut:4,fora:5,ff:1,tot:46,grp:'Grupo B1'},
+  {n:'JRT',fat:16,ven:7,d1:13,d2:2,fut:7,fora:18,ff:6,tot:45,grp:'Grupo E2'},
+  {n:'VCR',fat:14,ven:0,d1:3,d2:2,fut:10,fora:0,ff:0,tot:29,grp:'Grupo B2'},
+  {n:'BIM',fat:14,ven:4,d1:3,d2:2,fut:13,fora:3,ff:0,tot:36,grp:'Grupo E2'},
+  {n:'GSM',fat:13,ven:0,d1:13,d2:4,fut:20,fora:4,ff:0,tot:50,grp:'Grupo B1'},
+  {n:'TFR',fat:10,ven:0,d1:5,d2:1,fut:3,fora:1,ff:0,tot:19,grp:'Grupo C'},
+  {n:'BSO',fat:7,ven:1,d1:10,d2:2,fut:15,fora:7,ff:1,tot:35,grp:'Grupo B1'},
+  {n:'ECO',fat:7,ven:0,d1:3,d2:2,fut:6,fora:0,ff:0,tot:18,grp:'Grupo C'},
+  {n:'MBF',fat:6,ven:1,d1:7,d2:1,fut:11,fora:0,ff:0,tot:26,grp:'Grupo E2'},
+  {n:'VSI',fat:5,ven:0,d1:4,d2:0,fut:1,fora:0,ff:0,tot:10,grp:'Grupo A3'},
+  {n:'VRO',fat:5,ven:0,d1:17,d2:5,fut:18,fora:0,ff:0,tot:45,grp:'Grupo E1'},
+  {n:'NBG',fat:4,ven:1,d1:2,d2:1,fut:13,fora:0,ff:0,tot:21,grp:'Grupo A2'},
+  {n:'RCF',fat:4,ven:3,d1:5,d2:2,fut:6,fora:0,ff:0,tot:20,grp:'Grupo E2'},
+  {n:'PSI',fat:4,ven:0,d1:23,d2:4,fut:15,fora:7,ff:1,tot:46,grp:'Grupo E1'},
+  {n:'JPL',fat:4,ven:0,d1:17,d2:5,fut:21,fora:0,ff:0,tot:47,grp:'Grupo E1'},
+  {n:'SOF',fat:4,ven:0,d1:0,d2:2,fut:7,fora:0,ff:0,tot:13,grp:'Grupo A3'},
+  {n:'ARC',fat:3,ven:4,d1:2,d2:1,fut:26,fora:2,ff:2,tot:36,grp:'Grupo E2'},
+  {n:'BBO',fat:3,ven:4,d1:1,d2:0,fut:8,fora:2,ff:0,tot:16,grp:'Grupo D1'},
+  {n:'JQS',fat:2,ven:2,d1:7,d2:3,fut:9,fora:0,ff:0,tot:23,grp:'Grupo D1'},
+  {n:'LMI',fat:2,ven:0,d1:25,d2:1,fut:0,fora:0,ff:0,tot:28,grp:'Grupo B3'},
+  {n:'ALF',fat:1,ven:0,d1:6,d2:3,fut:9,fora:0,ff:0,tot:19,grp:'Grupo E1'},
+  {n:'ANB',fat:1,ven:0,d1:3,d2:2,fut:25,fora:0,ff:0,tot:31,grp:'Grupo B3'},
+  {n:'JRM',fat:1,ven:0,d1:17,d2:1,fut:5,fora:0,ff:0,tot:24,grp:'Grupo E1'},
+  {n:'DPR',fat:1,ven:0,d1:8,d2:2,fut:8,fora:6,ff:0,tot:19,grp:'Grupo E1'},
+  {n:'ARE',fat:1,ven:0,d1:0,d2:0,fut:1,fora:0,ff:0,tot:2,grp:'Grupo C'},
+  {n:'NRG',fat:0,ven:2,d1:0,d2:0,fut:0,fora:0,ff:0,tot:2,grp:'Grupo B2'},
+  {n:'JPE',fat:0,ven:4,d1:24,d2:9,fut:18,fora:0,ff:0,tot:55,grp:'Grupo B1'},
+  {n:'AAP',fat:0,ven:0,d1:1,d2:1,fut:13,fora:0,ff:0,tot:15,grp:'Grupo E2'},
+];
+const HR_DIST=[[0,6],[1,2],[6,1],[7,4],[8,15],[9,63],[10,120],[11,129],[12,113],[13,104],[14,87],[15,110],[16,101],[17,88],[18,64],[19,24],[20,14],[21,6],[22,4],[23,4]];
+const FAT_FORA=[
+  {resp:'JRT',grp:'Grupo E2',hr:'00:04',status:'Vencido',dt:'17/04',proc:'0010380-36.2026.5.03.0140'},
+  {resp:'ARC',grp:'Grupo E2',hr:'00:04',status:'Vencido',dt:'17/04',proc:'0010284-58.2026.5.03.0063'},
+  {resp:'JRT',grp:'Grupo E2',hr:'06:04',status:'Fatal',  dt:'22/04',proc:'0010594-52.2026.5.03.0164'},
+  {resp:'JRT',grp:'Grupo E2',hr:'07:04',status:'Fatal',  dt:'22/04',proc:'0011576-08.2025.5.15.0119'},
+  {resp:'JRT',grp:'Grupo E2',hr:'07:04',status:'Fatal',  dt:'22/04',proc:'0011549-25.2025.5.15.0119'},
+  {resp:'JRT',grp:'Grupo E2',hr:'07:04',status:'Fatal',  dt:'23/04',proc:'1001239-28.2025.5.02.0046'},
+  {resp:'JRT',grp:'Grupo E2',hr:'07:04',status:'Fatal',  dt:'23/04',proc:'0011336-72.2025.5.03.0080'},
+  {resp:'ARC',grp:'Grupo A3',hr:'19:04',status:'Fatal',  dt:'21/04',proc:'1000704-83.2025.5.02.0019'},
+  {resp:'PSI',grp:'Grupo E1',hr:'20:04',status:'Fatal',  dt:'20/04',proc:'0010351-83.2014.5.15.0071'},
+  {resp:'BSO',grp:'Grupo B1',hr:'22:04',status:'Fatal',  dt:'21/04',proc:'0012230-76.2025.5.15.0092'},
+  {resp:'JJS',grp:'Grupo B1',hr:'22:04',status:'Vencido',dt:'24/04',proc:'1000336-59.2026.5.02.0433'},
+];
+const BY_GRUPO={
+  'Grupo E2':{total:330,fat:111,ven:39,fora:37},
+  'Grupo B1':{total:248,fat:68,ven:8,fora:17},
+  'Grupo E1':{total:205,fat:18,ven:0,fora:16},
+  'Grupo B2':{total:90,fat:41,ven:2,fora:0},
+  'Grupo C': {total:63,fat:23,ven:1,fora:4},
+  'Grupo B3':{total:50,fat:5,ven:0,fora:2},
+  'Grupo D1':{total:39,fat:5,ven:6,fora:2},
+  'Grupo A3':{total:23,fat:9,ven:0,fora:1},
+  'Grupo A2':{total:10,fat:2,ven:0,fora:1},
+};
+
+function b(v,cls,dash=false){return v===0&&dash?`<td class="c"><span style="color:rgba(255,255,255,.18)">—</span></td>`:`<td class="c"><span class="vbad ${cls}">${v}</span></td>`;}
+function pct(a,b){return b>0?Math.round(a/b*100):0;}
+function pb(p){const c=p>=40?'red':p>=20?'org':p>=10?'yel':'grn';return`<span class="vbad ${c}">${p}%</span>`;}
+
+// Tabela Fatal
+[...RESP].filter(r=>r.fat>0).sort((a,bv)=>bv.fat-a.fat).forEach((r,i)=>{
+  const p=pct(r.fat,r.tot),hasFf=r.ff>0;
+  document.getElementById('tb-fatal').innerHTML+=`<tr>
+    <td style="color:var(--tx2);font-size:10px">${i+1}</td>
+    <td><b>${r.n}</b>${hasFf?` <span class="vbad alert" style="font-size:8px;padding:1px 5px">⏰ FORA HR</span>`:''}</td>
+    <td style="color:var(--tx2);font-size:10px">${r.grp}</td>
+    ${b(r.fat,'org')}${b(r.ven,'red',true)}${b(r.d1,'yel',true)}
+    <td class="c" style="color:var(--tx2)">${r.tot}</td><td class="c">${pb(p)}</td></tr>`;
+});
+
+// Tabela Vencido
+[...RESP].filter(r=>r.ven>0).sort((a,bv)=>bv.ven-a.ven).forEach((r,i)=>{
+  const p=pct(r.ven,r.tot);
+  document.getElementById('tb-vencido').innerHTML+=`<tr>
+    <td style="color:var(--tx2);font-size:10px">${i+1}</td>
+    <td><b>${r.n}</b></td>
+    <td style="color:var(--tx2);font-size:10px">${r.grp}</td>
+    ${b(r.ven,'red')}${b(r.fat,'org',true)}${b(r.d1,'yel',true)}
+    <td class="c" style="color:var(--tx2)">${r.tot}</td><td class="c">${pb(p)}</td></tr>`;
+});
+
+// Tabela Fatal+Fora
+[...RESP].filter(r=>r.ff>0||r.fora>2).sort((a,bv)=>bv.ff-a.ff||bv.fora-a.fora).forEach((r,i)=>{
+  document.getElementById('tb-fatfora').innerHTML+=`<tr>
+    <td style="color:var(--tx2);font-size:10px">${i+1}</td>
+    <td><b>${r.n}</b></td>
+    <td style="color:var(--tx2);font-size:10px">${r.grp}</td>
+    ${b(r.ff,r.ff>0?'alert':'muted')}${b(r.fora,'org')}${b(r.fat,'org',true)}
+    <td class="c" style="color:var(--tx2)">${r.tot}</td></tr>`;
+});
+
+// Tabela Zero Fatal
+[...RESP].filter(r=>r.fat===0&&r.ven===0&&r.tot>=2).sort((a,bv)=>bv.d1-a.d1).forEach((r,i)=>{
+  const antecip=r.tot-r.fat-r.ven-r.d1-r.d2,p=pct(r.d1,r.tot),hasVen=r.ven>0;
+  document.getElementById('tb-zero').innerHTML+=`<tr class="${hasVen?'':'zrow'}">
+    <td style="color:var(--tx2);font-size:10px">${i+1}</td>
+    <td><b>${r.n}</b>${!hasVen?` <span class="vbad grn" style="font-size:8px;padding:1px 5px">✓ SEM FATAL</span>`:''}</td>
+    <td style="color:var(--tx2);font-size:10px">${r.grp}</td>
+    ${b(r.d1,'yel')}${b(r.d2,'blu',true)}
+    <td class="c" style="color:#27AE60;font-weight:700">${Math.max(0,antecip)}</td>
+    <td class="c" style="color:var(--tx2)">${r.tot}</td><td class="c">${pb(p)}</td></tr>`;
+});
+
+// Tabela detalhe
+FAT_FORA.forEach(r=>{
+  const h=parseInt(r.hr),isNight=h<9||h>=20,cls=isNight?'night':'late',scls=r.status==='Fatal'?'org':'red';
+  document.getElementById('tb-detail').innerHTML+=`<tr>
+    <td><b>${r.resp}</b></td>
+    <td style="color:var(--tx2);font-size:10px">${r.grp}</td>
+    <td><span class="hr-pill ${cls}">${r.hr}</span></td>
+    <td><span class="vbad ${scls}">${r.status}</span></td>
+    <td style="color:var(--tx2);font-size:10px;font-family:monospace">${r.dt}</td>
+    <td style="color:var(--tx2);font-size:10px;font-family:monospace">${r.proc.substring(0,22)}…</td></tr>`;
+});
+
+// Gráfico horas
+const maxH=Math.max(...HR_DIST.map(h=>h[1]));
+HR_DIST.forEach(([hr,cnt])=>{
+  const fora=hr<8||hr>=19;
+  const bar=document.createElement('div');bar.className='hr-b '+(fora?'fora':'comercial');
+  bar.style.height=Math.max(cnt/maxH*100,2)+'%';bar.title=`${hr}h: ${cnt}`;
+  document.getElementById('hr-bars').appendChild(bar);
+  const lbl=document.createElement('span');lbl.textContent=hr%6===0?hr+'h':'';
+  document.getElementById('hr-xlbl').appendChild(lbl);
+});
+
+// Grupos fora horário
+['Grupo E2','Grupo B1','Grupo E1','Grupo C','Grupo B3','Grupo D1','Grupo A3','Grupo A2'].forEach(g=>{
+  const v=BY_GRUPO[g];if(!v||!v.fora)return;
+  const p=pct(v.fora,v.total),cls=p>=15?'red':p>=10?'org':'yel';
+  document.getElementById('tb-grpfora').innerHTML+=`<tr>
+    <td style="font-size:10px">${g}</td>
+    <td class="c"><span class="vbad ${cls}">${v.fora}</span></td>
+    <td class="c" style="color:var(--tx2)">${v.total}</td>
+    <td class="c">${pb(p)}</td></tr>`;
+});
+
+const BY_GRUPO_FULL=[
+  {g:'Grupo E2',tot:330,fat:111,ven:39,d1:44,fora:31,ff:7,  zf:['AAP']},
+  {g:'Grupo B1',tot:248,fat:68, ven:8, d1:78,fora:16,ff:2,  zf:['JPE']},
+  {g:'Grupo E1',tot:205,fat:18, ven:0, d1:88,fora:14,ff:1,  zf:[]},
+  {g:'Grupo B2',tot:90, fat:41, ven:2, d1:9, fora:0, ff:0,  zf:['NRG']},
+  {g:'Grupo C', tot:63, fat:23, ven:1, d1:14,fora:0, ff:0,  zf:[]},
+  {g:'Grupo B3',tot:50, fat:5,  ven:0, d1:30,fora:1, ff:0,  zf:['ANB']},
+  {g:'Grupo D1',tot:39, fat:5,  ven:6, d1:8, fora:2, ff:0,  zf:[]},
+  {g:'Grupo A3',tot:23, fat:9,  ven:0, d1:4, fora:1, ff:1,  zf:['NBG']},
+  {g:'Grupo A2',tot:10, fat:2,  ven:0, d1:1, fora:0, ff:0,  zf:[]},
+];
+const ZF_DETAIL={
+  'Grupo E2':[{n:'AAP',d1:1,tot:15}],
+  'Grupo B1':[],
+  'Grupo E1':[],
+  'Grupo B2':[],
+  'Grupo C': [],
+  'Grupo B3':[],
+  'Grupo D1':[],
+  'Grupo A3':[],
+  'Grupo A2':[],
+};
+
+// Tabela por grupo — fatais/vencidos
+BY_GRUPO_FULL.sort((a,bv)=>bv.fat-a.fat).forEach(v=>{
+  const pf=Math.round(v.fat/v.tot*100);
+  const pv=Math.round(v.ven/v.tot*100);
+  const pfcls=pf>=40?'red':pf>=25?'org':pf>=10?'yel':'grn';
+  const pvcls=pv>=10?'red':pv>=5?'org':'muted';
+  const hasFF=v.ff>0;
+  document.getElementById('tb-grp-fat').innerHTML+=`<tr>
+    <td style="font-weight:700">${v.g}</td>
+    <td class="c" style="color:var(--tx2)">${v.tot}</td>
+    <td class="c"><span class="vbad org">${v.fat}</span></td>
+    <td class="c"><span class="vbad ${pfcls}">${pf}%</span></td>
+    ${v.ven>0?`<td class="c"><span class="vbad red">${v.ven}</span></td>`:'<td class="c"><span style="color:rgba(255,255,255,.2)">—</span></td>'}
+    <td class="c"><span class="vbad ${pvcls}">${pv}%</span></td>
+    <td class="c"><span class="vbad yel">${v.d1}</span></td>
+    ${v.fora>0?`<td class="c"><span class="vbad org">${v.fora}</span></td>`:'<td class="c"><span style="color:rgba(255,255,255,.2)">—</span></td>'}
+    ${hasFF?`<td class="c"><span class="vbad alert">${v.ff}</span></td>`:'<td class="c"><span style="color:rgba(255,255,255,.2)">—</span></td>'}
+  </tr>`;
+});
+
+// Tabela zero fatal por grupo
+let grpZeroHtml='';
+BY_GRUPO_FULL.forEach(v=>{
+  const zf=ZF_DETAIL[v.g]||[];
+  if(zf.length===0){
+    grpZeroHtml+=`<tr>
+      <td style="font-weight:700;color:var(--tx2)">${v.g}</td>
+      <td colspan="4" style="color:rgba(255,255,255,.25);font-size:10px;font-style:italic">Todos protocolaram no fatal</td>
+    </tr>`;
+  } else {
+    zf.forEach((z,i)=>{
+      const pd=Math.round(z.d1/z.tot*100);
+      grpZeroHtml+=`<tr class="zrow">
+        <td style="font-weight:700">${i===0?v.g:''}</td>
+        <td><b>${z.n}</b> <span class="vbad grn" style="font-size:8px;padding:1px 5px">✓ SEM FATAL</span></td>
+        <td class="c"><span class="vbad yel">${z.d1}</span></td>
+        <td class="c" style="color:var(--tx2)">${z.tot}</td>
+        <td class="c"><span class="vbad grn">${pd}%</span></td>
+      </tr>`;
+    });
+  }
+});
+document.getElementById('tb-grp-zero').innerHTML=grpZeroHtml;
+</script>
+</body>
+</html>
