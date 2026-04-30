@@ -119,6 +119,340 @@ td.c{text-align:center}
 .btn-excel{background:rgba(33,115,70,.2);border:1px solid rgba(33,115,70,.5);color:#2ecc71;border-radius:6px;padding:6px 14px;font-size:11px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;text-decoration:none;transition:background .2s;margin-bottom:14px}
 .btn-excel:hover{background:rgba(33,115,70,.35)}
 @media(max-width:900px){.g2{grid-template-columns:1fr}.kpi{min-width:calc(50% - 5px);flex:unset}}
+
+
+/* =========================================================
+   PADRÃO VISUAL PEIXOTO & CURY — LAYOUT CLARO EXECUTIVO
+   Aplicado sem alterar lógica, filtros, dados ou exportação
+========================================================= */
+:root{
+  --azul-pc:#00A9E0;
+  --cyan:#00A9E0;
+  --cyan-lt:rgba(0,169,224,.12);
+  --cyan-glow:rgba(0,169,224,.22);
+  --escuro-pc:#003B5C;
+  --navy:#003B5C;
+  --blue:#006080;
+  --preto-pc:#2D2926;
+  --bg:#F4F9FC;
+  --bg2:#FFFFFF;
+  --bg3:#F7FCFF;
+  --bg4:#D8E7F0;
+  --surface:#FFFFFF;
+  --surface2:#F7FCFF;
+  --border:rgba(0,169,224,.20);
+  --border2:#D8E7F0;
+  --tx:#2D2926;
+  --tx2:#5F7E92;
+  --tlt:#7E98AA;
+  --white:#FFFFFF;
+  --red:#C0392B;
+  --org:#E67E22;
+  --yel:#D4A843;
+  --blu:#00A9E0;
+  --grn:#117A65;
+  --shadow-pc:0 8px 22px rgba(0,59,92,.08);
+}
+html,body{background:var(--bg)!important;color:var(--preto-pc)!important;font-family:Arial, sans-serif!important;}
+body{background:linear-gradient(180deg,#F4F9FC 0%,#EDF6FB 100%)!important;}
+
+/* HEADER */
+.hdr{
+  background:linear-gradient(90deg,var(--escuro-pc),#00557B 72%,var(--azul-pc))!important;
+  border-bottom:4px solid var(--azul-pc)!important;
+  box-shadow:0 8px 22px rgba(0,59,92,.16)!important;
+  color:#fff!important;
+  padding:14px 22px!important;
+}
+.hdr img{filter:brightness(1.16)!important;}
+.hdr-info h1{color:#fff!important;font-size:16px!important;letter-spacing:.2px!important;}
+.hdr-info p{color:#D9F2FB!important;}
+.hbadge .bp,.bp{
+  background:rgba(255,255,255,.14)!important;
+  border:1px solid rgba(255,255,255,.42)!important;
+  color:#fff!important;
+}
+.hbadge .ba,.ba{
+  background:rgba(255,255,255,.14)!important;
+  border:1px solid rgba(255,255,255,.42)!important;
+  color:#fff!important;
+}
+
+/* ÁREA PRINCIPAL */
+.main{background:transparent!important;}
+
+/* CARDS E PAINÉIS */
+.kpi,.filter-bar,.pnl,.nota-feriado{
+  background:#fff!important;
+  border:1px solid var(--border2)!important;
+  color:var(--preto-pc)!important;
+  box-shadow:var(--shadow-pc)!important;
+}
+.kpi{
+  border-radius:12px!important;
+  position:relative!important;
+  overflow:hidden!important;
+  padding:15px 18px!important;
+}
+.kpi::before{
+  content:'';position:absolute;left:0;right:0;bottom:0;height:4px;
+  background:linear-gradient(90deg,var(--azul-pc),#007EAA)!important;
+}
+.kpi:hover{border-color:var(--azul-pc)!important;box-shadow:0 10px 26px rgba(0,59,92,.13)!important;transform:translateY(-1px)!important;}
+.klbl{color:#5F7E92!important;font-weight:800!important;}
+.kval.wh,.kval{color:var(--escuro-pc)!important;}
+.ksub{color:#6F8796!important;}
+
+/* Cores dos indicadores */
+.red,.kval[style*="#e74c3c"],.kval[style*="e74c3c"]{color:#C0392B!important;}
+.org,.kval.org{color:#E67E22!important;}
+.yel,.kval.yel{color:#D4A843!important;}
+.blu,.kval.blu{color:var(--azul-pc)!important;}
+.grn,.kval.grn{color:#117A65!important;}
+
+/* BOTÃO EXCEL */
+.btn-excel{
+  background:#117A65!important;
+  border:1px solid #117A65!important;
+  color:#fff!important;
+  border-radius:8px!important;
+  box-shadow:0 6px 16px rgba(17,122,101,.18)!important;
+}
+.btn-excel:hover{background:#0E6655!important;}
+
+/* NOTA */
+.nota-feriado{
+  background:#FFF8E8!important;
+  border-color:#F1D28A!important;
+  color:#7A5A12!important;
+  border-radius:10px!important;
+}
+.nota-feriado b{color:#8A6500!important;}
+
+/* FILTROS */
+.filter-bar{border-radius:12px!important;background:#fff!important;}
+.filter-label{color:var(--escuro-pc)!important;}
+.fbtn{
+  background:#F7FCFF!important;
+  border:1px solid #BFD6E4!important;
+  color:#557789!important;
+  border-radius:20px!important;
+}
+.fbtn:hover{background:#EAF6FB!important;color:var(--escuro-pc)!important;border-color:var(--azul-pc)!important;}
+.fbtn.active-all{background:rgba(0,169,224,.12)!important;border-color:var(--azul-pc)!important;color:var(--escuro-pc)!important;}
+.fbtn.active-fatal,.fbtn.active-fatfora{background:rgba(192,57,43,.10)!important;border-color:#C0392B!important;color:#C0392B!important;}
+.fbtn.active-vencido{background:rgba(123,36,28,.10)!important;border-color:#7B241C!important;color:#7B241C!important;}
+.fbtn.active-d1{background:rgba(212,168,67,.14)!important;border-color:#D4A843!important;color:#8A6500!important;}
+.filter-info{color:#6F8796!important;}
+.filter-sep{background:#D8E7F0!important;}
+
+/* TÍTULOS DOS PAINÉIS */
+.ptitle{
+  background:linear-gradient(90deg,var(--escuro-pc),#00557B)!important;
+  color:#fff!important;
+  border-radius:10px 10px 0 0!important;
+  border-left:none!important;
+  padding:11px 16px!important;
+}
+.ptitle.re{border-bottom:3px solid #C0392B!important;}
+.ptitle.ore{border-bottom:3px solid #E67E22!important;}
+.ptitle.ble{border-bottom:3px solid var(--azul-pc)!important;}
+.ptitle.grne{border-bottom:3px solid #117A65!important;}
+.pcnt{color:#D9F2FB!important;}
+.pnl{border-radius:12px!important;overflow:hidden!important;}
+
+/* TABELAS */
+table{background:#fff!important;}
+th{
+  background:#F0FAFE!important;
+  color:var(--escuro-pc)!important;
+  border-bottom:1px solid var(--border2)!important;
+  font-weight:800!important;
+}
+td{
+  color:var(--preto-pc)!important;
+  border-bottom:1px solid #E7F1F7!important;
+  background:#fff!important;
+}
+tr:nth-child(even) td{background:#F7FCFF!important;}
+tr:hover td{background:#EAF6FB!important;}
+tr:last-child td{border-bottom:none!important;}
+.nome-full{color:var(--preto-pc)!important;}
+.nome-sigla{color:#5F7E92!important;}
+.scr::-webkit-scrollbar-thumb{background:#BFD6E4!important;}
+
+/* BADGES */
+.vbad{border-radius:6px!important;font-weight:800!important;}
+.vbad.red{background:rgba(123,36,28,.10)!important;color:#7B241C!important;border:1px solid rgba(123,36,28,.32)!important;}
+.vbad.fat{background:rgba(192,57,43,.10)!important;color:#C0392B!important;border:1px solid rgba(192,57,43,.35)!important;}
+.vbad.org{background:rgba(230,126,34,.12)!important;color:#B55300!important;border:1px solid rgba(230,126,34,.28)!important;}
+.vbad.yel{background:rgba(212,168,67,.15)!important;color:#8A6500!important;border:1px solid rgba(212,168,67,.32)!important;}
+.vbad.blu{background:rgba(0,169,224,.12)!important;color:#006D96!important;border:1px solid rgba(0,169,224,.28)!important;}
+.vbad.grn{background:rgba(17,122,101,.10)!important;color:#117A65!important;border:1px solid rgba(17,122,101,.26)!important;}
+.vbad.muted{background:#EEF5F9!important;color:#6F8796!important;border:1px solid #D8E7F0!important;}
+.vbad.alert{background:rgba(192,57,43,.13)!important;color:#C0392B!important;border:1px solid rgba(192,57,43,.45)!important;}
+
+/* HORÁRIOS E GRÁFICOS */
+.hr-pill.night{background:rgba(192,57,43,.10)!important;color:#C0392B!important;border:1px solid rgba(192,57,43,.35)!important;}
+.hr-pill.late{background:rgba(230,126,34,.12)!important;color:#B55300!important;border:1px solid rgba(230,126,34,.28)!important;}
+.hr-b.comercial{background:#00A9E0!important;opacity:.85!important;}
+.hr-b.fora{background:#C0392B!important;opacity:.85!important;}
+.hr-xlbl span,.hr-leg,.filter-info,.ksub,.pcnt{color:#5F7E92!important;}
+.ldot[style*="#2471A3"]{background:#00A9E0!important;}
+.ratio-bar{background:#E6F1F7!important;}
+.ratio-fill.grn{background:#117A65!important;}
+.ratio-fill.yel{background:#D4A843!important;}
+.ratio-fill.org{background:#E67E22!important;}
+.ratio-fill.red{background:#C0392B!important;}
+
+/* LINHAS POSITIVAS */
+.zrow td{background:#F0FBF7!important;}
+.zrow:hover td{background:#E3F7EF!important;}
+
+/* ESTADOS ATIVOS KPI */
+.kpi.kpi-active-fatal,.kpi.kpi-active-fatfora{border-color:#C0392B!important;box-shadow:0 8px 24px rgba(192,57,43,.18)!important;}
+.kpi.kpi-active-vencido{border-color:#7B241C!important;box-shadow:0 8px 24px rgba(123,36,28,.18)!important;}
+.kpi.kpi-active-d1{border-color:#D4A843!important;box-shadow:0 8px 24px rgba(212,168,67,.20)!important;}
+.kpi.kpi-active-antecipado{border-color:#117A65!important;box-shadow:0 8px 24px rgba(17,122,101,.18)!important;}
+.kpi.kpi-active-fora{border-color:#E67E22!important;box-shadow:0 8px 24px rgba(230,126,34,.18)!important;}
+
+/* Ajustes de textos inline claros */
+td[style*="rgba(255,255,255,.18)"],td span[style*="rgba(255,255,255,.18)"]{color:#B4C7D3!important;}
+td[style*="rgba(255,255,255,.2)"],td span[style*="rgba(255,255,255,.2)"]{color:#B4C7D3!important;}
+td[style*="rgba(255,255,255,.25)"],td span[style*="rgba(255,255,255,.25)"]{color:#9DB4C3!important;}
+td[style*="rgba(255,255,255,.35)"],td span[style*="rgba(255,255,255,.35)"]{color:#6F8796!important;}
+
+@media(max-width:900px){
+  .hdr{align-items:flex-start!important;gap:12px!important;}
+  .hbadge{width:100%;margin-left:0!important;flex-wrap:wrap!important;}
+  .kpi{min-width:calc(50% - 5px)!important;}
+}
+
+
+
+/* === DADOS CLICÁVEIS — P&C === */
+.kpi[onclick], .fbtn, .btn-excel, tbody tr[data-sigla], tbody tr[data-grp], tbody tr[data-resp], .vbad, .nome-full, .nome-sigla{
+  cursor:pointer;
+}
+tbody tr[data-sigla]:hover td,
+tbody tr[data-grp]:hover td,
+tbody tr[data-resp]:hover td{
+  background:#EEF9FD!important;
+  box-shadow:inset 3px 0 0 var(--azul-pc);
+}
+.vbad:hover{
+  transform:translateY(-1px);
+  box-shadow:0 4px 12px rgba(0,59,92,.14);
+}
+tr.click-selected td{
+  background:#E4F6FC!important;
+  box-shadow:inset 3px 0 0 var(--azul-pc);
+}
+.click-hint{
+  font-size:10px;
+  color:var(--muted);
+  margin-left:8px;
+  font-weight:600;
+}
+.data-modal-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:rgba(0,30,45,.42);
+  backdrop-filter:blur(4px);
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+}
+.data-modal-overlay.open{display:flex;}
+.data-modal{
+  width:min(720px,96vw);
+  max-height:88vh;
+  overflow:auto;
+  background:#fff;
+  border:1px solid var(--border2);
+  border-radius:18px;
+  box-shadow:0 24px 70px rgba(0,59,92,.22);
+  color:var(--preto-pc);
+}
+.data-modal-head{
+  background:linear-gradient(90deg,var(--escuro-pc),#00557B 72%,var(--azul-pc));
+  color:#fff;
+  padding:18px 22px;
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  align-items:flex-start;
+  border-bottom:4px solid var(--azul-pc);
+}
+.data-modal-title{font-size:16px;font-weight:800;line-height:1.25;}
+.data-modal-sub{font-size:11px;opacity:.8;margin-top:3px;}
+.data-modal-close{
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.35);
+  color:#fff;
+  border-radius:8px;
+  padding:4px 10px;
+  cursor:pointer;
+  font-size:18px;
+}
+.data-modal-body{padding:18px 22px 22px;}
+.data-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-bottom:14px;
+}
+.data-card{
+  background:#F7FCFF;
+  border:1px solid var(--border2);
+  border-radius:12px;
+  padding:12px;
+  text-align:center;
+}
+.data-card .lbl{
+  display:block;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.6px;
+  color:var(--muted);
+  font-weight:800;
+  margin-bottom:5px;
+}
+.data-card .val{
+  display:block;
+  font-size:24px;
+  line-height:1;
+  font-weight:800;
+  color:var(--escuro-pc);
+}
+.data-section-title{
+  font-size:11px;
+  font-weight:800;
+  color:var(--escuro-pc);
+  text-transform:uppercase;
+  letter-spacing:.7px;
+  border-bottom:1px solid var(--border2);
+  padding-bottom:7px;
+  margin:14px 0 9px;
+}
+.data-mini-table{width:100%;border-collapse:collapse;font-size:11px;}
+.data-mini-table th{background:#003B5C;color:#fff;padding:7px 8px;text-align:left;}
+.data-mini-table td{padding:7px 8px;border-bottom:1px solid var(--border2);}
+.data-modal-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
+.data-action-btn{
+  border:1px solid var(--azul-pc);
+  background:#EAF8FD;
+  color:var(--escuro-pc);
+  border-radius:8px;
+  padding:8px 12px;
+  font-size:12px;
+  font-weight:800;
+  cursor:pointer;
+}
+@media(max-width:720px){.data-grid{grid-template-columns:repeat(2,1fr)}.data-modal-head{padding:15px}.data-modal-body{padding:15px}.data-card .val{font-size:20px}}
+
 </style>
 </head>
 <body>
@@ -759,6 +1093,114 @@ function downloadExcel() {
 updateFilterButtons();
 syncKpiVisuals();
 renumberTables();
+
+// ===== DADOS CLICÁVEIS — MODAL DE DETALHE =====
+function onlyTxt(html){
+  const d=document.createElement('div'); d.innerHTML=html; return d.textContent || d.innerText || '';
+}
+function findResp(sigla){ return RESP.find(r=>r.n===sigla); }
+function respFullName(sigla){ return NOMES[sigla] || sigla; }
+function metricCards(r){
+  const antecip=Math.max(0, r.tot-r.fat-r.ven-r.d1-r.d2);
+  return `<div class="data-grid">
+    <div class="data-card"><span class="lbl">Total</span><span class="val">${r.tot}</span></div>
+    <div class="data-card"><span class="lbl">Fatais</span><span class="val" style="color:#C0392B">${r.fat}</span></div>
+    <div class="data-card"><span class="lbl">Vencidos</span><span class="val" style="color:#922B21">${r.ven}</span></div>
+    <div class="data-card"><span class="lbl">D-1</span><span class="val" style="color:#D4A843">${r.d1}</span></div>
+    <div class="data-card"><span class="lbl">D-2</span><span class="val" style="color:#2980B9">${r.d2}</span></div>
+    <div class="data-card"><span class="lbl">Antecipados</span><span class="val" style="color:#117A65">${antecip}</span></div>
+    <div class="data-card"><span class="lbl">Fora horário</span><span class="val" style="color:#E67E22">${r.fora||0}</span></div>
+    <div class="data-card"><span class="lbl">Fatal + fora</span><span class="val" style="color:#C0392B">${r.ff||0}</span></div>
+  </div>`;
+}
+function openDataModalByResp(sigla){
+  const r=findResp(sigla); if(!r) return;
+  document.querySelectorAll('tr.click-selected').forEach(x=>x.classList.remove('click-selected'));
+  document.querySelectorAll(`tr[data-sigla="${sigla}"], tr[data-resp="${sigla}"]`).forEach(x=>x.classList.add('click-selected'));
+  const detalhes=FAT_FORA.filter(x=>x.resp===sigla);
+  const linhas=detalhes.length?detalhes.map(x=>`<tr><td>${x.hr}</td><td>${x.status}</td><td>${x.dt}</td><td>${x.proc}</td></tr>`).join(''):`<tr><td colspan="4" style="color:var(--muted);font-style:italic">Sem registros detalhados de fatal/vencido fora do horário para este profissional.</td></tr>`;
+  openDataModal(`👤 ${respFullName(sigla)}`, `${sigla} · ${r.grp}`, `${metricCards(r)}
+    <div class="data-section-title">Registros críticos vinculados</div>
+    <table class="data-mini-table"><thead><tr><th>Horário</th><th>Status</th><th>Prazo agend.</th><th>Processo</th></tr></thead><tbody>${linhas}</tbody></table>
+    <div class="data-modal-actions">
+      <button class="data-action-btn" onclick="toggleFilter('fatal');closeDataModal()">Filtrar fatais</button>
+      <button class="data-action-btn" onclick="toggleFilter('vencido');closeDataModal()">Filtrar vencidos</button>
+      <button class="data-action-btn" onclick="clearFilters();closeDataModal()">Limpar filtros</button>
+    </div>`);
+}
+function openDataModalByGroup(grp){
+  const v=BY_GRUPO_FULL.find(x=>x.g===grp) || BY_GRUPO[grp]; if(!v) return;
+  document.querySelectorAll('tr.click-selected').forEach(x=>x.classList.remove('click-selected'));
+  document.querySelectorAll(`tr[data-grp="${grp}"]`).forEach(x=>x.classList.add('click-selected'));
+  const pessoas=RESP.filter(r=>r.grp===grp).sort((a,b)=>b.tot-a.tot);
+  const linhas=pessoas.map(r=>`<tr><td>${respFullName(r.n)} <span style="color:var(--muted);font-size:10px">${r.n}</span></td><td>${r.tot}</td><td>${r.fat}</td><td>${r.ven}</td><td>${r.d1}</td><td>${r.fora||0}</td></tr>`).join('');
+  const total=v.tot || v.total;
+  openDataModal(`🏢 ${grp}`, `Resumo consolidado por grupo`, `<div class="data-grid">
+    <div class="data-card"><span class="lbl">Total</span><span class="val">${total}</span></div>
+    <div class="data-card"><span class="lbl">Fatais</span><span class="val" style="color:#C0392B">${v.fat}</span></div>
+    <div class="data-card"><span class="lbl">Vencidos</span><span class="val" style="color:#922B21">${v.ven}</span></div>
+    <div class="data-card"><span class="lbl">D-1</span><span class="val" style="color:#D4A843">${v.d1||0}</span></div>
+    <div class="data-card"><span class="lbl">Fora horário</span><span class="val" style="color:#E67E22">${v.fora||0}</span></div>
+    <div class="data-card"><span class="lbl">Fatal + fora</span><span class="val" style="color:#C0392B">${v.ff||0}</span></div>
+  </div>
+  <div class="data-section-title">Profissionais do grupo</div>
+  <table class="data-mini-table"><thead><tr><th>Responsável</th><th>Total</th><th>Fatal</th><th>Venc.</th><th>D-1</th><th>Fora Hr.</th></tr></thead><tbody>${linhas}</tbody></table>`);
+}
+function openDataModalByRegistro(resp, row){
+  const cells=[...row.children].map(td=>td.textContent.trim());
+  const r=findResp(resp);
+  openDataModal(`⏰ Registro crítico — ${respFullName(resp)}`, r?`${resp} · ${r.grp}`:resp, `<table class="data-mini-table"><tbody>
+    <tr><th>Responsável</th><td>${respFullName(resp)}</td></tr>
+    <tr><th>Grupo</th><td>${cells[1]||''}</td></tr>
+    <tr><th>Horário</th><td>${cells[2]||''}</td></tr>
+    <tr><th>Status</th><td>${cells[3]||''}</td></tr>
+    <tr><th>Prazo agend.</th><td>${cells[4]||''}</td></tr>
+    <tr><th>Processo</th><td>${cells[5]||''}</td></tr>
+  </tbody></table>${r?metricCards(r):''}`);
+}
+function openDataModal(title, sub, body){
+  document.getElementById('data-modal-title').innerHTML=title;
+  document.getElementById('data-modal-sub').innerHTML=sub||'';
+  document.getElementById('data-modal-body').innerHTML=body;
+  document.getElementById('data-modal-overlay').classList.add('open');
+}
+function closeDataModal(evt){
+  if(evt && evt.target && evt.target.id!=='data-modal-overlay') return;
+  const el=document.getElementById('data-modal-overlay'); if(el) el.classList.remove('open');
+}
+function initClickableDados(){
+  document.querySelectorAll('.ptitle .pcnt').forEach(el=>{ if(!el.dataset.hint){ el.dataset.hint='1'; el.insertAdjacentHTML('beforeend',' <span class="click-hint">• clique nos dados</span>'); }});
+  document.querySelectorAll('tr[data-sigla]').forEach(tr=>{
+    tr.title='Clique para ver o detalhe do profissional';
+    tr.addEventListener('click',()=>openDataModalByResp(tr.getAttribute('data-sigla')));
+  });
+  document.querySelectorAll('tr[data-grp]:not([data-sigla])').forEach(tr=>{
+    tr.title='Clique para ver o detalhe do grupo';
+    tr.addEventListener('click',()=>openDataModalByGroup(tr.getAttribute('data-grp')));
+  });
+  document.querySelectorAll('tr[data-resp]').forEach(tr=>{
+    tr.title='Clique para abrir o registro crítico';
+    tr.addEventListener('click',()=>openDataModalByRegistro(tr.getAttribute('data-resp'), tr));
+  });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeDataModal(); });
+}
+setTimeout(initClickableDados,0);
+
 </script>
+
+
+<div class="data-modal-overlay" id="data-modal-overlay" onclick="closeDataModal(event)">
+  <div class="data-modal" role="dialog" aria-modal="true" aria-labelledby="data-modal-title" onclick="event.stopPropagation()">
+    <div class="data-modal-head">
+      <div>
+        <div class="data-modal-title" id="data-modal-title">Detalhamento</div>
+        <div class="data-modal-sub" id="data-modal-sub">Clique nos dados do dashboard para analisar</div>
+      </div>
+      <button class="data-modal-close" onclick="closeDataModal()" aria-label="Fechar">×</button>
+    </div>
+    <div class="data-modal-body" id="data-modal-body"></div>
+  </div>
+</div>
+
 </body>
 </html>
