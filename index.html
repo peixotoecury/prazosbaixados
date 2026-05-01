@@ -37,6 +37,7 @@ body{background:var(--bg);color:var(--tx);font-family:Arial,sans-serif;font-size
 .fbtn.active-vencido{background:rgba(192,57,43,.2);border-color:rgba(192,57,43,.6);color:#e74c3c}
 .fbtn.active-d1{background:rgba(241,196,15,.12);border-color:rgba(241,196,15,.4);color:#d4a017}
 .fbtn.active-all{background:rgba(0,174,239,.12);border-color:rgba(0,174,239,.4);color:var(--cyan)}
+.grp-btn.active-grupo{background:rgba(0,59,92,.12)!important;border-color:#003B5C!important;color:#003B5C!important;box-shadow:0 4px 12px rgba(0,59,92,.12)!important;}
 .filter-info{margin-left:auto;font-size:10px;color:var(--tx2);font-style:italic}
 .filter-sep{width:1px;height:20px;background:rgba(255,255,255,.1)}
 
@@ -453,6 +454,16 @@ tr.click-selected td{
 }
 @media(max-width:720px){.data-grid{grid-template-columns:repeat(2,1fr)}.data-modal-head{padding:15px}.data-modal-body{padding:15px}.data-card .val{font-size:20px}}
 
+/* Tabela executiva por grupo + responsável */
+.grp-subtotal td{background:#EAF6FB!important;font-weight:800;color:var(--escuro-pc)!important;border-top:2px solid #BFD6E4!important}
+.grp-name{font-weight:800;color:var(--escuro-pc)!important;white-space:nowrap}
+.risk-chip{display:inline-block;border-radius:14px;padding:3px 9px;font-size:10px;font-weight:800}
+.risk-chip.high{background:rgba(192,57,43,.10);color:#C0392B;border:1px solid rgba(192,57,43,.35)}
+.risk-chip.mid{background:rgba(230,126,34,.12);color:#B55300;border:1px solid rgba(230,126,34,.30)}
+.risk-chip.low{background:rgba(17,122,101,.10);color:#117A65;border:1px solid rgba(17,122,101,.28)}
+.grp-table-wrap{max-height:520px!important}
+@media(max-width:900px){.grp-table-wrap{overflow-x:auto}.grp-table-wrap table{min-width:820px}}
+
 </style>
 </head>
 <body>
@@ -495,6 +506,18 @@ tr.click-selected td{
   <button class="fbtn" id="btn-d1" onclick="toggleFilter('d1')">⏱ D-1</button>
   <button class="fbtn" id="btn-fatfora" onclick="toggleFilter('fatfora')">⏰ Fatal + Fora HR</button>
   <div class="filter-sep"></div>
+  <span class="filter-label">🏢 Grupo:</span>
+  <button class="fbtn grp-btn" id="grp-Grupo-A2" onclick="toggleGrupo('Grupo A2')">A2</button>
+  <button class="fbtn grp-btn" id="grp-Grupo-A3" onclick="toggleGrupo('Grupo A3')">A3</button>
+  <button class="fbtn grp-btn" id="grp-Grupo-B1" onclick="toggleGrupo('Grupo B1')">B1</button>
+  <button class="fbtn grp-btn" id="grp-Grupo-B2" onclick="toggleGrupo('Grupo B2')">B2</button>
+  <button class="fbtn grp-btn" id="grp-Grupo-B3" onclick="toggleGrupo('Grupo B3')">B3</button>
+  <button class="fbtn grp-btn" id="grp-Grupo-C" onclick="toggleGrupo('Grupo C')">C</button>
+  <button class="fbtn grp-btn" id="grp-Grupo-D1" onclick="toggleGrupo('Grupo D1')">D1</button>
+  <button class="fbtn grp-btn" id="grp-Grupo-E1" onclick="toggleGrupo('Grupo E1')">E1</button>
+  <button class="fbtn grp-btn" id="grp-Grupo-E2" onclick="toggleGrupo('Grupo E2')">E2</button>
+  <button class="fbtn grp-btn" id="grp-Sem-grupo" onclick="toggleGrupo('Sem grupo')">Sem grupo</button>
+  <div class="filter-sep"></div>
   <button class="fbtn" id="btn-all" onclick="clearFilters()">Todos</button>
   <span class="filter-info" id="filter-info">Exibindo todos os profissionais</span>
 </div>
@@ -514,6 +537,25 @@ tr.click-selected td{
       <tbody id="tb-vencido"></tbody>
     </table></div>
   </div>
+</div>
+
+
+<!-- TABELA EXECUTIVA POR GRUPO E RESPONSÁVEL -->
+<div class="pnl" style="margin-bottom:14px">
+  <div class="ptitle ble">🏢 Grupo, Responsável e Situação do Prazo <span class="pcnt">Vencido · Fatal · D-1 · Antecipados</span></div>
+  <div class="scr grp-table-wrap"><table>
+    <thead><tr>
+      <th>Grupo</th>
+      <th>Responsável</th>
+      <th class="c">Total</th>
+      <th class="c" style="color:#7B241C">Vencido</th>
+      <th class="c" style="color:#C0392B">Fatal</th>
+      <th class="c" style="color:#D4A843">D-1</th>
+      <th class="c" style="color:#117A65">Antecipados</th>
+      <th class="c">% Risco</th>
+    </tr></thead>
+    <tbody id="tb-grupo-resp"></tbody>
+  </table></div>
 </div>
 
 <!-- TABELA CONSOLIDADA -->
@@ -693,6 +735,7 @@ const RESP=[
   {n:'AAP',fat:0,ven:0,d1:1,d2:1,fut:13,fora:0,ff:0,tot:15,grp:'Grupo E2'},
 ];
 
+const GRP_RESP=[{"grp":"Grupo A2","n":"NBG","ven":0,"fat":2,"d1":1,"ant":7,"tot":10},{"grp":"Grupo A3","n":"SOF","ven":0,"fat":4,"d1":0,"ant":9,"tot":13},{"grp":"Grupo A3","n":"VSI","ven":0,"fat":4,"d1":3,"ant":0,"tot":7},{"grp":"Grupo A3","n":"NBG","ven":0,"fat":0,"d1":1,"ant":1,"tot":2},{"grp":"Grupo A3","n":"ARC","ven":0,"fat":1,"d1":0,"ant":0,"tot":1},{"grp":"Grupo B1","n":"RFE","ven":2,"fat":30,"d1":17,"ant":23,"tot":72},{"grp":"Grupo B1","n":"JPE","ven":4,"fat":0,"d1":20,"ant":27,"tot":51},{"grp":"Grupo B1","n":"JJS","ven":1,"fat":21,"d1":18,"ant":6,"tot":46},{"grp":"Grupo B1","n":"GSM","ven":0,"fat":10,"d1":13,"ant":21,"tot":44},{"grp":"Grupo B1","n":"BSO","ven":1,"fat":7,"d1":10,"ant":17,"tot":35},{"grp":"Grupo B2","n":"BCF","ven":0,"fat":26,"d1":4,"ant":10,"tot":40},{"grp":"Grupo B2","n":"VCR","ven":0,"fat":14,"d1":3,"ant":12,"tot":29},{"grp":"Grupo B2","n":"ANB","ven":0,"fat":1,"d1":2,"ant":16,"tot":19},{"grp":"Grupo B2","n":"NRG","ven":2,"fat":0,"d1":0,"ant":0,"tot":2},{"grp":"Grupo B3","n":"LMI","ven":0,"fat":2,"d1":25,"ant":1,"tot":28},{"grp":"Grupo B3","n":"ANB","ven":0,"fat":0,"d1":1,"ant":11,"tot":12},{"grp":"Grupo B3","n":"GSM","ven":0,"fat":3,"d1":0,"ant":3,"tot":6},{"grp":"Grupo B3","n":"JPE","ven":0,"fat":0,"d1":4,"ant":0,"tot":4},{"grp":"Grupo C","n":"TFR","ven":0,"fat":10,"d1":5,"ant":4,"tot":19},{"grp":"Grupo C","n":"ECO","ven":0,"fat":6,"d1":3,"ant":8,"tot":17},{"grp":"Grupo C","n":"RCF","ven":0,"fat":3,"d1":5,"ant":5,"tot":13},{"grp":"Grupo C","n":"NBG","ven":1,"fat":2,"d1":0,"ant":6,"tot":9},{"grp":"Grupo C","n":"VSI","ven":0,"fat":1,"d1":1,"ant":1,"tot":3},{"grp":"Grupo C","n":"ARE","ven":0,"fat":1,"d1":0,"ant":1,"tot":2},{"grp":"Grupo D1","n":"JQS","ven":2,"fat":2,"d1":7,"ant":12,"tot":23},{"grp":"Grupo D1","n":"BBO","ven":4,"fat":3,"d1":1,"ant":8,"tot":16},{"grp":"Grupo E1","n":"JPL","ven":0,"fat":4,"d1":17,"ant":26,"tot":47},{"grp":"Grupo E1","n":"PSI","ven":0,"fat":4,"d1":23,"ant":19,"tot":46},{"grp":"Grupo E1","n":"VRO","ven":0,"fat":5,"d1":17,"ant":23,"tot":45},{"grp":"Grupo E1","n":"JRM","ven":0,"fat":1,"d1":17,"ant":6,"tot":24},{"grp":"Grupo E1","n":"ALF","ven":0,"fat":1,"d1":6,"ant":12,"tot":19},{"grp":"Grupo E1","n":"DPR","ven":0,"fat":1,"d1":8,"ant":10,"tot":19},{"grp":"Grupo E1","n":"AAP","ven":0,"fat":0,"d1":0,"ant":3,"tot":3},{"grp":"Grupo E1","n":"ECO","ven":0,"fat":1,"d1":0,"ant":0,"tot":1},{"grp":"Grupo E1","n":"KBM","ven":0,"fat":1,"d1":0,"ant":0,"tot":1},{"grp":"Grupo E2","n":"RRU","ven":11,"fat":21,"d1":8,"ant":33,"tot":73},{"grp":"Grupo E2","n":"RYL","ven":9,"fat":29,"d1":9,"ant":12,"tot":59},{"grp":"Grupo E2","n":"JRT","ven":7,"fat":16,"d1":13,"ant":8,"tot":44},{"grp":"Grupo E2","n":"CAL","ven":0,"fat":22,"d1":1,"ant":15,"tot":38},{"grp":"Grupo E2","n":"BIM","ven":4,"fat":14,"d1":3,"ant":15,"tot":36},{"grp":"Grupo E2","n":"ARC","ven":4,"fat":2,"d1":2,"ant":27,"tot":35},{"grp":"Grupo E2","n":"MBF","ven":1,"fat":6,"d1":7,"ant":12,"tot":26},{"grp":"Grupo E2","n":"AAP","ven":0,"fat":0,"d1":1,"ant":11,"tot":12},{"grp":"Grupo E2","n":"RCF","ven":3,"fat":1,"d1":0,"ant":3,"tot":7},{"grp":"Sem grupo","n":"JRT","ven":0,"fat":0,"d1":0,"ant":1,"tot":1}];
 const HR_DIST=[[0,6],[1,2],[6,1],[7,4],[8,15],[9,63],[10,120],[11,129],[12,113],[13,104],[14,87],[15,110],[16,101],[17,88],[18,64],[19,24],[20,14],[21,6],[22,4],[23,4]];
 const FAT_FORA=[
   {resp:'JRT',grp:'Grupo E2',hr:'00:04',status:'Vencido',dt:'17/04',proc:'0010380-36.2026.5.03.0140'},
@@ -748,6 +791,24 @@ function syncKpiVisuals() {
 
 // ===== FILTROS =====
 let activeFilters = new Set();
+let activeGrupos = new Set();
+const GRUPOS_FILTRO = ['Grupo A2','Grupo A3','Grupo B1','Grupo B2','Grupo B3','Grupo C','Grupo D1','Grupo E1','Grupo E2','Sem grupo'];
+function grupoBtnId(grupo){ return 'grp-' + grupo.replace(/\s+/g,'-'); }
+
+function toggleGrupo(grupo) {
+  if (activeGrupos.has(grupo)) activeGrupos.delete(grupo);
+  else activeGrupos.add(grupo);
+  updateGrupoButtons();
+  applyFilters();
+}
+
+function updateGrupoButtons() {
+  GRUPOS_FILTRO.forEach(g => {
+    const btn = document.getElementById(grupoBtnId(g));
+    if (!btn) return;
+    btn.classList.toggle('active-grupo', activeGrupos.has(g));
+  });
+}
 
 function toggleFilter(tipo) {
   if (activeFilters.has(tipo)) {
@@ -762,7 +823,9 @@ function toggleFilter(tipo) {
 
 function clearFilters() {
   activeFilters.clear();
+  activeGrupos.clear();
   updateFilterButtons();
+  updateGrupoButtons();
   syncKpiVisuals();
   applyFilters();
 }
@@ -776,17 +839,37 @@ function updateFilterButtons() {
   if(allBtn) allBtn.className = 'fbtn' + (activeFilters.size === 0 ? ' active-all' : '');
   
   const info = document.getElementById('filter-info');
-  if (activeFilters.size === 0) {
-    info.textContent = 'Exibindo todos os profissionais';
-  } else {
-    const labels = {fatal:'Fatal', vencido:'Vencido', d1:'D-1', antecipado:'Antecipado', fora:'Fora do Horário', fatfora:'Fatal + Fora HR'};
-    info.textContent = 'Filtrando por: ' + [...activeFilters].map(f=>labels[f]).join(' + ');
+  const labels = {fatal:'Fatal', vencido:'Vencido', d1:'D-1', antecipado:'Antecipado', fora:'Fora do Horário', fatfora:'Fatal + Fora HR'};
+  const partes = [];
+  if (activeFilters.size > 0) partes.push([...activeFilters].map(f=>labels[f]).join(' + '));
+  if (activeGrupos.size > 0) partes.push('Grupo: ' + [...activeGrupos].map(g=>g.replace('Grupo ', '')).join(', '));
+  info.textContent = partes.length ? 'Filtrando por: ' + partes.join(' | ') : 'Exibindo todos os profissionais';
+}
+
+
+function rowMetricFor(tr){
+  const sig=tr.getAttribute('data-sigla');
+  const grp=tr.getAttribute('data-grp');
+  if(grp && typeof GRP_RESP !== 'undefined'){
+    if(sig){
+      const rr=GRP_RESP.find(x=>x.n===sig && x.grp===grp);
+      if(rr) return {n:rr.n,grp:rr.grp,tot:rr.tot,fat:rr.fat,ven:rr.ven,d1:rr.d1,d2:0,fut:rr.ant,fora:0,ff:0};
+    } else {
+      const itens=GRP_RESP.filter(x=>x.grp===grp);
+      if(itens.length){
+        const sub=itens.reduce((acc,x)=>{acc.tot+=x.tot;acc.fat+=x.fat;acc.ven+=x.ven;acc.d1+=x.d1;acc.fut+=x.ant;return acc;},{n:'',grp,tot:0,fat:0,ven:0,d1:0,d2:0,fut:0,fora:0,ff:0});
+        return sub;
+      }
+    }
   }
+  const r=RESP.find(x => x.n === sig);
+  return r ? {...r, fut: Math.max(0, r.tot-r.fat-r.ven-r.d1-r.d2)} : null;
 }
 
 function passesFilter(r) {
+  if (activeGrupos.size > 0 && !activeGrupos.has(r.grp)) return false;
   if (activeFilters.size === 0) return true;
-  const antecip = Math.max(0, r.tot - r.fat - r.ven - r.d1 - r.d2);
+  const antecip = Math.max(0, (r.d2||0) + (r.fut||0));
   if (activeFilters.has('fatal') && r.fat === 0) return false;
   if (activeFilters.has('vencido') && r.ven === 0) return false;
   if (activeFilters.has('d1') && r.d1 === 0) return false;
@@ -797,7 +880,7 @@ function passesFilter(r) {
 }
 
 function applyFilters() {
-  const noFilter = activeFilters.size === 0;
+  const noFilter = activeFilters.size === 0 && activeGrupos.size === 0;
   const emptyMsg = document.getElementById('zero-empty');
 
   if (noFilter) {
@@ -813,11 +896,11 @@ function applyFilters() {
   const hasAntecip = activeFilters.has('antecipado');
 
   // Tabelas por profissional — filtro normal
-  ['tb-fatal','tb-vencido','tb-relativo','tb-fatfora'].forEach(id => {
+  ['tb-fatal','tb-vencido','tb-relativo','tb-fatfora','tb-grupo-resp'].forEach(id => {
     const tbody = document.getElementById(id);
     if (!tbody) return;
-    Array.from(tbody.querySelectorAll('tr[data-sigla]')).forEach(tr => {
-      const r = RESP.find(x => x.n === tr.getAttribute('data-sigla'));
+    Array.from(tbody.querySelectorAll('tr[data-sigla], tr.grp-subtotal')).forEach(tr => {
+      const r = rowMetricFor(tr);
       tr.classList.toggle('filtered-out', !r || !passesFilter(r));
     });
   });
@@ -828,7 +911,7 @@ function applyFilters() {
     const incomp = hasFatal || hasVencido;
     let visivel = 0;
     Array.from(tbody0.querySelectorAll('tr[data-sigla]')).forEach(tr => {
-      const r = RESP.find(x => x.n === tr.getAttribute('data-sigla'));
+      const r = rowMetricFor(tr);
       const hide = incomp || !r || !passesFilter(r);
       tr.classList.toggle('filtered-out', hide);
       if (!hide) visivel++;
@@ -836,15 +919,26 @@ function applyFilters() {
     if (emptyMsg) emptyMsg.style.display = (incomp || visivel === 0) ? 'block' : 'none';
   }
 
-  // tb-detail: filtrar por resp e status do registro
+  // tb-detail: filtrar também por grupo selecionado e status real do registro
   const tbDetail = document.getElementById('tb-detail');
   if (tbDetail) {
     Array.from(tbDetail.querySelectorAll('tr[data-resp]')).forEach(tr => {
-      const r = RESP.find(x => x.n === tr.getAttribute('data-resp'));
+      const resp = tr.getAttribute('data-resp');
+      const grp = tr.getAttribute('data-grp');
+      const status = (tr.getAttribute('data-status') || '').toLowerCase();
+      const r = RESP.find(x => x.n === resp);
       let hide = false;
-      if (hasFatal   && (!r || r.fat === 0)) hide = true;
-      if (hasVencido && (!r || r.ven === 0)) hide = true;
-      if (hasD1 || hasAntecip) hide = true;
+
+      // filtro por grupo precisa respeitar o grupo do próprio registro detalhado
+      if (activeGrupos.size > 0 && (!grp || !activeGrupos.has(grp))) hide = true;
+
+      // filtro por situação precisa respeitar o status do registro detalhado
+      if (hasFatal && status !== 'fatal') hide = true;
+      if (hasVencido && status !== 'vencido') hide = true;
+      if (hasD1 || hasAntecip) hide = true; // esta tabela só possui fatais/vencidos fora do horário
+      if (activeFilters.has('fora') && (!r || (r.fora || 0) === 0)) hide = true;
+      if (activeFilters.has('fatfora') && status !== 'fatal') hide = true;
+
       tr.classList.toggle('filtered-out', hide);
     });
   }
@@ -856,6 +950,7 @@ function applyFilters() {
       const v = BY_GRUPO_FULL.find(x => x.g === tr.getAttribute('data-grp'));
       let hide = false;
       if (!v) { tr.classList.add('filtered-out'); return; }
+      if (activeGrupos.size > 0 && !activeGrupos.has(v.g)) hide = true;
       if (hasFatal   && v.fat === 0) hide = true;
       if (hasVencido && v.ven === 0) hide = true;
       if (hasD1      && v.d1  === 0) hide = true;
@@ -869,9 +964,11 @@ function applyFilters() {
     const incomp = hasFatal || hasVencido;
     Array.from(tbGrpZero.querySelectorAll('tr[data-grp]')).forEach(tr => {
       if (incomp) { tr.classList.add('filtered-out'); return; }
+      const grp = tr.getAttribute('data-grp');
+      if (activeGrupos.size > 0 && grp && !activeGrupos.has(grp)) { tr.classList.add('filtered-out'); return; }
       const sigla = tr.getAttribute('data-sigla');
       if (sigla) {
-        const r = RESP.find(x => x.n === sigla);
+        const r = rowMetricFor(tr);
         tr.classList.toggle('filtered-out', !r || !passesFilter(r));
       } else {
         tr.classList.remove('filtered-out');
@@ -885,6 +982,8 @@ function applyFilters() {
     Array.from(tbGrpFora.querySelectorAll('tr[data-grp]')).forEach(tr => {
       const v = BY_GRUPO[tr.getAttribute('data-grp')];
       let hide = hasVencido || hasD1 || hasAntecip;
+      const grp = tr.getAttribute('data-grp');
+      if (activeGrupos.size > 0 && grp && !activeGrupos.has(grp)) hide = true;
       if (hasFatal && v && v.fora === 0) hide = true;
       tr.classList.toggle('filtered-out', hide);
     });
@@ -909,6 +1008,39 @@ function renumberTables() {
     });
   });
 }
+
+
+// Tabela executiva por Grupo + Responsável — baseada na planilha semanal enviada
+function riskChip(risco){
+  const cls = risco >= 40 ? 'high' : (risco >= 20 ? 'mid' : 'low');
+  return `<span class="risk-chip ${cls}">${risco}%</span>`;
+}
+function renderGrupoResp(){
+  const tb=document.getElementById('tb-grupo-resp');
+  if(!tb) return;
+  tb.innerHTML='';
+  const grupos=[...new Set(GRP_RESP.map(r=>r.grp))];
+  grupos.forEach(g=>{
+    const itens=GRP_RESP.filter(r=>r.grp===g).sort((a,b)=>b.tot-a.tot||a.n.localeCompare(b.n));
+    const sub=itens.reduce((acc,r)=>{acc.tot+=r.tot;acc.ven+=r.ven;acc.fat+=r.fat;acc.d1+=r.d1;acc.ant+=r.ant;return acc;},{tot:0,ven:0,fat:0,d1:0,ant:0});
+    tb.innerHTML+=`<tr class="grp-subtotal" data-grp="${g}">
+      <td class="grp-name">${g}</td><td>Total do grupo</td>
+      <td class="c">${sub.tot}</td><td class="c"><span class="vbad red">${sub.ven}</span></td><td class="c"><span class="vbad fat">${sub.fat}</span></td><td class="c"><span class="vbad yel">${sub.d1}</span></td><td class="c"><span class="vbad grn">${sub.ant}</span></td><td class="c">${riskChip(pct(sub.ven+sub.fat,sub.tot))}</td>
+    </tr>`;
+    itens.forEach(r=>{
+      tb.innerHTML+=`<tr data-sigla="${r.n}" data-grp="${g}">
+        <td style="color:var(--tx2);font-size:10px;white-space:nowrap">${g}</td><td>${nome(r.n)}</td>
+        <td class="c" style="font-weight:700">${r.tot}</td>
+        <td class="c">${r.ven>0?`<span class="vbad red">${r.ven}</span>`:'<span class="vbad muted">—</span>'}</td>
+        <td class="c">${r.fat>0?`<span class="vbad fat">${r.fat}</span>`:'<span class="vbad muted">—</span>'}</td>
+        <td class="c">${r.d1>0?`<span class="vbad yel">${r.d1}</span>`:'<span class="vbad muted">—</span>'}</td>
+        <td class="c">${r.ant>0?`<span class="vbad grn">${r.ant}</span>`:'<span class="vbad muted">—</span>'}</td>
+        <td class="c">${riskChip(pct(r.ven+r.fat,r.tot))}</td>
+      </tr>`;
+    });
+  });
+}
+renderGrupoResp();
 
 // Tabela Fatal
 [...RESP].filter(r=>r.fat>0).sort((a,bv)=>bv.fat-a.fat).forEach((r,i)=>{
@@ -980,7 +1112,7 @@ function renumberTables() {
 // Tabela detalhe — fatal usa classe fat, vencido usa red
 FAT_FORA.forEach(r=>{
   const h=parseInt(r.hr),isNight=h<9||h>=20,cls=isNight?'night':'late',scls=r.status==='Fatal'?'fat':'red';
-  document.getElementById('tb-detail').innerHTML+=`<tr data-resp="${r.resp}">
+  document.getElementById('tb-detail').innerHTML+=`<tr data-resp="${r.resp}" data-grp="${r.grp}" data-status="${r.status}">
     <td>${nome(r.resp)}</td>
     <td style="color:var(--tx2);font-size:10px">${r.grp}</td>
     <td><span class="hr-pill ${cls}">${r.hr}</span></td>
@@ -1186,6 +1318,8 @@ function initClickableDados(){
 }
 setTimeout(initClickableDados,0);
 
+updateGrupoButtons();
+updateFilterButtons();
 </script>
 
 
