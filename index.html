@@ -236,15 +236,15 @@ body{background:linear-gradient(180deg,#F4F9FC 0%,#EDF6FB 100%)!important;}
 .org,.kval.org{color:#E67E22!important;}
 .yel,.kval.yel{color:#D4A843!important;}
 .blu,.kval.blu{color:var(--azul-pc)!important;}
-.grn,.kval.grn{color:#117A65!important;}
+.grn,.kval.grn{color:#003B5C!important;}
 
 /* BOTÃO EXCEL */
 .btn-excel{
-  background:#117A65!important;
+  background:#00A9E0!important;
   border:1px solid #117A65!important;
   color:#fff!important;
   border-radius:8px!important;
-  box-shadow:0 6px 16px rgba(17,122,101,.18)!important;
+  box-shadow:0 6px 16px rgba(0,169,224,.18)!important;
 }
 .btn-excel:hover{background:#0E6655!important;}
 
@@ -316,7 +316,7 @@ tr:last-child td{border-bottom:none!important;}
 .vbad.org{background:rgba(230,126,34,.12)!important;color:#B55300!important;border:1px solid rgba(230,126,34,.28)!important;}
 .vbad.yel{background:rgba(212,168,67,.15)!important;color:#8A6500!important;border:1px solid rgba(212,168,67,.32)!important;}
 .vbad.blu{background:rgba(0,169,224,.12)!important;color:#006D96!important;border:1px solid rgba(0,169,224,.28)!important;}
-.vbad.grn{background:rgba(17,122,101,.10)!important;color:#117A65!important;border:1px solid rgba(17,122,101,.26)!important;}
+.vbad.grn{background:rgba(0,169,224,.12)!important;color:#003B5C!important;border:1px solid rgba(0,169,224,.28)!important;}
 .vbad.muted{background:#EEF5F9!important;color:#6F8796!important;border:1px solid #D8E7F0!important;}
 .vbad.alert{background:rgba(192,57,43,.13)!important;color:#C0392B!important;border:1px solid rgba(192,57,43,.45)!important;}
 
@@ -328,20 +328,20 @@ tr:last-child td{border-bottom:none!important;}
 .hr-xlbl span,.hr-leg,.filter-info,.ksub,.pcnt{color:#5F7E92!important;}
 .ldot[style*="#2471A3"]{background:#00A9E0!important;}
 .ratio-bar{background:#E6F1F7!important;}
-.ratio-fill.grn{background:#117A65!important;}
+.ratio-fill.grn{background:#00A9E0!important;}
 .ratio-fill.yel{background:#D4A843!important;}
 .ratio-fill.org{background:#E67E22!important;}
 .ratio-fill.red{background:#C0392B!important;}
 
 /* LINHAS POSITIVAS */
-.zrow td{background:#F0FBF7!important;}
-.zrow:hover td{background:#E3F7EF!important;}
+.zrow td{background:#EAF6FB!important;}
+.zrow:hover td{background:#EAF6FB!important;}
 
 /* ESTADOS ATIVOS KPI */
 .kpi.kpi-active-fatal,.kpi.kpi-active-fatfora{border-color:#C0392B!important;box-shadow:0 8px 24px rgba(192,57,43,.18)!important;}
 .kpi.kpi-active-vencido{border-color:#7B241C!important;box-shadow:0 8px 24px rgba(123,36,28,.18)!important;}
 .kpi.kpi-active-d1{border-color:#D4A843!important;box-shadow:0 8px 24px rgba(212,168,67,.20)!important;}
-.kpi.kpi-active-antecipado{border-color:#117A65!important;box-shadow:0 8px 24px rgba(17,122,101,.18)!important;}
+.kpi.kpi-active-antecipado{border-color:#003B5C!important;box-shadow:0 8px 24px rgba(0,169,224,.18)!important;}
 .kpi.kpi-active-fora{border-color:#E67E22!important;box-shadow:0 8px 24px rgba(230,126,34,.18)!important;}
 
 /* Ajustes de textos inline claros */
@@ -487,7 +487,7 @@ tr.click-selected td{
 .risk-chip{display:inline-block;border-radius:14px;padding:3px 9px;font-size:10px;font-weight:800}
 .risk-chip.high{background:rgba(192,57,43,.10);color:#C0392B;border:1px solid rgba(192,57,43,.35)}
 .risk-chip.mid{background:rgba(230,126,34,.12);color:#B55300;border:1px solid rgba(230,126,34,.30)}
-.risk-chip.low{background:rgba(17,122,101,.10);color:#117A65;border:1px solid rgba(17,122,101,.28)}
+.risk-chip.low{background:rgba(0,169,224,.12);color:#003B5C;border:1px solid rgba(0,169,224,.28)}
 .grp-table-wrap{max-height:520px!important}
 @media(max-width:900px){.grp-table-wrap{overflow-x:auto}.grp-table-wrap table{min-width:820px}}
 
@@ -502,6 +502,244 @@ tr[data-timeline-date]{cursor:pointer;}
 tr[data-timeline-date]:hover td{background:#EAF6FB!important;box-shadow:inset 3px 0 0 var(--pc-azul);}
 .ag-bar-click{cursor:pointer;transition:transform .18s,filter .18s;}
 .ag-bar-click:hover{transform:translateY(-2px);filter:brightness(1.04);}
+
+/* === Abas executivas / acumulado === */
+.exec-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+.exec-tab{border:1px solid #BFD6E4;background:#fff;color:var(--pc-escuro);border-radius:999px;padding:8px 14px;font-size:11px;font-weight:800;cursor:pointer;box-shadow:0 4px 12px rgba(0,59,92,.06)}
+.exec-tab:hover{border-color:var(--pc-azul);background:#EAF6FB}
+.exec-note{background:#F7FCFF;border:1px solid #BFD6E4;border-radius:10px;padding:10px 14px;margin-bottom:14px;color:var(--pc-escuro);font-size:11px}
+@media(max-width:720px){.exec-tabs{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}.exec-tab{white-space:nowrap}.data-modal{width:98vw}.data-mini-table{min-width:580px}}
+
+
+/* Histórico executivo */
+.hist-section{margin-top:16px}
+.hist-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+.hist-card{background:#fff;border:1px solid var(--border2);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow-pc)}
+.hist-card .hlabel{font-size:9px;font-weight:800;color:#5F7E92;text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px}
+.hist-card .hvalue{font-size:22px;font-weight:800;color:var(--pc-escuro);line-height:1}
+.hist-table-wrap{max-height:440px!important;overflow:auto}
+.hist-table-wrap table{min-width:980px}
+.trend-chip{display:inline-block;border-radius:14px;padding:3px 9px;font-size:10px;font-weight:800;border:1px solid #D8E7F0;background:#F7FCFF;color:#003B5C;white-space:nowrap}
+.trend-chip.bad{background:rgba(192,57,43,.10);border-color:rgba(192,57,43,.35);color:#C0392B}
+.trend-chip.mid{background:rgba(230,126,34,.12);border-color:rgba(230,126,34,.30);color:#B55300}
+.trend-chip.good{background:rgba(0,169,224,.12);border-color:rgba(0,169,224,.28);color:#003B5C}
+@media(max-width:720px){.hist-summary{grid-template-columns:repeat(2,1fr)}.hist-table-wrap table{min-width:900px}}
+
+/* Ajuste executivo: ocultar siglas e focar na análise individual */
+.nome-sigla{display:none!important}
+
+/* Correção final P&C */
+.nome-sigla{display:none!important}
+
+/* Padronização P&C: remover verde visual e usar azul institucional para positivos */
+.vbad.grn,
+.risk-chip.low,
+.trend-chip.good,
+.hist-card.good,
+span[style*="#117A65"],
+span[style*="17,122,101"],
+td[style*="#117A65"],
+div[style*="#117A65"]{
+  background:rgba(0,169,224,.12)!important;
+  color:#003B5C!important;
+  border-color:rgba(0,169,224,.28)!important;
+}
+
+/* Linhas positivas antes verdes -> azul claro P&C */
+.zrow td,
+.zrow:hover td,
+tr[style*="#E3F7EF"] td,
+tr[style*="#F0FBF7"] td{
+  background:#EAF6FB!important;
+}
+
+/* Badges de regra antes verdes -> azul P&C */
+.vbad.grn,
+.risk-chip.low,
+.trend-chip.good{
+  background:#EAF6FB!important;
+  color:#003B5C!important;
+  border:1px solid #BFD6E4!important;
+}
+
+/* Pílulas/badges positivos com textos */
+span:has(> b){color:inherit}
+
+/* Botões e elementos clicáveis com cursor */
+.kpi, .fbtn, .btn-excel, tbody tr, .vbad, .risk-chip, .trend-chip, .exec-tab{
+  cursor:pointer;
+}
+
+/* Mobile mais estável */
+html,body{max-width:100%;overflow-x:hidden}
+@media(max-width:720px){
+  .main{padding:10px 8px!important}
+  .hdr{position:sticky!important;top:0!important}
+  .kpis{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important}
+  .kpi{min-width:0!important;width:100%!important}
+  .filter-bar{overflow-x:auto!important;flex-wrap:nowrap!important}
+  .filter-bar .fbtn,.filter-bar .filter-label{white-space:nowrap!important}
+  .scr{overflow:auto!important}
+  table{min-width:760px}
+}
+
+
+
+/* =========================================================
+   AJUSTE FINAL — CONSOLIDADOS MAIORES + TIPOGRAFIA PADRÃO
+   Pedido: melhorar visualização dos consolidados e retirar excesso de negrito
+========================================================= */
+body,
+td,
+.ksub,
+.filter-info,
+.exec-note,
+.data-mini-table td{
+  font-weight:400!important;
+}
+
+/* Mantém destaque apenas onde precisa: títulos, cabeçalhos e números */
+th,
+.ptitle,
+.klbl,
+.kval,
+.vbad,
+.hvalue,
+.data-card .val,
+.risk-chip,
+.trend-chip{
+  font-weight:700!important;
+}
+
+/* Nomes e textos de tabela voltam para o padrão mais leve */
+.nome-full,
+tbody td,
+#tb-ag-resp td,
+#tb-ageq-resp td,
+#tb-relativo td,
+#tb-grupo-resp td{
+  font-weight:400!important;
+}
+
+/* Seções um pouco mais baixas/respiradas para ficar no padrão visual */
+#sec-agendas + div,
+#sec-timeline + div,
+#sec-acumulado{
+  margin-top:36px!important;
+  padding-top:28px!important;
+}
+
+/* Resumo Executivo: área mais ampla e legível */
+#sec-acumulado .exec-note{
+  font-size:12px!important;
+  line-height:1.45!important;
+  padding:13px 16px!important;
+  margin-bottom:16px!important;
+}
+
+#sec-acumulado .g2{
+  grid-template-columns:1fr 1fr!important;
+  gap:16px!important;
+  align-items:stretch!important;
+}
+
+#sec-acumulado .pnl{
+  min-height:205px!important;
+  border-radius:14px!important;
+}
+
+#sec-acumulado .ptitle{
+  min-height:46px!important;
+  font-size:13px!important;
+  padding:14px 16px!important;
+}
+
+#sec-acumulado .pcnt{
+  font-size:10px!important;
+  font-weight:400!important;
+}
+
+#sec-acumulado table{
+  table-layout:auto!important;
+}
+
+#sec-acumulado th{
+  font-size:11px!important;
+  padding:11px 12px!important;
+  letter-spacing:.35px!important;
+}
+
+#sec-acumulado td{
+  font-size:12px!important;
+  padding:12px 12px!important;
+  line-height:1.25!important;
+}
+
+#sec-acumulado td b{
+  font-weight:700!important;
+}
+
+#sec-acumulado .vbad{
+  min-width:48px!important;
+  padding:4px 10px!important;
+  font-size:12px!important;
+  border-radius:8px!important;
+}
+
+#sec-acumulado td[style*="font-weight:800"]{
+  font-size:13px!important;
+  font-weight:700!important;
+}
+
+/* Evolução semanal fica um pouco mais abaixo do consolidado */
+#sec-acumulado .g2 + .pnl,
+#sec-acumulado .g2 + div.pnl{
+  margin-top:18px!important;
+}
+
+/* Cards da evolução semanal: legíveis, mas sem aspecto pesado */
+#sec-acumulado .hist-summary,
+#sec-acumulado .kpis{
+  gap:12px!important;
+}
+
+#sec-acumulado .hist-card,
+#sec-acumulado .kpi{
+  padding:14px 16px!important;
+}
+
+/* Mobile: consolidados empilhados e sem cortar tabela */
+@media(max-width:900px){
+  #sec-acumulado .g2{
+    grid-template-columns:1fr!important;
+  }
+  #sec-acumulado .scr{
+    overflow-x:auto!important;
+  }
+  #sec-acumulado table{
+    min-width:860px!important;
+  }
+  #sec-acumulado th,
+  #sec-acumulado td{
+    font-size:11px!important;
+    padding:9px 10px!important;
+  }
+}
+
+@media(max-width:600px){
+  #sec-acumulado{
+    margin-top:28px!important;
+    padding-top:22px!important;
+  }
+  #sec-acumulado .ptitle{
+    font-size:12px!important;
+  }
+  #sec-acumulado .vbad{
+    min-width:42px!important;
+    font-size:11px!important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -513,19 +751,20 @@ tr[data-timeline-date]:hover td{background:#EAF6FB!important;box-shadow:inset 3p
   </div>
   <div class="hbadge">
     <span class="bp">1.167 PRAZOS · 4.892 AGENDAS</span>
-    <span class="ba">⚠ 206 FATAIS · 7 FORA HORÁRIO</span>
+    <span class="ba">⚠ 206 FATAIS · 128 FORA HORÁRIO</span>
   </div>
 </div>
 
 <div class="main">
+<div id="sec-prazos"></div>
 <div class="kpis">
   <div class="kpi" onclick="kpiClick(this,'')"><div class="klbl">Total Baixado</div><div class="kval wh">1.167</div><div class="ksub">prazos realizados</div></div>
   <div class="kpi" onclick="kpiClick(this,'fatal')" id="kpi-fatal"><div class="klbl">Fatais</div><div class="kval" style="color:#e74c3c">206</div><div class="ksub">17,6% — protocolado no dia fatal</div></div>
   <div class="kpi" onclick="kpiClick(this,'vencido')" id="kpi-vencido"><div class="klbl">Vencidos</div><div class="kval" style="color:#c0392b">0</div><div class="ksub">0% — semana sem vencidos ✓ ⚠</div></div>
   <div class="kpi" onclick="kpiClick(this,'d1')" id="kpi-d1"><div class="klbl">D-1 (no dia)</div><div class="kval yel">392</div><div class="ksub">cumpridos no prazo</div></div>
   <div class="kpi" onclick="kpiClick(this,'antecipado')" id="kpi-antecipado"><div class="klbl">Antecipados</div><div class="kval grn">569</div><div class="ksub">48,7% — antes do prazo</div></div>
-  <div class="kpi" onclick="toggleFilter('fora')" id="kpi-fora"><div class="klbl">Fora do Horário</div><div class="kval org">95</div><div class="ksub">antes 9h ou após 19h</div></div>
-  <div class="kpi" onclick="toggleFilter('fatfora')" id="kpi-fatfora"><div class="klbl">Fatal + Fora Hora</div><div class="kval" style="color:#e74c3c">7</div><div class="ksub">⚠ caso fatal — clique para filtrar</div></div>
+  <div class="kpi" onclick="toggleFilter('fora')" id="kpi-fora"><div class="klbl">Fora do Horário</div><div class="kval org">128</div><div class="ksub">antes 9h ou após 19h</div></div>
+  <div class="kpi" onclick="toggleFilter('fatfora')" id="kpi-fatfora"><div class="klbl">Fatal + Fora Hora</div><div class="kval" style="color:#e74c3c">18</div><div class="ksub">⚠ caso fatal — clique para filtrar</div></div>
 </div>
 
 <a class="btn-excel" onclick="downloadExcel()">📥 Exportar Excel</a>
@@ -534,6 +773,7 @@ tr[data-timeline-date]:hover td{background:#EAF6FB!important;box-shadow:inset 3p
 <div class="nota-feriado">
   <span style="font-size:15px;flex-shrink:0">📌</span>
   <span><b>Nota sobre Vencidos:</b> O período de 27/04 a 01/05/2026 inclui o feriado de <b>01/05/2026 (Dia do Trabalho)</b>. Prazos realizados com <b>0 vencidos</b> — excelente desempenho da equipe. Prazos com data em 01/05 foram antecipados para 30/04.</span>
+
 </div>
 
 <!-- FILTRO SIMULTÂNEO -->
@@ -588,7 +828,8 @@ tr[data-timeline-date]:hover td{background:#EAF6FB!important;box-shadow:inset 3p
       <th class="c" style="color:#7B241C">Vencido</th>
       <th class="c" style="color:#C0392B">Fatal</th>
       <th class="c" style="color:#D4A843">D-1</th>
-      <th class="c" style="color:#117A65">Antecipados</th>
+      <th class="c">D-2</th>
+      <th class="c" style="color:#003B5C">Futuro</th>
       <th class="c">% Risco</th>
     </tr></thead>
     <tbody id="tb-grupo-resp"></tbody>
@@ -693,13 +934,14 @@ tr[data-timeline-date]:hover td{background:#EAF6FB!important;box-shadow:inset 3p
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
+<div id="sec-agendas"></div>
 <!-- SEÇÃO AGENDAS — SEPARADAS                             -->
 <!-- ═══════════════════════════════════════════════════════ -->
 <div style="margin-top:28px;border-top:2px solid rgba(0,174,239,.3);padding-top:22px">
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap">
     <div style="width:4px;height:22px;background:var(--cyan);border-radius:2px"></div>
     <h2 style="font-size:14px;font-weight:700;letter-spacing:.3px">📅 Agendas — 27/04 a 01/05/2026</h2>
-    <span style="font-size:11px;color:var(--tx2);margin-left:4px">4.549 realizadas · separadas da Agenda Equipe</span>
+    <span style="font-size:11px;color:var(--tx2);margin-left:4px">4.549 realizadas</span>
   </div>
 
   <div class="kpis" id="ag-kpi-row"></div>
@@ -710,7 +952,7 @@ tr[data-timeline-date]:hover td{background:#EAF6FB!important;box-shadow:inset 3p
       <div id="ag-bars-wrap" style="display:flex;align-items:flex-end;gap:6px;height:110px;padding:8px 16px 0;box-sizing:border-box"></div>
       <table style="margin-top:8px">
         <thead><tr>
-          <th>Grupo</th><th class="c" style="color:#C0392B">Vencido</th><th class="c" style="color:#D4A843">Fatal</th><th class="c" style="color:var(--pc-azul)">D-1</th><th class="c">Total</th>
+          <th>Grupo</th><th class="c" style="color:#C0392B">Agenda em atraso</th><th class="c" style="color:#C0392B">Fatal</th><th class="c" style="color:var(--pc-azul)">D-1</th><th class="c">D-2</th><th class="c">Futuro</th><th class="c">Total</th>
         </tr></thead>
         <tbody id="tb-ag-equipe"></tbody>
       </table>
@@ -718,8 +960,7 @@ tr[data-timeline-date]:hover td{background:#EAF6FB!important;box-shadow:inset 3p
     <div class="pnl">
       <div class="ptitle ble">🏆 Agendas — Top Responsáveis <span class="pcnt">por volume</span></div>
       <div class="scr" style="max-height:400px"><table>
-        <thead><tr><th>#</th><th>Responsável</th><th>Grupo</th>
-          <th class="c" style="color:#C0392B">Vencido</th><th class="c" style="color:#D4A843">Fatal</th><th class="c" style="color:var(--pc-azul)">D-1</th><th class="c">Total</th></tr></thead>
+        <thead><tr><th>#</th><th>Responsável</th><th>Grupo</th><th class="c" style="color:#C0392B">Agenda em atraso</th><th class="c" style="color:#C0392B">Fatal</th><th class="c" style="color:var(--pc-azul)">D-1</th><th class="c">D-2</th><th class="c">Futuro</th><th class="c">Total</th></tr></thead>
         <tbody id="tb-ag-resp"></tbody>
       </table></div>
     </div>
@@ -728,7 +969,7 @@ tr[data-timeline-date]:hover td{background:#EAF6FB!important;box-shadow:inset 3p
   <div style="display:flex;align-items:center;gap:10px;margin:26px 0 16px;flex-wrap:wrap">
     <div style="width:4px;height:22px;background:#27AE60;border-radius:2px"></div>
     <h2 style="font-size:14px;font-weight:700;letter-spacing:.3px">👥 Agenda Equipe — 27/04 a 01/05/2026</h2>
-    <span style="font-size:11px;color:var(--tx2);margin-left:4px">343 realizadas · acompanhamento da equipe</span>
+    <span style="font-size:11px;color:var(--tx2);margin-left:4px">343 realizadas</span>
   </div>
 
   <div class="kpis" id="ageq-kpi-row"></div>
@@ -739,7 +980,7 @@ tr[data-timeline-date]:hover td{background:#EAF6FB!important;box-shadow:inset 3p
       <div id="ageq-bars-wrap" style="display:flex;align-items:flex-end;gap:6px;height:110px;padding:8px 16px 0;box-sizing:border-box"></div>
       <table style="margin-top:8px">
         <thead><tr>
-          <th>Grupo</th><th class="c" style="color:#C0392B">Vencido</th><th class="c" style="color:#D4A843">Fatal</th><th class="c" style="color:var(--pc-azul)">D-1</th><th class="c">Total</th>
+          <th>Grupo</th><th class="c" style="color:#C0392B">Agenda em atraso</th><th class="c" style="color:#C0392B">Fatal</th><th class="c" style="color:var(--pc-azul)">D-1</th><th class="c">D-2</th><th class="c">Futuro</th><th class="c">Total</th>
         </tr></thead>
         <tbody id="tb-ageq-equipe"></tbody>
       </table>
@@ -747,14 +988,14 @@ tr[data-timeline-date]:hover td{background:#EAF6FB!important;box-shadow:inset 3p
     <div class="pnl">
       <div class="ptitle grne">🏆 Agenda Equipe — Top Responsáveis <span class="pcnt">por volume</span></div>
       <div class="scr" style="max-height:400px"><table>
-        <thead><tr><th>#</th><th>Responsável</th><th>Grupo</th>
-          <th class="c" style="color:#C0392B">Vencido</th><th class="c" style="color:#D4A843">Fatal</th><th class="c" style="color:var(--pc-azul)">D-1</th><th class="c">Total</th></tr></thead>
+        <thead><tr><th>#</th><th>Responsável</th><th>Grupo</th><th class="c" style="color:#C0392B">Agenda em atraso</th><th class="c" style="color:#C0392B">Fatal</th><th class="c" style="color:var(--pc-azul)">D-1</th><th class="c">D-2</th><th class="c">Futuro</th><th class="c">Total</th></tr></thead>
         <tbody id="tb-ageq-resp"></tbody>
       </table></div>
     </div>
   </div>
 </div>
 
+<div id="sec-timeline"></div>
 <!-- LINHA DO TEMPO DOS CUMPRIMENTOS DIÁRIOS -->
 <div style="margin-top:28px;border-top:2px solid rgba(0,174,239,.3);padding-top:22px">
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap">
@@ -770,23 +1011,25 @@ tr[data-timeline-date]:hover td{background:#EAF6FB!important;box-shadow:inset 3p
         <th class="c">Prazos</th>
         <th class="c">Agendas</th>
         <th class="c">Agenda Equipe</th>
-        <th class="c" style="color:#C0392B">Vencido</th>
-        <th class="c" style="color:#D4A843">Fatal</th>
+        <th class="c" style="color:#C0392B">Agenda em atraso</th>
+        <th class="c" style="color:#C0392B">Fatal</th>
         <th class="c" style="color:var(--pc-azul)">D-1</th>
-        <th class="c" style="color:#117A65">Futuro</th>
+        <th class="c">D-2</th>
+        <th class="c" style="color:#003B5C">Futuro</th>
         <th class="c">Total</th>
-        <th class="c">% Vencido</th>
+        <th class="c">% Atraso</th>
       </tr></thead>
       <tbody id="tb-timeline">
-        <tr data-timeline-date="2026-04-27" onclick="openTimelineDay('2026-04-27')" title="Clique para ver o resumo do dia">
+<tr data-timeline-date="2026-04-27" onclick="openTimelineDay('2026-04-27')" title="Clique para ver o resumo do dia">
       <td><b>27/04/2026</b><span class="nome-sigla">segunda-feira</span></td>
       <td class="c"><span class="vbad muted">227</span></td>
       <td class="c"><span class="vbad blu">1.033</span></td>
       <td class="c"><span class="vbad grn">74</span></td>
       <td class="c"><span class="vbad red">383</span></td>
-      <td class="c"><span class="vbad yel">65</span></td>
-      <td class="c"><span class="vbad blu">496</span></td>
-      <td class="c"><span class="vbad grn">372</span></td>
+      <td class="c"><span class="vbad fat">65</span></td>
+      <td class="c"><span class="vbad yel">496</span></td>
+      <td class="c"><span class="vbad blu">176</span></td>
+      <td class="c"><span class="vbad grn">214</span></td>
       <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.334</td>
       <td class="c"><span class="risk-chip mid">29%</span></td>
     </tr><tr data-timeline-date="2026-04-28" onclick="openTimelineDay('2026-04-28')" title="Clique para ver o resumo do dia">
@@ -794,42 +1037,46 @@ tr[data-timeline-date]:hover td{background:#EAF6FB!important;box-shadow:inset 3p
       <td class="c"><span class="vbad muted">331</span></td>
       <td class="c"><span class="vbad blu">1.296</span></td>
       <td class="c"><span class="vbad grn">91</span></td>
-      <td class="c"><span class="vbad red">445</span></td>
-      <td class="c"><span class="vbad yel">49</span></td>
-      <td class="c"><span class="vbad blu">565</span></td>
-      <td class="c"><span class="vbad grn">604</span></td>
+      <td class="c"><span class="vbad red">139</span></td>
+      <td class="c"><span class="vbad fat">355</span></td>
+      <td class="c"><span class="vbad yel">565</span></td>
+      <td class="c"><span class="vbad blu">234</span></td>
+      <td class="c"><span class="vbad grn">425</span></td>
       <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.718</td>
-      <td class="c"><span class="risk-chip mid">26%</span></td>
+      <td class="c"><span class="risk-chip low">8%</span></td>
     </tr><tr data-timeline-date="2026-04-29" onclick="openTimelineDay('2026-04-29')" title="Clique para ver o resumo do dia">
       <td><b>29/04/2026</b><span class="nome-sigla">quarta-feira</span></td>
       <td class="c"><span class="vbad muted">277</span></td>
       <td class="c"><span class="vbad blu">1.010</span></td>
       <td class="c"><span class="vbad grn">110</span></td>
-      <td class="c"><span class="vbad red">367</span></td>
-      <td class="c"><span class="vbad yel">52</span></td>
-      <td class="c"><span class="vbad blu">472</span></td>
-      <td class="c"><span class="vbad grn">464</span></td>
+      <td class="c"><span class="vbad red">132</span></td>
+      <td class="c"><span class="vbad fat">287</span></td>
+      <td class="c"><span class="vbad yel">472</span></td>
+      <td class="c"><span class="vbad blu">220</span></td>
+      <td class="c"><span class="vbad grn">286</span></td>
       <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.397</td>
-      <td class="c"><span class="risk-chip mid">26%</span></td>
+      <td class="c"><span class="risk-chip low">9%</span></td>
     </tr><tr data-timeline-date="2026-04-30" onclick="openTimelineDay('2026-04-30')" title="Clique para ver o resumo do dia">
       <td><b>30/04/2026</b><span class="nome-sigla">quinta-feira</span></td>
       <td class="c"><span class="vbad muted">328</span></td>
       <td class="c"><span class="vbad blu">1.201</span></td>
       <td class="c"><span class="vbad grn">68</span></td>
-      <td class="c"><span class="vbad red">398</span></td>
-      <td class="c"><span class="vbad yel">40</span></td>
-      <td class="c"><span class="vbad blu">471</span></td>
-      <td class="c"><span class="vbad grn">688</span></td>
+      <td class="c"><span class="vbad red">109</span></td>
+      <td class="c"><span class="vbad fat">329</span></td>
+      <td class="c"><span class="vbad yel">471</span></td>
+      <td class="c"><span class="vbad blu">269</span></td>
+      <td class="c"><span class="vbad grn">419</span></td>
       <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.597</td>
-      <td class="c"><span class="risk-chip mid">25%</span></td>
+      <td class="c"><span class="risk-chip low">7%</span></td>
     </tr><tr data-timeline-date="2026-05-01" onclick="openTimelineDay('2026-05-01')" title="Clique para ver o resumo do dia">
       <td><b>01/05/2026</b><span class="nome-sigla">sexta-feira</span></td>
       <td class="c"><span class="vbad muted">4</span></td>
       <td class="c"><span class="vbad blu">9</span></td>
       <td class="c"><span class="vbad grn">0</span></td>
       <td class="c"><span class="vbad red">6</span></td>
-      <td class="c"><span class="vbad yel">0</span></td>
-      <td class="c"><span class="vbad blu">3</span></td>
+      <td class="c"><span class="vbad fat">0</span></td>
+      <td class="c"><span class="vbad yel">3</span></td>
+      <td class="c"><span class="vbad blu">0</span></td>
       <td class="c"><span class="vbad grn">4</span></td>
       <td class="c" style="font-weight:800;color:var(--pc-escuro)">13</td>
       <td class="c"><span class="risk-chip high">46%</span></td>
@@ -839,23 +1086,103 @@ tr[data-timeline-date]:hover td{background:#EAF6FB!important;box-shadow:inset 3p
   </div>
 </div>
 
+
+<!-- RESUMO EXECUTIVO -->
+<div id="sec-acumulado" style="margin-top:28px;border-top:2px solid rgba(0,174,239,.3);padding-top:22px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap">
+    <div style="width:4px;height:22px;background:var(--pc-azul);border-radius:2px"></div>
+    <h2 style="font-size:14px;font-weight:700;letter-spacing:.3px">📊 Resumo Executivo</h2>
+    <span style="font-size:11px;color:var(--tx2);margin-left:4px">visão semanal e base para consolidado mensal</span>
+  </div>
+  <div class="exec-note">
+    <b>Uso sugerido:</b> acompanhar a evolução semanal e utilizar o fechamento mensal como consolidado executivo da Controladoria.
+  </div>
+  <div class="g2">
+    <div class="pnl">
+      <div class="ptitle ble">📌 Resumo Semanal <span class="pcnt">clique na linha para detalhar</span></div>
+      <div class="scr" style="max-height:360px"><table>
+        <thead><tr><th>Semana</th><th class="c">Prazos</th><th class="c">Agendas</th><th class="c">Agenda Equipe</th><th class="c" style="color:#C0392B">Agenda em atraso</th><th class="c" style="color:#C0392B">Fatal</th><th class="c">D-1</th><th class="c">D-2</th><th class="c">Futuro</th><th class="c">Total</th></tr></thead>
+        <tbody><tr data-acumulo="semana" data-acumulo-key="2026-S18" onclick="openAcumulado('semana','2026-S18')" title="Clique para detalhar o acumulado">
+          <td><b>Semana 18 · 27/04 a 01/05</b></td>
+          <td class="c"><span class="vbad muted">1.167</span></td>
+          <td class="c"><span class="vbad blu">4.549</span></td>
+          <td class="c"><span class="vbad grn">343</span></td>
+          <td class="c"><span class="vbad red">769</span></td>
+          <td class="c"><span class="vbad fat">1.036</span></td>
+          <td class="c"><span class="vbad yel">2.007</span></td>
+          <td class="c"><span class="vbad blu">899</span></td>
+          <td class="c"><span class="vbad grn">1.348</span></td>
+          <td class="c" style="font-weight:800;color:var(--pc-escuro)">6.059</td>
+        </tr></tbody>
+      </table></div>
+    </div>
+    <div class="pnl">
+      <div class="ptitle grne">📅 Consolidado Mensal <span class="pcnt">base para fechamento do mês</span></div>
+      <div class="scr" style="max-height:360px"><table>
+        <thead><tr><th>Mês</th><th class="c">Prazos</th><th class="c">Agendas</th><th class="c">Agenda Equipe</th><th class="c" style="color:#C0392B">Agenda em atraso</th><th class="c" style="color:#C0392B">Fatal</th><th class="c">D-1</th><th class="c">D-2</th><th class="c">Futuro</th><th class="c">Total</th></tr></thead>
+        <tbody><tr data-acumulo="mes" data-acumulo-key="2026-04" onclick="openAcumulado('mes','2026-04')" title="Clique para detalhar o acumulado">
+          <td><b>04/2026</b></td>
+          <td class="c"><span class="vbad muted">1.163</span></td>
+          <td class="c"><span class="vbad blu">4.540</span></td>
+          <td class="c"><span class="vbad grn">343</span></td>
+          <td class="c"><span class="vbad red">763</span></td>
+          <td class="c"><span class="vbad fat">1.036</span></td>
+          <td class="c"><span class="vbad yel">2.004</span></td>
+          <td class="c"><span class="vbad blu">899</span></td>
+          <td class="c"><span class="vbad grn">1.344</span></td>
+          <td class="c" style="font-weight:800;color:var(--pc-escuro)">6.046</td>
+        </tr><tr data-acumulo="mes" data-acumulo-key="2026-05" onclick="openAcumulado('mes','2026-05')" title="Clique para detalhar o acumulado">
+          <td><b>05/2026</b></td>
+          <td class="c"><span class="vbad muted">4</span></td>
+          <td class="c"><span class="vbad blu">9</span></td>
+          <td class="c"><span class="vbad grn">0</span></td>
+          <td class="c"><span class="vbad red">6</span></td>
+          <td class="c"><span class="vbad fat">0</span></td>
+          <td class="c"><span class="vbad yel">3</span></td>
+          <td class="c"><span class="vbad blu">0</span></td>
+          <td class="c"><span class="vbad grn">4</span></td>
+          <td class="c" style="font-weight:800;color:var(--pc-escuro)">13</td>
+        </tr></tbody>
+      </table></div>
+    </div>
+  </div>
+
+  <div class="hist-section pnl">
+    <div class="ptitle ble">📈 Evolução Semanal — Prazos Processuais <span class="pcnt">por profissional · fatal, vencido, D-1, D-2 e fora do horário</span></div>
+    <div class="exec-note" style="margin:12px 14px">
+      <b>Como usar:</b> esta aba considera exclusivamente prazos processuais. A análise é individual por profissional, consolidando todos os grupos em que a pessoa atuou, para evitar duplicidade e identificar quem reduziu risco, quem mantém recorrência de fatal/fora do horário e quem está melhorando.
+    </div>
+    <div class="hist-summary" id="hist-summary" style="padding:0 14px"></div>
+    <div class="scr hist-table-wrap"><table>
+      <thead><tr>
+        <th>Profissional</th><th>Semana</th>
+        <th class="c">Total Prazos</th><th class="c" style="color:#C0392B">Vencido</th><th class="c" style="color:#C0392B">Fatal</th>
+        <th class="c">D-1</th><th class="c">D-2</th><th class="c" style="color:#E67E22">Fora do Horário</th><th class="c" style="color:#C0392B">Fatal + Fora</th>
+        <th class="c">% Risco</th><th class="c">Leitura</th><th class="c">Evolução</th>
+      </tr></thead>
+      <tbody id="tb-hist-resp"></tbody>
+    </table></div>
+  </div>
+</div>
+
 </div>
 
 <script>
 
-const TIMELINE_DATA = {"2026-04-29": {"Prazos": 277, "Agendas": 1010, "Agenda Equipe": 110, "Vencido": 367, "Fatal": 52, "D-1": 472, "Futuro": 464, "D-2": 42, "Total": 1397}, "2026-04-28": {"Prazos": 331, "Agendas": 1296, "Agenda Equipe": 91, "Vencido": 445, "Fatal": 49, "D-1": 565, "Futuro": 604, "D-2": 55, "Total": 1718}, "2026-04-27": {"Prazos": 227, "Agendas": 1033, "Agenda Equipe": 74, "Vencido": 383, "Fatal": 65, "D-1": 496, "Futuro": 372, "D-2": 18, "Total": 1334}, "2026-04-30": {"Prazos": 328, "Agendas": 1201, "Agenda Equipe": 68, "Vencido": 398, "Fatal": 40, "D-1": 471, "Futuro": 688, "D-2": 0, "Total": 1597}, "2026-05-01": {"Prazos": 4, "Agendas": 9, "Agenda Equipe": 0, "Vencido": 6, "Fatal": 0, "D-1": 3, "Futuro": 4, "D-2": 0, "Total": 13}};
+const TIMELINE_DATA = {"2026-04-29":{"Agenda":1010,"Vencido":132,"Total":1397,"Agenda Equipe":110,"Fatal":287,"Prazo":277,"D-1":472,"D-2":220,"Futuro":286},"2026-04-28":{"Agenda":1296,"Vencido":139,"Total":1718,"Agenda Equipe":91,"Fatal":355,"Prazo":331,"D-1":565,"D-2":234,"Futuro":425},"2026-04-27":{"Agenda":1033,"Vencido":383,"Total":1334,"Prazo":227,"Fatal":65,"Agenda Equipe":74,"D-1":496,"D-2":176,"Futuro":214},"2026-04-30":{"Agenda":1201,"Vencido":109,"Total":1597,"Fatal":329,"Prazo":328,"Agenda Equipe":68,"D-1":471,"D-2":269,"Futuro":419},"2026-05-01":{"Agenda":9,"Vencido":6,"Total":13,"Prazo":4,"Futuro":4,"D-1":3}};
 function openTimelineDay(dateKey){
   const d = TIMELINE_DATA[dateKey]; if(!d) return;
   const [y,m,day] = dateKey.split('-');
   openDataModal(`🗓️ Linha do tempo — ${day}/${m}/${y}`, 'Cumprimentos realizados no dia', `<div class="data-grid">
-    <div class="data-card"><span class="lbl">Prazos</span><span class="val">${fmtNum(d.Prazos||0)}</span></div>
-    <div class="data-card"><span class="lbl">Agendas</span><span class="val" style="color:var(--pc-azul)">${fmtNum(d.Agendas||0)}</span></div>
-    <div class="data-card"><span class="lbl">Agenda Equipe</span><span class="val" style="color:#117A65">${fmtNum(d['Agenda Equipe']||0)}</span></div>
+    <div class="data-card"><span class="lbl">Prazos</span><span class="val">${fmtNum(d.Prazo||0)}</span></div>
+    <div class="data-card"><span class="lbl">Agendas</span><span class="val" style="color:var(--pc-azul)">${fmtNum(d.Agenda||0)}</span></div>
+    <div class="data-card"><span class="lbl">Agenda Equipe</span><span class="val" style="color:#003B5C">${fmtNum(d['Agenda Equipe']||0)}</span></div>
     <div class="data-card"><span class="lbl">Total</span><span class="val">${fmtNum(d.Total||0)}</span></div>
-    <div class="data-card"><span class="lbl">Vencido</span><span class="val" style="color:#C0392B">${fmtNum(d.Vencido||0)}</span></div>
-    <div class="data-card"><span class="lbl">Fatal</span><span class="val" style="color:#D4A843">${fmtNum(d.Fatal||0)}</span></div>
+    <div class="data-card"><span class="lbl">Agenda em atraso</span><span class="val" style="color:#C0392B">${fmtNum(d.Vencido||0)}</span></div>
+    <div class="data-card"><span class="lbl">Fatal</span><span class="val" style="color:#C0392B">${fmtNum(d.Fatal||0)}</span></div>
     <div class="data-card"><span class="lbl">D-1</span><span class="val" style="color:var(--pc-azul)">${fmtNum(d['D-1']||0)}</span></div>
-    <div class="data-card"><span class="lbl">Futuro</span><span class="val" style="color:#117A65">${fmtNum(d.Futuro||0)}</span></div>
+    <div class="data-card"><span class="lbl">D-2</span><span class="val" style="color:#2980B9">${fmtNum(d['D-2']||0)}</span></div>
+    <div class="data-card"><span class="lbl">Futuro</span><span class="val" style="color:#003B5C">${fmtNum(d.Futuro||0)}</span></div>
   </div>`);
 }
 
@@ -939,71 +1266,12 @@ function nome(sigla) {
   return `<span class="nome-full">${n}</span><span class="nome-sigla">${sigla}</span>`;
 }
 
-const RESP=[
-  // Equipe E2 — Coord.: Jackeline Romeu Torres
-  {n:'RRU',fat:22,ven:0,d1:20,d2:7,fut:36,fora:21,ff:0,tot:85,grp:'Grupo E2'},
-  // Equipe B — Coord.: Ana Carolina Honório Martini
-  {n:'RFE',fat:2,ven:0,d1:27,d2:6,fut:39,fora:3,ff:0,tot:74,grp:'Grupo B1'},
-  // Equipe E1 — Coord.: Joice Ramos Miranda
-  {n:'JPL',fat:1,ven:0,d1:15,d2:3,fut:41,fora:5,ff:0,tot:60,grp:'Grupo E1'},
-  {n:'JRT',fat:23,ven:0,d1:8,d2:4,fut:24,fora:9,ff:4,tot:59,grp:'Grupo E2'},
-  {n:'VRO',fat:7,ven:0,d1:21,d2:12,fut:18,fora:1,ff:0,tot:58,grp:'Grupo E1'},
-  {n:'BSO',fat:12,ven:0,d1:13,d2:8,fut:23,fora:18,ff:0,tot:56,grp:'Grupo B1'},
-  {n:'CAL',fat:18,ven:0,d1:7,d2:4,fut:26,fora:5,ff:0,tot:55,grp:'Grupo E2'},
-  {n:'GSM',fat:10,ven:0,d1:20,d2:3,fut:22,fora:1,ff:0,tot:55,grp:'Grupo B1'},
-  {n:'VCR',fat:5,ven:0,d1:22,d2:3,fut:21,fora:4,ff:0,tot:51,grp:'Grupo B2'},
-  {n:'RYL',fat:20,ven:0,d1:26,d2:1,fut:3,fora:0,ff:0,tot:50,grp:'Grupo E2'},
-  {n:'JJS',fat:17,ven:0,d1:18,d2:2,fut:4,fora:1,ff:0,tot:41,grp:'Grupo B1'},
-  {n:'ALF',fat:1,ven:0,d1:6,d2:6,fut:26,fora:1,ff:0,tot:39,grp:'Grupo E1'},
-  // Equipe D
-  {n:'JQS',fat:0,ven:0,d1:12,d2:2,fut:23,fora:0,ff:0,tot:37,grp:'Grupo D1'},
-  {n:'BCF',fat:3,ven:0,d1:15,d2:3,fut:15,fora:0,ff:0,tot:36,grp:'Grupo B2'},
-  {n:'JPE',fat:2,ven:0,d1:15,d2:2,fut:17,fora:6,ff:0,tot:36,grp:'Grupo B1'},
-  {n:'PSI',fat:2,ven:0,d1:2,d2:12,fut:20,fora:0,ff:0,tot:36,grp:'Grupo E1'},
-  // Equipe C
-  {n:'RCF',fat:6,ven:0,d1:5,d2:2,fut:20,fora:0,ff:0,tot:33,grp:'Grupo C'},
-  {n:'VSI',fat:5,ven:0,d1:23,d2:0,fut:4,fora:2,ff:0,tot:32,grp:'Grupo C'},
-  {n:'LMI',fat:0,ven:0,d1:16,d2:11,fut:4,fora:0,ff:0,tot:31,grp:'Grupo B3'},
-  {n:'BBO',fat:3,ven:0,d1:10,d2:5,fut:9,fora:0,ff:0,tot:27,grp:'Grupo D1'},
-  {n:'DPR',fat:4,ven:0,d1:11,d2:1,fut:11,fora:0,ff:0,tot:27,grp:'Grupo E1'},
-  {n:'ECO',fat:5,ven:0,d1:9,d2:5,fut:8,fora:0,ff:0,tot:27,grp:'Grupo C'},
-  {n:'MBF',fat:2,ven:0,d1:18,d2:1,fut:6,fora:0,ff:0,tot:27,grp:'Grupo E2'},
-  {n:'ARC',fat:10,ven:0,d1:3,d2:1,fut:11,fora:9,ff:3,tot:25,grp:'Grupo E2'},
-  {n:'ANB',fat:1,ven:0,d1:7,d2:6,fut:10,fora:3,ff:0,tot:24,grp:'Grupo B2'},
-  {n:'JRM',fat:2,ven:0,d1:20,d2:0,fut:2,fora:4,ff:0,tot:24,grp:'Grupo E1'},
-  {n:'TFR',fat:8,ven:0,d1:9,d2:2,fut:2,fora:0,ff:0,tot:21,grp:'Grupo C'},
-  {n:'BIM',fat:7,ven:0,d1:4,d2:0,fut:0,fora:0,ff:0,tot:11,grp:'Grupo E2'},
-  {n:'SOF',fat:5,ven:0,d1:4,d2:0,fut:2,fora:0,ff:0,tot:11,grp:'Grupo A3'},
-  {n:'AAP',fat:0,ven:0,d1:2,d2:2,fut:6,fora:0,ff:0,tot:10,grp:'Grupo E1'},
-  {n:'TCO',fat:1,ven:0,d1:4,d2:0,fut:0,fora:2,ff:0,tot:5,grp:'Grupo E1'},
-  {n:'NRG',fat:1,ven:0,d1:0,d2:0,fut:1,fora:0,ff:0,tot:2,grp:'Grupo B1'},
-  // Equipe A
-  {n:'ARE',fat:1,ven:0,d1:0,d2:0,fut:0,fora:0,ff:0,tot:1,grp:'Grupo A2'},
-  {n:'VAR',fat:0,ven:0,d1:0,d2:1,fut:0,fora:0,ff:0,tot:1,grp:'Grupo B1'},
-];
+const RESP=[{"n":"RRU","grp":"Grupo E2","ven":0,"fat":22,"d1":20,"d2":7,"fut":36,"tot":85,"fora":23,"ff":1},{"n":"RFE","grp":"Grupo B1","ven":0,"fat":2,"d1":27,"d2":6,"fut":39,"tot":74,"fora":4,"ff":1},{"n":"JPL","grp":"Grupo E1","ven":0,"fat":1,"d1":15,"d2":3,"fut":41,"tot":60,"fora":5,"ff":0},{"n":"JRT","grp":"Grupo E2","ven":0,"fat":23,"d1":8,"d2":4,"fut":24,"tot":59,"fora":9,"ff":4},{"n":"VRO","grp":"Grupo E1","ven":0,"fat":7,"d1":21,"d2":12,"fut":18,"tot":58,"fora":1,"ff":0},{"n":"BSO","grp":"Grupo B1","ven":0,"fat":12,"d1":13,"d2":8,"fut":23,"tot":56,"fora":22,"ff":3},{"n":"CAL","grp":"Grupo E2","ven":0,"fat":18,"d1":7,"d2":4,"fut":26,"tot":55,"fora":5,"ff":0},{"n":"VCR","grp":"Grupo B2","ven":0,"fat":5,"d1":22,"d2":3,"fut":21,"tot":51,"fora":4,"ff":0},{"n":"RYL","grp":"Grupo E2","ven":0,"fat":20,"d1":26,"d2":1,"fut":3,"tot":50,"fora":0,"ff":0},{"n":"GSM","grp":"Grupo B1","ven":0,"fat":6,"d1":19,"d2":3,"fut":17,"tot":45,"fora":1,"ff":0},{"n":"JJS","grp":"Grupo B1","ven":0,"fat":17,"d1":18,"d2":2,"fut":4,"tot":41,"fora":5,"ff":4},{"n":"ALF","grp":"Grupo E1","ven":0,"fat":1,"d1":6,"d2":6,"fut":26,"tot":39,"fora":1,"ff":0},{"n":"JQS","grp":"Grupo D1","ven":0,"fat":0,"d1":12,"d2":2,"fut":23,"tot":37,"fora":2,"ff":0},{"n":"BCF","grp":"Grupo B2","ven":0,"fat":3,"d1":15,"d2":3,"fut":15,"tot":36,"fora":0,"ff":0},{"n":"PSI","grp":"Grupo E1","ven":0,"fat":2,"d1":2,"d2":12,"fut":20,"tot":36,"fora":0,"ff":0},{"n":"JPE","grp":"Grupo B1","ven":0,"fat":2,"d1":13,"d2":2,"fut":14,"tot":31,"fora":4,"ff":0},{"n":"LMI","grp":"Grupo B3","ven":0,"fat":0,"d1":16,"d2":11,"fut":4,"tot":31,"fora":1,"ff":0},{"n":"RCF","grp":"Grupo C","ven":0,"fat":4,"d1":5,"d2":2,"fut":17,"tot":28,"fora":0,"ff":0},{"n":"BBO","grp":"Grupo D1","ven":0,"fat":3,"d1":10,"d2":5,"fut":9,"tot":27,"fora":0,"ff":0},{"n":"DPR","grp":"Grupo E1","ven":0,"fat":4,"d1":11,"d2":1,"fut":11,"tot":27,"fora":3,"ff":0},{"n":"MBF","grp":"Grupo E2","ven":0,"fat":2,"d1":18,"d2":1,"fut":6,"tot":27,"fora":6,"ff":0},{"n":"ARC","grp":"Grupo E2","ven":0,"fat":10,"d1":3,"d2":1,"fut":11,"tot":25,"fora":12,"ff":4},{"n":"ECO","grp":"Grupo C","ven":0,"fat":5,"d1":8,"d2":4,"fut":7,"tot":24,"fora":0,"ff":0},{"n":"JRM","grp":"Grupo E1","ven":0,"fat":2,"d1":20,"d2":0,"fut":2,"tot":24,"fora":4,"ff":0},{"n":"TFR","grp":"Grupo C","ven":0,"fat":8,"d1":9,"d2":2,"fut":2,"tot":21,"fora":2,"ff":1},{"n":"VSI","grp":"Grupo C","ven":0,"fat":4,"d1":14,"d2":0,"fut":2,"tot":20,"fora":4,"ff":0},{"n":"ANB","grp":"Grupo B2","ven":0,"fat":0,"d1":2,"d2":4,"fut":6,"tot":12,"fora":1,"ff":0},{"n":"ANB","grp":"Grupo B3","ven":0,"fat":1,"d1":5,"d2":2,"fut":4,"tot":12,"fora":2,"ff":0},{"n":"BIM","grp":"Grupo E2","ven":0,"fat":7,"d1":4,"d2":0,"fut":0,"tot":11,"fora":0,"ff":0},{"n":"GSM","grp":"Grupo B3","ven":0,"fat":4,"d1":1,"d2":0,"fut":5,"tot":10,"fora":0,"ff":0},{"n":"VSI","grp":"Grupo A3","ven":0,"fat":0,"d1":7,"d2":0,"fut":2,"tot":9,"fora":3,"ff":0},{"n":"SOF","grp":"Grupo A3","ven":0,"fat":3,"d1":2,"d2":0,"fut":2,"tot":7,"fora":0,"ff":0},{"n":"AAP","grp":"Grupo E1","ven":0,"fat":0,"d1":1,"d2":1,"fut":4,"tot":6,"fora":0,"ff":0},{"n":"JPE","grp":"Grupo B3","ven":0,"fat":0,"d1":2,"d2":0,"fut":3,"tot":5,"fora":2,"ff":0},{"n":"Nome não identificado","grp":"Grupo E1","ven":0,"fat":1,"d1":4,"d2":0,"fut":0,"tot":5,"fora":2,"ff":0},{"n":"RCF","grp":"Grupo E2","ven":0,"fat":2,"d1":0,"d2":0,"fut":3,"tot":5,"fora":0,"ff":0},{"n":"SOF","grp":"Grupo A2","ven":0,"fat":2,"d1":2,"d2":0,"fut":0,"tot":4,"fora":0,"ff":0},{"n":"AAP","grp":"Grupo E2","ven":0,"fat":0,"d1":1,"d2":1,"fut":2,"tot":4,"fora":0,"ff":0},{"n":"ECO","grp":"Grupo B3","ven":0,"fat":0,"d1":1,"d2":1,"fut":0,"tot":2,"fora":0,"ff":0},{"n":"VSI","grp":"Grupo E1","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0},{"n":"Nome não identificado","grp":"Grupo A2","ven":0,"fat":1,"d1":0,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0},{"n":"VSI","grp":"Grupo A2","ven":0,"fat":1,"d1":0,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0},{"n":"NRG","grp":"Grupo B1","ven":0,"fat":0,"d1":0,"d2":0,"fut":1,"tot":1,"fora":0,"ff":0},{"n":"VAR","grp":"Grupo B1","ven":0,"fat":0,"d1":0,"d2":1,"fut":0,"tot":1,"fora":0,"ff":0},{"n":"NRG","grp":"Grupo B2","ven":0,"fat":1,"d1":0,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0},{"n":"ECO","grp":"Grupo E1","ven":0,"fat":0,"d1":0,"d2":0,"fut":1,"tot":1,"fora":0,"ff":0}];
 
-const GRP_RESP=[{"grp": "Grupo A2", "n": "ARE", "ven": 0, "fat": 1, "d1": 0, "ant": 0, "tot": 1},{"grp": "Grupo A2", "n": "SOF", "ven": 0, "fat": 2, "d1": 2, "ant": 0, "tot": 4},{"grp": "Grupo A2", "n": "VSI", "ven": 0, "fat": 1, "d1": 0, "ant": 0, "tot": 1},{"grp": "Grupo A3", "n": "SOF", "ven": 0, "fat": 3, "d1": 2, "ant": 2, "tot": 7},{"grp": "Grupo A3", "n": "VSI", "ven": 0, "fat": 0, "d1": 7, "ant": 2, "tot": 9},{"grp": "Grupo B1", "n": "BSO", "ven": 0, "fat": 12, "d1": 13, "ant": 31, "tot": 56},{"grp": "Grupo B1", "n": "GSM", "ven": 0, "fat": 6, "d1": 19, "ant": 20, "tot": 45},{"grp": "Grupo B1", "n": "JJS", "ven": 0, "fat": 17, "d1": 18, "ant": 6, "tot": 41},{"grp": "Grupo B1", "n": "JPE", "ven": 0, "fat": 2, "d1": 13, "ant": 16, "tot": 31},{"grp": "Grupo B1", "n": "NRG", "ven": 0, "fat": 0, "d1": 0, "ant": 1, "tot": 1},{"grp": "Grupo B1", "n": "RFE", "ven": 0, "fat": 2, "d1": 27, "ant": 45, "tot": 74},{"grp": "Grupo B1", "n": "VAR", "ven": 0, "fat": 0, "d1": 0, "ant": 1, "tot": 1},{"grp": "Grupo B2", "n": "ANB", "ven": 0, "fat": 0, "d1": 2, "ant": 10, "tot": 12},{"grp": "Grupo B2", "n": "BCF", "ven": 0, "fat": 3, "d1": 15, "ant": 18, "tot": 36},{"grp": "Grupo B2", "n": "NRG", "ven": 0, "fat": 1, "d1": 0, "ant": 0, "tot": 1},{"grp": "Grupo B2", "n": "VCR", "ven": 0, "fat": 5, "d1": 22, "ant": 24, "tot": 51},{"grp": "Grupo B3", "n": "ANB", "ven": 0, "fat": 1, "d1": 5, "ant": 6, "tot": 12},{"grp": "Grupo B3", "n": "ECO", "ven": 0, "fat": 0, "d1": 1, "ant": 1, "tot": 2},{"grp": "Grupo B3", "n": "GSM", "ven": 0, "fat": 4, "d1": 1, "ant": 5, "tot": 10},{"grp": "Grupo B3", "n": "JPE", "ven": 0, "fat": 0, "d1": 2, "ant": 3, "tot": 5},{"grp": "Grupo B3", "n": "LMI", "ven": 0, "fat": 0, "d1": 16, "ant": 15, "tot": 31},{"grp": "Grupo C", "n": "ECO", "ven": 0, "fat": 5, "d1": 8, "ant": 11, "tot": 24},{"grp": "Grupo C", "n": "RCF", "ven": 0, "fat": 4, "d1": 5, "ant": 19, "tot": 28},{"grp": "Grupo C", "n": "TFR", "ven": 0, "fat": 8, "d1": 9, "ant": 4, "tot": 21},{"grp": "Grupo C", "n": "VSI", "ven": 0, "fat": 4, "d1": 14, "ant": 2, "tot": 20},{"grp": "Grupo D1", "n": "BBO", "ven": 0, "fat": 3, "d1": 10, "ant": 14, "tot": 27},{"grp": "Grupo D1", "n": "JQS", "ven": 0, "fat": 0, "d1": 12, "ant": 25, "tot": 37},{"grp": "Grupo E1", "n": "AAP", "ven": 0, "fat": 0, "d1": 1, "ant": 5, "tot": 6},{"grp": "Grupo E1", "n": "ALF", "ven": 0, "fat": 1, "d1": 6, "ant": 32, "tot": 39},{"grp": "Grupo E1", "n": "DPR", "ven": 0, "fat": 4, "d1": 11, "ant": 12, "tot": 27},{"grp": "Grupo E1", "n": "ECO", "ven": 0, "fat": 0, "d1": 0, "ant": 1, "tot": 1},{"grp": "Grupo E1", "n": "JPL", "ven": 0, "fat": 1, "d1": 15, "ant": 44, "tot": 60},{"grp": "Grupo E1", "n": "JRM", "ven": 0, "fat": 2, "d1": 20, "ant": 2, "tot": 24},{"grp": "Grupo E1", "n": "PSI", "ven": 0, "fat": 2, "d1": 2, "ant": 32, "tot": 36},{"grp": "Grupo E1", "n": "TCO", "ven": 0, "fat": 1, "d1": 4, "ant": 0, "tot": 5},{"grp": "Grupo E1", "n": "VRO", "ven": 0, "fat": 7, "d1": 21, "ant": 30, "tot": 58},{"grp": "Grupo E1", "n": "VSI", "ven": 0, "fat": 0, "d1": 2, "ant": 0, "tot": 2},{"grp": "Grupo E2", "n": "AAP", "ven": 0, "fat": 0, "d1": 1, "ant": 3, "tot": 4},{"grp": "Grupo E2", "n": "ARC", "ven": 0, "fat": 10, "d1": 3, "ant": 12, "tot": 25},{"grp": "Grupo E2", "n": "BIM", "ven": 0, "fat": 7, "d1": 4, "ant": 0, "tot": 11},{"grp": "Grupo E2", "n": "CAL", "ven": 0, "fat": 18, "d1": 7, "ant": 30, "tot": 55},{"grp": "Grupo E2", "n": "JRT", "ven": 0, "fat": 23, "d1": 8, "ant": 28, "tot": 59},{"grp": "Grupo E2", "n": "MBF", "ven": 0, "fat": 2, "d1": 18, "ant": 7, "tot": 27},{"grp": "Grupo E2", "n": "RCF", "ven": 0, "fat": 2, "d1": 0, "ant": 3, "tot": 5},{"grp": "Grupo E2", "n": "RRU", "ven": 0, "fat": 22, "d1": 20, "ant": 43, "tot": 85},{"grp": "Grupo E2", "n": "RYL", "ven": 0, "fat": 20, "d1": 26, "ant": 4, "tot": 50}];
-const HR_DIST=[[0, 0], [1, 0], [2, 0], [3, 3], [4, 2], [5, 0], [6, 8], [7, 13], [8, 12], [9, 58], [10, 105], [11, 122], [12, 99], [13, 100], [14, 106], [15, 143], [16, 99], [17, 89], [18, 118], [19, 46], [20, 27], [21, 12], [22, 5], [23, 0]];
-const FAT_FORA=[
-  {"resp": "JRT", "grp": "Grupo E2", "hr": "22:04", "status": "Fatal", "dt": "27/04", "proc": "0010317-94.2026.5.03.0080"},
-  {"resp": "JRT", "grp": "Grupo E2", "hr": "20:04", "status": "Fatal", "dt": "27/04", "proc": "0010087-25.2026.5.03.0089"},
-  {"resp": "JRT", "grp": "Grupo E2", "hr": "03:04", "status": "Fatal", "dt": "27/04", "proc": "0010657-94.2026.5.03.0029"},
-  {"resp": "JRT", "grp": "Grupo E2", "hr": "04:04", "status": "Fatal", "dt": "27/04", "proc": "0012556-50.2025.5.15.0152"},
-  {"resp": "ARC", "grp": "Grupo E2", "hr": "19:04", "status": "Fatal", "dt": "27/04", "proc": "0010485-07.2023.5.03.0176"},
-  {"resp": "ARC", "grp": "Grupo E2", "hr": "19:04", "status": "Fatal", "dt": "27/04", "proc": "0010485-07.2023.5.03.0176"},
-  {"resp": "ARC", "grp": "Grupo E2", "hr": "19:04", "status": "Fatal", "dt": "27/04", "proc": "1000870-62.2025.5.02.0263"}
-];
-const BY_GRUPO={
-  'Grupo A2':{total:6,fat:4,ven:0,fora:0},
-  'Grupo A3':{total:16,fat:3,ven:0,fora:0},
-  'Grupo B1':{total:249,fat:39,ven:0,fora:27},
-  'Grupo B2':{total:100,fat:9,ven:0,fora:5},
-  'Grupo B3':{total:60,fat:5,ven:0,fora:4},
-  'Grupo C':{total:93,fat:21,ven:0,fora:2},
-  'Grupo D1':{total:64,fat:3,ven:0,fora:0},
-  'Grupo E1':{total:258,fat:18,ven:0,fora:13},
-  'Grupo E2':{total:321,fat:104,ven:0,fora:44}
-};
+const GRP_RESP=[{"n":"SOF","grp":"Grupo A2","ven":0,"fat":2,"d1":2,"d2":0,"fut":0,"tot":4,"fora":0,"ff":0,"ant":0},{"n":"Nome não identificado","grp":"Grupo A2","ven":0,"fat":1,"d1":0,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0},{"n":"VSI","grp":"Grupo A2","ven":0,"fat":1,"d1":0,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0},{"n":"VSI","grp":"Grupo A3","ven":0,"fat":0,"d1":7,"d2":0,"fut":2,"tot":9,"fora":3,"ff":0,"ant":2},{"n":"SOF","grp":"Grupo A3","ven":0,"fat":3,"d1":2,"d2":0,"fut":2,"tot":7,"fora":0,"ff":0,"ant":2},{"n":"RFE","grp":"Grupo B1","ven":0,"fat":2,"d1":27,"d2":6,"fut":39,"tot":74,"fora":4,"ff":1,"ant":45},{"n":"BSO","grp":"Grupo B1","ven":0,"fat":12,"d1":13,"d2":8,"fut":23,"tot":56,"fora":22,"ff":3,"ant":31},{"n":"GSM","grp":"Grupo B1","ven":0,"fat":6,"d1":19,"d2":3,"fut":17,"tot":45,"fora":1,"ff":0,"ant":20},{"n":"JJS","grp":"Grupo B1","ven":0,"fat":17,"d1":18,"d2":2,"fut":4,"tot":41,"fora":5,"ff":4,"ant":6},{"n":"JPE","grp":"Grupo B1","ven":0,"fat":2,"d1":13,"d2":2,"fut":14,"tot":31,"fora":4,"ff":0,"ant":16},{"n":"NRG","grp":"Grupo B1","ven":0,"fat":0,"d1":0,"d2":0,"fut":1,"tot":1,"fora":0,"ff":0,"ant":1},{"n":"VAR","grp":"Grupo B1","ven":0,"fat":0,"d1":0,"d2":1,"fut":0,"tot":1,"fora":0,"ff":0,"ant":1},{"n":"VCR","grp":"Grupo B2","ven":0,"fat":5,"d1":22,"d2":3,"fut":21,"tot":51,"fora":4,"ff":0,"ant":24},{"n":"BCF","grp":"Grupo B2","ven":0,"fat":3,"d1":15,"d2":3,"fut":15,"tot":36,"fora":0,"ff":0,"ant":18},{"n":"ANB","grp":"Grupo B2","ven":0,"fat":0,"d1":2,"d2":4,"fut":6,"tot":12,"fora":1,"ff":0,"ant":10},{"n":"NRG","grp":"Grupo B2","ven":0,"fat":1,"d1":0,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0},{"n":"LMI","grp":"Grupo B3","ven":0,"fat":0,"d1":16,"d2":11,"fut":4,"tot":31,"fora":1,"ff":0,"ant":15},{"n":"ANB","grp":"Grupo B3","ven":0,"fat":1,"d1":5,"d2":2,"fut":4,"tot":12,"fora":2,"ff":0,"ant":6},{"n":"GSM","grp":"Grupo B3","ven":0,"fat":4,"d1":1,"d2":0,"fut":5,"tot":10,"fora":0,"ff":0,"ant":5},{"n":"JPE","grp":"Grupo B3","ven":0,"fat":0,"d1":2,"d2":0,"fut":3,"tot":5,"fora":2,"ff":0,"ant":3},{"n":"ECO","grp":"Grupo B3","ven":0,"fat":0,"d1":1,"d2":1,"fut":0,"tot":2,"fora":0,"ff":0,"ant":1},{"n":"RCF","grp":"Grupo C","ven":0,"fat":4,"d1":5,"d2":2,"fut":17,"tot":28,"fora":0,"ff":0,"ant":19},{"n":"ECO","grp":"Grupo C","ven":0,"fat":5,"d1":8,"d2":4,"fut":7,"tot":24,"fora":0,"ff":0,"ant":11},{"n":"TFR","grp":"Grupo C","ven":0,"fat":8,"d1":9,"d2":2,"fut":2,"tot":21,"fora":2,"ff":1,"ant":4},{"n":"VSI","grp":"Grupo C","ven":0,"fat":4,"d1":14,"d2":0,"fut":2,"tot":20,"fora":4,"ff":0,"ant":2},{"n":"JQS","grp":"Grupo D1","ven":0,"fat":0,"d1":12,"d2":2,"fut":23,"tot":37,"fora":2,"ff":0,"ant":25},{"n":"BBO","grp":"Grupo D1","ven":0,"fat":3,"d1":10,"d2":5,"fut":9,"tot":27,"fora":0,"ff":0,"ant":14},{"n":"JPL","grp":"Grupo E1","ven":0,"fat":1,"d1":15,"d2":3,"fut":41,"tot":60,"fora":5,"ff":0,"ant":44},{"n":"VRO","grp":"Grupo E1","ven":0,"fat":7,"d1":21,"d2":12,"fut":18,"tot":58,"fora":1,"ff":0,"ant":30},{"n":"ALF","grp":"Grupo E1","ven":0,"fat":1,"d1":6,"d2":6,"fut":26,"tot":39,"fora":1,"ff":0,"ant":32},{"n":"PSI","grp":"Grupo E1","ven":0,"fat":2,"d1":2,"d2":12,"fut":20,"tot":36,"fora":0,"ff":0,"ant":32},{"n":"DPR","grp":"Grupo E1","ven":0,"fat":4,"d1":11,"d2":1,"fut":11,"tot":27,"fora":3,"ff":0,"ant":12},{"n":"JRM","grp":"Grupo E1","ven":0,"fat":2,"d1":20,"d2":0,"fut":2,"tot":24,"fora":4,"ff":0,"ant":2},{"n":"AAP","grp":"Grupo E1","ven":0,"fat":0,"d1":1,"d2":1,"fut":4,"tot":6,"fora":0,"ff":0,"ant":5},{"n":"Nome não identificado","grp":"Grupo E1","ven":0,"fat":1,"d1":4,"d2":0,"fut":0,"tot":5,"fora":2,"ff":0,"ant":0},{"n":"VSI","grp":"Grupo E1","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0},{"n":"ECO","grp":"Grupo E1","ven":0,"fat":0,"d1":0,"d2":0,"fut":1,"tot":1,"fora":0,"ff":0,"ant":1},{"n":"RRU","grp":"Grupo E2","ven":0,"fat":22,"d1":20,"d2":7,"fut":36,"tot":85,"fora":23,"ff":1,"ant":43},{"n":"JRT","grp":"Grupo E2","ven":0,"fat":23,"d1":8,"d2":4,"fut":24,"tot":59,"fora":9,"ff":4,"ant":28},{"n":"CAL","grp":"Grupo E2","ven":0,"fat":18,"d1":7,"d2":4,"fut":26,"tot":55,"fora":5,"ff":0,"ant":30},{"n":"RYL","grp":"Grupo E2","ven":0,"fat":20,"d1":26,"d2":1,"fut":3,"tot":50,"fora":0,"ff":0,"ant":4},{"n":"MBF","grp":"Grupo E2","ven":0,"fat":2,"d1":18,"d2":1,"fut":6,"tot":27,"fora":6,"ff":0,"ant":7},{"n":"ARC","grp":"Grupo E2","ven":0,"fat":10,"d1":3,"d2":1,"fut":11,"tot":25,"fora":12,"ff":4,"ant":12},{"n":"BIM","grp":"Grupo E2","ven":0,"fat":7,"d1":4,"d2":0,"fut":0,"tot":11,"fora":0,"ff":0,"ant":0},{"n":"RCF","grp":"Grupo E2","ven":0,"fat":2,"d1":0,"d2":0,"fut":3,"tot":5,"fora":0,"ff":0,"ant":3},{"n":"AAP","grp":"Grupo E2","ven":0,"fat":0,"d1":1,"d2":1,"fut":2,"tot":4,"fora":0,"ff":0,"ant":3}];
+const HR_DIST=[[0,0],[1,0],[2,0],[3,3],[4,2],[5,0],[6,8],[7,13],[8,12],[9,58],[10,105],[11,122],[12,99],[13,100],[14,106],[15,143],[16,99],[17,89],[18,118],[19,46],[20,27],[21,12],[22,5],[23,0]];
+const FAT_FORA=[{"resp":"JRT","grp":"Grupo E2","hr":"22:00","status":"Fatal","dt":"24/04/2026","proc":"0010317-94.2026.5.03.0080"},{"resp":"TFR","grp":"Grupo C","hr":"07:00","status":"Fatal","dt":"29/04/2026","proc":"1000069-58.2023.5.02.0024"},{"resp":"JRT","grp":"Grupo E2","hr":"20:00","status":"Fatal","dt":"24/04/2026","proc":"0010087-25.2026.5.03.0089"},{"resp":"JRT","grp":"Grupo E2","hr":"03:00","status":"Fatal","dt":"24/04/2026","proc":"0010657-94.2026.5.03.0029"},{"resp":"JJS","grp":"Grupo B1","hr":"07:00","status":"Fatal","dt":"29/04/2026","proc":"1000353-95.2026.5.02.0433"},{"resp":"JRT","grp":"Grupo E2","hr":"04:00","status":"Fatal","dt":"24/04/2026","proc":"0012556-50.2025.5.15.0152"},{"resp":"BSO","grp":"Grupo B1","hr":"07:00","status":"Fatal","dt":"27/04/2026","proc":"1001635-11.2025.5.02.0432"},{"resp":"BSO","grp":"Grupo B1","hr":"08:00","status":"Fatal","dt":"29/04/2026","proc":"1001635-11.2025.5.02.0432"},{"resp":"JJS","grp":"Grupo B1","hr":"07:00","status":"Fatal","dt":"28/04/2026","proc":"1000084-11.2016.5.02.0432"},{"resp":"ARC","grp":"Grupo E2","hr":"19:00","status":"Fatal","dt":"24/04/2026","proc":"0010485-07.2023.5.03.0176"},{"resp":"ARC","grp":"Grupo E2","hr":"19:00","status":"Fatal","dt":"24/04/2026","proc":"0010485-07.2023.5.03.0176"},{"resp":"BSO","grp":"Grupo B1","hr":"08:00","status":"Fatal","dt":"27/04/2026","proc":"1001012-83.2021.5.02.0432"},{"resp":"JJS","grp":"Grupo B1","hr":"06:00","status":"Fatal","dt":"29/04/2026","proc":"1001190-18.2024.5.02.0435"},{"resp":"ARC","grp":"Grupo E2","hr":"06:00","status":"Fatal","dt":"29/04/2026","proc":"0025297-78.2025.5.24.0021"},{"resp":"RFE","grp":"Grupo B1","hr":"07:00","status":"Fatal","dt":"24/04/2026","proc":"1000322-72.2026.5.02.0434"},{"resp":"RRU","grp":"Grupo E2","hr":"08:00","status":"Fatal","dt":"24/04/2026","proc":"0000625-89.2025.5.05.0132"},{"resp":"ARC","grp":"Grupo E2","hr":"19:00","status":"Fatal","dt":"24/04/2026","proc":"1000870-62.2025.5.02.0263"},{"resp":"JJS","grp":"Grupo B1","hr":"06:00","status":"Fatal","dt":"29/04/2026","proc":"1001106-27.2018.5.02.0435"}];
+const BY_GRUPO={"Grupo E2":{"total":321,"fat":104,"ven":0,"d1":87,"d2":19,"fut":111,"fora":55,"ff":9},"Grupo B1":{"total":249,"fat":39,"ven":0,"d1":90,"d2":22,"fut":98,"fora":36,"ff":8},"Grupo C":{"total":93,"fat":21,"ven":0,"d1":36,"d2":8,"fut":28,"fora":6,"ff":1},"Grupo E1":{"total":258,"fat":18,"ven":0,"d1":82,"d2":35,"fut":123,"fora":16,"ff":0},"Grupo B2":{"total":100,"fat":9,"ven":0,"d1":39,"d2":10,"fut":42,"fora":5,"ff":0},"Grupo B3":{"total":60,"fat":5,"ven":0,"d1":25,"d2":14,"fut":16,"fora":5,"ff":0},"Grupo A2":{"total":6,"fat":4,"ven":0,"d1":2,"d2":0,"fut":0,"fora":0,"ff":0},"Grupo D1":{"total":64,"fat":3,"ven":0,"d1":22,"d2":7,"fut":32,"fora":2,"ff":0},"Grupo A3":{"total":16,"fat":3,"ven":0,"d1":9,"d2":0,"fut":4,"fora":3,"ff":0}};
 
 function b(v,cls,dash=false){return v===0&&dash?`<td class="c"><span style="color:rgba(255,255,255,.18)">—</span></td>`:`<td class="c"><span class="vbad ${cls}">${v}</span></td>`;}
 function pct(a,b){return b>0?Math.round(a/b*100):0;}
@@ -1278,6 +1546,7 @@ function riskChip(risco){
   const cls = risco >= 40 ? 'high' : (risco >= 20 ? 'mid' : 'low');
   return `<span class="risk-chip ${cls}">${risco}%</span>`;
 }
+
 function renderGrupoResp(){
   const tb=document.getElementById('tb-grupo-resp');
   if(!tb) return;
@@ -1285,10 +1554,10 @@ function renderGrupoResp(){
   const grupos=[...new Set(GRP_RESP.map(r=>r.grp))];
   grupos.forEach(g=>{
     const itens=GRP_RESP.filter(r=>r.grp===g).sort((a,b)=>b.tot-a.tot||a.n.localeCompare(b.n));
-    const sub=itens.reduce((acc,r)=>{acc.tot+=r.tot;acc.ven+=r.ven;acc.fat+=r.fat;acc.d1+=r.d1;acc.ant+=r.ant;return acc;},{tot:0,ven:0,fat:0,d1:0,ant:0});
+    const sub=itens.reduce((acc,r)=>{acc.tot+=r.tot;acc.ven+=r.ven;acc.fat+=r.fat;acc.d1+=r.d1;acc.d2+=r.d2;acc.fut+=r.fut;return acc;},{tot:0,ven:0,fat:0,d1:0,d2:0,fut:0});
     tb.innerHTML+=`<tr class="grp-subtotal" data-grp="${g}">
       <td class="grp-name">${g}</td><td>Total do grupo</td>
-      <td class="c">${sub.tot}</td><td class="c"><span class="vbad red">${sub.ven}</span></td><td class="c"><span class="vbad fat">${sub.fat}</span></td><td class="c"><span class="vbad yel">${sub.d1}</span></td><td class="c"><span class="vbad grn">${sub.ant}</span></td><td class="c">${riskChip(pct(sub.ven+sub.fat,sub.tot))}</td>
+      <td class="c">${sub.tot}</td><td class="c"><span class="vbad red">${sub.ven}</span></td><td class="c"><span class="vbad fat">${sub.fat}</span></td><td class="c"><span class="vbad yel">${sub.d1}</span></td><td class="c"><span class="vbad blu">${sub.d2}</span></td><td class="c"><span class="vbad grn">${sub.fut}</span></td><td class="c">${riskChip(pct(sub.ven+sub.fat,sub.tot))}</td>
     </tr>`;
     itens.forEach(r=>{
       tb.innerHTML+=`<tr data-sigla="${r.n}" data-grp="${g}">
@@ -1297,12 +1566,14 @@ function renderGrupoResp(){
         <td class="c">${r.ven>0?`<span class="vbad red">${r.ven}</span>`:'<span class="vbad muted">—</span>'}</td>
         <td class="c">${r.fat>0?`<span class="vbad fat">${r.fat}</span>`:'<span class="vbad muted">—</span>'}</td>
         <td class="c">${r.d1>0?`<span class="vbad yel">${r.d1}</span>`:'<span class="vbad muted">—</span>'}</td>
-        <td class="c">${r.ant>0?`<span class="vbad grn">${r.ant}</span>`:'<span class="vbad muted">—</span>'}</td>
+        <td class="c">${r.d2>0?`<span class="vbad blu">${r.d2}</span>`:'<span class="vbad muted">—</span>'}</td>
+        <td class="c">${r.fut>0?`<span class="vbad grn">${r.fut}</span>`:'<span class="vbad muted">—</span>'}</td>
         <td class="c">${riskChip(pct(r.ven+r.fat,r.tot))}</td>
       </tr>`;
     });
   });
 }
+
 renderGrupoResp();
 
 // Tabela Fatal
@@ -1406,17 +1677,7 @@ HR_DIST.forEach(([hr,cnt])=>{
     <td class="c">${pb(p,'fat')}</td></tr>`;
 });
 
-const BY_GRUPO_FULL=[
-  {"g": "Grupo E2", "tot": 321, "fat": 104, "ven": 0, "d1": 87, "fora": 44, "ff": 7},
-  {"g": "Grupo B1", "tot": 249, "fat": 39, "ven": 0, "d1": 90, "fora": 27, "ff": 0},
-  {"g": "Grupo C", "tot": 93, "fat": 21, "ven": 0, "d1": 36, "fora": 2, "ff": 0},
-  {"g": "Grupo E1", "tot": 258, "fat": 18, "ven": 0, "d1": 82, "fora": 13, "ff": 0},
-  {"g": "Grupo B2", "tot": 100, "fat": 9, "ven": 0, "d1": 39, "fora": 5, "ff": 0},
-  {"g": "Grupo B3", "tot": 60, "fat": 5, "ven": 0, "d1": 25, "fora": 4, "ff": 0},
-  {"g": "Grupo A2", "tot": 6, "fat": 4, "ven": 0, "d1": 2, "fora": 0, "ff": 0},
-  {"g": "Grupo A3", "tot": 16, "fat": 3, "ven": 0, "d1": 9, "fora": 0, "ff": 0},
-  {"g": "Grupo D1", "tot": 64, "fat": 3, "ven": 0, "d1": 22, "fora": 0, "ff": 0}
-];
+const BY_GRUPO_FULL=[{"g":"Grupo E2","ven":0,"fat":104,"d1":87,"d2":19,"fut":111,"tot":321,"fora":55,"ff":9},{"g":"Grupo B1","ven":0,"fat":39,"d1":90,"d2":22,"fut":98,"tot":249,"fora":36,"ff":8},{"g":"Grupo C","ven":0,"fat":21,"d1":36,"d2":8,"fut":28,"tot":93,"fora":6,"ff":1},{"g":"Grupo E1","ven":0,"fat":18,"d1":82,"d2":35,"fut":123,"tot":258,"fora":16,"ff":0},{"g":"Grupo B2","ven":0,"fat":9,"d1":39,"d2":10,"fut":42,"tot":100,"fora":5,"ff":0},{"g":"Grupo B3","ven":0,"fat":5,"d1":25,"d2":14,"fut":16,"tot":60,"fora":5,"ff":0},{"g":"Grupo A2","ven":0,"fat":4,"d1":2,"d2":0,"fut":0,"tot":6,"fora":0,"ff":0},{"g":"Grupo D1","ven":0,"fat":3,"d1":22,"d2":7,"fut":32,"tot":64,"fora":2,"ff":0},{"g":"Grupo A3","ven":0,"fat":3,"d1":9,"d2":0,"fut":4,"tot":16,"fora":3,"ff":0}];
 
 // ZF = zero fatal E zero vencido — calculado diretamente do RESP para garantir precisão
 const ZF_BY_GROUP = {};
@@ -1489,38 +1750,72 @@ function downloadExcel() {
 }
 
 // ══ AGENDAS — SEPARADAS ══
-const AG_EQUIPE=[{"equipe":"Grupo B1","tot":1043,"realiz":1043,"atrasada":370,"adiantada":285,"no_dia":388},{"equipe":"Grupo B2","tot":385,"realiz":385,"atrasada":115,"adiantada":132,"no_dia":138},{"equipe":"Grupo B3","tot":260,"realiz":260,"atrasada":22,"adiantada":148,"no_dia":90},{"equipe":"Grupo C","tot":166,"realiz":166,"atrasada":17,"adiantada":99,"no_dia":50},{"equipe":"Grupo D1","tot":239,"realiz":239,"atrasada":34,"adiantada":93,"no_dia":112},{"equipe":"Grupo E1","tot":849,"realiz":849,"atrasada":225,"adiantada":406,"no_dia":218},{"equipe":"Grupo E2","tot":852,"realiz":852,"atrasada":325,"adiantada":284,"no_dia":243}];
-const AG_RESP=[{"n": "LCG", "tot": 337, "realiz": 337, "atrasada": 129, "adiantada": 149, "no_dia": 59, "grp": "Grupo B1", "equipe": "Equipe B"}, {"n": "RFE", "tot": 195, "realiz": 195, "atrasada": 0, "adiantada": 49, "no_dia": 146, "grp": "Grupo B1", "equipe": "Equipe B"}, {"n": "LMI", "tot": 184, "realiz": 184, "atrasada": 2, "adiantada": 119, "no_dia": 63, "grp": "Grupo B3", "equipe": "Equipe B"}, {"n": "CAL", "tot": 180, "realiz": 180, "atrasada": 65, "adiantada": 74, "no_dia": 41, "grp": "Grupo E2", "equipe": "Equipe E"}, {"n": "RRU", "tot": 172, "realiz": 172, "atrasada": 114, "adiantada": 50, "no_dia": 8, "grp": "Grupo E2", "equipe": "Equipe E"}, {"n": "VCR", "tot": 158, "realiz": 158, "atrasada": 34, "adiantada": 103, "no_dia": 21, "grp": "Grupo B2", "equipe": "Equipe B"}, {"n": "EMM", "tot": 152, "realiz": 152, "atrasada": 75, "adiantada": 27, "no_dia": 50, "grp": "Grupo E1", "equipe": "Equipe E"}, {"n": "GSM", "tot": 152, "realiz": 152, "atrasada": 49, "adiantada": 49, "no_dia": 54, "grp": "Grupo B1", "equipe": "Equipe B"}, {"n": "JPL", "tot": 149, "realiz": 149, "atrasada": 8, "adiantada": 65, "no_dia": 76, "grp": "Grupo E1", "equipe": "Equipe E"}, {"n": "ALH", "tot": 149, "realiz": 149, "atrasada": 0, "adiantada": 129, "no_dia": 20, "grp": "Grupo E1", "equipe": "Equipe A"}, {"n": "VRO", "tot": 145, "realiz": 145, "atrasada": 67, "adiantada": 56, "no_dia": 22, "grp": "Grupo E1", "equipe": "Equipe E"}, {"n": "BSO", "tot": 139, "realiz": 139, "atrasada": 75, "adiantada": 14, "no_dia": 50, "grp": "Grupo B1", "equipe": "Equipe B"}, {"n": "JRT", "tot": 136, "realiz": 136, "atrasada": 66, "adiantada": 38, "no_dia": 32, "grp": "Grupo E2", "equipe": "Equipe E"}, {"n": "JQS", "tot": 135, "realiz": 135, "atrasada": 0, "adiantada": 56, "no_dia": 79, "grp": "Grupo D1", "equipe": "Equipe D"}, {"n": "RYL", "tot": 130, "realiz": 130, "atrasada": 52, "adiantada": 6, "no_dia": 72, "grp": "Grupo E2", "equipe": "Equipe E"}, {"n": "GSI", "tot": 125, "realiz": 125, "atrasada": 38, "adiantada": 4, "no_dia": 83, "grp": "Grupo B2", "equipe": "Equipe B"}, {"n": "BBO", "tot": 104, "realiz": 104, "atrasada": 34, "adiantada": 37, "no_dia": 33, "grp": "Grupo D1", "equipe": "Equipe D"}, {"n": "BCF", "tot": 102, "realiz": 102, "atrasada": 43, "adiantada": 25, "no_dia": 34, "grp": "Grupo B2", "equipe": "Equipe B"}, {"n": "MBF", "tot": 99, "realiz": 99, "atrasada": 8, "adiantada": 40, "no_dia": 51, "grp": "Grupo E2", "equipe": "Equipe E"}, {"n": "RCF", "tot": 93, "realiz": 93, "atrasada": 6, "adiantada": 50, "no_dia": 37, "grp": "Grupo C", "equipe": "Equipe E"}, {"n": "JRM", "tot": 90, "realiz": 90, "atrasada": 60, "adiantada": 11, "no_dia": 19, "grp": "Grupo E1", "equipe": "Equipe E"}, {"n": "ALF", "tot": 85, "realiz": 85, "atrasada": 10, "adiantada": 54, "no_dia": 21, "grp": "Grupo E1", "equipe": "Equipe E"}, {"n": "PSI", "tot": 79, "realiz": 79, "atrasada": 5, "adiantada": 64, "no_dia": 10, "grp": "Grupo E1", "equipe": "Equipe E"}, {"n": "JPE", "tot": 79, "realiz": 79, "atrasada": 8, "adiantada": 9, "no_dia": 62, "grp": "Grupo B1", "equipe": "Equipe B"}, {"n": "JJS", "tot": 77, "realiz": 77, "atrasada": 45, "adiantada": 15, "no_dia": 17, "grp": "Grupo B1", "equipe": "Equipe B"}, {"n": "BFM", "tot": 76, "realiz": 76, "atrasada": 20, "adiantada": 29, "no_dia": 27, "grp": "Grupo B3", "equipe": "Equipe B"}, {"n": "FFI", "tot": 73, "realiz": 73, "atrasada": 0, "adiantada": 44, "no_dia": 29, "grp": "Grupo E2", "equipe": "Equipe E"}, {"n": "ECO", "tot": 73, "realiz": 73, "atrasada": 11, "adiantada": 49, "no_dia": 13, "grp": "Grupo C", "equipe": "Equipe C"}, {"n": "EVV", "tot": 64, "realiz": 64, "atrasada": 64, "adiantada": 0, "no_dia": 0, "grp": "Grupo B1", "equipe": "Equipe B"}, {"n": "ARC", "tot": 62, "realiz": 62, "atrasada": 20, "adiantada": 32, "no_dia": 10, "grp": "Grupo E2", "equipe": "Equipe E"}];
-const AGEQ_EQUIPE=[{"equipe":"Grupo A3","tot":8,"realiz":8,"atrasada":3,"adiantada":1,"no_dia":4},{"equipe":"Grupo B1","tot":99,"realiz":99,"atrasada":26,"adiantada":20,"no_dia":53},{"equipe":"Grupo B2","tot":15,"realiz":15,"atrasada":2,"adiantada":1,"no_dia":12},{"equipe":"Grupo B3","tot":17,"realiz":17,"atrasada":0,"adiantada":1,"no_dia":16},{"equipe":"Grupo C","tot":11,"realiz":11,"atrasada":8,"adiantada":2,"no_dia":1},{"equipe":"Grupo D1","tot":9,"realiz":9,"atrasada":0,"adiantada":5,"no_dia":4},{"equipe":"Grupo E1","tot":51,"realiz":51,"atrasada":19,"adiantada":13,"no_dia":19},{"equipe":"Grupo E2","tot":107,"realiz":107,"atrasada":76,"adiantada":14,"no_dia":17}];
-const AGEQ_RESP=[{"n": "GMG", "tot": 43, "realiz": 43, "atrasada": 1, "adiantada": 10, "no_dia": 32, "grp": "Grupo B1", "equipe": "Equipe B"}, {"n": "BSS", "tot": 26, "realiz": 26, "atrasada": 17, "adiantada": 6, "no_dia": 3, "grp": "Grupo E2", "equipe": "Equipe E"}, {"n": "EMM", "tot": 19, "realiz": 19, "atrasada": 15, "adiantada": 1, "no_dia": 3, "grp": "Grupo E1", "equipe": "Equipe E"}, {"n": "RFE", "tot": 18, "realiz": 18, "atrasada": 0, "adiantada": 3, "no_dia": 15, "grp": "Grupo B1", "equipe": "Equipe B"}, {"n": "RYL", "tot": 17, "realiz": 17, "atrasada": 15, "adiantada": 1, "no_dia": 1, "grp": "Grupo E2", "equipe": "Equipe E"}, {"n": "JRT", "tot": 17, "realiz": 17, "atrasada": 15, "adiantada": 2, "no_dia": 0, "grp": "Grupo E2", "equipe": "Equipe E"}, {"n": "EVV", "tot": 15, "realiz": 15, "atrasada": 15, "adiantada": 0, "no_dia": 0, "grp": "Grupo B1", "equipe": "Equipe B"}, {"n": "JLM", "tot": 12, "realiz": 12, "atrasada": 7, "adiantada": 3, "no_dia": 2, "grp": "Grupo E2", "equipe": "Equipe E"}, {"n": "LMI", "tot": 12, "realiz": 12, "atrasada": 0, "adiantada": 0, "no_dia": 12, "grp": "Grupo B3", "equipe": "Equipe B"}, {"n": "JJS", "tot": 11, "realiz": 11, "atrasada": 8, "adiantada": 3, "no_dia": 0, "grp": "Grupo B1", "equipe": "Equipe B"}, {"n": "ALF", "tot": 11, "realiz": 11, "atrasada": 0, "adiantada": 4, "no_dia": 7, "grp": "Grupo E1", "equipe": "Equipe E"}, {"n": "CAL", "tot": 10, "realiz": 10, "atrasada": 6, "adiantada": 1, "no_dia": 3, "grp": "Grupo E2", "equipe": "Equipe E"}, {"n": "JPL", "tot": 10, "realiz": 10, "atrasada": 1, "adiantada": 5, "no_dia": 4, "grp": "Grupo E1", "equipe": "Equipe E"}, {"n": "RRU", "tot": 9, "realiz": 9, "atrasada": 9, "adiantada": 0, "no_dia": 0, "grp": "Grupo E2", "equipe": "Equipe E"}, {"n": "JQS", "tot": 9, "realiz": 9, "atrasada": 0, "adiantada": 5, "no_dia": 4, "grp": "Grupo D1", "equipe": "Equipe D"}, {"n": "VSI", "tot": 8, "realiz": 8, "atrasada": 3, "adiantada": 1, "no_dia": 4, "grp": "Grupo A3", "equipe": "Equipe A"}, {"n": "RCF", "tot": 8, "realiz": 8, "atrasada": 7, "adiantada": 1, "no_dia": 0, "grp": "Grupo C", "equipe": "Equipe E"}, {"n": "LLL", "tot": 8, "realiz": 8, "atrasada": 1, "adiantada": 2, "no_dia": 5, "grp": "Grupo E1", "equipe": "Equipe E"}, {"n": "JPE", "tot": 7, "realiz": 7, "atrasada": 0, "adiantada": 3, "no_dia": 4, "grp": "Grupo B1", "equipe": "Equipe B"}, {"n": "IGA", "tot": 7, "realiz": 7, "atrasada": 0, "adiantada": 1, "no_dia": 6, "grp": "Grupo B2", "equipe": "Equipe B"}, {"n": "RWD", "tot": 5, "realiz": 5, "atrasada": 0, "adiantada": 0, "no_dia": 5, "grp": "Grupo B2", "equipe": "Equipe B"}, {"n": "GSM", "tot": 5, "realiz": 5, "atrasada": 0, "adiantada": 1, "no_dia": 4, "grp": "Grupo B3", "equipe": "Equipe B"}, {"n": "AML", "tot": 5, "realiz": 5, "atrasada": 1, "adiantada": 1, "no_dia": 3, "grp": "Grupo E2", "equipe": "Equipe E"}, {"n": "BSO", "tot": 5, "realiz": 5, "atrasada": 2, "adiantada": 1, "no_dia": 2, "grp": "Grupo B1", "equipe": "Equipe B"}, {"n": "BIM", "tot": 4, "realiz": 4, "atrasada": 3, "adiantada": 0, "no_dia": 1, "grp": "Grupo E2", "equipe": "Equipe E"}, {"n": "MBF", "tot": 4, "realiz": 4, "atrasada": 1, "adiantada": 0, "no_dia": 3, "grp": "Grupo E2", "equipe": "Equipe E"}, {"n": "GIF", "tot": 3, "realiz": 3, "atrasada": 2, "adiantada": 0, "no_dia": 1, "grp": "Grupo E2", "equipe": "Equipe E"}, {"n": "ECO", "tot": 3, "realiz": 3, "atrasada": 1, "adiantada": 1, "no_dia": 1, "grp": "Grupo C", "equipe": "Equipe C"}, {"n": "JRM", "tot": 3, "realiz": 3, "atrasada": 2, "adiantada": 1, "no_dia": 0, "grp": "Grupo E1", "equipe": "Equipe E"}, {"n": "BCF", "tot": 3, "realiz": 3, "atrasada": 2, "adiantada": 0, "no_dia": 1, "grp": "Grupo B2", "equipe": "Equipe B"}];
+const AG_EQUIPE=[{"equipe":"Grupo E2","tot":1117,"realiz":1117,"atrasada":217,"fatal":245,"d1":318,"d2":146,"futuro":191,"no_dia":245,"adiantada":318},{"equipe":"Grupo B1","tot":1013,"realiz":1013,"atrasada":237,"fatal":125,"d1":373,"d2":130,"futuro":148,"no_dia":125,"adiantada":373},{"equipe":"Grupo E1","tot":983,"realiz":983,"atrasada":100,"fatal":174,"d1":265,"d2":174,"futuro":270,"no_dia":174,"adiantada":265},{"equipe":"Grupo B3","tot":407,"realiz":407,"atrasada":15,"fatal":54,"d1":164,"d2":126,"futuro":48,"no_dia":54,"adiantada":164},{"equipe":"Grupo B2","tot":381,"realiz":381,"atrasada":44,"fatal":69,"d1":133,"d2":70,"futuro":65,"no_dia":69,"adiantada":133},{"equipe":"Grupo C","tot":328,"realiz":328,"atrasada":53,"fatal":52,"d1":90,"d2":67,"futuro":66,"no_dia":52,"adiantada":90},{"equipe":"Grupo D1","tot":239,"realiz":239,"atrasada":5,"fatal":29,"d1":112,"d2":23,"futuro":70,"no_dia":29,"adiantada":112},{"equipe":"Grupo A3","tot":68,"realiz":68,"atrasada":26,"fatal":5,"d1":26,"d2":8,"futuro":3,"no_dia":5,"adiantada":26},{"equipe":"Grupo A2","tot":12,"realiz":12,"atrasada":4,"fatal":2,"d1":2,"d2":1,"futuro":3,"no_dia":2,"adiantada":2},{"equipe":"Grupo B4","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":1,"d2":0,"futuro":0,"no_dia":0,"adiantada":1}];
+const AG_RESP=[{"n":"LCG","tot":337,"realiz":337,"atrasada":128,"fatal":1,"d1":59,"d2":94,"futuro":55,"no_dia":1,"adiantada":59,"grp":"Grupo B1"},{"n":"RFE","tot":195,"realiz":195,"atrasada":0,"fatal":0,"d1":146,"d2":10,"futuro":39,"no_dia":0,"adiantada":146,"grp":"Grupo B1"},{"n":"LMI","tot":184,"realiz":184,"atrasada":0,"fatal":2,"d1":63,"d2":101,"futuro":18,"no_dia":2,"adiantada":63,"grp":"Grupo B3"},{"n":"CAL","tot":180,"realiz":180,"atrasada":16,"fatal":49,"d1":41,"d2":27,"futuro":47,"no_dia":49,"adiantada":41,"grp":"Grupo E2"},{"n":"RRU","tot":172,"realiz":172,"atrasada":56,"fatal":58,"d1":8,"d2":9,"futuro":41,"no_dia":58,"adiantada":8,"grp":"Grupo E2"},{"n":"VCR","tot":158,"realiz":158,"atrasada":21,"fatal":13,"d1":21,"d2":57,"futuro":46,"no_dia":13,"adiantada":21,"grp":"Grupo B2"},{"n":"EMM","tot":152,"realiz":152,"atrasada":7,"fatal":68,"d1":50,"d2":24,"futuro":3,"no_dia":68,"adiantada":50,"grp":"Grupo E1"},{"n":"GSM","tot":152,"realiz":152,"atrasada":20,"fatal":29,"d1":54,"d2":9,"futuro":40,"no_dia":29,"adiantada":54,"grp":"Grupo B1"},{"n":"JPL","tot":149,"realiz":149,"atrasada":2,"fatal":6,"d1":76,"d2":20,"futuro":45,"no_dia":6,"adiantada":76,"grp":"Grupo E1"},{"n":"ALH","tot":149,"realiz":149,"atrasada":0,"fatal":0,"d1":20,"d2":29,"futuro":100,"no_dia":0,"adiantada":20,"grp":"Grupo E1"},{"n":"VRO","tot":145,"realiz":145,"atrasada":36,"fatal":31,"d1":22,"d2":19,"futuro":37,"no_dia":31,"adiantada":22,"grp":"Grupo E1"},{"n":"BSO","tot":139,"realiz":139,"atrasada":28,"fatal":47,"d1":50,"d2":7,"futuro":7,"no_dia":47,"adiantada":50,"grp":"Grupo B1"},{"n":"JRT","tot":136,"realiz":136,"atrasada":53,"fatal":13,"d1":32,"d2":13,"futuro":25,"no_dia":13,"adiantada":32,"grp":"Grupo E2"},{"n":"JQS","tot":135,"realiz":135,"atrasada":0,"fatal":0,"d1":79,"d2":19,"futuro":37,"no_dia":0,"adiantada":79,"grp":"Grupo D1"},{"n":"RYL","tot":130,"realiz":130,"atrasada":21,"fatal":31,"d1":72,"d2":5,"futuro":1,"no_dia":31,"adiantada":72,"grp":"Grupo E2"},{"n":"GSI","tot":125,"realiz":125,"atrasada":1,"fatal":37,"d1":83,"d2":4,"futuro":0,"no_dia":37,"adiantada":83,"grp":"Grupo B2"},{"n":"BBO","tot":104,"realiz":104,"atrasada":5,"fatal":29,"d1":33,"d2":4,"futuro":33,"no_dia":29,"adiantada":33,"grp":"Grupo D1"},{"n":"BCF","tot":102,"realiz":102,"atrasada":17,"fatal":26,"d1":34,"d2":10,"futuro":15,"no_dia":26,"adiantada":34,"grp":"Grupo B2"},{"n":"MBF","tot":99,"realiz":99,"atrasada":6,"fatal":2,"d1":51,"d2":32,"futuro":8,"no_dia":2,"adiantada":51,"grp":"Grupo E2"},{"n":"RCF","tot":93,"realiz":93,"atrasada":3,"fatal":3,"d1":37,"d2":34,"futuro":16,"no_dia":3,"adiantada":37,"grp":"Grupo E2"},{"n":"JRM","tot":90,"realiz":90,"atrasada":17,"fatal":43,"d1":19,"d2":9,"futuro":2,"no_dia":43,"adiantada":19,"grp":"Grupo E1"},{"n":"ALF","tot":85,"realiz":85,"atrasada":0,"fatal":10,"d1":21,"d2":26,"futuro":28,"no_dia":10,"adiantada":21,"grp":"Grupo E1"},{"n":"PSI","tot":79,"realiz":79,"atrasada":5,"fatal":0,"d1":10,"d2":35,"futuro":29,"no_dia":0,"adiantada":10,"grp":"Grupo E1"},{"n":"JPE","tot":79,"realiz":79,"atrasada":5,"fatal":3,"d1":62,"d2":2,"futuro":7,"no_dia":3,"adiantada":62,"grp":"Grupo B1"},{"n":"JJS","tot":77,"realiz":77,"atrasada":30,"fatal":15,"d1":17,"d2":6,"futuro":9,"no_dia":15,"adiantada":17,"grp":"Grupo B1"},{"n":"BFM","tot":76,"realiz":76,"atrasada":0,"fatal":20,"d1":27,"d2":20,"futuro":9,"no_dia":20,"adiantada":27,"grp":"Grupo B3"},{"n":"FFI","tot":73,"realiz":73,"atrasada":0,"fatal":0,"d1":29,"d2":17,"futuro":27,"no_dia":0,"adiantada":29,"grp":"Grupo E2"},{"n":"ECO","tot":73,"realiz":73,"atrasada":11,"fatal":0,"d1":13,"d2":24,"futuro":25,"no_dia":0,"adiantada":13,"grp":"Grupo C"},{"n":"EVV","tot":64,"realiz":64,"atrasada":31,"fatal":33,"d1":0,"d2":0,"futuro":0,"no_dia":33,"adiantada":0,"grp":"Grupo B1"},{"n":"ARC","tot":62,"realiz":62,"atrasada":4,"fatal":16,"d1":10,"d2":9,"futuro":23,"no_dia":16,"adiantada":10,"grp":"Grupo E2"},{"n":"VSI","tot":62,"realiz":62,"atrasada":1,"fatal":4,"d1":47,"d2":2,"futuro":8,"no_dia":4,"adiantada":47,"grp":"Grupo A3"},{"n":"Nome não identificado","tot":62,"realiz":62,"atrasada":0,"fatal":15,"d1":15,"d2":7,"futuro":25,"no_dia":15,"adiantada":15,"grp":"Grupo C"},{"n":"DPR","tot":61,"realiz":61,"atrasada":18,"fatal":14,"d1":10,"d2":5,"futuro":14,"no_dia":14,"adiantada":10,"grp":"Grupo E1"},{"n":"GIF","tot":56,"realiz":56,"atrasada":4,"fatal":19,"d1":31,"d2":1,"futuro":1,"no_dia":19,"adiantada":31,"grp":"Grupo E2"},{"n":"TFR","tot":53,"realiz":53,"atrasada":23,"fatal":25,"d1":2,"d2":3,"futuro":0,"no_dia":25,"adiantada":2,"grp":"Grupo C"},{"n":"KTO","tot":49,"realiz":49,"atrasada":17,"fatal":29,"d1":1,"d2":0,"futuro":2,"no_dia":29,"adiantada":1,"grp":"Grupo E2"},{"n":"ANB","tot":49,"realiz":49,"atrasada":12,"fatal":18,"d1":7,"d2":3,"futuro":9,"no_dia":18,"adiantada":7,"grp":"Grupo B3"},{"n":"BSS","tot":48,"realiz":48,"atrasada":29,"fatal":12,"d1":3,"d2":2,"futuro":2,"no_dia":12,"adiantada":3,"grp":"Grupo E2"},{"n":"DJE","tot":48,"realiz":48,"atrasada":1,"fatal":2,"d1":35,"d2":2,"futuro":8,"no_dia":2,"adiantada":35,"grp":"Grupo E1"},{"n":"AML","tot":39,"realiz":39,"atrasada":6,"fatal":15,"d1":14,"d2":1,"futuro":3,"no_dia":15,"adiantada":14,"grp":"Grupo E2"},{"n":"AAP","tot":32,"realiz":32,"atrasada":1,"fatal":1,"d1":15,"d2":5,"futuro":10,"no_dia":1,"adiantada":15,"grp":"Grupo E2"},{"n":"AAO","tot":30,"realiz":30,"atrasada":19,"fatal":0,"d1":7,"d2":4,"futuro":0,"no_dia":0,"adiantada":7,"grp":"Grupo A3"},{"n":"BIM","tot":29,"realiz":29,"atrasada":3,"fatal":0,"d1":1,"d2":23,"futuro":2,"no_dia":0,"adiantada":1,"grp":"Grupo E2"},{"n":"RWD","tot":21,"realiz":21,"atrasada":0,"fatal":1,"d1":20,"d2":0,"futuro":0,"no_dia":1,"adiantada":20,"grp":"Grupo B2"},{"n":"SOF","tot":20,"realiz":20,"atrasada":1,"fatal":2,"d1":8,"d2":6,"futuro":3,"no_dia":2,"adiantada":8,"grp":"Grupo A2"},{"n":"IGA","tot":18,"realiz":18,"atrasada":0,"fatal":0,"d1":18,"d2":0,"futuro":0,"no_dia":0,"adiantada":18,"grp":"Grupo B2"},{"n":"EYN","tot":15,"realiz":15,"atrasada":15,"fatal":0,"d1":0,"d2":0,"futuro":0,"no_dia":0,"adiantada":0,"grp":"Grupo A3"},{"n":"CDS","tot":15,"realiz":15,"atrasada":3,"fatal":6,"d1":3,"d2":2,"futuro":1,"no_dia":6,"adiantada":3,"grp":"Grupo B3"},{"n":"LPJ","tot":14,"realiz":14,"atrasada":14,"fatal":0,"d1":0,"d2":0,"futuro":0,"no_dia":0,"adiantada":0,"grp":"Grupo E1"},{"n":"CAR","tot":10,"realiz":10,"atrasada":8,"fatal":2,"d1":0,"d2":0,"futuro":0,"no_dia":2,"adiantada":0,"grp":"Grupo A3"},{"n":"VAR","tot":7,"realiz":7,"atrasada":0,"fatal":0,"d1":5,"d2":2,"futuro":0,"no_dia":0,"adiantada":5,"grp":"Grupo B1"},{"n":"GMG","tot":5,"realiz":5,"atrasada":0,"fatal":2,"d1":1,"d2":0,"futuro":2,"no_dia":2,"adiantada":1,"grp":"Grupo B1"},{"n":"TNE","tot":4,"realiz":4,"atrasada":0,"fatal":2,"d1":2,"d2":0,"futuro":0,"no_dia":2,"adiantada":2,"grp":"Grupo A2"},{"n":"NRG","tot":4,"realiz":4,"atrasada":3,"fatal":1,"d1":0,"d2":0,"futuro":0,"no_dia":1,"adiantada":0,"grp":"Grupo B1"},{"n":"CGV","tot":2,"realiz":2,"atrasada":0,"fatal":0,"d1":0,"d2":0,"futuro":2,"no_dia":0,"adiantada":0,"grp":"Grupo B1"},{"n":"WSF","tot":2,"realiz":2,"atrasada":0,"fatal":0,"d1":0,"d2":2,"futuro":0,"no_dia":0,"adiantada":0,"grp":"Grupo E2"}];
+const AGEQ_EQUIPE=[{"equipe":"Grupo E2","tot":112,"realiz":112,"atrasada":37,"fatal":41,"d1":18,"d2":7,"futuro":9,"no_dia":41,"adiantada":18},{"equipe":"Grupo B1","tot":105,"realiz":105,"atrasada":19,"fatal":7,"d1":55,"d2":15,"futuro":9,"no_dia":7,"adiantada":55},{"equipe":"Grupo E1","tot":58,"realiz":58,"atrasada":3,"fatal":17,"d1":21,"d2":10,"futuro":7,"no_dia":17,"adiantada":21},{"equipe":"Grupo C","tot":21,"realiz":21,"atrasada":4,"fatal":8,"d1":5,"d2":2,"futuro":2,"no_dia":8,"adiantada":5},{"equipe":"Grupo B2","tot":17,"realiz":17,"atrasada":2,"fatal":2,"d1":12,"d2":1,"futuro":0,"no_dia":2,"adiantada":12},{"equipe":"Grupo B3","tot":16,"realiz":16,"atrasada":0,"fatal":0,"d1":15,"d2":0,"futuro":1,"no_dia":0,"adiantada":15},{"equipe":"Grupo D1","tot":11,"realiz":11,"atrasada":1,"fatal":0,"d1":4,"d2":4,"futuro":2,"no_dia":0,"adiantada":4},{"equipe":"Grupo A3","tot":2,"realiz":2,"atrasada":1,"fatal":0,"d1":1,"d2":0,"futuro":0,"no_dia":0,"adiantada":1},{"equipe":"Grupo A2","tot":1,"realiz":1,"atrasada":1,"fatal":0,"d1":0,"d2":0,"futuro":0,"no_dia":0,"adiantada":0}];
+const AGEQ_RESP=[{"n":"GMG","tot":43,"realiz":43,"atrasada":0,"fatal":1,"d1":32,"d2":10,"futuro":0,"no_dia":1,"adiantada":32,"grp":"Grupo B1"},{"n":"BSS","tot":26,"realiz":26,"atrasada":5,"fatal":12,"d1":3,"d2":1,"futuro":5,"no_dia":12,"adiantada":3,"grp":"Grupo E2"},{"n":"EMM","tot":19,"realiz":19,"atrasada":0,"fatal":15,"d1":3,"d2":1,"futuro":0,"no_dia":15,"adiantada":3,"grp":"Grupo E1"},{"n":"RFE","tot":18,"realiz":18,"atrasada":0,"fatal":0,"d1":15,"d2":2,"futuro":1,"no_dia":0,"adiantada":15,"grp":"Grupo B1"},{"n":"RYL","tot":17,"realiz":17,"atrasada":6,"fatal":9,"d1":1,"d2":1,"futuro":0,"no_dia":9,"adiantada":1,"grp":"Grupo E2"},{"n":"JRT","tot":17,"realiz":17,"atrasada":9,"fatal":6,"d1":0,"d2":2,"futuro":0,"no_dia":6,"adiantada":0,"grp":"Grupo E2"},{"n":"EVV","tot":15,"realiz":15,"atrasada":9,"fatal":6,"d1":0,"d2":0,"futuro":0,"no_dia":6,"adiantada":0,"grp":"Grupo B1"},{"n":"JLM","tot":12,"realiz":12,"atrasada":6,"fatal":1,"d1":2,"d2":2,"futuro":1,"no_dia":1,"adiantada":2,"grp":"Grupo E2"},{"n":"LMI","tot":12,"realiz":12,"atrasada":0,"fatal":0,"d1":12,"d2":0,"futuro":0,"no_dia":0,"adiantada":12,"grp":"Grupo B3"},{"n":"JJS","tot":11,"realiz":11,"atrasada":8,"fatal":0,"d1":0,"d2":1,"futuro":2,"no_dia":0,"adiantada":0,"grp":"Grupo B1"},{"n":"ALF","tot":11,"realiz":11,"atrasada":0,"fatal":0,"d1":7,"d2":3,"futuro":1,"no_dia":0,"adiantada":7,"grp":"Grupo E1"},{"n":"CAL","tot":10,"realiz":10,"atrasada":1,"fatal":5,"d1":3,"d2":0,"futuro":1,"no_dia":5,"adiantada":3,"grp":"Grupo E2"},{"n":"JPL","tot":10,"realiz":10,"atrasada":0,"fatal":1,"d1":4,"d2":1,"futuro":4,"no_dia":1,"adiantada":4,"grp":"Grupo E1"},{"n":"RRU","tot":9,"realiz":9,"atrasada":6,"fatal":3,"d1":0,"d2":0,"futuro":0,"no_dia":3,"adiantada":0,"grp":"Grupo E2"},{"n":"JQS","tot":9,"realiz":9,"atrasada":0,"fatal":0,"d1":4,"d2":3,"futuro":2,"no_dia":0,"adiantada":4,"grp":"Grupo D1"},{"n":"VSI","tot":8,"realiz":8,"atrasada":1,"fatal":2,"d1":4,"d2":0,"futuro":1,"no_dia":2,"adiantada":4,"grp":"Grupo C"},{"n":"RCF","tot":8,"realiz":8,"atrasada":2,"fatal":5,"d1":0,"d2":1,"futuro":0,"no_dia":5,"adiantada":0,"grp":"Grupo C"},{"n":"LLL","tot":8,"realiz":8,"atrasada":1,"fatal":0,"d1":5,"d2":2,"futuro":0,"no_dia":0,"adiantada":5,"grp":"Grupo E1"},{"n":"JPE","tot":7,"realiz":7,"atrasada":0,"fatal":0,"d1":4,"d2":2,"futuro":1,"no_dia":0,"adiantada":4,"grp":"Grupo B1"},{"n":"IGA","tot":7,"realiz":7,"atrasada":0,"fatal":0,"d1":6,"d2":1,"futuro":0,"no_dia":0,"adiantada":6,"grp":"Grupo B2"},{"n":"RWD","tot":5,"realiz":5,"atrasada":0,"fatal":0,"d1":5,"d2":0,"futuro":0,"no_dia":0,"adiantada":5,"grp":"Grupo B2"},{"n":"GSM","tot":5,"realiz":5,"atrasada":0,"fatal":0,"d1":4,"d2":0,"futuro":1,"no_dia":0,"adiantada":4,"grp":"Grupo B1"},{"n":"AML","tot":5,"realiz":5,"atrasada":1,"fatal":0,"d1":3,"d2":1,"futuro":0,"no_dia":0,"adiantada":3,"grp":"Grupo E2"},{"n":"BSO","tot":5,"realiz":5,"atrasada":2,"fatal":0,"d1":2,"d2":0,"futuro":1,"no_dia":0,"adiantada":2,"grp":"Grupo B1"},{"n":"BIM","tot":4,"realiz":4,"atrasada":3,"fatal":0,"d1":1,"d2":0,"futuro":0,"no_dia":0,"adiantada":1,"grp":"Grupo E2"},{"n":"MBF","tot":4,"realiz":4,"atrasada":0,"fatal":1,"d1":3,"d2":0,"futuro":0,"no_dia":1,"adiantada":3,"grp":"Grupo E2"},{"n":"GIF","tot":3,"realiz":3,"atrasada":0,"fatal":2,"d1":1,"d2":0,"futuro":0,"no_dia":2,"adiantada":1,"grp":"Grupo E2"},{"n":"ECO","tot":3,"realiz":3,"atrasada":0,"fatal":1,"d1":1,"d2":1,"futuro":0,"no_dia":1,"adiantada":1,"grp":"Grupo C"},{"n":"JRM","tot":3,"realiz":3,"atrasada":2,"fatal":0,"d1":0,"d2":0,"futuro":1,"no_dia":0,"adiantada":0,"grp":"Grupo E1"},{"n":"BCF","tot":3,"realiz":3,"atrasada":0,"fatal":2,"d1":1,"d2":0,"futuro":0,"no_dia":2,"adiantada":1,"grp":"Grupo B2"},{"n":"NRG","tot":3,"realiz":3,"atrasada":0,"fatal":0,"d1":0,"d2":0,"futuro":3,"no_dia":0,"adiantada":0,"grp":"Grupo B1"},{"n":"ARC","tot":2,"realiz":2,"atrasada":0,"fatal":1,"d1":1,"d2":0,"futuro":0,"no_dia":1,"adiantada":1,"grp":"Grupo E2"},{"n":"ANB","tot":2,"realiz":2,"atrasada":2,"fatal":0,"d1":0,"d2":0,"futuro":0,"no_dia":0,"adiantada":0,"grp":"Grupo B2"},{"n":"ALH","tot":2,"realiz":2,"atrasada":0,"fatal":0,"d1":0,"d2":1,"futuro":1,"no_dia":0,"adiantada":0,"grp":"Grupo E1"},{"n":"TFR","tot":2,"realiz":2,"atrasada":2,"fatal":0,"d1":0,"d2":0,"futuro":0,"no_dia":0,"adiantada":0,"grp":"Grupo C"},{"n":"BFM","tot":2,"realiz":2,"atrasada":0,"fatal":0,"d1":1,"d2":0,"futuro":1,"no_dia":0,"adiantada":1,"grp":"Grupo B3"},{"n":"BBO","tot":2,"realiz":2,"atrasada":1,"fatal":0,"d1":0,"d2":1,"futuro":0,"no_dia":0,"adiantada":0,"grp":"Grupo D1"},{"n":"AAP","tot":2,"realiz":2,"atrasada":0,"fatal":0,"d1":0,"d2":2,"futuro":0,"no_dia":0,"adiantada":0,"grp":"Grupo E1"},{"n":"DPR","tot":1,"realiz":1,"atrasada":0,"fatal":1,"d1":0,"d2":0,"futuro":0,"no_dia":1,"adiantada":0,"grp":"Grupo E1"},{"n":"VRO","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":1,"d2":0,"futuro":0,"no_dia":0,"adiantada":1,"grp":"Grupo E1"},{"n":"FFI","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":0,"d2":0,"futuro":1,"no_dia":0,"adiantada":0,"grp":"Grupo E2"},{"n":"SOF","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":0,"d2":0,"futuro":1,"no_dia":0,"adiantada":0,"grp":"Grupo C"},{"n":"KTO","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":0,"d2":0,"futuro":1,"no_dia":0,"adiantada":0,"grp":"Grupo E2"},{"n":"TNE","tot":1,"realiz":1,"atrasada":0,"fatal":1,"d1":0,"d2":0,"futuro":0,"no_dia":1,"adiantada":0,"grp":"Grupo C"},{"n":"DJE","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":1,"d2":0,"futuro":0,"no_dia":0,"adiantada":1,"grp":"Grupo E1"},{"n":"CDS","tot":1,"realiz":1,"atrasada":1,"fatal":0,"d1":0,"d2":0,"futuro":0,"no_dia":0,"adiantada":0,"grp":"Grupo C"},{"n":"AAO","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":1,"d2":0,"futuro":0,"no_dia":0,"adiantada":1,"grp":"Grupo A3"}];
 const AG_COLORS={"Grupo A2":"#00A9E0","Grupo A3":"#007EAA","Grupo B1":"#003B5C","Grupo B2":"#00557B","Grupo B3":"#00A9E0","Grupo C":"#006D96","Grupo D1":"#004D73","Grupo E1":"#008FC2","Grupo E2":"#003B5C","CONTRATAÇÕES ESPECIAIS":"#5F7E92","Outros":"#7E98AA"};
 function shortGrupo(g){ return String(g||'').replace(/^Grupo\s+/,'').replace(/^Equipe\s+/,''); }
+
 
 function fmtNum(v){ return Number(v||0).toLocaleString('pt-BR'); }
 function agendaTotals(equipes){
   return equipes.reduce((acc,e)=>{
     acc.total += Number(e.tot||0);
     acc.vencido += Number(e.atrasada||0);
-    acc.fatal += Number(e.no_dia||0);      // Fatal = realizado no dia do vencimento
-    acc.d1 += Number(e.adiantada||0);     // D-1 / antecipado conforme base consolidada
+    acc.fatal += Number(e.fatal||e.no_dia||0);
+    acc.d1 += Number(e.d1||e.adiantada||0);
+    acc.d2 += Number(e.d2||0);
+    acc.futuro += Number(e.futuro||0);
     return acc;
-  },{total:0,vencido:0,fatal:0,d1:0});
+  },{total:0,vencido:0,fatal:0,d1:0,d2:0,futuro:0});
+}
+
+
+const ACUMULADO_DATA={"semana":{"2026-S18":{"Agenda":4549,"Vencido":769,"Total":6059,"Prazo":1167,"Fatal":1036,"Agenda Equipe":343,"D-1":2007,"D-2":899,"Futuro":1348}},"mes":{"2026-04":{"Agenda":4540,"Vencido":763,"Total":6046,"Prazo":1163,"Fatal":1036,"Agenda Equipe":343,"D-1":2004,"D-2":899,"Futuro":1344},"2026-05":{"Agenda":9,"Vencido":6,"Total":13,"Prazo":4,"Futuro":4,"D-1":3}}};
+function openAcumulado(tipo, key){
+  const d=(ACUMULADO_DATA[tipo]||{})[key]; if(!d) return;
+  const titulo=tipo==='semana'?'📊 Acumulado semanal':'📅 Consolidado mensal';
+  openDataModal(titulo, key, `<div class="data-grid">
+    <div class="data-card"><span class="lbl">Prazos</span><span class="val">${fmtNum(d.Prazo||0)}</span></div>
+    <div class="data-card"><span class="lbl">Agendas</span><span class="val" style="color:var(--pc-azul)">${fmtNum(d.Agenda||0)}</span></div>
+    <div class="data-card"><span class="lbl">Agenda Equipe</span><span class="val" style="color:#003B5C">${fmtNum(d['Agenda Equipe']||0)}</span></div>
+    <div class="data-card"><span class="lbl">Total</span><span class="val">${fmtNum(d.Total||0)}</span></div>
+    <div class="data-card"><span class="lbl">Agenda em atraso</span><span class="val" style="color:#C0392B">${fmtNum(d.Vencido||0)}</span></div>
+    <div class="data-card"><span class="lbl">Fatal</span><span class="val" style="color:#C0392B">${fmtNum(d.Fatal||0)}</span></div>
+    <div class="data-card"><span class="lbl">D-1</span><span class="val" style="color:var(--pc-azul)">${fmtNum(d['D-1']||0)}</span></div>
+    <div class="data-card"><span class="lbl">D-2</span><span class="val" style="color:#2980B9">${fmtNum(d['D-2']||0)}</span></div>
+    <div class="data-card"><span class="lbl">Futuro</span><span class="val" style="color:#003B5C">${fmtNum(d.Futuro||0)}</span></div>
+  </div>`);
 }
 
 function renderAgendaKpis(targetId, totals, tituloTotal){
   const row = document.getElementById(targetId);
   if(!row) return;
   const total = totals.total || 0;
-  const pVen = total ? Math.round(totals.vencido/total*100) : 0;
-  const pFat = total ? Math.round(totals.fatal/total*100) : 0;
-  const pD1  = total ? Math.round(totals.d1/total*100) : 0;
+  const pctv = v => total ? Math.round(Number(v||0)/total*100) : 0;
   const cards = [
-    {lbl:'Total', val:fmtNum(total), sub:tituloTotal, col:'var(--pc-escuro)'},
-    {lbl:'Vencido', val:fmtNum(totals.vencido), sub:pVen+'% após a data marcada', col:'#C0392B'},
-    {lbl:'Fatal', val:fmtNum(totals.fatal), sub:pFat+'% no dia do vencimento', col:'#D4A843'},
-    {lbl:'D-1', val:fmtNum(totals.d1), sub:pD1+'% um dia antes / antecipado', col:'var(--pc-azul)'}
+    {lbl:'Total realizado', val:fmtNum(total), sub:tituloTotal, col:'var(--pc-escuro)'},
+    {lbl:'Agenda em atraso', val:fmtNum(totals.vencido), sub:pctv(totals.vencido)+'% após data marcada', col:'#C0392B'},
+    {lbl:'Fatal', val:fmtNum(totals.fatal), sub:pctv(totals.fatal)+'%', col:'#C0392B'},
+    {lbl:'D-1', val:fmtNum(totals.d1), sub:pctv(totals.d1)+'% um dia antes', col:'var(--pc-azul)'},
+    {lbl:'D-2', val:fmtNum(totals.d2), sub:pctv(totals.d2)+'% dois dias antes', col:'#2980B9'},
+    {lbl:'Futuro', val:fmtNum(totals.futuro), sub:pctv(totals.futuro)+'%', col:'#117A65'}
   ];
-  row.innerHTML = cards.map(c=>`<div class="kpi" style="cursor:default"><div class="klbl">${c.lbl}</div><div class="kval" style="color:${c.col}">${c.val}</div><div class="ksub">${c.sub}</div></div>`).join('');
+  row.innerHTML = cards.map(c=>`<div class="kpi" onclick="openAgendaKpi('${targetId}','${c.lbl}')" title="Clique para ver critério"><div class="klbl">${c.lbl}</div><div class="kval" style="color:${c.col}">${c.val}</div><div class="ksub">${c.sub}</div></div>`).join('');
+}
+function openAgendaKpi(targetId, label){
+  const isEq=targetId.indexOf('ageq')>=0;
+  const base=isEq?'Agenda Equipe':'Agendas';
+  const totals=agendaTotals(isEq?AGEQ_EQUIPE:AG_EQUIPE);
+  openDataModal(`📌 ${base} — ${label}`, 'Resumo conforme planilha Excel', `<div class="data-grid">
+    <div class="data-card"><span class="lbl">Total</span><span class="val">${fmtNum(totals.total)}</span></div>
+    <div class="data-card"><span class="lbl">Agenda em atraso</span><span class="val" style="color:#C0392B">${fmtNum(totals.vencido)}</span></div>
+    <div class="data-card"><span class="lbl">Fatal</span><span class="val" style="color:#C0392B">${fmtNum(totals.fatal)}</span></div>
+    <div class="data-card"><span class="lbl">D-1</span><span class="val" style="color:var(--pc-azul)">${fmtNum(totals.d1)}</span></div>
+    <div class="data-card"><span class="lbl">D-2</span><span class="val" style="color:#2980B9">${fmtNum(totals.d2)}</span></div>
+    <div class="data-card"><span class="lbl">Futuro</span><span class="val" style="color:#003B5C">${fmtNum(totals.futuro)}</span></div>
+  </div>`);
 }
 
 function openAgendaGroup(prefix, grupo){
@@ -1529,14 +1824,16 @@ function openAgendaGroup(prefix, grupo){
   const label = prefix==='ageq' ? 'Agenda Equipe' : 'Agendas';
   const e = equipes.find(x=>x.equipe===grupo); if(!e) return;
   const pessoas = responsaveis.filter(r=>(r.grp||r.equipe)===grupo).sort((a,b)=>b.tot-a.tot);
-  const linhas = pessoas.map(r=>`<tr><td>${respFullName(r.n)} <span style="color:var(--tx2);font-size:10px">${r.n}</span></td><td>${fmtNum(r.atrasada)}</td><td>${fmtNum(r.no_dia)}</td><td>${fmtNum(r.adiantada)}</td><td>${fmtNum(r.tot)}</td></tr>`).join('') || `<tr><td colspan="5" style="color:var(--tx2);font-style:italic">Sem responsáveis detalhados para este grupo.</td></tr>`;
+  const linhas = pessoas.map(r=>`<tr><td>${respFullName(r.n)} <span style="color:var(--tx2);font-size:10px">${r.n}</span></td><td>${fmtNum(r.atrasada)}</td><td>${fmtNum(r.fatal||0)}</td><td>${fmtNum(r.d1||0)}</td><td>${fmtNum(r.d2||0)}</td><td>${fmtNum(r.futuro||0)}</td><td>${fmtNum(r.tot)}</td></tr>`).join('') || `<tr><td colspan="7" style="color:var(--tx2);font-style:italic">Sem responsáveis detalhados para este grupo.</td></tr>`;
   openDataModal(`📅 ${label} — ${shortGrupo(grupo)}`, 'Resumo por grupo', `<div class="data-grid">
     <div class="data-card"><span class="lbl">Total</span><span class="val">${fmtNum(e.tot)}</span></div>
-    <div class="data-card"><span class="lbl">Vencido</span><span class="val" style="color:#C0392B">${fmtNum(e.atrasada)}</span></div>
-    <div class="data-card"><span class="lbl">Fatal</span><span class="val" style="color:#D4A843">${fmtNum(e.no_dia)}</span></div>
-    <div class="data-card"><span class="lbl">D-1</span><span class="val" style="color:var(--pc-azul)">${fmtNum(e.adiantada)}</span></div>
+    <div class="data-card"><span class="lbl">Agenda em atraso</span><span class="val" style="color:#C0392B">${fmtNum(e.atrasada)}</span></div>
+    <div class="data-card"><span class="lbl">Fatal</span><span class="val" style="color:#C0392B">${fmtNum(e.fatal||0)}</span></div>
+    <div class="data-card"><span class="lbl">D-1</span><span class="val" style="color:var(--pc-azul)">${fmtNum(e.d1||0)}</span></div>
+    <div class="data-card"><span class="lbl">D-2</span><span class="val" style="color:#2980B9">${fmtNum(e.d2||0)}</span></div>
+    <div class="data-card"><span class="lbl">Futuro</span><span class="val" style="color:#003B5C">${fmtNum(e.futuro||0)}</span></div>
   </div><div class="data-section-title">Responsáveis do grupo</div>
-  <table class="data-mini-table"><thead><tr><th>Responsável</th><th>Vencido</th><th>Fatal</th><th>D-1</th><th>Total</th></tr></thead><tbody>${linhas}</tbody></table>`);
+  <table class="data-mini-table"><thead><tr><th>Responsável</th><th>Agenda atraso</th><th>Fatal</th><th>D-1</th><th>D-2</th><th>Futuro</th><th>Total</th></tr></thead><tbody>${linhas}</tbody></table>`);
 }
 
 function openAgendaResp(prefix, sigla){
@@ -1546,9 +1843,11 @@ function openAgendaResp(prefix, sigla){
   const grupo = r.grp || r.equipe;
   openDataModal(`👤 ${respFullName(sigla)}`, `${label} · ${sigla} · ${shortGrupo(grupo)}`, `<div class="data-grid">
     <div class="data-card"><span class="lbl">Total</span><span class="val">${fmtNum(r.tot)}</span></div>
-    <div class="data-card"><span class="lbl">Vencido</span><span class="val" style="color:#C0392B">${fmtNum(r.atrasada)}</span></div>
-    <div class="data-card"><span class="lbl">Fatal</span><span class="val" style="color:#D4A843">${fmtNum(r.no_dia)}</span></div>
-    <div class="data-card"><span class="lbl">D-1</span><span class="val" style="color:var(--pc-azul)">${fmtNum(r.adiantada)}</span></div>
+    <div class="data-card"><span class="lbl">Agenda em atraso</span><span class="val" style="color:#C0392B">${fmtNum(r.atrasada)}</span></div>
+    <div class="data-card"><span class="lbl">Fatal</span><span class="val" style="color:#C0392B">${fmtNum(r.fatal||0)}</span></div>
+    <div class="data-card"><span class="lbl">D-1</span><span class="val" style="color:var(--pc-azul)">${fmtNum(r.d1||0)}</span></div>
+    <div class="data-card"><span class="lbl">D-2</span><span class="val" style="color:#2980B9">${fmtNum(r.d2||0)}</span></div>
+    <div class="data-card"><span class="lbl">Futuro</span><span class="val" style="color:#003B5C">${fmtNum(r.futuro||0)}</span></div>
   </div>`);
 }
 
@@ -1572,9 +1871,11 @@ function renderAgendaBloco(prefix, equipes, responsaveis){
     const col = AG_COLORS[e.equipe]||'var(--cyan)';
     tbEq.innerHTML += `<tr data-ag-grp="${e.equipe}" onclick="openAgendaGroup('${prefix}','${e.equipe}')" title="Clique para ver o grupo">
       <td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${col};margin-right:6px"></span>${shortGrupo(e.equipe)}</td>
-      <td class="c"><span class="vbad fat">${fmtNum(e.atrasada)}</span></td>
-      <td class="c"><span class="vbad yel">${fmtNum(e.no_dia)}</span></td>
-      <td class="c"><span class="vbad blu">${fmtNum(e.adiantada)}</span></td>
+      <td class="c"><span class="vbad red">${fmtNum(e.atrasada)}</span></td>
+      <td class="c"><span class="vbad fat">${fmtNum(e.fatal||0)}</span></td>
+      <td class="c"><span class="vbad blu">${fmtNum(e.d1||0)}</span></td>
+      <td class="c"><span class="vbad blu">${fmtNum(e.d2||0)}</span></td>
+      <td class="c"><span class="vbad grn">${fmtNum(e.futuro||0)}</span></td>
       <td class="c" style="font-weight:700">${fmtNum(e.tot)}</td>
     </tr>`;
   });
@@ -1585,18 +1886,75 @@ function renderAgendaBloco(prefix, equipes, responsaveis){
       <td style="color:var(--tx2);font-size:10px">${i+1}</td>
       <td>${nome(r.n)}</td>
       <td style="font-size:10px"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:${col};margin-right:4px"></span>${shortGrupo(grupoAgenda)}</td>
-      <td class="c">${r.atrasada>0?`<span class="vbad fat">${fmtNum(r.atrasada)}</span>`:'<span class="vbad muted">—</span>'}</td>
-      <td class="c"><span class="vbad yel">${fmtNum(r.no_dia)}</span></td>
-      <td class="c"><span class="vbad blu">${fmtNum(r.adiantada)}</span></td>
+      <td class="c">${r.atrasada>0?`<span class="vbad red">${fmtNum(r.atrasada)}</span>`:'<span class="vbad muted">—</span>'}</td>
+      <td class="c">${(r.fatal||0)>0?`<span class="vbad fat">${fmtNum(r.fatal||0)}</span>`:'<span class="vbad muted">—</span>'}</td>
+      <td class="c"><span class="vbad blu">${fmtNum(r.d1||0)}</span></td>
+      <td class="c"><span class="vbad blu">${fmtNum(r.d2||0)}</span></td>
+      <td class="c"><span class="vbad grn">${fmtNum(r.futuro||0)}</span></td>
       <td class="c" style="font-weight:700">${fmtNum(r.tot)}</td>
     </tr>`;
   });
 }
 
+
+
+function renderHistoricoResp(){
+  // Aba exclusiva de PRAZOS PROCESSUAIS: análise individual por profissional.
+  // Consolida a mesma pessoa em todos os grupos para evitar duplicidade.
+  const mapa = {};
+  (RESP||[]).forEach(r=>{
+    const key = r.n || 'Sem responsável';
+    if(!mapa[key]) mapa[key] = {n:key, grupos:new Set(), total:0, ven:0, fatal:0, d1:0, d2:0, fora:0, ff:0};
+    mapa[key].grupos.add(r.grp||'Outros');
+    mapa[key].total += r.tot || 0;
+    mapa[key].ven += r.ven || 0;
+    mapa[key].fatal += r.fat || 0;
+    mapa[key].d1 += r.d1 || 0;
+    mapa[key].d2 += r.d2 || 0;
+    mapa[key].fora += r.fora || 0;
+    mapa[key].ff += r.ff || 0;
+  });
+
+  const rows = Object.values(mapa).map(r=>{
+    const risco = r.ven + r.fatal + r.ff;
+    const pct = r.total ? Math.round((risco/r.total)*100) : 0;
+    let leitura='Positivo', cls='good';
+    if(r.ven>0 || r.ff>0 || pct>=25 || r.fatal>=10){leitura='Ponto de atenção'; cls='bad';}
+    else if(r.fatal>0 || r.fora>0 || pct>=10){leitura='Monitorar'; cls='mid';}
+    return {...r, risco, pct, leitura, cls, gruposTxt:[...r.grupos].sort().join(', ')};
+  }).sort((a,b)=>(b.pct-a.pct)||(b.risco-a.risco)||(b.fatal-a.fatal)||(b.total-a.total));
+
+  const high=rows.filter(r=>r.cls==='bad').length, mid=rows.filter(r=>r.cls==='mid').length, good=rows.filter(r=>r.cls==='good').length;
+  const totalPrazos=rows.reduce((s,r)=>s+r.total,0);
+  const resumo=document.getElementById('hist-summary');
+  if(resumo){resumo.innerHTML=`
+    <div class="hist-card"><div class="hlabel">Total de prazos</div><div class="hvalue">${fmtNum(totalPrazos)}</div></div>
+    <div class="hist-card"><div class="hlabel">Pontos de atenção</div><div class="hvalue" style="color:#C0392B">${high}</div></div>
+    <div class="hist-card"><div class="hlabel">Monitorar</div><div class="hvalue" style="color:#E67E22">${mid}</div></div>
+    <div class="hist-card"><div class="hlabel">Positivos</div><div class="hvalue" style="color:#003B5C">${good}</div></div>`;}
+  const tb=document.getElementById('tb-hist-resp');
+  if(!tb) return;
+  tb.innerHTML=rows.map(r=>`<tr onclick="openDataModal('📈 Evolução Semanal — ${nome(r.n).replace(/<[^>]+>/g,' ')}', 'Semana 18 · somente prazos processuais · análise individual', '<div class=\'data-grid\'><div class=\'data-card\'><span class=\'lbl\'>Total prazos</span><span class=\'val\'>${fmtNum(r.total)}</span></div><div class=\'data-card\'><span class=\'lbl\'>Fatal</span><span class=\'val\' style=\'color:#C0392B\'>${fmtNum(r.fatal)}</span></div><div class=\'data-card\'><span class=\'lbl\'>Fora do horário</span><span class=\'val\' style=\'color:#E67E22\'>${fmtNum(r.fora)}</span></div><div class=\'data-card\'><span class=\'lbl\'>% risco</span><span class=\'val\'>${r.pct}%</span></div></div><div class=\'data-section-title\'>Observação</div><p style=\'font-size:12px;line-height:1.45\'>Indicador consolidado por profissional. Quando a pessoa atuou em mais de um grupo, os números foram somados para evitar duplicidade na análise individual.</p>')" title="Clique para detalhar evolução de prazos">
+      <td>${nome(r.n)}</td><td><b>Semana 18</b></td>
+      <td class="c"><span class="vbad muted">${fmtNum(r.total)}</span></td>
+      <td class="c">${r.ven>0?`<span class="vbad red">${fmtNum(r.ven)}</span>`:'<span class="vbad muted">—</span>'}</td>
+      <td class="c">${r.fatal>0?`<span class="vbad fat">${fmtNum(r.fatal)}</span>`:'<span class="vbad muted">—</span>'}</td>
+      <td class="c"><span class="vbad yel">${fmtNum(r.d1)}</span></td>
+      <td class="c"><span class="vbad blu">${fmtNum(r.d2)}</span></td>
+      <td class="c">${r.fora>0?`<span class="vbad org">${fmtNum(r.fora)}</span>`:'<span class="vbad muted">—</span>'}</td>
+      <td class="c">${r.ff>0?`<span class="vbad red">${fmtNum(r.ff)}</span>`:'<span class="vbad muted">—</span>'}</td>
+      <td class="c"><span class="risk-chip ${r.cls==='bad'?'high':r.cls==='mid'?'mid':'low'}">${r.pct}%</span></td>
+      <td class="c"><span class="trend-chip ${r.cls}">${r.leitura}</span></td>
+      <td class="c"><span class="trend-chip">Base inicial</span></td>
+    </tr>`).join('');
+}
+
+
 renderAgendaKpis('ag-kpi-row', agendaTotals(AG_EQUIPE), 'agendas realizadas na semana');
 renderAgendaKpis('ageq-kpi-row', agendaTotals(AGEQ_EQUIPE), 'agenda equipe realizada na semana');
 renderAgendaBloco('ag', AG_EQUIPE, AG_RESP);
 renderAgendaBloco('ageq', AGEQ_EQUIPE, AGEQ_RESP);
+renderHistoricoResp();
 
 // Inicializar filtro
 updateFilterButtons();
@@ -1617,7 +1975,7 @@ function metricCards(r){
     <div class="data-card"><span class="lbl">Vencidos</span><span class="val" style="color:#922B21">${r.ven}</span></div>
     <div class="data-card"><span class="lbl">D-1</span><span class="val" style="color:#D4A843">${r.d1}</span></div>
     <div class="data-card"><span class="lbl">D-2</span><span class="val" style="color:#2980B9">${r.d2}</span></div>
-    <div class="data-card"><span class="lbl">Antecipados</span><span class="val" style="color:#117A65">${antecip}</span></div>
+    <div class="data-card"><span class="lbl">Antecipados</span><span class="val" style="color:#003B5C">${antecip}</span></div>
     <div class="data-card"><span class="lbl">Fora horário</span><span class="val" style="color:#E67E22">${r.fora||0}</span></div>
     <div class="data-card"><span class="lbl">Fatal + fora</span><span class="val" style="color:#C0392B">${r.ff||0}</span></div>
   </div>`;
@@ -1691,6 +2049,7 @@ function initClickableDados(){
     tr.title='Clique para abrir o registro crítico';
     tr.addEventListener('click',()=>openDataModalByRegistro(tr.getAttribute('data-resp'), tr));
   });
+  document.querySelectorAll('tr[data-acumulo]').forEach(tr=>{tr.title='Clique para detalhar o acumulado';});
   document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeDataModal(); });
 }
 setTimeout(initClickableDados,0);
@@ -1712,6 +2071,48 @@ updateFilterButtons();
     <div class="data-modal-body" id="data-modal-body"></div>
   </div>
 </div>
+
+
+<script>
+/* Limpeza final de siglas pendentes e conferência de cliques */
+(function(){
+  const MAPA_SIGLAS_PENDENTES = {
+    "ARE": "Nome não identificado",
+    "TCO": "Nome não identificado",
+    "BHF": "Nome não identificado"
+  };
+
+  function limparSiglasPendentes(){
+    document.querySelectorAll('td, th, span, b').forEach(el => {
+      const txt = (el.textContent || '').trim();
+      if (MAPA_SIGLAS_PENDENTES[txt]) el.textContent = MAPA_SIGLAS_PENDENTES[txt];
+    });
+  }
+
+  function garantirCliques(){
+    document.querySelectorAll('tbody tr').forEach(tr => {
+      if (!tr.getAttribute('onclick') && typeof openDataModal === 'function') {
+        tr.style.cursor = 'pointer';
+        tr.addEventListener('click', function(){
+          const cells = Array.from(this.children).map(td => td.innerText.trim());
+          if (!cells.length) return;
+          openDataModal('Detalhamento', 'Dados da linha selecionada', 
+            '<div class="data-section-title">Registro</div><table class="data-mini-table"><tbody>' +
+            cells.map((c,i)=>'<tr><th>Campo '+(i+1)+'</th><td>'+c+'</td></tr>').join('') +
+            '</tbody></table>');
+        }, {once:false});
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    limparSiglasPendentes();
+    garantirCliques();
+  });
+  setTimeout(limparSiglasPendentes, 300);
+  setTimeout(limparSiglasPendentes, 1000);
+})();
+</script>
 
 </body>
 </html>
