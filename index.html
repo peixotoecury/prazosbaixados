@@ -998,21 +998,21 @@ div[style*="background: #117A65"]{
     <p>Controladoria Jurídica · Área Trabalhista · 02/05/2026 a 10/05/2026</p>
   </div>
   <div class="hbadge">
-    <span class="bp">1.454 PRAZOS · 5.783 AGENDAS</span>
-    <span class="ba">⚠ 238 FATAIS · 222 FORA HORÁRIO</span>
+    <span class="bp">1.451 PRAZOS · 4.122 AGENDAS</span>
+    <span class="ba">⚠ 236 FATAIS · 220 FORA HORÁRIO</span>
   </div>
 </div>
 
 <div class="main">
 <div id="sec-prazos"></div>
 <div class="kpis">
-  <div class="kpi" onclick="kpiClick(this,'')"><div class="klbl">Total Baixado</div><div class="kval wh">1.454</div><div class="ksub">prazos realizados</div></div>
-  <div class="kpi" onclick="kpiClick(this,'fatal')" id="kpi-fatal"><div class="klbl">Fatais</div><div class="kval" style="color:#e74c3c">238</div><div class="ksub">16,4% — protocolado no dia fatal</div></div>
+  <div class="kpi" onclick="kpiClick(this,'')"><div class="klbl">Total Baixado</div><div class="kval wh">1.451</div><div class="ksub">prazos realizados</div></div>
+  <div class="kpi" onclick="kpiClick(this,'fatal')" id="kpi-fatal"><div class="klbl">Fatais</div><div class="kval" style="color:#e74c3c">236</div><div class="ksub">16,3% — protocolado no dia fatal</div></div>
   <div class="kpi" onclick="kpiClick(this,'vencido')" id="kpi-vencido"><div class="klbl">Vencidos</div><div class="kval" style="color:#c0392b">4</div><div class="ksub">0,3% — prazos vencidos</div></div>
   <div class="kpi" onclick="kpiClick(this,'d1')" id="kpi-d1"><div class="klbl">D-1 (no dia)</div><div class="kval yel">575</div><div class="ksub">cumpridos no prazo</div></div>
   <div class="kpi" onclick="kpiClick(this,'antecipado')" id="kpi-antecipado"><div class="klbl">Antecipados</div><div class="kval grn">636</div><div class="ksub">43,8% — antes do prazo</div></div>
-  <div class="kpi" onclick="toggleFilter('fora')" id="kpi-fora"><div class="klbl">Fora do Horário</div><div class="kval org">222</div><div class="ksub">antes 9h ou após 19h</div></div>
-  <div class="kpi" onclick="toggleFilter('fatfora')" id="kpi-fatfora"><div class="klbl">Fatal + Fora Hora</div><div class="kval" style="color:#e74c3c">41</div><div class="ksub">⚠ caso fatal — clique para filtrar</div></div>
+  <div class="kpi" onclick="toggleFilter('fora')" id="kpi-fora"><div class="klbl">Fora do Horário</div><div class="kval org">220</div><div class="ksub">antes 9h ou após 19h</div></div>
+  <div class="kpi" onclick="toggleFilter('fatfora')" id="kpi-fatfora"><div class="klbl">Fatal + Fora Hora</div><div class="kval" style="color:#e74c3c">39</div><div class="ksub">⚠ caso fatal — clique para filtrar</div></div>
 </div>
 
 <a class="btn-excel" onclick="downloadExcel()">📥 Exportar Excel</a>
@@ -1125,7 +1125,7 @@ div[style*="background: #117A65"]{
 
 <div class="g2">
   <div class="pnl">
-    <div class="ptitle re">📋 Registro Detalhado — Fatais & Vencidos Fora do Horário <span class="pcnt">44 registros</span></div>
+    <div class="ptitle re">📋 Registro Detalhado — Fatais & Vencidos Fora do Horário <span class="pcnt">40 registros</span></div>
     <div class="scr"><table>
       <thead><tr><th>Resp.</th><th>Grupo</th><th>Horário</th><th>Status</th><th>Prazo Agend.</th><th>Processo</th></tr></thead>
       <tbody id="tb-detail"></tbody>
@@ -1189,7 +1189,7 @@ div[style*="background: #117A65"]{
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap">
     <div style="width:4px;height:22px;background:var(--cyan);border-radius:2px"></div>
     <h2 style="font-size:14px;font-weight:700;letter-spacing:.3px">📅 Agendas — 02/05/2026 a 10/05/2026</h2>
-    <span style="font-size:11px;color:var(--tx2);margin-left:4px">5.783 realizadas</span>
+    <span style="font-size:11px;color:var(--tx2);margin-left:4px">4.122 realizadas</span>
   </div>
   <div class="nota-feriado" style="margin-bottom:14px">
     <span style="font-size:14px;flex-shrink:0">⚖️</span>
@@ -1221,7 +1221,7 @@ div[style*="background: #117A65"]{
   <div style="display:flex;align-items:center;gap:10px;margin:26px 0 10px;flex-wrap:wrap">
     <div style="width:4px;height:22px;background:#27AE60;border-radius:2px"></div>
     <h2 style="font-size:14px;font-weight:700;letter-spacing:.3px">👥 Agenda Equipe — 02/05/2026 a 10/05/2026</h2>
-    <span style="font-size:11px;color:var(--tx2);margin-left:4px">480 realizadas</span>
+    <span style="font-size:11px;color:var(--tx2);margin-left:4px">246 realizadas</span>
   </div>
   <div class="nota-feriado" style="margin-bottom:14px">
     <span style="font-size:14px;flex-shrink:0">⚖️</span>
@@ -1275,19 +1275,18 @@ div[style*="background: #117A65"]{
         <th class="c">Total</th>
         <th class="c">% Atraso</th>
       </tr></thead>
-      <tbody id="tb-timeline">
-<tr data-timeline-date="2026-05-02" onclick="openTimelineDay('2026-05-02')" title="Clique para ver o resumo do dia">
+      <tbody id="tb-timeline"><tr data-timeline-date="2026-05-02" onclick="openTimelineDay('2026-05-02')" title="Clique para ver o resumo do dia">
       <td><b>02/05/2026</b><span class="nome-sigla">sábado</span></td>
-      <td class="c"><span class="vbad muted">5</span></td>
-      <td class="c"><span class="vbad blu">11</span></td>
-      <td class="c"><span class="vbad grn">1</span></td>
-      <td class="c"><span class="vbad red">9</span></td>
-      <td class="c"><span class="vbad fat">8</span></td>
+      <td class="c"><span class="vbad muted">3</span></td>
+      <td class="c"><span class="vbad blu">0</span></td>
+      <td class="c"><span class="vbad grn">0</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">3</span></td>
       <td class="c"><span class="vbad yel">0</span></td>
       <td class="c"><span class="vbad blu">0</span></td>
       <td class="c"><span class="vbad grn">0</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">17</td>
-      <td class="c"><span class="risk-chip high">53%</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">3</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
     </tr><tr data-timeline-date="2026-05-03" onclick="openTimelineDay('2026-05-03')" title="Clique para ver o resumo do dia">
       <td><b>03/05/2026</b><span class="nome-sigla">domingo</span></td>
       <td class="c"><span class="vbad muted">11</span></td>
@@ -1302,76 +1301,76 @@ div[style*="background: #117A65"]{
       <td class="c"><span class="risk-chip mid">26%</span></td>
     </tr><tr data-timeline-date="2026-05-04" onclick="openTimelineDay('2026-05-04')" title="Clique para ver o resumo do dia">
       <td><b>04/05/2026</b><span class="nome-sigla">segunda-feira</span></td>
-      <td class="c"><span class="vbad muted">338</span></td>
-      <td class="c"><span class="vbad blu">1.248</span></td>
-      <td class="c"><span class="vbad grn">109</span></td>
-      <td class="c"><span class="vbad red">652</span></td>
+      <td class="c"><span class="vbad muted">337</span></td>
+      <td class="c"><span class="vbad blu">932</span></td>
+      <td class="c"><span class="vbad grn">51</span></td>
+      <td class="c"><span class="vbad red">470</span></td>
       <td class="c"><span class="vbad fat">66</span></td>
-      <td class="c"><span class="vbad yel">525</span></td>
-      <td class="c"><span class="vbad blu">139</span></td>
-      <td class="c"><span class="vbad grn">313</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.695</td>
-      <td class="c"><span class="risk-chip mid">38%</span></td>
+      <td class="c"><span class="vbad yel">395</span></td>
+      <td class="c"><span class="vbad blu">134</span></td>
+      <td class="c"><span class="vbad grn">255</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.320</td>
+      <td class="c"><span class="risk-chip mid">36%</span></td>
     </tr><tr data-timeline-date="2026-05-05" onclick="openTimelineDay('2026-05-05')" title="Clique para ver o resumo do dia">
       <td><b>05/05/2026</b><span class="nome-sigla">terça-feira</span></td>
       <td class="c"><span class="vbad muted">242</span></td>
-      <td class="c"><span class="vbad blu">976</span></td>
-      <td class="c"><span class="vbad grn">70</span></td>
-      <td class="c"><span class="vbad red">187</span></td>
+      <td class="c"><span class="vbad blu">726</span></td>
+      <td class="c"><span class="vbad grn">30</span></td>
+      <td class="c"><span class="vbad red">119</span></td>
       <td class="c"><span class="vbad fat">257</span></td>
-      <td class="c"><span class="vbad yel">425</span></td>
-      <td class="c"><span class="vbad blu">183</span></td>
-      <td class="c"><span class="vbad grn">236</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.288</td>
-      <td class="c"><span class="risk-chip low">15%</span></td>
+      <td class="c"><span class="vbad yel">336</span></td>
+      <td class="c"><span class="vbad blu">128</span></td>
+      <td class="c"><span class="vbad grn">158</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">998</td>
+      <td class="c"><span class="risk-chip low">12%</span></td>
     </tr><tr data-timeline-date="2026-05-06" onclick="openTimelineDay('2026-05-06')" title="Clique para ver o resumo do dia">
       <td><b>06/05/2026</b><span class="nome-sigla">quarta-feira</span></td>
       <td class="c"><span class="vbad muted">320</span></td>
-      <td class="c"><span class="vbad blu">1.299</span></td>
-      <td class="c"><span class="vbad grn">106</span></td>
-      <td class="c"><span class="vbad red">198</span></td>
+      <td class="c"><span class="vbad blu">755</span></td>
+      <td class="c"><span class="vbad grn">59</span></td>
+      <td class="c"><span class="vbad red">88</span></td>
       <td class="c"><span class="vbad fat">145</span></td>
-      <td class="c"><span class="vbad yel">726</span></td>
-      <td class="c"><span class="vbad blu">244</span></td>
-      <td class="c"><span class="vbad grn">412</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.725</td>
-      <td class="c"><span class="risk-chip low">11%</span></td>
+      <td class="c"><span class="vbad yel">526</span></td>
+      <td class="c"><span class="vbad blu">127</span></td>
+      <td class="c"><span class="vbad grn">248</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.134</td>
+      <td class="c"><span class="risk-chip low">8%</span></td>
     </tr><tr data-timeline-date="2026-05-07" onclick="openTimelineDay('2026-05-07')" title="Clique para ver o resumo do dia">
       <td><b>07/05/2026</b><span class="nome-sigla">quinta-feira</span></td>
       <td class="c"><span class="vbad muted">266</span></td>
-      <td class="c"><span class="vbad blu">1.038</span></td>
-      <td class="c"><span class="vbad grn">121</span></td>
-      <td class="c"><span class="vbad red">146</span></td>
-      <td class="c"><span class="vbad fat">267</span></td>
-      <td class="c"><span class="vbad yel">598</span></td>
-      <td class="c"><span class="vbad blu">172</span></td>
-      <td class="c"><span class="vbad grn">242</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.425</td>
-      <td class="c"><span class="risk-chip low">10%</span></td>
+      <td class="c"><span class="vbad blu">721</span></td>
+      <td class="c"><span class="vbad grn">44</span></td>
+      <td class="c"><span class="vbad red">28</span></td>
+      <td class="c"><span class="vbad fat">265</span></td>
+      <td class="c"><span class="vbad yel">453</span></td>
+      <td class="c"><span class="vbad blu">73</span></td>
+      <td class="c"><span class="vbad grn">212</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.031</td>
+      <td class="c"><span class="risk-chip low">3%</span></td>
     </tr><tr data-timeline-date="2026-05-08" onclick="openTimelineDay('2026-05-08')" title="Clique para ver o resumo do dia">
       <td><b>08/05/2026</b><span class="nome-sigla">sexta-feira</span></td>
       <td class="c"><span class="vbad muted">252</span></td>
-      <td class="c"><span class="vbad blu">1.014</span></td>
-      <td class="c"><span class="vbad grn">70</span></td>
-      <td class="c"><span class="vbad red">165</span></td>
+      <td class="c"><span class="vbad blu">798</span></td>
+      <td class="c"><span class="vbad grn">59</span></td>
+      <td class="c"><span class="vbad red">121</span></td>
       <td class="c"><span class="vbad fat">217</span></td>
-      <td class="c"><span class="vbad yel">593</span></td>
+      <td class="c"><span class="vbad yel">464</span></td>
       <td class="c"><span class="vbad blu">1</span></td>
-      <td class="c"><span class="vbad grn">360</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.336</td>
-      <td class="c"><span class="risk-chip low">12%</span></td>
+      <td class="c"><span class="vbad grn">306</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.109</td>
+      <td class="c"><span class="risk-chip low">11%</span></td>
     </tr><tr data-timeline-date="2026-05-10" onclick="openTimelineDay('2026-05-10')" title="Clique para ver o resumo do dia">
       <td><b>10/05/2026</b><span class="nome-sigla">domingo</span></td>
       <td class="c"><span class="vbad muted">20</span></td>
-      <td class="c"><span class="vbad blu">45</span></td>
+      <td class="c"><span class="vbad blu">38</span></td>
       <td class="c"><span class="vbad grn">3</span></td>
-      <td class="c"><span class="vbad red">43</span></td>
+      <td class="c"><span class="vbad red">36</span></td>
       <td class="c"><span class="vbad fat">0</span></td>
       <td class="c"><span class="vbad yel">0</span></td>
       <td class="c"><span class="vbad blu">14</span></td>
       <td class="c"><span class="vbad grn">11</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">68</td>
-      <td class="c"><span class="risk-chip high">63%</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">61</td>
+      <td class="c"><span class="risk-chip high">59%</span></td>
     </tr></tbody>
     </table></div>
   </div>
@@ -1395,15 +1394,15 @@ div[style*="background: #117A65"]{
         <thead><tr><th>Semana</th><th class="c">Prazos</th><th class="c">Agendas</th><th class="c">Agenda Equipe</th><th class="c" style="color:#C0392B">Vencido</th><th class="c" style="color:#C0392B">Fatal</th><th class="c">D-1</th><th class="c">D-2</th><th class="c">Futuro</th><th class="c">Total</th></tr></thead>
         <tbody><tr data-acumulo="semana" data-acumulo-key="2026-S19" onclick="openAcumulado('semana','2026-S19')" title="Clique para detalhar o acumulado">
           <td><b>Semana 19 · 02/05 a 10/05</b></td>
-          <td class="c"><span class="vbad muted">1.454</span></td>
-          <td class="c"><span class="vbad blu">5.783</span></td>
-          <td class="c"><span class="vbad grn">480</span></td>
-          <td class="c"><span class="vbad red">1.443</span></td>
-          <td class="c"><span class="vbad fat">1.060</span></td>
-          <td class="c"><span class="vbad yel">2.867</span></td>
-          <td class="c"><span class="vbad blu">763</span></td>
-          <td class="c"><span class="vbad grn">1.584</span></td>
-          <td class="c" style="font-weight:800;color:var(--pc-escuro)">7.717</td>
+          <td class="c"><span class="vbad muted">1.451</span></td>
+          <td class="c"><span class="vbad blu">4.122</span></td>
+          <td class="c"><span class="vbad grn">246</span></td>
+          <td class="c"><span class="vbad red">905</span></td>
+          <td class="c"><span class="vbad fat">1.053</span></td>
+          <td class="c"><span class="vbad yel">2.174</span></td>
+          <td class="c"><span class="vbad blu">487</span></td>
+          <td class="c"><span class="vbad grn">1.200</span></td>
+          <td class="c" style="font-weight:800;color:var(--pc-escuro)">5.819</td>
         </tr></tbody>
       </table></div>
     </div>
@@ -1413,15 +1412,15 @@ div[style*="background: #117A65"]{
         <thead><tr><th>Mês</th><th class="c">Prazos</th><th class="c">Agendas</th><th class="c">Agenda Equipe</th><th class="c" style="color:#C0392B">Vencido</th><th class="c" style="color:#C0392B">Fatal</th><th class="c">D-1</th><th class="c">D-2</th><th class="c">Futuro</th><th class="c">Total</th></tr></thead>
         <tbody><tr data-acumulo="mes" data-acumulo-key="2026-05" onclick="openAcumulado('mes','2026-05')" title="Clique para detalhar o acumulado">
           <td><b>05/2026</b></td>
-          <td class="c"><span class="vbad muted">1.454</span></td>
-          <td class="c"><span class="vbad blu">5.783</span></td>
-          <td class="c"><span class="vbad grn">480</span></td>
-          <td class="c"><span class="vbad red">1.443</span></td>
-          <td class="c"><span class="vbad fat">1.060</span></td>
-          <td class="c"><span class="vbad yel">2.867</span></td>
-          <td class="c"><span class="vbad blu">763</span></td>
-          <td class="c"><span class="vbad grn">1.584</span></td>
-          <td class="c" style="font-weight:800;color:var(--pc-escuro)">7.717</td>
+          <td class="c"><span class="vbad muted">1.451</span></td>
+          <td class="c"><span class="vbad blu">4.122</span></td>
+          <td class="c"><span class="vbad grn">246</span></td>
+          <td class="c"><span class="vbad red">905</span></td>
+          <td class="c"><span class="vbad fat">1.053</span></td>
+          <td class="c"><span class="vbad yel">2.174</span></td>
+          <td class="c"><span class="vbad blu">487</span></td>
+          <td class="c"><span class="vbad grn">1.200</span></td>
+          <td class="c" style="font-weight:800;color:var(--pc-escuro)">5.819</td>
         </tr></tbody>
       </table></div>
     </div>
@@ -1449,7 +1448,7 @@ div[style*="background: #117A65"]{
 
 <script>
 
-const TIMELINE_DATA = {"2026-04-29":{"Agenda":1010,"Vencido":132,"Total":1397,"Agenda Equipe":110,"Fatal":287,"Prazo":277,"D-1":472,"D-2":220,"Futuro":286},"2026-04-28":{"Agenda":1296,"Vencido":139,"Total":1718,"Agenda Equipe":91,"Fatal":355,"Prazo":331,"D-1":565,"D-2":234,"Futuro":425},"2026-04-27":{"Agenda":1033,"Vencido":383,"Total":1334,"Prazo":227,"Fatal":65,"Agenda Equipe":74,"D-1":496,"D-2":176,"Futuro":214},"2026-04-30":{"Agenda":1201,"Vencido":109,"Total":1597,"Fatal":329,"Prazo":328,"Agenda Equipe":68,"D-1":471,"D-2":269,"Futuro":419},"2026-05-01":{"Agenda":9,"Vencido":6,"Total":13,"Prazo":4,"Futuro":4,"D-1":3}};
+const TIMELINE_DATA = {"2026-05-02":{"Agenda":0,"Agenda Equipe":0,"Prazo":3,"Total":3,"Vencido":0,"Fatal":3,"D-1":0,"D-2":0,"Futuro":0},"2026-05-03":{"Agenda":152,"Agenda Equipe":0,"Prazo":11,"Total":163,"Vencido":43,"Fatal":100,"D-1":0,"D-2":10,"Futuro":10},"2026-05-04":{"Agenda":932,"Agenda Equipe":51,"Prazo":337,"Total":1320,"Vencido":470,"Fatal":66,"D-1":395,"D-2":134,"Futuro":255},"2026-05-05":{"Agenda":726,"Agenda Equipe":30,"Prazo":242,"Total":998,"Vencido":119,"Fatal":257,"D-1":336,"D-2":128,"Futuro":158},"2026-05-06":{"Agenda":755,"Agenda Equipe":59,"Prazo":320,"Total":1134,"Vencido":88,"Fatal":145,"D-1":526,"D-2":127,"Futuro":248},"2026-05-07":{"Agenda":721,"Agenda Equipe":44,"Prazo":266,"Total":1031,"Vencido":28,"Fatal":265,"D-1":453,"D-2":73,"Futuro":212},"2026-05-08":{"Agenda":798,"Agenda Equipe":59,"Prazo":252,"Total":1109,"Vencido":121,"Fatal":217,"D-1":464,"D-2":1,"Futuro":306},"2026-05-10":{"Agenda":38,"Agenda Equipe":3,"Prazo":20,"Total":61,"Vencido":36,"Fatal":0,"D-1":0,"D-2":14,"Futuro":11}};
 function openTimelineDay(dateKey){
   const d = TIMELINE_DATA[dateKey]; if(!d) return;
   const [y,m,day] = dateKey.split('-');
@@ -1535,10 +1534,10 @@ const NOMES = {
   'VSI': 'Vinicius da Silva Cerqueira',
   'EYN': 'Erick Yuji Nakama',
   'TCE': 'Thaís Catharine Cardozo Esteves',
-  'TNE': 'Tábata Neves Caramelli',
   'AAO': 'Aline Amorim Oliveira',
   'ALH': 'Alícia Marcondes Hamati',
   'CAR': 'Chris Carvalho',
+  'TCO': 'Tamires Lins Costa',
 }
 
 function nome(sigla) {
@@ -1546,12 +1545,12 @@ function nome(sigla) {
   return `<span class="nome-full">${n}</span><span class="nome-sigla">${sigla}</span>`;
 }
 
-const RESP=[{"n":"JJS","grp":"Grupo B1","ven":3,"fat":18,"d1":48,"d2":13,"fut":7,"tot":89,"fora":34,"ff":10,"ant":20},{"n":"JRT","grp":"Grupo E2","ven":0,"fat":24,"d1":24,"d2":11,"fut":30,"tot":89,"fora":22,"ff":2,"ant":41},{"n":"JPL","grp":"Grupo E1","ven":0,"fat":1,"d1":27,"d2":8,"fut":50,"tot":86,"fora":2,"ff":0,"ant":58},{"n":"RYL","grp":"Grupo E2","ven":0,"fat":30,"d1":47,"d2":2,"fut":7,"tot":86,"fora":9,"ff":2,"ant":9},{"n":"RFE","grp":"Grupo B1","ven":0,"fat":3,"d1":40,"d2":1,"fut":41,"tot":85,"fora":10,"ff":0,"ant":42},{"n":"JPE","grp":"Grupo B1","ven":0,"fat":3,"d1":36,"d2":3,"fut":36,"tot":78,"fora":24,"ff":2,"ant":39},{"n":"BSO","grp":"Grupo B1","ven":0,"fat":3,"d1":24,"d2":11,"fut":35,"tot":73,"fora":14,"ff":0,"ant":46},{"n":"ARC","grp":"Grupo E2","ven":1,"fat":26,"d1":10,"d2":0,"fut":34,"tot":71,"fora":28,"ff":7,"ant":34},{"n":"GSM","grp":"Grupo B1","ven":0,"fat":18,"d1":24,"d2":6,"fut":20,"tot":68,"fora":22,"ff":4,"ant":26},{"n":"LMI","grp":"Grupo B3","ven":0,"fat":3,"d1":38,"d2":16,"fut":5,"tot":62,"fora":4,"ff":0,"ant":21},{"n":"VRO","grp":"Grupo E1","ven":0,"fat":6,"d1":21,"d2":13,"fut":19,"tot":59,"fora":2,"ff":0,"ant":32},{"n":"RRU","grp":"Grupo E2","ven":0,"fat":14,"d1":27,"d2":1,"fut":16,"tot":58,"fora":9,"ff":1,"ant":17},{"n":"MBF","grp":"Grupo E2","ven":0,"fat":0,"d1":34,"d2":4,"fut":18,"tot":56,"fora":2,"ff":0,"ant":22},{"n":"CAL","grp":"Grupo E2","ven":0,"fat":22,"d1":15,"d2":5,"fut":12,"tot":54,"fora":1,"ff":0,"ant":17},{"n":"VCR","grp":"Grupo B2","ven":0,"fat":3,"d1":14,"d2":0,"fut":33,"tot":50,"fora":0,"ff":0,"ant":33},{"n":"ALF","grp":"Grupo E1","ven":0,"fat":2,"d1":6,"d2":2,"fut":36,"tot":46,"fora":8,"ff":2,"ant":38},{"n":"ANB","grp":"Grupo B3","ven":0,"fat":4,"d1":10,"d2":9,"fut":17,"tot":40,"fora":0,"ff":0,"ant":26},{"n":"RCF","grp":"Grupo C","ven":0,"fat":6,"d1":9,"d2":4,"fut":20,"tot":39,"fora":7,"ff":0,"ant":24},{"n":"PSI","grp":"Grupo E1","ven":0,"fat":3,"d1":20,"d2":1,"fut":13,"tot":37,"fora":3,"ff":2,"ant":14},{"n":"TFR","grp":"Grupo C","ven":0,"fat":12,"d1":10,"d2":6,"fut":4,"tot":32,"fora":4,"ff":4,"ant":10},{"n":"VSI","grp":"Grupo C","ven":0,"fat":6,"d1":15,"d2":0,"fut":8,"tot":29,"fora":0,"ff":0,"ant":8},{"n":"BCF","grp":"Grupo B2","ven":0,"fat":7,"d1":11,"d2":0,"fut":10,"tot":28,"fora":4,"ff":2,"ant":10},{"n":"JRM","grp":"Grupo E1","ven":0,"fat":3,"d1":22,"d2":0,"fut":0,"tot":25,"fora":3,"ff":1,"ant":0},{"n":"JQS","grp":"Grupo D1","ven":0,"fat":2,"d1":11,"d2":1,"fut":10,"tot":24,"fora":0,"ff":0,"ant":11},{"n":"BBO","grp":"Grupo D1","ven":0,"fat":2,"d1":6,"d2":9,"fut":1,"tot":18,"fora":5,"ff":0,"ant":10},{"n":"ECO","grp":"Grupo C","ven":0,"fat":7,"d1":4,"d2":0,"fut":7,"tot":18,"fora":0,"ff":0,"ant":7},{"n":"DPR","grp":"Grupo E1","ven":0,"fat":2,"d1":9,"d2":1,"fut":2,"tot":14,"fora":0,"ff":0,"ant":3},{"n":"NRG","grp":"Grupo B1","ven":0,"fat":1,"d1":2,"d2":2,"fut":6,"tot":11,"fora":0,"ff":0,"ant":8},{"n":"AAP","grp":"Grupo E2","ven":0,"fat":1,"d1":2,"d2":1,"fut":4,"tot":8,"fora":1,"ff":0,"ant":5},{"n":"TCO","grp":"Outros","ven":0,"fat":1,"d1":3,"d2":2,"fut":0,"tot":6,"fora":3,"ff":1,"ant":2},{"n":"NBG","grp":"Grupo A2","ven":0,"fat":1,"d1":1,"d2":0,"fut":2,"tot":4,"fora":0,"ff":0,"ant":2},{"n":"SOF","grp":"Grupo A3","ven":0,"fat":0,"d1":3,"d2":0,"fut":0,"tot":3,"fora":0,"ff":0,"ant":0},{"n":"TLI","grp":"Outros","ven":0,"fat":1,"d1":2,"d2":0,"fut":0,"tot":3,"fora":0,"ff":0,"ant":0},{"n":"ARE","grp":"Outros","ven":0,"fat":1,"d1":0,"d2":0,"fut":1,"tot":2,"fora":1,"ff":1,"ant":1},{"n":"KBM","grp":"Outros","ven":0,"fat":2,"d1":0,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0},{"n":"EVV","grp":"Outros","ven":0,"fat":0,"d1":0,"d2":0,"fut":1,"tot":1,"fora":0,"ff":0,"ant":1}];
+const RESP=[{"n":"JRT","grp":"Grupo E2","ven":0,"fat":24,"d1":24,"d2":11,"fut":30,"tot":89,"fora":22,"ff":2,"ant":41},{"n":"JJS","grp":"Grupo B1","ven":3,"fat":16,"d1":48,"d2":13,"fut":7,"tot":87,"fora":32,"ff":8,"ant":20},{"n":"JPL","grp":"Grupo E1","ven":0,"fat":1,"d1":27,"d2":8,"fut":50,"tot":86,"fora":2,"ff":0,"ant":58},{"n":"RYL","grp":"Grupo E2","ven":0,"fat":30,"d1":47,"d2":2,"fut":7,"tot":86,"fora":9,"ff":2,"ant":9},{"n":"RFE","grp":"Grupo B1","ven":0,"fat":3,"d1":40,"d2":1,"fut":41,"tot":85,"fora":10,"ff":0,"ant":42},{"n":"JPE","grp":"Grupo B1","ven":0,"fat":3,"d1":36,"d2":3,"fut":36,"tot":78,"fora":24,"ff":2,"ant":39},{"n":"BSO","grp":"Grupo B1","ven":0,"fat":3,"d1":24,"d2":11,"fut":35,"tot":73,"fora":14,"ff":0,"ant":46},{"n":"ARC","grp":"Grupo E2","ven":1,"fat":26,"d1":10,"d2":0,"fut":34,"tot":71,"fora":28,"ff":7,"ant":34},{"n":"GSM","grp":"Grupo B1","ven":0,"fat":18,"d1":24,"d2":6,"fut":20,"tot":68,"fora":22,"ff":4,"ant":26},{"n":"LMI","grp":"Grupo B3","ven":0,"fat":3,"d1":38,"d2":16,"fut":5,"tot":62,"fora":4,"ff":0,"ant":21},{"n":"VRO","grp":"Grupo E1","ven":0,"fat":6,"d1":21,"d2":13,"fut":19,"tot":59,"fora":2,"ff":0,"ant":32},{"n":"RRU","grp":"Grupo E2","ven":0,"fat":14,"d1":27,"d2":1,"fut":16,"tot":58,"fora":9,"ff":1,"ant":17},{"n":"MBF","grp":"Grupo E2","ven":0,"fat":0,"d1":34,"d2":4,"fut":18,"tot":56,"fora":2,"ff":0,"ant":22},{"n":"CAL","grp":"Grupo E2","ven":0,"fat":22,"d1":15,"d2":5,"fut":12,"tot":54,"fora":1,"ff":0,"ant":17},{"n":"VCR","grp":"Grupo B2","ven":0,"fat":3,"d1":14,"d2":0,"fut":33,"tot":50,"fora":0,"ff":0,"ant":33},{"n":"ALF","grp":"Grupo E1","ven":0,"fat":2,"d1":6,"d2":2,"fut":36,"tot":46,"fora":8,"ff":2,"ant":38},{"n":"ANB","grp":"Grupo B3","ven":0,"fat":4,"d1":10,"d2":9,"fut":17,"tot":40,"fora":0,"ff":0,"ant":26},{"n":"RCF","grp":"Grupo C","ven":0,"fat":6,"d1":9,"d2":4,"fut":20,"tot":39,"fora":7,"ff":0,"ant":24},{"n":"PSI","grp":"Grupo E1","ven":0,"fat":3,"d1":20,"d2":1,"fut":13,"tot":37,"fora":3,"ff":2,"ant":14},{"n":"TFR","grp":"Grupo C","ven":0,"fat":12,"d1":10,"d2":6,"fut":4,"tot":32,"fora":4,"ff":4,"ant":10},{"n":"VSI","grp":"Grupo C","ven":0,"fat":6,"d1":15,"d2":0,"fut":8,"tot":29,"fora":0,"ff":0,"ant":8},{"n":"BCF","grp":"Grupo B2","ven":0,"fat":7,"d1":11,"d2":0,"fut":10,"tot":28,"fora":4,"ff":2,"ant":10},{"n":"JRM","grp":"Grupo E1","ven":0,"fat":3,"d1":22,"d2":0,"fut":0,"tot":25,"fora":3,"ff":1,"ant":0},{"n":"JQS","grp":"Grupo D1","ven":0,"fat":2,"d1":11,"d2":1,"fut":10,"tot":24,"fora":0,"ff":0,"ant":11},{"n":"BBO","grp":"Grupo D1","ven":0,"fat":2,"d1":6,"d2":9,"fut":1,"tot":18,"fora":5,"ff":0,"ant":10},{"n":"ECO","grp":"Grupo C","ven":0,"fat":7,"d1":4,"d2":0,"fut":7,"tot":18,"fora":0,"ff":0,"ant":7},{"n":"DPR","grp":"Grupo E1","ven":0,"fat":2,"d1":9,"d2":1,"fut":2,"tot":14,"fora":0,"ff":0,"ant":3},{"n":"NRG","grp":"Grupo B1","ven":0,"fat":1,"d1":2,"d2":2,"fut":6,"tot":11,"fora":0,"ff":0,"ant":8},{"n":"AAP","grp":"Grupo E2","ven":0,"fat":1,"d1":2,"d2":1,"fut":4,"tot":8,"fora":1,"ff":0,"ant":5},{"n":"TCO","grp":"Grupo E1","ven":0,"fat":1,"d1":3,"d2":2,"fut":0,"tot":6,"fora":3,"ff":1,"ant":2},{"n":"NBG","grp":"Grupo A2","ven":0,"fat":1,"d1":1,"d2":0,"fut":2,"tot":4,"fora":0,"ff":0,"ant":2},{"n":"SOF","grp":"Grupo A3","ven":0,"fat":0,"d1":3,"d2":0,"fut":0,"tot":3,"fora":0,"ff":0,"ant":0},{"n":"TLI","grp":"Grupo E1","ven":0,"fat":1,"d1":2,"d2":0,"fut":0,"tot":3,"fora":0,"ff":0,"ant":0},{"n":"ARE","grp":"Grupo C","ven":0,"fat":1,"d1":0,"d2":0,"fut":1,"tot":2,"fora":1,"ff":1,"ant":1},{"n":"KBM","grp":"Outros","ven":0,"fat":2,"d1":0,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0}];
 
-const GRP_RESP=[{"n":"NBG","grp":"Grupo A2","ven":0,"fat":1,"d1":1,"d2":0,"fut":2,"tot":4,"fora":0,"ff":0,"ant":2},{"n":"SOF","grp":"Grupo A3","ven":0,"fat":0,"d1":3,"d2":0,"fut":0,"tot":3,"fora":0,"ff":0,"ant":0},{"n":"JJS","grp":"Grupo B1","ven":3,"fat":18,"d1":48,"d2":13,"fut":7,"tot":89,"fora":34,"ff":10,"ant":20},{"n":"RFE","grp":"Grupo B1","ven":0,"fat":3,"d1":40,"d2":1,"fut":41,"tot":85,"fora":10,"ff":0,"ant":42},{"n":"JPE","grp":"Grupo B1","ven":0,"fat":3,"d1":36,"d2":3,"fut":36,"tot":78,"fora":24,"ff":2,"ant":39},{"n":"BSO","grp":"Grupo B1","ven":0,"fat":3,"d1":24,"d2":11,"fut":35,"tot":73,"fora":14,"ff":0,"ant":46},{"n":"GSM","grp":"Grupo B1","ven":0,"fat":18,"d1":24,"d2":6,"fut":20,"tot":68,"fora":22,"ff":4,"ant":26},{"n":"NRG","grp":"Grupo B1","ven":0,"fat":1,"d1":2,"d2":2,"fut":6,"tot":11,"fora":0,"ff":0,"ant":8},{"n":"VCR","grp":"Grupo B2","ven":0,"fat":3,"d1":14,"d2":0,"fut":33,"tot":50,"fora":0,"ff":0,"ant":33},{"n":"BCF","grp":"Grupo B2","ven":0,"fat":7,"d1":11,"d2":0,"fut":10,"tot":28,"fora":4,"ff":2,"ant":10},{"n":"LMI","grp":"Grupo B3","ven":0,"fat":3,"d1":38,"d2":16,"fut":5,"tot":62,"fora":4,"ff":0,"ant":21},{"n":"ANB","grp":"Grupo B3","ven":0,"fat":4,"d1":10,"d2":9,"fut":17,"tot":40,"fora":0,"ff":0,"ant":26},{"n":"RCF","grp":"Grupo C","ven":0,"fat":6,"d1":9,"d2":4,"fut":20,"tot":39,"fora":7,"ff":0,"ant":24},{"n":"TFR","grp":"Grupo C","ven":0,"fat":12,"d1":10,"d2":6,"fut":4,"tot":32,"fora":4,"ff":4,"ant":10},{"n":"VSI","grp":"Grupo C","ven":0,"fat":6,"d1":15,"d2":0,"fut":8,"tot":29,"fora":0,"ff":0,"ant":8},{"n":"ECO","grp":"Grupo C","ven":0,"fat":7,"d1":4,"d2":0,"fut":7,"tot":18,"fora":0,"ff":0,"ant":7},{"n":"JQS","grp":"Grupo D1","ven":0,"fat":2,"d1":11,"d2":1,"fut":10,"tot":24,"fora":0,"ff":0,"ant":11},{"n":"BBO","grp":"Grupo D1","ven":0,"fat":2,"d1":6,"d2":9,"fut":1,"tot":18,"fora":5,"ff":0,"ant":10},{"n":"JPL","grp":"Grupo E1","ven":0,"fat":1,"d1":27,"d2":8,"fut":50,"tot":86,"fora":2,"ff":0,"ant":58},{"n":"VRO","grp":"Grupo E1","ven":0,"fat":6,"d1":21,"d2":13,"fut":19,"tot":59,"fora":2,"ff":0,"ant":32},{"n":"ALF","grp":"Grupo E1","ven":0,"fat":2,"d1":6,"d2":2,"fut":36,"tot":46,"fora":8,"ff":2,"ant":38},{"n":"PSI","grp":"Grupo E1","ven":0,"fat":3,"d1":20,"d2":1,"fut":13,"tot":37,"fora":3,"ff":2,"ant":14},{"n":"JRM","grp":"Grupo E1","ven":0,"fat":3,"d1":22,"d2":0,"fut":0,"tot":25,"fora":3,"ff":1,"ant":0},{"n":"DPR","grp":"Grupo E1","ven":0,"fat":2,"d1":9,"d2":1,"fut":2,"tot":14,"fora":0,"ff":0,"ant":3},{"n":"JRT","grp":"Grupo E2","ven":0,"fat":24,"d1":24,"d2":11,"fut":30,"tot":89,"fora":22,"ff":2,"ant":41},{"n":"RYL","grp":"Grupo E2","ven":0,"fat":30,"d1":47,"d2":2,"fut":7,"tot":86,"fora":9,"ff":2,"ant":9},{"n":"ARC","grp":"Grupo E2","ven":1,"fat":26,"d1":10,"d2":0,"fut":34,"tot":71,"fora":28,"ff":7,"ant":34},{"n":"RRU","grp":"Grupo E2","ven":0,"fat":14,"d1":27,"d2":1,"fut":16,"tot":58,"fora":9,"ff":1,"ant":17},{"n":"MBF","grp":"Grupo E2","ven":0,"fat":0,"d1":34,"d2":4,"fut":18,"tot":56,"fora":2,"ff":0,"ant":22},{"n":"CAL","grp":"Grupo E2","ven":0,"fat":22,"d1":15,"d2":5,"fut":12,"tot":54,"fora":1,"ff":0,"ant":17},{"n":"AAP","grp":"Grupo E2","ven":0,"fat":1,"d1":2,"d2":1,"fut":4,"tot":8,"fora":1,"ff":0,"ant":5},{"n":"TCO","grp":"Outros","ven":0,"fat":1,"d1":3,"d2":2,"fut":0,"tot":6,"fora":3,"ff":1,"ant":2},{"n":"TLI","grp":"Outros","ven":0,"fat":1,"d1":2,"d2":0,"fut":0,"tot":3,"fora":0,"ff":0,"ant":0},{"n":"ARE","grp":"Outros","ven":0,"fat":1,"d1":0,"d2":0,"fut":1,"tot":2,"fora":1,"ff":1,"ant":1},{"n":"KBM","grp":"Outros","ven":0,"fat":2,"d1":0,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0},{"n":"EVV","grp":"Outros","ven":0,"fat":0,"d1":0,"d2":0,"fut":1,"tot":1,"fora":0,"ff":0,"ant":1}];
-const HR_DIST=[[0,4],[1,0],[2,0],[3,0],[4,0],[5,0],[6,4],[7,18],[8,44],[9,104],[10,164],[11,155],[12,161],[13,85],[14,84],[15,110],[16,127],[17,139],[18,103],[19,55],[20,50],[21,30],[22,8],[23,9]];
-const FAT_FORA=[{"resp":"JJS","grp":"Grupo B1","hr":"22:05","status":"Fatal","dt":"01/05/2026","proc":"1001556-97.2023.5.02.0433"},{"resp":"JJS","grp":"Grupo B1","hr":"21:05","status":"Fatal","dt":"01/05/2026","proc":"1001797-97.2025.5.02.0434"},{"resp":"JJS","grp":"Grupo B1","hr":"21:05","status":"Fatal","dt":"01/05/2026","proc":"1000607-04.2022.5.02.0435"},{"resp":"JJS","grp":"Grupo B1","hr":"21:05","status":"Fatal","dt":"01/05/2026","proc":"1000336-59.2026.5.02.0433"},{"resp":"JJS","grp":"Grupo B1","hr":"21:05","status":"Fatal","dt":"01/05/2026","proc":"1000336-59.2026.5.02.0433"},{"resp":"PSI","grp":"Grupo E1","hr":"08:05","status":"Fatal","dt":"30/04/2026","proc":"1002397-51.2025.5.02.0521"},{"resp":"TCO","grp":"Outros","hr":"06:05","status":"Fatal","dt":"30/04/2026","proc":"0010173-66.2026.5.15.0087"},{"resp":"PSI","grp":"Grupo E1","hr":"08:05","status":"Fatal","dt":"30/04/2026","proc":"0011390-47.2016.5.15.0071"},{"resp":"ARC","grp":"Grupo E2","hr":"07:05","status":"Fatal","dt":"01/05/2026","proc":"0000648-72.2026.5.05.0561"},{"resp":"ARC","grp":"Grupo E2","hr":"20:05","status":"Fatal","dt":"01/05/2026","proc":"0000648-72.2026.5.05.0561"},{"resp":"JJS","grp":"Grupo B1","hr":"07:05","status":"Fatal","dt":"01/05/2026","proc":"1000059-59.2026.5.02.0363"},{"resp":"TFR","grp":"Grupo C","hr":"08:05","status":"Fatal","dt":"01/05/2026","proc":"1002009-13.2024.5.02.0060"},{"resp":"JJS","grp":"Grupo B1","hr":"20:05","status":"Fatal","dt":"01/05/2026","proc":"1000729-56.2018.5.02.0435"},{"resp":"ARE","grp":"Outros","hr":"19:05","status":"Fatal","dt":"01/05/2026","proc":"1000676-62.2026.5.02.0381"},{"resp":"JJS","grp":"Grupo B1","hr":"06:05","status":"Fatal","dt":"01/05/2026","proc":"1000714-21.2026.5.02.0431"},{"resp":"GSM","grp":"Grupo B1","hr":"20:05","status":"Fatal","dt":"01/05/2026","proc":"1001733-96.2025.5.02.0431"},{"resp":"ARC","grp":"Grupo E2","hr":"06:05","status":"Fatal","dt":"01/05/2026","proc":"0010088-31.2024.5.15.0126"},{"resp":"TFR","grp":"Grupo C","hr":"08:05","status":"Fatal","dt":"01/05/2026","proc":"1000502-64.2026.5.02.0054"},{"resp":"JJS","grp":"Grupo B1","hr":"06:05","status":"Fatal","dt":"01/05/2026","proc":"1000587-33.2025.5.02.0362"},{"resp":"RRU","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"01/05/2026","proc":"1001863-22.2025.5.02.0614"},{"resp":"JPE","grp":"Grupo B1","hr":"08:05","status":"Fatal","dt":"01/05/2026","proc":"0020125-09.2021.5.04.0004"},{"resp":"GSM","grp":"Grupo B1","hr":"20:05","status":"Fatal","dt":"01/05/2026","proc":"1000995-96.2025.5.02.0435"},{"resp":"ARC","grp":"Grupo E2","hr":"20:05","status":"Fatal","dt":"04/05/2026","proc":"0011618-57.2025.5.15.0119"},{"resp":"TFR","grp":"Grupo C","hr":"08:05","status":"Fatal","dt":"04/05/2026","proc":"0010441-49.2026.5.03.0057"},{"resp":"RYL","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"04/05/2026","proc":"0010905-63.2026.5.15.0017"},{"resp":"RYL","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"04/05/2026","proc":"0010918-78.2026.5.15.0044"},{"resp":"JPE","grp":"Grupo B1","hr":"07:05","status":"Fatal","dt":"05/05/2026","proc":"1000388-33.2018.5.02.0434"},{"resp":"ALF","grp":"Grupo E1","hr":"08:05","status":"Fatal","dt":"05/05/2026","proc":"0012958-34.2025.5.15.0152"},{"resp":"ALF","grp":"Grupo E1","hr":"08:05","status":"Fatal","dt":"05/05/2026","proc":"0012958-34.2025.5.15.0152"},{"resp":"JJS","grp":"Grupo B1","hr":"07:05","status":"Fatal","dt":"05/05/2026","proc":"1000533-11.2026.5.02.0434"},{"resp":"ARC","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"06/05/2026","proc":"0025539-34.2025.5.24.0022"},{"resp":"ARC","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"06/05/2026","proc":"0010654-13.2021.5.03.0063"},{"resp":"JRT","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"07/05/2026","proc":"0010292-31.2026.5.03.0032"},{"resp":"TFR","grp":"Grupo C","hr":"07:05","status":"Fatal","dt":"07/05/2026","proc":"0012866-85.2025.5.15.0013"},{"resp":"ARC","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"07/05/2026","proc":"0000466-75.2026.5.17.0004"},{"resp":"BCF","grp":"Grupo B2","hr":"08:05","status":"Fatal","dt":"07/05/2026","proc":"0010943-71.2026.5.15.0083"},{"resp":"JRT","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"07/05/2026","proc":"0011336-72.2025.5.03.0080"},{"resp":"BCF","grp":"Grupo B2","hr":"08:05","status":"Fatal","dt":"07/05/2026","proc":"0011455-70.2026.5.15.0013"},{"resp":"GSM","grp":"Grupo B1","hr":"00:05","status":"Fatal","dt":"07/05/2026","proc":"1000709-96.2026.5.02.0431"},{"resp":"GSM","grp":"Grupo B1","hr":"00:05","status":"Fatal","dt":"07/05/2026","proc":"1000709-96.2026.5.02.0431"},{"resp":"JRM","grp":"Grupo E1","hr":"08:05","status":"Fatal","dt":"07/05/2026","proc":"0010411-45.2026.5.03.0176"},{"resp":"JJS","grp":"Grupo B1","hr":"22:05","status":"Vencido","dt":"08/05/2026","proc":"1000132-12.2026.5.02.0434"},{"resp":"JJS","grp":"Grupo B1","hr":"23:05","status":"Vencido","dt":"08/05/2026","proc":"1000825-02.2026.5.02.0432"},{"resp":"JJS","grp":"Grupo B1","hr":"20:05","status":"Vencido","dt":"08/05/2026","proc":"1001042-70.2025.5.02.0435"}];
-const BY_GRUPO={"Grupo A2":{"total":4,"fat":1,"ven":0,"d1":1,"d2":0,"fut":2,"fora":0,"ff":0},"Grupo A3":{"total":3,"fat":0,"ven":0,"d1":3,"d2":0,"fut":0,"fora":0,"ff":0},"Grupo B1":{"total":404,"fat":46,"ven":3,"d1":174,"d2":36,"fut":145,"fora":104,"ff":16},"Grupo B2":{"total":78,"fat":10,"ven":0,"d1":25,"d2":0,"fut":43,"fora":4,"ff":2},"Grupo B3":{"total":102,"fat":7,"ven":0,"d1":48,"d2":25,"fut":22,"fora":4,"ff":0},"Grupo C":{"total":118,"fat":31,"ven":0,"d1":38,"d2":10,"fut":39,"fora":11,"ff":4},"Grupo D1":{"total":42,"fat":4,"ven":0,"d1":17,"d2":10,"fut":11,"fora":5,"ff":0},"Grupo E1":{"total":267,"fat":17,"ven":0,"d1":105,"d2":25,"fut":120,"fora":18,"ff":5},"Grupo E2":{"total":422,"fat":117,"ven":1,"d1":159,"d2":24,"fut":121,"fora":72,"ff":12},"Outros":{"total":14,"fat":5,"ven":0,"d1":5,"d2":2,"fut":2,"fora":4,"ff":2}};
+const GRP_RESP=[{"n":"NBG","grp":"Grupo A2","ven":0,"fat":1,"d1":1,"d2":0,"fut":2,"tot":4,"fora":0,"ff":0,"ant":2},{"n":"SOF","grp":"Grupo A3","ven":0,"fat":0,"d1":3,"d2":0,"fut":0,"tot":3,"fora":0,"ff":0,"ant":0},{"n":"JJS","grp":"Grupo B1","ven":3,"fat":16,"d1":48,"d2":13,"fut":7,"tot":87,"fora":32,"ff":8,"ant":20},{"n":"RFE","grp":"Grupo B1","ven":0,"fat":3,"d1":40,"d2":1,"fut":41,"tot":85,"fora":10,"ff":0,"ant":42},{"n":"JPE","grp":"Grupo B1","ven":0,"fat":3,"d1":36,"d2":3,"fut":36,"tot":78,"fora":24,"ff":2,"ant":39},{"n":"BSO","grp":"Grupo B1","ven":0,"fat":3,"d1":24,"d2":11,"fut":35,"tot":73,"fora":14,"ff":0,"ant":46},{"n":"GSM","grp":"Grupo B1","ven":0,"fat":18,"d1":24,"d2":6,"fut":20,"tot":68,"fora":22,"ff":4,"ant":26},{"n":"NRG","grp":"Grupo B1","ven":0,"fat":1,"d1":2,"d2":2,"fut":6,"tot":11,"fora":0,"ff":0,"ant":8},{"n":"VCR","grp":"Grupo B2","ven":0,"fat":3,"d1":14,"d2":0,"fut":33,"tot":50,"fora":0,"ff":0,"ant":33},{"n":"BCF","grp":"Grupo B2","ven":0,"fat":7,"d1":11,"d2":0,"fut":10,"tot":28,"fora":4,"ff":2,"ant":10},{"n":"LMI","grp":"Grupo B3","ven":0,"fat":3,"d1":38,"d2":16,"fut":5,"tot":62,"fora":4,"ff":0,"ant":21},{"n":"ANB","grp":"Grupo B3","ven":0,"fat":4,"d1":10,"d2":9,"fut":17,"tot":40,"fora":0,"ff":0,"ant":26},{"n":"RCF","grp":"Grupo C","ven":0,"fat":6,"d1":9,"d2":4,"fut":20,"tot":39,"fora":7,"ff":0,"ant":24},{"n":"TFR","grp":"Grupo C","ven":0,"fat":12,"d1":10,"d2":6,"fut":4,"tot":32,"fora":4,"ff":4,"ant":10},{"n":"VSI","grp":"Grupo C","ven":0,"fat":6,"d1":15,"d2":0,"fut":8,"tot":29,"fora":0,"ff":0,"ant":8},{"n":"ECO","grp":"Grupo C","ven":0,"fat":7,"d1":4,"d2":0,"fut":7,"tot":18,"fora":0,"ff":0,"ant":7},{"n":"ARE","grp":"Grupo C","ven":0,"fat":1,"d1":0,"d2":0,"fut":1,"tot":2,"fora":1,"ff":1,"ant":1},{"n":"JQS","grp":"Grupo D1","ven":0,"fat":2,"d1":11,"d2":1,"fut":10,"tot":24,"fora":0,"ff":0,"ant":11},{"n":"BBO","grp":"Grupo D1","ven":0,"fat":2,"d1":6,"d2":9,"fut":1,"tot":18,"fora":5,"ff":0,"ant":10},{"n":"JPL","grp":"Grupo E1","ven":0,"fat":1,"d1":27,"d2":8,"fut":50,"tot":86,"fora":2,"ff":0,"ant":58},{"n":"VRO","grp":"Grupo E1","ven":0,"fat":6,"d1":21,"d2":13,"fut":19,"tot":59,"fora":2,"ff":0,"ant":32},{"n":"ALF","grp":"Grupo E1","ven":0,"fat":2,"d1":6,"d2":2,"fut":36,"tot":46,"fora":8,"ff":2,"ant":38},{"n":"PSI","grp":"Grupo E1","ven":0,"fat":3,"d1":20,"d2":1,"fut":13,"tot":37,"fora":3,"ff":2,"ant":14},{"n":"JRM","grp":"Grupo E1","ven":0,"fat":3,"d1":22,"d2":0,"fut":0,"tot":25,"fora":3,"ff":1,"ant":0},{"n":"DPR","grp":"Grupo E1","ven":0,"fat":2,"d1":9,"d2":1,"fut":2,"tot":14,"fora":0,"ff":0,"ant":3},{"n":"TCO","grp":"Grupo E1","ven":0,"fat":1,"d1":3,"d2":2,"fut":0,"tot":6,"fora":3,"ff":1,"ant":2},{"n":"TLI","grp":"Grupo E1","ven":0,"fat":1,"d1":2,"d2":0,"fut":0,"tot":3,"fora":0,"ff":0,"ant":0},{"n":"JRT","grp":"Grupo E2","ven":0,"fat":24,"d1":24,"d2":11,"fut":30,"tot":89,"fora":22,"ff":2,"ant":41},{"n":"RYL","grp":"Grupo E2","ven":0,"fat":30,"d1":47,"d2":2,"fut":7,"tot":86,"fora":9,"ff":2,"ant":9},{"n":"ARC","grp":"Grupo E2","ven":1,"fat":26,"d1":10,"d2":0,"fut":34,"tot":71,"fora":28,"ff":7,"ant":34},{"n":"RRU","grp":"Grupo E2","ven":0,"fat":14,"d1":27,"d2":1,"fut":16,"tot":58,"fora":9,"ff":1,"ant":17},{"n":"MBF","grp":"Grupo E2","ven":0,"fat":0,"d1":34,"d2":4,"fut":18,"tot":56,"fora":2,"ff":0,"ant":22},{"n":"CAL","grp":"Grupo E2","ven":0,"fat":22,"d1":15,"d2":5,"fut":12,"tot":54,"fora":1,"ff":0,"ant":17},{"n":"AAP","grp":"Grupo E2","ven":0,"fat":1,"d1":2,"d2":1,"fut":4,"tot":8,"fora":1,"ff":0,"ant":5},{"n":"KBM","grp":"Outros","ven":0,"fat":2,"d1":0,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0}];
+const HR_DIST=[[0,4],[1,0],[2,0],[3,0],[4,0],[5,0],[6,4],[7,18],[8,44],[9,104],[10,164],[11,154],[12,161],[13,85],[14,84],[15,110],[16,127],[17,139],[18,103],[19,55],[20,50],[21,29],[22,7],[23,9]];
+const FAT_FORA=[{"resp":"JJS","grp":"Grupo B1","hr":"21:05","status":"Fatal","dt":"01/05/2026","proc":"1000607-04.2022.5.02.0435"},{"resp":"JJS","grp":"Grupo B1","hr":"21:05","status":"Fatal","dt":"01/05/2026","proc":"1000336-59.2026.5.02.0433"},{"resp":"JJS","grp":"Grupo B1","hr":"21:05","status":"Fatal","dt":"01/05/2026","proc":"1000336-59.2026.5.02.0433"},{"resp":"PSI","grp":"Grupo E1","hr":"08:05","status":"Fatal","dt":"30/04/2026","proc":"1002397-51.2025.5.02.0521"},{"resp":"TCO","grp":"Grupo E1","hr":"06:05","status":"Fatal","dt":"30/04/2026","proc":"0010173-66.2026.5.15.0087"},{"resp":"PSI","grp":"Grupo E1","hr":"08:05","status":"Fatal","dt":"30/04/2026","proc":"0011390-47.2016.5.15.0071"},{"resp":"ARC","grp":"Grupo E2","hr":"07:05","status":"Fatal","dt":"01/05/2026","proc":"0000648-72.2026.5.05.0561"},{"resp":"ARC","grp":"Grupo E2","hr":"20:05","status":"Fatal","dt":"01/05/2026","proc":"0000648-72.2026.5.05.0561"},{"resp":"JJS","grp":"Grupo B1","hr":"07:05","status":"Fatal","dt":"01/05/2026","proc":"1000059-59.2026.5.02.0363"},{"resp":"TFR","grp":"Grupo C","hr":"08:05","status":"Fatal","dt":"01/05/2026","proc":"1002009-13.2024.5.02.0060"},{"resp":"JJS","grp":"Grupo B1","hr":"20:05","status":"Fatal","dt":"01/05/2026","proc":"1000729-56.2018.5.02.0435"},{"resp":"ARE","grp":"Grupo C","hr":"19:05","status":"Fatal","dt":"01/05/2026","proc":"1000676-62.2026.5.02.0381"},{"resp":"JJS","grp":"Grupo B1","hr":"06:05","status":"Fatal","dt":"01/05/2026","proc":"1000714-21.2026.5.02.0431"},{"resp":"GSM","grp":"Grupo B1","hr":"20:05","status":"Fatal","dt":"01/05/2026","proc":"1001733-96.2025.5.02.0431"},{"resp":"ARC","grp":"Grupo E2","hr":"06:05","status":"Fatal","dt":"01/05/2026","proc":"0010088-31.2024.5.15.0126"},{"resp":"TFR","grp":"Grupo C","hr":"08:05","status":"Fatal","dt":"01/05/2026","proc":"1000502-64.2026.5.02.0054"},{"resp":"JJS","grp":"Grupo B1","hr":"06:05","status":"Fatal","dt":"01/05/2026","proc":"1000587-33.2025.5.02.0362"},{"resp":"RRU","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"01/05/2026","proc":"1001863-22.2025.5.02.0614"},{"resp":"JPE","grp":"Grupo B1","hr":"08:05","status":"Fatal","dt":"01/05/2026","proc":"0020125-09.2021.5.04.0004"},{"resp":"GSM","grp":"Grupo B1","hr":"20:05","status":"Fatal","dt":"01/05/2026","proc":"1000995-96.2025.5.02.0435"},{"resp":"ARC","grp":"Grupo E2","hr":"20:05","status":"Fatal","dt":"04/05/2026","proc":"0011618-57.2025.5.15.0119"},{"resp":"TFR","grp":"Grupo C","hr":"08:05","status":"Fatal","dt":"04/05/2026","proc":"0010441-49.2026.5.03.0057"},{"resp":"RYL","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"04/05/2026","proc":"0010905-63.2026.5.15.0017"},{"resp":"RYL","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"04/05/2026","proc":"0010918-78.2026.5.15.0044"},{"resp":"JPE","grp":"Grupo B1","hr":"07:05","status":"Fatal","dt":"05/05/2026","proc":"1000388-33.2018.5.02.0434"},{"resp":"ALF","grp":"Grupo E1","hr":"08:05","status":"Fatal","dt":"05/05/2026","proc":"0012958-34.2025.5.15.0152"},{"resp":"ALF","grp":"Grupo E1","hr":"08:05","status":"Fatal","dt":"05/05/2026","proc":"0012958-34.2025.5.15.0152"},{"resp":"JJS","grp":"Grupo B1","hr":"07:05","status":"Fatal","dt":"05/05/2026","proc":"1000533-11.2026.5.02.0434"},{"resp":"ARC","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"06/05/2026","proc":"0025539-34.2025.5.24.0022"},{"resp":"ARC","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"06/05/2026","proc":"0010654-13.2021.5.03.0063"},{"resp":"JRT","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"07/05/2026","proc":"0010292-31.2026.5.03.0032"},{"resp":"TFR","grp":"Grupo C","hr":"07:05","status":"Fatal","dt":"07/05/2026","proc":"0012866-85.2025.5.15.0013"},{"resp":"ARC","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"07/05/2026","proc":"0000466-75.2026.5.17.0004"},{"resp":"BCF","grp":"Grupo B2","hr":"08:05","status":"Fatal","dt":"07/05/2026","proc":"0010943-71.2026.5.15.0083"},{"resp":"JRT","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"07/05/2026","proc":"0011336-72.2025.5.03.0080"},{"resp":"BCF","grp":"Grupo B2","hr":"08:05","status":"Fatal","dt":"07/05/2026","proc":"0011455-70.2026.5.15.0013"},{"resp":"GSM","grp":"Grupo B1","hr":"00:05","status":"Fatal","dt":"07/05/2026","proc":"1000709-96.2026.5.02.0431"},{"resp":"GSM","grp":"Grupo B1","hr":"00:05","status":"Fatal","dt":"07/05/2026","proc":"1000709-96.2026.5.02.0431"},{"resp":"JRM","grp":"Grupo E1","hr":"08:05","status":"Fatal","dt":"07/05/2026","proc":"0010411-45.2026.5.03.0176"},{"resp":"JJS","grp":"Grupo B1","hr":"22:05","status":"Vencido","dt":"08/05/2026","proc":"1000132-12.2026.5.02.0434"},{"resp":"JJS","grp":"Grupo B1","hr":"23:05","status":"Vencido","dt":"08/05/2026","proc":"1000825-02.2026.5.02.0432"},{"resp":"JJS","grp":"Grupo B1","hr":"20:05","status":"Vencido","dt":"08/05/2026","proc":"1001042-70.2025.5.02.0435"}];
+const BY_GRUPO={"Grupo A2":{"total":4,"fat":1,"ven":0,"d1":1,"d2":0,"fut":2,"fora":0,"ff":0},"Grupo A3":{"total":3,"fat":0,"ven":0,"d1":3,"d2":0,"fut":0,"fora":0,"ff":0},"Grupo B1":{"total":402,"fat":44,"ven":3,"d1":174,"d2":36,"fut":145,"fora":102,"ff":14},"Grupo B2":{"total":78,"fat":10,"ven":0,"d1":25,"d2":0,"fut":43,"fora":4,"ff":2},"Grupo B3":{"total":102,"fat":7,"ven":0,"d1":48,"d2":25,"fut":22,"fora":4,"ff":0},"Grupo C":{"total":120,"fat":32,"ven":0,"d1":38,"d2":10,"fut":40,"fora":12,"ff":5},"Grupo D1":{"total":42,"fat":4,"ven":0,"d1":17,"d2":10,"fut":11,"fora":5,"ff":0},"Grupo E1":{"total":276,"fat":19,"ven":0,"d1":110,"d2":27,"fut":120,"fora":21,"ff":6},"Grupo E2":{"total":422,"fat":117,"ven":1,"d1":159,"d2":24,"fut":121,"fora":72,"ff":12},"Outros":{"total":2,"fat":2,"ven":0,"d1":0,"d2":0,"fut":0,"fora":0,"ff":0}};
 
 function b(v,cls,dash=false){return v===0&&dash?`<td class="c"><span style="color:rgba(255,255,255,.18)">—</span></td>`:`<td class="c"><span class="vbad ${cls}">${v}</span></td>`;}
 function pct(a,b){return b>0?Math.round(a/b*100):0;}
@@ -1924,7 +1923,7 @@ renderGrupoResp();
 });
 
 // Tabela detalhe — fatal usa classe fat, vencido usa red
-FAT_FORA.forEach(r=>{
+FAT_FORA.filter(r => !['TNE','TCO'].includes(r.resp) && !/t[áa]bata|neves caramelli/i.test(respFullName(r.resp))).forEach(r=>{
   const h=parseInt(r.hr),isNight=h<9||h>=20,cls=isNight?'night':'late',scls=r.status==='Fatal'?'fat':'red';
   document.getElementById('tb-detail').innerHTML+=`<tr data-resp="${r.resp}" data-grp="${r.grp}" data-status="${r.status}">
     <td>${nome(r.resp)}</td>
@@ -1947,17 +1946,20 @@ HR_DIST.forEach(([hr,cnt])=>{
 });
 
 // Grupos fora horário
-['Grupo E2','Grupo B1','Grupo E1','Grupo C','Grupo B3','Grupo D1','Grupo A3','Grupo A2'].forEach(g=>{
-  const v=BY_GRUPO[g];if(!v||!v.fora)return;
-  const p=pct(v.fora,v.total),cls=p>=15?'fat':p>=10?'fat':'fat';
+['Grupo E2','Grupo B1','Grupo E1','Grupo C','Grupo B3','Grupo D1','Grupo B2','Outros','Grupo A3','Grupo A2'].forEach(g=>{
+  const v=BY_GRUPO[g];
+  if(!v || !v.fora) return;
+  const total = Number(v.total || 0);
+  const p = pct(v.fora, total);
+  const cls = p >= 15 ? 'fat' : p >= 10 ? 'org' : 'yel';
   document.getElementById('tb-grpfora').innerHTML+=`<tr data-grp="${g}">
     <td style="font-size:10px">${g}</td>
     <td class="c"><span class="vbad ${cls}">${v.fora}</span></td>
-    <td class="c" style="color:var(--tx2)">${v.total}</td>
+    <td class="c" style="color:var(--tx2)">${total}</td>
     <td class="c">${pb(p,'fat')}</td></tr>`;
 });
 
-const BY_GRUPO_FULL=[{"g":"Grupo A2","total":4,"fat":1,"ven":0,"d1":1,"d2":0,"fut":2,"fora":0,"ff":0},{"g":"Grupo A3","total":3,"fat":0,"ven":0,"d1":3,"d2":0,"fut":0,"fora":0,"ff":0},{"g":"Grupo B1","total":404,"fat":46,"ven":3,"d1":174,"d2":36,"fut":145,"fora":104,"ff":16},{"g":"Grupo B2","total":78,"fat":10,"ven":0,"d1":25,"d2":0,"fut":43,"fora":4,"ff":2},{"g":"Grupo B3","total":102,"fat":7,"ven":0,"d1":48,"d2":25,"fut":22,"fora":4,"ff":0},{"g":"Grupo C","total":118,"fat":31,"ven":0,"d1":38,"d2":10,"fut":39,"fora":11,"ff":4},{"g":"Grupo D1","total":42,"fat":4,"ven":0,"d1":17,"d2":10,"fut":11,"fora":5,"ff":0},{"g":"Grupo E1","total":267,"fat":17,"ven":0,"d1":105,"d2":25,"fut":120,"fora":18,"ff":5},{"g":"Grupo E2","total":422,"fat":117,"ven":1,"d1":159,"d2":24,"fut":121,"fora":72,"ff":12},{"g":"Outros","total":14,"fat":5,"ven":0,"d1":5,"d2":2,"fut":2,"fora":4,"ff":2}];
+const BY_GRUPO_FULL=[{"g":"Grupo A2","total":4,"fat":1,"ven":0,"d1":1,"d2":0,"fut":2,"fora":0,"ff":0},{"g":"Grupo A3","total":3,"fat":0,"ven":0,"d1":3,"d2":0,"fut":0,"fora":0,"ff":0},{"g":"Grupo B1","total":402,"fat":44,"ven":3,"d1":174,"d2":36,"fut":145,"fora":102,"ff":14},{"g":"Grupo B2","total":78,"fat":10,"ven":0,"d1":25,"d2":0,"fut":43,"fora":4,"ff":2},{"g":"Grupo B3","total":102,"fat":7,"ven":0,"d1":48,"d2":25,"fut":22,"fora":4,"ff":0},{"g":"Grupo C","total":118,"fat":31,"ven":0,"d1":38,"d2":10,"fut":39,"fora":11,"ff":4},{"g":"Grupo D1","total":42,"fat":4,"ven":0,"d1":17,"d2":10,"fut":11,"fora":5,"ff":0},{"g":"Grupo E1","total":267,"fat":17,"ven":0,"d1":105,"d2":25,"fut":120,"fora":18,"ff":5},{"g":"Grupo E2","total":422,"fat":117,"ven":1,"d1":159,"d2":24,"fut":121,"fora":72,"ff":12},{"g":"Outros","total":13,"fat":5,"ven":0,"d1":5,"d2":2,"fut":1,"fora":4,"ff":2}];
 
 // ZF = zero fatal E zero vencido — calculado diretamente do RESP para garantir precisão
 const ZF_BY_GROUP = {};
@@ -1968,14 +1970,14 @@ RESP.filter(r => r.fat===0 && r.ven===0 && r.tot>=2).forEach(r => {
 
 // Tabela por grupo — fatais/vencidos — com data-grp para filtro
 BY_GRUPO_FULL.sort((a,bv)=>bv.fat-a.fat).forEach(v=>{
-  const pf=Math.round(v.fat/v.tot*100);
-  const pv=Math.round(v.ven/v.tot*100);
+  const pf=Math.round(v.fat/v.total*100);
+  const pv=Math.round(v.ven/v.total*100);
   const pfcls=pf>=40?'fat':pf>=25?'fat':pf>=10?'fat':'grn';
   const pvcls=pv>=10?'red':pv>=5?'red':'muted';
   const hasFF=v.ff>0;
   document.getElementById('tb-grp-fat').innerHTML+=`<tr data-grp="${v.g}">
     <td style="font-weight:700">${v.g}</td>
-    <td class="c" style="color:var(--tx2)">${v.tot}</td>
+    <td class="c" style="color:var(--tx2)">${v.total}</td>
     <td class="c"><span class="vbad fat">${v.fat}</span></td>
     <td class="c"><span class="vbad ${pfcls}">${pf}%</span></td>
     ${v.ven>0?`<td class="c"><span class="vbad red">${v.ven}</span></td>`:'<td class="c"><span style="color:rgba(255,255,255,.2)">—</span></td>'}
@@ -2030,10 +2032,10 @@ function downloadExcel() {
 }
 
 // ══ AGENDAS — SEPARADAS ══
-const AG_EQUIPE=[{"equipe":"Sem Grupo","tot":1542,"realiz":1542,"atrasada":361,"fatal":2,"d1":565,"d2":256,"fut":358},{"equipe":"Grupo E2","tot":1252,"realiz":1252,"atrasada":315,"fatal":268,"d1":392,"d2":97,"fut":180},{"equipe":"Grupo B1","tot":1079,"realiz":1079,"atrasada":268,"fatal":183,"d1":414,"d2":89,"fut":125},{"equipe":"Grupo E1","tot":743,"realiz":743,"atrasada":105,"fatal":108,"d1":289,"d2":58,"fut":183},{"equipe":"Grupo C","tot":326,"realiz":326,"atrasada":60,"fatal":37,"d1":160,"d2":15,"fut":54},{"equipe":"Grupo D1","tot":243,"realiz":243,"atrasada":25,"fatal":0,"d1":127,"d2":57,"fut":34},{"equipe":"Grupo B3","tot":232,"realiz":232,"atrasada":38,"fatal":118,"d1":35,"d2":18,"fut":23},{"equipe":"Grupo B2","tot":222,"realiz":222,"atrasada":10,"fatal":45,"d1":99,"d2":11,"fut":57},{"equipe":"Outros","tot":119,"realiz":119,"atrasada":84,"fatal":2,"d1":30,"d2":2,"fut":1},{"equipe":"Grupo A2","tot":18,"realiz":18,"atrasada":1,"fatal":5,"d1":9,"d2":0,"fut":3},{"equipe":"Grupo A3","tot":7,"realiz":7,"atrasada":0,"fatal":2,"d1":5,"d2":0,"fut":0}];
-const AG_RESP=[{"n":"RYL","grp":"Grupo E2","tot":264,"realiz":264,"atrasada":47,"fatal":44,"d1":162,"d2":6,"fut":5},{"n":"JJS","grp":"Grupo B1","tot":255,"realiz":255,"atrasada":129,"fatal":96,"d1":21,"d2":7,"fut":2},{"n":"ARC","grp":"Grupo E2","tot":230,"realiz":230,"atrasada":82,"fatal":24,"d1":30,"d2":28,"fut":66},{"n":"RFE","grp":"Grupo B1","tot":230,"realiz":230,"atrasada":35,"fatal":4,"d1":128,"d2":25,"fut":38},{"n":"LCG","grp":"Sem Grupo","tot":214,"realiz":214,"atrasada":105,"fatal":0,"d1":44,"d2":39,"fut":26},{"n":"FFI","grp":"Sem Grupo","tot":209,"realiz":209,"atrasada":3,"fatal":0,"d1":40,"d2":34,"fut":132},{"n":"JRT","grp":"Grupo E2","tot":203,"realiz":203,"atrasada":133,"fatal":28,"d1":12,"d2":5,"fut":25},{"n":"EMM","grp":"Sem Grupo","tot":195,"realiz":195,"atrasada":20,"fatal":0,"d1":70,"d2":84,"fut":21},{"n":"RRU","grp":"Grupo E2","tot":194,"realiz":194,"atrasada":35,"fatal":56,"d1":61,"d2":14,"fut":28},{"n":"BSO","grp":"Grupo B1","tot":192,"realiz":192,"atrasada":41,"fatal":14,"d1":87,"d2":32,"fut":18},{"n":"JPL","grp":"Grupo E1","tot":190,"realiz":190,"atrasada":3,"fatal":3,"d1":97,"d2":12,"fut":75},{"n":"JPE","grp":"Grupo B1","tot":187,"realiz":187,"atrasada":18,"fatal":34,"d1":97,"d2":19,"fut":19},{"n":"VRO","grp":"Grupo E1","tot":186,"realiz":186,"atrasada":49,"fatal":35,"d1":51,"d2":7,"fut":44},{"n":"CAL","grp":"Grupo E2","tot":178,"realiz":178,"atrasada":16,"fatal":98,"d1":36,"d2":6,"fut":22},{"n":"GSM","grp":"Grupo B1","tot":174,"realiz":174,"atrasada":27,"fatal":34,"d1":71,"d2":5,"fut":37},{"n":"ALH","grp":"Sem Grupo","tot":154,"realiz":154,"atrasada":0,"fatal":0,"d1":50,"d2":30,"fut":74},{"n":"GSI","grp":"Sem Grupo","tot":153,"realiz":153,"atrasada":44,"fatal":0,"d1":92,"d2":9,"fut":8},{"n":"VCR","grp":"Grupo B2","tot":140,"realiz":140,"atrasada":0,"fatal":24,"d1":65,"d2":5,"fut":46},{"n":"MBF","grp":"Grupo E2","tot":133,"realiz":133,"atrasada":2,"fatal":16,"d1":70,"d2":31,"fut":14},{"n":"PSI","grp":"Grupo E1","tot":132,"realiz":132,"atrasada":11,"fatal":12,"d1":85,"d2":7,"fut":17},{"n":"LMI","grp":"Grupo B3","tot":131,"realiz":131,"atrasada":0,"fatal":90,"d1":24,"d2":12,"fut":5},{"n":"JQS","grp":"Grupo D1","tot":129,"realiz":129,"atrasada":5,"fatal":0,"d1":93,"d2":10,"fut":21},{"n":"BHF","grp":"Sem Grupo","tot":119,"realiz":119,"atrasada":63,"fatal":0,"d1":19,"d2":19,"fut":18},{"n":"BBO","grp":"Grupo D1","tot":114,"realiz":114,"atrasada":20,"fatal":0,"d1":34,"d2":47,"fut":13},{"n":"EVV","grp":"Outros","tot":113,"realiz":113,"atrasada":82,"fatal":0,"d1":30,"d2":0,"fut":1},{"n":"JRM","grp":"Grupo E1","tot":110,"realiz":110,"atrasada":26,"fatal":48,"d1":29,"d2":7,"fut":0},{"n":"TFR","grp":"Grupo C","tot":103,"realiz":103,"atrasada":48,"fatal":10,"d1":30,"d2":1,"fut":14},{"n":"ANB","grp":"Grupo B3","tot":101,"realiz":101,"atrasada":38,"fatal":28,"d1":11,"d2":6,"fut":18},{"n":"ALF","grp":"Grupo E1","tot":98,"realiz":98,"atrasada":1,"fatal":7,"d1":25,"d2":25,"fut":40},{"n":"RCF","grp":"Grupo C","tot":98,"realiz":98,"atrasada":2,"fatal":5,"d1":58,"d2":13,"fut":20},{"n":"GIF","grp":"Sem Grupo","tot":91,"realiz":91,"atrasada":10,"fatal":0,"d1":66,"d2":3,"fut":12},{"n":"BCF","grp":"Grupo B2","tot":82,"realiz":82,"atrasada":10,"fatal":21,"d1":34,"d2":6,"fut":11},{"n":"BFM","grp":"Sem Grupo","tot":67,"realiz":67,"atrasada":0,"fatal":0,"d1":28,"d2":24,"fut":15},{"n":"VSI","grp":"Grupo C","tot":63,"realiz":63,"atrasada":8,"fatal":1,"d1":47,"d2":0,"fut":7},{"n":"ECO","grp":"Grupo C","tot":62,"realiz":62,"atrasada":2,"fatal":21,"d1":25,"d2":1,"fut":13},{"n":"AML","grp":"Sem Grupo","tot":55,"realiz":55,"atrasada":20,"fatal":0,"d1":20,"d2":7,"fut":8},{"n":"KTO","grp":"Sem Grupo","tot":53,"realiz":53,"atrasada":0,"fatal":0,"d1":14,"d2":0,"fut":39},{"n":"DJE","grp":"Sem Grupo","tot":52,"realiz":52,"atrasada":15,"fatal":0,"d1":30,"d2":4,"fut":3},{"n":"AAP","grp":"Grupo E2","tot":50,"realiz":50,"atrasada":0,"fatal":2,"d1":21,"d2":7,"fut":20},{"n":"IGA","grp":"Sem Grupo","tot":45,"realiz":45,"atrasada":0,"fatal":0,"d1":44,"d2":0,"fut":1},{"n":"NRG","grp":"Grupo B1","tot":41,"realiz":41,"atrasada":18,"fatal":1,"d1":10,"d2":1,"fut":11},{"n":"BSS","grp":"Sem Grupo","tot":40,"realiz":40,"atrasada":35,"fatal":0,"d1":3,"d2":1,"fut":1},{"n":"DPR","grp":"Grupo E1","tot":27,"realiz":27,"atrasada":15,"fatal":3,"d1":2,"d2":0,"fut":7},{"n":"RWD","grp":"Sem Grupo","tot":22,"realiz":22,"atrasada":2,"fatal":0,"d1":20,"d2":0,"fut":0},{"n":"NBG","grp":"Grupo A2","tot":18,"realiz":18,"atrasada":1,"fatal":5,"d1":9,"d2":0,"fut":3},{"n":"CDS","grp":"Sem Grupo","tot":13,"realiz":13,"atrasada":1,"fatal":0,"d1":12,"d2":0,"fut":0},{"n":"GMG","grp":"Sem Grupo","tot":13,"realiz":13,"atrasada":13,"fatal":0,"d1":0,"d2":0,"fut":0},{"n":"AAO","grp":"Sem Grupo","tot":10,"realiz":10,"atrasada":1,"fatal":2,"d1":5,"d2":2,"fut":0},{"n":"VAR","grp":"Sem Grupo","tot":10,"realiz":10,"atrasada":10,"fatal":0,"d1":0,"d2":0,"fut":0},{"n":"SOF","grp":"Grupo A3","tot":7,"realiz":7,"atrasada":0,"fatal":2,"d1":5,"d2":0,"fut":0},{"n":"LPJ","grp":"Sem Grupo","tot":6,"realiz":6,"atrasada":5,"fatal":0,"d1":1,"d2":0,"fut":0},{"n":"TNE","grp":"Sem Grupo","tot":5,"realiz":5,"atrasada":2,"fatal":0,"d1":3,"d2":0,"fut":0},{"n":"KBM","grp":"Outros","tot":4,"realiz":4,"atrasada":0,"fatal":2,"d1":0,"d2":2,"fut":0},{"n":"CAR","grp":"Sem Grupo","tot":3,"realiz":3,"atrasada":1,"fatal":0,"d1":2,"d2":0,"fut":0},{"n":"EYN","grp":"Sem Grupo","tot":3,"realiz":3,"atrasada":2,"fatal":0,"d1":1,"d2":0,"fut":0},{"n":"MCD","grp":"Sem Grupo","tot":3,"realiz":3,"atrasada":3,"fatal":0,"d1":0,"d2":0,"fut":0},{"n":"ARE","grp":"Outros","tot":2,"realiz":2,"atrasada":2,"fatal":0,"d1":0,"d2":0,"fut":0},{"n":"NBB","grp":"Sem Grupo","tot":2,"realiz":2,"atrasada":2,"fatal":0,"d1":0,"d2":0,"fut":0},{"n":"WSF","grp":"Sem Grupo","tot":2,"realiz":2,"atrasada":2,"fatal":0,"d1":0,"d2":0,"fut":0},{"n":"CGV","grp":"Sem Grupo","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":1,"d2":0,"fut":0},{"n":"JLM","grp":"Sem Grupo","tot":1,"realiz":1,"atrasada":1,"fatal":0,"d1":0,"d2":0,"fut":0},{"n":"PBS","grp":"Sem Grupo","tot":1,"realiz":1,"atrasada":1,"fatal":0,"d1":0,"d2":0,"fut":0}];
-const AGEQ_EQUIPE=[{"equipe":"Sem Grupo","tot":201,"realiz":201,"atrasada":59,"fatal":0,"d1":98,"d2":20,"fut":24},{"equipe":"Grupo B1","tot":87,"realiz":87,"atrasada":20,"fatal":16,"d1":30,"d2":2,"fut":19},{"equipe":"Grupo E2","tot":67,"realiz":67,"atrasada":26,"fatal":21,"d1":11,"d2":3,"fut":6},{"equipe":"Grupo E1","tot":47,"realiz":47,"atrasada":27,"fatal":2,"d1":9,"d2":2,"fut":7},{"equipe":"Outros","tot":32,"realiz":32,"atrasada":32,"fatal":0,"d1":0,"d2":0,"fut":0},{"equipe":"Grupo C","tot":19,"realiz":19,"atrasada":3,"fatal":9,"d1":6,"d2":0,"fut":1},{"equipe":"Grupo D1","tot":14,"realiz":14,"atrasada":2,"fatal":1,"d1":9,"d2":0,"fut":2},{"equipe":"Grupo A3","tot":5,"realiz":5,"atrasada":2,"fatal":1,"d1":1,"d2":1,"fut":0},{"equipe":"Grupo A2","tot":4,"realiz":4,"atrasada":0,"fatal":1,"d1":3,"d2":0,"fut":0},{"equipe":"Grupo B2","tot":2,"realiz":2,"atrasada":1,"fatal":0,"d1":0,"d2":0,"fut":1},{"equipe":"Grupo B3","tot":2,"realiz":2,"atrasada":0,"fatal":1,"d1":0,"d2":0,"fut":1}];
-const AGEQ_RESP=[{"n":"GMG","grp":"Sem Grupo","tot":62,"realiz":62,"atrasada":5,"fatal":0,"d1":42,"d2":6,"fut":9},{"n":"RSN","grp":"Sem Grupo","tot":35,"realiz":35,"atrasada":35,"fatal":0,"d1":0,"d2":0,"fut":0},{"n":"EVV","grp":"Outros","tot":32,"realiz":32,"atrasada":32,"fatal":0,"d1":0,"d2":0,"fut":0},{"n":"EMM","grp":"Sem Grupo","tot":25,"realiz":25,"atrasada":2,"fatal":0,"d1":12,"d2":10,"fut":1},{"n":"RRU","grp":"Grupo E2","tot":25,"realiz":25,"atrasada":9,"fatal":12,"d1":2,"d2":1,"fut":1},{"n":"VRO","grp":"Grupo E1","tot":25,"realiz":25,"atrasada":24,"fatal":0,"d1":1,"d2":0,"fut":0},{"n":"RFE","grp":"Grupo B1","tot":24,"realiz":24,"atrasada":0,"fatal":7,"d1":14,"d2":0,"fut":3},{"n":"NRG","grp":"Grupo B1","tot":22,"realiz":22,"atrasada":4,"fatal":2,"d1":1,"d2":0,"fut":15},{"n":"JPE","grp":"Grupo B1","tot":19,"realiz":19,"atrasada":6,"fatal":6,"d1":6,"d2":0,"fut":1},{"n":"RYL","grp":"Grupo E2","tot":17,"realiz":17,"atrasada":10,"fatal":5,"d1":1,"d2":1,"fut":0},{"n":"CGV","grp":"Sem Grupo","tot":14,"realiz":14,"atrasada":0,"fatal":0,"d1":13,"d2":0,"fut":1},{"n":"ALH","grp":"Sem Grupo","tot":13,"realiz":13,"atrasada":0,"fatal":0,"d1":5,"d2":0,"fut":8},{"n":"JQS","grp":"Grupo D1","tot":12,"realiz":12,"atrasada":1,"fatal":0,"d1":9,"d2":0,"fut":2},{"n":"BSO","grp":"Grupo B1","tot":11,"realiz":11,"atrasada":1,"fatal":0,"d1":8,"d2":2,"fut":0},{"n":"JJS","grp":"Grupo B1","tot":11,"realiz":11,"atrasada":9,"fatal":1,"d1":1,"d2":0,"fut":0},{"n":"ALF","grp":"Grupo E1","tot":9,"realiz":9,"atrasada":0,"fatal":1,"d1":3,"d2":1,"fut":4},{"n":"VSI","grp":"Grupo C","tot":9,"realiz":9,"atrasada":2,"fatal":3,"d1":4,"d2":0,"fut":0},{"n":"AML","grp":"Sem Grupo","tot":8,"realiz":8,"atrasada":1,"fatal":0,"d1":4,"d2":0,"fut":3},{"n":"JLM","grp":"Sem Grupo","tot":8,"realiz":8,"atrasada":5,"fatal":0,"d1":2,"d2":0,"fut":1},{"n":"MBF","grp":"Grupo E2","tot":8,"realiz":8,"atrasada":0,"fatal":0,"d1":6,"d2":1,"fut":1},{"n":"RWD","grp":"Sem Grupo","tot":8,"realiz":8,"atrasada":0,"fatal":0,"d1":6,"d2":2,"fut":0},{"n":"BSS","grp":"Sem Grupo","tot":7,"realiz":7,"atrasada":5,"fatal":0,"d1":1,"d2":1,"fut":0},{"n":"CAL","grp":"Grupo E2","tot":7,"realiz":7,"atrasada":1,"fatal":3,"d1":1,"d2":0,"fut":2},{"n":"JPL","grp":"Grupo E1","tot":7,"realiz":7,"atrasada":1,"fatal":0,"d1":4,"d2":0,"fut":2},{"n":"GIF","grp":"Sem Grupo","tot":6,"realiz":6,"atrasada":0,"fatal":0,"d1":5,"d2":1,"fut":0},{"n":"JRM","grp":"Grupo E1","tot":5,"realiz":5,"atrasada":2,"fatal":1,"d1":0,"d2":1,"fut":1},{"n":"JRT","grp":"Grupo E2","tot":5,"realiz":5,"atrasada":4,"fatal":1,"d1":0,"d2":0,"fut":0},{"n":"SOF","grp":"Grupo A3","tot":5,"realiz":5,"atrasada":2,"fatal":1,"d1":1,"d2":1,"fut":0},{"n":"TNE","grp":"Sem Grupo","tot":5,"realiz":5,"atrasada":0,"fatal":0,"d1":5,"d2":0,"fut":0},{"n":"ARC","grp":"Grupo E2","tot":4,"realiz":4,"atrasada":2,"fatal":0,"d1":0,"d2":0,"fut":2},{"n":"IGA","grp":"Sem Grupo","tot":4,"realiz":4,"atrasada":1,"fatal":0,"d1":2,"d2":0,"fut":1},{"n":"NBG","grp":"Grupo A2","tot":4,"realiz":4,"atrasada":0,"fatal":1,"d1":3,"d2":0,"fut":0},{"n":"RCF","grp":"Grupo C","tot":4,"realiz":4,"atrasada":0,"fatal":2,"d1":1,"d2":0,"fut":1},{"n":"TFR","grp":"Grupo C","tot":4,"realiz":4,"atrasada":1,"fatal":3,"d1":0,"d2":0,"fut":0},{"n":"BBO","grp":"Grupo D1","tot":2,"realiz":2,"atrasada":1,"fatal":1,"d1":0,"d2":0,"fut":0},{"n":"BCF","grp":"Grupo B2","tot":2,"realiz":2,"atrasada":1,"fatal":0,"d1":0,"d2":0,"fut":1},{"n":"ECO","grp":"Grupo C","tot":2,"realiz":2,"atrasada":0,"fatal":1,"d1":1,"d2":0,"fut":0},{"n":"LMI","grp":"Grupo B3","tot":2,"realiz":2,"atrasada":0,"fatal":1,"d1":0,"d2":0,"fut":1},{"n":"AAP","grp":"Grupo E2","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":1,"d2":0,"fut":0},{"n":"BHF","grp":"Sem Grupo","tot":1,"realiz":1,"atrasada":1,"fatal":0,"d1":0,"d2":0,"fut":0},{"n":"CAR","grp":"Sem Grupo","tot":1,"realiz":1,"atrasada":1,"fatal":0,"d1":0,"d2":0,"fut":0},{"n":"DJE","grp":"Sem Grupo","tot":1,"realiz":1,"atrasada":1,"fatal":0,"d1":0,"d2":0,"fut":0},{"n":"DPR","grp":"Grupo E1","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":1,"d2":0,"fut":0},{"n":"FFI","grp":"Sem Grupo","tot":1,"realiz":1,"atrasada":1,"fatal":0,"d1":0,"d2":0,"fut":0},{"n":"GSI","grp":"Sem Grupo","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":1,"d2":0,"fut":0},{"n":"LLL","grp":"Sem Grupo","tot":1,"realiz":1,"atrasada":1,"fatal":0,"d1":0,"d2":0,"fut":0}];
+const AG_EQUIPE=[{"equipe":"Grupo E2","tot":1252,"realiz":1252,"atrasada":315,"fatal":268,"d1":392,"d2":97,"fut":180},{"equipe":"Grupo B1","tot":1068,"realiz":1068,"atrasada":260,"fatal":180,"d1":414,"d2":89,"fut":125},{"equipe":"Grupo E1","tot":743,"realiz":743,"atrasada":105,"fatal":108,"d1":289,"d2":58,"fut":183},{"equipe":"Grupo C","tot":326,"realiz":326,"atrasada":60,"fatal":37,"d1":160,"d2":15,"fut":54},{"equipe":"Grupo D1","tot":243,"realiz":243,"atrasada":25,"fatal":0,"d1":127,"d2":57,"fut":34},{"equipe":"Grupo B3","tot":232,"realiz":232,"atrasada":38,"fatal":118,"d1":35,"d2":18,"fut":23},{"equipe":"Grupo B2","tot":222,"realiz":222,"atrasada":10,"fatal":45,"d1":99,"d2":11,"fut":57},{"equipe":"Grupo A2","tot":18,"realiz":18,"atrasada":1,"fatal":5,"d1":9,"d2":0,"fut":3},{"equipe":"Grupo A3","tot":7,"realiz":7,"atrasada":0,"fatal":2,"d1":5,"d2":0,"fut":0},{"equipe":"Outros","tot":6,"realiz":6,"atrasada":2,"fatal":2,"d1":0,"d2":2,"fut":0},{"equipe":"Sem Grupo","tot":5,"realiz":5,"atrasada":5,"fatal":0,"d1":0,"d2":0,"fut":0}];
+const AG_RESP=[{"n":"RYL","grp":"Grupo E2","tot":264,"realiz":264,"atrasada":47,"fatal":44,"d1":162,"d2":6,"fut":5},{"n":"JJS","grp":"Grupo B1","tot":244,"realiz":244,"atrasada":121,"fatal":93,"d1":21,"d2":7,"fut":2},{"n":"ARC","grp":"Grupo E2","tot":230,"realiz":230,"atrasada":82,"fatal":24,"d1":30,"d2":28,"fut":66},{"n":"RFE","grp":"Grupo B1","tot":230,"realiz":230,"atrasada":35,"fatal":4,"d1":128,"d2":25,"fut":38},{"n":"JRT","grp":"Grupo E2","tot":203,"realiz":203,"atrasada":133,"fatal":28,"d1":12,"d2":5,"fut":25},{"n":"RRU","grp":"Grupo E2","tot":194,"realiz":194,"atrasada":35,"fatal":56,"d1":61,"d2":14,"fut":28},{"n":"BSO","grp":"Grupo B1","tot":192,"realiz":192,"atrasada":41,"fatal":14,"d1":87,"d2":32,"fut":18},{"n":"JPL","grp":"Grupo E1","tot":190,"realiz":190,"atrasada":3,"fatal":3,"d1":97,"d2":12,"fut":75},{"n":"JPE","grp":"Grupo B1","tot":187,"realiz":187,"atrasada":18,"fatal":34,"d1":97,"d2":19,"fut":19},{"n":"VRO","grp":"Grupo E1","tot":186,"realiz":186,"atrasada":49,"fatal":35,"d1":51,"d2":7,"fut":44},{"n":"CAL","grp":"Grupo E2","tot":178,"realiz":178,"atrasada":16,"fatal":98,"d1":36,"d2":6,"fut":22},{"n":"GSM","grp":"Grupo B1","tot":174,"realiz":174,"atrasada":27,"fatal":34,"d1":71,"d2":5,"fut":37},{"n":"VCR","grp":"Grupo B2","tot":140,"realiz":140,"atrasada":0,"fatal":24,"d1":65,"d2":5,"fut":46},{"n":"MBF","grp":"Grupo E2","tot":133,"realiz":133,"atrasada":2,"fatal":16,"d1":70,"d2":31,"fut":14},{"n":"PSI","grp":"Grupo E1","tot":132,"realiz":132,"atrasada":11,"fatal":12,"d1":85,"d2":7,"fut":17},{"n":"LMI","grp":"Grupo B3","tot":131,"realiz":131,"atrasada":0,"fatal":90,"d1":24,"d2":12,"fut":5},{"n":"JQS","grp":"Grupo D1","tot":129,"realiz":129,"atrasada":5,"fatal":0,"d1":93,"d2":10,"fut":21},{"n":"BBO","grp":"Grupo D1","tot":114,"realiz":114,"atrasada":20,"fatal":0,"d1":34,"d2":47,"fut":13},{"n":"JRM","grp":"Grupo E1","tot":110,"realiz":110,"atrasada":26,"fatal":48,"d1":29,"d2":7,"fut":0},{"n":"TFR","grp":"Grupo C","tot":103,"realiz":103,"atrasada":48,"fatal":10,"d1":30,"d2":1,"fut":14},{"n":"ANB","grp":"Grupo B3","tot":101,"realiz":101,"atrasada":38,"fatal":28,"d1":11,"d2":6,"fut":18},{"n":"ALF","grp":"Grupo E1","tot":98,"realiz":98,"atrasada":1,"fatal":7,"d1":25,"d2":25,"fut":40},{"n":"RCF","grp":"Grupo C","tot":98,"realiz":98,"atrasada":2,"fatal":5,"d1":58,"d2":13,"fut":20},{"n":"BCF","grp":"Grupo B2","tot":82,"realiz":82,"atrasada":10,"fatal":21,"d1":34,"d2":6,"fut":11},{"n":"VSI","grp":"Grupo C","tot":63,"realiz":63,"atrasada":8,"fatal":1,"d1":47,"d2":0,"fut":7},{"n":"ECO","grp":"Grupo C","tot":62,"realiz":62,"atrasada":2,"fatal":21,"d1":25,"d2":1,"fut":13},{"n":"AAP","grp":"Grupo E2","tot":50,"realiz":50,"atrasada":0,"fatal":2,"d1":21,"d2":7,"fut":20},{"n":"NRG","grp":"Grupo B1","tot":41,"realiz":41,"atrasada":18,"fatal":1,"d1":10,"d2":1,"fut":11},{"n":"DPR","grp":"Grupo E1","tot":27,"realiz":27,"atrasada":15,"fatal":3,"d1":2,"d2":0,"fut":7},{"n":"NBG","grp":"Grupo A2","tot":18,"realiz":18,"atrasada":1,"fatal":5,"d1":9,"d2":0,"fut":3},{"n":"SOF","grp":"Grupo A3","tot":7,"realiz":7,"atrasada":0,"fatal":2,"d1":5,"d2":0,"fut":0},{"n":"KBM","grp":"Outros","tot":4,"realiz":4,"atrasada":0,"fatal":2,"d1":0,"d2":2,"fut":0},{"n":"NBB","grp":"Sem Grupo","tot":2,"realiz":2,"atrasada":2,"fatal":0,"d1":0,"d2":0,"fut":0},{"n":"WSF","grp":"Sem Grupo","tot":2,"realiz":2,"atrasada":2,"fatal":0,"d1":0,"d2":0,"fut":0},{"n":"PBS","grp":"Sem Grupo","tot":1,"realiz":1,"atrasada":1,"fatal":0,"d1":0,"d2":0,"fut":0}];
+const AGEQ_EQUIPE=[{"equipe":"Grupo B1","tot":86,"realiz":86,"atrasada":19,"fatal":16,"d1":30,"d2":2,"fut":19},{"equipe":"Grupo E2","tot":67,"realiz":67,"atrasada":26,"fatal":21,"d1":11,"d2":3,"fut":6},{"equipe":"Grupo E1","tot":47,"realiz":47,"atrasada":27,"fatal":2,"d1":9,"d2":2,"fut":7},{"equipe":"Grupo C","tot":19,"realiz":19,"atrasada":3,"fatal":9,"d1":6,"d2":0,"fut":1},{"equipe":"Grupo D1","tot":14,"realiz":14,"atrasada":2,"fatal":1,"d1":9,"d2":0,"fut":2},{"equipe":"Grupo A3","tot":5,"realiz":5,"atrasada":2,"fatal":1,"d1":1,"d2":1,"fut":0},{"equipe":"Grupo A2","tot":4,"realiz":4,"atrasada":0,"fatal":1,"d1":3,"d2":0,"fut":0},{"equipe":"Grupo B2","tot":2,"realiz":2,"atrasada":1,"fatal":0,"d1":0,"d2":0,"fut":1},{"equipe":"Grupo B3","tot":2,"realiz":2,"atrasada":0,"fatal":1,"d1":0,"d2":0,"fut":1}];
+const AGEQ_RESP=[{"n":"RRU","grp":"Grupo E2","tot":25,"realiz":25,"atrasada":9,"fatal":12,"d1":2,"d2":1,"fut":1},{"n":"VRO","grp":"Grupo E1","tot":25,"realiz":25,"atrasada":24,"fatal":0,"d1":1,"d2":0,"fut":0},{"n":"RFE","grp":"Grupo B1","tot":24,"realiz":24,"atrasada":0,"fatal":7,"d1":14,"d2":0,"fut":3},{"n":"NRG","grp":"Grupo B1","tot":22,"realiz":22,"atrasada":4,"fatal":2,"d1":1,"d2":0,"fut":15},{"n":"JPE","grp":"Grupo B1","tot":19,"realiz":19,"atrasada":6,"fatal":6,"d1":6,"d2":0,"fut":1},{"n":"RYL","grp":"Grupo E2","tot":17,"realiz":17,"atrasada":10,"fatal":5,"d1":1,"d2":1,"fut":0},{"n":"JQS","grp":"Grupo D1","tot":12,"realiz":12,"atrasada":1,"fatal":0,"d1":9,"d2":0,"fut":2},{"n":"BSO","grp":"Grupo B1","tot":11,"realiz":11,"atrasada":1,"fatal":0,"d1":8,"d2":2,"fut":0},{"n":"JJS","grp":"Grupo B1","tot":10,"realiz":10,"atrasada":8,"fatal":1,"d1":1,"d2":0,"fut":0},{"n":"ALF","grp":"Grupo E1","tot":9,"realiz":9,"atrasada":0,"fatal":1,"d1":3,"d2":1,"fut":4},{"n":"VSI","grp":"Grupo C","tot":9,"realiz":9,"atrasada":2,"fatal":3,"d1":4,"d2":0,"fut":0},{"n":"MBF","grp":"Grupo E2","tot":8,"realiz":8,"atrasada":0,"fatal":0,"d1":6,"d2":1,"fut":1},{"n":"CAL","grp":"Grupo E2","tot":7,"realiz":7,"atrasada":1,"fatal":3,"d1":1,"d2":0,"fut":2},{"n":"JPL","grp":"Grupo E1","tot":7,"realiz":7,"atrasada":1,"fatal":0,"d1":4,"d2":0,"fut":2},{"n":"JRM","grp":"Grupo E1","tot":5,"realiz":5,"atrasada":2,"fatal":1,"d1":0,"d2":1,"fut":1},{"n":"JRT","grp":"Grupo E2","tot":5,"realiz":5,"atrasada":4,"fatal":1,"d1":0,"d2":0,"fut":0},{"n":"SOF","grp":"Grupo A3","tot":5,"realiz":5,"atrasada":2,"fatal":1,"d1":1,"d2":1,"fut":0},{"n":"ARC","grp":"Grupo E2","tot":4,"realiz":4,"atrasada":2,"fatal":0,"d1":0,"d2":0,"fut":2},{"n":"NBG","grp":"Grupo A2","tot":4,"realiz":4,"atrasada":0,"fatal":1,"d1":3,"d2":0,"fut":0},{"n":"RCF","grp":"Grupo C","tot":4,"realiz":4,"atrasada":0,"fatal":2,"d1":1,"d2":0,"fut":1},{"n":"TFR","grp":"Grupo C","tot":4,"realiz":4,"atrasada":1,"fatal":3,"d1":0,"d2":0,"fut":0},{"n":"BBO","grp":"Grupo D1","tot":2,"realiz":2,"atrasada":1,"fatal":1,"d1":0,"d2":0,"fut":0},{"n":"BCF","grp":"Grupo B2","tot":2,"realiz":2,"atrasada":1,"fatal":0,"d1":0,"d2":0,"fut":1},{"n":"ECO","grp":"Grupo C","tot":2,"realiz":2,"atrasada":0,"fatal":1,"d1":1,"d2":0,"fut":0},{"n":"LMI","grp":"Grupo B3","tot":2,"realiz":2,"atrasada":0,"fatal":1,"d1":0,"d2":0,"fut":1},{"n":"AAP","grp":"Grupo E2","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":1,"d2":0,"fut":0},{"n":"DPR","grp":"Grupo E1","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":1,"d2":0,"fut":0}];
 const AG_COLORS={"Grupo A2":"#00A9E0","Grupo A3":"#007EAA","Grupo B1":"#003B5C","Grupo B2":"#00557B","Grupo B3":"#00A9E0","Grupo C":"#006D96","Grupo D1":"#004D73","Grupo E1":"#008FC2","Grupo E2":"#003B5C","CONTRATAÇÕES ESPECIAIS":"#5F7E92","Outros":"#7E98AA"};
 function shortGrupo(g){ return String(g||'').replace(/^Grupo\s+/,'').replace(/^Equipe\s+/,''); }
 
@@ -2052,7 +2054,7 @@ function agendaTotals(equipes){
 }
 
 
-const ACUMULADO_DATA={"semana":{"2026-S19":{"Agenda":5783,"Agenda Equipe":480,"Prazo":1454,"Total":7717,"Vencido":1443,"Fatal":1060,"D-1":2867,"D-2":763,"Futuro":1584}},"mes":{"2026-05":{"Agenda":5783,"Agenda Equipe":480,"Prazo":1454,"Total":7717,"Vencido":1443,"Fatal":1060,"D-1":2867,"D-2":763,"Futuro":1584}}};
+const ACUMULADO_DATA={"semana":{"2026-S19":{"Agenda":4122,"Agenda Equipe":246,"Prazo":1451,"Total":5819,"Vencido":905,"Fatal":1053,"D-1":2174,"D-2":487,"Futuro":1200}},"mes":{"2026-05":{"Agenda":4122,"Agenda Equipe":246,"Prazo":1451,"Total":5819,"Vencido":905,"Fatal":1053,"D-1":2174,"D-2":487,"Futuro":1200}}};
 function openAcumulado(tipo, key){
   const d=(ACUMULADO_DATA[tipo]||{})[key]; if(!d) return;
   const titulo=tipo==='semana'?'📊 Acumulado semanal':'📅 Consolidado mensal';
@@ -2183,8 +2185,8 @@ function renderHistoricoResp(){
   // Consolida a mesma pessoa em todos os grupos para evitar duplicidade.
   const mapa = {};
   (RESP||[]).forEach(r=>{
-    const key = r.n || 'Sem responsável';
-    if(!mapa[key]) mapa[key] = {n:key, grupos:new Set(), total:0, ven:0, fatal:0, d1:0, d2:0, fora:0, ff:0};
+    const key = respFullName(r.n || 'Sem responsável');
+    if(!mapa[key]) mapa[key] = {n:key, display:key, grupos:new Set(), total:0, ven:0, fatal:0, d1:0, d2:0, fora:0, ff:0};
     mapa[key].grupos.add(r.grp||'Outros');
     mapa[key].total += r.tot || 0;
     mapa[key].ven += r.ven || 0;
@@ -2214,8 +2216,8 @@ function renderHistoricoResp(){
     <div class="hist-card"><div class="hlabel">Positivos</div><div class="hvalue" style="color:#003B5C">${good}</div></div>`;}
   const tb=document.getElementById('tb-hist-resp');
   if(!tb) return;
-  tb.innerHTML=rows.map(r=>`<tr onclick="openDataModal('📈 Evolução Semanal — ${nome(r.n).replace(/<[^>]+>/g,' ')}', '02/05 a 10/05 · somente prazos processuais · análise individual', '<div class=\'data-grid\'><div class=\'data-card\'><span class=\'lbl\'>Total prazos</span><span class=\'val\'>${fmtNum(r.total)}</span></div><div class=\'data-card\'><span class=\'lbl\'>Fatal</span><span class=\'val\' style=\'color:#C0392B\'>${fmtNum(r.fatal)}</span></div><div class=\'data-card\'><span class=\'lbl\'>Fora do horário</span><span class=\'val\' style=\'color:#E67E22\'>${fmtNum(r.fora)}</span></div><div class=\'data-card\'><span class=\'lbl\'>% risco</span><span class=\'val\'>${r.pct}%</span></div></div><div class=\'data-section-title\'>Observação</div><p style=\'font-size:12px;line-height:1.45\'>Indicador consolidado por profissional. Quando a pessoa atuou em mais de um grupo, os números foram somados para evitar duplicidade na análise individual.</p>')" title="Clique para detalhar evolução de prazos">
-      <td>${nome(r.n)}</td><td><b>02/05 a 10/05</b></td>
+  tb.innerHTML=rows.map(r=>`<tr onclick="openDataModal('📈 Evolução Semanal — ${r.display || r.n}', '02/05 a 10/05 · somente prazos processuais · análise individual', '<div class=\'data-grid\'><div class=\'data-card\'><span class=\'lbl\'>Total prazos</span><span class=\'val\'>${fmtNum(r.total)}</span></div><div class=\'data-card\'><span class=\'lbl\'>Fatal</span><span class=\'val\' style=\'color:#C0392B\'>${fmtNum(r.fatal)}</span></div><div class=\'data-card\'><span class=\'lbl\'>Fora do horário</span><span class=\'val\' style=\'color:#E67E22\'>${fmtNum(r.fora)}</span></div><div class=\'data-card\'><span class=\'lbl\'>% risco</span><span class=\'val\'>${r.pct}%</span></div></div><div class=\'data-section-title\'>Observação</div><p style=\'font-size:12px;line-height:1.45\'>Indicador consolidado por profissional. Quando a pessoa atuou em mais de um grupo, os números foram somados para evitar duplicidade na análise individual.</p>')" title="Clique para detalhar evolução de prazos">
+      <td><span class="nome-full">${r.display || r.n}</span></td><td><b>02/05 a 10/05</b></td>
       <td class="c"><span class="vbad muted">${fmtNum(r.total)}</span></td>
       <td class="c">${r.ven>0?`<span class="vbad red">${fmtNum(r.ven)}</span>`:'<span class="vbad muted">—</span>'}</td>
       <td class="c">${r.fatal>0?`<span class="vbad fat">${fmtNum(r.fatal)}</span>`:'<span class="vbad muted">—</span>'}</td>
@@ -2357,9 +2359,6 @@ updateFilterButtons();
 /* Limpeza final de siglas pendentes e conferência de cliques */
 (function(){
   const MAPA_SIGLAS_PENDENTES = {
-    "ARE": "Tábata Neves Caramelli",
-    "TCO": "Tábata Neves Caramelli",
-    "BHF": "Tábata Neves Caramelli"
   };
 
   function limparSiglasPendentes(){
