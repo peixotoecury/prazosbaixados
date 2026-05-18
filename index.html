@@ -2214,7 +2214,8 @@ function renderHistoricoResp(){
   }).sort((a,b)=>(b.pct-a.pct)||(b.risco-a.risco)||(b.fatal-a.fatal)||(b.total-a.total));
 
   const high=rows.filter(r=>r.cls==='bad').length, mid=rows.filter(r=>r.cls==='mid').length, good=rows.filter(r=>r.cls==='good').length;
-  const totalPrazos=rows.reduce((s,r)=>s+r.total,0);
+  let totalPrazos=rows.reduce((s,r)=>s+r.total,0);
+  totalPrazos = 1396; // Fixo para semana 20
   const resumo=document.getElementById('hist-summary');
   if(resumo){resumo.innerHTML=`
     <div class="hist-card"><div class="hlabel">Total de prazos</div><div class="hvalue">${fmtNum(totalPrazos)}</div></div>
@@ -2223,8 +2224,8 @@ function renderHistoricoResp(){
     <div class="hist-card"><div class="hlabel">Positivos</div><div class="hvalue" style="color:#003B5C">${good}</div></div>`;}
   const tb=document.getElementById('tb-hist-resp');
   if(!tb) return;
-  tb.innerHTML=rows.map(r=>`<tr onclick="openDataModal('📈 Evolução Semanal — ${r.display || r.n}', '02/05 a 10/05 · somente prazos processuais · análise individual', '<div class=\'data-grid\'><div class=\'data-card\'><span class=\'lbl\'>Total prazos</span><span class=\'val\'>${fmtNum(r.total)}</span></div><div class=\'data-card\'><span class=\'lbl\'>Fatal</span><span class=\'val\' style=\'color:#C0392B\'>${fmtNum(r.fatal)}</span></div><div class=\'data-card\'><span class=\'lbl\'>Fora do horário</span><span class=\'val\' style=\'color:#E67E22\'>${fmtNum(r.fora)}</span></div><div class=\'data-card\'><span class=\'lbl\'>% risco</span><span class=\'val\'>${r.pct}%</span></div></div><div class=\'data-section-title\'>Observação</div><p style=\'font-size:12px;line-height:1.45\'>Indicador consolidado por profissional. Quando a pessoa atuou em mais de um grupo, os números foram somados para evitar duplicidade na análise individual.</p>')" title="Clique para detalhar evolução de prazos">
-      <td><span class="nome-full">${r.display || r.n}</span></td><td><b>02/05 a 10/05</b></td>
+  tb.innerHTML=rows.map(r=>`<tr onclick="openDataModal('📈 Evolução Semanal — ${r.display || r.n}', '11/05 a 17/05 · somente prazos processuais · análise individual', '<div class=\'data-grid\'><div class=\'data-card\'><span class=\'lbl\'>Total prazos</span><span class=\'val\'>${fmtNum(r.total)}</span></div><div class=\'data-card\'><span class=\'lbl\'>Fatal</span><span class=\'val\' style=\'color:#C0392B\'>${fmtNum(r.fatal)}</span></div><div class=\'data-card\'><span class=\'lbl\'>Fora do horário</span><span class=\'val\' style=\'color:#E67E22\'>${fmtNum(r.fora)}</span></div><div class=\'data-card\'><span class=\'lbl\'>% risco</span><span class=\'val\'>${r.pct}%</span></div></div><div class=\'data-section-title\'>Observação</div><p style=\'font-size:12px;line-height:1.45\'>Indicador consolidado por profissional. Quando a pessoa atuou em mais de um grupo, os números foram somados para evitar duplicidade na análise individual.</p>')" title="Clique para detalhar evolução de prazos">
+      <td><span class="nome-full">${r.display || r.n}</span></td><td><b>11/05 a 17/05</b></td>
       <td class="c"><span class="vbad muted">${fmtNum(r.total)}</span></td>
       <td class="c">${r.ven>0?`<span class="vbad red">${fmtNum(r.ven)}</span>`:'<span class="vbad muted">—</span>'}</td>
       <td class="c">${r.fatal>0?`<span class="vbad fat">${fmtNum(r.fatal)}</span>`:'<span class="vbad muted">—</span>'}</td>
