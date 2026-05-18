@@ -45,6 +45,12 @@ body{background:var(--bg);color:var(--tx);font-family:Arial,sans-serif;font-size
 .filter-info{margin-left:auto;font-size:10px;color:var(--tx2);font-style:italic}
 .filter-sep{width:1px;height:20px;background:rgba(255,255,255,.1)}
 
+/* UPLOAD EXCEL */
+.upload-input{display:none}
+.upload-status{margin-top:0!important;font-size:11px;color:var(--tx2);white-space:nowrap}
+.upload-status.success{color:#27AE60}
+.upload-status.error{color:#e74c3c}
+
 .ptitle{background:var(--bg3);border-radius:6px 6px 0 0;padding:10px 16px;font-size:12px;font-weight:700;letter-spacing:.3px;display:flex;align-items:center;gap:8px}
 .ptitle.re{border-left:3px solid #e74c3c}
 .ptitle.ore{border-left:3px solid var(--org)}
@@ -1004,6 +1010,12 @@ div[style*="background: #117A65"]{
 </div>
 
 <div class="main">
+  <div style="display:flex;gap:10px;align-items:center;margin-bottom:14px">
+    <input type="file" id="excel-input" class="upload-input" accept=".xlsx,.xls" />
+    <button class="btn-excel" onclick="document.getElementById('excel-input').click()" style="background:rgba(0,174,239,.15);border:1px solid rgba(0,174,239,.4);color:var(--cyan);padding:6px 12px;font-size:11px;margin-bottom:0">📥 Importar Excel</button>
+    <a class="btn-excel" onclick="downloadExcel()" style="margin-bottom:0">📥 Exportar Excel</a>
+    <div class="upload-status" id="upload-status" style="margin-left:auto;font-size:11px;min-width:200px;text-align:right"></div>
+  </div>
 <div id="sec-prazos"></div>
 <div class="kpis">
   <div class="kpi" onclick="kpiClick(this,'')"><div class="klbl">Total Baixado</div><div class="kval wh">1.396</div><div class="ksub">prazos realizados</div></div>
@@ -1014,8 +1026,6 @@ div[style*="background: #117A65"]{
   <div class="kpi" onclick="toggleFilter('fora')" id="kpi-fora"><div class="klbl">Fora do Horário</div><div class="kval org">162</div><div class="ksub">antes 9h ou após 19h</div></div>
   <div class="kpi" onclick="toggleFilter('fatfora')" id="kpi-fatfora"><div class="klbl">Fatal + Fora Hora</div><div class="kval" style="color:#e74c3c">17</div><div class="ksub">⚠ caso fatal — clique para filtrar</div></div>
 </div>
-
-<a class="btn-excel" onclick="downloadExcel()">📥 Exportar Excel</a>
 
 <!-- NOTA FERIADO -->
 <div class="nota-feriado">
@@ -1490,6 +1500,7 @@ const NOMES = {
   'GVM': 'Giulia Vendramini Milani',
   'GFO': 'Gabriel Fretas de Oliveira',
   'NLO': 'Nathalie Louise dos Santos Rodrigues Dias',
+  'TLI': 'Tamires Lins Costa',
   // Equipe E2 — Coord.: Jackeline Romeu Torres
   'RRU': 'Richard Ruan Leo da Silva',
   'JRT': 'Jackeline Romeu Torres',
@@ -1512,6 +1523,7 @@ const NOMES = {
   'TFR': 'Thiago Frid Figueiredo Rossi',
   'ECO': 'Erik Mota Coppi',
   'CDS': 'Carolina Duarte de Souza',
+  'ARE': 'Amanda Pereira Reis de Paula Cardoso',
   // Equipe D
   'JQS': 'Jessica Cerqueira Silva',
   'BBO': 'Bianca Bolanhi Camacho',
@@ -1532,9 +1544,17 @@ function nome(sigla) {
   return `<span class="nome-full">${n}</span><span class="nome-sigla">${sigla}</span>`;
 }
 
-const RESP=[{"n":"JRT","grp":"Grupo E2","ven":0,"fat":19,"d1":23,"d2":11,"fut":38,"tot":91,"fora":18,"ff":0,"ant":49},{"n":"RFE","grp":"Grupo B1","ven":0,"fat":7,"d1":44,"d2":1,"fut":32,"tot":84,"fora":3,"ff":1,"ant":33},{"n":"CAL","grp":"Grupo E2","ven":0,"fat":15,"d1":45,"d2":9,"fut":15,"tot":84,"fora":6,"ff":0,"ant":24},{"n":"JJS","grp":"Grupo B1","ven":0,"fat":10,"d1":50,"d2":7,"fut":6,"tot":73,"fora":12,"ff":4,"ant":13},{"n":"GSM","grp":"Grupo B1","ven":0,"fat":3,"d1":33,"d2":6,"fut":30,"tot":72,"fora":17,"ff":2,"ant":36},{"n":"LMI","grp":"Grupo B3","ven":0,"fat":4,"d1":52,"d2":3,"fut":13,"tot":72,"fora":11,"ff":0,"ant":16},{"n":"RYL","grp":"Grupo E2","ven":0,"fat":43,"d1":20,"d2":0,"fut":7,"tot":70,"fora":13,"ff":6,"ant":7},{"n":"BSO","grp":"Grupo B1","ven":0,"fat":0,"d1":30,"d2":5,"fut":27,"tot":62,"fora":2,"ff":0,"ant":32},{"n":"VRO","grp":"Grupo E1","ven":0,"fat":3,"d1":23,"d2":3,"fut":31,"tot":60,"fora":5,"ff":0,"ant":34},{"n":"MBF","grp":"Grupo E2","ven":0,"fat":7,"d1":21,"d2":16,"fut":14,"tot":58,"fora":17,"ff":0,"ant":30},{"n":"RRU","grp":"Grupo E2","ven":0,"fat":4,"d1":29,"d2":4,"fut":14,"tot":51,"fora":9,"ff":0,"ant":18},{"n":"JPL","grp":"Grupo E1","ven":0,"fat":1,"d1":10,"d2":0,"fut":38,"tot":49,"fora":0,"ff":0,"ant":38},{"n":"JPE","grp":"Grupo B1","ven":0,"fat":0,"d1":16,"d2":6,"fut":22,"tot":44,"fora":9,"ff":0,"ant":28},{"n":"JQS","grp":"Grupo D1","ven":0,"fat":0,"d1":16,"d2":2,"fut":24,"tot":42,"fora":2,"ff":0,"ant":26},{"n":"ARC","grp":"Grupo E2","ven":0,"fat":16,"d1":8,"d2":1,"fut":17,"tot":42,"fora":9,"ff":2,"ant":18},{"n":"VCR","grp":"Grupo B2","ven":0,"fat":3,"d1":10,"d2":5,"fut":21,"tot":39,"fora":0,"ff":0,"ant":26},{"n":"PSI","grp":"Grupo E1","ven":0,"fat":2,"d1":24,"d2":0,"fut":13,"tot":39,"fora":2,"ff":2,"ant":13},{"n":"RCF","grp":"Grupo C","ven":0,"fat":4,"d1":11,"d2":1,"fut":21,"tot":37,"fora":0,"ff":0,"ant":22},{"n":"BCF","grp":"Grupo B2","ven":0,"fat":3,"d1":20,"d2":4,"fut":6,"tot":33,"fora":0,"ff":0,"ant":10},{"n":"TFR","grp":"Grupo C","ven":0,"fat":7,"d1":17,"d2":6,"fut":3,"tot":33,"fora":7,"ff":0,"ant":9},{"n":"BBO","grp":"Grupo D1","ven":0,"fat":2,"d1":16,"d2":11,"fut":2,"tot":31,"fora":3,"ff":0,"ant":13},{"n":"ALF","grp":"Grupo E1","ven":0,"fat":0,"d1":2,"d2":6,"fut":23,"tot":31,"fora":4,"ff":0,"ant":29},{"n":"JRM","grp":"Grupo E1","ven":0,"fat":3,"d1":24,"d2":4,"fut":0,"tot":31,"fora":4,"ff":0,"ant":4},{"n":"ANB","grp":"Grupo B2","ven":0,"fat":2,"d1":10,"d2":4,"fut":5,"tot":21,"fora":0,"ff":0,"ant":9},{"n":"VSI","grp":"Grupo C","ven":0,"fat":2,"d1":9,"d2":2,"fut":8,"tot":21,"fora":0,"ff":0,"ant":10},{"n":"DPR","grp":"Grupo E1","ven":0,"fat":7,"d1":9,"d2":0,"fut":5,"tot":21,"fora":0,"ff":0,"ant":5},{"n":"GSM","grp":"Grupo B3","ven":0,"fat":0,"d1":3,"d2":1,"fut":8,"tot":12,"fora":0,"ff":0,"ant":9},{"n":"NBG","grp":"Grupo A2","ven":0,"fat":2,"d1":5,"d2":3,"fut":1,"tot":11,"fora":0,"ff":0,"ant":4},{"n":"TLI","grp":"Grupo E1","ven":0,"fat":6,"d1":2,"d2":2,"fut":1,"tot":11,"fora":1,"ff":0,"ant":3},{"n":"JPE","grp":"Grupo B3","ven":0,"fat":0,"d1":5,"d2":1,"fut":4,"tot":10,"fora":0,"ff":0,"ant":5},{"n":"ECO","grp":"Grupo C","ven":0,"fat":3,"d1":2,"d2":1,"fut":3,"tot":9,"fora":0,"ff":0,"ant":4},{"n":"RCF","grp":"Grupo E2","ven":0,"fat":1,"d1":6,"d2":1,"fut":1,"tot":9,"fora":0,"ff":0,"ant":2},{"n":"AAP","grp":"Grupo E2","ven":0,"fat":0,"d1":4,"d2":2,"fut":2,"tot":8,"fora":3,"ff":0,"ant":4},{"n":"ANB","grp":"Grupo B3","ven":0,"fat":1,"d1":6,"d2":0,"fut":0,"tot":7,"fora":0,"ff":0,"ant":0},{"n":"ARE","grp":"Grupo C","ven":0,"fat":0,"d1":3,"d2":1,"fut":2,"tot":6,"fora":0,"ff":0,"ant":3},{"n":"AAP","grp":"Grupo E1","ven":0,"fat":0,"d1":0,"d2":3,"fut":3,"tot":6,"fora":1,"ff":0,"ant":6},{"n":"ARC","grp":"Grupo A3","ven":0,"fat":1,"d1":0,"d2":0,"fut":2,"tot":3,"fora":0,"ff":0,"ant":2},{"n":"NRG","grp":"Grupo B1","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0},{"n":"NRG","grp":"Grupo B2","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0},{"n":"WSF","grp":"Grupo E2","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":2,"ff":0,"ant":0},{"n":"DPR","grp":"Sem Grupo","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0},{"n":"VSI","grp":"Grupo A3","ven":0,"fat":0,"d1":1,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0},{"n":"SOF","grp":"Grupo B1","ven":0,"fat":0,"d1":1,"d2":0,"fut":0,"tot":1,"fora":1,"ff":0,"ant":0},{"n":"CIC","grp":"Grupo E1","ven":0,"fat":0,"d1":0,"d2":0,"fut":1,"tot":1,"fora":1,"ff":0,"ant":1},{"n":"KBM","grp":"Grupo E1","ven":0,"fat":1,"d1":0,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0},{"n":"ARC","grp":"Sem Grupo","ven":0,"fat":1,"d1":0,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0}];
+// Função para normalizar nomes (converte siglas para nomes completos)
+function normalizarNome(nomeOuSigla) {
+  if (!nomeOuSigla) return 'N/A';
+  const nome = nomeOuSigla.trim();
+  // Se está no mapa de NOMES como sigla, retorna o nome completo
+  return NOMES[nome] || nome;
+}
 
-const GRP_RESP=[{"n":"NBG","grp":"Grupo A2","ven":0,"fat":2,"d1":5,"d2":3,"fut":1,"tot":11,"fora":0,"ff":0,"ant":4},{"n":"ARC","grp":"Grupo A3","ven":0,"fat":1,"d1":0,"d2":0,"fut":2,"tot":3,"fora":0,"ff":0,"ant":2},{"n":"VSI","grp":"Grupo A3","ven":0,"fat":0,"d1":1,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0},{"n":"RFE","grp":"Grupo B1","ven":0,"fat":7,"d1":44,"d2":1,"fut":32,"tot":84,"fora":3,"ff":1,"ant":33},{"n":"JJS","grp":"Grupo B1","ven":0,"fat":10,"d1":50,"d2":7,"fut":6,"tot":73,"fora":12,"ff":4,"ant":13},{"n":"GSM","grp":"Grupo B1","ven":0,"fat":3,"d1":33,"d2":6,"fut":30,"tot":72,"fora":17,"ff":2,"ant":36},{"n":"BSO","grp":"Grupo B1","ven":0,"fat":0,"d1":30,"d2":5,"fut":27,"tot":62,"fora":2,"ff":0,"ant":32},{"n":"JPE","grp":"Grupo B1","ven":0,"fat":0,"d1":16,"d2":6,"fut":22,"tot":44,"fora":9,"ff":0,"ant":28},{"n":"NRG","grp":"Grupo B1","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0},{"n":"SOF","grp":"Grupo B1","ven":0,"fat":0,"d1":1,"d2":0,"fut":0,"tot":1,"fora":1,"ff":0,"ant":0},{"n":"VCR","grp":"Grupo B2","ven":0,"fat":3,"d1":10,"d2":5,"fut":21,"tot":39,"fora":0,"ff":0,"ant":26},{"n":"BCF","grp":"Grupo B2","ven":0,"fat":3,"d1":20,"d2":4,"fut":6,"tot":33,"fora":0,"ff":0,"ant":10},{"n":"ANB","grp":"Grupo B2","ven":0,"fat":2,"d1":10,"d2":4,"fut":5,"tot":21,"fora":0,"ff":0,"ant":9},{"n":"NRG","grp":"Grupo B2","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0},{"n":"LMI","grp":"Grupo B3","ven":0,"fat":4,"d1":52,"d2":3,"fut":13,"tot":72,"fora":11,"ff":0,"ant":16},{"n":"GSM","grp":"Grupo B3","ven":0,"fat":0,"d1":3,"d2":1,"fut":8,"tot":12,"fora":0,"ff":0,"ant":9},{"n":"JPE","grp":"Grupo B3","ven":0,"fat":0,"d1":5,"d2":1,"fut":4,"tot":10,"fora":0,"ff":0,"ant":5},{"n":"ANB","grp":"Grupo B3","ven":0,"fat":1,"d1":6,"d2":0,"fut":0,"tot":7,"fora":0,"ff":0,"ant":0},{"n":"RCF","grp":"Grupo C","ven":0,"fat":4,"d1":11,"d2":1,"fut":21,"tot":37,"fora":0,"ff":0,"ant":22},{"n":"TFR","grp":"Grupo C","ven":0,"fat":7,"d1":17,"d2":6,"fut":3,"tot":33,"fora":7,"ff":0,"ant":9},{"n":"VSI","grp":"Grupo C","ven":0,"fat":2,"d1":9,"d2":2,"fut":8,"tot":21,"fora":0,"ff":0,"ant":10},{"n":"ECO","grp":"Grupo C","ven":0,"fat":3,"d1":2,"d2":1,"fut":3,"tot":9,"fora":0,"ff":0,"ant":4},{"n":"ARE","grp":"Grupo C","ven":0,"fat":0,"d1":3,"d2":1,"fut":2,"tot":6,"fora":0,"ff":0,"ant":3},{"n":"JQS","grp":"Grupo D1","ven":0,"fat":0,"d1":16,"d2":2,"fut":24,"tot":42,"fora":2,"ff":0,"ant":26},{"n":"BBO","grp":"Grupo D1","ven":0,"fat":2,"d1":16,"d2":11,"fut":2,"tot":31,"fora":3,"ff":0,"ant":13},{"n":"VRO","grp":"Grupo E1","ven":0,"fat":3,"d1":23,"d2":3,"fut":31,"tot":60,"fora":5,"ff":0,"ant":34},{"n":"JPL","grp":"Grupo E1","ven":0,"fat":1,"d1":10,"d2":0,"fut":38,"tot":49,"fora":0,"ff":0,"ant":38},{"n":"PSI","grp":"Grupo E1","ven":0,"fat":2,"d1":24,"d2":0,"fut":13,"tot":39,"fora":2,"ff":2,"ant":13},{"n":"ALF","grp":"Grupo E1","ven":0,"fat":0,"d1":2,"d2":6,"fut":23,"tot":31,"fora":4,"ff":0,"ant":29},{"n":"JRM","grp":"Grupo E1","ven":0,"fat":3,"d1":24,"d2":4,"fut":0,"tot":31,"fora":4,"ff":0,"ant":4},{"n":"DPR","grp":"Grupo E1","ven":0,"fat":7,"d1":9,"d2":0,"fut":5,"tot":21,"fora":0,"ff":0,"ant":5},{"n":"TLI","grp":"Grupo E1","ven":0,"fat":6,"d1":2,"d2":2,"fut":1,"tot":11,"fora":1,"ff":0,"ant":3},{"n":"AAP","grp":"Grupo E1","ven":0,"fat":0,"d1":0,"d2":3,"fut":3,"tot":6,"fora":1,"ff":0,"ant":6},{"n":"CIC","grp":"Grupo E1","ven":0,"fat":0,"d1":0,"d2":0,"fut":1,"tot":1,"fora":1,"ff":0,"ant":1},{"n":"KBM","grp":"Grupo E1","ven":0,"fat":1,"d1":0,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0},{"n":"JRT","grp":"Grupo E2","ven":0,"fat":19,"d1":23,"d2":11,"fut":38,"tot":91,"fora":18,"ff":0,"ant":49},{"n":"CAL","grp":"Grupo E2","ven":0,"fat":15,"d1":45,"d2":9,"fut":15,"tot":84,"fora":6,"ff":0,"ant":24},{"n":"RYL","grp":"Grupo E2","ven":0,"fat":43,"d1":20,"d2":0,"fut":7,"tot":70,"fora":13,"ff":6,"ant":7},{"n":"MBF","grp":"Grupo E2","ven":0,"fat":7,"d1":21,"d2":16,"fut":14,"tot":58,"fora":17,"ff":0,"ant":30},{"n":"RRU","grp":"Grupo E2","ven":0,"fat":4,"d1":29,"d2":4,"fut":14,"tot":51,"fora":9,"ff":0,"ant":18},{"n":"ARC","grp":"Grupo E2","ven":0,"fat":16,"d1":8,"d2":1,"fut":17,"tot":42,"fora":9,"ff":2,"ant":18},{"n":"RCF","grp":"Grupo E2","ven":0,"fat":1,"d1":6,"d2":1,"fut":1,"tot":9,"fora":0,"ff":0,"ant":2},{"n":"AAP","grp":"Grupo E2","ven":0,"fat":0,"d1":4,"d2":2,"fut":2,"tot":8,"fora":3,"ff":0,"ant":4},{"n":"WSF","grp":"Grupo E2","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":2,"ff":0,"ant":0},{"n":"DPR","grp":"Sem Grupo","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0},{"n":"ARC","grp":"Sem Grupo","ven":0,"fat":1,"d1":0,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0}];
+const RESP=[{"n":"JRT","grp":"Grupo E2","ven":0,"fat":19,"d1":23,"d2":11,"fut":38,"tot":91,"fora":18,"ff":0,"ant":49},{"n":"RFE","grp":"Grupo B1","ven":0,"fat":7,"d1":44,"d2":1,"fut":32,"tot":84,"fora":3,"ff":1,"ant":33},{"n":"CAL","grp":"Grupo E2","ven":0,"fat":15,"d1":45,"d2":9,"fut":15,"tot":84,"fora":6,"ff":0,"ant":24},{"n":"JJS","grp":"Grupo B1","ven":0,"fat":10,"d1":50,"d2":7,"fut":6,"tot":73,"fora":12,"ff":4,"ant":13},{"n":"GSM","grp":"Grupo B1","ven":0,"fat":3,"d1":33,"d2":6,"fut":30,"tot":72,"fora":17,"ff":2,"ant":36},{"n":"LMI","grp":"Grupo B3","ven":0,"fat":4,"d1":52,"d2":3,"fut":13,"tot":72,"fora":11,"ff":0,"ant":16},{"n":"RYL","grp":"Grupo E2","ven":0,"fat":43,"d1":20,"d2":0,"fut":7,"tot":70,"fora":13,"ff":6,"ant":7},{"n":"BSO","grp":"Grupo B1","ven":0,"fat":0,"d1":30,"d2":5,"fut":27,"tot":62,"fora":2,"ff":0,"ant":32},{"n":"VRO","grp":"Grupo E1","ven":0,"fat":3,"d1":23,"d2":3,"fut":31,"tot":60,"fora":5,"ff":0,"ant":34},{"n":"MBF","grp":"Grupo E2","ven":0,"fat":7,"d1":21,"d2":16,"fut":14,"tot":58,"fora":17,"ff":0,"ant":30},{"n":"RRU","grp":"Grupo E2","ven":0,"fat":4,"d1":29,"d2":4,"fut":14,"tot":51,"fora":9,"ff":0,"ant":18},{"n":"JPL","grp":"Grupo E1","ven":0,"fat":1,"d1":10,"d2":0,"fut":38,"tot":49,"fora":0,"ff":0,"ant":38},{"n":"JPE","grp":"Grupo B1","ven":0,"fat":0,"d1":16,"d2":6,"fut":22,"tot":44,"fora":9,"ff":0,"ant":28},{"n":"JQS","grp":"Grupo D1","ven":0,"fat":0,"d1":16,"d2":2,"fut":24,"tot":42,"fora":2,"ff":0,"ant":26},{"n":"ARC","grp":"Grupo E2","ven":0,"fat":16,"d1":8,"d2":1,"fut":17,"tot":42,"fora":9,"ff":2,"ant":18},{"n":"VCR","grp":"Grupo B2","ven":0,"fat":3,"d1":10,"d2":5,"fut":21,"tot":39,"fora":0,"ff":0,"ant":26},{"n":"PSI","grp":"Grupo E1","ven":0,"fat":2,"d1":24,"d2":0,"fut":13,"tot":39,"fora":2,"ff":2,"ant":13},{"n":"RCF","grp":"Grupo C","ven":0,"fat":4,"d1":11,"d2":1,"fut":21,"tot":37,"fora":0,"ff":0,"ant":22},{"n":"BCF","grp":"Grupo B2","ven":0,"fat":3,"d1":20,"d2":4,"fut":6,"tot":33,"fora":0,"ff":0,"ant":10},{"n":"TFR","grp":"Grupo C","ven":0,"fat":7,"d1":17,"d2":6,"fut":3,"tot":33,"fora":7,"ff":0,"ant":9},{"n":"BBO","grp":"Grupo D1","ven":0,"fat":2,"d1":16,"d2":11,"fut":2,"tot":31,"fora":3,"ff":0,"ant":13},{"n":"ALF","grp":"Grupo E1","ven":0,"fat":0,"d1":2,"d2":6,"fut":23,"tot":31,"fora":4,"ff":0,"ant":29},{"n":"JRM","grp":"Grupo E1","ven":0,"fat":3,"d1":24,"d2":4,"fut":0,"tot":31,"fora":4,"ff":0,"ant":4},{"n":"ANB","grp":"Grupo B2","ven":0,"fat":2,"d1":10,"d2":4,"fut":5,"tot":21,"fora":0,"ff":0,"ant":9},{"n":"VSI","grp":"Grupo C","ven":0,"fat":2,"d1":9,"d2":2,"fut":8,"tot":21,"fora":0,"ff":0,"ant":10},{"n":"DPR","grp":"Grupo E1","ven":0,"fat":7,"d1":9,"d2":0,"fut":5,"tot":21,"fora":0,"ff":0,"ant":5},{"n":"GSM","grp":"Grupo B3","ven":0,"fat":0,"d1":3,"d2":1,"fut":8,"tot":12,"fora":0,"ff":0,"ant":9},{"n":"NBG","grp":"Grupo A2","ven":0,"fat":2,"d1":5,"d2":3,"fut":1,"tot":11,"fora":0,"ff":0,"ant":4},{"n":"TLI","grp":"Grupo E1","ven":0,"fat":6,"d1":2,"d2":2,"fut":1,"tot":11,"fora":1,"ff":0,"ant":3},{"n":"JPE","grp":"Grupo B3","ven":0,"fat":0,"d1":5,"d2":1,"fut":4,"tot":10,"fora":0,"ff":0,"ant":5},{"n":"ECO","grp":"Grupo C","ven":0,"fat":3,"d1":2,"d2":1,"fut":3,"tot":9,"fora":0,"ff":0,"ant":4},{"n":"RCF","grp":"Grupo E2","ven":0,"fat":1,"d1":6,"d2":1,"fut":1,"tot":9,"fora":0,"ff":0,"ant":2},{"n":"AAP","grp":"Grupo E2","ven":0,"fat":0,"d1":4,"d2":2,"fut":2,"tot":8,"fora":3,"ff":0,"ant":4},{"n":"ANB","grp":"Grupo B3","ven":0,"fat":1,"d1":6,"d2":0,"fut":0,"tot":7,"fora":0,"ff":0,"ant":0},{"n":"ARE","grp":"Grupo C","ven":0,"fat":0,"d1":3,"d2":1,"fut":2,"tot":6,"fora":0,"ff":0,"ant":3},{"n":"AAP","grp":"Grupo E1","ven":0,"fat":0,"d1":0,"d2":3,"fut":3,"tot":6,"fora":1,"ff":0,"ant":6},{"n":"ARC","grp":"Grupo A3","ven":0,"fat":1,"d1":0,"d2":0,"fut":2,"tot":3,"fora":0,"ff":0,"ant":2},{"n":"NRG","grp":"Grupo B1","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0},{"n":"NRG","grp":"Grupo B2","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0},{"n":"WSF","grp":"Grupo E2","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":2,"ff":0,"ant":0},{"n":"DPR","grp":"Sem Grupo","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0},{"n":"VSI","grp":"Grupo A3","ven":0,"fat":0,"d1":1,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0},{"n":"SOF","grp":"Grupo B1","ven":0,"fat":0,"d1":1,"d2":0,"fut":0,"tot":1,"fora":1,"ff":0,"ant":0},{"n":"KBM","grp":"Grupo E1","ven":0,"fat":1,"d1":0,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0},{"n":"ARC","grp":"Sem Grupo","ven":0,"fat":1,"d1":0,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0}];
+
+const GRP_RESP=[{"n":"NBG","grp":"Grupo A2","ven":0,"fat":2,"d1":5,"d2":3,"fut":1,"tot":11,"fora":0,"ff":0,"ant":4},{"n":"ARC","grp":"Grupo A3","ven":0,"fat":1,"d1":0,"d2":0,"fut":2,"tot":3,"fora":0,"ff":0,"ant":2},{"n":"VSI","grp":"Grupo A3","ven":0,"fat":0,"d1":1,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0},{"n":"RFE","grp":"Grupo B1","ven":0,"fat":7,"d1":44,"d2":1,"fut":32,"tot":84,"fora":3,"ff":1,"ant":33},{"n":"JJS","grp":"Grupo B1","ven":0,"fat":10,"d1":50,"d2":7,"fut":6,"tot":73,"fora":12,"ff":4,"ant":13},{"n":"GSM","grp":"Grupo B1","ven":0,"fat":3,"d1":33,"d2":6,"fut":30,"tot":72,"fora":17,"ff":2,"ant":36},{"n":"BSO","grp":"Grupo B1","ven":0,"fat":0,"d1":30,"d2":5,"fut":27,"tot":62,"fora":2,"ff":0,"ant":32},{"n":"JPE","grp":"Grupo B1","ven":0,"fat":0,"d1":16,"d2":6,"fut":22,"tot":44,"fora":9,"ff":0,"ant":28},{"n":"NRG","grp":"Grupo B1","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0},{"n":"SOF","grp":"Grupo B1","ven":0,"fat":0,"d1":1,"d2":0,"fut":0,"tot":1,"fora":1,"ff":0,"ant":0},{"n":"VCR","grp":"Grupo B2","ven":0,"fat":3,"d1":10,"d2":5,"fut":21,"tot":39,"fora":0,"ff":0,"ant":26},{"n":"BCF","grp":"Grupo B2","ven":0,"fat":3,"d1":20,"d2":4,"fut":6,"tot":33,"fora":0,"ff":0,"ant":10},{"n":"ANB","grp":"Grupo B2","ven":0,"fat":2,"d1":10,"d2":4,"fut":5,"tot":21,"fora":0,"ff":0,"ant":9},{"n":"NRG","grp":"Grupo B2","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0},{"n":"LMI","grp":"Grupo B3","ven":0,"fat":4,"d1":52,"d2":3,"fut":13,"tot":72,"fora":11,"ff":0,"ant":16},{"n":"GSM","grp":"Grupo B3","ven":0,"fat":0,"d1":3,"d2":1,"fut":8,"tot":12,"fora":0,"ff":0,"ant":9},{"n":"JPE","grp":"Grupo B3","ven":0,"fat":0,"d1":5,"d2":1,"fut":4,"tot":10,"fora":0,"ff":0,"ant":5},{"n":"ANB","grp":"Grupo B3","ven":0,"fat":1,"d1":6,"d2":0,"fut":0,"tot":7,"fora":0,"ff":0,"ant":0},{"n":"RCF","grp":"Grupo C","ven":0,"fat":4,"d1":11,"d2":1,"fut":21,"tot":37,"fora":0,"ff":0,"ant":22},{"n":"TFR","grp":"Grupo C","ven":0,"fat":7,"d1":17,"d2":6,"fut":3,"tot":33,"fora":7,"ff":0,"ant":9},{"n":"VSI","grp":"Grupo C","ven":0,"fat":2,"d1":9,"d2":2,"fut":8,"tot":21,"fora":0,"ff":0,"ant":10},{"n":"ECO","grp":"Grupo C","ven":0,"fat":3,"d1":2,"d2":1,"fut":3,"tot":9,"fora":0,"ff":0,"ant":4},{"n":"ARE","grp":"Grupo C","ven":0,"fat":0,"d1":3,"d2":1,"fut":2,"tot":6,"fora":0,"ff":0,"ant":3},{"n":"JQS","grp":"Grupo D1","ven":0,"fat":0,"d1":16,"d2":2,"fut":24,"tot":42,"fora":2,"ff":0,"ant":26},{"n":"BBO","grp":"Grupo D1","ven":0,"fat":2,"d1":16,"d2":11,"fut":2,"tot":31,"fora":3,"ff":0,"ant":13},{"n":"VRO","grp":"Grupo E1","ven":0,"fat":3,"d1":23,"d2":3,"fut":31,"tot":60,"fora":5,"ff":0,"ant":34},{"n":"JPL","grp":"Grupo E1","ven":0,"fat":1,"d1":10,"d2":0,"fut":38,"tot":49,"fora":0,"ff":0,"ant":38},{"n":"PSI","grp":"Grupo E1","ven":0,"fat":2,"d1":24,"d2":0,"fut":13,"tot":39,"fora":2,"ff":2,"ant":13},{"n":"ALF","grp":"Grupo E1","ven":0,"fat":0,"d1":2,"d2":6,"fut":23,"tot":31,"fora":4,"ff":0,"ant":29},{"n":"JRM","grp":"Grupo E1","ven":0,"fat":3,"d1":24,"d2":4,"fut":0,"tot":31,"fora":4,"ff":0,"ant":4},{"n":"DPR","grp":"Grupo E1","ven":0,"fat":7,"d1":9,"d2":0,"fut":5,"tot":21,"fora":0,"ff":0,"ant":5},{"n":"TLI","grp":"Grupo E1","ven":0,"fat":6,"d1":2,"d2":2,"fut":1,"tot":11,"fora":1,"ff":0,"ant":3},{"n":"AAP","grp":"Grupo E1","ven":0,"fat":0,"d1":0,"d2":3,"fut":3,"tot":6,"fora":1,"ff":0,"ant":6},{"n":"KBM","grp":"Grupo E1","ven":0,"fat":1,"d1":0,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0},{"n":"JRT","grp":"Grupo E2","ven":0,"fat":19,"d1":23,"d2":11,"fut":38,"tot":91,"fora":18,"ff":0,"ant":49},{"n":"CAL","grp":"Grupo E2","ven":0,"fat":15,"d1":45,"d2":9,"fut":15,"tot":84,"fora":6,"ff":0,"ant":24},{"n":"RYL","grp":"Grupo E2","ven":0,"fat":43,"d1":20,"d2":0,"fut":7,"tot":70,"fora":13,"ff":6,"ant":7},{"n":"MBF","grp":"Grupo E2","ven":0,"fat":7,"d1":21,"d2":16,"fut":14,"tot":58,"fora":17,"ff":0,"ant":30},{"n":"RRU","grp":"Grupo E2","ven":0,"fat":4,"d1":29,"d2":4,"fut":14,"tot":51,"fora":9,"ff":0,"ant":18},{"n":"ARC","grp":"Grupo E2","ven":0,"fat":16,"d1":8,"d2":1,"fut":17,"tot":42,"fora":9,"ff":2,"ant":18},{"n":"RCF","grp":"Grupo E2","ven":0,"fat":1,"d1":6,"d2":1,"fut":1,"tot":9,"fora":0,"ff":0,"ant":2},{"n":"AAP","grp":"Grupo E2","ven":0,"fat":0,"d1":4,"d2":2,"fut":2,"tot":8,"fora":3,"ff":0,"ant":4},{"n":"WSF","grp":"Grupo E2","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":2,"ff":0,"ant":0},{"n":"DPR","grp":"Sem Grupo","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0},{"n":"ARC","grp":"Sem Grupo","ven":0,"fat":1,"d1":0,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0}];
 const HR_DIST=[[0,0],[1,0],[2,4],[3,3],[4,0],[5,0],[6,2],[7,7],[8,39],[9,95],[10,135],[11,118],[12,124],[13,104],[14,157],[15,157],[16,160],[17,103],[18,81],[19,48],[20,17],[21,13],[22,17],[23,12]];
 const FAT_FORA=[{"resp":"RYL","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"14/05/2026","proc":"0100150-24.2026.5.01.0034"},{"resp":"GSM","grp":"Grupo B1","hr":"23:05","status":"Fatal","dt":"15/05/2026","proc":"1001884-56.2025.5.02.0433"},{"resp":"ARC","grp":"Grupo E2","hr":"19:05","status":"Fatal","dt":"11/05/2026","proc":"0010927-77.2024.5.15.0119"},{"resp":"JJS","grp":"Grupo B1","hr":"08:05","status":"Fatal","dt":"11/05/2026","proc":"1000353-95.2026.5.02.0433"},{"resp":"JJS","grp":"Grupo B1","hr":"08:05","status":"Fatal","dt":"11/05/2026","proc":"1000413-71.2026.5.02.0432"},{"resp":"PSI","grp":"Grupo E1","hr":"08:05","status":"Fatal","dt":"11/05/2026","proc":"0174700-50.2007.5.15.0071"},{"resp":"RYL","grp":"Grupo E2","hr":"20:05","status":"Fatal","dt":"12/05/2026","proc":"0024861-81.2025.5.24.0066"},{"resp":"JJS","grp":"Grupo B1","hr":"08:05","status":"Fatal","dt":"13/05/2026","proc":"1002277-75.2025.5.02.0434"},{"resp":"RYL","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"11/05/2026","proc":"0012342-48.2025.5.15.0188"},{"resp":"ARC","grp":"Grupo E2","hr":"20:05","status":"Fatal","dt":"13/05/2026","proc":"0010533-54.2026.5.03.0048"},{"resp":"RYL","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"14/05/2026","proc":"0010617-50.2025.5.15.0050"},{"resp":"RYL","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"14/05/2026","proc":"0000377-82.2026.5.23.0037"},{"resp":"GSM","grp":"Grupo B1","hr":"07:05","status":"Fatal","dt":"08/05/2026","proc":"1001861-10.2025.5.02.0434"},{"resp":"RFE","grp":"Grupo B1","hr":"08:05","status":"Fatal","dt":"08/05/2026","proc":"1000698-55.2026.5.02.0435"},{"resp":"PSI","grp":"Grupo E1","hr":"08:05","status":"Fatal","dt":"08/05/2026","proc":"1002181-90.2025.5.02.0521"},{"resp":"JJS","grp":"Grupo B1","hr":"08:05","status":"Fatal","dt":"13/05/2026","proc":"1000718-55.2026.5.02.0432"},{"resp":"RYL","grp":"Grupo E2","hr":"08:05","status":"Fatal","dt":"14/05/2026","proc":"0010467-31.2026.5.15.0019"}];
 const BY_GRUPO={"Grupo A2":{"total":11,"fat":2,"ven":0,"d1":5,"d2":3,"fut":1,"fora":0,"ff":0},"Grupo A3":{"total":4,"fat":1,"ven":0,"d1":1,"d2":0,"fut":2,"fora":0,"ff":0},"Grupo B1":{"total":338,"fat":20,"ven":0,"d1":176,"d2":25,"fut":117,"fora":44,"ff":7},"Grupo B2":{"total":95,"fat":8,"ven":0,"d1":42,"d2":13,"fut":32,"fora":0,"ff":0},"Grupo B3":{"total":101,"fat":5,"ven":0,"d1":66,"d2":5,"fut":25,"fora":11,"ff":0},"Grupo C":{"total":106,"fat":16,"ven":0,"d1":42,"d2":11,"fut":37,"fora":7,"ff":0},"Grupo D1":{"total":73,"fat":2,"ven":0,"d1":32,"d2":13,"fut":26,"fora":5,"ff":0},"Grupo E1":{"total":250,"fat":23,"ven":0,"d1":94,"d2":18,"fut":115,"fora":18,"ff":2},"Grupo E2":{"total":415,"fat":105,"ven":0,"d1":158,"d2":44,"fut":108,"fora":77,"ff":8},"Sem Grupo":{"total":3,"fat":1,"ven":0,"d1":2,"d2":0,"fut":0,"fora":0,"ff":0}};
@@ -2020,7 +2040,7 @@ function downloadExcel() {
 
 // ══ AGENDAS — SEPARADAS ══
 const AG_EQUIPE=[{"equipe":"Grupo E2","tot":1060,"realiz":1060,"atrasada":143,"fatal":233,"d1":394,"d2":110,"futuro":180},{"equipe":"Grupo B1","tot":839,"realiz":839,"atrasada":146,"fatal":125,"d1":409,"d2":44,"futuro":115},{"equipe":"Grupo E1","tot":736,"realiz":736,"atrasada":114,"fatal":121,"d1":263,"d2":71,"futuro":167},{"equipe":"Grupo D1","tot":332,"realiz":332,"atrasada":17,"fatal":0,"d1":149,"d2":60,"futuro":106},{"equipe":"Grupo B3","tot":263,"realiz":263,"atrasada":43,"fatal":109,"d1":76,"d2":3,"futuro":32},{"equipe":"Grupo C","tot":255,"realiz":255,"atrasada":7,"fatal":52,"d1":140,"d2":7,"futuro":49},{"equipe":"Grupo B2","tot":240,"realiz":240,"atrasada":37,"fatal":26,"d1":76,"d2":17,"futuro":84},{"equipe":"Sem Grupo","tot":28,"realiz":28,"atrasada":2,"fatal":4,"d1":15,"d2":4,"futuro":3},{"equipe":"Grupo A3","tot":18,"realiz":18,"atrasada":5,"fatal":3,"d1":7,"d2":0,"futuro":3},{"equipe":"Grupo A2","tot":17,"realiz":17,"atrasada":0,"fatal":1,"d1":8,"d2":7,"futuro":1}];
-const AG_RESP=[{"n":"CAL","grp":"Grupo E2","tot":239,"realiz":239,"atrasada":4,"fatal":68,"d1":112,"d2":33,"futuro":22},{"n":"RFE","grp":"Grupo B1","tot":225,"realiz":225,"atrasada":19,"fatal":21,"d1":140,"d2":12,"futuro":33},{"n":"JRT","grp":"Grupo E2","tot":223,"realiz":223,"atrasada":84,"fatal":47,"d1":30,"d2":11,"futuro":51},{"n":"JQS","grp":"Grupo D1","tot":192,"realiz":192,"atrasada":0,"fatal":0,"d1":117,"d2":13,"futuro":62},{"n":"LMI","grp":"Grupo B3","tot":191,"realiz":191,"atrasada":21,"fatal":91,"d1":57,"d2":3,"futuro":19},{"n":"JJS","grp":"Grupo B1","tot":188,"realiz":188,"atrasada":114,"fatal":42,"d1":22,"d2":7,"futuro":3},{"n":"GSM","grp":"Grupo B1","tot":185,"realiz":185,"atrasada":11,"fatal":42,"d1":68,"d2":8,"futuro":56},{"n":"VRO","grp":"Grupo E1","tot":175,"realiz":175,"atrasada":29,"fatal":38,"d1":37,"d2":7,"futuro":64},{"n":"RYL","grp":"Grupo E2","tot":173,"realiz":173,"atrasada":30,"fatal":58,"d1":84,"d2":1,"futuro":0},{"n":"JPL","grp":"Grupo E1","tot":169,"realiz":169,"atrasada":5,"fatal":5,"d1":115,"d2":0,"futuro":44},{"n":"BSO","grp":"Grupo B1","tot":150,"realiz":150,"atrasada":0,"fatal":8,"d1":111,"d2":14,"futuro":17},{"n":"RRU","grp":"Grupo E2","tot":147,"realiz":147,"atrasada":11,"fatal":47,"d1":55,"d2":10,"futuro":24},{"n":"BBO","grp":"Grupo D1","tot":140,"realiz":140,"atrasada":17,"fatal":0,"d1":32,"d2":47,"futuro":44},{"n":"PSI","grp":"Grupo E1","tot":133,"realiz":133,"atrasada":14,"fatal":6,"d1":73,"d2":28,"futuro":12},{"n":"MBF","grp":"Grupo E2","tot":119,"realiz":119,"atrasada":1,"fatal":2,"d1":68,"d2":20,"futuro":28},{"n":"ARC","grp":"Grupo E2","tot":102,"realiz":102,"atrasada":6,"fatal":6,"d1":22,"d2":24,"futuro":44},{"n":"VCR","grp":"Grupo B2","tot":96,"realiz":96,"atrasada":0,"fatal":0,"d1":24,"d2":14,"futuro":58},{"n":"JRM","grp":"Grupo E1","tot":95,"realiz":95,"atrasada":15,"fatal":62,"d1":8,"d2":4,"futuro":6},{"n":"TFR","grp":"Grupo C","tot":86,"realiz":86,"atrasada":5,"fatal":25,"d1":44,"d2":5,"futuro":7},{"n":"JPE","grp":"Grupo B1","tot":84,"realiz":84,"atrasada":1,"fatal":10,"d1":66,"d2":2,"futuro":5},{"n":"ALF","grp":"Grupo E1","tot":81,"realiz":81,"atrasada":2,"fatal":2,"d1":20,"d2":29,"futuro":28},{"n":"BCF","grp":"Grupo B2","tot":72,"realiz":72,"atrasada":3,"fatal":13,"d1":42,"d2":0,"futuro":14},{"n":"ANB","grp":"Grupo B2","tot":69,"realiz":69,"atrasada":34,"fatal":13,"d1":8,"d2":3,"futuro":11},{"n":"DPR","grp":"Grupo E1","tot":68,"realiz":68,"atrasada":47,"fatal":6,"d1":5,"d2":1,"futuro":9},{"n":"RCF","grp":"Grupo C","tot":64,"realiz":64,"atrasada":0,"fatal":16,"d1":21,"d2":0,"futuro":27},{"n":"VSI","grp":"Grupo C","tot":60,"realiz":60,"atrasada":1,"fatal":1,"d1":52,"d2":1,"futuro":5},{"n":"ECO","grp":"Grupo C","tot":38,"realiz":38,"atrasada":1,"fatal":10,"d1":19,"d2":1,"futuro":7},{"n":"AAP","grp":"Grupo E2","tot":33,"realiz":33,"atrasada":0,"fatal":0,"d1":12,"d2":11,"futuro":10},{"n":"GSM","grp":"Grupo B3","tot":27,"realiz":27,"atrasada":6,"fatal":8,"d1":3,"d2":0,"futuro":10},{"n":"ANB","grp":"Grupo B3","tot":26,"realiz":26,"atrasada":16,"fatal":4,"d1":5,"d2":0,"futuro":1},{"n":"JPE","grp":"Grupo B3","tot":18,"realiz":18,"atrasada":0,"fatal":5,"d1":11,"d2":0,"futuro":2},{"n":"NBG","grp":"Grupo A2","tot":17,"realiz":17,"atrasada":0,"fatal":1,"d1":8,"d2":7,"futuro":1},{"n":"RCF","grp":"Grupo E2","tot":17,"realiz":17,"atrasada":0,"fatal":5,"d1":11,"d2":0,"futuro":1},{"n":"ARC","grp":"Grupo A3","tot":7,"realiz":7,"atrasada":4,"fatal":0,"d1":0,"d2":0,"futuro":3},{"n":"ARC","grp":"Sem Grupo","tot":7,"realiz":7,"atrasada":0,"fatal":1,"d1":0,"d2":4,"futuro":2},{"n":"ARE","grp":"Grupo C","tot":7,"realiz":7,"atrasada":0,"fatal":0,"d1":4,"d2":0,"futuro":3},{"n":"NBB","grp":"Grupo E2","tot":7,"realiz":7,"atrasada":7,"fatal":0,"d1":0,"d2":0,"futuro":0},{"n":"VSI","grp":"Grupo A3","tot":7,"realiz":7,"atrasada":0,"fatal":0,"d1":7,"d2":0,"futuro":0},{"n":"JQS","grp":"Sem Grupo","tot":6,"realiz":6,"atrasada":0,"fatal":0,"d1":6,"d2":0,"futuro":0},{"n":"NRG","grp":"Grupo B1","tot":6,"realiz":6,"atrasada":1,"fatal":2,"d1":2,"d2":1,"futuro":0},{"n":"AAP","grp":"Grupo E1","tot":5,"realiz":5,"atrasada":0,"fatal":0,"d1":1,"d2":2,"futuro":2},{"n":"ECO","grp":"Grupo E1","tot":4,"realiz":4,"atrasada":0,"fatal":2,"d1":1,"d2":0,"futuro":1},{"n":"JRM","grp":"Sem Grupo","tot":4,"realiz":4,"atrasada":2,"fatal":1,"d1":1,"d2":0,"futuro":0},{"n":"SOF","grp":"Grupo A3","tot":4,"realiz":4,"atrasada":1,"fatal":3,"d1":0,"d2":0,"futuro":0},{"n":"TLI","grp":"Grupo E1","tot":3,"realiz":3,"atrasada":0,"fatal":0,"d1":3,"d2":0,"futuro":0},{"n":"BBO","grp":"Sem Grupo","tot":2,"realiz":2,"atrasada":0,"fatal":0,"d1":2,"d2":0,"futuro":0},{"n":"DPR","grp":"Sem Grupo","tot":2,"realiz":2,"atrasada":0,"fatal":0,"d1":1,"d2":0,"futuro":1},{"n":"JPE","grp":"Sem Grupo","tot":2,"realiz":2,"atrasada":0,"fatal":0,"d1":2,"d2":0,"futuro":0},{"n":"KBM","grp":"Grupo E1","tot":2,"realiz":2,"atrasada":2,"fatal":0,"d1":0,"d2":0,"futuro":0},{"n":"LMI","grp":"Sem Grupo","tot":2,"realiz":2,"atrasada":0,"fatal":0,"d1":2,"d2":0,"futuro":0},{"n":"NRG","grp":"Grupo B2","tot":2,"realiz":2,"atrasada":0,"fatal":0,"d1":2,"d2":0,"futuro":0},{"n":"ALF","grp":"Sem Grupo","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":1,"d2":0,"futuro":0},{"n":"BCU","grp":"Grupo B1","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":0,"d2":0,"futuro":1},{"n":"BCU","grp":"Grupo B2","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":0,"d2":0,"futuro":1},{"n":"CAL","grp":"Sem Grupo","tot":1,"realiz":1,"atrasada":0,"fatal":1,"d1":0,"d2":0,"futuro":0},{"n":"CIC","grp":"Grupo E1","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":0,"d2":0,"futuro":1},{"n":"JJS","grp":"Grupo B3","tot":1,"realiz":1,"atrasada":0,"fatal":1,"d1":0,"d2":0,"futuro":0},{"n":"RCF","grp":"Sem Grupo","tot":1,"realiz":1,"atrasada":0,"fatal":1,"d1":0,"d2":0,"futuro":0}];
+const AG_RESP=[{"n":"CAL","grp":"Grupo E2","tot":239,"realiz":239,"atrasada":4,"fatal":68,"d1":112,"d2":33,"futuro":22},{"n":"RFE","grp":"Grupo B1","tot":225,"realiz":225,"atrasada":19,"fatal":21,"d1":140,"d2":12,"futuro":33},{"n":"JRT","grp":"Grupo E2","tot":223,"realiz":223,"atrasada":84,"fatal":47,"d1":30,"d2":11,"futuro":51},{"n":"JQS","grp":"Grupo D1","tot":192,"realiz":192,"atrasada":0,"fatal":0,"d1":117,"d2":13,"futuro":62},{"n":"LMI","grp":"Grupo B3","tot":191,"realiz":191,"atrasada":21,"fatal":91,"d1":57,"d2":3,"futuro":19},{"n":"JJS","grp":"Grupo B1","tot":188,"realiz":188,"atrasada":114,"fatal":42,"d1":22,"d2":7,"futuro":3},{"n":"GSM","grp":"Grupo B1","tot":185,"realiz":185,"atrasada":11,"fatal":42,"d1":68,"d2":8,"futuro":56},{"n":"VRO","grp":"Grupo E1","tot":175,"realiz":175,"atrasada":29,"fatal":38,"d1":37,"d2":7,"futuro":64},{"n":"RYL","grp":"Grupo E2","tot":173,"realiz":173,"atrasada":30,"fatal":58,"d1":84,"d2":1,"futuro":0},{"n":"JPL","grp":"Grupo E1","tot":169,"realiz":169,"atrasada":5,"fatal":5,"d1":115,"d2":0,"futuro":44},{"n":"BSO","grp":"Grupo B1","tot":150,"realiz":150,"atrasada":0,"fatal":8,"d1":111,"d2":14,"futuro":17},{"n":"RRU","grp":"Grupo E2","tot":147,"realiz":147,"atrasada":11,"fatal":47,"d1":55,"d2":10,"futuro":24},{"n":"BBO","grp":"Grupo D1","tot":140,"realiz":140,"atrasada":17,"fatal":0,"d1":32,"d2":47,"futuro":44},{"n":"PSI","grp":"Grupo E1","tot":133,"realiz":133,"atrasada":14,"fatal":6,"d1":73,"d2":28,"futuro":12},{"n":"MBF","grp":"Grupo E2","tot":119,"realiz":119,"atrasada":1,"fatal":2,"d1":68,"d2":20,"futuro":28},{"n":"ARC","grp":"Grupo E2","tot":102,"realiz":102,"atrasada":6,"fatal":6,"d1":22,"d2":24,"futuro":44},{"n":"VCR","grp":"Grupo B2","tot":96,"realiz":96,"atrasada":0,"fatal":0,"d1":24,"d2":14,"futuro":58},{"n":"JRM","grp":"Grupo E1","tot":95,"realiz":95,"atrasada":15,"fatal":62,"d1":8,"d2":4,"futuro":6},{"n":"TFR","grp":"Grupo C","tot":86,"realiz":86,"atrasada":5,"fatal":25,"d1":44,"d2":5,"futuro":7},{"n":"JPE","grp":"Grupo B1","tot":84,"realiz":84,"atrasada":1,"fatal":10,"d1":66,"d2":2,"futuro":5},{"n":"ALF","grp":"Grupo E1","tot":81,"realiz":81,"atrasada":2,"fatal":2,"d1":20,"d2":29,"futuro":28},{"n":"BCF","grp":"Grupo B2","tot":72,"realiz":72,"atrasada":3,"fatal":13,"d1":42,"d2":0,"futuro":14},{"n":"ANB","grp":"Grupo B2","tot":69,"realiz":69,"atrasada":34,"fatal":13,"d1":8,"d2":3,"futuro":11},{"n":"DPR","grp":"Grupo E1","tot":68,"realiz":68,"atrasada":47,"fatal":6,"d1":5,"d2":1,"futuro":9},{"n":"RCF","grp":"Grupo C","tot":64,"realiz":64,"atrasada":0,"fatal":16,"d1":21,"d2":0,"futuro":27},{"n":"VSI","grp":"Grupo C","tot":60,"realiz":60,"atrasada":1,"fatal":1,"d1":52,"d2":1,"futuro":5},{"n":"ECO","grp":"Grupo C","tot":38,"realiz":38,"atrasada":1,"fatal":10,"d1":19,"d2":1,"futuro":7},{"n":"AAP","grp":"Grupo E2","tot":33,"realiz":33,"atrasada":0,"fatal":0,"d1":12,"d2":11,"futuro":10},{"n":"GSM","grp":"Grupo B3","tot":27,"realiz":27,"atrasada":6,"fatal":8,"d1":3,"d2":0,"futuro":10},{"n":"ANB","grp":"Grupo B3","tot":26,"realiz":26,"atrasada":16,"fatal":4,"d1":5,"d2":0,"futuro":1},{"n":"JPE","grp":"Grupo B3","tot":18,"realiz":18,"atrasada":0,"fatal":5,"d1":11,"d2":0,"futuro":2},{"n":"NBG","grp":"Grupo A2","tot":17,"realiz":17,"atrasada":0,"fatal":1,"d1":8,"d2":7,"futuro":1},{"n":"RCF","grp":"Grupo E2","tot":17,"realiz":17,"atrasada":0,"fatal":5,"d1":11,"d2":0,"futuro":1},{"n":"ARC","grp":"Grupo A3","tot":7,"realiz":7,"atrasada":4,"fatal":0,"d1":0,"d2":0,"futuro":3},{"n":"ARC","grp":"Sem Grupo","tot":7,"realiz":7,"atrasada":0,"fatal":1,"d1":0,"d2":4,"futuro":2},{"n":"ARE","grp":"Grupo C","tot":7,"realiz":7,"atrasada":0,"fatal":0,"d1":4,"d2":0,"futuro":3},{"n":"NBB","grp":"Grupo E2","tot":7,"realiz":7,"atrasada":7,"fatal":0,"d1":0,"d2":0,"futuro":0},{"n":"VSI","grp":"Grupo A3","tot":7,"realiz":7,"atrasada":0,"fatal":0,"d1":7,"d2":0,"futuro":0},{"n":"JQS","grp":"Sem Grupo","tot":6,"realiz":6,"atrasada":0,"fatal":0,"d1":6,"d2":0,"futuro":0},{"n":"NRG","grp":"Grupo B1","tot":6,"realiz":6,"atrasada":1,"fatal":2,"d1":2,"d2":1,"futuro":0},{"n":"AAP","grp":"Grupo E1","tot":5,"realiz":5,"atrasada":0,"fatal":0,"d1":1,"d2":2,"futuro":2},{"n":"ECO","grp":"Grupo E1","tot":4,"realiz":4,"atrasada":0,"fatal":2,"d1":1,"d2":0,"futuro":1},{"n":"JRM","grp":"Sem Grupo","tot":4,"realiz":4,"atrasada":2,"fatal":1,"d1":1,"d2":0,"futuro":0},{"n":"SOF","grp":"Grupo A3","tot":4,"realiz":4,"atrasada":1,"fatal":3,"d1":0,"d2":0,"futuro":0},{"n":"TLI","grp":"Grupo E1","tot":3,"realiz":3,"atrasada":0,"fatal":0,"d1":3,"d2":0,"futuro":0},{"n":"BBO","grp":"Sem Grupo","tot":2,"realiz":2,"atrasada":0,"fatal":0,"d1":2,"d2":0,"futuro":0},{"n":"DPR","grp":"Sem Grupo","tot":2,"realiz":2,"atrasada":0,"fatal":0,"d1":1,"d2":0,"futuro":1},{"n":"JPE","grp":"Sem Grupo","tot":2,"realiz":2,"atrasada":0,"fatal":0,"d1":2,"d2":0,"futuro":0},{"n":"KBM","grp":"Grupo E1","tot":2,"realiz":2,"atrasada":2,"fatal":0,"d1":0,"d2":0,"futuro":0},{"n":"LMI","grp":"Sem Grupo","tot":2,"realiz":2,"atrasada":0,"fatal":0,"d1":2,"d2":0,"futuro":0},{"n":"NRG","grp":"Grupo B2","tot":2,"realiz":2,"atrasada":0,"fatal":0,"d1":2,"d2":0,"futuro":0},{"n":"ALF","grp":"Sem Grupo","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":1,"d2":0,"futuro":0},{"n":"BCU","grp":"Grupo B1","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":0,"d2":0,"futuro":1},{"n":"BCU","grp":"Grupo B2","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":0,"d2":0,"futuro":1},{"n":"CAL","grp":"Sem Grupo","tot":1,"realiz":1,"atrasada":0,"fatal":1,"d1":0,"d2":0,"futuro":0},{"n":"JJS","grp":"Grupo B3","tot":1,"realiz":1,"atrasada":0,"fatal":1,"d1":0,"d2":0,"futuro":0},{"n":"RCF","grp":"Sem Grupo","tot":1,"realiz":1,"atrasada":0,"fatal":1,"d1":0,"d2":0,"futuro":0}];
 const AGEQ_EQUIPE=[{"equipe":"Grupo E2","tot":59,"realiz":59,"atrasada":18,"fatal":16,"d1":22,"d2":2,"futuro":1},{"equipe":"Grupo E1","tot":41,"realiz":41,"atrasada":18,"fatal":2,"d1":13,"d2":4,"futuro":4},{"equipe":"Grupo B1","tot":36,"realiz":36,"atrasada":1,"fatal":5,"d1":20,"d2":6,"futuro":4},{"equipe":"Grupo C","tot":14,"realiz":14,"atrasada":1,"fatal":5,"d1":4,"d2":1,"futuro":3},{"equipe":"Grupo D1","tot":12,"realiz":12,"atrasada":0,"fatal":1,"d1":8,"d2":1,"futuro":2},{"equipe":"Grupo B3","tot":10,"realiz":10,"atrasada":3,"fatal":4,"d1":3,"d2":0,"futuro":0},{"equipe":"Grupo B2","tot":4,"realiz":4,"atrasada":0,"fatal":1,"d1":1,"d2":0,"futuro":2},{"equipe":"Grupo A2","tot":2,"realiz":2,"atrasada":1,"fatal":0,"d1":0,"d2":0,"futuro":1},{"equipe":"Sem Grupo","tot":1,"realiz":1,"atrasada":0,"fatal":1,"d1":0,"d2":0,"futuro":0}];
 const AGEQ_RESP=[{"n":"RYL","grp":"Grupo E2","tot":17,"realiz":17,"atrasada":9,"fatal":6,"d1":2,"d2":0,"futuro":0},{"n":"JPL","grp":"Grupo E1","tot":14,"realiz":14,"atrasada":1,"fatal":1,"d1":10,"d2":1,"futuro":1},{"n":"VRO","grp":"Grupo E1","tot":14,"realiz":14,"atrasada":14,"fatal":0,"d1":0,"d2":0,"futuro":0},{"n":"RFE","grp":"Grupo B1","tot":12,"realiz":12,"atrasada":0,"fatal":0,"d1":7,"d2":4,"futuro":1},{"n":"CAL","grp":"Grupo E2","tot":11,"realiz":11,"atrasada":1,"fatal":6,"d1":4,"d2":0,"futuro":0},{"n":"JRT","grp":"Grupo E2","tot":10,"realiz":10,"atrasada":5,"fatal":2,"d1":2,"d2":1,"futuro":0},{"n":"JQS","grp":"Grupo D1","tot":9,"realiz":9,"atrasada":0,"fatal":0,"d1":7,"d2":1,"futuro":1},{"n":"MBF","grp":"Grupo E2","tot":9,"realiz":9,"atrasada":0,"fatal":0,"d1":9,"d2":0,"futuro":0},{"n":"JPE","grp":"Grupo B1","tot":8,"realiz":8,"atrasada":0,"fatal":1,"d1":6,"d2":0,"futuro":1},{"n":"ALF","grp":"Grupo E1","tot":7,"realiz":7,"atrasada":0,"fatal":0,"d1":1,"d2":3,"futuro":3},{"n":"JJS","grp":"Grupo B1","tot":7,"realiz":7,"atrasada":1,"fatal":3,"d1":2,"d2":1,"futuro":0},{"n":"RRU","grp":"Grupo E2","tot":7,"realiz":7,"atrasada":2,"fatal":2,"d1":2,"d2":0,"futuro":1},{"n":"BSO","grp":"Grupo B1","tot":5,"realiz":5,"atrasada":0,"fatal":0,"d1":4,"d2":1,"futuro":0},{"n":"LMI","grp":"Grupo B3","tot":5,"realiz":5,"atrasada":2,"fatal":3,"d1":0,"d2":0,"futuro":0},{"n":"JPE","grp":"Grupo B3","tot":4,"realiz":4,"atrasada":1,"fatal":1,"d1":2,"d2":0,"futuro":0},{"n":"TFR","grp":"Grupo C","tot":4,"realiz":4,"atrasada":0,"fatal":4,"d1":0,"d2":0,"futuro":0},{"n":"VSI","grp":"Grupo C","tot":4,"realiz":4,"atrasada":0,"fatal":0,"d1":2,"d2":0,"futuro":2},{"n":"BBO","grp":"Grupo D1","tot":3,"realiz":3,"atrasada":0,"fatal":1,"d1":1,"d2":0,"futuro":1},{"n":"ECO","grp":"Grupo C","tot":3,"realiz":3,"atrasada":1,"fatal":0,"d1":1,"d2":0,"futuro":1},{"n":"NRG","grp":"Grupo B1","tot":3,"realiz":3,"atrasada":0,"fatal":1,"d1":1,"d2":0,"futuro":1},{"n":"RCF","grp":"Grupo C","tot":3,"realiz":3,"atrasada":0,"fatal":1,"d1":1,"d2":1,"futuro":0},{"n":"ARC","grp":"Grupo E2","tot":2,"realiz":2,"atrasada":0,"fatal":0,"d1":1,"d2":1,"futuro":0},{"n":"BCF","grp":"Grupo B2","tot":2,"realiz":2,"atrasada":0,"fatal":1,"d1":0,"d2":0,"futuro":1},{"n":"KBM","grp":"Grupo E1","tot":2,"realiz":2,"atrasada":2,"fatal":0,"d1":0,"d2":0,"futuro":0},{"n":"NBG","grp":"Grupo A2","tot":2,"realiz":2,"atrasada":1,"fatal":0,"d1":0,"d2":0,"futuro":1},{"n":"RCF","grp":"Grupo E2","tot":2,"realiz":2,"atrasada":0,"fatal":0,"d1":2,"d2":0,"futuro":0},{"n":"VCR","grp":"Grupo B2","tot":2,"realiz":2,"atrasada":0,"fatal":0,"d1":1,"d2":0,"futuro":1},{"n":"AAP","grp":"Grupo E1","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":1,"d2":0,"futuro":0},{"n":"BBO","grp":"Sem Grupo","tot":1,"realiz":1,"atrasada":0,"fatal":1,"d1":0,"d2":0,"futuro":0},{"n":"ECO","grp":"Grupo E1","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":1,"d2":0,"futuro":0},{"n":"GSM","grp":"Grupo B1","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":0,"d2":0,"futuro":1},{"n":"GSM","grp":"Grupo B3","tot":1,"realiz":1,"atrasada":0,"fatal":0,"d1":1,"d2":0,"futuro":0},{"n":"NBB","grp":"Grupo E2","tot":1,"realiz":1,"atrasada":1,"fatal":0,"d1":0,"d2":0,"futuro":0},{"n":"PSI","grp":"Grupo E1","tot":1,"realiz":1,"atrasada":1,"fatal":0,"d1":0,"d2":0,"futuro":0},{"n":"TLI","grp":"Grupo E1","tot":1,"realiz":1,"atrasada":0,"fatal":1,"d1":0,"d2":0,"futuro":0}];
 const AG_COLORS={"Grupo A2":"#00A9E0","Grupo A3":"#007EAA","Grupo B1":"#003B5C","Grupo B2":"#00557B","Grupo B3":"#00A9E0","Grupo C":"#006D96","Grupo D1":"#004D73","Grupo E1":"#008FC2","Grupo E2":"#003B5C","CONTRATAÇÕES ESPECIAIS":"#5F7E92","Outros":"#7E98AA"};
@@ -2341,7 +2361,238 @@ updateFilterButtons();
   </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.min.js"></script>
+<script>
+// ==================== IMPORTAÇÃO EXCEL ====================
+function setupExcelImport() {
+  const fileInput = document.getElementById('excel-input');
+  const uploadStatus = document.getElementById('upload-status');
 
+  fileInput.addEventListener('change', (e) => {
+    if (e.target.files.length) {
+      processExcelFile(e.target.files[0]);
+    }
+  });
+}
+
+function processExcelFile(file) {
+  const uploadStatus = document.getElementById('upload-status');
+  
+  if (!file.name.match(/\.(xlsx|xls)$/)) {
+    uploadStatus.textContent = '❌ Arquivo deve ser .xlsx ou .xls';
+    uploadStatus.className = 'upload-status error';
+    return;
+  }
+
+  uploadStatus.textContent = '⏳ Processando arquivo...';
+  uploadStatus.className = 'upload-status';
+
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    try {
+      const data = new Uint8Array(e.target.result);
+      const workbook = XLSX.read(data, { type: 'array' });
+      
+      // Processa a primeira planilha
+      const sheetName = workbook.SheetNames[0];
+      const worksheet = workbook.Sheets[sheetName];
+      const jsonData = XLSX.utils.sheet_to_json(worksheet);
+
+      // Transforma dados do Excel no formato esperado
+      let newResp = parseExcelData(jsonData);
+      
+      // Normaliza todos os nomes para padrão completo
+      newResp = newResp.map(r => ({
+        ...r,
+        n: normalizarNome(r.n) // Garante que é o nome completo
+      }));
+      
+      // Atualiza variável global RESP
+      window.RESP = newResp;
+      
+      // Reinicializa o dashboard com novos dados
+      reinitializeDashboard();
+
+      uploadStatus.textContent = `✅ Importado com sucesso! ${newResp.length} registros carregados`;
+      uploadStatus.className = 'upload-status success';
+    } catch (err) {
+      console.error('Erro ao processar Excel:', err);
+      uploadStatus.textContent = `❌ Erro: ${err.message}`;
+      uploadStatus.className = 'upload-status error';
+    }
+  };
+  reader.readAsArrayBuffer(file);
+}
+
+function parseExcelData(jsonData) {
+  // Mapa de siglas para nomes completos (para compatibilidade)
+  const MAPA_SIGLAS = {
+    'RFE': 'Rafael Rocha Ferreira', 'BSO': 'Beatriz Santiago de Souza',
+    'GSM': 'Guilherme Silva Morimoto', 'JJS': 'Jenifer de Jesus Silva',
+    'JPE': 'Juliana Perucci', 'EVV': 'Evandro Vecchio Vessoni',
+    'LCG': 'Lorena Rodrigues Costa Gonçalves', 'CGV': 'Cícera Gabriela Ferreira Vicente',
+    'GMG': 'Giovanna Malheiros Gatto', 'VAR': 'Vitória Araujo Carvalho',
+    'BCF': 'Bruna Cembranelli Fazenda', 'VCR': 'Vanessa de Cassia Castrequini Rosa',
+    'RWD': 'Rafaella Wittmann Domenicis', 'ANB': 'Anna Carolina Balbino Gatti Baani',
+    'NRG': 'Nicolau Rafael Guimarães Coelho', 'GSI': 'Geovanna Rodrigues Silva',
+    'IGA': 'Isadora Silva Gagliardi', 'LMI': 'Letícia Meneghini Fontes',
+    'BFM': 'Brenna Braga Freitas Malta', 'MCD': 'Maria Carolina Silva Santos Dias',
+    'VRO': 'Vinícius Ronchi Arruda', 'JPL': 'Júlia Priego Lopes da Silva',
+    'PSI': 'Paloma da Silva Santos', 'JRM': 'Joice Ramos Miranda',
+    'ALF': 'Aline Ferreira Miron', 'DPR': 'Daniela Prandi Pedro Ricca',
+    'KBM': 'Keyla Maria Barbosa Silva Moraes', 'LLL': 'Larissa Lekich Lobenwein',
+    'EMM': 'Ellen Mary Maciel Silva', 'DJE': 'Diana de Jesus Santos',
+    'LPJ': 'Leonardo Pereira de Jesus', 'GVM': 'Giulia Vendramini Milani',
+    'GFO': 'Gabriel Fretas de Oliveira', 'NLO': 'Nathalie Louise dos Santos Rodrigues Dias',
+    'RRU': 'Richard Ruan Leo da Silva', 'JRT': 'Jackeline Romeu Torres',
+    'CAL': 'Camila Alves Magalhães de Paula', 'RYL': 'Rafael Yepez do Lago',
+    'MBF': 'Mariana Borges de Menezes Fávaro', 'BIM': 'Bianca Sayuri Matsunaga',
+    'ARC': 'Arthur Rodrigues Rios Toledo de Castro', 'RCF': 'Rafael Camargo Felisbino',
+    'AAP': 'André Alessandro de Paula', 'GIF': 'Giovanna Teixeira Franco',
+    'KTO': 'Karoline de Castro Torres', 'BSS': 'Brenda da Silva dos Santos',
+    'JLM': 'Juan Leonardo Ikier Moraes', 'AML': 'Amanda Mesquita de Lima Araujo',
+    'FFI': 'Fabiano Fritz Ferreira Filho', 'WSF': 'Washington Soares Silva Filho',
+    'NBB': 'Natalia Bezerra Baliero', 'TFR': 'Thiago Frid Figueiredo Rossi',
+    'ECO': 'Erik Mota Coppi', 'CDS': 'Carolina Duarte de Souza',
+    'JQS': 'Jessica Cerqueira Silva', 'BBO': 'Bianca Bolanhi Camacho',
+    'NBG': 'Natália Biondi Gaggini Robles', 'SOF': 'Sofia Freire',
+    'VSI': 'Vinicius da Silva Cerqueira', 'EYN': 'Erick Yuji Nakama',
+    'TCE': 'Thaís Catharine Cardozo Esteves', 'AAO': 'Aline Amorim Oliveira',
+    'ALH': 'Alícia Marcondes Hamati', 'CAR': 'Chris Carvalho',
+    'TCO': 'Tamires Lins Costa', 'ARE': 'Amanda Pereira Reis de Paula Cardoso',
+    'TLI': 'Tamires Lins Costa'
+  };
+
+  return jsonData.map(row => {
+    let responsavel = (row['Responsável'] || row['responsavel'] || row['Nome'] || row['nome'] || 'N/A').trim();
+    
+    // Se for uma sigla, converte para nome completo
+    if (responsavel in MAPA_SIGLAS) {
+      responsavel = MAPA_SIGLAS[responsavel];
+    }
+    
+    const grupoMatch = (row['Grupo'] || row['grupo'] || 'N/A').trim();
+    
+    return {
+      n: responsavel, // Nome completo
+      grp: grupoMatch,
+      ven: parseInt(row['Vencido'] || row['vencido'] || 0) || 0,
+      fat: parseInt(row['Fatal'] || row['fatal'] || row['FATAL'] || 0) || 0,
+      d1: parseInt(row['D-1'] || row['D1'] || row['d1'] || 0) || 0,
+      d2: parseInt(row['D-2'] || row['D2'] || row['d2'] || 0) || 0,
+      fut: parseInt(row['Futuro'] || row['futuro'] || row['FUTURO'] || 0) || 0,
+      tot: parseInt(row['Total'] || row['total'] || row['TOTAL'] || 0) || 0,
+      fora: parseInt(row['Fora HR'] || row['fora'] || row['Fora'] || 0) || 0,
+      ff: parseInt(row['Fatal+Fora'] || row['ff'] || 0) || 0,
+      ant: parseInt(row['Antecipado'] || row['antecipado'] || 0) || 0
+    };
+  }).filter(r => r.n && r.n !== 'N/A');
+}
+
+function reinitializeDashboard() {
+  // Recalcula os agregados (BY_GRUPO e BY_STATUS)
+  window.BY_GRUPO = {};
+  window.BY_STATUS = {
+    fatal: 0, vencido: 0, d1: 0, futuro: 0, antecipado: 0, fora: 0, fatfora: 0
+  };
+
+  // Agrupa dados por grupo e calcula estatísticas
+  window.RESP.forEach(r => {
+    if (!window.BY_GRUPO[r.grp]) {
+      window.BY_GRUPO[r.grp] = { fat: 0, d1: 0, d2: 0, fut: 0, total: 0, fora: 0 };
+    }
+    window.BY_GRUPO[r.grp].fat += r.fat || 0;
+    window.BY_GRUPO[r.grp].d1 += r.d1 || 0;
+    window.BY_GRUPO[r.grp].d2 += r.d2 || 0;
+    window.BY_GRUPO[r.grp].fut += r.fut || 0;
+    window.BY_GRUPO[r.grp].total += r.tot || 0;
+    window.BY_GRUPO[r.grp].fora += r.fora || 0;
+
+    // Status agregados
+    window.BY_STATUS.fatal += r.fat || 0;
+    window.BY_STATUS.d1 += r.d1 || 0;
+    window.BY_STATUS.futuro += r.fut + (r.d2 || 0);
+    window.BY_STATUS.antecipado += r.ant || 0;
+    window.BY_STATUS.fora += r.fora || 0;
+    if ((r.fat || 0) > 0 && (r.fora || 0) > 0) window.BY_STATUS.fatfora++;
+  });
+
+  // Recalcula CONSOLIDADO MENSAL
+  recalculateConsolidado();
+
+  // Limpa o dashboard
+  const kpisEl = document.getElementById('kpis');
+  const cardsEl = document.getElementById('grupo-cards');
+  const fatTb = document.getElementById('socios-tb-fat');
+  const cleanTb = document.getElementById('socios-tb-clean');
+  const chartEl = document.getElementById('socios-chart');
+  const sociosCardsEl = document.getElementById('socios-cards');
+
+  if (kpisEl) kpisEl.innerHTML = '';
+  if (cardsEl) cardsEl.innerHTML = '';
+  if (fatTb) fatTb.innerHTML = '';
+  if (cleanTb) cleanTb.innerHTML = '';
+  if (chartEl) chartEl.innerHTML = '';
+  if (sociosCardsEl) sociosCardsEl.innerHTML = '';
+
+  // Recalcula e redesenha o dashboard
+  initDashboard();
+}
+
+function recalculateConsolidado() {
+  // Atualiza o consolidado mensal com os novos dados
+  if (!window.ACUMULADO_DATA) window.ACUMULADO_DATA = { semana: {}, mes: {} };
+  
+  // Calcula totais mensais a partir dos dados do RESP
+  const totaisMes = {
+    'Prazo': 0,
+    'Agenda': 0,
+    'Agenda Equipe': 0,
+    'Vencido': 0,
+    'Fatal': 0,
+    'D-1': 0,
+    'D-2': 0,
+    'Futuro': 0,
+    'Total': 0
+  };
+
+  // Soma todos os dados
+  (window.RESP || []).forEach(r => {
+    totaisMes['Vencido'] += r.ven || 0;
+    totaisMes['Fatal'] += r.fat || 0;
+    totaisMes['D-1'] += r.d1 || 0;
+    totaisMes['D-2'] += r.d2 || 0;
+    totaisMes['Futuro'] += r.fut || 0;
+    totaisMes['Total'] += r.tot || 0;
+  });
+
+  // Atualiza o consolidado mensal
+  const mesKey = new Date().toISOString().substring(0, 7).replace('-', '-'); // 2026-05
+  window.ACUMULADO_DATA.mes[mesKey] = totaisMes;
+
+  // Atualiza a tabela HTML do consolidado mensal
+  const mesRow = document.querySelector('tr[data-acumulo="mes"]');
+  if (mesRow) {
+    mesRow.innerHTML = `
+      <td><b>${mesKey} acumulado</b></td>
+      <td class="c"><span class="vbad muted">${totaisMes['Prazo']}</span></td>
+      <td class="c"><span class="vbad blu">${totaisMes['Agenda']}</span></td>
+      <td class="c"><span class="vbad grn">${totaisMes['Agenda Equipe']}</span></td>
+      <td class="c"><span class="vbad red">${totaisMes['Vencido']}</span></td>
+      <td class="c"><span class="vbad fat">${totaisMes['Fatal']}</span></td>
+      <td class="c"><span class="vbad yel">${totaisMes['D-1']}</span></td>
+      <td class="c"><span class="vbad blu">${totaisMes['D-2']}</span></td>
+      <td class="c"><span class="vbad grn">${totaisMes['Futuro']}</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">${totaisMes['Total']}</td>
+    `;
+  }
+}
+
+// Inicializa o sistema de upload quando o DOM está pronto
+document.addEventListener('DOMContentLoaded', setupExcelImport);
+
+</script>
 <script>
 /* Limpeza final de siglas pendentes e conferência de cliques */
 (function(){
@@ -2396,6 +2647,7 @@ updateFilterButtons();
 
 
 <script>
+function initDashboard() {
 (function(){
   if(typeof BY_GRUPO==='undefined'||typeof RESP==='undefined') return;
   const NOMES_S = typeof NOMES !== 'undefined' ? NOMES : {};
@@ -2518,6 +2770,9 @@ updateFilterButtons();
   function fixGrid(){ cardsEl.style.gridTemplateColumns=mq.matches?'repeat(2,1fr)':'repeat(3,1fr)'; }
   fixGrid(); mq.addEventListener('change',fixGrid);
 })();
+}
+// Executar automaticamente ao carregar a página
+document.addEventListener('DOMContentLoaded', initDashboard);
 </script>
 </body>
 </html>
