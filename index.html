@@ -998,7 +998,7 @@ div[style*="background: #117A65"]{
 </head>
 <body>
 <div class="hdr">
-<img src="https://www.peixotoecury.com.br/assets/images/ui/logo-light.png" style="height:42px;width:auto;object-fit:contain;" alt="Peixoto e Cury Advogados">
+<img src="10.png" style="height:42px;width:auto;object-fit:contain;" alt="Peixoto e Cury Advogados">
   <div class="hdr-info">
     <h1>⚖ Baixas de Prazos — Análise Semanal</h1>
     <p>Controladoria Jurídica · Área Trabalhista · 11/05/2026 a 17/05/2026</p>
@@ -1444,6 +1444,13 @@ div[style*="background: #117A65"]{
 </div>
 
 <script>
+// ── Auth guard ──────────────────────────────────────────────────
+(function(){
+  var auth = sessionStorage.getItem('lawgico_baixados_auth')==='1' ||
+             localStorage.getItem('lawgico_baixados_auth')==='1';
+  if (!auth) { window.location.replace('login.html'); }
+})();
+// ────────────────────────────────────────────────────────────────
 
 const TIMELINE_DATA = {"2026-05-11":{"Agenda":680,"Agenda Equipe":35,"Prazo":276,"Total":991,"Vencido":194,"Fatal":34,"D-1":475,"D-2":86,"Futuro":202},"2026-05-12":{"Agenda":725,"Agenda Equipe":33,"Prazo":308,"Total":1066,"Vencido":30,"Fatal":202,"D-1":509,"D-2":88,"Futuro":237},"2026-05-13":{"Agenda":675,"Agenda Equipe":44,"Prazo":267,"Total":986,"Vencido":88,"Fatal":154,"D-1":405,"D-2":119,"Futuro":220},"2026-05-14":{"Agenda":745,"Agenda Equipe":18,"Prazo":259,"Total":1022,"Vencido":84,"Fatal":172,"D-1":396,"D-2":166,"Futuro":204},"2026-05-15":{"Agenda":862,"Agenda Equipe":46,"Prazo":269,"Total":1177,"Vencido":133,"Fatal":265,"D-1":441,"D-2":0,"Futuro":338},"2026-05-17":{"Agenda":101,"Agenda Equipe":3,"Prazo":17,"Total":121,"Vencido":27,"Fatal":65,"D-1":0,"D-2":10,"Futuro":19}};
 function openTimelineDay(dateKey){
