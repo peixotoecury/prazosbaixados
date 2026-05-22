@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>LAWgico Baixados — Login</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;min-height:100vh;display:flex;overflow:hidden;}
+
+/* ── PAINEL ESQUERDO ── */
+.left{
+  width:42%;min-height:100vh;
+  background:linear-gradient(160deg,#001e36 0%,#003B5C 50%,#005080 100%);
+  display:flex;flex-direction:column;
+  padding:48px 44px;
+  position:relative;overflow:hidden;
+}
+.left::before{
+  content:'';position:absolute;bottom:-80px;right:-80px;
+  width:320px;height:320px;border-radius:50%;
+  border:1px solid rgba(0,169,224,.12);
+  box-shadow:0 0 0 60px rgba(0,169,224,.04),0 0 0 120px rgba(0,169,224,.02);
+}
+.left::after{
+  content:'';position:absolute;top:-40px;left:-40px;
+  width:200px;height:200px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.05);
+}
+
+/* Logo */
+.logo-wrap{margin-bottom:52px;}
+.logo-wordmark{display:flex;align-items:flex-end;line-height:1;}
+.logo-law{font-size:52px;font-weight:900;color:#fff;letter-spacing:-2px;}
+.logo-gico-col{display:flex;flex-direction:column;align-items:flex-start;}
+.logo-module{font-size:12px;font-weight:400;color:rgba(255,255,255,.8);letter-spacing:1px;align-self:flex-end;margin-bottom:0px;}
+.logo-gico{font-size:52px;font-weight:300;color:#fff;letter-spacing:-2px;line-height:1;}
+.logo-tagline{font-size:10px;color:rgba(255,255,255,.45);letter-spacing:4px;font-weight:300;margin-top:4px;}
+
+/* Features */
+.features{display:flex;flex-direction:column;gap:28px;margin-top:auto;}
+.feat{display:flex;align-items:flex-start;gap:16px;}
+.feat-icon{
+  width:42px;height:42px;border-radius:10px;flex-shrink:0;
+  border:1.5px solid rgba(0,169,224,.5);
+  display:flex;align-items:center;justify-content:center;
+  color:#00A9E0;font-size:18px;
+  background:rgba(0,169,224,.08);
+}
+.feat-text h4{font-size:14px;font-weight:600;color:#fff;margin-bottom:4px;}
+.feat-text p{font-size:12px;color:rgba(255,255,255,.5);line-height:1.5;}
+
+/* ── PAINEL DIREITO ── */
+.right{
+  flex:1;min-height:100vh;
+  background:#fff;
+  display:flex;align-items:center;justify-content:center;
+  padding:48px;
+}
+.form-wrap{width:100%;max-width:400px;}
+.form-title{font-size:32px;font-weight:700;color:#001e36;margin-bottom:8px;letter-spacing:-0.5px;}
+.form-sub{font-size:14px;color:#7a9bb5;margin-bottom:40px;}
+
+.field{margin-bottom:20px;}
+.field label{
+  display:block;font-size:11px;font-weight:700;
+  color:#001e36;letter-spacing:1.5px;text-transform:uppercase;
+  margin-bottom:8px;
+}
+.input-wrap{
+  display:flex;align-items:center;
+  border:1.5px solid #e2eaf0;border-radius:10px;
+  padding:0 14px;gap:10px;
+  transition:border-color .2s;
+  background:#fafcfe;
+}
+.input-wrap:focus-within{border-color:#003B5C;background:#fff;}
+.input-wrap svg{flex-shrink:0;opacity:.4;}
+.input-wrap input{
+  flex:1;border:none;outline:none;
+  font-size:14px;color:#001e36;
+  padding:14px 0;background:transparent;
+  font-family:'Inter',sans-serif;
+}
+.input-wrap input::placeholder{color:#b0c4d8;}
+.eye-btn{
+  background:none;border:none;cursor:pointer;
+  color:#b0c4d8;padding:0;display:flex;align-items:center;
+  transition:color .2s;
+}
+.eye-btn:hover{color:#003B5C;}
+
+.remember{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:28px;cursor:pointer;
+}
+.remember input[type=checkbox]{
+  width:16px;height:16px;cursor:pointer;
+  accent-color:#003B5C;
+}
+.remember span{font-size:13px;color:#7a9bb5;}
+
+.btn-login{
+  width:100%;padding:15px;
+  background:linear-gradient(135deg,#002a46,#003B5C);
+  color:#fff;font-size:15px;font-weight:600;
+  border:none;border-radius:10px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  transition:all .2s;font-family:'Inter',sans-serif;
+  letter-spacing:.3px;
+}
+.btn-login:hover{background:linear-gradient(135deg,#003B5C,#005080);transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,59,92,.25);}
+.btn-login:active{transform:translateY(0);}
+
+.divider{
+  display:flex;align-items:center;gap:16px;
+  margin:24px 0;color:#c8d8e4;font-size:12px;
+}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:#e8f0f5;}
+
+.link-forgot{
+  display:block;text-align:center;
+  font-size:13px;color:#00A9E0;text-decoration:none;
+  margin-top:20px;font-weight:500;
+}
+.link-forgot:hover{text-decoration:underline;}
+
+.restricted{
+  text-align:center;font-size:12px;color:#b0c4d8;
+  margin-top:10px;
+}
+
+/* Erro */
+.error-msg{
+  display:none;
+  background:rgba(192,57,43,.08);border:1px solid rgba(192,57,43,.25);
+  color:#c0392b;font-size:12px;font-weight:500;
+  padding:10px 14px;border-radius:8px;margin-bottom:16px;
+  border-left:3px solid #c0392b;
+}
+.error-msg.show{display:block;}
+
+@media(max-width:768px){
+  body{flex-direction:column;}
+  .left{width:100%;min-height:auto;padding:32px 28px;}
+  .logo-law,.logo-gico{font-size:38px;}
+  .features{gap:20px;margin-top:32px;}
+  .right{padding:32px 24px;}
+}
+</style>
+</head>
+<body>
+
+<!-- PAINEL ESQUERDO -->
+<div class="left">
+  <div class="logo-wrap">
+    <div class="logo-wordmark">
+      <span class="logo-law">LAW</span>
+      <div class="logo-gico-col">
+        <span class="logo-module">baixados</span>
+        <span class="logo-gico">gico</span>
+      </div>
+    </div>
+    <div class="logo-tagline">lawyers at work</div>
+  </div>
+
+  <div class="features">
+    <div class="feat">
+      <div class="feat-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="feat-text">
+        <h4>Controle de baixados</h4>
+        <p>Gestão completa dos processos encerrados e baixados.</p>
+      </div>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <div class="feat-text">
+        <h4>Arquivamento estratégico</h4>
+        <p>Organização centralizada dos históricos processuais.</p>
+      </div>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      </div>
+      <div class="feat-text">
+        <h4>Indicadores gerenciais</h4>
+        <p>Acompanhamento analítico de encerramentos e produtividade.</p>
+      </div>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+      <div class="feat-text">
+        <h4>Rastreamento e auditoria</h4>
+        <p>Controle detalhado das movimentações e status finais.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAINEL DIREITO -->
+<div class="right">
+  <div class="form-wrap">
+    <h1 class="form-title">Fazer login</h1>
+    <p class="form-sub">Acesse sua conta LAWgico Baixados</p>
+
+    <div class="error-msg" id="error-msg">Usuário ou senha incorretos. Tente novamente.</div>
+
+    <div class="field">
+      <label>E-mail / Login</label>
+      <div class="input-wrap">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <input type="text" id="login" placeholder="controladoria" autocomplete="username"/>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Senha</label>
+      <div class="input-wrap">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <input type="password" id="senha" placeholder="••••••••" autocomplete="current-password"
+          onkeydown="if(event.key==='Enter') doLogin()"/>
+        <button class="eye-btn" type="button" onclick="toggleSenha(this)">
+          <svg id="eye-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <label class="remember">
+      <input type="checkbox" id="remember"/>
+      <span>Lembrar meu acesso</span>
+    </label>
+
+    <button class="btn-login" onclick="doLogin()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="12" r="5"/><path d="M15.5 7.5 19 4l.5.5L18 6l1.5 1.5-.5.5L17.5 6.5 16 8z"/><path d="M15 12h7"/></svg>
+      Entrar
+    </button>
+
+    <a href="#" class="link-forgot" onclick="alert('Contate o administrador do sistema para redefinir sua senha.');return false;">Esqueceu sua senha?</a>
+    <div class="divider">ou</div>
+    <div class="restricted">Acesso restrito — Peixoto &amp; Cury Advogados</div>
+  </div>
+</div>
+
+<script>
+// Usuários autorizados: { login, senha }
+const USERS = [
+  { login: 'admin',          senha: 'Admin@2026' },
+  { login: 'controladoria',  senha: '123456'     },
+  { login: 'jenifer.silva',  senha: '123456'     },
+  { login: 'visualizador',   senha: '123456'     },
+];
+
+// Se já autenticado, vai direto para o sistema
+const storage = localStorage.getItem('lawgico_baixados_remember') === '1' ? localStorage : sessionStorage;
+if (storage.getItem('lawgico_baixados_auth') === '1') {
+  window.location.replace('index.html');
+}
+
+function doLogin() {
+  const login = document.getElementById('login').value.trim();
+  const senha = document.getElementById('senha').value;
+  const lembrar = document.getElementById('remember').checked;
+  const err = document.getElementById('error-msg');
+
+  const ok = USERS.some(u => u.login === login && u.senha === senha);
+  if (ok) {
+    err.classList.remove('show');
+    const store = lembrar ? localStorage : sessionStorage;
+    store.setItem('lawgico_baixados_auth', '1');
+    if (lembrar) localStorage.setItem('lawgico_baixados_remember', '1');
+    window.location.replace('index.html');
+  } else {
+    err.classList.add('show');
+    document.getElementById('senha').value = '';
+    document.getElementById('senha').focus();
+  }
+}
+
+function toggleSenha(btn) {
+  const input = document.getElementById('senha');
+  const icon  = document.getElementById('eye-icon');
+  if (input.type === 'password') {
+    input.type = 'text';
+    icon.innerHTML = '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>';
+  } else {
+    input.type = 'password';
+    icon.innerHTML = '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>';
+  }
+}
+</script>
+</body>
+</html>
