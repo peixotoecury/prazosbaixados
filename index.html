@@ -533,6 +533,8 @@ tr[data-timeline-date]:hover td{background:#EAF6FB!important;box-shadow:inset 3p
 .hist-card .hvalue{font-size:22px;font-weight:800;color:var(--pc-escuro);line-height:1}
 .hist-table-wrap{max-height:440px!important;overflow:auto}
 .hist-table-wrap table{min-width:980px}
+.hist-prev-row td{background:rgba(240,247,252,.55)!important;border-bottom:none!important}
+.hist-prev-row .vbad{opacity:.7}.hist-prev-row .risk-chip{opacity:.75}
 .trend-chip{display:inline-block;border-radius:14px;padding:3px 9px;font-size:10px;font-weight:800;border:1px solid #D8E7F0;background:#F7FCFF;color:#003B5C;white-space:nowrap}
 .trend-chip.bad{background:rgba(192,57,43,.10);border-color:rgba(192,57,43,.35);color:#C0392B}
 .trend-chip.mid{background:rgba(230,126,34,.12);border-color:rgba(230,126,34,.30);color:#B55300}
@@ -1555,12 +1557,23 @@ div[style*="background: #117A65"]{
           <td class="c"><span class="vbad grn">1.200</span></td>
           <td class="c" style="font-weight:800;color:var(--pc-escuro)">5.819</td>
         </tr><tr data-acumulo="semana" data-acumulo-key="2026-S20" onclick="openAcumulado('semana','2026-S20')" title="Clique para detalhar o acumulado">
+          <td><b>Semana 20 · 11/05 a 17/05</b></td>
+          <td class="c"><span class="vbad muted">1.396</span></td>
+          <td class="c"><span class="vbad blu">3.788</span></td>
+          <td class="c"><span class="vbad grn">179</span></td>
+          <td class="c"><span class="vbad red">556</span></td>
+          <td class="c"><span class="vbad fat">892</span></td>
+          <td class="c"><span class="vbad yel">2.226</span></td>
+          <td class="c"><span class="vbad blu">469</span></td>
+          <td class="c"><span class="vbad grn">1.220</span></td>
+          <td class="c" style="font-weight:800;color:var(--pc-escuro)">5.363</td>
+        </tr><tr data-acumulo="semana" data-acumulo-key="2026-S21" onclick="openAcumulado('semana','2026-S21')" title="Clique para detalhar o acumulado">
           <td><b>Semana 21 · 18/05 a 24/05</b></td>
-          <td class="c"><span class="vbad muted">1.370</span></td>
-          <td class="c"><span class="vbad blu">3.992</span></td>
-          <td class="c"><span class="vbad grn">320</span></td>
-          <td class="c"><span class="vbad red">524</span></td>
-          <td class="c"><span class="vbad fat">1.370</span></td>
+          <td class="c"><span class="vbad muted">1.390</span></td>
+          <td class="c"><span class="vbad blu">3.814</span></td>
+          <td class="c"><span class="vbad grn">206</span></td>
+          <td class="c"><span class="vbad red">488</span></td>
+          <td class="c"><span class="vbad fat">882</span></td>
           <td class="c"><span class="vbad yel">2.239</span></td>
           <td class="c"><span class="vbad blu">575</span></td>
           <td class="c"><span class="vbad grn">1.226</span></td>
@@ -1589,9 +1602,9 @@ div[style*="background: #117A65"]{
   </div>
 
   <div class="hist-section pnl">
-    <div class="ptitle ble">📈 Evolução Semanal — Prazos Processuais <span class="pcnt">por profissional · fatal, vencido, D-1, D-2 e fora do horário</span></div>
+    <div class="ptitle ble">📈 Comparativo Semanal por Profissional <span class="pcnt">S20 (11/05–17/05) vs S21 (18/05–24/05) · fatal, vencido, D-1, D-2 e fora do horário</span></div>
     <div class="exec-note" style="margin:12px 14px">
-      <b>Como usar:</b> esta aba considera exclusivamente prazos processuais. A análise é individual por profissional, consolidando todos os grupos em que a pessoa atuou, para evitar duplicidade e identificar quem reduziu risco, quem mantém recorrência de fatal/fora do horário e quem está melhorando.
+      <b>Como ler:</b> cada profissional aparece com duas linhas — a linha clara é a semana anterior (S20 · 11/05 a 17/05) e a linha normal é a semana atual (S21 · 18/05 a 24/05). A coluna <b>Evolução</b> mostra se o índice de risco melhorou, piorou ou ficou estável na comparação entre as duas semanas.
     </div>
     <div class="hist-summary" id="hist-summary" style="padding:0 14px"></div>
     <div class="scr hist-table-wrap"><table>
@@ -1617,7 +1630,7 @@ div[style*="background: #117A65"]{
 })();
 // ────────────────────────────────────────────────────────────────
 
-const TIMELINE_DATA = {"2026-05-11":{"Agenda":680,"Agenda Equipe":35,"Prazo":276,"Total":991,"Vencido":194,"Fatal":34,"D-1":475,"D-2":86,"Futuro":202},"2026-05-12":{"Agenda":725,"Agenda Equipe":33,"Prazo":308,"Total":1066,"Vencido":30,"Fatal":202,"D-1":509,"D-2":88,"Futuro":237},"2026-05-13":{"Agenda":675,"Agenda Equipe":44,"Prazo":267,"Total":986,"Vencido":88,"Fatal":154,"D-1":405,"D-2":119,"Futuro":220},"2026-05-14":{"Agenda":745,"Agenda Equipe":18,"Prazo":259,"Total":1022,"Vencido":84,"Fatal":172,"D-1":396,"D-2":166,"Futuro":204},"2026-05-15":{"Agenda":862,"Agenda Equipe":46,"Prazo":269,"Total":1177,"Vencido":133,"Fatal":265,"D-1":441,"D-2":0,"Futuro":338},"2026-05-17":{"Agenda":101,"Agenda Equipe":3,"Prazo":17,"Total":121,"Vencido":27,"Fatal":65,"D-1":0,"D-2":10,"Futuro":19}};
+const TIMELINE_DATA = {"2026-05-11":{"Agenda":680,"Agenda Equipe":35,"Prazo":276,"Total":991,"Vencido":194,"Fatal":34,"D-1":475,"D-2":86,"Futuro":202},"2026-05-12":{"Agenda":725,"Agenda Equipe":33,"Prazo":308,"Total":1066,"Vencido":30,"Fatal":202,"D-1":509,"D-2":88,"Futuro":237},"2026-05-13":{"Agenda":675,"Agenda Equipe":44,"Prazo":267,"Total":986,"Vencido":88,"Fatal":154,"D-1":405,"D-2":119,"Futuro":220},"2026-05-14":{"Agenda":745,"Agenda Equipe":18,"Prazo":259,"Total":1022,"Vencido":84,"Fatal":172,"D-1":396,"D-2":166,"Futuro":204},"2026-05-15":{"Agenda":862,"Agenda Equipe":46,"Prazo":269,"Total":1177,"Vencido":133,"Fatal":265,"D-1":441,"D-2":0,"Futuro":338},"2026-05-17":{"Agenda":101,"Agenda Equipe":3,"Prazo":17,"Total":121,"Vencido":27,"Fatal":65,"D-1":0,"D-2":10,"Futuro":19},"2026-05-18":{"Agenda":721,"Agenda Equipe":39,"Prazo":309,"Total":1069,"Vencido":210,"Fatal":36,"D-1":484,"D-2":110,"Futuro":229},"2026-05-19":{"Agenda":711,"Agenda Equipe":43,"Prazo":277,"Total":1031,"Vencido":33,"Fatal":236,"D-1":400,"D-2":152,"Futuro":210},"2026-05-20":{"Agenda":739,"Agenda Equipe":50,"Prazo":267,"Total":1056,"Vencido":44,"Fatal":175,"D-1":476,"D-2":114,"Futuro":247},"2026-05-21":{"Agenda":779,"Agenda Equipe":35,"Prazo":266,"Total":1080,"Vencido":30,"Fatal":192,"D-1":468,"D-2":162,"Futuro":228},"2026-05-22":{"Agenda":573,"Agenda Equipe":28,"Prazo":239,"Total":840,"Vencido":44,"Fatal":121,"D-1":411,"D-2":1,"Futuro":263},"2026-05-23":{"Agenda":7,"Agenda Equipe":0,"Prazo":1,"Total":8,"Vencido":0,"Fatal":5,"D-1":0,"D-2":0,"Futuro":3},"2026-05-24":{"Agenda":284,"Agenda Equipe":11,"Prazo":31,"Total":326,"Vencido":127,"Fatal":117,"D-1":0,"D-2":36,"Futuro":46}};
 function openTimelineDay(dateKey){
   const d = TIMELINE_DATA[dateKey]; if(!d) return;
   const [y,m,day] = dateKey.split('-');
@@ -1730,6 +1743,9 @@ const GRP_RESP=[{"n":"NBG","grp":"Grupo A2","ven":1,"fat":1,"d1":17,"d2":1,"fut"
 const HR_DIST=[[0,0],[1,0],[2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],[9,0],[10,0],[11,0],[12,0],[13,0],[14,0],[15,0],[16,0],[17,0],[18,0],[19,256],[20,138],[21,87],[22,377],[23,0]];
 const FAT_FORA=[{"proc":"0010593-71.2025.5.03.0174","hr":"22:01 às 08:59","resp":"RYL","dt":"15/05/2026","status":"Fatal","grp":"Grupo E2"},{"proc":"0010593-71.2025.5.03.0174","hr":"22:01 às 08:59","resp":"RYL","dt":"15/05/2026","status":"Fatal","grp":"Grupo E2"},{"proc":"0012644-60.2025.5.15.0129","hr":"22:01 às 08:59","resp":"TFR","dt":"15/05/2026","status":"Fatal","grp":"Grupo C"},{"proc":"1000877-98.2026.5.02.0431","hr":"22:01 às 08:59","resp":"JJS","dt":"15/05/2026","status":"Fatal","grp":"Grupo B1"},{"proc":"0011092-12.2025.5.03.0156","hr":"22:01 às 08:59","resp":"MBF","dt":"18/05/2026","status":"Fatal","grp":"Grupo E2"},{"proc":"1000740-07.2026.5.02.0435","hr":"22:01 às 08:59","resp":"GSM","dt":"18/05/2026","status":"Fatal","grp":"Grupo B1"},{"proc":"0011656-68.2025.5.15.0087","hr":"22:01 às 08:59","resp":"RYL","dt":"18/05/2026","status":"Fatal","grp":"Grupo E2"},{"proc":"1001416-17.2025.5.02.0070","hr":"19:01 às 20:00","resp":"ECO","dt":"18/05/2026","status":"Fatal","grp":"Grupo C"},{"proc":"1000902-11.2026.5.02.0432","hr":"22:01 às 08:59","resp":"GSM","dt":"18/05/2026","status":"Fatal","grp":"Grupo B1"},{"proc":"1001611-30.2018.5.02.0431","hr":"21:01 às 22:00","resp":"JJS","dt":"18/05/2026","status":"Fatal","grp":"Grupo B1"},{"proc":"1001611-30.2018.5.02.0431","hr":"21:01 às 22:00","resp":"JJS","dt":"18/05/2026","status":"Fatal","grp":"Grupo B1"},{"proc":"0010614-32.2025.5.15.0071","hr":"22:01 às 08:59","resp":"PSI","dt":"18/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0010576-06.2026.5.03.0043","hr":"21:01 às 22:00","resp":"JRM","dt":"18/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0010576-06.2026.5.03.0043","hr":"22:01 às 08:59","resp":"JRM","dt":"18/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0010576-06.2026.5.03.0043","hr":"21:01 às 22:00","resp":"JRM","dt":"18/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0010900-79.2025.5.03.0156","hr":"22:01 às 08:59","resp":"MBF","dt":"18/05/2026","status":"Fatal","grp":"Grupo E2"},{"proc":"0010645-80.2023.5.03.0063","hr":"22:01 às 08:59","resp":"JRM","dt":"18/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0011332-95.2025.5.15.0049","hr":"19:01 às 20:00","resp":"JRM","dt":"18/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0010340-30.2019.5.15.0087","hr":"20:01 às 21:00","resp":"JRM","dt":"18/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0012342-48.2025.5.15.0188","hr":"22:01 às 08:59","resp":"RYL","dt":"18/05/2026","status":"Fatal","grp":"Grupo E2"},{"proc":"1001242-53.2020.5.02.0435","hr":"21:01 às 22:00","resp":"JJS","dt":"18/05/2026","status":"Fatal","grp":"Grupo B1"},{"proc":"0010956-15.2025.5.03.0156","hr":"22:01 às 08:59","resp":"MBF","dt":"18/05/2026","status":"Fatal","grp":"Grupo E2"},{"proc":"0010948-38.2025.5.03.0156","hr":"22:01 às 08:59","resp":"MBF","dt":"18/05/2026","status":"Fatal","grp":"Grupo E2"},{"proc":"0000736-08.2013.5.02.0058","hr":"21:01 às 22:00","resp":"JJS","dt":"18/05/2026","status":"Fatal","grp":"Grupo B3"},{"proc":"0010461-68.2025.5.03.0156","hr":"22:01 às 08:59","resp":"RYL","dt":"18/05/2026","status":"Fatal","grp":"Grupo E2"},{"proc":"0013150-81.2025.5.15.0017","hr":"22:01 às 08:59","resp":"RYL","dt":"18/05/2026","status":"Fatal","grp":"Grupo E2"},{"proc":"0000796-65.2025.5.21.0014","hr":"19:01 às 20:00","resp":"JRM","dt":"18/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0000796-65.2025.5.21.0014","hr":"19:01 às 20:00","resp":"JRM","dt":"18/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0016544-53.2026.5.16.0011","hr":"22:01 às 08:59","resp":"JRM","dt":"18/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0016544-53.2026.5.16.0011","hr":"22:01 às 08:59","resp":"JRM","dt":"18/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0011677-49.2025.5.15.0053","hr":"22:01 às 08:59","resp":"ALF","dt":"19/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0010525-38.2025.5.15.0126","hr":"19:01 às 20:00","resp":"JRM","dt":"19/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0010525-38.2025.5.15.0126","hr":"19:01 às 20:00","resp":"JRM","dt":"19/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0014034-27.2025.5.15.0077","hr":"19:01 às 20:00","resp":"JRM","dt":"19/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0014034-27.2025.5.15.0077","hr":"19:01 às 20:00","resp":"JRM","dt":"19/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0014034-27.2025.5.15.0077","hr":"19:01 às 20:00","resp":"JRM","dt":"19/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0014034-27.2025.5.15.0077","hr":"19:01 às 20:00","resp":"JRM","dt":"19/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0001758-53.2025.5.17.0191","hr":"19:01 às 20:00","resp":"JRM","dt":"19/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0011161-12.2021.5.15.0104","hr":"22:01 às 08:59","resp":"RYL","dt":"19/05/2026","status":"Fatal","grp":"Grupo E2"},{"proc":"0010146-97.2025.5.15.0126","hr":"22:01 às 08:59","resp":"JRM","dt":"19/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0010272-50.2026.5.15.0050","hr":"22:01 às 08:59","resp":"RRU","dt":"19/05/2026","status":"Fatal","grp":"Grupo E2"},{"proc":"0010568-61.2019.5.15.0133","hr":"22:01 às 08:59","resp":"RYL","dt":"19/05/2026","status":"Fatal","grp":"Grupo E2"},{"proc":"0010230-77.2021.5.15.0049","hr":"19:01 às 20:00","resp":"JRM","dt":"19/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0010230-77.2021.5.15.0049","hr":"19:01 às 20:00","resp":"JRM","dt":"19/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0010230-77.2021.5.15.0049","hr":"19:01 às 20:00","resp":"JRM","dt":"19/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0010230-77.2021.5.15.0049","hr":"19:01 às 20:00","resp":"JRM","dt":"19/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0010230-77.2021.5.15.0049","hr":"19:01 às 20:00","resp":"JRM","dt":"19/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0011715-20.2022.5.15.0133","hr":"19:01 às 20:00","resp":"JRM","dt":"19/05/2026","status":"Fatal","grp":"Grupo E1"},{"proc":"0000506-77.2025.5.18.0129","hr":"22:01 às 08:59","resp":"CAL","dt":"19/05/2026","status":"Fatal","grp":"Grupo E2"},{"proc":"0010461-68.2025.5.03.0156","hr":"22:01 às 08:59","resp":"RYL","dt":"19/05/2026","status":"Fatal","grp":"Grupo E2"}];
 const BY_GRUPO={"Grupo A2":{"total":26,"fat":1,"ven":1,"d1":17,"d2":1,"fut":6,"fora":1,"ff":0},"Grupo A3":{"total":38,"fat":17,"ven":4,"d1":12,"d2":2,"fut":3,"fora":1,"ff":0},"Grupo B1":{"total":1110,"fat":159,"ven":89,"d1":537,"d2":119,"fut":206,"fora":322,"ff":59},"Grupo B2":{"total":360,"fat":68,"ven":34,"d1":65,"d2":77,"fut":116,"fora":2,"ff":0},"Grupo B3":{"total":341,"fat":66,"ven":1,"d1":181,"d2":28,"fut":65,"fora":33,"ff":1},"Grupo C":{"total":434,"fat":101,"ven":34,"d1":147,"d2":69,"fut":83,"fora":40,"ff":2},"Grupo D1":{"total":447,"fat":25,"ven":8,"d1":223,"d2":43,"fut":148,"fora":0,"ff":0},"Grupo E1":{"total":1084,"fat":142,"ven":126,"d1":406,"d2":85,"fut":325,"fora":123,"ff":40},"Grupo E2":{"total":1570,"fat":303,"ven":191,"d1":651,"d2":151,"fut":274,"fora":336,"ff":80}};
+
+// Semana 20 (11/05 a 17/05) — base de comparação semanal
+const RESP_S20=[{"n":"SOF","grp":"Grupo A3","ven":1,"fat":3,"d1":0,"d2":0,"fut":0,"tot":4,"fora":3,"ff":3,"ant":0},{"n":"KBM","grp":"Grupo E1","ven":4,"fat":1,"d1":0,"d2":0,"fut":0,"tot":5,"fora":0,"ff":0,"ant":0},{"n":"JRM","grp":"","ven":2,"fat":1,"d1":1,"d2":0,"fut":0,"tot":4,"fora":2,"ff":1,"ant":0},{"n":"ANB","grp":"Grupo B3","ven":16,"fat":5,"d1":11,"d2":0,"fut":1,"tot":33,"fora":0,"ff":0,"ant":1},{"n":"BCF","grp":"Grupo B2","ven":3,"fat":17,"d1":62,"d2":4,"fut":21,"tot":107,"fora":0,"ff":0,"ant":21},{"n":"DPR","grp":"Grupo E1","ven":47,"fat":13,"d1":14,"d2":1,"fut":15,"tot":90,"fora":1,"ff":0,"ant":15},{"n":"VCR","grp":"Grupo B2","ven":0,"fat":3,"d1":35,"d2":19,"fut":80,"tot":137,"fora":0,"ff":0,"ant":80},{"n":"MBF","grp":"Grupo E2","ven":1,"fat":9,"d1":98,"d2":36,"fut":42,"tot":186,"fora":26,"ff":0,"ant":42},{"n":"AAP","grp":"Grupo E1","ven":0,"fat":0,"d1":2,"d2":5,"fut":5,"tot":12,"fora":2,"ff":0,"ant":5},{"n":"JQS","grp":"","ven":0,"fat":0,"d1":6,"d2":0,"fut":0,"tot":6,"fora":0,"ff":0,"ant":0},{"n":"RRU","grp":"Grupo E2","ven":13,"fat":53,"d1":86,"d2":14,"fut":39,"tot":205,"fora":67,"ff":10,"ant":39},{"n":"NBB","grp":"Grupo E2","ven":8,"fat":0,"d1":0,"d2":0,"fut":0,"tot":8,"fora":0,"ff":0,"ant":0},{"n":"DPR","grp":"","ven":0,"fat":0,"d1":3,"d2":0,"fut":1,"tot":4,"fora":0,"ff":0,"ant":1},{"n":"LMI","grp":"","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0},{"n":"GSM","grp":"Grupo B1","ven":11,"fat":45,"d1":101,"d2":14,"fut":87,"tot":258,"fora":61,"ff":2,"ant":87},{"n":"RFE","grp":"Grupo B1","ven":19,"fat":28,"d1":191,"d2":17,"fut":67,"tot":322,"fora":49,"ff":20,"ant":67},{"n":"TLI","grp":"Grupo E1","ven":0,"fat":7,"d1":5,"d2":2,"fut":1,"tot":15,"fora":1,"ff":0,"ant":1},{"n":"TFR","grp":"Grupo C","ven":5,"fat":36,"d1":61,"d2":11,"fut":10,"tot":123,"fora":32,"ff":2,"ant":10},{"n":"VSI","grp":"Grupo A3","ven":0,"fat":0,"d1":8,"d2":0,"fut":0,"tot":8,"fora":0,"ff":0,"ant":0},{"n":"JJS","grp":"Grupo B3","ven":0,"fat":1,"d1":0,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0},{"n":"RCF","grp":"Grupo C","ven":0,"fat":21,"d1":33,"d2":2,"fut":48,"tot":104,"fora":0,"ff":0,"ant":48},{"n":"ALF","grp":"Grupo E1","ven":2,"fat":2,"d1":23,"d2":38,"fut":55,"tot":120,"fora":17,"ff":0,"ant":55},{"n":"JPE","grp":"Grupo B1","ven":1,"fat":11,"d1":88,"d2":8,"fut":28,"tot":136,"fora":32,"ff":2,"ant":28},{"n":"NRG","grp":"Grupo B1","ven":1,"fat":3,"d1":5,"d2":1,"fut":1,"tot":11,"fora":0,"ff":0,"ant":1},{"n":"JPE","grp":"","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":0,"ff":0,"ant":0},{"n":"ECO","grp":"Grupo C","ven":2,"fat":13,"d1":22,"d2":2,"fut":11,"tot":50,"fora":0,"ff":0,"ant":11},{"n":"AAP","grp":"Grupo E2","ven":0,"fat":0,"d1":15,"d2":13,"fut":12,"tot":40,"fora":7,"ff":0,"ant":12},{"n":"ARC","grp":"Grupo E2","ven":6,"fat":22,"d1":31,"d2":26,"fut":61,"tot":146,"fora":50,"ff":2,"ant":61},{"n":"ARC","grp":"Grupo A3","ven":4,"fat":1,"d1":0,"d2":0,"fut":5,"tot":10,"fora":0,"ff":0,"ant":5},{"n":"LMI","grp":"Grupo B3","ven":23,"fat":98,"d1":109,"d2":6,"fut":32,"tot":268,"fora":45,"ff":5,"ant":32},{"n":"ARE","grp":"Grupo C","ven":0,"fat":0,"d1":7,"d2":1,"fut":5,"tot":13,"fora":0,"ff":0,"ant":5},{"n":"ARC","grp":"","ven":0,"fat":2,"d1":0,"d2":4,"fut":2,"tot":8,"fora":2,"ff":0,"ant":2},{"n":"NRG","grp":"Grupo B2","ven":0,"fat":0,"d1":4,"d2":0,"fut":0,"tot":4,"fora":0,"ff":0,"ant":0},{"n":"JJS","grp":"Grupo B1","ven":115,"fat":55,"d1":74,"d2":14,"fut":9,"tot":267,"fora":70,"ff":28,"ant":9},{"n":"RCF","grp":"Grupo E2","ven":0,"fat":6,"d1":19,"d2":1,"fut":2,"tot":28,"fora":0,"ff":0,"ant":2},{"n":"NBG","grp":"Grupo A2","ven":1,"fat":3,"d1":13,"d2":10,"fut":3,"tot":30,"fora":1,"ff":0,"ant":3},{"n":"ALF","grp":"","ven":0,"fat":0,"d1":1,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0},{"n":"BSO","grp":"Grupo B1","ven":0,"fat":8,"d1":145,"d2":21,"fut":44,"tot":218,"fora":3,"ff":0,"ant":44},{"n":"BBO","grp":"Grupo D1","ven":17,"fat":3,"d1":49,"d2":43,"fut":47,"tot":159,"fora":32,"ff":1,"ant":47},{"n":"BBO","grp":"","ven":0,"fat":1,"d1":2,"d2":0,"fut":0,"tot":3,"fora":0,"ff":0,"ant":0},{"n":"JPL","grp":"Grupo E1","ven":6,"fat":7,"d1":135,"d2":1,"fut":83,"tot":232,"fora":1,"ff":0,"ant":83},{"n":"JRT","grp":"Grupo E2","ven":89,"fat":68,"d1":55,"d2":23,"fut":89,"tot":324,"fora":86,"ff":15,"ant":89},{"n":"JRM","grp":"Grupo E1","ven":15,"fat":65,"d1":32,"d2":8,"fut":6,"tot":126,"fora":50,"ff":34,"ant":6},{"n":"CAL","grp":"","ven":0,"fat":1,"d1":0,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0},{"n":"GSM","grp":"Grupo B3","ven":6,"fat":8,"d1":7,"d2":1,"fut":18,"tot":40,"fora":7,"ff":0,"ant":18},{"n":"PSI","grp":"Grupo E1","ven":15,"fat":8,"d1":97,"d2":28,"fut":25,"tot":173,"fora":3,"ff":3,"ant":25},{"n":"VSI","grp":"Grupo C","ven":1,"fat":3,"d1":63,"d2":3,"fut":15,"tot":85,"fora":0,"ff":0,"ant":15},{"n":"ANB","grp":"Grupo B2","ven":34,"fat":15,"d1":18,"d2":7,"fut":17,"tot":91,"fora":0,"ff":0,"ant":17},{"n":"RYL","grp":"Grupo E2","ven":39,"fat":107,"d1":106,"d2":1,"fut":7,"tot":260,"fora":72,"ff":26,"ant":7},{"n":"ECO","grp":"Grupo E1","ven":0,"fat":2,"d1":2,"d2":0,"fut":1,"tot":5,"fora":0,"ff":0,"ant":1},{"n":"JQS","grp":"Grupo D1","ven":0,"fat":0,"d1":140,"d2":31,"fut":87,"tot":258,"fora":13,"ff":0,"ant":87},{"n":"RCF","grp":"","ven":0,"fat":1,"d1":0,"d2":0,"fut":0,"tot":1,"fora":0,"ff":0,"ant":0},{"n":"WSF","grp":"Grupo E2","ven":0,"fat":0,"d1":2,"d2":0,"fut":0,"tot":2,"fora":2,"ff":0,"ant":0},{"n":"CAL","grp":"Grupo E2","ven":5,"fat":89,"d1":162,"d2":42,"fut":37,"tot":335,"fora":18,"ff":0,"ant":37},{"n":"JPE","grp":"Grupo B3","ven":1,"fat":6,"d1":18,"d2":1,"fut":6,"tot":32,"fora":3,"ff":0,"ant":6},{"n":"SOF","grp":"Grupo B1","ven":0,"fat":0,"d1":1,"d2":0,"fut":0,"tot":1,"fora":1,"ff":0,"ant":0},{"n":"VRO","grp":"Grupo E1","ven":43,"fat":41,"d1":60,"d2":10,"fut":95,"tot":249,"fora":20,"ff":4,"ant":95}];
 
 function b(v,cls,dash=false){return v===0&&dash?`<td class="c"><span style="color:rgba(255,255,255,.18)">—</span></td>`:`<td class="c"><span class="vbad ${cls}">${v}</span></td>`;}
 function pct(a,b){return b>0?Math.round(a/b*100):0;}
@@ -2233,7 +2249,7 @@ function agendaTotals(equipes){
 }
 
 
-const ACUMULADO_DATA={"semana":{"2026-S19":{"Prazo":1451,"Agenda":4122,"Agenda Equipe":246,"Vencido":905,"Fatal":1053,"D-1":2174,"D-2":487,"Futuro":1200,"Total":5819},"2026-S20":{"Prazo":1396,"Agenda":3788,"Agenda Equipe":179,"Total":5363,"Vencido":556,"Fatal":892,"D-1":2226,"D-2":469,"Futuro":1220}},"mes":{"2026-05":{"Prazo":2847,"Agenda":7910,"Agenda Equipe":425,"Vencido":1461,"Fatal":1945,"D-1":4400,"D-2":956,"Futuro":2420,"Total":11182}}};
+const ACUMULADO_DATA={"semana":{"2026-S19":{"Prazo":1451,"Agenda":4122,"Agenda Equipe":246,"Vencido":905,"Fatal":1053,"D-1":2174,"D-2":487,"Futuro":1200,"Total":5819},"2026-S20":{"Prazo":1396,"Agenda":3788,"Agenda Equipe":179,"Total":5363,"Vencido":556,"Fatal":892,"D-1":2226,"D-2":469,"Futuro":1220},"2026-S21":{"Prazo":1390,"Agenda":3814,"Agenda Equipe":206,"Vencido":488,"Fatal":882,"D-1":2239,"D-2":575,"Futuro":1226,"Total":5410}},"mes":{"2026-05":{"Prazo":2847,"Agenda":7910,"Agenda Equipe":425,"Vencido":1461,"Fatal":1945,"D-1":4400,"D-2":956,"Futuro":2420,"Total":11182}}};
 function openAcumulado(tipo, key){
   const d=(ACUMULADO_DATA[tipo]||{})[key]; if(!d) return;
   const titulo=tipo==='semana'?'📊 Acumulado semanal':'📅 Consolidado mensal';
@@ -2360,55 +2376,92 @@ function renderAgendaBloco(prefix, equipes, responsaveis){
 
 
 function renderHistoricoResp(){
-  // Aba exclusiva de PRAZOS PROCESSUAIS: análise individual por profissional.
-  // Consolida a mesma pessoa em todos os grupos para evitar duplicidade.
-  const mapa = {};
+  // Constrói mapa S20 (semana anterior: 11/05–17/05)
+  const m20={};
+  (RESP_S20||[]).forEach(r=>{
+    if(!r.n) return;
+    if(!m20[r.n]) m20[r.n]={total:0,ven:0,fatal:0,d1:0,d2:0,fora:0,ff:0};
+    m20[r.n].total+=r.tot||0; m20[r.n].ven+=r.ven||0; m20[r.n].fatal+=r.fat||0;
+    m20[r.n].d1+=r.d1||0; m20[r.n].d2+=r.d2||0; m20[r.n].fora+=r.fora||0; m20[r.n].ff+=r.ff||0;
+  });
+  // Constrói mapa S21 (semana atual: 18/05–24/05)
+  const m21={};
   (RESP||[]).forEach(r=>{
-    const key = respFullName(r.n || 'Sem responsável');
-    if(!mapa[key]) mapa[key] = {n:key, display:key, grupos:new Set(), total:0, ven:0, fatal:0, d1:0, d2:0, fora:0, ff:0};
-    mapa[key].grupos.add(r.grp||'Outros');
-    mapa[key].total += r.tot || 0;
-    mapa[key].ven += r.ven || 0;
-    mapa[key].fatal += r.fat || 0;
-    mapa[key].d1 += r.d1 || 0;
-    mapa[key].d2 += r.d2 || 0;
-    mapa[key].fora += r.fora || 0;
-    mapa[key].ff += r.ff || 0;
+    if(!r.n) return;
+    if(!m21[r.n]) m21[r.n]={grupos:new Set(),total:0,ven:0,fatal:0,d1:0,d2:0,fora:0,ff:0};
+    if(r.grp) m21[r.n].grupos.add(r.grp);
+    m21[r.n].total+=r.tot||0; m21[r.n].ven+=r.ven||0; m21[r.n].fatal+=r.fat||0;
+    m21[r.n].d1+=r.d1||0; m21[r.n].d2+=r.d2||0; m21[r.n].fora+=r.fora||0; m21[r.n].ff+=r.ff||0;
   });
 
-  const rows = Object.values(mapa).map(r=>{
-    const risco = r.ven + r.fatal + r.ff;
-    const pct = r.total ? Math.round((risco/r.total)*100) : 0;
-    let leitura='Positivo', cls='good';
-    if(r.ven>0 || r.ff>0 || pct>=25 || r.fatal>=10){leitura='Ponto de atenção'; cls='bad';}
-    else if(r.fatal>0 || r.fora>0 || pct>=10){leitura='Monitorar'; cls='mid';}
-    return {...r, risco, pct, leitura, cls, gruposTxt:[...r.grupos].sort().join(', ')};
-  }).sort((a,b)=>(b.pct-a.pct)||(b.risco-a.risco)||(b.fatal-a.fatal)||(b.total-a.total));
+  const pctFn=d=>d&&d.total?Math.round(((d.ven+d.fatal+d.ff)/d.total)*100):0;
+  const leiFn=(d,p)=>{
+    if(!d||!d.total) return{l:'—',c:''};
+    if(d.ven>0||d.ff>0||p>=25||d.fatal>=10) return{l:'Ponto de atenção',c:'bad'};
+    if(d.fatal>0||d.fora>0||p>=10) return{l:'Monitorar',c:'mid'};
+    return{l:'Positivo',c:'good'};
+  };
 
-  const high=rows.filter(r=>r.cls==='bad').length, mid=rows.filter(r=>r.cls==='mid').length, good=rows.filter(r=>r.cls==='good').length;
-  let totalPrazos=rows.reduce((s,r)=>s+r.total,0);
-  totalPrazos = 1396; // Fixo para semana 20
+  const rows=Object.keys(m21).map(sig=>{
+    const d20=m20[sig]||null; const d21=m21[sig];
+    const p20=pctFn(d20); const p21=pctFn(d21);
+    const lei=leiFn(d21,p21);
+    let ev,ec;
+    if(!d20){ev='Nova entrada';ec='';}
+    else if(p21<p20){ev=`↓ ${p20-p21}pp · Melhorou`;ec='good';}
+    else if(p21>p20){ev=`↑ ${p21-p20}pp · Piorou`;ec='bad';}
+    else{ev='→ Estável';ec='mid';}
+    return{sig,d20,d21,p20,p21,lei,ev,ec};
+  }).sort((a,b)=>(b.p21-a.p21)||(b.d21.total-a.d21.total));
+
+  const high=rows.filter(r=>r.lei.c==='bad').length;
+  const mid=rows.filter(r=>r.lei.c==='mid').length;
+  const good=rows.filter(r=>r.lei.c==='good').length;
   const resumo=document.getElementById('hist-summary');
-  if(resumo){resumo.innerHTML=`
-    <div class="hist-card"><div class="hlabel">Total de prazos</div><div class="hvalue">${fmtNum(totalPrazos)}</div></div>
+  if(resumo) resumo.innerHTML=`
+    <div class="hist-card"><div class="hlabel">Prazos S21</div><div class="hvalue">${fmtNum(1390)}</div></div>
     <div class="hist-card"><div class="hlabel">Pontos de atenção</div><div class="hvalue" style="color:#C0392B">${high}</div></div>
     <div class="hist-card"><div class="hlabel">Monitorar</div><div class="hvalue" style="color:#E67E22">${mid}</div></div>
-    <div class="hist-card"><div class="hlabel">Positivos</div><div class="hvalue" style="color:#003B5C">${good}</div></div>`;}
+    <div class="hist-card"><div class="hlabel">Positivos</div><div class="hvalue" style="color:#003B5C">${good}</div></div>`;
+
   const tb=document.getElementById('tb-hist-resp');
   if(!tb) return;
-  tb.innerHTML=rows.map(r=>`<tr onclick="openDataModal('📈 Evolução Semanal — ${r.display || r.n}', '18/05 a 24/05 · somente prazos processuais · análise individual', '<div class=\'data-grid\'><div class=\'data-card\'><span class=\'lbl\'>Total prazos</span><span class=\'val\'>${fmtNum(r.total)}</span></div><div class=\'data-card\'><span class=\'lbl\'>Fatal</span><span class=\'val\' style=\'color:#C0392B\'>${fmtNum(r.fatal)}</span></div><div class=\'data-card\'><span class=\'lbl\'>Fora do horário</span><span class=\'val\' style=\'color:#E67E22\'>${fmtNum(r.fora)}</span></div><div class=\'data-card\'><span class=\'lbl\'>% risco</span><span class=\'val\'>${r.pct}%</span></div></div><div class=\'data-section-title\'>Observação</div><p style=\'font-size:12px;line-height:1.45\'>Indicador consolidado por profissional. Quando a pessoa atuou em mais de um grupo, os números foram somados para evitar duplicidade na análise individual.</p>')" title="Clique para detalhar evolução de prazos">
-      <td><span class="nome-full">${r.display || r.n}</span></td><td><b>18/05 a 24/05</b></td>
-      <td class="c"><span class="vbad muted">${fmtNum(r.total)}</span></td>
-      <td class="c">${r.ven>0?`<span class="vbad red">${fmtNum(r.ven)}</span>`:'<span class="vbad muted">—</span>'}</td>
-      <td class="c">${r.fatal>0?`<span class="vbad fat">${fmtNum(r.fatal)}</span>`:'<span class="vbad muted">—</span>'}</td>
-      <td class="c"><span class="vbad yel">${fmtNum(r.d1)}</span></td>
-      <td class="c"><span class="vbad blu">${fmtNum(r.d2)}</span></td>
-      <td class="c">${r.fora>0?`<span class="vbad org">${fmtNum(r.fora)}</span>`:'<span class="vbad muted">—</span>'}</td>
-      <td class="c">${r.ff>0?`<span class="vbad red">${fmtNum(r.ff)}</span>`:'<span class="vbad muted">—</span>'}</td>
-      <td class="c"><span class="risk-chip ${r.cls==='bad'?'high':r.cls==='mid'?'mid':'low'}">${r.pct}%</span></td>
-      <td class="c"><span class="trend-chip ${r.cls}">${r.leitura}</span></td>
-      <td class="c"><span class="trend-chip">Base inicial</span></td>
-    </tr>`).join('');
+  const v=(n,c)=>n>0?`<span class="vbad ${c}">${fmtNum(n)}</span>`:`<span class="vbad muted">—</span>`;
+
+  tb.innerHTML=rows.map(r=>{
+    const fn=respFullName(r.sig);
+    const d20=r.d20||{total:0,ven:0,fatal:0,d1:0,d2:0,fora:0,ff:0};
+    const d21=r.d21;
+    const cls21=r.lei.c==='bad'?'high':r.lei.c==='mid'?'mid':'low';
+    const cls20=r.p20>=25?'high':r.p20>=10?'mid':'low';
+
+    const row20=r.d20?`<tr class="hist-prev-row">
+      <td><span style="font-size:11px;color:var(--tx2)">${fn}</span></td>
+      <td><span style="font-size:10px;color:var(--tx2)">11/05 a 17/05</span></td>
+      <td class="c"><span class="vbad muted">${fmtNum(d20.total)}</span></td>
+      <td class="c">${v(d20.ven,'red')}</td><td class="c">${v(d20.fatal,'fat')}</td>
+      <td class="c">${d20.d1?`<span class="vbad yel">${fmtNum(d20.d1)}</span>`:`<span class="vbad muted">—</span>`}</td>
+      <td class="c">${d20.d2?`<span class="vbad blu">${fmtNum(d20.d2)}</span>`:`<span class="vbad muted">—</span>`}</td>
+      <td class="c">${v(d20.fora,'org')}</td><td class="c">${v(d20.ff,'red')}</td>
+      <td class="c"><span class="risk-chip ${cls20}">${r.p20}%</span></td>
+      <td class="c" colspan="2"><span style="font-size:10px;color:var(--tx2)">semana anterior</span></td>
+    </tr>`:'';
+
+    const row21=`<tr onclick="openDataModalByResp('${r.sig}')" title="Clique para detalhar" style="border-top:2px solid rgba(0,174,239,.18)">
+      <td><span class="nome-full">${fn}</span></td>
+      <td><b>18/05 a 24/05</b></td>
+      <td class="c"><span class="vbad muted">${fmtNum(d21.total)}</span></td>
+      <td class="c">${v(d21.ven,'red')}</td><td class="c">${v(d21.fatal,'fat')}</td>
+      <td class="c">${d21.d1?`<span class="vbad yel">${fmtNum(d21.d1)}</span>`:`<span class="vbad muted">—</span>`}</td>
+      <td class="c">${d21.d2?`<span class="vbad blu">${fmtNum(d21.d2)}</span>`:`<span class="vbad muted">—</span>`}</td>
+      <td class="c">${v(d21.fora,'org')}</td><td class="c">${v(d21.ff,'red')}</td>
+      <td class="c"><span class="risk-chip ${cls21}">${r.p21}%</span></td>
+      <td class="c"><span class="trend-chip ${r.lei.c}">${r.lei.l}</span></td>
+      <td class="c"><span class="trend-chip ${r.ec}">${r.ev}</span></td>
+    </tr>`;
+
+    return row20+row21;
+  }).join('');
 }
 
 
