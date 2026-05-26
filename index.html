@@ -1056,11 +1056,11 @@ div[style*="background: #117A65"]{
 </div>
 
 <div class="main">
-  <div style="display:flex;gap:10px;align-items:center;margin-bottom:14px">
+  <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px">
     <input type="file" id="excel-input" class="upload-input" accept=".xlsx,.xls" />
     <button style="display:none" class="btn-excel" onclick="document.getElementById('excel-input').click()" style="background:rgba(0,174,239,.15);border:1px solid rgba(0,174,239,.4);color:var(--cyan);padding:6px 12px;font-size:11px;margin-bottom:0"></button>
     <a class="btn-excel" onclick="downloadExcel()" style="margin-bottom:0">📥 Exportar Excel</a>
-    <div class="upload-status" id="upload-status" style="margin-left:auto;font-size:11px;min-width:200px;text-align:right"></div>
+    <div class="upload-status" id="upload-status" style="margin-left:auto;font-size:11px;text-align:right"></div>
   </div>
 <div id="sec-prazos"></div>
 <div class="kpis">
