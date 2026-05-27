@@ -2840,7 +2840,7 @@ function parseRawExcel(arrayRows) {
     const row  = arrayRows[i];
     const resp = String(row[iResp] || '').trim();
     if (!resp) continue;
-    const grp  = (String(row[iGrp] || '').trim()) || 'Sem Grupo';
+    const grp  = (String(row[iGrp] || '').trim()) || (RESP.find(x => x.n === resp) || {}).grp || 'Sem Grupo';
     const key  = resp + '||' + grp;
     if (!map[key]) map[key] = {n:resp, grp:grp, ven:0, fat:0, d1:0, d2:0, fut:0, tot:0, fora:0, ff:0, ant:0};
 
