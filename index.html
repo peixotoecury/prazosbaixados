@@ -2153,21 +2153,19 @@ HR_DIST.forEach(([hr,cnt])=>{
   document.getElementById('hr-xlbl').appendChild(lbl);
 });
 
-// Grupos fora horário
-['Grupo E2','Grupo B1','Grupo E1','Grupo C','Grupo B3','Grupo D1','Grupo B2','Grupo D','Grupo A3','Grupo A2'].forEach(g=>{
-  const v=BY_GRUPO[g];
-  if(!v || !v.fora) return;
+const BY_GRUPO_FULL=[{"g":"Grupo A2","total":4,"fat":1,"ven":0,"d1":1,"d2":0,"fut":2,"fora":0,"ff":0},{"g":"Grupo A3","total":3,"fat":0,"ven":0,"d1":3,"d2":0,"fut":0,"fora":0,"ff":0},{"g":"Grupo B1","total":402,"fat":44,"ven":3,"d1":174,"d2":36,"fut":145,"fora":102,"ff":14},{"g":"Grupo B2","total":78,"fat":10,"ven":0,"d1":25,"d2":0,"fut":43,"fora":4,"ff":2},{"g":"Grupo B3","total":102,"fat":7,"ven":0,"d1":48,"d2":25,"fut":22,"fora":4,"ff":0},{"g":"Grupo C","total":118,"fat":31,"ven":0,"d1":38,"d2":10,"fut":39,"fora":11,"ff":4},{"g":"Grupo D","total":13,"fat":5,"ven":0,"d1":5,"d2":2,"fut":1,"fora":4,"ff":2},{"g":"Grupo D1","total":42,"fat":4,"ven":0,"d1":17,"d2":10,"fut":11,"fora":5,"ff":0},{"g":"Grupo E1","total":267,"fat":17,"ven":0,"d1":105,"d2":25,"fut":120,"fora":18,"ff":5},{"g":"Grupo E2","total":422,"fat":117,"ven":1,"d1":159,"d2":24,"fut":121,"fora":72,"ff":12}];
+
+// Grupos fora horário — usa BY_GRUPO_FULL que tem fora correto (todos os tipos)
+BY_GRUPO_FULL.filter(v=>v.fora>0).sort((a,b)=>b.fora-a.fora).forEach(v=>{
   const total = Number(v.total || 0);
   const p = pct(v.fora, total);
   const cls = p >= 15 ? 'fat' : p >= 10 ? 'org' : 'yel';
-  document.getElementById('tb-grpfora').innerHTML+=`<tr data-grp="${g}">
-    <td style="font-size:10px">${g}</td>
+  document.getElementById('tb-grpfora').innerHTML+=`<tr data-grp="${v.g}">
+    <td style="font-size:10px">${v.g}</td>
     <td class="c"><span class="vbad ${cls}">${v.fora}</span></td>
     <td class="c" style="color:var(--tx2)">${total}</td>
     <td class="c">${pb(p,'fat')}</td></tr>`;
 });
-
-const BY_GRUPO_FULL=[{"g":"Grupo A2","total":4,"fat":1,"ven":0,"d1":1,"d2":0,"fut":2,"fora":0,"ff":0},{"g":"Grupo A3","total":3,"fat":0,"ven":0,"d1":3,"d2":0,"fut":0,"fora":0,"ff":0},{"g":"Grupo B1","total":402,"fat":44,"ven":3,"d1":174,"d2":36,"fut":145,"fora":102,"ff":14},{"g":"Grupo B2","total":78,"fat":10,"ven":0,"d1":25,"d2":0,"fut":43,"fora":4,"ff":2},{"g":"Grupo B3","total":102,"fat":7,"ven":0,"d1":48,"d2":25,"fut":22,"fora":4,"ff":0},{"g":"Grupo C","total":118,"fat":31,"ven":0,"d1":38,"d2":10,"fut":39,"fora":11,"ff":4},{"g":"Grupo D","total":13,"fat":5,"ven":0,"d1":5,"d2":2,"fut":1,"fora":4,"ff":2},{"g":"Grupo D1","total":42,"fat":4,"ven":0,"d1":17,"d2":10,"fut":11,"fora":5,"ff":0},{"g":"Grupo E1","total":267,"fat":17,"ven":0,"d1":105,"d2":25,"fut":120,"fora":18,"ff":5},{"g":"Grupo E2","total":422,"fat":117,"ven":1,"d1":159,"d2":24,"fut":121,"fora":72,"ff":12}];
 
 // ZF = zero fatal E zero vencido — calculado diretamente do RESP para garantir precisão
 const ZF_BY_GROUP = {};
