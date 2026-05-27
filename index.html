@@ -2108,15 +2108,31 @@ renderGrupoResp();
   </tr>`;
 });
 
-// Tabela Fatal+Fora — fora hr e fat usam classe fat
-[...RESP].filter(r=>r.ff>0).sort((a,bv)=>bv.ff-a.ff||bv.fora-a.fora).forEach((r,i)=>{
-  document.getElementById('tb-fatfora').innerHTML+=`<tr data-sigla="${r.n}">
-    <td style="color:var(--tx2);font-size:10px">${i+1}</td>
-    <td>${nome(r.n)}</td>
-    <td style="color:var(--tx2);font-size:10px">${r.grp}</td>
-    ${b(r.ff,r.ff>0?'alert':'muted')}${b(r.fora,'fat')}${b(r.fat,'fat',true)}
-    <td class="c" style="color:var(--tx2)">${r.tot}</td></tr>`;
-});
+// Tabela Fatal+Fora — agrega por pessoa a partir de FAT_FORA (RESP não tem campo ff)
+(function(){
+  const ffMap={};
+  FAT_FORA.forEach(f=>{
+    if(!ffMap[f.resp]) ffMap[f.resp]={n:f.resp,grp:f.grp,ff:0,fat:0,tot:0};
+    ffMap[f.resp].ff++;
+    if(f.status==='Fatal') ffMap[f.resp].fat++;
+  });
+  // total de prazos vem do RESP
+  Object.keys(ffMap).forEach(sig=>{
+    const rows=RESP.filter(r=>r.n===sig);
+    ffMap[sig].tot=rows.reduce((s,r)=>s+(r.tot||0),0)||ffMap[sig].ff;
+    ffMap[sig].grp=ffMap[sig].grp||(rows[0]&&rows[0].grp)||'—';
+  });
+  Object.values(ffMap).sort((a,bv)=>bv.ff-a.ff).forEach((r,i)=>{
+    document.getElementById('tb-fatfora').innerHTML+=`<tr data-sigla="${r.n}">
+      <td style="color:var(--tx2);font-size:10px">${i+1}</td>
+      <td>${nome(r.n)}</td>
+      <td style="color:var(--tx2);font-size:10px">${r.grp}</td>
+      <td class="c"><span class="vbad alert">${r.ff}</span></td>
+      <td class="c"><span class="vbad fat">${r.ff}</span></td>
+      <td class="c"><span class="vbad fat">${r.fat}</span></td>
+      <td class="c" style="color:var(--tx2)">${r.tot}</td></tr>`;
+  });
+})();
 
 // Tabela Zero Fatal (= dentro da regra: sem fatal E sem vencido)
 [...RESP].filter(r=>r.fat===0&&r.ven===0&&r.tot>=2).sort((a,bv)=>bv.d1-a.d1).forEach((r,i)=>{
