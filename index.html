@@ -1602,6 +1602,17 @@ div[style*="background: #117A65"]{
     </div>
   </div>
 
+  <!-- ── PRAZOS POR TIPO DE TAREFA ── -->
+  <div class="pnl" style="margin-bottom:14px">
+    <div class="ptitle ble">📋 Prazos por Tipo de Tarefa <span class="pcnt">acumulado semanal · top 20 tipos · apenas tipo_agenda = Prazo</span></div>
+    <div style="overflow-x:auto;padding:0 4px 12px">
+      <table id="tbl-tipos" style="min-width:400px">
+        <thead><tr id="thead-tipos-row"></tr></thead>
+        <tbody id="tbody-tipos"></tbody>
+      </table>
+    </div>
+  </div>
+
   <div class="hist-section pnl">
     <div class="ptitle ble">📈 Comparativo Semanal por Profissional <span class="pcnt">S20 (11/05–17/05) vs S21 (18/05–24/05) · fatal, vencido, D-1, D-2 e fora do horário</span></div>
     <div class="exec-note" style="margin:12px 14px">
@@ -2251,6 +2262,61 @@ function agendaTotals(equipes){
 }
 
 
+// ── TIPOS DE PRAZO POR SEMANA ─────────────────────────────────────────────
+window.TIPOS_DATA = {
+  "2026-S21": {
+    "Juntada da certidão de registro da apólice": 155,
+    "Embargos de Declaração + conferir interesse em recorrer": 136,
+    "Manifestação": 117,
+    "Regularizar representação processual": 77,
+    "Recurso Ordinário": 61,
+    "Habilitar processo Pje": 53,
+    "Recurso de Revista": 52,
+    "Analisar exceção de incompetência / solicitar agendamento do prazo de protocolo": 49,
+    "Protocolar defesa": 47,
+    "Manifestação sobre laudo": 45,
+    "Elaborar defesa": 38,
+    "Embargos à execução": 38,
+    "Contrarrazões de Recurso Ordinário": 37,
+    "Manifestação sobre esclarecimentos periciais": 37,
+    "Comprovar pagamento/solicitar dilação de prazo": 36,
+    "Razões finais": 23,
+    "Apresentar quesitos e indicar assistentes": 20,
+    "Manifestação de cálculos": 19,
+    "Agravo": 19,
+    "Embargos de Declaração": 17
+  }
+};
+const SEMANA_LABELS_MAP = {
+  '2026-S19':'S19<br><small style="color:var(--tx2)">02-10/05</small>',
+  '2026-S20':'S20<br><small style="color:var(--tx2)">11-17/05</small>',
+  '2026-S21':'S21<br><small style="color:var(--tx2)">18-24/05</small>'
+};
+function getSemanaKey(serial){
+  const d=new Date((serial-25569)*86400000);
+  const jan1=new Date(d.getFullYear(),0,1);
+  const wk=Math.ceil(((d-jan1)/86400000+jan1.getDay()+1)/7);
+  return d.getFullYear()+'-S'+String(wk).padStart(2,'0');
+}
+function renderTiposPrazo(){
+  const semanas=Object.keys(window.TIPOS_DATA).sort();
+  const hdrRow=document.getElementById('thead-tipos-row');
+  const tbody=document.getElementById('tbody-tipos');
+  if(!hdrRow||!tbody) return;
+  const totais={};
+  semanas.forEach(s=>{ Object.entries(window.TIPOS_DATA[s]||{}).forEach(([t,c])=>{ totais[t]=(totais[t]||0)+c; }); });
+  const sorted=Object.entries(totais).sort((a,b)=>b[1]-a[1]);
+  const maxVal=sorted.length?sorted[0][1]:1;
+  hdrRow.innerHTML='<th>Tipo de Tarefa</th>'+
+    semanas.map(s=>`<th class="c">${SEMANA_LABELS_MAP[s]||s}</th>`).join('')+
+    '<th class="c" style="color:var(--pc-azul)">Total</th>';
+  tbody.innerHTML=sorted.slice(0,20).map(([tipo,total])=>{
+    const cells=semanas.map(s=>{ const v=(window.TIPOS_DATA[s]||{})[tipo]||0; return `<td class="c">${v||'<span style="color:var(--tx2)">—</span>'}</td>`; }).join('');
+    const bw=Math.round((total/maxVal)*48);
+    return `<tr><td>${tipo}<span style="display:inline-block;width:${bw}px;height:3px;background:var(--pc-azul);border-radius:2px;vertical-align:middle;opacity:.45;margin-left:6px"></span></td>${cells}<td class="c"><b style="color:var(--pc-azul)">${total}</b></td></tr>`;
+  }).join('');
+}
+
 const ACUMULADO_DATA={"semana":{"2026-S19":{"Prazo":1451,"Agenda":4122,"Agenda Equipe":246,"Vencido":905,"Fatal":1053,"D-1":2174,"D-2":487,"Futuro":1200,"Total":5819},"2026-S20":{"Prazo":1396,"Agenda":3788,"Agenda Equipe":179,"Total":5363,"Vencido":556,"Fatal":892,"D-1":2226,"D-2":469,"Futuro":1220},"2026-S21":{"Prazo":1390,"Agenda":3814,"Agenda Equipe":206,"Vencido":488,"Fatal":882,"D-1":2239,"D-2":575,"Futuro":1226,"Total":5410}},"mes":{"2026-05":{"Prazo":2847,"Agenda":7910,"Agenda Equipe":425,"Vencido":1461,"Fatal":1945,"D-1":4400,"D-2":956,"Futuro":2420,"Total":11182}}};
 function openAcumulado(tipo, key){
   const d=(ACUMULADO_DATA[tipo]||{})[key]; if(!d) return;
@@ -2473,6 +2539,7 @@ renderAgendaKpis('ageq-kpi-row', agendaTotals(AGEQ_EQUIPE), 'agenda equipe reali
 renderAgendaBloco('ag', AG_EQUIPE, AG_RESP);
 renderAgendaBloco('ageq', AGEQ_EQUIPE, AGEQ_RESP);
 renderHistoricoResp();
+renderTiposPrazo();
 
 // Inicializar filtro
 updateFilterButtons();
@@ -2635,6 +2702,23 @@ function processExcelFile(file) {
       if (isRaw) {
         // Formato raw do "baixados semanal" — agrega por responsavel+grupo
         newResp = parseRawExcel(arrayRows);
+        // Computa tipos de prazo para a tabela acumulada
+        const iTipoAg=hdrs.indexOf('tipo_agenda'), iDesc=hdrs.indexOf('descricao'), iDataAg=hdrs.indexOf('data_agenda');
+        if(iTipoAg>=0 && iDesc>=0){
+          const tc={}; let skKey=null;
+          for(let i=1;i<arrayRows.length;i++){
+            const row=arrayRows[i]; if(!row||!row[iTipoAg]) continue;
+            if(String(row[iTipoAg]).trim()!=='Prazo') continue;
+            const desc=String(row[iDesc]||'').trim(); if(desc) tc[desc]=(tc[desc]||0)+1;
+            if(!skKey && iDataAg>=0 && row[iDataAg]) skKey=getSemanaKey(Number(row[iDataAg]));
+          }
+          if(skKey && Object.keys(tc).length){
+            window.TIPOS_DATA=window.TIPOS_DATA||{};
+            window.TIPOS_DATA[skKey]=tc;
+            if(!SEMANA_LABELS_MAP[skKey]) SEMANA_LABELS_MAP[skKey]=skKey;
+            renderTiposPrazo();
+          }
+        }
       } else {
         // Formato agregado legado — uma linha por pessoa
         const jsonData = XLSX.utils.sheet_to_json(worksheet);
