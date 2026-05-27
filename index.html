@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>Protocolados [SEMANA 21] — Peixoto & Cury</title>
+<script>
+// Auth guard — roda ANTES de qualquer render
+(function(){
+  var auth = sessionStorage.getItem('lawgico_baixados_auth')==='1' ||
+             localStorage.getItem('lawgico_baixados_auth')==='1';
+  if (!auth) { document.documentElement.style.display='none'; window.location.replace('login.html'); }
+})();
+</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -1634,14 +1642,6 @@ div[style*="background: #117A65"]{
 </div>
 
 <script>
-// ── Auth guard ──────────────────────────────────────────────────
-(function(){
-  var auth = sessionStorage.getItem('lawgico_baixados_auth')==='1' ||
-             localStorage.getItem('lawgico_baixados_auth')==='1';
-  if (!auth) { window.location.replace('login.html'); }
-})();
-// ────────────────────────────────────────────────────────────────
-
 const TIMELINE_DATA = {"2026-05-11":{"Agenda":680,"Agenda Equipe":35,"Prazo":276,"Total":991,"Vencido":194,"Fatal":34,"D-1":475,"D-2":86,"Futuro":202},"2026-05-12":{"Agenda":725,"Agenda Equipe":33,"Prazo":308,"Total":1066,"Vencido":30,"Fatal":202,"D-1":509,"D-2":88,"Futuro":237},"2026-05-13":{"Agenda":675,"Agenda Equipe":44,"Prazo":267,"Total":986,"Vencido":88,"Fatal":154,"D-1":405,"D-2":119,"Futuro":220},"2026-05-14":{"Agenda":745,"Agenda Equipe":18,"Prazo":259,"Total":1022,"Vencido":84,"Fatal":172,"D-1":396,"D-2":166,"Futuro":204},"2026-05-15":{"Agenda":862,"Agenda Equipe":46,"Prazo":269,"Total":1177,"Vencido":133,"Fatal":265,"D-1":441,"D-2":0,"Futuro":338},"2026-05-17":{"Agenda":101,"Agenda Equipe":3,"Prazo":17,"Total":121,"Vencido":27,"Fatal":65,"D-1":0,"D-2":10,"Futuro":19},"2026-05-18":{"Agenda":721,"Agenda Equipe":39,"Prazo":309,"Total":1069,"Vencido":210,"Fatal":36,"D-1":484,"D-2":110,"Futuro":229},"2026-05-19":{"Agenda":711,"Agenda Equipe":43,"Prazo":277,"Total":1031,"Vencido":33,"Fatal":236,"D-1":400,"D-2":152,"Futuro":210},"2026-05-20":{"Agenda":739,"Agenda Equipe":50,"Prazo":267,"Total":1056,"Vencido":44,"Fatal":175,"D-1":476,"D-2":114,"Futuro":247},"2026-05-21":{"Agenda":779,"Agenda Equipe":35,"Prazo":266,"Total":1080,"Vencido":30,"Fatal":192,"D-1":468,"D-2":162,"Futuro":228},"2026-05-22":{"Agenda":573,"Agenda Equipe":28,"Prazo":239,"Total":840,"Vencido":44,"Fatal":121,"D-1":411,"D-2":1,"Futuro":263},"2026-05-23":{"Agenda":7,"Agenda Equipe":0,"Prazo":1,"Total":8,"Vencido":0,"Fatal":5,"D-1":0,"D-2":0,"Futuro":3},"2026-05-24":{"Agenda":284,"Agenda Equipe":11,"Prazo":31,"Total":326,"Vencido":127,"Fatal":117,"D-1":0,"D-2":36,"Futuro":46}};
 function openTimelineDay(dateKey){
   const d = TIMELINE_DATA[dateKey]; if(!d) return;
