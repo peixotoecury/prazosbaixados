@@ -1562,7 +1562,7 @@ div[style*="background: #117A65"]{
           <td class="c"><span class="vbad grn">1.200</span></td>
           <td class="c" style="font-weight:800;color:var(--pc-escuro)">5.819</td>
         </tr><tr data-acumulo="semana" data-acumulo-key="2026-S20" onclick="openAcumulado('semana','2026-S20')" title="Clique para detalhar o acumulado">
-          <td><b>Semana 21 · 18/05 a 24/05</b></td>
+          <td><b>Semana 20 · 11/05 a 17/05</b></td>
           <td class="c"><span class="vbad muted">1.396</span></td>
           <td class="c"><span class="vbad blu">3.788</span></td>
           <td class="c"><span class="vbad grn">179</span></td>
@@ -1583,7 +1583,18 @@ div[style*="background: #117A65"]{
           <td class="c"><span class="vbad blu">575</span></td>
           <td class="c"><span class="vbad grn">1.226</span></td>
           <td class="c" style="font-weight:800;color:var(--pc-escuro)">5.410</td>
-        </tr></tbody>
+        </tr></tr><tr data-acumulo="semana" data-acumulo-key="2026-S22" onclick="openAcumulado('semana'.'2026-S22')" title="Clique para detalhar o acumulado">
+          <td><b>Semana 22 · 25/05 a 31/05</b></td>
+          <td class="c"><span class="vbad muted">1.368</span></td>
+          <td class="c"><span class="vbad blu">4.043</span></td>
+          <td class="c"><span class="vbad grn">200</span></td>
+          <td class="c"><span class="vbad red">0</span></td>
+          <td class="c"><span class="vbad fat">156</span></td>
+          <td class="c"><span class="vbad yel">551</span></td>
+          <td class="c"><span class="vbad blu">121</span></td>
+          <td class="c"><span class="vbad grn">540</span></td>
+          <td class="c" style="font-weight:800;color:var(--pc-escuro)">5.611</td>
+</tbody>
       </table></div>
     </div>
     <div class="pnl">
@@ -1591,7 +1602,7 @@ div[style*="background: #117A65"]{
       <div class="scr" style="max-height:360px"><table>
         <thead><tr><th>Mês</th><th class="c">Prazos</th><th class="c">Agendas</th><th class="c">Agenda Equipe</th><th class="c" style="color:#C0392B">Vencido</th><th class="c" style="color:#C0392B">Fatal</th><th class="c">D-1</th><th class="c">D-2</th><th class="c">Futuro</th><th class="c">Total</th></tr></thead>
         <tbody><tr data-acumulo="mes" data-acumulo-key="2026-05" onclick="openAcumulado('mes','2026-05')" title="Clique para detalhar o acumulado">
-          <td><b>05/2026 acumulado · 02/05 a 24/05</b></td>
+          <td><b>05/2026 acumulado · 02/05 a 31/05</b></td>
           <td class="c"><span class="vbad muted">3.217</span></td>
           <td class="c"><span class="vbad blu">8.114</span></td>
           <td class="c"><span class="vbad grn">566</span></td>
@@ -1618,9 +1629,9 @@ div[style*="background: #117A65"]{
   </div>
 
   <div class="hist-section pnl">
-    <div class="ptitle ble">📈 Comparativo Semanal por Profissional <span class="pcnt">S21 (18/05–24/05) vs S21 (18/05–24/05) · fatal, vencido, D-1, D-2 e fora do horário</span></div>
+    <div class="ptitle ble">📈 Comparativo Semanal por Profissional <span class="pcnt">S21 (18/05–24/05) vs S22 (25/05–31/05) · fatal, vencido, D-1, D-2 e fora do horário</span></div>
     <div class="exec-note" style="margin:12px 14px">
-      <b>Como ler:</b> cada profissional aparece com duas linhas — a linha clara é a semana anterior (S20 · 11/05 a 17/05) e a linha normal é a semana atual (S21 · 18/05 a 24/05). A coluna <b>Evolução</b> mostra se o índice de risco melhorou, piorou ou ficou estável na comparação entre as duas semanas.
+      <b>Como ler:</b> cada profissional aparece com duas linhas — a linha clara é a semana anterior (S21 · 18/05 a 24/05) e a linha normal é a semana atual (S22 · 25/05 a 31/05). A coluna <b>Evolução</b> mostra se o índice de risco melhorou, piorou ou ficou estável na comparação entre as duas semanas.
     </div>
     <div class="hist-summary" id="hist-summary" style="padding:0 14px"></div>
     <div class="scr hist-table-wrap"><table>
@@ -2301,12 +2312,14 @@ window.TIPOS_DATA = {
     "Manifestação de cálculos": 19,
     "Agravo": 19,
     "Embargos de Declaração": 17
-  }
+  },
+  "2026-S22": {"Juntada da certidão de registro da apólice":175,"Embargos de Declaração + conferir interesse em recorrer":133,"Manifestação":96,"Regularizar representação processual":71,"Recurso de Revista":50,"Recurso Ordinário":49,"Analisar exceção de incompetência / solicitar agendamento do prazo de protocolo":48,"Embargos à execução":46,"Habilitar processo Pje":44,"Manifestação sobre esclarecimentos periciais":42,"Comprovar pagamento/solicitar dilação de prazo":42,"Protocolar defesa":41,"Elaborar defesa":37,"Contrarrazões de Recurso Ordinário":35,"Agravo":29,"Manifestação sobre laudo":22,"Embargos de Declaração":18,"Manifestação de cálculos":18,"Razões finais":17,"Apresentar quesitos e indicar assistentes":16}
 };
 const SEMANA_LABELS_MAP = {
   '2026-S19':'S19<br><small style="color:var(--tx2)">02-10/05</small>',
   '2026-S20':'S20<br><small style="color:var(--tx2)">11-17/05</small>',
-  '2026-S21':'S21<br><small style="color:var(--tx2)">18-24/05</small>'
+  '2026-S21':'S21<br><small style="color:var(--tx2)">18-24/05</small>',
+  '2026-S22':'S22<br><small style="color:var(--tx2)">25-31/05</small>'
 };
 function getSemanaKey(serial){
   const d=new Date((serial-25569)*86400000);
