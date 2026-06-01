@@ -2473,7 +2473,7 @@ function renderAgendaBloco(prefix, equipes, responsaveis){
 
 
 function renderHistoricoResp(){
-  // Constrói mapa S20 (semana anterior: 11/05–17/05)
+  // Constrói mapa S21 como semana anterior (18/05–24/05)
   const m20={};
   (RESP_S20||[]).forEach(r=>{
     if(!r.n) return;
@@ -2481,7 +2481,7 @@ function renderHistoricoResp(){
     m20[r.n].total+=r.tot||0; m20[r.n].ven+=r.ven||0; m20[r.n].fatal+=r.fat||0;
     m20[r.n].d1+=r.d1||0; m20[r.n].d2+=r.d2||0; m20[r.n].fora+=r.fora||0; m20[r.n].ff+=r.ff||0;
   });
-  // Constrói mapa S21 (semana atual: 18/05–24/05)
+  // Constrói mapa S22 (semana atual: 25/05–31/05)
   const m21={};
   (RESP||[]).forEach(r=>{
     if(!r.n) return;
@@ -2517,7 +2517,7 @@ function renderHistoricoResp(){
   const good=rows.filter(r=>r.lei.c==='good').length;
   const resumo=document.getElementById('hist-summary');
   if(resumo) resumo.innerHTML=`
-    <div class="hist-card"><div class="hlabel">Prazos S21</div><div class="hvalue">${fmtNum(1390)}</div></div>
+    <div class="hist-card"><div class="hlabel">Prazos S22</div><div class="hvalue">${fmtNum(1368)}</div></div>
     <div class="hist-card"><div class="hlabel">Pontos de atenção</div><div class="hvalue" style="color:#C0392B">${high}</div></div>
     <div class="hist-card"><div class="hlabel">Monitorar</div><div class="hvalue" style="color:#E67E22">${mid}</div></div>
     <div class="hist-card"><div class="hlabel">Positivos</div><div class="hvalue" style="color:#003B5C">${good}</div></div>`;
@@ -2535,7 +2535,7 @@ function renderHistoricoResp(){
 
     const row20=r.d20?`<tr class="hist-prev-row">
       <td><span style="font-size:11px;color:var(--tx2)">${fn}</span></td>
-      <td><span style="font-size:10px;color:var(--tx2)">11/05 a 17/05</span></td>
+      <td><span style="font-size:10px;color:var(--tx2)">18/05 a 24/05</span></td>
       <td class="c"><span class="vbad muted">${fmtNum(d20.total)}</span></td>
       <td class="c">${v(d20.ven,'red')}</td><td class="c">${v(d20.fatal,'fat')}</td>
       <td class="c">${d20.d1?`<span class="vbad yel">${fmtNum(d20.d1)}</span>`:`<span class="vbad muted">—</span>`}</td>
@@ -2547,7 +2547,7 @@ function renderHistoricoResp(){
 
     const row21=`<tr onclick="openDataModalByResp('${r.sig}')" title="Clique para detalhar" style="border-top:2px solid rgba(0,174,239,.18)">
       <td><span class="nome-full">${fn}</span></td>
-      <td><b>18/05 a 24/05</b></td>
+      <td><b>25/05 a 31/05</b></td>
       <td class="c"><span class="vbad muted">${fmtNum(d21.total)}</span></td>
       <td class="c">${v(d21.ven,'red')}</td><td class="c">${v(d21.fatal,'fat')}</td>
       <td class="c">${d21.d1?`<span class="vbad yel">${fmtNum(d21.d1)}</span>`:`<span class="vbad muted">—</span>`}</td>
