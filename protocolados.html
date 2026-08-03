@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<title>Protocolados [SEMANA 29] — Peixoto & Cury</title>
+<title>Protocolados [SEMANA 31] — Peixoto & Cury</title>
 <script>
 // Auth guard inline — sem dependência de login.html externo
 (function(){
@@ -1289,7 +1289,7 @@ function _loToggleSenha(btn) {
 })();
 </script>
 <!-- ══════════════════════════════════════════════════════════════ -->
-<div style="padding:10px 20px;font-size:11.5px;color:var(--tx2);border-bottom:1px solid rgba(0,169,224,.15)">📅 Período apurado: 13/07/2026 a 19/07/2026</div>
+<div style="padding:10px 20px;font-size:11.5px;color:var(--tx2);border-bottom:1px solid rgba(0,169,224,.15)">📅 Período apurado: 27/07/2026 a 02/08/2026</div>
 
 <div class="main">
   <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px">
@@ -1300,19 +1300,19 @@ function _loToggleSenha(btn) {
   </div>
 <div id="sec-prazos"></div>
 <div class="kpis">
-  <div class="kpi" onclick="kpiClick(this,'')"><div class="klbl">Total Baixado</div><div class="kval wh">1.100</div><div class="ksub">prazos realizados</div></div>
-  <div class="kpi" onclick="kpiClick(this,'fatal')" id="kpi-fatal"><div class="klbl">Fatais</div><div class="kval" style="color:#e74c3c">268</div><div class="ksub">24,4% — protocolados no dia fatal</div></div>
+  <div class="kpi" onclick="kpiClick(this,'')"><div class="klbl">Total Baixado</div><div class="kval wh">1.173</div><div class="ksub">prazos realizados</div></div>
+  <div class="kpi" onclick="kpiClick(this,'fatal')" id="kpi-fatal"><div class="klbl">Fatais</div><div class="kval" style="color:#e74c3c">209</div><div class="ksub">17,8% — protocolados no dia fatal</div></div>
   <div class="kpi" onclick="kpiClick(this,'vencido')" id="kpi-vencido"><div class="klbl">Vencidos</div><div class="kval" style="color:#c0392b">0</div><div class="ksub">0,0% — prazos vencidos</div></div>
-  <div class="kpi" onclick="kpiClick(this,'d1')" id="kpi-d1"><div class="klbl">D-1 (no dia)</div><div class="kval yel">422</div><div class="ksub">cumpridos no prazo</div></div>
-  <div class="kpi" onclick="kpiClick(this,'antecipado')" id="kpi-antecipado"><div class="klbl">Antecipados</div><div class="kval grn">410</div><div class="ksub">37,3% — antes do prazo</div></div>
-  <div class="kpi" onclick="toggleFilter('fora')" id="kpi-fora"><div class="klbl">Fora do Horário</div><div class="kval org">167</div><div class="ksub">antes 9h ou após 19h</div></div>
-  <div class="kpi" onclick="toggleFilter('fatfora')" id="kpi-fatfora"><div class="klbl">Fatal + Fora Hora</div><div class="kval" style="color:#e74c3c">23</div><div class="ksub">⚠ caso fatal — clique para filtrar</div></div>
+  <div class="kpi" onclick="kpiClick(this,'d1')" id="kpi-d1"><div class="klbl">D-1 (no dia)</div><div class="kval yel">519</div><div class="ksub">cumpridos no prazo</div></div>
+  <div class="kpi" onclick="kpiClick(this,'antecipado')" id="kpi-antecipado"><div class="klbl">Antecipados</div><div class="kval grn">445</div><div class="ksub">37,9% — antes do prazo</div></div>
+  <div class="kpi" onclick="toggleFilter('fora')" id="kpi-fora"><div class="klbl">Fora do Horário</div><div class="kval org">137</div><div class="ksub">antes 9h ou após 19h</div></div>
+  <div class="kpi" onclick="toggleFilter('fatfora')" id="kpi-fatfora"><div class="klbl">Fatal + Fora Hora</div><div class="kval" style="color:#e74c3c">24</div><div class="ksub">⚠ caso fatal — clique para filtrar</div></div>
 </div>
 
 <!-- NOTA FERIADO -->
 <div class="nota-feriado">
   <span style="font-size:15px;flex-shrink:0">📌</span>
-  <span><b>Nota:</b> No período de <b>13/07/2026 a 19/07/2026</b> não houve <b>nenhum prazo vencido</b>, em um total de 1.100 prazos realizados na semana.</span>
+  <span><b>Nota:</b> No período de <b>27/07/2026 a 02/08/2026</b> não houve <b>nenhum prazo vencido</b>, em um total de 1.173 prazos realizados na semana.</span>
 
 </div>
 
@@ -1417,7 +1417,7 @@ function _loToggleSenha(btn) {
 
 <div class="g2">
   <div class="pnl">
-    <div class="ptitle re">📋 Registro Detalhado — Fatais & Vencidos Fora do Horário <span class="pcnt">23 registros</span></div>
+    <div class="ptitle re">📋 Registro Detalhado — Fatais & Vencidos Fora do Horário <span class="pcnt">24 registros</span></div>
     <div class="scr"><table>
       <thead><tr><th>Resp.</th><th>Grupo</th><th>Data</th><th>Hora aprox.</th><th>Status</th><th>Processo</th></tr></thead>
       <tbody id="tb-detail"></tbody>
@@ -1480,8 +1480,8 @@ function _loToggleSenha(btn) {
 <div style="margin-top:28px;border-top:2px solid rgba(0,174,239,.3);padding-top:22px">
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap">
     <div style="width:4px;height:22px;background:var(--cyan);border-radius:2px"></div>
-    <h2 style="font-size:14px;font-weight:700;letter-spacing:.3px">📅 Agendas — 13/07/2026 a 19/07/2026</h2>
-    <span style="font-size:11px;color:var(--tx2);margin-left:4px">2.869 realizadas</span>
+    <h2 style="font-size:14px;font-weight:700;letter-spacing:.3px">📅 Agendas — 27/07/2026 a 02/08/2026</h2>
+    <span style="font-size:11px;color:var(--tx2);margin-left:4px">2.572 realizadas</span>
   </div>
   <div class="nota-feriado" style="margin-bottom:14px">
     <span style="font-size:14px;flex-shrink:0">⚖️</span>
@@ -1514,8 +1514,8 @@ function _loToggleSenha(btn) {
 <div style="margin-top:28px;border-top:2px solid rgba(0,174,239,.3);padding-top:22px">
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap">
     <div style="width:4px;height:22px;background:var(--cyan);border-radius:2px"></div>
-    <h2 style="font-size:14px;font-weight:700;letter-spacing:.3px">👥 Agenda Equipe — 13/07/2026 a 19/07/2026</h2>
-    <span style="font-size:11px;color:var(--tx2);margin-left:4px">209 realizadas</span>
+    <h2 style="font-size:14px;font-weight:700;letter-spacing:.3px">👥 Agenda Equipe — 27/07/2026 a 02/08/2026</h2>
+    <span style="font-size:11px;color:var(--tx2);margin-left:4px">145 realizadas</span>
   </div>
   <div class="nota-feriado" style="margin-bottom:14px">
     <span style="font-size:14px;flex-shrink:0">⚖️</span>
@@ -1546,43 +1546,43 @@ function _loToggleSenha(btn) {
 </div>
 
 <div class="pnl" style="margin-top:20px">
-  <div class="ptitle ble">📊 Comparativo de Evolução — Semana 28 vs Semana 29</div>
+  <div class="ptitle ble">📊 Comparativo de Evolução — Semana 30 vs Semana 31</div>
   <table style="margin:0">
-    <thead><tr><th>Métrica</th><th class="c">Semana 28<br>(06/07-12/07)</th><th class="c">Semana 29<br>(13/07-19/07)</th><th class="c">Variação</th><th class="c">Evolução</th></tr></thead>
+    <thead><tr><th>Métrica</th><th class="c">Semana 30<br>(20/07-26/07)</th><th class="c">Semana 31<br>(27/07-02/08)</th><th class="c">Variação</th><th class="c">Evolução</th></tr></thead>
     <tbody>
       <tr>
         <td><b>Vencido</b></td>
-        <td class="c"><span class="vbad red">1</span></td>
         <td class="c"><span class="vbad red">0</span></td>
-        <td class="c"><span class="vbad grn">-1 (-100%)</span></td>
-        <td class="c"><span class="evolucao melhorando">✓ MELHORANDO</span></td>
+        <td class="c"><span class="vbad red">0</span></td>
+        <td class="c"><span class="vbad muted">+0 (+0%)</span></td>
+        <td class="c"><span class="evolucao estavel">→ ESTÁVEL</span></td>
       </tr>
       <tr>
         <td><b>Fatal</b></td>
-        <td class="c"><span class="vbad fat">146</span></td>
-        <td class="c"><span class="vbad fat">268</span></td>
-        <td class="c"><span class="vbad red">+122 (+84%)</span></td>
-        <td class="c"><span class="evolucao piorando">✗ PIORANDO</span></td>
+        <td class="c"><span class="vbad fat">228</span></td>
+        <td class="c"><span class="vbad fat">209</span></td>
+        <td class="c"><span class="vbad grn">-19 (-8%)</span></td>
+        <td class="c"><span class="evolucao melhorando">✓ MELHORANDO</span></td>
       </tr>
       <tr>
         <td><b>D-1</b></td>
-        <td class="c"><span class="vbad yel">373</span></td>
-        <td class="c"><span class="vbad yel">422</span></td>
-        <td class="c"><span class="vbad grn">+49 (+13%)</span></td>
+        <td class="c"><span class="vbad yel">436</span></td>
+        <td class="c"><span class="vbad yel">519</span></td>
+        <td class="c"><span class="vbad grn">+83 (+19%)</span></td>
         <td class="c"><span class="evolucao melhorando">✓ MELHORANDO</span></td>
       </tr>
       <tr>
         <td><b>D-2</b></td>
-        <td class="c"><span class="vbad blu">129</span></td>
-        <td class="c"><span class="vbad blu">122</span></td>
-        <td class="c"><span class="vbad red">-7 (-5%)</span></td>
-        <td class="c"><span class="evolucao piorando">✗ PIORANDO</span></td>
+        <td class="c"><span class="vbad blu">94</span></td>
+        <td class="c"><span class="vbad blu">116</span></td>
+        <td class="c"><span class="vbad grn">+22 (+23%)</span></td>
+        <td class="c"><span class="evolucao melhorando">✓ MELHORANDO</span></td>
       </tr>
       <tr>
         <td><b>Futuro</b></td>
-        <td class="c"><span class="vbad grn">431</span></td>
-        <td class="c"><span class="vbad grn">288</span></td>
-        <td class="c"><span class="vbad red">-143 (-33%)</span></td>
+        <td class="c"><span class="vbad grn">379</span></td>
+        <td class="c"><span class="vbad grn">329</span></td>
+        <td class="c"><span class="vbad red">-50 (-13%)</span></td>
         <td class="c"><span class="evolucao piorando">✗ PIORANDO</span></td>
       </tr>
     </tbody>
@@ -2245,6 +2245,342 @@ function _loToggleSenha(btn) {
       <td class="c"><span class="vbad grn">2</span></td>
       <td class="c" style="font-weight:800;color:var(--pc-escuro)">19</td>
       <td class="c"><span class="risk-chip high">89%</span></td>
+    </tr><tr data-timeline-date="2026-07-06" onclick="openTimelineDay('2026-07-06')" title="Clique para ver o resumo do dia">
+      <td><b>06/07/2026</b><span class="nome-sigla">segunda-feira</span></td>
+      <td class="c"><span class="vbad muted">292</span></td>
+      <td class="c"><span class="vbad blu">949</span></td>
+      <td class="c"><span class="vbad grn">44</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">28</span></td>
+      <td class="c"><span class="vbad yel">127</span></td>
+      <td class="c"><span class="vbad blu">26</span></td>
+      <td class="c"><span class="vbad grn">111</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.285</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-07" onclick="openTimelineDay('2026-07-07')" title="Clique para ver o resumo do dia">
+      <td><b>07/07/2026</b><span class="nome-sigla">terça-feira</span></td>
+      <td class="c"><span class="vbad muted">282</span></td>
+      <td class="c"><span class="vbad blu">623</span></td>
+      <td class="c"><span class="vbad grn">45</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">35</span></td>
+      <td class="c"><span class="vbad yel">93</span></td>
+      <td class="c"><span class="vbad blu">33</span></td>
+      <td class="c"><span class="vbad grn">121</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">950</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-08" onclick="openTimelineDay('2026-07-08')" title="Clique para ver o resumo do dia">
+      <td><b>08/07/2026</b><span class="nome-sigla">quarta-feira</span></td>
+      <td class="c"><span class="vbad muted">319</span></td>
+      <td class="c"><span class="vbad blu">1.039</span></td>
+      <td class="c"><span class="vbad grn">35</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">40</span></td>
+      <td class="c"><span class="vbad yel">103</span></td>
+      <td class="c"><span class="vbad blu">62</span></td>
+      <td class="c"><span class="vbad grn">114</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.393</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-09" onclick="openTimelineDay('2026-07-09')" title="Clique para ver o resumo do dia">
+      <td><b>09/07/2026</b><span class="nome-sigla">quinta-feira</span></td>
+      <td class="c"><span class="vbad muted">45</span></td>
+      <td class="c"><span class="vbad blu">163</span></td>
+      <td class="c"><span class="vbad grn">13</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">10</span></td>
+      <td class="c"><span class="vbad yel">16</span></td>
+      <td class="c"><span class="vbad blu">4</span></td>
+      <td class="c"><span class="vbad grn">15</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">221</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-10" onclick="openTimelineDay('2026-07-10')" title="Clique para ver o resumo do dia">
+      <td><b>10/07/2026</b><span class="nome-sigla">sexta-feira</span></td>
+      <td class="c"><span class="vbad muted">131</span></td>
+      <td class="c"><span class="vbad blu">456</span></td>
+      <td class="c"><span class="vbad grn">31</span></td>
+      <td class="c"><span class="vbad red">1</span></td>
+      <td class="c"><span class="vbad fat">26</span></td>
+      <td class="c"><span class="vbad yel">34</span></td>
+      <td class="c"><span class="vbad blu">0</span></td>
+      <td class="c"><span class="vbad grn">70</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">618</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-11" onclick="openTimelineDay('2026-07-11')" title="Clique para ver o resumo do dia">
+      <td><b>11/07/2026</b><span class="nome-sigla">sábado</span></td>
+      <td class="c"><span class="vbad muted">0</span></td>
+      <td class="c"><span class="vbad blu">0</span></td>
+      <td class="c"><span class="vbad grn">0</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">0</span></td>
+      <td class="c"><span class="vbad yel">0</span></td>
+      <td class="c"><span class="vbad blu">0</span></td>
+      <td class="c"><span class="vbad grn">0</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">0</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-12" onclick="openTimelineDay('2026-07-12')" title="Clique para ver o resumo do dia">
+      <td><b>12/07/2026</b><span class="nome-sigla">domingo</span></td>
+      <td class="c"><span class="vbad muted">11</span></td>
+      <td class="c"><span class="vbad blu">40</span></td>
+      <td class="c"><span class="vbad grn">0</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">7</span></td>
+      <td class="c"><span class="vbad yel">0</span></td>
+      <td class="c"><span class="vbad blu">4</span></td>
+      <td class="c"><span class="vbad grn">0</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">51</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-13" onclick="openTimelineDay('2026-07-13')" title="Clique para ver o resumo do dia">
+      <td><b>13/07/2026</b><span class="nome-sigla">segunda-feira</span></td>
+      <td class="c"><span class="vbad muted">217</span></td>
+      <td class="c"><span class="vbad blu">501</span></td>
+      <td class="c"><span class="vbad grn">55</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">53</span></td>
+      <td class="c"><span class="vbad yel">88</span></td>
+      <td class="c"><span class="vbad blu">32</span></td>
+      <td class="c"><span class="vbad grn">44</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">773</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-14" onclick="openTimelineDay('2026-07-14')" title="Clique para ver o resumo do dia">
+      <td><b>14/07/2026</b><span class="nome-sigla">terça-feira</span></td>
+      <td class="c"><span class="vbad muted">251</span></td>
+      <td class="c"><span class="vbad blu">470</span></td>
+      <td class="c"><span class="vbad grn">43</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">58</span></td>
+      <td class="c"><span class="vbad yel">125</span></td>
+      <td class="c"><span class="vbad blu">34</span></td>
+      <td class="c"><span class="vbad grn">34</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">764</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-15" onclick="openTimelineDay('2026-07-15')" title="Clique para ver o resumo do dia">
+      <td><b>15/07/2026</b><span class="nome-sigla">quarta-feira</span></td>
+      <td class="c"><span class="vbad muted">220</span></td>
+      <td class="c"><span class="vbad blu">634</span></td>
+      <td class="c"><span class="vbad grn">57</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">53</span></td>
+      <td class="c"><span class="vbad yel">70</span></td>
+      <td class="c"><span class="vbad blu">31</span></td>
+      <td class="c"><span class="vbad grn">66</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">911</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-16" onclick="openTimelineDay('2026-07-16')" title="Clique para ver o resumo do dia">
+      <td><b>16/07/2026</b><span class="nome-sigla">quinta-feira</span></td>
+      <td class="c"><span class="vbad muted">213</span></td>
+      <td class="c"><span class="vbad blu">602</span></td>
+      <td class="c"><span class="vbad grn">35</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">50</span></td>
+      <td class="c"><span class="vbad yel">62</span></td>
+      <td class="c"><span class="vbad blu">24</span></td>
+      <td class="c"><span class="vbad grn">77</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">850</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-17" onclick="openTimelineDay('2026-07-17')" title="Clique para ver o resumo do dia">
+      <td><b>17/07/2026</b><span class="nome-sigla">sexta-feira</span></td>
+      <td class="c"><span class="vbad muted">177</span></td>
+      <td class="c"><span class="vbad blu">607</span></td>
+      <td class="c"><span class="vbad grn">19</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">40</span></td>
+      <td class="c"><span class="vbad yel">77</span></td>
+      <td class="c"><span class="vbad blu">0</span></td>
+      <td class="c"><span class="vbad grn">60</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">803</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-18" onclick="openTimelineDay('2026-07-18')" title="Clique para ver o resumo do dia">
+      <td><b>18/07/2026</b><span class="nome-sigla">sábado</span></td>
+      <td class="c"><span class="vbad muted">7</span></td>
+      <td class="c"><span class="vbad blu">20</span></td>
+      <td class="c"><span class="vbad grn">0</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">1</span></td>
+      <td class="c"><span class="vbad yel">0</span></td>
+      <td class="c"><span class="vbad blu">0</span></td>
+      <td class="c"><span class="vbad grn">6</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">27</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-19" onclick="openTimelineDay('2026-07-19')" title="Clique para ver o resumo do dia">
+      <td><b>19/07/2026</b><span class="nome-sigla">domingo</span></td>
+      <td class="c"><span class="vbad muted">15</span></td>
+      <td class="c"><span class="vbad blu">35</span></td>
+      <td class="c"><span class="vbad grn">0</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">13</span></td>
+      <td class="c"><span class="vbad yel">0</span></td>
+      <td class="c"><span class="vbad blu">1</span></td>
+      <td class="c"><span class="vbad grn">1</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">50</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-20" onclick="openTimelineDay('2026-07-20')" title="Clique para ver o resumo do dia">
+      <td><b>20/07/2026</b><span class="nome-sigla">segunda-feira</span></td>
+      <td class="c"><span class="vbad muted">224</span></td>
+      <td class="c"><span class="vbad blu">628</span></td>
+      <td class="c"><span class="vbad grn">56</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">46</span></td>
+      <td class="c"><span class="vbad yel">87</span></td>
+      <td class="c"><span class="vbad blu">15</span></td>
+      <td class="c"><span class="vbad grn">76</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">908</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-21" onclick="openTimelineDay('2026-07-21')" title="Clique para ver o resumo do dia">
+      <td><b>21/07/2026</b><span class="nome-sigla">terça-feira</span></td>
+      <td class="c"><span class="vbad muted">253</span></td>
+      <td class="c"><span class="vbad blu">843</span></td>
+      <td class="c"><span class="vbad grn">58</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">51</span></td>
+      <td class="c"><span class="vbad yel">105</span></td>
+      <td class="c"><span class="vbad blu">22</span></td>
+      <td class="c"><span class="vbad grn">75</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.154</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-22" onclick="openTimelineDay('2026-07-22')" title="Clique para ver o resumo do dia">
+      <td><b>22/07/2026</b><span class="nome-sigla">quarta-feira</span></td>
+      <td class="c"><span class="vbad muted">185</span></td>
+      <td class="c"><span class="vbad blu">641</span></td>
+      <td class="c"><span class="vbad grn">60</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">31</span></td>
+      <td class="c"><span class="vbad yel">67</span></td>
+      <td class="c"><span class="vbad blu">29</span></td>
+      <td class="c"><span class="vbad grn">58</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">886</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-23" onclick="openTimelineDay('2026-07-23')" title="Clique para ver o resumo do dia">
+      <td><b>23/07/2026</b><span class="nome-sigla">quinta-feira</span></td>
+      <td class="c"><span class="vbad muted">247</span></td>
+      <td class="c"><span class="vbad blu">690</span></td>
+      <td class="c"><span class="vbad grn">46</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">50</span></td>
+      <td class="c"><span class="vbad yel">90</span></td>
+      <td class="c"><span class="vbad blu">24</span></td>
+      <td class="c"><span class="vbad grn">83</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">983</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-24" onclick="openTimelineDay('2026-07-24')" title="Clique para ver o resumo do dia">
+      <td><b>24/07/2026</b><span class="nome-sigla">sexta-feira</span></td>
+      <td class="c"><span class="vbad muted">216</span></td>
+      <td class="c"><span class="vbad blu">548</span></td>
+      <td class="c"><span class="vbad grn">36</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">48</span></td>
+      <td class="c"><span class="vbad yel">87</span></td>
+      <td class="c"><span class="vbad blu">0</span></td>
+      <td class="c"><span class="vbad grn">81</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">800</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-25" onclick="openTimelineDay('2026-07-25')" title="Clique para ver o resumo do dia">
+      <td><b>25/07/2026</b><span class="nome-sigla">sábado</span></td>
+      <td class="c"><span class="vbad muted">2</span></td>
+      <td class="c"><span class="vbad blu">2</span></td>
+      <td class="c"><span class="vbad grn">0</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">0</span></td>
+      <td class="c"><span class="vbad yel">0</span></td>
+      <td class="c"><span class="vbad blu">0</span></td>
+      <td class="c"><span class="vbad grn">2</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">4</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-26" onclick="openTimelineDay('2026-07-26')" title="Clique para ver o resumo do dia">
+      <td><b>26/07/2026</b><span class="nome-sigla">domingo</span></td>
+      <td class="c"><span class="vbad muted">10</span></td>
+      <td class="c"><span class="vbad blu">42</span></td>
+      <td class="c"><span class="vbad grn">5</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">2</span></td>
+      <td class="c"><span class="vbad yel">0</span></td>
+      <td class="c"><span class="vbad blu">4</span></td>
+      <td class="c"><span class="vbad grn">4</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">57</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-27" onclick="openTimelineDay('2026-07-27')" title="Clique para ver o resumo do dia">
+      <td><b>27/07/2026</b><span class="nome-sigla">segunda-feira</span></td>
+      <td class="c"><span class="vbad muted">271</span></td>
+      <td class="c"><span class="vbad blu">640</span></td>
+      <td class="c"><span class="vbad grn">30</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">45</span></td>
+      <td class="c"><span class="vbad yel">120</span></td>
+      <td class="c"><span class="vbad blu">28</span></td>
+      <td class="c"><span class="vbad grn">78</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">941</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-28" onclick="openTimelineDay('2026-07-28')" title="Clique para ver o resumo do dia">
+      <td><b>28/07/2026</b><span class="nome-sigla">terça-feira</span></td>
+      <td class="c"><span class="vbad muted">307</span></td>
+      <td class="c"><span class="vbad blu">713</span></td>
+      <td class="c"><span class="vbad grn">44</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">49</span></td>
+      <td class="c"><span class="vbad yel">142</span></td>
+      <td class="c"><span class="vbad blu">34</span></td>
+      <td class="c"><span class="vbad grn">82</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.064</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-29" onclick="openTimelineDay('2026-07-29')" title="Clique para ver o resumo do dia">
+      <td><b>29/07/2026</b><span class="nome-sigla">quarta-feira</span></td>
+      <td class="c"><span class="vbad muted">216</span></td>
+      <td class="c"><span class="vbad blu">532</span></td>
+      <td class="c"><span class="vbad grn">54</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">38</span></td>
+      <td class="c"><span class="vbad yel">92</span></td>
+      <td class="c"><span class="vbad blu">26</span></td>
+      <td class="c"><span class="vbad grn">60</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">802</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-30" onclick="openTimelineDay('2026-07-30')" title="Clique para ver o resumo do dia">
+      <td><b>30/07/2026</b><span class="nome-sigla">quinta-feira</span></td>
+      <td class="c"><span class="vbad muted">177</span></td>
+      <td class="c"><span class="vbad blu">522</span></td>
+      <td class="c"><span class="vbad grn">38</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">34</span></td>
+      <td class="c"><span class="vbad yel">64</span></td>
+      <td class="c"><span class="vbad blu">25</span></td>
+      <td class="c"><span class="vbad grn">54</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">737</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-07-31" onclick="openTimelineDay('2026-07-31')" title="Clique para ver o resumo do dia">
+      <td><b>31/07/2026</b><span class="nome-sigla">sexta-feira</span></td>
+      <td class="c"><span class="vbad muted">190</span></td>
+      <td class="c"><span class="vbad blu">556</span></td>
+      <td class="c"><span class="vbad grn">29</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">39</span></td>
+      <td class="c"><span class="vbad yel">101</span></td>
+      <td class="c"><span class="vbad blu">0</span></td>
+      <td class="c"><span class="vbad grn">50</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">775</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-08-01" onclick="openTimelineDay('2026-08-01')" title="Clique para ver o resumo do dia">
+      <td><b>01/08/2026</b><span class="nome-sigla">sábado</span></td>
+      <td class="c"><span class="vbad muted">2</span></td>
+      <td class="c"><span class="vbad blu">5</span></td>
+      <td class="c"><span class="vbad grn">1</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">1</span></td>
+      <td class="c"><span class="vbad yel">0</span></td>
+      <td class="c"><span class="vbad blu">0</span></td>
+      <td class="c"><span class="vbad grn">1</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">8</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
+    </tr><tr data-timeline-date="2026-08-02" onclick="openTimelineDay('2026-08-02')" title="Clique para ver o resumo do dia">
+      <td><b>02/08/2026</b><span class="nome-sigla">domingo</span></td>
+      <td class="c"><span class="vbad muted">10</span></td>
+      <td class="c"><span class="vbad blu">41</span></td>
+      <td class="c"><span class="vbad grn">6</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
+      <td class="c"><span class="vbad fat">3</span></td>
+      <td class="c"><span class="vbad yel">0</span></td>
+      <td class="c"><span class="vbad blu">3</span></td>
+      <td class="c"><span class="vbad grn">4</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">57</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
     </tr>
     </tbody>
     </table></div>
@@ -2389,6 +2725,28 @@ function _loToggleSenha(btn) {
           <td class="c"><span class="vbad blu">122</span></td>
           <td class="c"><span class="vbad grn">288</span></td>
           <td class="c" style="font-weight:800;color:var(--pc-escuro)">4.178</td>
+        </tr><tr data-acumulo="semana" data-acumulo-key="2026-S30" onclick="openAcumulado('semana','2026-S30')" title="Clique para detalhar o acumulado">
+          <td><b>Semana 30 · 20/07 a 26/07</b></td>
+          <td class="c"><span class="vbad muted">1.137</span></td>
+          <td class="c"><span class="vbad blu">3.394</span></td>
+          <td class="c"><span class="vbad grn">261</span></td>
+          <td class="c"><span class="vbad red">0</span></td>
+          <td class="c"><span class="vbad fat">228</span></td>
+          <td class="c"><span class="vbad yel">436</span></td>
+          <td class="c"><span class="vbad blu">94</span></td>
+          <td class="c"><span class="vbad grn">379</span></td>
+          <td class="c" style="font-weight:800;color:var(--pc-escuro)">4.792</td>
+        </tr><tr data-acumulo="semana" data-acumulo-key="2026-S31" onclick="openAcumulado('semana','2026-S31')" title="Clique para detalhar o acumulado">
+          <td><b>Semana 31 · 27/07 a 02/08</b></td>
+          <td class="c"><span class="vbad muted">1.173</span></td>
+          <td class="c"><span class="vbad blu">3.009</span></td>
+          <td class="c"><span class="vbad grn">202</span></td>
+          <td class="c"><span class="vbad red">0</span></td>
+          <td class="c"><span class="vbad fat">209</span></td>
+          <td class="c"><span class="vbad yel">519</span></td>
+          <td class="c"><span class="vbad blu">116</span></td>
+          <td class="c"><span class="vbad grn">329</span></td>
+          <td class="c" style="font-weight:800;color:var(--pc-escuro)">4.384</td>
         </tr>
 </tbody>
       </table></div>
@@ -2421,16 +2779,27 @@ function _loToggleSenha(btn) {
           <td class="c"><span class="vbad grn">783</span></td>
           <td class="c" style="font-weight:800;color:var(--pc-escuro)">22.235</td>
         </tr><tr data-acumulo="mes" data-acumulo-key="2026-07" onclick="openAcumulado('mes','2026-07')" title="Clique para detalhar o acumulado">
-          <td><b>07/2026 parcial · 01/07 a 05/07</b></td>
-          <td class="c"><span class="vbad muted">739</span></td>
-          <td class="c"><span class="vbad blu">2.108</span></td>
-          <td class="c"><span class="vbad grn">149</span></td>
-          <td class="c"><span class="vbad red">244</span></td>
-          <td class="c"><span class="vbad fat">592</span></td>
-          <td class="c"><span class="vbad yel">1.179</span></td>
-          <td class="c"><span class="vbad blu">196</span></td>
-          <td class="c"><span class="vbad grn">785</span></td>
-          <td class="c" style="font-weight:800;color:var(--pc-escuro)">2.996</td>
+          <td><b>07/2026 acumulado · 01/07 a 31/07</b></td>
+          <td class="c"><span class="vbad muted">5.217</span></td>
+          <td class="c"><span class="vbad blu">14.836</span></td>
+          <td class="c"><span class="vbad grn">983</span></td>
+          <td class="c"><span class="vbad red">1</span></td>
+          <td class="c"><span class="vbad fat">965</span></td>
+          <td class="c"><span class="vbad yel">2.013</span></td>
+          <td class="c"><span class="vbad blu">527</span></td>
+          <td class="c"><span class="vbad grn">1.711</span></td>
+          <td class="c" style="font-weight:800;color:var(--pc-escuro)">21.036</td>
+        </tr><tr data-acumulo="mes" data-acumulo-key="2026-08" onclick="openAcumulado('mes','2026-08')" title="Clique para detalhar o acumulado">
+          <td><b>08/2026 parcial · 01/08 a 02/08</b></td>
+          <td class="c"><span class="vbad muted">12</span></td>
+          <td class="c"><span class="vbad blu">46</span></td>
+          <td class="c"><span class="vbad grn">7</span></td>
+          <td class="c"><span class="vbad red">0</span></td>
+          <td class="c"><span class="vbad fat">4</span></td>
+          <td class="c"><span class="vbad yel">0</span></td>
+          <td class="c"><span class="vbad blu">3</span></td>
+          <td class="c"><span class="vbad grn">5</span></td>
+          <td class="c" style="font-weight:800;color:var(--pc-escuro)">65</td>
         </tr></tbody>
       </table></div>
     </div>
@@ -2448,9 +2817,9 @@ function _loToggleSenha(btn) {
   </div>
 
   <div class="hist-section pnl">
-    <div class="ptitle ble">📈 Comparativo Semanal por Profissional <span class="pcnt">S28 (06/07–12/07) vs S29 (13/07–19/07) · fatal, vencido, D-1, D-2 e fora do horário</span></div>
+    <div class="ptitle ble">📈 Comparativo Semanal por Profissional <span class="pcnt">S30 (20/07–26/07) vs S31 (27/07–02/08) · fatal, vencido, D-1, D-2 e fora do horário</span></div>
     <div class="exec-note" style="margin:12px 14px">
-      <b>Como ler:</b> cada profissional aparece com duas linhas — a linha clara é a semana anterior (S28 · 06/07 a 12/07) e a linha normal é a semana atual (S29 · 13/07 a 19/07). A coluna <b>Evolução</b> mostra se o índice de risco melhorou, piorou ou ficou estável na comparação entre as duas semanas.
+      <b>Como ler:</b> cada profissional aparece com duas linhas — a linha clara é a semana anterior (S30 · 20/07 a 26/07) e a linha normal é a semana atual (S31 · 27/07 a 02/08). A coluna <b>Evolução</b> mostra se o índice de risco melhorou, piorou ou ficou estável na comparação entre as duas semanas.
     </div>
     <div class="hist-summary" id="hist-summary" style="padding:0 14px"></div>
     <div class="scr hist-table-wrap"><table>
@@ -2563,6 +2932,9 @@ const NOMES = {
   'ALH': 'Alícia Marcondes Hamati',
   'CAR': 'Chris Carvalho',
   'TCO': 'Tamires Lins Costa',
+  'ACA': 'Antonio Carlos Aguiar',
+  'GRS': 'Guilherme Roxo Staingel',
+  'PBS': 'Poliana Banqueri da Silva Guimarães',
 }
 
 function nome(sigla) {
@@ -2579,15 +2951,15 @@ function normalizarNome(nomeOuSigla) {
 }
 
 // Semana 29 (13/07 a 19/07) — apenas tipo_agenda=Prazo, computado do Excel semanal
-const RESP=[{"n": "CAL", "grp": "Grupo E2", "ven": 0, "fat": 5, "d1": 53, "d2": 18, "fut": 17, "fora": 15, "ff": 0, "tot": 93}, {"n": "RYL", "grp": "Grupo E2", "ven": 0, "fat": 61, "d1": 6, "d2": 3, "fut": 1, "fora": 13, "ff": 8, "tot": 71}, {"n": "RRU", "grp": "Grupo E2", "ven": 0, "fat": 29, "d1": 15, "d2": 2, "fut": 13, "fora": 9, "ff": 0, "tot": 59}, {"n": "TAM", "grp": "Grupo B1", "ven": 0, "fat": 6, "d1": 33, "d2": 3, "fut": 15, "fora": 15, "ff": 0, "tot": 57}, {"n": "GSM", "grp": "Grupo B1", "ven": 0, "fat": 32, "d1": 14, "d2": 2, "fut": 8, "fora": 15, "ff": 2, "tot": 56}, {"n": "MBF", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 27, "d2": 17, "fut": 7, "fora": 2, "ff": 0, "tot": 52}, {"n": "BSO", "grp": "Grupo B1", "ven": 0, "fat": 2, "d1": 33, "d2": 5, "fut": 10, "fora": 0, "ff": 0, "tot": 50}, {"n": "JNE", "grp": "Grupo E2", "ven": 0, "fat": 9, "d1": 13, "d2": 11, "fut": 17, "fora": 8, "ff": 2, "tot": 50}, {"n": "LMI", "grp": "Grupo B3", "ven": 0, "fat": 9, "d1": 38, "d2": 0, "fut": 3, "fora": 0, "ff": 0, "tot": 50}, {"n": "JQS", "grp": "Grupo D1", "ven": 0, "fat": 0, "d1": 16, "d2": 0, "fut": 31, "fora": 0, "ff": 0, "tot": 47}, {"n": "ARC", "grp": "Grupo E2", "ven": 0, "fat": 16, "d1": 1, "d2": 2, "fut": 26, "fora": 15, "ff": 1, "tot": 45}, {"n": "TLI", "grp": "Grupo E1", "ven": 0, "fat": 8, "d1": 30, "d2": 3, "fut": 3, "fora": 6, "ff": 0, "tot": 44}, {"n": "VRO", "grp": "Grupo E1", "ven": 0, "fat": 6, "d1": 19, "d2": 4, "fut": 10, "fora": 3, "ff": 0, "tot": 39}, {"n": "FCG", "grp": "Grupo E2", "ven": 0, "fat": 9, "d1": 12, "d2": 2, "fut": 15, "fora": 1, "ff": 0, "tot": 38}, {"n": "JPE", "grp": "Grupo B1", "ven": 0, "fat": 4, "d1": 13, "d2": 5, "fut": 11, "fora": 22, "ff": 2, "tot": 33}, {"n": "DPR", "grp": "Grupo E1", "ven": 0, "fat": 27, "d1": 3, "d2": 0, "fut": 1, "fora": 0, "ff": 0, "tot": 31}, {"n": "ANB", "grp": "Grupo B2", "ven": 0, "fat": 2, "d1": 16, "d2": 3, "fut": 4, "fora": 4, "ff": 1, "tot": 25}, {"n": "VCR", "grp": "Grupo B2", "ven": 0, "fat": 0, "d1": 18, "d2": 0, "fut": 7, "fora": 0, "ff": 0, "tot": 25}, {"n": "BBO", "grp": "Grupo D1", "ven": 0, "fat": 1, "d1": 7, "d2": 15, "fut": 1, "fora": 14, "ff": 0, "tot": 24}, {"n": "TFR", "grp": "Grupo C", "ven": 0, "fat": 6, "d1": 11, "d2": 2, "fut": 5, "fora": 6, "ff": 3, "tot": 24}, {"n": "ECO", "grp": "Grupo C", "ven": 0, "fat": 2, "d1": 9, "d2": 4, "fut": 7, "fora": 0, "ff": 0, "tot": 22}, {"n": "PSI", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 4, "d2": 4, "fut": 13, "fora": 7, "ff": 1, "tot": 22}, {"n": "ALF", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 2, "d2": 2, "fut": 17, "fora": 0, "ff": 0, "tot": 21}, {"n": "VSI", "grp": "Grupo C", "ven": 0, "fat": 3, "d1": 10, "d2": 1, "fut": 5, "fora": 4, "ff": 0, "tot": 19}, {"n": "BCF", "grp": "Grupo B2", "ven": 0, "fat": 1, "d1": 2, "d2": 5, "fut": 10, "fora": 0, "ff": 0, "tot": 18}, {"n": "ANB", "grp": "Grupo B3", "ven": 0, "fat": 2, "d1": 4, "d2": 3, "fut": 5, "fora": 2, "ff": 1, "tot": 14}, {"n": "GSM", "grp": "Grupo B3", "ven": 0, "fat": 3, "d1": 0, "d2": 1, "fut": 7, "fora": 1, "ff": 1, "tot": 11}, {"n": "RCF", "grp": "Grupo C", "ven": 0, "fat": 5, "d1": 2, "d2": 0, "fut": 4, "fora": 0, "ff": 0, "tot": 11}, {"n": "AAP", "grp": "Grupo E2", "ven": 0, "fat": 0, "d1": 3, "d2": 2, "fut": 1, "fora": 0, "ff": 0, "tot": 6}, {"n": "SOF", "grp": "Grupo A3", "ven": 0, "fat": 2, "d1": 0, "d2": 1, "fut": 3, "fora": 0, "ff": 0, "tot": 6}, {"n": "NBG", "grp": "Grupo A2", "ven": 0, "fat": 3, "d1": 2, "d2": 0, "fut": 0, "fora": 2, "ff": 1, "tot": 5}, {"n": "JRT", "grp": "Grupo E2", "ven": 0, "fat": 0, "d1": 0, "d2": 2, "fut": 2, "fora": 0, "ff": 0, "tot": 4}, {"n": "KBM", "grp": "Grupo E1", "ven": 0, "fat": 4, "d1": 0, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 4}, {"n": "NRG", "grp": "Grupo B1", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 2, "fora": 0, "ff": 0, "tot": 4}, {"n": "RCF", "grp": "Grupo E2", "ven": 0, "fat": 2, "d1": 0, "d2": 0, "fut": 2, "fora": 0, "ff": 0, "tot": 4}, {"n": "BCF", "grp": "Grupo B1", "ven": 0, "fat": 0, "d1": 1, "d2": 0, "fut": 1, "fora": 1, "ff": 0, "tot": 2}, {"n": "ECO", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 2}, {"n": "TFR", "grp": "Grupo A3", "ven": 0, "fat": 2, "d1": 0, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 2}, {"n": "AAP", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "fora": 0, "ff": 0, "tot": 1}, {"n": "ARC", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "fora": 1, "ff": 0, "tot": 1}, {"n": "DPR", "grp": "Grupo E2", "ven": 0, "fat": 0, "d1": 1, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 1}, {"n": "NBG", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 1}, {"n": "PBS", "grp": "Grupo A3", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 1}, {"n": "RCF", "grp": "Grupo B2", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "fora": 1, "ff": 0, "tot": 1}, {"n": "RCF", "grp": "Grupo B4", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "fora": 0, "ff": 0, "tot": 1}, {"n": "SOF", "grp": "Grupo B1", "ven": 0, "fat": 0, "d1": 1, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 1}, {"n": "VSI", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 1, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 1}, {"n": "WSF", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 1}];
+const RESP=[{"n": "CAL", "grp": "Grupo E2", "ven": 0, "fat": 7, "d1": 54, "d2": 8, "fut": 12, "tot": 81, "fora": 23, "ff": 0}, {"n": "FCG", "grp": "Grupo E2", "ven": 0, "fat": 19, "d1": 25, "d2": 3, "fut": 20, "tot": 67, "fora": 1, "ff": 0}, {"n": "BSO", "grp": "Grupo B1", "ven": 0, "fat": 2, "d1": 25, "d2": 3, "fut": 28, "tot": 58, "fora": 1, "ff": 0}, {"n": "LMI", "grp": "Grupo B3", "ven": 0, "fat": 5, "d1": 48, "d2": 2, "fut": 2, "tot": 57, "fora": 1, "ff": 1}, {"n": "MBF", "grp": "Grupo E2", "ven": 0, "fat": 6, "d1": 26, "d2": 12, "fut": 10, "tot": 54, "fora": 1, "ff": 0}, {"n": "JPE", "grp": "Grupo B1", "ven": 0, "fat": 7, "d1": 19, "d2": 3, "fut": 24, "tot": 53, "fora": 16, "ff": 2}, {"n": "TAM", "grp": "Grupo B1", "ven": 0, "fat": 5, "d1": 20, "d2": 8, "fut": 13, "tot": 46, "fora": 1, "ff": 0}, {"n": "JNE", "grp": "Grupo E2", "ven": 0, "fat": 27, "d1": 18, "d2": 0, "fut": 1, "tot": 46, "fora": 19, "ff": 9}, {"n": "ALF", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 4, "d2": 6, "fut": 33, "tot": 44, "fora": 4, "ff": 1}, {"n": "BBO", "grp": "Grupo D1", "ven": 0, "fat": 4, "d1": 15, "d2": 21, "fut": 2, "tot": 42, "fora": 0, "ff": 0}, {"n": "ARC", "grp": "Grupo E2", "ven": 0, "fat": 26, "d1": 1, "d2": 1, "fut": 13, "tot": 41, "fora": 9, "ff": 5}, {"n": "TFR", "grp": "Grupo C", "ven": 0, "fat": 5, "d1": 19, "d2": 5, "fut": 11, "tot": 40, "fora": 20, "ff": 3}, {"n": "PSI", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 23, "d2": 3, "fut": 14, "tot": 40, "fora": 2, "ff": 0}, {"n": "GSM", "grp": "Grupo B1", "ven": 0, "fat": 12, "d1": 17, "d2": 0, "fut": 10, "tot": 39, "fora": 16, "ff": 1}, {"n": "JPL", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 9, "d2": 2, "fut": 24, "tot": 36, "fora": 1, "ff": 0}, {"n": "VSI", "grp": "Grupo C", "ven": 0, "fat": 7, "d1": 20, "d2": 1, "fut": 7, "tot": 35, "fora": 0, "ff": 0}, {"n": "RRU", "grp": "Grupo E2", "ven": 0, "fat": 11, "d1": 19, "d2": 0, "fut": 5, "tot": 35, "fora": 3, "ff": 0}, {"n": "DPR", "grp": "Grupo E1", "ven": 0, "fat": 15, "d1": 11, "d2": 1, "fut": 7, "tot": 34, "fora": 3, "ff": 0}, {"n": "RYL", "grp": "Grupo E2", "ven": 0, "fat": 6, "d1": 17, "d2": 4, "fut": 7, "tot": 34, "fora": 3, "ff": 0}, {"n": "RFE", "grp": "Grupo B1", "ven": 0, "fat": 3, "d1": 15, "d2": 1, "fut": 14, "tot": 33, "fora": 0, "ff": 0}, {"n": "JQS", "grp": "Grupo D1", "ven": 0, "fat": 2, "d1": 16, "d2": 2, "fut": 10, "tot": 30, "fora": 0, "ff": 0}, {"n": "TLI", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 18, "d2": 0, "fut": 9, "tot": 29, "fora": 0, "ff": 0}, {"n": "VRO", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 16, "d2": 4, "fut": 8, "tot": 29, "fora": 0, "ff": 0}, {"n": "VCR", "grp": "Grupo B2", "ven": 0, "fat": 1, "d1": 21, "d2": 0, "fut": 6, "tot": 28, "fora": 0, "ff": 0}, {"n": "BCF", "grp": "Grupo B2", "ven": 0, "fat": 1, "d1": 10, "d2": 8, "fut": 7, "tot": 26, "fora": 0, "ff": 0}, {"n": "ANB", "grp": "Grupo B2", "ven": 0, "fat": 2, "d1": 8, "d2": 9, "fut": 3, "tot": 22, "fora": 7, "ff": 0}, {"n": "ECO", "grp": "Grupo C", "ven": 0, "fat": 8, "d1": 3, "d2": 1, "fut": 5, "tot": 17, "fora": 0, "ff": 0}, {"n": "ANB", "grp": "Grupo B3", "ven": 0, "fat": 0, "d1": 7, "d2": 4, "fut": 3, "tot": 14, "fora": 0, "ff": 0}, {"n": "JRM", "grp": "Grupo E1", "ven": 0, "fat": 3, "d1": 7, "d2": 2, "fut": 0, "tot": 12, "fora": 0, "ff": 0}, {"n": "SOF", "grp": "Grupo A3", "ven": 0, "fat": 2, "d1": 0, "d2": 0, "fut": 7, "tot": 9, "fora": 0, "ff": 0}, {"n": "AAP", "grp": "Grupo E2", "ven": 0, "fat": 2, "d1": 1, "d2": 1, "fut": 4, "tot": 8, "fora": 0, "ff": 0}, {"n": "RCF", "grp": "Grupo C", "ven": 0, "fat": 4, "d1": 1, "d2": 0, "fut": 2, "tot": 7, "fora": 0, "ff": 0}, {"n": "GSM", "grp": "Grupo B3", "ven": 0, "fat": 3, "d1": 2, "d2": 1, "fut": 1, "tot": 7, "fora": 3, "ff": 0}, {"n": "VSI", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 1, "d2": 0, "fut": 1, "tot": 4, "fora": 0, "ff": 0}, {"n": "NRG", "grp": "Grupo B1", "ven": 0, "fat": 2, "d1": 0, "d2": 0, "fut": 1, "tot": 3, "fora": 2, "ff": 1}, {"n": "GRS", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 2, "tot": 2, "fora": 0, "ff": 0}, {"n": "KBM", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 0, "d2": 0, "fut": 0, "tot": 2, "fora": 1, "ff": 1}, {"n": "BCF", "grp": "Grupo B1", "ven": 0, "fat": 0, "d1": 2, "d2": 0, "fut": 0, "tot": 2, "fora": 0, "ff": 0}, {"n": "NBG", "grp": "Grupo A2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "RCF", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "NRG", "grp": "Grupo B2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "ACA", "grp": "Grupo A1", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "tot": 1, "fora": 0, "ff": 0}, {"n": "TCE", "grp": "Grupo A1", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "tot": 1, "fora": 0, "ff": 0}, {"n": "RCF", "grp": "Grupo B4", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "tot": 1, "fora": 0, "ff": 0}, {"n": "ECO", "grp": "Grupo A2", "ven": 0, "fat": 0, "d1": 1, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}];
 
-const GRP_RESP=[{"n": "CAL", "grp": "Grupo E2", "ven": 0, "fat": 5, "d1": 53, "d2": 18, "fut": 17, "fora": 15, "ff": 0, "tot": 93}, {"n": "RYL", "grp": "Grupo E2", "ven": 0, "fat": 61, "d1": 6, "d2": 3, "fut": 1, "fora": 13, "ff": 8, "tot": 71}, {"n": "RRU", "grp": "Grupo E2", "ven": 0, "fat": 29, "d1": 15, "d2": 2, "fut": 13, "fora": 9, "ff": 0, "tot": 59}, {"n": "TAM", "grp": "Grupo B1", "ven": 0, "fat": 6, "d1": 33, "d2": 3, "fut": 15, "fora": 15, "ff": 0, "tot": 57}, {"n": "GSM", "grp": "Grupo B1", "ven": 0, "fat": 32, "d1": 14, "d2": 2, "fut": 8, "fora": 15, "ff": 2, "tot": 56}, {"n": "MBF", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 27, "d2": 17, "fut": 7, "fora": 2, "ff": 0, "tot": 52}, {"n": "BSO", "grp": "Grupo B1", "ven": 0, "fat": 2, "d1": 33, "d2": 5, "fut": 10, "fora": 0, "ff": 0, "tot": 50}, {"n": "JNE", "grp": "Grupo E2", "ven": 0, "fat": 9, "d1": 13, "d2": 11, "fut": 17, "fora": 8, "ff": 2, "tot": 50}, {"n": "LMI", "grp": "Grupo B3", "ven": 0, "fat": 9, "d1": 38, "d2": 0, "fut": 3, "fora": 0, "ff": 0, "tot": 50}, {"n": "JQS", "grp": "Grupo D1", "ven": 0, "fat": 0, "d1": 16, "d2": 0, "fut": 31, "fora": 0, "ff": 0, "tot": 47}, {"n": "ARC", "grp": "Grupo E2", "ven": 0, "fat": 16, "d1": 1, "d2": 2, "fut": 26, "fora": 15, "ff": 1, "tot": 45}, {"n": "TLI", "grp": "Grupo E1", "ven": 0, "fat": 8, "d1": 30, "d2": 3, "fut": 3, "fora": 6, "ff": 0, "tot": 44}, {"n": "VRO", "grp": "Grupo E1", "ven": 0, "fat": 6, "d1": 19, "d2": 4, "fut": 10, "fora": 3, "ff": 0, "tot": 39}, {"n": "FCG", "grp": "Grupo E2", "ven": 0, "fat": 9, "d1": 12, "d2": 2, "fut": 15, "fora": 1, "ff": 0, "tot": 38}, {"n": "JPE", "grp": "Grupo B1", "ven": 0, "fat": 4, "d1": 13, "d2": 5, "fut": 11, "fora": 22, "ff": 2, "tot": 33}, {"n": "DPR", "grp": "Grupo E1", "ven": 0, "fat": 27, "d1": 3, "d2": 0, "fut": 1, "fora": 0, "ff": 0, "tot": 31}, {"n": "ANB", "grp": "Grupo B2", "ven": 0, "fat": 2, "d1": 16, "d2": 3, "fut": 4, "fora": 4, "ff": 1, "tot": 25}, {"n": "VCR", "grp": "Grupo B2", "ven": 0, "fat": 0, "d1": 18, "d2": 0, "fut": 7, "fora": 0, "ff": 0, "tot": 25}, {"n": "BBO", "grp": "Grupo D1", "ven": 0, "fat": 1, "d1": 7, "d2": 15, "fut": 1, "fora": 14, "ff": 0, "tot": 24}, {"n": "TFR", "grp": "Grupo C", "ven": 0, "fat": 6, "d1": 11, "d2": 2, "fut": 5, "fora": 6, "ff": 3, "tot": 24}, {"n": "ECO", "grp": "Grupo C", "ven": 0, "fat": 2, "d1": 9, "d2": 4, "fut": 7, "fora": 0, "ff": 0, "tot": 22}, {"n": "PSI", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 4, "d2": 4, "fut": 13, "fora": 7, "ff": 1, "tot": 22}, {"n": "ALF", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 2, "d2": 2, "fut": 17, "fora": 0, "ff": 0, "tot": 21}, {"n": "VSI", "grp": "Grupo C", "ven": 0, "fat": 3, "d1": 10, "d2": 1, "fut": 5, "fora": 4, "ff": 0, "tot": 19}, {"n": "BCF", "grp": "Grupo B2", "ven": 0, "fat": 1, "d1": 2, "d2": 5, "fut": 10, "fora": 0, "ff": 0, "tot": 18}, {"n": "ANB", "grp": "Grupo B3", "ven": 0, "fat": 2, "d1": 4, "d2": 3, "fut": 5, "fora": 2, "ff": 1, "tot": 14}, {"n": "GSM", "grp": "Grupo B3", "ven": 0, "fat": 3, "d1": 0, "d2": 1, "fut": 7, "fora": 1, "ff": 1, "tot": 11}, {"n": "RCF", "grp": "Grupo C", "ven": 0, "fat": 5, "d1": 2, "d2": 0, "fut": 4, "fora": 0, "ff": 0, "tot": 11}, {"n": "AAP", "grp": "Grupo E2", "ven": 0, "fat": 0, "d1": 3, "d2": 2, "fut": 1, "fora": 0, "ff": 0, "tot": 6}, {"n": "SOF", "grp": "Grupo A3", "ven": 0, "fat": 2, "d1": 0, "d2": 1, "fut": 3, "fora": 0, "ff": 0, "tot": 6}, {"n": "NBG", "grp": "Grupo A2", "ven": 0, "fat": 3, "d1": 2, "d2": 0, "fut": 0, "fora": 2, "ff": 1, "tot": 5}, {"n": "JRT", "grp": "Grupo E2", "ven": 0, "fat": 0, "d1": 0, "d2": 2, "fut": 2, "fora": 0, "ff": 0, "tot": 4}, {"n": "KBM", "grp": "Grupo E1", "ven": 0, "fat": 4, "d1": 0, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 4}, {"n": "NRG", "grp": "Grupo B1", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 2, "fora": 0, "ff": 0, "tot": 4}, {"n": "RCF", "grp": "Grupo E2", "ven": 0, "fat": 2, "d1": 0, "d2": 0, "fut": 2, "fora": 0, "ff": 0, "tot": 4}, {"n": "BCF", "grp": "Grupo B1", "ven": 0, "fat": 0, "d1": 1, "d2": 0, "fut": 1, "fora": 1, "ff": 0, "tot": 2}, {"n": "ECO", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 2}, {"n": "TFR", "grp": "Grupo A3", "ven": 0, "fat": 2, "d1": 0, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 2}, {"n": "AAP", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "fora": 0, "ff": 0, "tot": 1}, {"n": "ARC", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "fora": 1, "ff": 0, "tot": 1}, {"n": "DPR", "grp": "Grupo E2", "ven": 0, "fat": 0, "d1": 1, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 1}, {"n": "NBG", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 1}, {"n": "PBS", "grp": "Grupo A3", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 1}, {"n": "RCF", "grp": "Grupo B2", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "fora": 1, "ff": 0, "tot": 1}, {"n": "RCF", "grp": "Grupo B4", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "fora": 0, "ff": 0, "tot": 1}, {"n": "SOF", "grp": "Grupo B1", "ven": 0, "fat": 0, "d1": 1, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 1}, {"n": "VSI", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 1, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 1}, {"n": "WSF", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 1}];
-const HR_DIST=[[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [5, 1], [6, 4], [7, 13], [8, 38], [9, 81], [10, 91], [11, 111], [12, 93], [13, 114], [14, 95], [15, 89], [16, 107], [17, 98], [18, 46], [19, 35], [20, 28], [21, 34], [22, 21], [23, 1]];
-const FAT_FORA=[{"proc": "0010287-61.2026.5.15.0133", "resp": "RYL", "grp": "Grupo E2", "dt": "2026-07-13", "hora_real": "08:44:04", "hr": "22:01 às 08:59", "status": "Fatal"}, {"proc": "0011494-87.2025.5.15.0050", "resp": "RYL", "grp": "Grupo E2", "dt": "2026-07-13", "hora_real": "07:52:50", "hr": "22:01 às 08:59", "status": "Fatal"}, {"proc": "0011945-54.2025.5.15.0037", "resp": "RYL", "grp": "Grupo E2", "dt": "2026-07-13", "hora_real": "08:24:40", "hr": "22:01 às 08:59", "status": "Fatal"}, {"proc": "0000377-90.2021.5.05.0641", "resp": "RYL", "grp": "Grupo E2", "dt": "2026-07-13", "hora_real": "08:50:21", "hr": "22:01 às 08:59", "status": "Fatal"}, {"proc": "0000377-90.2021.5.05.0641", "resp": "RYL", "grp": "Grupo E2", "dt": "2026-07-13", "hora_real": "08:50:21", "hr": "22:01 às 08:59", "status": "Fatal"}, {"proc": "008104.2026.02.000/2", "resp": "NBG", "grp": "Grupo A2", "dt": "2026-07-13", "hora_real": "19:48:40", "hr": "19:01 às 20:00", "status": "Fatal"}, {"proc": "0000664-53.2026.5.23.0002", "resp": "ANB", "grp": "Grupo B2", "dt": "2026-07-13", "hora_real": "08:44:42", "hr": "22:01 às 08:59", "status": "Fatal"}, {"proc": "5023317-86.2019.4.03.6100", "resp": "ANB", "grp": "Grupo B3", "dt": "2026-07-13", "hora_real": "08:48:07", "hr": "22:01 às 08:59", "status": "Fatal"}, {"proc": "0000697-60.2026.5.19.0000", "resp": "RYL", "grp": "Grupo E2", "dt": "2026-07-13", "hora_real": "08:00:16", "hr": "22:01 às 08:59", "status": "Fatal"}, {"proc": "0000697-60.2026.5.19.0000", "resp": "RYL", "grp": "Grupo E2", "dt": "2026-07-13", "hora_real": "08:00:16", "hr": "22:01 às 08:59", "status": "Fatal"}, {"proc": "0010695-50.2026.5.03.0080", "resp": "RYL", "grp": "Grupo E2", "dt": "2026-07-13", "hora_real": "08:16:58", "hr": "22:01 às 08:59", "status": "Fatal"}, {"proc": "1000168-32.2019.5.02.0262", "resp": "GSM", "grp": "Grupo B3", "dt": "2026-07-14", "hora_real": "08:29:04", "hr": "22:01 às 08:59", "status": "Fatal"}, {"proc": "0010680-62.2017.5.03.0156", "resp": "ARC", "grp": "Grupo E2", "dt": "2026-07-15", "hora_real": "19:05:46", "hr": "19:01 às 20:00", "status": "Fatal"}, {"proc": "1000586-34.2026.5.02.0032", "resp": "TFR", "grp": "Grupo C", "dt": "2026-07-15", "hora_real": "07:56:02", "hr": "22:01 às 08:59", "status": "Fatal"}, {"proc": "0000608-68.2026.5.10.0006", "resp": "TFR", "grp": "Grupo C", "dt": "2026-07-16", "hora_real": "05:57:17", "hr": "22:01 às 08:59", "status": "Fatal"}, {"proc": "1000239-65.2026.5.02.0431", "resp": "JPE", "grp": "Grupo B1", "dt": "2026-07-16", "hora_real": "08:25:41", "hr": "22:01 às 08:59", "status": "Fatal"}, {"proc": "0012464-72.2025.5.15.0152", "resp": "JNE", "grp": "Grupo E2", "dt": "2026-07-16", "hora_real": "20:48:04", "hr": "20:01 às 21:00", "status": "Fatal"}, {"proc": "1001280-40.2022.5.02.0065", "resp": "TFR", "grp": "Grupo C", "dt": "2026-07-17", "hora_real": "07:25:03", "hr": "22:01 às 08:59", "status": "Fatal"}, {"proc": "0013022-44.2025.5.15.0152", "resp": "JNE", "grp": "Grupo E2", "dt": "2026-07-17", "hora_real": "07:45:35", "hr": "22:01 às 08:59", "status": "Fatal"}, {"proc": "0011373-11.2016.5.15.0071", "resp": "PSI", "grp": "Grupo E1", "dt": "2026-07-19", "hora_real": "20:01:16", "hr": "20:01 às 21:00", "status": "Fatal"}, {"proc": "1001240-85.2026.5.02.0431", "resp": "GSM", "grp": "Grupo B1", "dt": "2026-07-19", "hora_real": "20:30:16", "hr": "20:01 às 21:00", "status": "Fatal"}, {"proc": "1001943-72.2024.5.02.0435", "resp": "JPE", "grp": "Grupo B1", "dt": "2026-07-19", "hora_real": "20:33:35", "hr": "20:01 às 21:00", "status": "Fatal"}, {"proc": "1001379-31.2026.5.02.0433", "resp": "GSM", "grp": "Grupo B1", "dt": "2026-07-19", "hora_real": "20:17:38", "hr": "20:01 às 21:00", "status": "Fatal"}];
-const BY_GRUPO={"Grupo A2": {"total": 5, "fat": 3, "ven": 0, "d1": 2, "d2": 0, "fut": 0, "fora": 2, "ff": 1}, "Grupo A3": {"total": 11, "fat": 5, "ven": 0, "d1": 1, "d2": 1, "fut": 4, "fora": 1, "ff": 0}, "Grupo B1": {"total": 203, "fat": 45, "ven": 0, "d1": 96, "d2": 15, "fut": 47, "fora": 53, "ff": 4}, "Grupo B2": {"total": 69, "fat": 3, "ven": 0, "d1": 36, "d2": 8, "fut": 22, "fora": 5, "ff": 1}, "Grupo B3": {"total": 75, "fat": 14, "ven": 0, "d1": 42, "d2": 4, "fut": 15, "fora": 3, "ff": 2}, "Grupo B4": {"total": 1, "fat": 0, "ven": 0, "d1": 0, "d2": 0, "fut": 1, "fora": 0, "ff": 0}, "Grupo C": {"total": 76, "fat": 16, "ven": 0, "d1": 32, "d2": 7, "fut": 21, "fora": 10, "ff": 3}, "Grupo D1": {"total": 71, "fat": 1, "ven": 0, "d1": 23, "d2": 15, "fut": 32, "fora": 14, "ff": 0}, "Grupo E1": {"total": 164, "fat": 47, "ven": 0, "d1": 59, "d2": 13, "fut": 45, "fora": 16, "ff": 1}, "Grupo E2": {"total": 425, "fat": 134, "ven": 0, "d1": 131, "d2": 59, "fut": 101, "fora": 63, "ff": 11}};
+const GRP_RESP=[{"n": "CAL", "grp": "Grupo E2", "ven": 0, "fat": 7, "d1": 54, "d2": 8, "fut": 12, "tot": 81, "fora": 23, "ff": 0}, {"n": "FCG", "grp": "Grupo E2", "ven": 0, "fat": 19, "d1": 25, "d2": 3, "fut": 20, "tot": 67, "fora": 1, "ff": 0}, {"n": "BSO", "grp": "Grupo B1", "ven": 0, "fat": 2, "d1": 25, "d2": 3, "fut": 28, "tot": 58, "fora": 1, "ff": 0}, {"n": "LMI", "grp": "Grupo B3", "ven": 0, "fat": 5, "d1": 48, "d2": 2, "fut": 2, "tot": 57, "fora": 1, "ff": 1}, {"n": "MBF", "grp": "Grupo E2", "ven": 0, "fat": 6, "d1": 26, "d2": 12, "fut": 10, "tot": 54, "fora": 1, "ff": 0}, {"n": "JPE", "grp": "Grupo B1", "ven": 0, "fat": 7, "d1": 19, "d2": 3, "fut": 24, "tot": 53, "fora": 16, "ff": 2}, {"n": "TAM", "grp": "Grupo B1", "ven": 0, "fat": 5, "d1": 20, "d2": 8, "fut": 13, "tot": 46, "fora": 1, "ff": 0}, {"n": "JNE", "grp": "Grupo E2", "ven": 0, "fat": 27, "d1": 18, "d2": 0, "fut": 1, "tot": 46, "fora": 19, "ff": 9}, {"n": "ALF", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 4, "d2": 6, "fut": 33, "tot": 44, "fora": 4, "ff": 1}, {"n": "BBO", "grp": "Grupo D1", "ven": 0, "fat": 4, "d1": 15, "d2": 21, "fut": 2, "tot": 42, "fora": 0, "ff": 0}, {"n": "ARC", "grp": "Grupo E2", "ven": 0, "fat": 26, "d1": 1, "d2": 1, "fut": 13, "tot": 41, "fora": 9, "ff": 5}, {"n": "TFR", "grp": "Grupo C", "ven": 0, "fat": 5, "d1": 19, "d2": 5, "fut": 11, "tot": 40, "fora": 20, "ff": 3}, {"n": "PSI", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 23, "d2": 3, "fut": 14, "tot": 40, "fora": 2, "ff": 0}, {"n": "GSM", "grp": "Grupo B1", "ven": 0, "fat": 12, "d1": 17, "d2": 0, "fut": 10, "tot": 39, "fora": 16, "ff": 1}, {"n": "JPL", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 9, "d2": 2, "fut": 24, "tot": 36, "fora": 1, "ff": 0}, {"n": "VSI", "grp": "Grupo C", "ven": 0, "fat": 7, "d1": 20, "d2": 1, "fut": 7, "tot": 35, "fora": 0, "ff": 0}, {"n": "RRU", "grp": "Grupo E2", "ven": 0, "fat": 11, "d1": 19, "d2": 0, "fut": 5, "tot": 35, "fora": 3, "ff": 0}, {"n": "DPR", "grp": "Grupo E1", "ven": 0, "fat": 15, "d1": 11, "d2": 1, "fut": 7, "tot": 34, "fora": 3, "ff": 0}, {"n": "RYL", "grp": "Grupo E2", "ven": 0, "fat": 6, "d1": 17, "d2": 4, "fut": 7, "tot": 34, "fora": 3, "ff": 0}, {"n": "RFE", "grp": "Grupo B1", "ven": 0, "fat": 3, "d1": 15, "d2": 1, "fut": 14, "tot": 33, "fora": 0, "ff": 0}, {"n": "JQS", "grp": "Grupo D1", "ven": 0, "fat": 2, "d1": 16, "d2": 2, "fut": 10, "tot": 30, "fora": 0, "ff": 0}, {"n": "TLI", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 18, "d2": 0, "fut": 9, "tot": 29, "fora": 0, "ff": 0}, {"n": "VRO", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 16, "d2": 4, "fut": 8, "tot": 29, "fora": 0, "ff": 0}, {"n": "VCR", "grp": "Grupo B2", "ven": 0, "fat": 1, "d1": 21, "d2": 0, "fut": 6, "tot": 28, "fora": 0, "ff": 0}, {"n": "BCF", "grp": "Grupo B2", "ven": 0, "fat": 1, "d1": 10, "d2": 8, "fut": 7, "tot": 26, "fora": 0, "ff": 0}, {"n": "ANB", "grp": "Grupo B2", "ven": 0, "fat": 2, "d1": 8, "d2": 9, "fut": 3, "tot": 22, "fora": 7, "ff": 0}, {"n": "ECO", "grp": "Grupo C", "ven": 0, "fat": 8, "d1": 3, "d2": 1, "fut": 5, "tot": 17, "fora": 0, "ff": 0}, {"n": "ANB", "grp": "Grupo B3", "ven": 0, "fat": 0, "d1": 7, "d2": 4, "fut": 3, "tot": 14, "fora": 0, "ff": 0}, {"n": "JRM", "grp": "Grupo E1", "ven": 0, "fat": 3, "d1": 7, "d2": 2, "fut": 0, "tot": 12, "fora": 0, "ff": 0}, {"n": "SOF", "grp": "Grupo A3", "ven": 0, "fat": 2, "d1": 0, "d2": 0, "fut": 7, "tot": 9, "fora": 0, "ff": 0}, {"n": "AAP", "grp": "Grupo E2", "ven": 0, "fat": 2, "d1": 1, "d2": 1, "fut": 4, "tot": 8, "fora": 0, "ff": 0}, {"n": "RCF", "grp": "Grupo C", "ven": 0, "fat": 4, "d1": 1, "d2": 0, "fut": 2, "tot": 7, "fora": 0, "ff": 0}, {"n": "GSM", "grp": "Grupo B3", "ven": 0, "fat": 3, "d1": 2, "d2": 1, "fut": 1, "tot": 7, "fora": 3, "ff": 0}, {"n": "VSI", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 1, "d2": 0, "fut": 1, "tot": 4, "fora": 0, "ff": 0}, {"n": "NRG", "grp": "Grupo B1", "ven": 0, "fat": 2, "d1": 0, "d2": 0, "fut": 1, "tot": 3, "fora": 2, "ff": 1}, {"n": "GRS", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 2, "tot": 2, "fora": 0, "ff": 0}, {"n": "KBM", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 0, "d2": 0, "fut": 0, "tot": 2, "fora": 1, "ff": 1}, {"n": "BCF", "grp": "Grupo B1", "ven": 0, "fat": 0, "d1": 2, "d2": 0, "fut": 0, "tot": 2, "fora": 0, "ff": 0}, {"n": "NBG", "grp": "Grupo A2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "RCF", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "NRG", "grp": "Grupo B2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "ACA", "grp": "Grupo A1", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "tot": 1, "fora": 0, "ff": 0}, {"n": "TCE", "grp": "Grupo A1", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "tot": 1, "fora": 0, "ff": 0}, {"n": "RCF", "grp": "Grupo B4", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "tot": 1, "fora": 0, "ff": 0}, {"n": "ECO", "grp": "Grupo A2", "ven": 0, "fat": 0, "d1": 1, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}];
+const HR_DIST=[[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 1], [8, 112], [9, 173], [10, 167], [11, 140], [12, 90], [13, 118], [14, 126], [15, 88], [16, 106], [17, 40], [18, 9], [19, 2], [20, 0], [21, 0], [22, 1], [23, 0]];
+const FAT_FORA=[{"proc": "1001055-73.2026.5.02.0002", "resp": "TFR", "grp": "Grupo C", "dt": "27/07", "hora_real": "", "status": "Fatal"}, {"proc": "0000439-62.2026.5.05.0122", "resp": "ARC", "grp": "Grupo E2", "dt": "27/07", "hora_real": "", "status": "Fatal"}, {"proc": "0010118-92.2026.5.03.0041", "resp": "JNE", "grp": "Grupo E2", "dt": "27/07", "hora_real": "", "status": "Fatal"}, {"proc": "0010657-67.2026.5.15.0027", "resp": "JNE", "grp": "Grupo E2", "dt": "28/07", "hora_real": "", "status": "Fatal"}, {"proc": "0010841-91.2026.5.03.0080", "resp": "ARC", "grp": "Grupo E2", "dt": "28/07", "hora_real": "", "status": "Fatal"}, {"proc": "0000637-05.2026.5.05.0121", "resp": "ARC", "grp": "Grupo E2", "dt": "28/07", "hora_real": "", "status": "Fatal"}, {"proc": "0024784-58.2025.5.24.0006", "resp": "JNE", "grp": "Grupo E2", "dt": "28/07", "hora_real": "", "status": "Fatal"}, {"proc": "0010692-42.2025.5.03.0012", "resp": "ARC", "grp": "Grupo E2", "dt": "28/07", "hora_real": "", "status": "Fatal"}, {"proc": "0011284-81.2026.5.03.0164", "resp": "JNE", "grp": "Grupo E2", "dt": "29/07", "hora_real": "", "status": "Fatal"}, {"proc": "0010653-93.2026.5.15.0103", "resp": "JNE", "grp": "Grupo E2", "dt": "29/07", "hora_real": "", "status": "Fatal"}, {"proc": "0011701-86.2024.5.15.0126", "resp": "KBM", "grp": "Grupo E1", "dt": "30/07", "hora_real": "", "status": "Fatal"}, {"proc": "0011677-49.2025.5.15.0053", "resp": "ALF", "grp": "Grupo E1", "dt": "30/07", "hora_real": "", "status": "Fatal"}, {"proc": "1000773-09.2026.5.02.0431", "resp": "GSM", "grp": "Grupo B1", "dt": "30/07", "hora_real": "", "status": "Fatal"}, {"proc": "0020318-98.2024.5.04.0301", "resp": "LMI", "grp": "Grupo B3", "dt": "30/07", "hora_real": "", "status": "Fatal"}, {"proc": "0011342-45.2024.5.15.0027", "resp": "JNE", "grp": "Grupo E2", "dt": "30/07", "hora_real": "", "status": "Fatal"}, {"proc": "0011284-81.2026.5.03.0164", "resp": "JNE", "grp": "Grupo E2", "dt": "31/07", "hora_real": "", "status": "Fatal"}, {"proc": "0000608-68.2026.5.10.0006", "resp": "TFR", "grp": "Grupo C", "dt": "31/07", "hora_real": "", "status": "Fatal"}, {"proc": "1000885-27.2023.5.02.0384", "resp": "ARC", "grp": "Grupo E2", "dt": "31/07", "hora_real": "", "status": "Fatal"}, {"proc": "0010653-93.2026.5.15.0103", "resp": "JNE", "grp": "Grupo E2", "dt": "31/07", "hora_real": "", "status": "Fatal"}, {"proc": "0011186-18.2026.5.15.0082", "resp": "JNE", "grp": "Grupo E2", "dt": "31/07", "hora_real": "", "status": "Fatal"}, {"proc": "5001463-73.2025.4.03.6343", "resp": "NRG", "grp": "Grupo B1", "dt": "01/08", "hora_real": "", "status": "Fatal"}, {"proc": "0010295-44.2026.5.15.0131", "resp": "JPE", "grp": "Grupo B1", "dt": "02/08", "hora_real": "", "status": "Fatal"}, {"proc": "0012545-86.2025.5.15.0001", "resp": "JPE", "grp": "Grupo B1", "dt": "02/08", "hora_real": "", "status": "Fatal"}, {"proc": "1001624-77.2024.5.02.0056", "resp": "TFR", "grp": "Grupo C", "dt": "02/08", "hora_real": "", "status": "Fatal"}];
+const BY_GRUPO={"Grupo C": {"total": 99, "ven": 0, "fat": 24, "d1": 43, "d2": 7, "fut": 25, "fora": 20, "ff": 3}, "Grupo E2": {"total": 367, "ven": 0, "fat": 105, "d1": 161, "d2": 29, "fut": 72, "fora": 59, "ff": 14}, "Grupo E1": {"total": 230, "ven": 0, "fat": 27, "d1": 89, "d2": 18, "fut": 96, "fora": 11, "ff": 2}, "Grupo B2": {"total": 77, "ven": 0, "fat": 5, "d1": 39, "d2": 17, "fut": 16, "fora": 7, "ff": 0}, "Grupo B1": {"total": 234, "ven": 0, "fat": 31, "d1": 98, "d2": 15, "fut": 90, "fora": 36, "ff": 4}, "Grupo D1": {"total": 72, "ven": 0, "fat": 6, "d1": 31, "d2": 23, "fut": 12, "fora": 0, "ff": 0}, "Grupo A2": {"total": 2, "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 0, "fora": 0, "ff": 0}, "Grupo B3": {"total": 78, "ven": 0, "fat": 8, "d1": 57, "d2": 7, "fut": 6, "fora": 4, "ff": 1}, "Grupo A3": {"total": 11, "ven": 0, "fat": 2, "d1": 0, "d2": 0, "fut": 9, "fora": 0, "ff": 0}, "Grupo A1": {"total": 2, "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 2, "fora": 0, "ff": 0}, "Grupo B4": {"total": 1, "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "fora": 0, "ff": 0}};
 
 // Semana 28 (06/07 a 12/07) - apenas tipo_agenda=Prazo
-const RESP_S20=[{"n": "RYL", "grp": "Grupo E2", "ven": 0, "fat": 26, "d1": 47, "d2": 0, "fut": 4, "fora": 2, "ff": 1, "tot": 77}, {"n": "LMI", "grp": "Grupo B3", "ven": 0, "fat": 5, "d1": 28, "d2": 7, "fut": 28, "fora": 7, "ff": 0, "tot": 68}, {"n": "JPE", "grp": "Grupo B1", "ven": 0, "fat": 2, "d1": 15, "d2": 5, "fut": 39, "fora": 9, "ff": 1, "tot": 61}, {"n": "CAL", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 22, "d2": 10, "fut": 26, "fora": 1, "ff": 0, "tot": 59}, {"n": "TLI", "grp": "Grupo E1", "ven": 0, "fat": 8, "d1": 21, "d2": 1, "fut": 27, "fora": 4, "ff": 0, "tot": 57}, {"n": "RFE", "grp": "Grupo B1", "ven": 0, "fat": 3, "d1": 30, "d2": 1, "fut": 14, "fora": 6, "ff": 0, "tot": 48}, {"n": "RRU", "grp": "Grupo E2", "ven": 0, "fat": 8, "d1": 22, "d2": 5, "fut": 13, "fora": 2, "ff": 0, "tot": 48}, {"n": "TAM", "grp": "Grupo B1", "ven": 0, "fat": 11, "d1": 23, "d2": 4, "fut": 9, "fora": 6, "ff": 0, "tot": 47}, {"n": "BSO", "grp": "Grupo B1", "ven": 1, "fat": 1, "d1": 11, "d2": 5, "fut": 27, "fora": 11, "ff": 0, "tot": 45}, {"n": "ARC", "grp": "Grupo E2", "ven": 0, "fat": 13, "d1": 3, "d2": 4, "fut": 22, "fora": 0, "ff": 0, "tot": 42}, {"n": "GSM", "grp": "Grupo B1", "ven": 0, "fat": 22, "d1": 12, "d2": 2, "fut": 5, "fora": 0, "ff": 0, "tot": 41}, {"n": "ALF", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 6, "d2": 0, "fut": 31, "fora": 8, "ff": 0, "tot": 37}, {"n": "JRT", "grp": "Grupo E2", "ven": 0, "fat": 8, "d1": 16, "d2": 5, "fut": 6, "fora": 9, "ff": 0, "tot": 35}, {"n": "MBF", "grp": "Grupo E2", "ven": 0, "fat": 0, "d1": 18, "d2": 4, "fut": 13, "fora": 0, "ff": 0, "tot": 35}, {"n": "BBO", "grp": "Grupo D1", "ven": 0, "fat": 8, "d1": 7, "d2": 16, "fut": 3, "fora": 14, "ff": 7, "tot": 34}, {"n": "JQS", "grp": "Grupo D1", "ven": 0, "fat": 0, "d1": 11, "d2": 4, "fut": 17, "fora": 0, "ff": 0, "tot": 32}, {"n": "FCG", "grp": "Grupo E2", "ven": 0, "fat": 0, "d1": 3, "d2": 4, "fut": 22, "fora": 0, "ff": 0, "tot": 29}, {"n": "VRO", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 15, "d2": 3, "fut": 9, "fora": 0, "ff": 0, "tot": 28}, {"n": "JRM", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 10, "d2": 8, "fut": 6, "fora": 1, "ff": 0, "tot": 25}, {"n": "VCR", "grp": "Grupo B2", "ven": 0, "fat": 1, "d1": 4, "d2": 2, "fut": 18, "fora": 4, "ff": 1, "tot": 25}, {"n": "TFR", "grp": "Grupo C", "ven": 0, "fat": 2, "d1": 2, "d2": 4, "fut": 16, "fora": 2, "ff": 1, "tot": 24}, {"n": "BCF", "grp": "Grupo B2", "ven": 0, "fat": 1, "d1": 2, "d2": 3, "fut": 16, "fora": 2, "ff": 1, "tot": 22}, {"n": "PSI", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 2, "d2": 2, "fut": 13, "fora": 4, "ff": 0, "tot": 17}, {"n": "ANB", "grp": "Grupo B2", "ven": 0, "fat": 4, "d1": 3, "d2": 5, "fut": 3, "fora": 1, "ff": 0, "tot": 15}, {"n": "JNE", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 6, "d2": 1, "fut": 7, "fora": 2, "ff": 1, "tot": 15}, {"n": "VSI", "grp": "Grupo C", "ven": 0, "fat": 4, "d1": 5, "d2": 1, "fut": 4, "fora": 0, "ff": 0, "tot": 14}, {"n": "RCF", "grp": "Grupo E2", "ven": 0, "fat": 4, "d1": 3, "d2": 2, "fut": 4, "fora": 0, "ff": 0, "tot": 13}, {"n": "ECO", "grp": "Grupo C", "ven": 0, "fat": 1, "d1": 1, "d2": 3, "fut": 6, "fora": 0, "ff": 0, "tot": 11}, {"n": "ANB", "grp": "Grupo B3", "ven": 0, "fat": 2, "d1": 4, "d2": 2, "fut": 2, "fora": 1, "ff": 0, "tot": 10}, {"n": "DPR", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 6, "d2": 4, "fut": 0, "fora": 0, "ff": 0, "tot": 10}, {"n": "RCF", "grp": "Grupo C", "ven": 0, "fat": 1, "d1": 5, "d2": 1, "fut": 3, "fora": 0, "ff": 0, "tot": 10}, {"n": "NBG", "grp": "Grupo A2", "ven": 0, "fat": 0, "d1": 2, "d2": 3, "fut": 3, "fora": 1, "ff": 0, "tot": 8}, {"n": "SOF", "grp": "Grupo A3", "ven": 0, "fat": 2, "d1": 0, "d2": 0, "fut": 6, "fora": 0, "ff": 0, "tot": 8}, {"n": "AAP", "grp": "Grupo E2", "ven": 0, "fat": 0, "d1": 2, "d2": 1, "fut": 4, "fora": 2, "ff": 0, "tot": 7}, {"n": "JPL", "grp": "Grupo E1", "ven": 0, "fat": 3, "d1": 1, "d2": 1, "fut": 1, "fora": 0, "ff": 0, "tot": 6}, {"n": "AAP", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 1, "d2": 1, "fut": 1, "fora": 0, "ff": 0, "tot": 3}, {"n": "GSM", "grp": "Grupo B3", "ven": 0, "fat": 0, "d1": 1, "d2": 1, "fut": 1, "fora": 0, "ff": 0, "tot": 3}, {"n": "VSI", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 2, "d2": 0, "fut": 1, "fora": 1, "ff": 0, "tot": 3}, {"n": "ECO", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 0, "d2": 2, "fut": 1, "fora": 0, "ff": 0, "tot": 3}, {"n": "BCF", "grp": "Grupo B1", "ven": 0, "fat": 0, "d1": 0, "d2": 2, "fut": 0, "fora": 1, "ff": 0, "tot": 2}, {"n": "VSI", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 1, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 1}, {"n": "JPE", "grp": "Grupo B3", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 1}, {"n": "ECO", "grp": "Grupo A2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 1}];
+const RESP_S20=[{"n": "GSM", "grp": "Grupo B1", "ven": 0, "fat": 23, "d1": 34, "d2": 7, "fut": 31, "tot": 95, "fora": 39, "ff": 10}, {"n": "TLI", "grp": "Grupo E1", "ven": 0, "fat": 4, "d1": 26, "d2": 7, "fut": 32, "tot": 69, "fora": 12, "ff": 0}, {"n": "RYL", "grp": "Grupo E2", "ven": 0, "fat": 34, "d1": 26, "d2": 6, "fut": 1, "tot": 67, "fora": 8, "ff": 4}, {"n": "TAM", "grp": "Grupo B1", "ven": 0, "fat": 8, "d1": 31, "d2": 2, "fut": 25, "tot": 66, "fora": 23, "ff": 2}, {"n": "CAL", "grp": "Grupo E2", "ven": 0, "fat": 7, "d1": 40, "d2": 2, "fut": 8, "tot": 57, "fora": 0, "ff": 0}, {"n": "JPE", "grp": "Grupo B1", "ven": 0, "fat": 7, "d1": 24, "d2": 5, "fut": 20, "tot": 56, "fora": 16, "ff": 0}, {"n": "BSO", "grp": "Grupo B1", "ven": 0, "fat": 3, "d1": 11, "d2": 9, "fut": 24, "tot": 47, "fora": 1, "ff": 1}, {"n": "JNE", "grp": "Grupo E2", "ven": 0, "fat": 13, "d1": 17, "d2": 4, "fut": 12, "tot": 46, "fora": 13, "ff": 3}, {"n": "LMI", "grp": "Grupo B3", "ven": 0, "fat": 0, "d1": 35, "d2": 0, "fut": 8, "tot": 43, "fora": 2, "ff": 0}, {"n": "FCG", "grp": "Grupo E2", "ven": 0, "fat": 16, "d1": 14, "d2": 1, "fut": 11, "tot": 42, "fora": 2, "ff": 0}, {"n": "VCR", "grp": "Grupo B2", "ven": 0, "fat": 1, "d1": 18, "d2": 0, "fut": 23, "tot": 42, "fora": 0, "ff": 0}, {"n": "RRU", "grp": "Grupo E2", "ven": 0, "fat": 16, "d1": 18, "d2": 1, "fut": 6, "tot": 41, "fora": 2, "ff": 0}, {"n": "MBF", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 19, "d2": 3, "fut": 15, "tot": 38, "fora": 1, "ff": 0}, {"n": "DPR", "grp": "Grupo E1", "ven": 0, "fat": 18, "d1": 6, "d2": 4, "fut": 9, "tot": 37, "fora": 9, "ff": 3}, {"n": "PSI", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 8, "d2": 2, "fut": 26, "tot": 36, "fora": 3, "ff": 0}, {"n": "ARC", "grp": "Grupo E2", "ven": 0, "fat": 15, "d1": 3, "d2": 1, "fut": 15, "tot": 34, "fora": 8, "ff": 1}, {"n": "JQS", "grp": "Grupo D1", "ven": 0, "fat": 0, "d1": 11, "d2": 2, "fut": 18, "tot": 31, "fora": 1, "ff": 0}, {"n": "VRO", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 14, "d2": 6, "fut": 7, "tot": 28, "fora": 0, "ff": 0}, {"n": "BCF", "grp": "Grupo B2", "ven": 0, "fat": 0, "d1": 9, "d2": 7, "fut": 11, "tot": 27, "fora": 0, "ff": 0}, {"n": "ALF", "grp": "Grupo E1", "ven": 0, "fat": 4, "d1": 3, "d2": 4, "fut": 13, "tot": 24, "fora": 0, "ff": 0}, {"n": "JPL", "grp": "Grupo E1", "ven": 0, "fat": 4, "d1": 4, "d2": 1, "fut": 11, "tot": 20, "fora": 0, "ff": 0}, {"n": "BBO", "grp": "Grupo D1", "ven": 0, "fat": 4, "d1": 10, "d2": 2, "fut": 2, "tot": 18, "fora": 0, "ff": 0}, {"n": "ANB", "grp": "Grupo B3", "ven": 0, "fat": 2, "d1": 7, "d2": 4, "fut": 4, "tot": 17, "fora": 0, "ff": 0}, {"n": "GSM", "grp": "Grupo B3", "ven": 0, "fat": 3, "d1": 3, "d2": 2, "fut": 9, "tot": 17, "fora": 4, "ff": 3}, {"n": "VSI", "grp": "Grupo C", "ven": 0, "fat": 10, "d1": 4, "d2": 0, "fut": 3, "tot": 17, "fora": 0, "ff": 0}, {"n": "TFR", "grp": "Grupo C", "ven": 0, "fat": 5, "d1": 8, "d2": 2, "fut": 1, "tot": 16, "fora": 8, "ff": 4}, {"n": "ANB", "grp": "Grupo B2", "ven": 0, "fat": 3, "d1": 8, "d2": 2, "fut": 2, "tot": 15, "fora": 1, "ff": 1}, {"n": "ECO", "grp": "Grupo C", "ven": 0, "fat": 5, "d1": 4, "d2": 1, "fut": 5, "tot": 15, "fora": 0, "ff": 0}, {"n": "RCF", "grp": "Grupo E2", "ven": 0, "fat": 8, "d1": 2, "d2": 1, "fut": 3, "tot": 14, "fora": 0, "ff": 0}, {"n": "AAP", "grp": "Grupo E2", "ven": 0, "fat": 0, "d1": 2, "d2": 2, "fut": 6, "tot": 10, "fora": 2, "ff": 0}, {"n": "NRG", "grp": "Grupo B3", "ven": 0, "fat": 4, "d1": 5, "d2": 0, "fut": 0, "tot": 9, "fora": 0, "ff": 0}, {"n": "RFE", "grp": "Grupo B1", "ven": 0, "fat": 1, "d1": 4, "d2": 1, "fut": 2, "tot": 8, "fora": 0, "ff": 0}, {"n": "RCF", "grp": "Grupo C", "ven": 0, "fat": 3, "d1": 0, "d2": 0, "fut": 4, "tot": 7, "fora": 0, "ff": 0}, {"n": "NRG", "grp": "Grupo B1", "ven": 0, "fat": 1, "d1": 2, "d2": 0, "fut": 3, "tot": 6, "fora": 0, "ff": 0}, {"n": "SOF", "grp": "Grupo A3", "ven": 0, "fat": 1, "d1": 2, "d2": 0, "fut": 1, "tot": 4, "fora": 0, "ff": 0}, {"n": "NBG", "grp": "Grupo A2", "ven": 0, "fat": 0, "d1": 0, "d2": 2, "fut": 2, "tot": 4, "fora": 1, "ff": 0}, {"n": "KBM", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 1, "d2": 0, "fut": 0, "tot": 3, "fora": 0, "ff": 0}, {"n": "NBB", "grp": "Grupo E2", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 3, "tot": 3, "fora": 0, "ff": 0}, {"n": "JRM", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 3, "d2": 0, "fut": 0, "tot": 3, "fora": 0, "ff": 0}, {"n": "NRG", "grp": "Grupo B2", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "tot": 1, "fora": 0, "ff": 0}, {"n": "PBS", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "tot": 1, "fora": 0, "ff": 0}, {"n": "ARC", "grp": "Grupo A3", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "AAP", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "AAP", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "tot": 1, "fora": 0, "ff": 0}];
 
 // Semana 21 (11/05 a 17/05) — apenas tipo_agenda=Prazo
 const RESP_S21=[{"n": "AAP", "grp": "Grupo E2", "ven": 0, "fat": 0, "d1": 2, "d2": 1, "fut": 5, "fora": 1, "ff": 0, "tot": 8}, {"n": "ALF", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 7, "d2": 0, "fut": 24, "fora": 4, "ff": 0, "tot": 31}, {"n": "ANB", "grp": "Grupo B2", "ven": 0, "fat": 7, "d1": 17, "d2": 7, "fut": 16, "fora": 3, "ff": 0, "tot": 47}, {"n": "ARC", "grp": "Grupo E2", "ven": 0, "fat": 16, "d1": 1, "d2": 0, "fut": 12, "fora": 1, "ff": 1, "tot": 29}, {"n": "BBO", "grp": "Grupo D1", "ven": 0, "fat": 1, "d1": 23, "d2": 0, "fut": 0, "fora": 8, "ff": 0, "tot": 24}, {"n": "BCF", "grp": "Grupo B2", "ven": 0, "fat": 6, "d1": 17, "d2": 3, "fut": 22, "fora": 1, "ff": 1, "tot": 48}, {"n": "BSO", "grp": "Grupo B1", "ven": 0, "fat": 1, "d1": 23, "d2": 9, "fut": 55, "fora": 1, "ff": 0, "tot": 88}, {"n": "CAL", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 45, "d2": 21, "fut": 12, "fora": 5, "ff": 1, "tot": 79}, {"n": "DPR", "grp": "Grupo E1", "ven": 0, "fat": 9, "d1": 5, "d2": 0, "fut": 6, "fora": 4, "ff": 3, "tot": 20}, {"n": "ECO", "grp": "Grupo C", "ven": 0, "fat": 7, "d1": 8, "d2": 4, "fut": 5, "fora": 0, "ff": 0, "tot": 24}, {"n": "FCG", "grp": "Grupo E2", "ven": 0, "fat": 8, "d1": 5, "d2": 2, "fut": 19, "fora": 0, "ff": 0, "tot": 34}, {"n": "GSM", "grp": "Grupo B1", "ven": 0, "fat": 26, "d1": 23, "d2": 6, "fut": 30, "fora": 25, "ff": 4, "tot": 85}, {"n": "JNE", "grp": "Grupo E2", "ven": 0, "fat": 4, "d1": 4, "d2": 0, "fut": 4, "fora": 0, "ff": 0, "tot": 12}, {"n": "JPE", "grp": "Grupo B1", "ven": 0, "fat": 5, "d1": 20, "d2": 5, "fut": 39, "fora": 27, "ff": 2, "tot": 69}, {"n": "JPL", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 14, "d2": 0, "fut": 43, "fora": 0, "ff": 0, "tot": 59}, {"n": "JQS", "grp": "Grupo D1", "ven": 0, "fat": 0, "d1": 18, "d2": 0, "fut": 41, "fora": 0, "ff": 0, "tot": 59}, {"n": "JRM", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 28, "d2": 7, "fut": 0, "fora": 0, "ff": 0, "tot": 37}, {"n": "JRT", "grp": "Grupo E2", "ven": 0, "fat": 25, "d1": 27, "d2": 5, "fut": 9, "fora": 32, "ff": 4, "tot": 66}, {"n": "KBM", "grp": "Grupo E1", "ven": 1, "fat": 5, "d1": 0, "d2": 0, "fut": 3, "fora": 0, "ff": 0, "tot": 9}, {"n": "LMI", "grp": "Grupo B3", "ven": 0, "fat": 3, "d1": 47, "d2": 1, "fut": 24, "fora": 16, "ff": 0, "tot": 75}, {"n": "MBF", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 22, "d2": 6, "fut": 5, "fora": 7, "ff": 0, "tot": 34}, {"n": "NBG", "grp": "Grupo A2", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 1, "fora": 1, "ff": 0, "tot": 3}, {"n": "NRG", "grp": "Grupo B1", "ven": 0, "fat": 0, "d1": 2, "d2": 0, "fut": 2, "fora": 0, "ff": 0, "tot": 4}, {"n": "PBS", "grp": "", "ven": 2, "fat": 0, "d1": 0, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 2}, {"n": "PSI", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 10, "d2": 6, "fut": 22, "fora": 17, "ff": 0, "tot": 38}, {"n": "RCF", "grp": "Grupo E2", "ven": 0, "fat": 3, "d1": 14, "d2": 2, "fut": 20, "fora": 0, "ff": 0, "tot": 39}, {"n": "RFE", "grp": "Grupo B1", "ven": 0, "fat": 9, "d1": 43, "d2": 0, "fut": 25, "fora": 14, "ff": 1, "tot": 77}, {"n": "RRU", "grp": "Grupo E2", "ven": 0, "fat": 12, "d1": 25, "d2": 3, "fut": 8, "fora": 5, "ff": 0, "tot": 48}, {"n": "RYL", "grp": "Grupo E2", "ven": 0, "fat": 16, "d1": 41, "d2": 4, "fut": 0, "fora": 16, "ff": 1, "tot": 61}, {"n": "SOF", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 4, "d2": 0, "fut": 4, "fora": 0, "ff": 0, "tot": 8}, {"n": "TAM", "grp": "Grupo B1", "ven": 0, "fat": 8, "d1": 19, "d2": 2, "fut": 10, "fora": 2, "ff": 1, "tot": 39}, {"n": "TFR", "grp": "Grupo C", "ven": 0, "fat": 11, "d1": 14, "d2": 3, "fut": 6, "fora": 9, "ff": 4, "tot": 34}, {"n": "TLI", "grp": "Grupo E1", "ven": 0, "fat": 3, "d1": 17, "d2": 0, "fut": 3, "fora": 2, "ff": 1, "tot": 23}, {"n": "VCR", "grp": "Grupo B2", "ven": 0, "fat": 2, "d1": 21, "d2": 0, "fut": 34, "fora": 3, "ff": 0, "tot": 57}, {"n": "VRO", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 32, "d2": 9, "fut": 34, "fora": 7, "ff": 0, "tot": 76}, {"n": "VSI", "grp": "Grupo C", "ven": 0, "fat": 10, "d1": 12, "d2": 0, "fut": 7, "fora": 1, "ff": 1, "tot": 29}, {"n": "WSF", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 1}];
@@ -3004,7 +3376,7 @@ HR_DIST.forEach(([hr,cnt])=>{
   document.getElementById('hr-xlbl').appendChild(lbl);
 });
 
-const BY_GRUPO_FULL=[{"g": "Grupo E2", "total": 1830, "fat": 432, "ven": 138, "d1": 717, "d2": 187, "fut": 356, "fora": 326, "ff": 218}, {"g": "Grupo B1", "total": 1591, "fat": 195, "ven": 86, "d1": 717, "d2": 137, "fut": 456, "fora": 381, "ff": 145}, {"g": "Grupo E1", "total": 1454, "fat": 214, "ven": 119, "d1": 476, "d2": 144, "fut": 501, "fora": 192, "ff": 112}, {"g": "Grupo B3", "total": 617, "fat": 116, "ven": 36, "d1": 324, "d2": 38, "fut": 103, "fora": 135, "ff": 85}, {"g": "Grupo D1", "total": 526, "fat": 51, "ven": 4, "d1": 241, "d2": 52, "fut": 178, "fora": 28, "ff": 15}, {"g": "Grupo B2", "total": 488, "fat": 104, "ven": 35, "d1": 169, "d2": 25, "fut": 155, "fora": 13, "ff": 18}, {"g": "Grupo C", "total": 404, "fat": 109, "ven": 23, "d1": 145, "d2": 47, "fut": 80, "fora": 26, "ff": 37}, {"g": "Grupo A3", "total": 61, "fat": 16, "ven": 1, "d1": 27, "d2": 5, "fut": 12, "fora": 5, "ff": 8}, {"g": "Sem Grupo", "total": 38, "fat": 4, "ven": 5, "d1": 9, "d2": 7, "fut": 13, "fora": 1, "ff": 0}, {"g": "Grupo A2", "total": 36, "fat": 6, "ven": 1, "d1": 21, "d2": 1, "fut": 7, "fora": 11, "ff": 4}, {"g": "Grupo B4", "total": 1, "fat": 0, "ven": 0, "d1": 1, "d2": 0, "fut": 0, "fora": 0, "ff": 0}];
+const BY_GRUPO_FULL=[{"g": "Grupo E2", "total": 1330, "ven": 254, "fat": 315, "d1": 453, "d2": 77, "fut": 231, "fora": 205, "ff": 93}, {"g": "Grupo B1", "total": 947, "ven": 64, "fat": 85, "d1": 404, "d2": 170, "fut": 224, "fora": 168, "ff": 53}, {"g": "Grupo E1", "total": 838, "ven": 58, "fat": 77, "d1": 322, "d2": 89, "fut": 292, "fora": 31, "ff": 8}, {"g": "Grupo C", "total": 354, "ven": 54, "fat": 69, "d1": 163, "d2": 12, "fut": 56, "fora": 62, "ff": 43}, {"g": "Grupo D1", "total": 335, "ven": 5, "fat": 8, "d1": 176, "d2": 50, "fut": 96, "fora": 0, "ff": 0}, {"g": "Grupo B2", "total": 263, "ven": 30, "fat": 36, "d1": 115, "d2": 32, "fut": 50, "fora": 37, "ff": 20}, {"g": "Grupo B3", "total": 262, "ven": 32, "fat": 56, "d1": 133, "d2": 11, "fut": 30, "fora": 20, "ff": 12}, {"g": "Grupo A3", "total": 34, "ven": 0, "fat": 2, "d1": 14, "d2": 6, "fut": 12, "fora": 1, "ff": 0}, {"g": "Grupo A2", "total": 13, "ven": 1, "fat": 3, "d1": 6, "d2": 1, "fut": 2, "fora": 1, "ff": 1}, {"g": "Grupo A1", "total": 5, "ven": 0, "fat": 0, "d1": 1, "d2": 0, "fut": 4, "fora": 0, "ff": 0}, {"g": "Grupo B4", "total": 3, "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 2, "fora": 0, "ff": 0}];
 
 // Grupos fora horário — usa BY_GRUPO_FULL que tem fora correto (todos os tipos)
 BY_GRUPO_FULL.filter(v=>v.fora>0).sort((a,b)=>b.fora-a.fora).forEach(v=>{
@@ -3089,10 +3461,10 @@ function downloadExcel() {
 }
 
 // ══ AGENDAS — SEPARADAS ══
-const AG_EQUIPE=[{"equipe": "Equipe E", "tot": 1411, "realiz": 1411, "atrasada": 157, "fatal": 443, "d1": 319, "d2": 169, "futuro": 323}, {"equipe": "Equipe B", "tot": 1028, "realiz": 1028, "atrasada": 127, "fatal": 181, "d1": 495, "d2": 101, "futuro": 124}, {"equipe": "Equipe D", "tot": 222, "realiz": 222, "atrasada": 1, "fatal": 2, "d1": 93, "d2": 43, "futuro": 83}, {"equipe": "Equipe C", "tot": 178, "realiz": 178, "atrasada": 18, "fatal": 33, "d1": 91, "d2": 5, "futuro": 31}, {"equipe": "Equipe A", "tot": 30, "realiz": 30, "atrasada": 0, "fatal": 4, "d1": 12, "d2": 7, "futuro": 7}];
-const AG_RESP=[{"n": "CAL", "grp": "Equipe E", "tot": 207, "realiz": 207, "atrasada": 1, "fatal": 92, "d1": 55, "d2": 12, "futuro": 47}, {"n": "JQS", "grp": "Equipe D", "tot": 168, "realiz": 168, "atrasada": 1, "fatal": 1, "d1": 91, "d2": 4, "futuro": 71}, {"n": "RRU", "grp": "Equipe E", "tot": 164, "realiz": 164, "atrasada": 8, "fatal": 82, "d1": 30, "d2": 4, "futuro": 40}, {"n": "RYL", "grp": "Equipe E", "tot": 156, "realiz": 156, "atrasada": 33, "fatal": 111, "d1": 9, "d2": 2, "futuro": 1}, {"n": "BSO", "grp": "Equipe B", "tot": 146, "realiz": 146, "atrasada": 0, "fatal": 3, "d1": 109, "d2": 11, "futuro": 23}, {"n": "GSM", "grp": "Equipe B", "tot": 146, "realiz": 146, "atrasada": 54, "fatal": 57, "d1": 15, "d2": 6, "futuro": 14}, {"n": "TAM", "grp": "Equipe B", "tot": 135, "realiz": 135, "atrasada": 0, "fatal": 2, "d1": 107, "d2": 13, "futuro": 13}, {"n": "JPE", "grp": "Equipe B", "tot": 133, "realiz": 133, "atrasada": 14, "fatal": 41, "d1": 38, "d2": 25, "futuro": 15}, {"n": "LMI", "grp": "Equipe B", "tot": 133, "realiz": 133, "atrasada": 0, "fatal": 17, "d1": 105, "d2": 2, "futuro": 9}, {"n": "ARC", "grp": "Equipe E", "tot": 119, "realiz": 119, "atrasada": 6, "fatal": 21, "d1": 28, "d2": 15, "futuro": 49}, {"n": "FCG", "grp": "Equipe E", "tot": 112, "realiz": 112, "atrasada": 5, "fatal": 23, "d1": 39, "d2": 20, "futuro": 25}, {"n": "JNE", "grp": "Equipe E", "tot": 106, "realiz": 106, "atrasada": 34, "fatal": 36, "d1": 20, "d2": 4, "futuro": 12}, {"n": "MBF", "grp": "Equipe E", "tot": 103, "realiz": 103, "atrasada": 0, "fatal": 5, "d1": 44, "d2": 21, "futuro": 33}, {"n": "ANB", "grp": "Equipe B", "tot": 101, "realiz": 101, "atrasada": 52, "fatal": 21, "d1": 8, "d2": 4, "futuro": 16}, {"n": "VRO", "grp": "Equipe E", "tot": 99, "realiz": 99, "atrasada": 7, "fatal": 24, "d1": 20, "d2": 16, "futuro": 32}, {"n": "BFM", "grp": "Equipe B", "tot": 94, "realiz": 94, "atrasada": 5, "fatal": 2, "d1": 81, "d2": 4, "futuro": 2}, {"n": "DPR", "grp": "Equipe E", "tot": 88, "realiz": 88, "atrasada": 46, "fatal": 17, "d1": 5, "d2": 3, "futuro": 17}, {"n": "BCF", "grp": "Equipe B", "tot": 81, "realiz": 81, "atrasada": 2, "fatal": 14, "d1": 11, "d2": 34, "futuro": 20}, {"n": "PSI", "grp": "Equipe E", "tot": 81, "realiz": 81, "atrasada": 0, "fatal": 9, "d1": 21, "d2": 35, "futuro": 16}, {"n": "ALF", "grp": "Equipe E", "tot": 68, "realiz": 68, "atrasada": 0, "fatal": 3, "d1": 5, "d2": 24, "futuro": 36}, {"n": "ECO", "grp": "Equipe C", "tot": 67, "realiz": 67, "atrasada": 2, "fatal": 5, "d1": 38, "d2": 2, "futuro": 20}, {"n": "TFR", "grp": "Equipe C", "tot": 62, "realiz": 62, "atrasada": 15, "fatal": 18, "d1": 22, "d2": 1, "futuro": 6}, {"n": "BBO", "grp": "Equipe D", "tot": 54, "realiz": 54, "atrasada": 0, "fatal": 1, "d1": 2, "d2": 39, "futuro": 12}, {"n": "VSI", "grp": "Equipe C", "tot": 49, "realiz": 49, "atrasada": 1, "fatal": 10, "d1": 31, "d2": 2, "futuro": 5}, {"n": "TLI", "grp": "Equipe E", "tot": 46, "realiz": 46, "atrasada": 14, "fatal": 15, "d1": 15, "d2": 0, "futuro": 2}, {"n": "VCR", "grp": "Equipe B", "tot": 46, "realiz": 46, "atrasada": 0, "fatal": 13, "d1": 21, "d2": 1, "futuro": 11}, {"n": "RCF", "grp": "Equipe E", "tot": 33, "realiz": 33, "atrasada": 0, "fatal": 5, "d1": 18, "d2": 6, "futuro": 4}, {"n": "AAP", "grp": "Equipe E", "tot": 20, "realiz": 20, "atrasada": 0, "fatal": 0, "d1": 7, "d2": 6, "futuro": 7}, {"n": "SOF", "grp": "Equipe A", "tot": 20, "realiz": 20, "atrasada": 0, "fatal": 2, "d1": 7, "d2": 5, "futuro": 6}, {"n": "NRG", "grp": "Equipe B", "tot": 13, "realiz": 13, "atrasada": 0, "fatal": 11, "d1": 0, "d2": 1, "futuro": 1}, {"n": "NBG", "grp": "Equipe A", "tot": 10, "realiz": 10, "atrasada": 0, "fatal": 2, "d1": 5, "d2": 2, "futuro": 1}, {"n": "JRT", "grp": "Equipe E", "tot": 5, "realiz": 5, "atrasada": 0, "fatal": 0, "d1": 2, "d2": 1, "futuro": 2}, {"n": "KBM", "grp": "Equipe E", "tot": 2, "realiz": 2, "atrasada": 1, "fatal": 0, "d1": 1, "d2": 0, "futuro": 0}, {"n": "WSF", "grp": "Equipe E", "tot": 2, "realiz": 2, "atrasada": 2, "fatal": 0, "d1": 0, "d2": 0, "futuro": 0}];
-const AGEQ_EQUIPE=[{"equipe": "Equipe E", "tot": 106, "realiz": 106, "atrasada": 28, "fatal": 43, "d1": 29, "d2": 2, "futuro": 4}, {"equipe": "Equipe B", "tot": 70, "realiz": 70, "atrasada": 1, "fatal": 6, "d1": 54, "d2": 6, "futuro": 3}, {"equipe": "Equipe C", "tot": 15, "realiz": 15, "atrasada": 2, "fatal": 5, "d1": 6, "d2": 0, "futuro": 2}, {"equipe": "Equipe D", "tot": 11, "realiz": 11, "atrasada": 0, "fatal": 1, "d1": 8, "d2": 0, "futuro": 2}, {"equipe": "Equipe A", "tot": 7, "realiz": 7, "atrasada": 0, "fatal": 1, "d1": 5, "d2": 0, "futuro": 1}];
-const AGEQ_RESP=[{"n": "TAM", "grp": "Equipe B", "tot": 32, "realiz": 32, "atrasada": 0, "fatal": 0, "d1": 26, "d2": 5, "futuro": 1}, {"n": "RYL", "grp": "Equipe E", "tot": 23, "realiz": 23, "atrasada": 4, "fatal": 15, "d1": 3, "d2": 1, "futuro": 0}, {"n": "JNE", "grp": "Equipe E", "tot": 17, "realiz": 17, "atrasada": 4, "fatal": 6, "d1": 7, "d2": 0, "futuro": 0}, {"n": "BSO", "grp": "Equipe B", "tot": 12, "realiz": 12, "atrasada": 0, "fatal": 0, "d1": 11, "d2": 0, "futuro": 1}, {"n": "RRU", "grp": "Equipe E", "tot": 12, "realiz": 12, "atrasada": 2, "fatal": 9, "d1": 1, "d2": 0, "futuro": 0}, {"n": "LMI", "grp": "Equipe B", "tot": 10, "realiz": 10, "atrasada": 0, "fatal": 0, "d1": 9, "d2": 1, "futuro": 0}, {"n": "ECO", "grp": "Equipe C", "tot": 9, "realiz": 9, "atrasada": 0, "fatal": 5, "d1": 3, "d2": 0, "futuro": 1}, {"n": "JQS", "grp": "Equipe D", "tot": 9, "realiz": 9, "atrasada": 0, "fatal": 1, "d1": 7, "d2": 0, "futuro": 1}, {"n": "JRT", "grp": "Equipe E", "tot": 9, "realiz": 9, "atrasada": 5, "fatal": 0, "d1": 3, "d2": 0, "futuro": 1}, {"n": "TLI", "grp": "Equipe E", "tot": 9, "realiz": 9, "atrasada": 5, "fatal": 3, "d1": 1, "d2": 0, "futuro": 0}, {"n": "CAL", "grp": "Equipe E", "tot": 8, "realiz": 8, "atrasada": 2, "fatal": 4, "d1": 2, "d2": 0, "futuro": 0}, {"n": "ALF", "grp": "Equipe E", "tot": 7, "realiz": 7, "atrasada": 0, "fatal": 0, "d1": 5, "d2": 0, "futuro": 2}, {"n": "ARC", "grp": "Equipe E", "tot": 5, "realiz": 5, "atrasada": 1, "fatal": 3, "d1": 0, "d2": 1, "futuro": 0}, {"n": "JPE", "grp": "Equipe B", "tot": 5, "realiz": 5, "atrasada": 0, "fatal": 3, "d1": 2, "d2": 0, "futuro": 0}, {"n": "MBF", "grp": "Equipe E", "tot": 4, "realiz": 4, "atrasada": 0, "fatal": 1, "d1": 3, "d2": 0, "futuro": 0}, {"n": "SOF", "grp": "Equipe A", "tot": 4, "realiz": 4, "atrasada": 0, "fatal": 0, "d1": 3, "d2": 0, "futuro": 1}, {"n": "VSI", "grp": "Equipe C", "tot": 4, "realiz": 4, "atrasada": 0, "fatal": 0, "d1": 3, "d2": 0, "futuro": 1}, {"n": "AAP", "grp": "Equipe E", "tot": 3, "realiz": 3, "atrasada": 1, "fatal": 0, "d1": 1, "d2": 0, "futuro": 1}, {"n": "DPR", "grp": "Equipe E", "tot": 3, "realiz": 3, "atrasada": 3, "fatal": 0, "d1": 0, "d2": 0, "futuro": 0}, {"n": "NBG", "grp": "Equipe A", "tot": 3, "realiz": 3, "atrasada": 0, "fatal": 1, "d1": 2, "d2": 0, "futuro": 0}, {"n": "NRG", "grp": "Equipe B", "tot": 3, "realiz": 3, "atrasada": 0, "fatal": 2, "d1": 1, "d2": 0, "futuro": 0}, {"n": "RCF", "grp": "Equipe E", "tot": 3, "realiz": 3, "atrasada": 0, "fatal": 1, "d1": 2, "d2": 0, "futuro": 0}, {"n": "BBO", "grp": "Equipe D", "tot": 2, "realiz": 2, "atrasada": 0, "fatal": 0, "d1": 1, "d2": 0, "futuro": 1}, {"n": "BCF", "grp": "Equipe B", "tot": 2, "realiz": 2, "atrasada": 0, "fatal": 0, "d1": 2, "d2": 0, "futuro": 0}, {"n": "BFM", "grp": "Equipe B", "tot": 2, "realiz": 2, "atrasada": 1, "fatal": 0, "d1": 1, "d2": 0, "futuro": 0}, {"n": "GSM", "grp": "Equipe B", "tot": 2, "realiz": 2, "atrasada": 0, "fatal": 1, "d1": 0, "d2": 0, "futuro": 1}, {"n": "TFR", "grp": "Equipe C", "tot": 2, "realiz": 2, "atrasada": 2, "fatal": 0, "d1": 0, "d2": 0, "futuro": 0}, {"n": "VCR", "grp": "Equipe B", "tot": 2, "realiz": 2, "atrasada": 0, "fatal": 0, "d1": 2, "d2": 0, "futuro": 0}, {"n": "FCG", "grp": "Equipe E", "tot": 1, "realiz": 1, "atrasada": 0, "fatal": 1, "d1": 0, "d2": 0, "futuro": 0}, {"n": "NBB", "grp": "Equipe E", "tot": 1, "realiz": 1, "atrasada": 1, "fatal": 0, "d1": 0, "d2": 0, "futuro": 0}, {"n": "PSI", "grp": "Equipe E", "tot": 1, "realiz": 1, "atrasada": 0, "fatal": 0, "d1": 1, "d2": 0, "futuro": 0}];
+const AG_EQUIPE=[{"equipe": "Equipe E", "tot": 1190, "atrasada": 195, "fatal": 183, "d1": 397, "d2": 112, "futuro": 303}, {"equipe": "Equipe B", "tot": 863, "atrasada": 117, "fatal": 123, "d1": 383, "d2": 72, "futuro": 168}, {"equipe": "Equipe D", "tot": 252, "atrasada": 5, "fatal": 1, "d1": 136, "d2": 27, "futuro": 83}, {"equipe": "Equipe C", "tot": 235, "atrasada": 52, "fatal": 31, "d1": 120, "d2": 6, "futuro": 26}, {"equipe": "Equipe A", "tot": 29, "atrasada": 1, "fatal": 0, "d1": 15, "d2": 7, "futuro": 6}, {"equipe": "TRIBUTÁRIO", "tot": 2, "atrasada": 0, "fatal": 0, "d1": 2, "d2": 0, "futuro": 0}, {"equipe": "TRABALHISTA", "tot": 1, "atrasada": 0, "fatal": 0, "d1": 0, "d2": 0, "futuro": 1}];
+const AG_RESP=[{"n": "CAL", "grp": "Equipe E", "tot": 193, "atrasada": 78, "fatal": 59, "d1": 29, "d2": 17, "futuro": 10}, {"n": "RYL", "grp": "Equipe E", "tot": 146, "atrasada": 51, "fatal": 28, "d1": 65, "d2": 0, "futuro": 2}, {"n": "JQS", "grp": "Equipe D", "tot": 142, "atrasada": 0, "fatal": 0, "d1": 96, "d2": 7, "futuro": 39}, {"n": "BSO", "grp": "Equipe B", "tot": 137, "atrasada": 0, "fatal": 1, "d1": 35, "d2": 37, "futuro": 64}, {"n": "JPE", "grp": "Equipe B", "tot": 133, "atrasada": 33, "fatal": 8, "d1": 73, "d2": 5, "futuro": 14}, {"n": "RFE", "grp": "Equipe B", "tot": 128, "atrasada": 0, "fatal": 0, "d1": 110, "d2": 3, "futuro": 15}, {"n": "JPL", "grp": "Equipe E", "tot": 125, "atrasada": 0, "fatal": 9, "d1": 67, "d2": 4, "futuro": 45}, {"n": "GSM", "grp": "Equipe B", "tot": 120, "atrasada": 37, "fatal": 38, "d1": 17, "d2": 2, "futuro": 26}, {"n": "BBO", "grp": "Equipe D", "tot": 110, "atrasada": 5, "fatal": 1, "d1": 40, "d2": 20, "futuro": 44}, {"n": "MBF", "grp": "Equipe E", "tot": 110, "atrasada": 2, "fatal": 14, "d1": 57, "d2": 5, "futuro": 32}, {"n": "LMI", "grp": "Equipe B", "tot": 109, "atrasada": 0, "fatal": 33, "d1": 70, "d2": 1, "futuro": 5}, {"n": "TFR", "grp": "Equipe C", "tot": 108, "atrasada": 48, "fatal": 11, "d1": 34, "d2": 2, "futuro": 13}, {"n": "ALF", "grp": "Equipe E", "tot": 105, "atrasada": 0, "fatal": 1, "d1": 26, "d2": 31, "futuro": 47}, {"n": "VRO", "grp": "Equipe E", "tot": 89, "atrasada": 16, "fatal": 18, "d1": 22, "d2": 3, "futuro": 30}, {"n": "ANB", "grp": "Equipe B", "tot": 87, "atrasada": 42, "fatal": 18, "d1": 3, "d2": 4, "futuro": 20}, {"n": "PSI", "grp": "Equipe E", "tot": 85, "atrasada": 0, "fatal": 0, "d1": 24, "d2": 14, "futuro": 47}, {"n": "ARC", "grp": "Equipe E", "tot": 81, "atrasada": 11, "fatal": 5, "d1": 23, "d2": 9, "futuro": 33}, {"n": "VSI", "grp": "Equipe C", "tot": 81, "atrasada": 2, "fatal": 6, "d1": 69, "d2": 1, "futuro": 3}, {"n": "DPR", "grp": "Equipe E", "tot": 75, "atrasada": 33, "fatal": 9, "d1": 6, "d2": 10, "futuro": 17}, {"n": "BCF", "grp": "Equipe B", "tot": 72, "atrasada": 3, "fatal": 6, "d1": 38, "d2": 17, "futuro": 8}, {"n": "VCR", "grp": "Equipe B", "tot": 65, "atrasada": 0, "fatal": 11, "d1": 37, "d2": 1, "futuro": 16}, {"n": "RRU", "grp": "Equipe E", "tot": 64, "atrasada": 3, "fatal": 16, "d1": 23, "d2": 3, "futuro": 19}, {"n": "JRM", "grp": "Equipe E", "tot": 52, "atrasada": 1, "fatal": 1, "d1": 45, "d2": 5, "futuro": 0}, {"n": "ECO", "grp": "Equipe C", "tot": 46, "atrasada": 2, "fatal": 14, "d1": 17, "d2": 3, "futuro": 10}, {"n": "AAP", "grp": "Equipe E", "tot": 33, "atrasada": 0, "fatal": 3, "d1": 9, "d2": 7, "futuro": 14}, {"n": "RCF", "grp": "Equipe E", "tot": 32, "atrasada": 0, "fatal": 20, "d1": 1, "d2": 4, "futuro": 7}, {"n": "SOF", "grp": "Equipe A", "tot": 19, "atrasada": 0, "fatal": 0, "d1": 10, "d2": 6, "futuro": 3}, {"n": "NRG", "grp": "Equipe B", "tot": 12, "atrasada": 2, "fatal": 8, "d1": 0, "d2": 2, "futuro": 0}, {"n": "NBG", "grp": "Equipe A", "tot": 9, "atrasada": 1, "fatal": 0, "d1": 5, "d2": 1, "futuro": 2}, {"n": "GRS", "grp": "TRIBUTÁRIO", "tot": 2, "atrasada": 0, "fatal": 0, "d1": 2, "d2": 0, "futuro": 0}, {"n": "ACA", "grp": "TRABALHISTA", "tot": 1, "atrasada": 0, "fatal": 0, "d1": 0, "d2": 0, "futuro": 1}, {"n": "TCE", "grp": "Equipe A", "tot": 1, "atrasada": 0, "fatal": 0, "d1": 0, "d2": 0, "futuro": 1}];
+const AGEQ_EQUIPE=[{"equipe": "Equipe E", "tot": 79, "atrasada": 17, "fatal": 35, "d1": 19, "d2": 2, "futuro": 6}, {"equipe": "Equipe B", "tot": 46, "atrasada": 8, "fatal": 9, "d1": 14, "d2": 6, "futuro": 9}, {"equipe": "Equipe D", "tot": 11, "atrasada": 0, "fatal": 1, "d1": 9, "d2": 0, "futuro": 1}, {"equipe": "Equipe C", "tot": 5, "atrasada": 2, "fatal": 1, "d1": 1, "d2": 0, "futuro": 1}, {"equipe": "Equipe A", "tot": 4, "atrasada": 0, "fatal": 2, "d1": 2, "d2": 0, "futuro": 0}];
+const AGEQ_RESP=[{"n": "CAL", "grp": "Equipe E", "tot": 21, "atrasada": 6, "fatal": 10, "d1": 1, "d2": 0, "futuro": 4}, {"n": "RRU", "grp": "Equipe E", "tot": 12, "atrasada": 4, "fatal": 7, "d1": 1, "d2": 0, "futuro": 0}, {"n": "JPL", "grp": "Equipe E", "tot": 11, "atrasada": 1, "fatal": 2, "d1": 6, "d2": 1, "futuro": 1}, {"n": "RYL", "grp": "Equipe E", "tot": 11, "atrasada": 3, "fatal": 6, "d1": 1, "d2": 0, "futuro": 1}, {"n": "BSO", "grp": "Equipe B", "tot": 10, "atrasada": 1, "fatal": 0, "d1": 5, "d2": 3, "futuro": 1}, {"n": "JPE", "grp": "Equipe B", "tot": 9, "atrasada": 3, "fatal": 1, "d1": 1, "d2": 1, "futuro": 3}, {"n": "JQS", "grp": "Equipe D", "tot": 8, "atrasada": 0, "fatal": 0, "d1": 7, "d2": 0, "futuro": 1}, {"n": "ALF", "grp": "Equipe E", "tot": 7, "atrasada": 0, "fatal": 1, "d1": 5, "d2": 1, "futuro": 0}, {"n": "JRM", "grp": "Equipe E", "tot": 6, "atrasada": 0, "fatal": 2, "d1": 4, "d2": 0, "futuro": 0}, {"n": "RFE", "grp": "Equipe B", "tot": 5, "atrasada": 0, "fatal": 0, "d1": 4, "d2": 1, "futuro": 0}, {"n": "GSM", "grp": "Equipe B", "tot": 5, "atrasada": 0, "fatal": 2, "d1": 0, "d2": 0, "futuro": 3}, {"n": "NRG", "grp": "Equipe B", "tot": 5, "atrasada": 1, "fatal": 1, "d1": 0, "d2": 1, "futuro": 2}, {"n": "RCF", "grp": "Equipe E", "tot": 5, "atrasada": 0, "fatal": 5, "d1": 0, "d2": 0, "futuro": 0}, {"n": "VCR", "grp": "Equipe B", "tot": 4, "atrasada": 0, "fatal": 3, "d1": 1, "d2": 0, "futuro": 0}, {"n": "BCF", "grp": "Equipe B", "tot": 3, "atrasada": 1, "fatal": 2, "d1": 0, "d2": 0, "futuro": 0}, {"n": "ECO", "grp": "Equipe C", "tot": 3, "atrasada": 1, "fatal": 1, "d1": 0, "d2": 0, "futuro": 1}, {"n": "BBO", "grp": "Equipe D", "tot": 3, "atrasada": 0, "fatal": 1, "d1": 2, "d2": 0, "futuro": 0}, {"n": "LMI", "grp": "Equipe B", "tot": 3, "atrasada": 0, "fatal": 0, "d1": 3, "d2": 0, "futuro": 0}, {"n": "ARC", "grp": "Equipe E", "tot": 3, "atrasada": 1, "fatal": 2, "d1": 0, "d2": 0, "futuro": 0}, {"n": "DPR", "grp": "Equipe E", "tot": 2, "atrasada": 2, "fatal": 0, "d1": 0, "d2": 0, "futuro": 0}, {"n": "SOF", "grp": "Equipe A", "tot": 2, "atrasada": 0, "fatal": 0, "d1": 2, "d2": 0, "futuro": 0}, {"n": "ANB", "grp": "Equipe B", "tot": 2, "atrasada": 2, "fatal": 0, "d1": 0, "d2": 0, "futuro": 0}, {"n": "NBG", "grp": "Equipe A", "tot": 2, "atrasada": 0, "fatal": 2, "d1": 0, "d2": 0, "futuro": 0}, {"n": "MBF", "grp": "Equipe E", "tot": 1, "atrasada": 0, "fatal": 0, "d1": 1, "d2": 0, "futuro": 0}, {"n": "VSI", "grp": "Equipe C", "tot": 1, "atrasada": 0, "fatal": 0, "d1": 1, "d2": 0, "futuro": 0}, {"n": "TFR", "grp": "Equipe C", "tot": 1, "atrasada": 1, "fatal": 0, "d1": 0, "d2": 0, "futuro": 0}];
 const AG_COLORS={"Grupo A2":"#00A9E0","Grupo A3":"#007EAA","Grupo B1":"#003B5C","Grupo B2":"#00557B","Grupo B3":"#00A9E0","Grupo C":"#006D96","Grupo D":"#004D73","Grupo D1":"#004D73","Grupo E1":"#008FC2","Grupo E2":"#003B5C","CONTRATAÇÕES ESPECIAIS":"#5F7E92"};
 function shortGrupo(g){ return String(g||'').replace(/^Grupo\s+/,'').replace(/^Equipe\s+/,''); }
 
@@ -3542,7 +3914,9 @@ window.TIPOS_DATA = {  "2026-S29": {
     "Razões finais": 18,
     "Manifestação de cálculos": 18,
     "Manifestação Juízo 100% digital": 15
-  }
+  },
+  "2026-S30": {"Contrarrazões de Recurso Ordinário": 12, "Protocolar defesa": 43, "Apresentação de cálculos": 10, "Embargos de Declaração + conferir interesse em recorrer": 96, "Manifestação  - juízo 100%": 1, "Analisar exceção de incompetência / solicitar agendamento do prazo de protocolo": 39, "Esclareça a não confirmação da citação pelo Domicílio Eletrônico": 1, "Manifestação sobre laudo": 34, "Manifestação de cálculos": 19, "Regularizar representação processual": 62, "Comprovar pagamento FGTS": 2, "Recurso de Revista": 52, "Contrarrazões de Recurso de Revista": 6, "Recurso Ordinário": 30, "Contraminutar Agravo de Instrumento": 5, "Comprovar pagamento/solicitar dilação de prazo": 35, "Manifestação Juízo 100% digital": 1, "Elaborar defesa (10 dias antes da audiência)": 4, "Comprovar recolhimentos ficais e previdenciários": 6, "Comprovar depósito FGTS": 1, "Juntada da certidão de registro da apólice": 119, "Manifestação - regularização processual": 4, "Manifestação": 93, "Comprovar honorários prévios_x000D_": 12, "Manifestação - Juntar documentos": 2, "Elaborar defesa": 45, "Realizar manifestação requerendo segredo de justiça e despchar": 1, "Habilitar processo Pje": 46, "Manifestação aos Embargos de Declaração": 3, "Manifestação sobre esclarecimentos periciais": 25, "Embargos à execução": 44, "Juntar cópias dos cartões de ponto": 1, "Manifestação - código de enquadramento de sua atividade FPAS, alíquota sujeita em razão do risco de acidentes de trabalho, optante do SIMPLES ou SUPER SIMPLES": 1, "Manifestação sobre o laudo pericial": 1, "Manifestação - Indicar dados bancários": 5, "Manifestação sobre esclarecimentos periciais_x000D_": 2, "Agravo de Petição": 6, "Manifestação- Provas": 1, "Apresentar quesitos e indicar assistente técnico": 4, "Manifestação - Deverão  também,  as  partes,  providenciarem  DIRETAMENTE_x000D_\nENTRE SI o cumprimento de eventuais obrigações de fazer (anotação de CTPS, entrega_x000D_\nde guias, entrega de PPP), bem como a reclamada, aquelas que dependem somente_x000D_\ndela (reintegração, inclusão de verba deferida em folha).": 1, "Embargos de Declaração + conferir interesse em recorrer / Inserir pagamento  no sistema do Cliente": 7, "Manifestação - Eventual Mandado de Segurança": 1, "Manifestação - juízo 100%": 2, "Embargos de Declaração": 10, "Embargos de Declaração + conferir interesse em recorrer_x000D_": 1, "Manifestação - testemunhas": 7, "Agravo": 6, "Agravo interno": 4, "Protocolar defesa - Se o caso.": 1, "Protocolar defesa - Mandado de Segurança - 1008679-82.2026.5.02.0000": 1, "Agravo de Instrumento": 3, "Manifestação- juízo 100%": 2, "Peticionar requerendo a disponibilidade da ata de audiência_x000D_": 2, "Vistas das eventuais impugnações": 1, "Apresentar quesitos e indicar assistentes_x000D_": 17, "Comprovar pagamento": 5, "Razões finais": 13, "Embargos à Execução": 3, "Manifestação - equívoco ou complementação de depoimentos": 1, "Manifestação - peticionarem nos autos eventuais requerimentos que pretendiam formular nesta audiência.": 1, "Manifestação - Informar ao Juízo": 1, "Manifestação sobre laudo contabil": 1, "Resposta ao ofício": 5, "Analisar exceção de incompetência / solicitar agendamento do prazo de protocolo_x000D_": 8, "Manifestação - dados bancários": 1, "Comprovar pagamento honorários/solicitar dilação de prazo": 1, "Manifestação - Fica a parte reclamada expressamente ADVERTIDA de que, caso a tentativa prévia de citação por meio do Domicílio Judicial Eletrônico reste frustrada, ante a inércia e ausência de confirmação de leitura no prazo legal de 3 dias úteis, na forma do disposto no art. 246, §§ 1º-B e C, do CPC, deverá apresentar, na 1ª oportunidade de se manifestar nos autos": 1, "Razões finais escritas": 3, "Manifestação de cálculos/Eventual concordância": 1, "Exceção de Incompetência": 1, "Apresentar quesitos e indicar assistentes + Apresentar documentos_x000D_": 1, "Comprovar pagamento honorários prévios_x000D_": 1, "Manifestação - ids d91e610 e 0e4adc7,": 1, "Embargos de Divergência": 3, "Apresentar documentos": 4, "Arrolar Testemunhas": 1, "elaborar defesa": 1, "Embargos Infringentes": 3, "Juntar documentos": 1, "Produção de provas": 1, "Manifestação - Interesse em conciliar": 1, "Habilitar processo Pje_x000D_": 7, "Recurso Ordinário_x000D_": 1, "Elaborar defesa (10 dias antes da audiência)_x000D_": 1, "Manifestação - Falta de interesse de audiência": 1, "Comprovar recolhimentos FGTS": 1, "Manifestação erro material": 1, "Apresentar Proposta de Conciliação + Juntada de documentos": 1, "Elaborar defesa_x000D_": 6, "Manifestação sobre o juízo 100% digital": 2, "Manifestação - obrigação de fazer": 1, "Manifestação - Provas": 1, "Protocolar defesa_x000D_": 1, "Recurso de Apelação": 4, "Indicar eventuais observações/complementos sobre a ata da reunião": 1, "Manifestação -obrigação de fazer": 1, "Juntar TRCT, pagamento de INSS sobre verbas rescisórias e pagamento de honorários periciais": 1, "Apresentar defesa administrativa_x000D_": 1, "Apresentar Defesa Administrativa": 3, "Protocolar defesa (2 dias antes da audiência)_x000D_": 1, "Manifestar sobre Impugnação à Sentença de Liquidação": 1, "Apresentar defesa administrativa": 1, "manifestação - testemunhas": 2, "Informar TST/TRT em caso de execução provisória_x000D_": 3, "Comprovar pagamento da 2ª parcela": 1, "Manifestação - Regularização Processual": 1, "Manifestação de cálculos/concordância com os cálculos": 1, "Apresentar quesitos e indicar assistentes": 3, "Provas": 1, "Manifestação - testemunhas _x000D_": 2, "Manifestação - verificar obrigação de fazer": 2, "Contrarrazões ao Recurso Ordinário": 1, "Manifestação sobre laudo pericial": 1, "Regularizar representação processual_x000D_": 3, "Manifestação - baixa na CTPS": 1, "Comprovar pagamento de honorários periciais": 2, "Protocolar defesa - A defesa poderá ser juntada até a data da audiência designada_x000D_\npela Vara do Trabalho, nos termos do parágrafo único do artigo 847 da CLT, exceto se_x000D_\nhouver expressa determinação pelo Juízo de Origem em sentido contrário": 1, "Manifestação -  interesse em conciliar": 1, "Recurso Extraordinário": 1, "Rol de testemunha": 2, "Manifestação - eventual opção pelo SIMPLES": 1, "Comprovar o recolhimento da parcela correspondente ao imposto de renda, se cabível, por meio de DARF": 1, "Apresentar PPP nos autos": 1, "Comprovar a implementação das adequações remanescentes": 1, "Manifestação - opção pelo SIMPLES": 1, "Comprovar recolhimentos ficais e previdenciários e imposto de renda": 1, "Manifestação -PPP": 1, "Manifestação sobre laudo_x000D_": 8, "Manifestação - Testemunhas": 1, "Manifestação - INCIDENTE DE DESCONSIDERAÇÃO INVERSA DA PERSONALIDADE JURÍDICA": 1, "Manifestação - Impugnação à sentença de liquidação": 1, "Protocolar defesa (2 dias antes da audiência)": 2, "Comprovar pagamento da 3ª parcela": 1, "Comprovar pagamento de honorários": 1, "Apresentar quesitos e indicar assistentes -  (perícia insalubridade +perícia médica) _x000D_": 1, "Comprove  o recolhimento das custas processuais": 1, "Manifestação - Test4emunhas": 1, "Complementar documentos anteriormente apresentados pertinentes a treinamentos realizados": 1, "Informar TST/TRT em caso de execução provisória_x000D_\n_x000D_": 1, "2ª Parcela Comprovar pagamento": 2, "Comprovar pagamento Honorários periciais": 1, "Manifestação - verificar obrigação de fezer": 1, "Manifestação- verificar obrigação de fazer": 1, "Manifestação - Intime-se a parte reclamada para que compareça na Divisão de_x000D_\nAtendimento  (DAA)": 1, "Comprovar pagamento_x000D_": 1, "Manifestação planilha discriminatória": 1, "Juntada de documentos - Planilha discriminatória das verbas": 1, "Manifestação - arguição  de  suspeição  ou impedimento  do  perito": 1, "Comprovar pagamento honorários prévios": 1, "Manifestação - Juntar Documentos": 1, "Manifestação de cálculos_x000D_": 1, "Manifestação aos cálculos": 1, "Manifestação -  interesse em designação de audiência": 1, "Contraminuta de Agravo de Instrumento": 1, "Contrarrazões de recurso de revista": 2, "Apresentar quesitos, indicar assistentes e e-mails_x000D_": 1, "Apresentar defesa Administrativa": 2, "Manifestação _x000D_": 1, "Juntar laudo de inspeção": 1, "Manifestação ao convênio": 1, "Rol de testemunhas": 1, "Manifestação sobre os honorarios periciais": 1, "Comprovar pagamento - 3ª parcela, no valor de R$2.500,00, até 27/07/2026._x000D_\n4ª": 1, "Razões finais por memoriais": 1, "Manifestação - Anexar outras peças": 1, "Manifestação - dados atualizados para audiência": 1, "Comprovar pagamento - 1ª parcela, no valor de R$7.500,00, até 27/07/2026.": 1, "Manifestação ids 85f37b9 e 0d8980c": 1, "Manifestar interesse em conciliar.": 1, "Razões Finais": 1, "Juntada planilha discriminatória das verbas": 1, "Comprovar pagamento - contribuições previdenciários e encargos fiscais": 1, "Contraminuta ao Agravo Interno": 1, "Manifestação -Falta de interesse  na  conciliação  ou   impossibilidade  de comparecimento": 1, "Impugnação esclarecimentos periciais (técnico e médico).": 1},
+  "2026-S31": {"Embargos de Declaração + conferir interesse em recorrer": 98, "Regularizar representação processual": 63, "Recurso de Revista": 59, "Protocolar defesa": 51, "Manifestação": 77, "Embargos à execução": 35, "Comprovar pagamento recolhimentos previdenciários": 1, "Comprovar pagamento_x000D_": 1, "Contrarrazões de Recurso de Revista": 15, "Contraminutar Agravo de Instrumento": 13, "Manifestar sobre a intenção de firmar o Termo de Ajustamento de Conduta (TAC)": 1, "Rol de testemunha": 2, "Contrarrazões de Recurso Ordinário": 24, "Apresentação de cálculos": 14, "Elaborar defesa": 42, "Juntada da certidão de registro da apólice": 94, "Apresentar quesitos e indicar assistentes_x000D_": 20, "Elaborar Defesa": 4, "Manifestação sobre esclarecimentos periciais": 26, "Recurso Ordinário": 34, "Comprovar honorários prévios_x000D_": 9, "Comprovar pagamento/solicitar dilação de prazo": 38, "Apresentar memoriais": 2, "Manifestação testemunhas residentes em outra jurisdição": 1, "Protocolar defesa (2 dias antes da audiência)": 6, "Habilitar processo Pje_x000D_": 8, "Analisar exceção de incompetência / solicitar agendamento do prazo de protocolo_x000D_": 8, "Manifestação sobre esclarecimentos periciais_x000D_": 2, "Embargos de Declaração + conferir interesse em recorrer_x000D_": 2, "Manifestação sobre laudo": 38, "Apresentar quesitos e indicar assistente técnico": 4, "comprove os recolhimentos previdenciarios": 1, "Agravo": 5, "Regularizar representação processual_x000D_": 14, "Habilitar processo Pje": 45, "Analisar exceção de incompetência / solicitar agendamento do prazo de protocolo": 50, "Manifestação esclarecimentos periciais": 1, "Razões Finais": 7, "Manifestação - eventual participação por videoconferência": 1, "Manifestação de cálculos": 17, "Manifestação - reclamada esclareça, mediante declaração subscrita por representante legal e, se possível, pelo responsável técnico, se a avaliação do agente ruído observou a NHO-01 da Fundacentro e/ou a NR-15.": 1, "Manifestação - Indicar dados bancários": 6, "Razões finais escritas": 5, "Embargos de Declaração + conferir interesse em recorrer / Inserir pagamento  no sistema do Cliente": 6, "Razões finais": 13, "Manifestação ao juízo 100% digital": 1, "Manifestação sobre esclarecimentos periciais contabil": 1, "Peticionar requerendo a disponibilidade da ata de audiência_x000D_": 9, "Manifestação sobre laudo_x000D_": 11, "Comprovar pagamento da 3ª parcela": 2, "Juntar subsidios jurisprudenciais": 1, "Razões finais por memoriais": 3, "Agravo de Instrumento": 8, "Recurso Ordinário_x000D_": 2, "Manifestação sobre o juízo 100% digital": 2, "Solicitar retorno do cliente com validação da defesa": 2, "Elaborar defesa (10 dias antes da audiência)": 5, "Manifestação - testemunhas": 4, "Embargos de Declaração": 9, "Agravo interno": 8, "Recurso Especial": 3, "Encaminhar defesa para o cliente validar": 1, "Verificar providência para audiência/Verificar necessidade de testemunha/Agendamento de reunião": 1, "comprovar o local de residência da testemunhas que residam fora da jurisdição deste Juízo": 1, "Contrarrazões de Recurso Ordinário Adesivo": 3, "Comprovar recolhimentos ficais e previdenciários": 3, "Elaborar defesa_x000D_": 7, "Manifestar sobre a proposta de TAC": 1, "Manifestação sobre laudo contábil": 1, "Manifestação Juízo 100% digital": 2, "Apresentar quesitos e indicar assistentes técnico e médico_x000D_": 1, "Contrarrazões de Recurso Adesivo": 1, "Manifestação local da perícia": 1, "Apresentar documentos": 4, "Manifestação aos Embargos de Declaração": 6, "Manifestação sobre laudo médico": 1, "Manifestação sobre o laudo técnico": 1, "Manifestação sobre laudo (Perícia Técnica)_x000D_": 1, "Manifestação - verificar obrigação de fazer": 4, "Manifestação - juízo 100%": 3, "Manifestação- juízo 100%": 1, "Manifestação dos esclarecimentos periciais _x000D_": 1, "Manifestação - possibilidade de acordo": 1, "ciência às citações": 1, "Protocolar defesa _x000D_": 3, "Comprovar pagamento": 3, "Manifestação - Provas": 1, "Manifestação - dados audiência": 1, "Comprovar pagamento do INSS": 1, "Juntar documentos": 1, "Agravo de Petição": 4, "Manifestação - Interesse em conciliar": 1, "Manifestação - Convite testemunhas": 1, "Informar TST/TRT em caso de execução provisória": 2, "Apresentar documentos - PPP": 1, "Manifestação - testemunha": 1, "Manifestação - obrigação de fazer": 3, "Manifestação - Rol de testemunhas": 2, "manifestação - Não havendo interesse na conciliação ou em caso impossibilidade de comparecimento à audiência": 1, "manifestação - caso não haja proposta de conciliação concreta a ser apresentada em audiência": 1, "Manifestar sobre notificação extrajudicial (E-mail: Notificação Extrajudicial - Cumprimento da obrigação de custeio do tratamento médico - Processo nº 0010654-13.2021.5.03.0063)": 1, "Manifestação - Testemunhas": 2, "Manifestação -liberação valores": 1, "Comprovar pagamento da 4ª parcela": 1, "Manifestação / Dados bancários": 1, "Informar TST/TRT em caso de execução provisória_x000D_": 6, "Manifestação aos Embargos de Declaração do reclamante": 1, "prazo em curso ampliado": 1, "Recurso Extraordinário": 1, "Juntar prontuário médico do reclamante": 1, "Comprovar pagamento do incontroverso + custas": 1, "Manifestação - Impossibilidade de acordo": 1, "Manifestação - testemunhas _x000D_": 1, "Rol de testemunhas": 1, "Comprovar complementar o depósito recursal": 1, "Manifestação  sobre obrição de fazer": 1, "Manifestação -Falta de interesse conciliatório": 1, "Manifestação sobre laudo - Médica_x000D_": 1, "Comprovar pagamento/solicitar dilação de prazo_x000D_": 1, "Manifestação sobre laudo + honorários periciais": 2, "Manifestação - laudo pericial e honorários": 1, "Manifestação - laudo pericial e honorários periciais": 1, "Manifestação- juízo 100 %": 1, "Manifestação sobre laudo -  médica_x000D_": 1, "Manifestação de laudo": 1, "Manifestação de cálculos_x000D_": 2, "Manifestação - Requerimentos Audiência": 1, "Juntada da certidão de registro da apólice_x000D_": 2, "Embargos à Execução": 2, "Comprovar obrigação de fazer": 1, "Obrigação de fazer - restabeleça o plano de saúde do autor.": 1, "Apresentar Rol de Testemunhas e apresentar comprovantes de de intimação": 1, "Comprovar adequação dos recolhimentos previdenciários": 1, "Elaborar defesa prévia": 1, "Contraminuta ao Agravo Interno": 1, "Manifestação - alteração  modalidade audiência": 1, "Manifestação - Juntar PPP": 1, "Apresentar quesitos, indicar assistentes e e-mail_x000D_": 1, "Juntar prontuário médico": 1, "Protocolar defesa _x000D_\n_x000D_": 1, "Manifestação - participação por videoconferência": 1, "Manifestação - interesse em audiência": 1, "Manifestação _x000D_": 1, "Contraminuta de Agravo de Instrumento": 2, "Contrarrazões de recurso de revista": 1, "Comprovar recolhimentos FGTS": 1, "Comprovar pagamento 1ª parcela": 1, "Regularizar representação processual - juntar carta de preposição": 1, "Recurso de Apelação": 1, "Produção de provas": 1, "Embargos à execução_x000D_": 1, "Manifestação - Verificar obrigação de fazer": 1, "Manifestação - Juntar documentos": 1}
 };
 const SEMANA_LABELS_MAP = {
   '2026-S19':'S19<br><small style="color:var(--tx2)">02-10/05</small>',
@@ -3555,7 +3929,9 @@ const SEMANA_LABELS_MAP = {
   '2026-S26':'S26<br><small style="color:var(--tx2)">22-28/06</small>',
   '2026-S27':'S27<br><small style="color:var(--tx2)">29/06-05/07</small>',
   '2026-S28':'S28<br><small style="color:var(--tx2)">06-12/07</small>',
-  '2026-S29':'S29<br><small style="color:var(--tx2)">13-19/07</small>'
+  '2026-S29':'S29<br><small style="color:var(--tx2)">13-19/07</small>',
+  '2026-S30':'S30<br><small style="color:var(--tx2)">20-26/07</small>',
+  '2026-S31':'S31<br><small style="color:var(--tx2)">27/07-02/08</small>'
 };
 function getSemanaKey(serial){
   const d=new Date((serial-25569)*86400000);
@@ -3582,7 +3958,7 @@ function renderTiposPrazo(){
   }).join('');
 }
 
-const ACUMULADO_DATA={"semana": {"2026-S29": {"Prazo": 1100, "Agenda": 2869, "Agenda Equipe": 209, "Vencido": 0, "Fatal": 268, "D-1": 422, "D-2": 122, "Futuro": 288, "Total": 4178}, "2026-S19": {"Prazo": 1451, "Agenda": 4122, "Agenda Equipe": 246, "Vencido": 905, "Fatal": 1053, "D-1": 2174, "D-2": 487, "Futuro": 1200, "Total": 5819}, "2026-S20": {"Prazo": 1396, "Agenda": 3788, "Agenda Equipe": 179, "Total": 5363, "Vencido": 556, "Fatal": 892, "D-1": 2226, "D-2": 469, "Futuro": 1220}, "2026-S21": {"Prazo": 1390, "Agenda": 3814, "Agenda Equipe": 206, "Vencido": 488, "Fatal": 882, "D-1": 2239, "D-2": 575, "Futuro": 1226, "Total": 5410}, "2026-S26": {"Prazo": 1476, "Agenda": 4026, "Agenda Equipe": 224, "Vencido": 448, "Fatal": 1020, "D-1": 2336, "D-2": 518, "Futuro": 1404, "Total": 5726}, "2026-S27": {"Prazo": 1320, "Agenda": 3431, "Agenda Equipe": 252, "Vencido": 0, "Fatal": 227, "D-1": 511, "D-2": 125, "Futuro": 457, "Total": 5003}}, "mes": {"2026-05": {"Prazo": 2847, "Agenda": 7910, "Agenda Equipe": 425, "Vencido": 1461, "Fatal": 1945, "D-1": 4400, "D-2": 956, "Futuro": 2420, "Total": 11182}, "2026-06": {"Prazo": 5493, "Agenda": 15824, "Agenda Equipe": 918, "Vencido": 337, "Fatal": 1840, "D-1": 4667, "D-2": 1220, "Futuro": 783, "Total": 22235}, "2026-07": {"Prazo": 739, "Agenda": 2108, "Agenda Equipe": 149, "Vencido": 244, "Fatal": 592, "D-1": 1179, "D-2": 196, "Futuro": 785, "Total": 2996}}};
+const ACUMULADO_DATA={"semana": {"2026-S29": {"Prazo": 1100, "Agenda": 2869, "Agenda Equipe": 209, "Vencido": 0, "Fatal": 268, "D-1": 422, "D-2": 122, "Futuro": 288, "Total": 4178}, "2026-S19": {"Prazo": 1451, "Agenda": 4122, "Agenda Equipe": 246, "Vencido": 905, "Fatal": 1053, "D-1": 2174, "D-2": 487, "Futuro": 1200, "Total": 5819}, "2026-S20": {"Prazo": 1396, "Agenda": 3788, "Agenda Equipe": 179, "Total": 5363, "Vencido": 556, "Fatal": 892, "D-1": 2226, "D-2": 469, "Futuro": 1220}, "2026-S21": {"Prazo": 1390, "Agenda": 3814, "Agenda Equipe": 206, "Vencido": 488, "Fatal": 882, "D-1": 2239, "D-2": 575, "Futuro": 1226, "Total": 5410}, "2026-S26": {"Prazo": 1476, "Agenda": 4026, "Agenda Equipe": 224, "Vencido": 448, "Fatal": 1020, "D-1": 2336, "D-2": 518, "Futuro": 1404, "Total": 5726}, "2026-S27": {"Prazo": 1320, "Agenda": 3431, "Agenda Equipe": 252, "Vencido": 0, "Fatal": 227, "D-1": 511, "D-2": 125, "Futuro": 457, "Total": 5003}, "2026-S22": {"Prazo": 1277, "Agenda": 4043, "Agenda Equipe": 200, "Vencido": 0, "Fatal": 156, "D-1": 551, "D-2": 121, "Futuro": 540, "Total": 5611}, "2026-S23": {"Prazo": 1195, "Agenda": 4046, "Agenda Equipe": 218, "Vencido": 1, "Fatal": 161, "D-1": 498, "D-2": 133, "Futuro": 530, "Total": 5441}, "2026-S24": {"Prazo": 1277, "Agenda": 3451, "Agenda Equipe": 220, "Vencido": 3, "Fatal": 237, "D-1": 441, "D-2": 133, "Futuro": 463, "Total": 4951}, "2026-S25": {"Prazo": 1418, "Agenda": 3838, "Agenda Equipe": 195, "Vencido": 1, "Fatal": 240, "D-1": 558, "D-2": 259, "Futuro": 619, "Total": 5646}, "2026-S28": {"Prazo": 1080, "Agenda": 3270, "Agenda Equipe": 168, "Vencido": 1, "Fatal": 146, "D-1": 373, "D-2": 129, "Futuro": 431, "Total": 4518}, "2026-S30": {"Prazo": 1137, "Agenda": 3394, "Agenda Equipe": 261, "Vencido": 0, "Fatal": 228, "D-1": 436, "D-2": 94, "Futuro": 379, "Total": 4792}, "2026-S31": {"Prazo": 1173, "Agenda": 3009, "Agenda Equipe": 202, "Vencido": 0, "Fatal": 209, "D-1": 519, "D-2": 116, "Futuro": 329, "Total": 4384}}, "mes": {"2026-05": {"Prazo": 2847, "Agenda": 7910, "Agenda Equipe": 425, "Vencido": 1461, "Fatal": 1945, "D-1": 4400, "D-2": 956, "Futuro": 2420, "Total": 11182}, "2026-06": {"Prazo": 5493, "Agenda": 15824, "Agenda Equipe": 918, "Vencido": 337, "Fatal": 1840, "D-1": 4667, "D-2": 1220, "Futuro": 783, "Total": 22235}, "2026-07": {"Prazo": 5217, "Agenda": 14836, "Agenda Equipe": 983, "Vencido": 1, "Fatal": 965, "D-1": 2013, "D-2": 527, "Futuro": 1711, "Total": 21036}, "2026-08": {"Prazo": 12, "Agenda": 46, "Agenda Equipe": 7, "Vencido": 0, "Fatal": 4, "D-1": 0, "D-2": 3, "Futuro": 5, "Total": 65}}};
 function openAcumulado(tipo, key){
   const d=(ACUMULADO_DATA[tipo]||{})[key]; if(!d) return;
   const titulo=tipo==='semana'?'📊 Acumulado semanal':'📅 Consolidado mensal';
@@ -3709,7 +4085,7 @@ function renderAgendaBloco(prefix, equipes, responsaveis){
 
 
 function renderHistoricoResp(){
-  // Constrói mapa S28 como semana anterior (06/07–12/07) ✓
+  // Constrói mapa S30 como semana anterior (20/07–26/07)
   const m20={};
   (RESP_S20||[]).forEach(r=>{
     if(!r.n) return;
@@ -3717,7 +4093,7 @@ function renderHistoricoResp(){
     m20[r.n].total+=r.tot||0; m20[r.n].ven+=r.ven||0; m20[r.n].fatal+=r.fat||0;
     m20[r.n].d1+=r.d1||0; m20[r.n].d2+=r.d2||0; m20[r.n].fora+=r.fora||0; m20[r.n].ff+=r.ff||0;
   });
-  // Constrói mapa S29 (semana atual: 13/07–19/07)
+  // Constrói mapa S31 (semana atual: 27/07–02/08)
   const m21={};
   (RESP||[]).forEach(r=>{
     if(!r.n) return;
@@ -3753,7 +4129,7 @@ function renderHistoricoResp(){
   const good=rows.filter(r=>r.lei.c==='good').length;
   const resumo=document.getElementById('hist-summary');
   if(resumo) resumo.innerHTML=`
-    <div class="hist-card"><div class="hlabel">Prazos S29</div><div class="vbad muted">${fmtNum(1100)}</div></div>
+    <div class="hist-card"><div class="hlabel">Prazos S31</div><div class="vbad muted">${fmtNum(1173)}</div></div>
     <div class="hist-card"><div class="hlabel">Pontos de atenção</div><div class="hvalue" style="color:#C0392B">${high}</div></div>
     <div class="hist-card"><div class="hlabel">Monitorar</div><div class="hvalue" style="color:#E67E22">${mid}</div></div>
     <div class="hist-card"><div class="hlabel">Positivos</div><div class="hvalue" style="color:#003B5C">${good}</div></div>`;
@@ -3771,7 +4147,7 @@ function renderHistoricoResp(){
 
     const row20=r.d20?`<tr class="hist-prev-row">
       <td><span style="font-size:11px;color:var(--tx2)">${fn}</span></td>
-      <td><span style="font-size:10px;color:var(--tx2)">06/07 a 12/07</span></td>
+      <td><span style="font-size:10px;color:var(--tx2)">20/07 a 26/07</span></td>
       <td class="c"><span class="vbad muted">${fmtNum(d20.total)}</span></td>
       <td class="c">${v(d20.ven,'red')}</td><td class="c">${v(d20.fatal,'fat')}</td>
       <td class="c">${d20.d1?`<span class="vbad yel">${fmtNum(d20.d1)}</span>`:`<span class="vbad muted">—</span>`}</td>
@@ -3783,7 +4159,7 @@ function renderHistoricoResp(){
 
     const row21=`<tr onclick="openDataModalByResp('${r.sig}')" title="Clique para detalhar" style="border-top:2px solid rgba(0,174,239,.18)">
       <td><span class="nome-full">${fn}</span></td>
-      <td><b>13/07 a 19/07</b></td>
+      <td><b>27/07 a 02/08</b></td>
       <td class="c"><span class="vbad muted">${fmtNum(d21.total)}</span></td>
       <td class="c">${v(d21.ven,'red')}</td><td class="c">${v(d21.fatal,'fat')}</td>
       <td class="c">${d21.d1?`<span class="vbad yel">${fmtNum(d21.d1)}</span>`:`<span class="vbad muted">—</span>`}</td>
@@ -4262,7 +4638,7 @@ document.addEventListener('DOMContentLoaded', setupExcelImport);
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;flex-wrap:wrap">
     <div style="width:4px;height:22px;background:var(--pc-azul);border-radius:2px"></div>
     <h2 style="font-size:14px;font-weight:700;letter-spacing:.3px">⚖️ Painel Executivo — Visão para Sócios</h2>
-    <span style="font-size:11px;color:var(--tx2);margin-left:4px">29/06 a 05/07/2026 · resumo consolidado por grupo</span>
+    <span style="font-size:11px;color:var(--tx2);margin-left:4px">27/07 a 02/08/2026 · resumo consolidado por grupo</span>
   </div>
   <div id="socios-cards" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px"></div>
 </div>
@@ -4282,19 +4658,9 @@ function initDashboard() {
     {g:'Grupo B2',cor:'#00557B'},{g:'Grupo C',cor:'#004D73'},{g:'Grupo B3',cor:'#00A9E0'},
     {g:'Grupo D1',cor:'#007EAA'},{g:'Grupo A3',cor:'#00A9E0'},{g:'Grupo A2',cor:'#5F7E92'},
   ];
-  // Totais conferidos diretamente na planilha da semana 29/06 a 05/07/2026.
+  // Totais alinhados a BY_GRUPO da semana 27/07 a 02/08/2026 (S31) — sem override manual.
   // Mantém o TOTAL como total real de prazos do grupo; fatal aparece destacado à direita.
-  const SOCIOS_TOTAL_PLANILHA = {
-    "Grupo E2": 401,
-    "Grupo B1": 243,
-    "Grupo E1": 334,
-    "Grupo B2": 87,
-    "Grupo C": 88,
-    "Grupo B3": 79,
-    "Grupo D1": 68,
-    "Grupo A3": 12,
-    "Grupo A2": 8
-};
+  const SOCIOS_TOTAL_PLANILHA = {"Grupo E2": 367, "Grupo B1": 234, "Grupo E1": 230, "Grupo B2": 77, "Grupo C": 99, "Grupo B3": 78, "Grupo D1": 72, "Grupo A3": 11, "Grupo A2": 2};
   grupos.forEach(({g,cor})=>{
     const base=BY_GRUPO[g]; if(!base) return;
     const v={...base,total:(SOCIOS_TOTAL_PLANILHA[g]||base.total)};
