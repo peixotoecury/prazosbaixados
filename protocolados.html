@@ -657,6 +657,8 @@ tbody td,
 /* Seções um pouco mais baixas/respiradas para ficar no padrão visual */
 #sec-agendas + div,
 #sec-timeline + div,
+#sec-justificativas + div,
+#sec-audiencias + div,
 #sec-acumulado{
   margin-top:36px!important;
   padding-top:28px!important;
@@ -2836,6 +2838,76 @@ function _loToggleSenha(btn) {
 
 </div>
 
+<div id="sec-justificativas"></div>
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SEÇÃO JUSTIFICATIVAS                                    -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div style="margin-top:28px;border-top:2px solid rgba(0,174,239,.3);padding-top:22px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap">
+    <div style="width:4px;height:22px;background:var(--cyan);border-radius:2px"></div>
+    <h2 style="font-size:14px;font-weight:700;letter-spacing:.3px">📝 Justificativas — acumulado desde 25/05/2026</h2>
+    <span style="font-size:11px;color:var(--tx2);margin-left:4px" id="just-total-sub"></span>
+  </div>
+  <div class="nota-feriado" style="margin-bottom:14px">
+    <span style="font-size:14px;flex-shrink:0">📋</span>
+    <span><b>Fonte: Justificativas compiladas.xlsx</b> — todas as justificativas de prazo enviadas desde 25/05/2026, com o status de aprovação no momento da extração (pode mudar de pendente pra aprovada depois).</span>
+  </div>
+
+  <div class="kpis" id="just-kpi-row"></div>
+
+  <div class="g2">
+    <div class="pnl">
+      <div class="ptitle grne">📊 Justificativas — por Semana</div>
+      <div class="scr" style="max-height:400px;overflow-x:auto"><table style="min-width:420px">
+        <thead><tr><th>Semana</th><th class="c">Total</th><th class="c" style="color:#117A65">Aprovadas</th><th class="c" style="color:#E67E22">Pendentes</th><th class="c">% Aprovação</th></tr></thead>
+        <tbody id="tb-just-semana"></tbody>
+      </table></div>
+    </div>
+    <div class="pnl">
+      <div class="ptitle grne">🏆 Justificativas — por Gestor</div>
+      <div class="scr" style="max-height:400px;overflow-x:auto"><table style="min-width:420px">
+        <thead><tr><th>Gestor</th><th class="c">Total</th><th class="c" style="color:#117A65">Aprovadas</th><th class="c" style="color:#E67E22">Pendentes</th><th class="c">% Aprovação</th></tr></thead>
+        <tbody id="tb-just-gestor"></tbody>
+      </table></div>
+    </div>
+  </div>
+</div>
+
+<div id="sec-audiencias"></div>
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- SEÇÃO AUDIÊNCIAS                                        -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div style="margin-top:28px;border-top:2px solid rgba(0,174,239,.3);padding-top:22px">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap">
+    <div style="width:4px;height:22px;background:var(--cyan);border-radius:2px"></div>
+    <h2 style="font-size:14px;font-weight:700;letter-spacing:.3px">⚖️ Audiências — Janeiro a Julho/2026</h2>
+    <span style="font-size:11px;color:var(--tx2);margin-left:4px" id="aud-total-sub"></span>
+  </div>
+  <div class="nota-feriado" style="margin-bottom:14px">
+    <span style="font-size:14px;flex-shrink:0">📋</span>
+    <span><b>Fonte: Compilado Audiências - 2026.xlsx</b> — todas as audiências, sessões de julgamento e perícias agendadas de Janeiro a Julho/2026 (2 registros duplicados removidos).</span>
+  </div>
+
+  <div class="kpis" id="aud-kpi-row"></div>
+
+  <div class="g2">
+    <div class="pnl">
+      <div class="ptitle ble">📊 Audiências — por Mês</div>
+      <div class="scr" style="max-height:400px;overflow-x:auto"><table style="min-width:480px">
+        <thead><tr><th>Mês</th><th class="c">Total</th><th class="c">Presencial</th><th class="c">Telepresencial</th><th class="c">Semipresencial</th></tr></thead>
+        <tbody id="tb-aud-mes"></tbody>
+      </table></div>
+    </div>
+    <div class="pnl">
+      <div class="ptitle ble">🏆 Audiências — por Equipe <span style="margin-left:auto;font-size:10px;color:var(--tx2);font-weight:400">top 15</span></div>
+      <div class="scr" style="max-height:400px;overflow-x:auto"><table style="min-width:300px">
+        <thead><tr><th>Equipe</th><th class="c">Total</th></tr></thead>
+        <tbody id="tb-aud-equipe"></tbody>
+      </table></div>
+    </div>
+  </div>
+</div>
+
 <script>
 const TIMELINE_DATA={"2026-05-22": {"Agenda": 0, "Agenda Equipe": 3, "Prazo": 0, "Total": 3, "Vencido": 3, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-05-27": {"Agenda": 0, "Agenda Equipe": 1, "Prazo": 0, "Total": 1, "Vencido": 1, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-05-29": {"Agenda": 0, "Agenda Equipe": 1, "Prazo": 0, "Total": 1, "Vencido": 1, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-05": {"Agenda": 1, "Agenda Equipe": 1, "Prazo": 0, "Total": 2, "Vencido": 2, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-10": {"Agenda": 1, "Agenda Equipe": 1, "Prazo": 0, "Total": 2, "Vencido": 2, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-11": {"Agenda": 8, "Agenda Equipe": 0, "Prazo": 0, "Total": 8, "Vencido": 8, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-12": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 1, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-15": {"Agenda": 11, "Agenda Equipe": 0, "Prazo": 0, "Total": 11, "Vencido": 11, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-16": {"Agenda": 20, "Agenda Equipe": 3, "Prazo": 0, "Total": 23, "Vencido": 23, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-17": {"Agenda": 34, "Agenda Equipe": 0, "Prazo": 0, "Total": 34, "Vencido": 34, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-18": {"Agenda": 65, "Agenda Equipe": 3, "Prazo": 2, "Total": 70, "Vencido": 69, "Fatal": 1, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-19": {"Agenda": 212, "Agenda Equipe": 21, "Prazo": 41, "Total": 274, "Vencido": 57, "Fatal": 217, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-22": {"Agenda": 626, "Agenda Equipe": 40, "Prazo": 197, "Total": 863, "Vencido": 62, "Fatal": 150, "D-1": 651, "D-2": 0, "Futuro": 0}, "2026-06-23": {"Agenda": 568, "Agenda Equipe": 29, "Prazo": 189, "Total": 786, "Vencido": 93, "Fatal": 204, "D-1": 361, "D-2": 128, "Futuro": 0}, "2026-06-24": {"Agenda": 701, "Agenda Equipe": 43, "Prazo": 217, "Total": 961, "Vencido": 76, "Fatal": 183, "D-1": 540, "D-2": 101, "Futuro": 61}, "2026-06-25": {"Agenda": 541, "Agenda Equipe": 31, "Prazo": 229, "Total": 801, "Vencido": 5, "Fatal": 205, "D-1": 368, "D-2": 134, "Futuro": 89}, "2026-06-26": {"Agenda": 535, "Agenda Equipe": 39, "Prazo": 190, "Total": 764, "Vencido": 0, "Fatal": 60, "D-1": 416, "D-2": 133, "Futuro": 155}, "2026-06-29": {"Agenda": 550, "Agenda Equipe": 44, "Prazo": 252, "Total": 846, "Vencido": 80, "Fatal": 149, "D-1": 350, "D-2": 100, "Futuro": 167}, "2026-06-30": {"Agenda": 773, "Agenda Equipe": 59, "Prazo": 329, "Total": 1161, "Vencido": 16, "Fatal": 251, "D-1": 484, "D-2": 99, "Futuro": 311}, "2026-07-01": {"Agenda": 692, "Agenda Equipe": 54, "Prazo": 251, "Total": 997, "Vencido": 50, "Fatal": 203, "D-1": 435, "D-2": 70, "Futuro": 239}, "2026-07-02": {"Agenda": 771, "Agenda Equipe": 42, "Prazo": 288, "Total": 1101, "Vencido": 106, "Fatal": 224, "D-1": 393, "D-2": 126, "Futuro": 252}, "2026-07-03": {"Agenda": 624, "Agenda Equipe": 53, "Prazo": 197, "Total": 874, "Vencido": 71, "Fatal": 161, "D-1": 351, "D-2": 0, "Futuro": 291}, "2026-07-04": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 1, "Total": 5, "Vencido": 0, "Fatal": 4, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-07-05": {"Agenda": 17, "Agenda Equipe": 0, "Prazo": 2, "Total": 19, "Vencido": 17, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 2}, "2026-07-06": {"Agenda": 49, "Agenda Equipe": 0, "Prazo": 22, "Total": 71, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 71}, "2026-07-07": {"Agenda": 28, "Agenda Equipe": 0, "Prazo": 33, "Total": 61, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 61}, "2026-07-08": {"Agenda": 26, "Agenda Equipe": 0, "Prazo": 19, "Total": 45, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 45}, "2026-07-09": {"Agenda": 23, "Agenda Equipe": 0, "Prazo": 25, "Total": 48, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 48}, "2026-07-10": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 14, "Total": 19, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 19}, "2026-07-13": {"Agenda": 9, "Agenda Equipe": 0, "Prazo": 12, "Total": 21, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 21}, "2026-07-14": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 8, "Total": 12, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 12}, "2026-07-15": {"Agenda": 0, "Agenda Equipe": 0, "Prazo": 2, "Total": 2, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 2}, "2026-07-16": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 3, "Total": 8, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 8}, "2026-07-17": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-07-20": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 3, "Total": 8, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 8}, "2026-07-21": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 3, "Total": 7, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 7}, "2026-07-22": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 0, "Total": 5, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 5}, "2026-07-23": {"Agenda": 6, "Agenda Equipe": 0, "Prazo": 1, "Total": 7, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 7}, "2026-07-24": {"Agenda": 3, "Agenda Equipe": 0, "Prazo": 2, "Total": 5, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 5}, "2026-07-27": {"Agenda": 3, "Agenda Equipe": 0, "Prazo": 0, "Total": 3, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 3}, "2026-07-28": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 1, "Total": 5, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 5}, "2026-07-29": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-07-30": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-07-31": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-08-03": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-08-04": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 0, "Total": 5, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 5}, "2026-08-06": {"Agenda": 7, "Agenda Equipe": 0, "Prazo": 1, "Total": 8, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 8}, "2026-08-07": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-08-10": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-08-11": {"Agenda": 6, "Agenda Equipe": 0, "Prazo": 0, "Total": 6, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 6}, "2026-08-12": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 0, "Total": 5, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 5}, "2026-08-13": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-08-14": {"Agenda": 3, "Agenda Equipe": 0, "Prazo": 0, "Total": 3, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 3}, "2026-08-17": {"Agenda": 10, "Agenda Equipe": 0, "Prazo": 2, "Total": 12, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 12}, "2026-08-18": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-08-19": {"Agenda": 3, "Agenda Equipe": 0, "Prazo": 0, "Total": 3, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 3}, "2026-08-20": {"Agenda": 6, "Agenda Equipe": 0, "Prazo": 0, "Total": 6, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 6}, "2026-08-21": {"Agenda": 10, "Agenda Equipe": 0, "Prazo": 0, "Total": 10, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 10}, "2026-08-24": {"Agenda": 11, "Agenda Equipe": 0, "Prazo": 1, "Total": 12, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 12}, "2026-08-25": {"Agenda": 8, "Agenda Equipe": 0, "Prazo": 0, "Total": 8, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 8}, "2026-08-26": {"Agenda": 6, "Agenda Equipe": 0, "Prazo": 0, "Total": 6, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 6}, "2026-08-27": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-08-28": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 0, "Total": 5, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 5}, "2026-08-31": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-02": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-03": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-04": {"Agenda": 3, "Agenda Equipe": 0, "Prazo": 0, "Total": 3, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 3}, "2026-09-06": {"Agenda": 2, "Agenda Equipe": 0, "Prazo": 0, "Total": 2, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 2}, "2026-09-08": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-11": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-16": {"Agenda": 0, "Agenda Equipe": 0, "Prazo": 1, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-18": {"Agenda": 2, "Agenda Equipe": 0, "Prazo": 0, "Total": 2, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 2}, "2026-09-21": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-22": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-23": {"Agenda": 3, "Agenda Equipe": 0, "Prazo": 0, "Total": 3, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 3}, "2026-09-25": {"Agenda": 2, "Agenda Equipe": 0, "Prazo": 0, "Total": 2, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 2}, "2026-09-28": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-29": {"Agenda": 2, "Agenda Equipe": 0, "Prazo": 0, "Total": 2, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 2}, "2026-09-30": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-10-09": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-10-30": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-11-06": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}};
 function openTimelineDay(dateKey){
@@ -3958,6 +4030,88 @@ function renderTiposPrazo(){
   }).join('');
 }
 
+/* ===================== SEÇÃO JUSTIFICATIVAS =====================
+   Fonte: "Justificativas compiladas.xlsx" (acumulado desde 25/05/2026,
+   sem duplicatas). Semana calculada por número ISO (mesma convenção de
+   SEMANA_LABELS_MAP a partir de S20; S19 é uma semana esticada/especial
+   que não aparece aqui pois não há justificativa antes de 25/05). */
+const JUST_TOTAIS = {"total": 259, "aprovadas": 148, "pendentes": 111};
+const JUST_POR_SEMANA = {"2026-S22": {"total": 1, "aprovadas": 1, "pendentes": 0}, "2026-S25": {"total": 8, "aprovadas": 6, "pendentes": 2}, "2026-S26": {"total": 31, "aprovadas": 18, "pendentes": 13}, "2026-S27": {"total": 31, "aprovadas": 19, "pendentes": 12}, "2026-S28": {"total": 18, "aprovadas": 14, "pendentes": 4}, "2026-S29": {"total": 49, "aprovadas": 28, "pendentes": 21}, "2026-S30": {"total": 60, "aprovadas": 26, "pendentes": 34}, "2026-S31": {"total": 50, "aprovadas": 29, "pendentes": 21}, "2026-S32": {"total": 11, "aprovadas": 7, "pendentes": 4}};
+const JUST_POR_GESTOR = {"Nicolau Rafael Guimarães Coelho": {"total": 139, "aprovadas": 134, "pendentes": 5}, "Washington Soares": {"total": 76, "aprovadas": 0, "pendentes": 76}, "Keyla Moraes": {"total": 24, "aprovadas": 0, "pendentes": 24}, "Coordenação": {"total": 9, "aprovadas": 9, "pendentes": 0}, "Natália Biondi Gaggini Robles": {"total": 5, "aprovadas": 5, "pendentes": 0}, "Sem gestor": {"total": 4, "aprovadas": 0, "pendentes": 4}, "Natalia Gaggini": {"total": 1, "aprovadas": 0, "pendentes": 1}, "Rafael Camargo Felisbino": {"total": 1, "aprovadas": 0, "pendentes": 1}};
+function renderJustificativas(){
+  const kpiRow = document.getElementById('just-kpi-row');
+  const tbSemana = document.getElementById('tb-just-semana');
+  const tbGestor = document.getElementById('tb-just-gestor');
+  const totalSub = document.getElementById('just-total-sub');
+  if(!kpiRow || !tbSemana || !tbGestor) return;
+  const t = JUST_TOTAIS;
+  const pctAprov = t.total ? Math.round(t.aprovadas/t.total*100) : 0;
+  if(totalSub) totalSub.textContent = fmtNum(t.total) + ' registradas';
+  const cards = [
+    {lbl:'Total de Justificativas', val:fmtNum(t.total), sub:'desde 25/05/2026', col:'var(--pc-escuro)'},
+    {lbl:'Aprovadas', val:fmtNum(t.aprovadas), sub:pctAprov+'% do total', col:'#117A65'},
+    {lbl:'Pendentes', val:fmtNum(t.pendentes), sub:(100-pctAprov)+'% do total', col:'#E67E22'},
+    {lbl:'% Aprovação Geral', val:pctAprov+'%', sub:'do total acumulado', col:'var(--pc-azul)'},
+  ];
+  kpiRow.innerHTML = cards.map(c=>`<div class="kpi"><div class="klbl">${c.lbl}</div><div class="kval" style="color:${c.col}">${c.val}</div><div class="ksub">${c.sub}</div></div>`).join('');
+
+  const semanas = Object.keys(JUST_POR_SEMANA).sort();
+  const labelExtra = {'2026-S32':'S32<br><small style="color:var(--tx2)">03-09/08</small>'};
+  tbSemana.innerHTML = semanas.map(s=>{
+    const d = JUST_POR_SEMANA[s];
+    const pct = d.total ? Math.round(d.aprovadas/d.total*100) : 0;
+    return `<tr><td>${SEMANA_LABELS_MAP[s]||labelExtra[s]||s}</td><td class="c">${fmtNum(d.total)}</td><td class="c" style="color:#117A65">${fmtNum(d.aprovadas)}</td><td class="c" style="color:#E67E22">${fmtNum(d.pendentes)}</td><td class="c">${pct}%</td></tr>`;
+  }).join('');
+
+  const gestores = Object.entries(JUST_POR_GESTOR).sort((a,b)=>b[1].total-a[1].total);
+  tbGestor.innerHTML = gestores.map(([gestor,d])=>{
+    const pct = d.total ? Math.round(d.aprovadas/d.total*100) : 0;
+    return `<tr><td>${gestor}</td><td class="c">${fmtNum(d.total)}</td><td class="c" style="color:#117A65">${fmtNum(d.aprovadas)}</td><td class="c" style="color:#E67E22">${fmtNum(d.pendentes)}</td><td class="c">${pct}%</td></tr>`;
+  }).join('');
+}
+
+/* ===================== SEÇÃO AUDIÊNCIAS =====================
+   Fonte: "Compilado Audiências - 2026.xlsx" (Janeiro a Julho/2026,
+   2 duplicatas exatas — mesmo processo+data+horário — removidas). */
+const AUD_TOTAIS = {"total": 2642};
+const AUD_POR_MES = {"Abril.2026": {"total": 382, "presencial": 172, "telepresencial": 178, "semipresencial": 23}, "Fevereiro.2026": {"total": 343, "presencial": 136, "telepresencial": 178, "semipresencial": 21}, "Janeiro.2026": {"total": 156, "presencial": 59, "telepresencial": 91, "semipresencial": 5}, "Julho.2026": {"total": 397, "presencial": 143, "telepresencial": 224, "semipresencial": 23}, "Junho.2026": {"total": 397, "presencial": 165, "telepresencial": 194, "semipresencial": 34}, "Maio.2026": {"total": 427, "presencial": 154, "telepresencial": 228, "semipresencial": 30}, "Março.2026": {"total": 540, "presencial": 213, "telepresencial": 273, "semipresencial": 44}};
+const AUD_POR_EQUIPE = {"Grupo E2": 866, "Grupo E1": 527, "Grupo B1": 522, "Grupo B2": 210, "Grupo C": 138, "Grupo B3": 118, "Grupo D1": 79, "Grupo A2": 65, "Grupo A3": 21, "AAP": 8, "Correspondente - Hebert": 7, "Correspondente - Carlos Florian": 6, "MBF": 6, "ANB": 5, "JPE": 5, "CAL": 4, "DPR": 4, "JPL": 4, "JRM": 4, "PSI": 4, "ALF": 3, "GSM": 3, "Grupo B4": 3, "JRT": 3, "LMI": 3, "VSI": 3, "BSO": 2, "JJS": 2, "RRU": 2, "RYL": 2, "TFR": 2, "VCR": 2, "ARC": 1, "BCF": 1, "Correspondente - Ana Carolina": 1, "Correspondente - Bárbara": 1, "Correspondente - Erika Martins": 1, "Correspondente - doc9": 1, "Grupo A1": 1, "RCF": 1, "VRO": 1};
+const AUD_CATEGORIA = {"Audiência": 2432, "Sessão de Julgamento": 161, "Perícia": 46, "Outro": 3};
+const AUD_MODALIDADE = {"Telepresencial": 1366, "Presencial": 1042, "Semipresencial": 180, "Outro": 54};
+const AUD_MES_LABELS = {'Janeiro.2026':'Janeiro','Fevereiro.2026':'Fevereiro','Março.2026':'Março','Abril.2026':'Abril','Maio.2026':'Maio','Junho.2026':'Junho','Julho.2026':'Julho'};
+const AUD_MES_ORDEM = ['Janeiro.2026','Fevereiro.2026','Março.2026','Abril.2026','Maio.2026','Junho.2026','Julho.2026'];
+function renderAudiencias(){
+  const kpiRow = document.getElementById('aud-kpi-row');
+  const tbMes = document.getElementById('tb-aud-mes');
+  const tbEquipe = document.getElementById('tb-aud-equipe');
+  const totalSub = document.getElementById('aud-total-sub');
+  if(!kpiRow || !tbMes || !tbEquipe) return;
+  const t = AUD_TOTAIS.total;
+  const cat = AUD_CATEGORIA, mod = AUD_MODALIDADE;
+  if(totalSub) totalSub.textContent = fmtNum(t) + ' realizadas';
+  const pctMod = v => t ? Math.round((v||0)/t*100) : 0;
+  const cards = [
+    {lbl:'Total de Audiências', val:fmtNum(t), sub:'Jan a Jul/2026', col:'var(--pc-escuro)'},
+    {lbl:'Audiências', val:fmtNum(cat['Audiência']||0), sub:'inicial/instrução/una/conciliação', col:'var(--pc-azul)'},
+    {lbl:'Sessões de Julgamento', val:fmtNum(cat['Sessão de Julgamento']||0), sub:'TRT/TST/TJ', col:'#2980B9'},
+    {lbl:'Perícias', val:fmtNum(cat['Perícia']||0), sub:'', col:'#8E44AD'},
+    {lbl:'Telepresencial', val:fmtNum(mod['Telepresencial']||0), sub:pctMod(mod['Telepresencial'])+'% do total', col:'#117A65'},
+    {lbl:'Presencial', val:fmtNum(mod['Presencial']||0), sub:pctMod(mod['Presencial'])+'% do total', col:'#E67E22'},
+  ];
+  kpiRow.innerHTML = cards.map(c=>`<div class="kpi"><div class="klbl">${c.lbl}</div><div class="kval" style="color:${c.col}">${c.val}</div><div class="ksub">${c.sub}</div></div>`).join('');
+
+  tbMes.innerHTML = AUD_MES_ORDEM.filter(m=>AUD_POR_MES[m]).map(m=>{
+    const d = AUD_POR_MES[m];
+    return `<tr><td>${AUD_MES_LABELS[m]||m}</td><td class="c"><b>${fmtNum(d.total)}</b></td><td class="c">${fmtNum(d.presencial)}</td><td class="c">${fmtNum(d.telepresencial)}</td><td class="c">${fmtNum(d.semipresencial)}</td></tr>`;
+  }).join('');
+
+  const equipes = Object.entries(AUD_POR_EQUIPE).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]);
+  const top15 = equipes.slice(0,15);
+  const outros = equipes.slice(15).reduce((s,[,v])=>s+v,0);
+  tbEquipe.innerHTML = top15.map(([eq,tot])=>`<tr><td>${eq}</td><td class="c">${fmtNum(tot)}</td></tr>`).join('')
+    + (outros ? `<tr><td style="color:var(--tx2);font-style:italic">Outros (${equipes.length-15} equipes/siglas)</td><td class="c" style="color:var(--tx2)">${fmtNum(outros)}</td></tr>` : '');
+}
+
 const ACUMULADO_DATA={"semana": {"2026-S29": {"Prazo": 1100, "Agenda": 2869, "Agenda Equipe": 209, "Vencido": 0, "Fatal": 268, "D-1": 422, "D-2": 122, "Futuro": 288, "Total": 4178}, "2026-S19": {"Prazo": 1451, "Agenda": 4122, "Agenda Equipe": 246, "Vencido": 905, "Fatal": 1053, "D-1": 2174, "D-2": 487, "Futuro": 1200, "Total": 5819}, "2026-S20": {"Prazo": 1396, "Agenda": 3788, "Agenda Equipe": 179, "Total": 5363, "Vencido": 556, "Fatal": 892, "D-1": 2226, "D-2": 469, "Futuro": 1220}, "2026-S21": {"Prazo": 1390, "Agenda": 3814, "Agenda Equipe": 206, "Vencido": 488, "Fatal": 882, "D-1": 2239, "D-2": 575, "Futuro": 1226, "Total": 5410}, "2026-S26": {"Prazo": 1476, "Agenda": 4026, "Agenda Equipe": 224, "Vencido": 448, "Fatal": 1020, "D-1": 2336, "D-2": 518, "Futuro": 1404, "Total": 5726}, "2026-S27": {"Prazo": 1320, "Agenda": 3431, "Agenda Equipe": 252, "Vencido": 0, "Fatal": 227, "D-1": 511, "D-2": 125, "Futuro": 457, "Total": 5003}, "2026-S22": {"Prazo": 1277, "Agenda": 4043, "Agenda Equipe": 200, "Vencido": 0, "Fatal": 156, "D-1": 551, "D-2": 121, "Futuro": 540, "Total": 5611}, "2026-S23": {"Prazo": 1195, "Agenda": 4046, "Agenda Equipe": 218, "Vencido": 1, "Fatal": 161, "D-1": 498, "D-2": 133, "Futuro": 530, "Total": 5441}, "2026-S24": {"Prazo": 1277, "Agenda": 3451, "Agenda Equipe": 220, "Vencido": 3, "Fatal": 237, "D-1": 441, "D-2": 133, "Futuro": 463, "Total": 4951}, "2026-S25": {"Prazo": 1418, "Agenda": 3838, "Agenda Equipe": 195, "Vencido": 1, "Fatal": 240, "D-1": 558, "D-2": 259, "Futuro": 619, "Total": 5646}, "2026-S28": {"Prazo": 1080, "Agenda": 3270, "Agenda Equipe": 168, "Vencido": 1, "Fatal": 146, "D-1": 373, "D-2": 129, "Futuro": 431, "Total": 4518}, "2026-S30": {"Prazo": 1137, "Agenda": 3394, "Agenda Equipe": 261, "Vencido": 0, "Fatal": 228, "D-1": 436, "D-2": 94, "Futuro": 379, "Total": 4792}, "2026-S31": {"Prazo": 1173, "Agenda": 3009, "Agenda Equipe": 202, "Vencido": 0, "Fatal": 209, "D-1": 519, "D-2": 116, "Futuro": 329, "Total": 4384}}, "mes": {"2026-05": {"Prazo": 2847, "Agenda": 7910, "Agenda Equipe": 425, "Vencido": 1461, "Fatal": 1945, "D-1": 4400, "D-2": 956, "Futuro": 2420, "Total": 11182}, "2026-06": {"Prazo": 5493, "Agenda": 15824, "Agenda Equipe": 918, "Vencido": 337, "Fatal": 1840, "D-1": 4667, "D-2": 1220, "Futuro": 783, "Total": 22235}, "2026-07": {"Prazo": 5217, "Agenda": 14836, "Agenda Equipe": 983, "Vencido": 1, "Fatal": 965, "D-1": 2013, "D-2": 527, "Futuro": 1711, "Total": 21036}, "2026-08": {"Prazo": 12, "Agenda": 46, "Agenda Equipe": 7, "Vencido": 0, "Fatal": 4, "D-1": 0, "D-2": 3, "Futuro": 5, "Total": 65}}};
 function openAcumulado(tipo, key){
   const d=(ACUMULADO_DATA[tipo]||{})[key]; if(!d) return;
@@ -4181,6 +4335,8 @@ renderAgendaBloco('ag', AG_EQUIPE, AG_RESP);
 renderAgendaBloco('ageq', AGEQ_EQUIPE, AGEQ_RESP);
 renderHistoricoResp();
 renderTiposPrazo();
+renderJustificativas();
+renderAudiencias();
 
 // Inicializar filtro
 updateFilterButtons();
