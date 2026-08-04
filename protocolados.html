@@ -1433,7 +1433,7 @@ function _loToggleSenha(btn) {
       <span><div class="ldot" style="background:#C0392B"></div>Fora do horário</span>
     </div>
     <div style="padding:0 16px 12px;border-top:1px solid rgba(255,255,255,.06)">
-      <div style="font-size:10px;color:var(--tx2);font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:10px 0 8px">Fora de Horário por Grupo</div>
+      <div style="font-size:10px;color:var(--tx2);font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:10px 0 8px">Fora de Horário por Grupo <span style="text-transform:none;font-weight:400;letter-spacing:0">· acumulado 02/05 a 02/08/2026</span></div>
       <table><thead><tr><th>Grupo</th><th class="c">Fora Hr.</th><th class="c">Total</th><th class="c">%</th></tr></thead>
       <tbody id="tb-grpfora"></tbody></table>
     </div>
@@ -1442,7 +1442,7 @@ function _loToggleSenha(btn) {
 
 <div class="g2">
   <div class="pnl">
-    <div class="ptitle ore">🏢 Fatais & Vencidos por Grupo <span class="pcnt">% sobre total do grupo</span></div>
+    <div class="ptitle ore">🏢 Fatais & Vencidos por Grupo <span class="pcnt">% sobre total do grupo · acumulado 02/05 a 02/08/2026</span></div>
     <table>
       <thead><tr>
         <th>Grupo</th>
@@ -3412,7 +3412,7 @@ HR_DIST.forEach(([hr,cnt])=>{
   document.getElementById('hr-xlbl').appendChild(lbl);
 });
 
-const BY_GRUPO_FULL=[{"g": "Grupo E2", "total": 11018, "ven": 123, "fat": 4000, "d1": 3175, "d2": 833, "fut": 2887, "fora": 1202, "ff": 180}, {"g": "Grupo B1", "total": 7759, "ven": 71, "fat": 1825, "d1": 2703, "d2": 493, "fut": 2667, "fora": 1053, "ff": 84}, {"g": "Grupo E1", "total": 7443, "ven": 50, "fat": 1168, "d1": 2427, "d2": 658, "fut": 3140, "fora": 538, "ff": 36}, {"g": "Grupo B2", "total": 2750, "ven": 19, "fat": 650, "d1": 729, "d2": 296, "fut": 1056, "fora": 99, "ff": 17}, {"g": "Grupo C", "total": 2581, "ven": 3, "fat": 678, "d1": 744, "d2": 283, "fut": 873, "fora": 71, "ff": 18}, {"g": "Grupo B3", "total": 2411, "ven": 7, "fat": 339, "d1": 1195, "d2": 224, "fut": 646, "fora": 237, "ff": 8}, {"g": "Grupo D1", "total": 2033, "ven": 18, "fat": 206, "d1": 753, "d2": 271, "fut": 785, "fora": 95, "ff": 9}, {"g": "Grupo A3", "total": 429, "ven": 11, "fat": 121, "d1": 123, "d2": 30, "fut": 144, "fora": 44, "ff": 14}, {"g": "Grupo A2", "total": 140, "ven": 1, "fat": 31, "d1": 38, "d2": 18, "fut": 52, "fora": 4, "ff": 2}, {"g": "Grupo A1", "total": 13, "ven": 1, "fat": 5, "d1": 1, "d2": 3, "fut": 3, "fora": 0, "ff": 0}];
+const BY_GRUPO_FULL=[{"g": "Grupo E2", "total": 5228, "ven": 7, "fat": 1255, "d1": 2053, "d2": 519, "fut": 1394, "fora": 529, "ff": 45}, {"g": "Grupo B1", "total": 3656, "ven": 4, "fat": 514, "d1": 1490, "d2": 278, "fut": 1370, "fora": 596, "ff": 44}, {"g": "Grupo E1", "total": 3328, "ven": 1, "fat": 314, "d1": 1209, "d2": 286, "fut": 1518, "fora": 144, "ff": 8}, {"g": "Grupo C", "total": 1192, "ven": 0, "fat": 272, "d1": 397, "d2": 139, "fut": 384, "fora": 26, "ff": 5}, {"g": "Grupo B2", "total": 1181, "ven": 0, "fat": 126, "d1": 416, "d2": 147, "fut": 492, "fora": 56, "ff": 7}, {"g": "Grupo B3", "total": 1120, "ven": 0, "fat": 92, "d1": 601, "d2": 115, "fut": 312, "fora": 102, "ff": 4}, {"g": "Grupo D1", "total": 875, "ven": 0, "fat": 45, "d1": 327, "d2": 132, "fut": 371, "fora": 60, "ff": 5}, {"g": "Grupo A3", "total": 130, "ven": 2, "fat": 31, "d1": 36, "d2": 7, "fut": 54, "fora": 4, "ff": 1}, {"g": "Grupo A2", "total": 69, "ven": 0, "fat": 15, "d1": 23, "d2": 10, "fut": 21, "fora": 3, "ff": 2}, {"g": "Grupo A1", "total": 2, "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 2, "fora": 0, "ff": 0}];
 
 // Grupos fora horário — usa BY_GRUPO_FULL que tem fora correto (todos os tipos)
 BY_GRUPO_FULL.filter(v=>v.fora>0).sort((a,b)=>b.fora-a.fora).forEach(v=>{
