@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audiências | Peixoto &amp; Cury</title>
+<style>
+:root{--nv:#003B5C;--ne:#001E36;--nm:#006080;--ci:#00AEEF;--cz:#F4F7FA;--vd:#1E7A3E;--lr:#E67E22;--vm:#C0392B;--am:#F39C12;--tx:#1A2B3C;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--cz);color:var(--tx);}
+.main{max-width:1400px;margin:0 auto;padding:28px 40px;}
+.sec{display:block;margin-bottom:36px;padding-top:18px;}
+.sec:not(:first-child){border-top:2px solid #e3eaf0;}
+.stit{font-size:12px;font-weight:700;color:var(--nv);text-transform:uppercase;letter-spacing:1px;margin-bottom:18px;padding-bottom:9px;border-bottom:2px solid var(--ci);display:flex;align-items:center;gap:9px;}
+.stit i{width:4px;height:16px;background:var(--ci);border-radius:2px;display:inline-block;}
+.kpi-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:24px;}
+.kpi{background:#fff;border-radius:10px;padding:16px;border-top:4px solid var(--nv);box-shadow:0 2px 8px rgba(0,59,92,.08);}
+.kpi.vd{border-top-color:var(--vd);} .kpi.lr{border-top-color:var(--lr);} .kpi.vm{border-top-color:var(--vm);} .kpi.ci{border-top-color:var(--ci);} .kpi.am{border-top-color:var(--am);}
+.kv{font-size:24px;font-weight:800;color:var(--nv);line-height:1.15;}
+.kpi.vd .kv{color:var(--vd);} .kpi.lr .kv{color:var(--lr);} .kpi.vm .kv{color:var(--vm);} .kpi.ci .kv{color:var(--ci);} .kpi.am .kv{color:var(--am);}
+.kl{font-size:11px;color:#666;margin-top:5px;line-height:1.3;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px;}
+@media(max-width:900px){.g2{grid-template-columns:1fr;}}
+.card{background:#fff;border-radius:10px;padding:18px;box-shadow:0 2px 8px rgba(0,59,92,.08);}
+.ct{font-size:11px;font-weight:700;color:var(--nv);text-transform:uppercase;letter-spacing:.4px;margin-bottom:14px;padding-bottom:7px;border-bottom:1px solid #eee;display:flex;align-items:center;justify-content:space-between;gap:8px;}
+.ct span.tag{font-size:9.5px;color:#8aa;font-weight:400;text-transform:none;letter-spacing:0;}
+.tb{width:100%;border-collapse:collapse;font-size:12px;}
+.tb th{background:var(--nv);color:#fff;padding:9px 8px;text-align:left;font-size:10px;font-weight:600;position:sticky;top:0;}
+.tb th.cc{text-align:center;}
+.tb td{padding:9px 8px;border-bottom:1px solid #eef2f6;vertical-align:top;line-height:1.4;}
+.tb td.cc{text-align:center;}
+.tb tr:hover td{background:#f0f7fc;}
+.tbl-scroll{max-height:460px;overflow-y:auto;}
+.note{font-size:10.5px;color:#666;font-style:italic;line-height:1.6;background:#fff;border-radius:10px;padding:14px 18px;box-shadow:0 2px 8px rgba(0,59,92,.08);margin-top:8px;}
+.ft{text-align:center;font-size:10px;color:#aaa;padding:20px 40px;margin-top:6px;}
+</style>
+</head>
+<body>
+<div style="padding:10px 20px;font-size:11.5px;color:#607488;border-bottom:1px solid #e3eaf0;">⚖️ Audiências — Janeiro a Julho/2026</div>
+<div class="main">
+
+<div class="sec" id="sec-visao">
+<div class="stit"><i></i>Panorama do Período</div>
+<div class="kpi-g">
+<div class="kpi"><div class="kv">2.642</div><div class="kl">Total de Audiências<br>Jan a Jul/2026</div></div><div class="kpi ci"><div class="kv">2.432</div><div class="kl">Audiências<br>inicial/instrução/una/conciliação</div></div><div class="kpi"><div class="kv">161</div><div class="kl">Sessões de Julgamento<br>TRT/TST/TJ</div></div><div class="kpi lr"><div class="kv">46</div><div class="kl">Perícias</div></div><div class="kpi vd"><div class="kv">1.366</div><div class="kl">Telepresencial<br>52% do total</div></div><div class="kpi am"><div class="kv">1.042</div><div class="kl">Presencial<br>39% do total</div></div>
+</div>
+<div class="note">
+📋 <strong>Fonte: Compilado Audiências - 2026.xlsx</strong> — todas as audiências, sessões de julgamento e perícias agendadas de Janeiro a Julho/2026 (2 registros duplicados removidos).
+</div>
+</div>
+
+<div class="sec" id="sec-mes-equipe">
+<div class="stit"><i></i>Distribuição por Mês e por Equipe</div>
+<div class="g2">
+  <div class="card">
+    <div class="ct">📊 Audiências — por Mês</div>
+    <div class="tbl-scroll">
+    <table class="tb"><thead><tr><th>Mês</th><th class="cc">Total</th><th class="cc">Presencial</th><th class="cc">Telepresencial</th><th class="cc">Semipresencial</th></tr></thead>
+    <tbody><tr><td>Janeiro</td><td class="cc"><strong>156</strong></td><td class="cc">59</td><td class="cc">91</td><td class="cc">5</td></tr><tr><td>Fevereiro</td><td class="cc"><strong>343</strong></td><td class="cc">136</td><td class="cc">178</td><td class="cc">21</td></tr><tr><td>Março</td><td class="cc"><strong>540</strong></td><td class="cc">213</td><td class="cc">273</td><td class="cc">44</td></tr><tr><td>Abril</td><td class="cc"><strong>382</strong></td><td class="cc">172</td><td class="cc">178</td><td class="cc">23</td></tr><tr><td>Maio</td><td class="cc"><strong>427</strong></td><td class="cc">154</td><td class="cc">228</td><td class="cc">30</td></tr><tr><td>Junho</td><td class="cc"><strong>397</strong></td><td class="cc">165</td><td class="cc">194</td><td class="cc">34</td></tr><tr><td>Julho</td><td class="cc"><strong>397</strong></td><td class="cc">143</td><td class="cc">224</td><td class="cc">23</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ct">🏆 Audiências — por Equipe</div>
+    <div class="tbl-scroll">
+    <table class="tb"><thead><tr><th>Equipe</th><th class="cc">Total</th></tr></thead>
+    <tbody><tr><td>Grupo E2</td><td class="cc">866</td></tr><tr><td>Grupo E1</td><td class="cc">527</td></tr><tr><td>Grupo B1</td><td class="cc">522</td></tr><tr><td>Grupo B2</td><td class="cc">210</td></tr><tr><td>Grupo C</td><td class="cc">138</td></tr><tr><td>Grupo B3</td><td class="cc">121</td></tr><tr><td>Grupo D1</td><td class="cc">79</td></tr><tr><td>Grupo A2</td><td class="cc">65</td></tr><tr><td>Grupo A3</td><td class="cc">21</td></tr><tr><td>AAP</td><td class="cc">8</td></tr><tr><td>Correspondente - Hebert</td><td class="cc">7</td></tr><tr><td>MBF</td><td class="cc">6</td></tr><tr><td>Correspondente - Carlos Florian</td><td class="cc">6</td></tr><tr><td>JPE</td><td class="cc">5</td></tr><tr><td>ANB</td><td class="cc">5</td></tr><tr><td>DPR</td><td class="cc">4</td></tr><tr><td>CAL</td><td class="cc">4</td></tr><tr><td>JPL</td><td class="cc">4</td></tr><tr><td>PSI</td><td class="cc">4</td></tr><tr><td>JRM</td><td class="cc">4</td></tr><tr><td>JRT</td><td class="cc">3</td></tr><tr><td>VSI</td><td class="cc">3</td></tr><tr><td>LMI</td><td class="cc">3</td></tr><tr><td>ALF</td><td class="cc">3</td></tr><tr><td>GSM</td><td class="cc">3</td></tr><tr><td>RYL</td><td class="cc">2</td></tr><tr><td>VCR</td><td class="cc">2</td></tr><tr><td>RRU</td><td class="cc">2</td></tr><tr><td>BSO</td><td class="cc">2</td></tr><tr><td>JJS</td><td class="cc">2</td></tr><tr><td>TFR</td><td class="cc">2</td></tr><tr><td>Grupo A1</td><td class="cc">1</td></tr><tr><td>ARC</td><td class="cc">1</td></tr><tr><td>RCF</td><td class="cc">1</td></tr><tr><td>BCF</td><td class="cc">1</td></tr><tr><td>Correspondente - Ana Carolina</td><td class="cc">1</td></tr><tr><td>Correspondente - doc9</td><td class="cc">1</td></tr><tr><td>VRO</td><td class="cc">1</td></tr><tr><td>Correspondente - Erika Martins</td><td class="cc">1</td></tr><tr><td>Correspondente - Bárbara</td><td class="cc">1</td></tr></tbody></table>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="sec" id="sec-grupo-profissional">
+<div class="stit"><i></i>Distribuição por Grupo e por Profissional</div>
+<div class="g2">
+  <div class="card">
+    <div class="ct">👥 Audiências — por Grupo</div>
+    <div class="tbl-scroll">
+    <table class="tb"><thead><tr><th>Grupo</th><th class="cc">Total</th><th class="cc">% do total</th></tr></thead>
+    <tbody><tr><td>Grupo E2</td><td class="cc"><strong>855</strong></td><td class="cc">32.4%</td></tr><tr><td>Grupo E1</td><td class="cc"><strong>480</strong></td><td class="cc">18.2%</td></tr><tr><td>Grupo B1</td><td class="cc"><strong>460</strong></td><td class="cc">17.4%</td></tr><tr><td>Correspondentes</td><td class="cc"><strong>288</strong></td><td class="cc">10.9%</td></tr><tr><td>Grupo B2</td><td class="cc"><strong>244</strong></td><td class="cc">9.2%</td></tr><tr><td>Grupo B3</td><td class="cc"><strong>81</strong></td><td class="cc">3.1%</td></tr><tr><td>Grupo A3</td><td class="cc"><strong>79</strong></td><td class="cc">3.0%</td></tr><tr><td>Grupo C</td><td class="cc"><strong>62</strong></td><td class="cc">2.3%</td></tr><tr><td>Grupo A2</td><td class="cc"><strong>59</strong></td><td class="cc">2.2%</td></tr><tr><td>Grupo D1</td><td class="cc"><strong>33</strong></td><td class="cc">1.2%</td></tr><tr><td>Sem Grupo</td><td class="cc"><strong>1</strong></td><td class="cc">0.0%</td></tr></tbody></table>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ct">🧑‍⚖️ Audiências — por Profissional</div>
+    <div class="tbl-scroll">
+    <table class="tb"><thead><tr><th></th><th>Profissional</th><th class="cc">Total</th><th class="cc">% do total</th></tr></thead>
+    <tbody><tr><td class="cc" style="color:#888">1</td><td>Mariana Borges de Menezes Fávaro</td><td class="cc"><strong>288</strong></td><td class="cc">10.9%</td></tr><tr><td class="cc" style="color:#888">2</td><td>Juliana Perucci</td><td class="cc"><strong>169</strong></td><td class="cc">6.4%</td></tr><tr><td class="cc" style="color:#888">3</td><td>Correspondente - Carlos Florian</td><td class="cc"><strong>107</strong></td><td class="cc">4.0%</td></tr><tr><td class="cc" style="color:#888">4</td><td>Jackeline Romeu Torres</td><td class="cc"><strong>94</strong></td><td class="cc">3.6%</td></tr><tr><td class="cc" style="color:#888">5</td><td>Richard Ruan Leo da Silva</td><td class="cc"><strong>91</strong></td><td class="cc">3.4%</td></tr><tr><td class="cc" style="color:#888">6</td><td>Vanessa de Cassia Castrequini Rosa</td><td class="cc"><strong>89</strong></td><td class="cc">3.4%</td></tr><tr><td class="cc" style="color:#888">7</td><td>Guilherme Silva Morimoto</td><td class="cc"><strong>88</strong></td><td class="cc">3.3%</td></tr><tr><td class="cc" style="color:#888">8</td><td>Camila Alves Magalhães de Paula</td><td class="cc"><strong>86</strong></td><td class="cc">3.3%</td></tr><tr><td class="cc" style="color:#888">9</td><td>Anna Carolina Balbino Gatti Baani</td><td class="cc"><strong>86</strong></td><td class="cc">3.3%</td></tr><tr><td class="cc" style="color:#888">10</td><td>Rafael Yepez do Lago</td><td class="cc"><strong>81</strong></td><td class="cc">3.1%</td></tr><tr><td class="cc" style="color:#888">11</td><td>Correspondente - Hebert</td><td class="cc"><strong>77</strong></td><td class="cc">2.9%</td></tr><tr><td class="cc" style="color:#888">12</td><td>Paloma da Silva Santos</td><td class="cc"><strong>75</strong></td><td class="cc">2.8%</td></tr><tr><td class="cc" style="color:#888">13</td><td>Letícia Meneghini Fontes</td><td class="cc"><strong>74</strong></td><td class="cc">2.8%</td></tr><tr><td class="cc" style="color:#888">14</td><td>Rafael Rocha Ferreira</td><td class="cc"><strong>73</strong></td><td class="cc">2.8%</td></tr><tr><td class="cc" style="color:#888">15</td><td>Júlia Priego Lopes da Silva</td><td class="cc"><strong>71</strong></td><td class="cc">2.7%</td></tr><tr><td class="cc" style="color:#888">16</td><td>Daniela Prandi Pedro Ricca</td><td class="cc"><strong>70</strong></td><td class="cc">2.6%</td></tr><tr><td class="cc" style="color:#888">17</td><td>Vinicius da Silva Cerqueira</td><td class="cc"><strong>63</strong></td><td class="cc">2.4%</td></tr><tr><td class="cc" style="color:#888">18</td><td>André Alessandro de Paula</td><td class="cc"><strong>59</strong></td><td class="cc">2.2%</td></tr><tr><td class="cc" style="color:#888">19</td><td>Bruna Cembranelli Fazenda</td><td class="cc"><strong>59</strong></td><td class="cc">2.2%</td></tr><tr><td class="cc" style="color:#888">20</td><td>Thiago Frid Figueiredo Rossi</td><td class="cc"><strong>58</strong></td><td class="cc">2.2%</td></tr><tr><td class="cc" style="color:#888">21</td><td>Aline Ferreira Miron</td><td class="cc"><strong>56</strong></td><td class="cc">2.1%</td></tr><tr><td class="cc" style="color:#888">22</td><td>Vinícius Ronchi Arruda</td><td class="cc"><strong>55</strong></td><td class="cc">2.1%</td></tr><tr><td class="cc" style="color:#888">23</td><td>Natália Biondi Gaggini Robles</td><td class="cc"><strong>54</strong></td><td class="cc">2.0%</td></tr><tr><td class="cc" style="color:#888">24</td><td>Joice Ramos Miranda</td><td class="cc"><strong>52</strong></td><td class="cc">2.0%</td></tr><tr><td class="cc" style="color:#888">25</td><td>Correspondente - Doc9</td><td class="cc"><strong>48</strong></td><td class="cc">1.8%</td></tr><tr><td class="cc" style="color:#888">26</td><td>Arthur Rodrigues Rios Toledo de Castro</td><td class="cc"><strong>47</strong></td><td class="cc">1.8%</td></tr><tr><td class="cc" style="color:#888">27</td><td>Erik Mota Coppi</td><td class="cc"><strong>47</strong></td><td class="cc">1.8%</td></tr><tr><td class="cc" style="color:#888">28</td><td>Jenifer de Jesus Silva</td><td class="cc"><strong>45</strong></td><td class="cc">1.7%</td></tr><tr><td class="cc" style="color:#888">29</td><td>Rafael Camargo Felisbino</td><td class="cc"><strong>39</strong></td><td class="cc">1.5%</td></tr><tr><td class="cc" style="color:#888">30</td><td>Bianca Sayuri Matsunaga</td><td class="cc"><strong>38</strong></td><td class="cc">1.4%</td></tr><tr><td class="cc" style="color:#888">31</td><td>Fabiana Correia dos Anjos Gomes</td><td class="cc"><strong>29</strong></td><td class="cc">1.1%</td></tr><tr><td class="cc" style="color:#888">32</td><td>Sergio Cricca Filho</td><td class="cc"><strong>26</strong></td><td class="cc">1.0%</td></tr><tr><td class="cc" style="color:#888">33</td><td>Tamires Lins Costa</td><td class="cc"><strong>23</strong></td><td class="cc">0.9%</td></tr><tr><td class="cc" style="color:#888">34</td><td>Getúlio Bernardo Flora da Silva</td><td class="cc"><strong>21</strong></td><td class="cc">0.8%</td></tr><tr><td class="cc" style="color:#888">35</td><td>Beatriz Santiago de Souza</td><td class="cc"><strong>19</strong></td><td class="cc">0.7%</td></tr><tr><td class="cc" style="color:#888">36</td><td>Correspondente - Zalaf</td><td class="cc"><strong>18</strong></td><td class="cc">0.7%</td></tr><tr><td class="cc" style="color:#888">37</td><td>Jessica Cerqueira Silva</td><td class="cc"><strong>18</strong></td><td class="cc">0.7%</td></tr><tr><td class="cc" style="color:#888">38</td><td>João Paulo Mortari Neves</td><td class="cc"><strong>18</strong></td><td class="cc">0.7%</td></tr><tr><td class="cc" style="color:#888">39</td><td>Keyla Maria Barbosa Silva Moraes</td><td class="cc"><strong>14</strong></td><td class="cc">0.5%</td></tr><tr><td class="cc" style="color:#888">40</td><td>Bianca Bolanhi Camacho</td><td class="cc"><strong>14</strong></td><td class="cc">0.5%</td></tr><tr><td class="cc" style="color:#888">41</td><td>Poliana Banqueri da Silva Guimarães</td><td class="cc"><strong>14</strong></td><td class="cc">0.5%</td></tr><tr><td class="cc" style="color:#888">42</td><td>Correspondente</td><td class="cc"><strong>13</strong></td><td class="cc">0.5%</td></tr><tr><td class="cc" style="color:#888">43</td><td>Correspondente - Camila Cruz</td><td class="cc"><strong>13</strong></td><td class="cc">0.5%</td></tr><tr><td class="cc" style="color:#888">44</td><td>Gabriela Pereira Sousa</td><td class="cc"><strong>11</strong></td><td class="cc">0.4%</td></tr><tr><td class="cc" style="color:#888">45</td><td>Nicolau Rafael Guimarães Coelho</td><td class="cc"><strong>11</strong></td><td class="cc">0.4%</td></tr><tr><td class="cc" style="color:#888">46</td><td>Correspondente - Jaeger</td><td class="cc"><strong>10</strong></td><td class="cc">0.4%</td></tr><tr><td class="cc" style="color:#888">47</td><td>Correspondente - Ana Carolina</td><td class="cc"><strong>10</strong></td><td class="cc">0.4%</td></tr><tr><td class="cc" style="color:#888">48</td><td>Natalia Bezerra Baliero</td><td class="cc"><strong>7</strong></td><td class="cc">0.3%</td></tr><tr><td class="cc" style="color:#888">49</td><td>Gisela da Silva Freire</td><td class="cc"><strong>2</strong></td><td class="cc">0.1%</td></tr><tr><td class="cc" style="color:#888">50</td><td>Correspondente - Luis</td><td class="cc"><strong>2</strong></td><td class="cc">0.1%</td></tr><tr><td class="cc" style="color:#888">51</td><td>Amanda Pereira Reis de Paula Cardoso</td><td class="cc"><strong>2</strong></td><td class="cc">0.1%</td></tr><tr><td class="cc" style="color:#888">52</td><td>Correspondente - Bárbara</td><td class="cc"><strong>2</strong></td><td class="cc">0.1%</td></tr><tr><td class="cc" style="color:#888">53</td><td>Nathalie Louise dos Santos Rodrigues Dias</td><td class="cc"><strong>2</strong></td><td class="cc">0.1%</td></tr><tr><td class="cc" style="color:#888">54</td><td>Antonio Carlos Aguiar</td><td class="cc"><strong>1</strong></td><td class="cc">0.0%</td></tr><tr><td class="cc" style="color:#888">55</td><td>Marcel Tadeu Matos Alves da Silva</td><td class="cc"><strong>1</strong></td><td class="cc">0.0%</td></tr><tr><td class="cc" style="color:#888">56</td><td>Correspondente - José Claudio Brito</td><td class="cc"><strong>1</strong></td><td class="cc">0.0%</td></tr><tr><td class="cc" style="color:#888">57</td><td>Tamara Silva Marcílio</td><td class="cc"><strong>1</strong></td><td class="cc">0.0%</td></tr></tbody></table>
+    </div>
+  </div>
+</div>
+<div class="note">
+📌 <strong>Metodologia:</strong> o Grupo de cada audiência é derivado do profissional indicado em "Advogado Responsável Audiência/SO", cruzado com o cadastro de profissionais (Grupo/Subequipe). Correspondentes externos (sem código no cadastro) são agrupados em "Correspondentes". A coluna "Equipe responsável" da própria planilha é usada apenas como reserva quando o profissional não é encontrado no cadastro.
+1 registro ficou sem grupo identificável (nem no cadastro, nem na coluna Equipe responsável) e foi marcado como "Sem Grupo".
+</div>
+</div>
+
+</div>
+<div class="ft">Peixoto &amp; Cury Advogados · Controladoria · Dashboard gerado a partir de "Compilado Audiências - 2026.xlsx" · Janeiro a Julho/2026</div>
+</body>
+</html>
