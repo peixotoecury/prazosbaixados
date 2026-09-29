@@ -84,7 +84,8 @@ function renderTabs(){
 function selectTab(id){
   const tab = TABS.find(t => t.id === id);
   if (!tab) return;
-  document.getElementById('tabframe').src = tab.src;
+  // ?v= evita que o navegador mostre versão antiga da aba (GitHub Pages guarda cache por 10 min)
+  document.getElementById('tabframe').src = tab.src + '?v=' + Date.now();
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.id === id));
 }
 
