@@ -172,6 +172,28 @@ def _tabela_grupo_sigla(contagem, cor, NOM=None, extra=None, tot_grupo=None):
     return h + "</table>"
 
 
+def _secao_abertos(NOM):
+    """Prazos em aberto no LM cujo dia fatal (dia útil seguinte à agenda) já passou, na hora do envio."""
+    import collections, numpy as np
+    try:
+        from _fonte_lm import pendentes
+        hoje = dt.date.today()
+        fer = ["2026-11-02", "2026-11-20", "2026-12-25", "2027-01-01"]
+        lin = [r for r in pendentes(hoje) if str(r[2] or "").strip().upper() not in ("PRAZO", "")
+               and str(r[5] or "").strip().upper() != "PRAZO" and np.busday_count(r[3], hoje, holidays=fer) > 1]
+    except Exception as e:
+        log(f"e-mail: prazos em aberto não consultados ({e})")
+        return ""
+    cont = collections.Counter((str(r[1] or "Sem grupo").strip(), str(r[2]).strip().upper()) for r in lin)
+    return (_secao_titulo(f"Em aberto e já vencidos · {len(lin)}", f"prazos ainda não baixados no LM cujo dia fatal já passou (posição de {dt.datetime.now():%d/%m às %Hh%M})")
+            + _tabela_grupo_sigla(cont, "#8E1B10", NOM))
+
+
+def _secao_titulo(titulo, sub):
+    return (f'<div style="font-family:Segoe UI,Arial;margin-top:6px"><div style="font-size:15px;font-weight:700;color:{NAVY};border-left:4px solid {CIANO};padding-left:8px">{titulo}</div>'
+            f'<div style="font-size:11px;color:{CINZA};padding-left:12px;margin-bottom:6px">{sub}</div></div>')
+
+
 def montar_email(ini, fim):
     import collections
     t = (AQUI / "protocolados.html").read_text(encoding="utf-8")
@@ -184,7 +206,7 @@ def montar_email(ini, fim):
     NOM = _nomes(t)
     # quem mais protocolou no fatal: as 20 pessoas com mais fatais na semana, agrupadas pelo grupo
     fat_all = {(r["grp"], r["n"]): r["fat"] for r in resp if r.get("fat") and r["n"] != "PRAZO"}
-    top = dict(sorted(fat_all.items(), key=lambda kv: -kv[1])[:20])
+    top = dict(sorted(fat_all.items(), key=lambda kv: -kv[1]))  # todos os que protocolaram no fatal
     fat_top = collections.Counter(top)
     tot_p = {(r["grp"], r["n"]): r["tot"] for r in resp}
     pct = {k: f"{100 * v / tot_p[k]:.0f}% dos prazos da semana".replace(".", ",") for k, v in top.items() if tot_p.get(k)}
@@ -223,9 +245,10 @@ def montar_email(ini, fim):
              + cards
              + secao(f"Vencidos · {n_ven}", "prazos baixados depois do dia fatal, por grupo e profissional")
              + _tabela_grupo_sigla(ven, "#C0392B", NOM)
+             + _secao_abertos(NOM)
              + secao(f"Fatais fora do horário · {n_ff}", "prazos baixados no dia fatal antes das 9h ou a partir das 19h, por grupo e profissional")
              + _tabela_grupo_sigla(ffc, "#E74C3C", NOM)
-             + secao(f"Quem mais protocolou no fatal · {sum(fat_top.values())} de {kp.get('Fatais', '')}", "as 20 pessoas com mais prazos baixados no dia fatal, por grupo e profissional")
+             + secao(f"Quem protocolou no fatal · {sum(fat_top.values())}", "todos os prazos baixados no dia fatal na semana, por grupo e profissional (do maior para o menor)")
              + _tabela_grupo_sigla(fat_top, "#E67E22", NOM, pct, {g: v["fat"] for g, v in _json_const(t, "BY_GRUPO").items()})
              + secao("Casos de fatal fora do horário", "a hora aparece só cheia, porque o LM grava os minutos com erro")
              + f'<table cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-size:11.5px;width:620px;margin:4px 0 18px"><tr><th {th2}>Dia</th><th {th2}>Hora</th><th {th2}>Profissional</th><th {th2}>Grupo</th><th {th2}>Processo</th></tr>{casos}</table>'
