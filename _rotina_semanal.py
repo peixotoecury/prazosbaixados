@@ -83,26 +83,7 @@ def email(ini, fim):
     para = cfg.get("email_para") or []
     if not para:
         log("e-mail: sem destinatários em _rotina_config.json, não enviado"); return
-    t = (AQUI / "protocolados.html").read_text(encoding="utf-8")
-    m = re.search(r"const FAT_FORA\s*=\s*(\[.*?\]);", t, re.S)
-    ff = json.loads(m.group(1)) if m else []
-    kp = {k: v for k, v in re.findall(r'<div class="klbl">([^<]+)</div><div class="kval[^"]*"[^>]*>([^<]+)</div>', t) if "${" not in k + v}  # só os cards fixos, não o código da página
-    # o LM grava a hora com o mês no lugar dos minutos (ex.: 19:11:44 em novembro), então só a hora cheia é confiável
-    linhas = "".join(f"<tr><td>{x['dt']}</td><td>{x['hora_real'][:2]}h</td><td>{x['resp']}</td><td>{x['grp']}</td><td>{x['proc']}</td></tr>" for x in ff)
-    import collections
-    pg = collections.Counter(x["grp"] for x in ff)
-    ps = collections.Counter((x["grp"], x["resp"]) for x in ff)
-    resumo = "".join(f"<tr><td>{g}</td><td>{sg}</td><td style='text-align:center'><b>{n}</b></td></tr>"
-                     for (g, sg), n in sorted(ps.items(), key=lambda kv: (-pg[kv[0][0]], kv[0][0], -kv[1], kv[0][1])))
-    por_grupo = "".join(f"<tr><td>{g}</td><td style='text-align:center'><b>{n}</b></td></tr>" for g, n in pg.most_common())
-    estilo = "border='1' cellpadding='4' style='border-collapse:collapse;font-size:12px;margin-bottom:14px'"
-    corpo = (f"<p>Prazos baixados de {ini:%d/%m} a {fim:%d/%m/%Y}:</p><ul>"
-             + "".join(f"<li>{k}: <b>{v}</b></li>" for k, v in kp.items())
-             + f"</ul><p><b>Fatais fora do horário (antes das 9h ou a partir das 19h): {len(ff)}</b></p>"
-             + f"<p>Por grupo:</p><table {estilo}><tr><th>Grupo</th><th>Quantidade</th></tr>{por_grupo}</table>"
-             + f"<p>Por grupo e sigla:</p><table {estilo}><tr><th>Grupo</th><th>Sigla</th><th>Quantidade</th></tr>{resumo}</table>"
-             + f"<p>Casos:</p><table {estilo}><tr><th>Dia</th><th>Hora</th><th>Responsável</th><th>Grupo</th><th>Processo</th></tr>{linhas}</table>"
-             + "<p>Painel completo: https://peixotoecury.github.io/prazosbaixados/</p>")
+    assunto, corpo = montar_email(ini, fim)
     import win32com.client
     ol = win32com.client.Dispatch("Outlook.Application")
     mail = ol.CreateItem(0)
@@ -111,10 +92,103 @@ def email(ini, fim):
         eu = (u.GetExchangeUser().PrimarySmtpAddress if u.GetExchangeUser() else u.Address)
         para = [eu if x == "eu" else x for x in para]
     mail.To = "; ".join(para)
-    mail.Subject = f"Prazos baixados {ini:%d/%m} a {fim:%d/%m}: {len(ff)} fatais fora do horário"
+    mail.Subject = assunto
     mail.HTMLBody = corpo
     mail.Send()
     log(f"e-mail enviado para {', '.join(para)}")
+
+
+# ---------------------------------------------------------------- e-mail visual (tabelas e estilos inline, para o Outlook)
+NAVY, CIANO, CINZA, LINHA = "#003B5C", "#00A9E0", "#5F6B7A", "#E3E8EE"
+
+
+def _json_const(t, nome):
+    m = re.search(r"const " + nome + r"\s*=\s*", t)
+    i = m.end(); dep = 0; instr = False
+    for j in range(i, len(t)):
+        ch = t[j]
+        if ch == '"' and t[j - 1] != chr(92): instr = not instr
+        if instr: continue
+        if ch in "{[": dep += 1
+        elif ch in "}]":
+            dep -= 1
+            if dep == 0: return json.loads(t[i:j + 1])
+
+
+def _tabela_grupo_sigla(contagem, cor):
+    """Uma tabela só: Grupo (mesclado, com o total do grupo) | Sigla | barra | Qtde."""
+    import collections
+    pg = collections.Counter()
+    for (g, _), n in contagem.items(): pg[g] += n
+    if not pg:
+        return f'<p style="font-family:Segoe UI,Arial;font-size:13px;color:{CINZA};margin:4px 0 18px">Nenhum caso na semana.</p>'
+    mx = max(contagem.values())
+    th = f'style="background:{NAVY};color:#ffffff;font-size:11px;text-transform:uppercase;letter-spacing:.5px;padding:7px 10px;text-align:left"'
+    h = (f'<table cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-family:Segoe UI,Arial;font-size:13px;width:520px;margin:4px 0 22px">'
+         f'<tr><th {th}>Grupo</th><th {th}>Sigla</th><th {th} colspan="2">Qtde</th></tr>')
+    for g, tot in pg.most_common():
+        itens = sorted(((sg, n) for (gg, sg), n in contagem.items() if gg == g), key=lambda x: (-x[1], x[0]))
+        for k, (sg, n) in enumerate(itens):
+            borda = f"border-top:2px solid {NAVY};" if k == 0 else f"border-top:1px solid {LINHA};"
+            cel_g = (f'<td rowspan="{len(itens)}" style="{borda}padding:7px 10px;vertical-align:top;background:#F4F7FA;width:120px">'
+                     f'<b style="color:{NAVY}">{g}</b><br><span style="font-size:11px;color:{CINZA}">{tot} no grupo</span></td>') if k == 0 else ""
+            barra = max(4, round(150 * n / mx))
+            rot = f'{sg}<br><span style="font-size:10px;color:{CINZA};font-weight:400">conta genérica</span>' if sg == "PRAZO" else sg
+            h += (f'<tr>{cel_g}<td style="{borda}padding:6px 10px;font-weight:600;width:90px">{rot}</td>'
+                  f'<td style="{borda}padding:6px 4px 6px 10px;width:160px"><table cellpadding="0" cellspacing="0"><tr>'
+                  f'<td style="background:{cor};height:10px;width:{barra}px;font-size:1px;line-height:1px">&nbsp;</td></tr></table></td>'
+                  f'<td style="{borda}padding:6px 10px;text-align:right;font-weight:700;color:{cor};width:40px">{n}</td></tr>')
+    return h + "</table>"
+
+
+def montar_email(ini, fim):
+    import collections
+    t = (AQUI / "protocolados.html").read_text(encoding="utf-8")
+    resp = _json_const(t, "RESP")
+    ff = _json_const(t, "FAT_FORA") or []
+    kp = {k: v for k, v in re.findall(r'<div class="klbl">([^<]+)</div><div class="kval[^"]*"[^>]*>([^<]+)</div>', t) if "${" not in k + v}
+    ven = collections.Counter({(r["grp"], r["n"]): r["ven"] for r in resp if r.get("ven")})
+    ffc = collections.Counter((x["grp"], x["resp"]) for x in ff)
+    n_ven, n_ff = sum(ven.values()), len(ff)
+
+    def tile(rot, val, cor, sub=""):
+        return (f'<td style="padding:4px"><table cellpadding="0" cellspacing="0" style="width:160px;border-collapse:collapse"><tr>'
+                f'<td style="border-top:4px solid {cor};background:#F4F7FA;padding:10px 12px;font-family:Segoe UI,Arial">'
+                f'<div style="font-size:10px;color:{CINZA};text-transform:uppercase;letter-spacing:.6px">{rot}</div>'
+                f'<div style="font-size:24px;font-weight:700;color:{cor};line-height:1.2">{val}</div>'
+                f'<div style="font-size:10px;color:{CINZA}">{sub}</div></td></tr></table></td>')
+    cards = ('<table cellpadding="0" cellspacing="0" style="margin:10px 0 18px"><tr>'
+             + tile("Vencidos", kp.get("Vencidos", n_ven), "#C0392B", "baixados depois do fatal")
+             + tile("Fatal fora do horário", n_ff, "#E74C3C", "antes 9h ou após 19h")
+             + tile("Fatais", kp.get("Fatais", "-"), "#E67E22", "baixados no dia fatal")
+             + "</tr><tr>"
+             + tile("Total baixado", kp.get("Total Baixado", "-"), NAVY, "prazos realizados")
+             + tile("D-1 (no dia)", kp.get("D-1 (no dia)", "-"), "#B8860B", "cumpridos no prazo")
+             + tile("Antecipados", kp.get("Antecipados", "-"), "#1E7A3E", "antes do prazo")
+             + "</tr></table>")
+
+    def secao(titulo, sub):
+        return (f'<div style="font-family:Segoe UI,Arial;margin-top:6px"><div style="font-size:15px;font-weight:700;color:{NAVY};border-left:4px solid {CIANO};padding-left:8px">{titulo}</div>'
+                f'<div style="font-size:11px;color:{CINZA};padding-left:12px;margin-bottom:6px">{sub}</div></div>')
+
+    td = f'style="padding:4px 8px;border-top:1px solid {LINHA}"'
+    casos = "".join(f'<tr><td {td}>{x["dt"]}</td><td {td}>{x["hora_real"][:2]}h</td><td {td}><b>{x["resp"]}</b></td><td {td}>{x["grp"]}</td><td {td}>{x["proc"]}</td></tr>' for x in ff)
+    th2 = f'style="text-align:left;padding:5px 8px;font-size:10px;color:{CINZA};text-transform:uppercase;border-bottom:2px solid {NAVY}"'
+    corpo = (f'<div style="font-family:Segoe UI,Arial;color:#1A2130;max-width:700px">'
+             f'<div style="background:{NAVY};color:#ffffff;padding:14px 18px"><div style="font-size:11px;color:#9FD18F;letter-spacing:1.5px;text-transform:uppercase">Controladoria · Área Trabalhista</div>'
+             f'<div style="font-size:19px;font-weight:700">Prazos baixados de {ini:%d/%m} a {fim:%d/%m/%Y}</div></div>'
+             + cards
+             + secao(f"Vencidos · {n_ven}", "prazos baixados depois do dia fatal, por grupo e sigla")
+             + _tabela_grupo_sigla(ven, "#C0392B")
+             + secao(f"Fatais fora do horário · {n_ff}", "prazos baixados no dia fatal antes das 9h ou a partir das 19h, por grupo e sigla")
+             + _tabela_grupo_sigla(ffc, "#E74C3C")
+             + secao("Casos de fatal fora do horário", "a hora aparece só cheia, porque o LM grava os minutos com erro")
+             + f'<table cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-size:11.5px;width:620px;margin:4px 0 18px"><tr><th {th2}>Dia</th><th {th2}>Hora</th><th {th2}>Sigla</th><th {th2}>Grupo</th><th {th2}>Processo</th></tr>{casos}</table>'
+             + f'<div style="font-size:12px;margin:10px 0">Painel completo: <a href="https://peixotoecury.github.io/prazosbaixados/" style="color:{CIANO}">peixotoecury.github.io/prazosbaixados</a></div>'
+             + f'<div style="font-size:10px;color:{CINZA};border-top:1px solid {LINHA};padding-top:6px">Enviado automaticamente pela rotina semanal da Controladoria. Peixoto &amp; Cury Advogados.</div></div>')
+    assunto = f"Prazos baixados {ini:%d/%m} a {fim:%d/%m}: {n_ven} vencidos e {n_ff} fatais fora do horário"
+    (AQUI / "_previa_email.html").write_text(corpo, encoding="utf-8")
+    return assunto, corpo
 
 
 if __name__ == "__main__":
