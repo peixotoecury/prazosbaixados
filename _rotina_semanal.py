@@ -93,6 +93,10 @@ def email(ini, fim):
         para = [eu if x == "eu" else x for x in para]
     mail.To = "; ".join(para)
     mail.Subject = assunto
+    logo = AQUI.parent / "BAND" / "Bases" / "logo_pc_branca.png"
+    if logo.exists():  # logo embutido no corpo (cid), o Outlook não mostra imagem em data URI
+        anexo = mail.Attachments.Add(str(logo))
+        anexo.PropertyAccessor.SetProperty("http://schemas.microsoft.com/mapi/proptag/0x3712001F", "logo_pc")
     mail.HTMLBody = corpo
     mail.Send()
     log(f"e-mail enviado para {', '.join(para)}")
@@ -175,8 +179,13 @@ def montar_email(ini, fim):
     casos = "".join(f'<tr><td {td}>{x["dt"]}</td><td {td}>{x["hora_real"][:2]}h</td><td {td}><b>{x["resp"]}</b></td><td {td}>{x["grp"]}</td><td {td}>{x["proc"]}</td></tr>' for x in ff)
     th2 = f'style="text-align:left;padding:5px 8px;font-size:10px;color:{CINZA};text-transform:uppercase;border-bottom:2px solid {NAVY}"'
     corpo = (f'<div style="font-family:Segoe UI,Arial;color:#1A2130;max-width:700px">'
-             f'<div style="background:{NAVY};color:#ffffff;padding:14px 18px"><div style="font-size:11px;color:#9FD18F;letter-spacing:1.5px;text-transform:uppercase">Controladoria · Área Trabalhista</div>'
-             f'<div style="font-size:19px;font-weight:700">Prazos baixados de {ini:%d/%m} a {fim:%d/%m/%Y}</div></div>'
+             f'<table cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:700px"><tr>'
+             f'<td style="background:{NAVY};padding:16px 20px;font-family:Segoe UI,Arial;vertical-align:middle">'
+             f'<div style="font-size:11px;color:#ffffff;letter-spacing:1.5px;text-transform:uppercase;opacity:.85">Controladoria · Área Trabalhista</div>'
+             f'<div style="font-size:20px;font-weight:700;color:#ffffff;margin-top:2px">Prazos baixados de {ini:%d/%m} a {fim:%d/%m/%Y}</div></td>'
+             f'<td style="background:{NAVY};padding:12px 20px;text-align:right;vertical-align:middle;width:150px">'
+             f'<img src="cid:logo_pc" alt="Peixoto &amp; Cury Advogados" height="44" style="height:44px;display:block;margin-left:auto"></td>'
+             f'</tr><tr><td colspan="2" style="background:{CIANO};height:3px;font-size:1px;line-height:1px">&nbsp;</td></tr></table>'
              + cards
              + secao(f"Vencidos · {n_ven}", "prazos baixados depois do dia fatal, por grupo e sigla")
              + _tabela_grupo_sigla(ven, "#C0392B")
