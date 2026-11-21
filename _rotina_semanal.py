@@ -96,6 +96,10 @@ def email(ini, fim):
     import win32com.client
     ol = win32com.client.Dispatch("Outlook.Application")
     mail = ol.CreateItem(0)
+    if "eu" in para:  # "eu" = a própria conta do Outlook deste computador
+        u = ol.Session.CurrentUser.AddressEntry
+        eu = (u.GetExchangeUser().PrimarySmtpAddress if u.GetExchangeUser() else u.Address)
+        para = [eu if x == "eu" else x for x in para]
     mail.To = "; ".join(para)
     mail.Subject = f"Prazos baixados {ini:%d/%m} a {fim:%d/%m}: {len(ff)} fatais fora do horário"
     mail.HTMLBody = corpo
