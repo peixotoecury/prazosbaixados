@@ -133,6 +133,8 @@ def _nomes(t):
         if k >= 0:
             bloco = t[k:t.index("}", k)]
             m.update({a: b for a, b in re.findall(r"'([A-Z]{2,4})'\s*:\s*'([^']+)'", bloco)})
+    m.update({"AEM": "Aline Menendes Aponte Moraes", "TAR": "Thais Amaral Rocca", "MIM": "Maria Imperatriz", "TLI": "Tamires Lins Costa",
+              "BTF": "Bruno Tanganelli Farah", "LWP": "Lucas Willott Pereira"})  # quem entrou depois do cadastro
     m["PRAZO"] = "Conta genérica PRAZO"
     return m
 
@@ -142,7 +144,7 @@ def _curto(n):
     return " ".join(p[:2]) if len(p) <= 2 or p[1].lower() not in ("de", "da", "do", "dos", "das") else " ".join(p[:3])
 
 
-def _tabela_grupo_sigla(contagem, cor, NOM=None):
+def _tabela_grupo_sigla(contagem, cor, NOM=None, extra=None, tot_grupo=None):
     """Uma tabela só: Grupo (mesclado, com o total do grupo) | Sigla | barra | Qtde."""
     import collections
     pg = collections.Counter()
@@ -158,10 +160,11 @@ def _tabela_grupo_sigla(contagem, cor, NOM=None):
         for k, (sg, n) in enumerate(itens):
             borda = f"border-top:2px solid {NAVY};" if k == 0 else f"border-top:1px solid {LINHA};"
             cel_g = (f'<td rowspan="{len(itens)}" style="{borda}padding:7px 10px;vertical-align:top;background:#F4F7FA;width:120px">'
-                     f'<b style="color:{NAVY}">{g}</b><br><span style="font-size:11px;color:{CINZA}">{tot} no grupo</span></td>') if k == 0 else ""
+                     f'<b style="color:{NAVY}">{g}</b><br><span style="font-size:11px;color:{CINZA}">{(tot_grupo or {}).get(g, tot)} no grupo</span></td>') if k == 0 else ""
             barra = max(4, round(150 * n / mx))
             nome = _curto((NOM or {}).get(sg, sg))
-            rot = f'{nome}<br><span style="font-size:10px;color:{CINZA};font-weight:400">{sg}</span>'
+            comp = f" · {extra[(g, sg)]}" if extra and (g, sg) in extra else ""
+            rot = f'{nome}<br><span style="font-size:10px;color:{CINZA};font-weight:400">{sg}{comp}</span>'
             h += (f'<tr>{cel_g}<td style="{borda}padding:6px 10px;font-weight:600;width:170px">{rot}</td>'
                   f'<td style="{borda}padding:6px 4px 6px 10px;width:160px"><table cellpadding="0" cellspacing="0"><tr>'
                   f'<td style="background:{cor};height:10px;width:{barra}px;font-size:1px;line-height:1px">&nbsp;</td></tr></table></td>'
@@ -179,6 +182,12 @@ def montar_email(ini, fim):
     ffc = collections.Counter((x["grp"], x["resp"]) for x in ff)
     n_ven, n_ff = sum(ven.values()), len(ff)
     NOM = _nomes(t)
+    # quem mais protocolou no fatal: as 20 pessoas com mais fatais na semana, agrupadas pelo grupo
+    fat_all = {(r["grp"], r["n"]): r["fat"] for r in resp if r.get("fat") and r["n"] != "PRAZO"}
+    top = dict(sorted(fat_all.items(), key=lambda kv: -kv[1])[:20])
+    fat_top = collections.Counter(top)
+    tot_p = {(r["grp"], r["n"]): r["tot"] for r in resp}
+    pct = {k: f"{100 * v / tot_p[k]:.0f}% dos prazos da semana".replace(".", ",") for k, v in top.items() if tot_p.get(k)}
 
     def tile(rot, val, cor, sub=""):
         return (f'<td style="padding:4px"><table cellpadding="0" cellspacing="0" style="width:160px;border-collapse:collapse"><tr>'
@@ -216,6 +225,8 @@ def montar_email(ini, fim):
              + _tabela_grupo_sigla(ven, "#C0392B", NOM)
              + secao(f"Fatais fora do horário · {n_ff}", "prazos baixados no dia fatal antes das 9h ou a partir das 19h, por grupo e profissional")
              + _tabela_grupo_sigla(ffc, "#E74C3C", NOM)
+             + secao(f"Quem mais protocolou no fatal · {sum(fat_top.values())} de {kp.get('Fatais', '')}", "as 20 pessoas com mais prazos baixados no dia fatal, por grupo e profissional")
+             + _tabela_grupo_sigla(fat_top, "#E67E22", NOM, pct, {g: v["fat"] for g, v in _json_const(t, "BY_GRUPO").items()})
              + secao("Casos de fatal fora do horário", "a hora aparece só cheia, porque o LM grava os minutos com erro")
              + f'<table cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-size:11.5px;width:620px;margin:4px 0 18px"><tr><th {th2}>Dia</th><th {th2}>Hora</th><th {th2}>Profissional</th><th {th2}>Grupo</th><th {th2}>Processo</th></tr>{casos}</table>'
              + f'<div style="font-size:12px;margin:10px 0">Painel completo: <a href="https://peixotoecury.github.io/prazosbaixados/" style="color:{CIANO}">peixotoecury.github.io/prazosbaixados</a></div>'
