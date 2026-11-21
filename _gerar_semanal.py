@@ -13,7 +13,7 @@ Uso:
   python _gerar_semanal.py --conferir            recalcula a S44 e compara com o publicado (não grava)
   python _gerar_semanal.py 2026-11-16 2026-11-20 recalcula e grava a semana (as semanas entre a última publicada e esta entram no histórico)
 """
-import sys, re, json, shutil, subprocess, tempfile, datetime as dt, collections
+import os, sys, re, json, shutil, subprocess, tempfile, datetime as dt, collections
 from pathlib import Path
 import numpy as np
 import openpyxl
@@ -48,12 +48,21 @@ def fora(h):
 # ---------------------------------------------------------------- leitura
 def dat(v):
     if isinstance(v, dt.datetime): return v.date()
+    if isinstance(v, dt.date): return v
     if isinstance(v, (int, float)) and 30000 < v < 60000: return (dt.datetime(1899, 12, 30) + dt.timedelta(days=int(v))).date()
     m = re.match(r"(\d{2})/(\d{2})/(\d{4})", str(v or "").strip())
     return dt.date(int(m[3]), int(m[2]), int(m[1])) if m else None
 
 
+
+def fonte_lm(desde):
+    from _fonte_lm import fonte_lm as f  # arquivo local, fora do git
+    return f(desde)
+
+
 def ler_exportacao(desde):
+    if os.environ.get("BAIXADOS_FONTE") == "LM":  # rotina automática: lê direto do LM
+        return _filtra(fonte_lm(desde), desde, "LM")
     arq = sorted(AQUI.glob("v_pc_agendas_processos*.xlsx"), key=lambda f: f.stat().st_mtime)[-1]
     try:
         wb = openpyxl.load_workbook(arq, read_only=True)
@@ -61,10 +70,14 @@ def ler_exportacao(desde):
         tmp = Path(tempfile.gettempdir()) / "agendas_export_semanal.xlsx"
         subprocess.run(["powershell", "-NoProfile", "-Command", f"Copy-Item -LiteralPath '{arq}' -Destination '{tmp}' -Force"], check=True)
         wb = openpyxl.load_workbook(tmp, read_only=True)
+    return _filtra([ws.iter_rows(values_only=True) for ws in wb], desde, arq.name)
+
+
+def _filtra(tabelas, desde, nome):
     rows, vistos = [], set()
-    for ws in wb:
+    for it in tabelas:
         cab = None
-        for r in ws.iter_rows(values_only=True):
+        for r in it:
             if cab is None:
                 cab = {str(c).strip(): i for i, c in enumerate(r) if c}
                 if not {"tipo_agenda", "status", "data_realizacao", "data_agenda", "area"} <= set(cab): break
@@ -84,7 +97,7 @@ def ler_exportacao(desde):
                              quem=str(g("quem_realizou") or "").strip().upper(), grupo="Grupo B3" if grupo == "Grupo B4" else grupo,
                              da=da, dr=dr, hr=str(g("hora_realizacao") or "").strip(), desc=str(g("descricao") or "").replace("_x000D_", "").strip(),
                              st=classifica(da, dr)))
-    print(f"{arq.name}: {len(rows)} realizados desde {desde:%d/%m/%Y}")
+    print(f"{nome}: {len(rows)} realizados desde {desde:%d/%m/%Y}")
     return rows
 
 

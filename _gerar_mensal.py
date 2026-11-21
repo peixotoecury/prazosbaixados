@@ -53,7 +53,21 @@ def historico_das_paginas():
 
 
 # ---------------------------------------------------------------- meses novos (exportação da view)
-def ler_exportacao():
+
+def fonte_lm(desde):
+    from _fonte_lm import fonte_lm as f  # arquivo local, fora do git
+    return f(desde)
+
+
+def ler_exportacao(desde=None):
+    if os.environ.get("BAIXADOS_FONTE") == "LM":  # rotina automática: lê direto do LM
+        tabelas, nome = fonte_lm(desde), "LM"
+    else:
+        tabelas, nome = _planilha()
+    return nome, _filtra(tabelas)
+
+
+def _planilha():
     arqs = sorted(AQUI.glob("v_pc_agendas_processos*.xlsx"), key=lambda f: f.stat().st_mtime)
     if not arqs: raise SystemExit("Nenhuma exportação v_pc_agendas_processos*.xlsx na pasta.")
     arq = arqs[-1]
@@ -63,17 +77,21 @@ def ler_exportacao():
         tmp = Path(tempfile.gettempdir()) / "agendas_export_baixados.xlsx"
         subprocess.run(["powershell", "-NoProfile", "-Command", f"Copy-Item -LiteralPath '{arq}' -Destination '{tmp}' -Force"], check=True)
         wb = openpyxl.load_workbook(tmp, read_only=True)
+    return [ws.iter_rows(values_only=True) for ws in wb], arq.name
 
+
+def _filtra(tabelas):
     def dat(v):
         if isinstance(v, dt.datetime): return v.date()
+        if isinstance(v, dt.date): return v
         if isinstance(v, (int, float)) and 30000 < v < 60000: return (dt.datetime(1899, 12, 30) + dt.timedelta(days=int(v))).date()
         m = re.match(r"(\d{2})/(\d{2})/(\d{4})", str(v or "").strip())
         return dt.date(int(m[3]), int(m[2]), int(m[1])) if m else None
 
     vistos, rows = set(), []
-    for ws in wb:
+    for it in tabelas:
         cab = None
-        for r in ws.iter_rows(values_only=True):
+        for r in it:
             if cab is None:
                 cab = {str(c).strip(): i for i, c in enumerate(r) if c}
                 if not {"tipo_agenda", "status", "responsavel", "data_realizacao", "data_agenda", "area"} <= set(cab): break
@@ -90,7 +108,7 @@ def ler_exportacao():
             vistos.add(chave)
             grupo = str(g("grupo_processo") or "Sem Grupo").strip() or "Sem Grupo"
             rows.append(dict(resp=str(g("responsavel")).strip().upper(), grupo="Grupo B3" if grupo == "Grupo B4" else grupo, da=da, dr=dr))
-    return arq.name, rows
+    return rows
 
 
 def classifica(da, dr):
@@ -148,8 +166,8 @@ def main():
         H = historico_das_paginas()
         HIST.write_text(json.dumps(H, ensure_ascii=False, indent=1), encoding="utf-8")
         print("histórico gravado em", HIST.name, "com", len(H["meses"]), "meses")
-    fonte, rows = ler_exportacao()
     ult = dt.date(int(H["meses"][-1].split("/")[1]), MESES.index(H["meses"][-1].split("/")[0]) + 1, 1)
+    fonte, rows = ler_exportacao((ult + dt.timedelta(days=32)).replace(day=1))
     novos = sorted({(r["dr"].year, r["dr"].month) for r in rows if (r["dr"].year, r["dr"].month) > (ult.year, ult.month)})
     ate = max(r["dr"] for r in rows)
     NM = nomes()
@@ -249,7 +267,10 @@ def main():
     shutil.copy(AQUI / "Analises.html", AQUI / "Anteriores" / f"Analises (backup pre-{dt.date.today():%d%b%Y}).html")
     an = re.sub(r"(🔍 Análises automáticas — atualizadas a cada rodada de dados \()[^)]*\)", lambda mm: mm.group(1) + " · ".join(rot_mes(m) for m in meses) + ")", an)
     # cartões mensais: reaproveita o cartão do último mês publicado como molde
-    cards = list(re.finditer(r'<div class="card" style="text-align:center;">.*?protocolos no mês</div>\s*</div>', an, re.S))
+    for c in list(re.finditer(r'<div class="card" style="text-align:center;">.*?protocolos no mês[^<]*</div>\s*</div>', an, re.S))[::-1]:
+        if not any(m.upper() + "<" in c.group(0).upper() for m in H["meses"]): an = an[:c.start()] + an[c.end():]
+    an = re.sub(r'<div class="note">📌 [^<]*\(parcial, até[^<]*</div>\n?', "", an)
+    cards = list(re.finditer(r'<div class="card" style="text-align:center;">.*?protocolos no mês[^<]*</div>\s*</div>', an, re.S))
     if cards:
         molde = cards[-1].group(0)
         novos_cards = ""
