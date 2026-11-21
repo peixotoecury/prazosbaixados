@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Rotina semanal do prazosbaixados (tarefa agendada PC_BaixadosSemanal, segunda-feira às 7h).
+"""Rotina semanal do prazosbaixados (tarefa agendada PC_BaixadosSemanal, segunda-feira às 8h).
 
 1. Lê prazos e agendas direto do LM (BAIXADOS_FONTE=LM).
 2. Protocolados: gera a semana que fechou no domingo (_gerar_semanal.py). Se a última semana publicada era parcial
