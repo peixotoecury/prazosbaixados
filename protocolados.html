@@ -1301,11 +1301,11 @@ function _loToggleSenha(btn) {
   </div>
 <div id="sec-prazos"></div>
 <div class="kpis">
-  <div class="kpi" onclick="kpiClick(this,'')"><div class="klbl">Total Baixado</div><div class="kval wh">1.318</div><div class="ksub">prazos realizados</div></div>
-  <div class="kpi" onclick="kpiClick(this,'fatal')" id="kpi-fatal"><div class="klbl">Fatais</div><div class="kval" style="color:#e74c3c">359</div><div class="ksub">27,2% — protocolados no dia fatal</div></div>
-  <div class="kpi" onclick="kpiClick(this,'vencido')" id="kpi-vencido"><div class="klbl">Vencidos</div><div class="kval" style="color:#c0392b">14</div><div class="ksub">1,1% — prazos vencidos</div></div>
+  <div class="kpi" onclick="kpiClick(this,'')"><div class="klbl">Total Baixado</div><div class="kval wh">1.303</div><div class="ksub">prazos realizados</div></div>
+  <div class="kpi" onclick="kpiClick(this,'fatal')" id="kpi-fatal"><div class="klbl">Fatais</div><div class="kval" style="color:#e74c3c">359</div><div class="ksub">27,6% — protocolados no dia fatal</div></div>
+  <div class="kpi" onclick="kpiClick(this,'vencido')" id="kpi-vencido"><div class="klbl">Vencidos</div><div class="kval" style="color:#c0392b">4</div><div class="ksub">0,3% — prazos vencidos</div></div>
   <div class="kpi" onclick="kpiClick(this,'d1')" id="kpi-d1"><div class="klbl">D-1 (no dia)</div><div class="kval yel">397</div><div class="ksub">cumpridos no prazo</div></div>
-  <div class="kpi" onclick="kpiClick(this,'antecipado')" id="kpi-antecipado"><div class="klbl">Antecipados</div><div class="kval grn">548</div><div class="ksub">41,6% — antes do prazo</div></div>
+  <div class="kpi" onclick="kpiClick(this,'antecipado')" id="kpi-antecipado"><div class="klbl">Antecipados</div><div class="kval grn">543</div><div class="ksub">41,7% — antes do prazo</div></div>
   <div class="kpi" onclick="toggleFilter('fora')" id="kpi-fora"><div class="klbl">Fora do Horário</div><div class="kval org">159</div><div class="ksub">antes 9h ou após 19h</div></div>
   <div class="kpi" onclick="toggleFilter('fatfora')" id="kpi-fatfora"><div class="klbl">Fatal + Fora Hora</div><div class="kval" style="color:#e74c3c">47</div><div class="ksub">⚠ caso fatal — clique para filtrar</div></div>
 </div>
@@ -1313,7 +1313,7 @@ function _loToggleSenha(btn) {
 <!-- NOTA FERIADO -->
 <div class="nota-feriado">
   <span style="font-size:15px;flex-shrink:0">📌</span>
-  <span><b>Nota:</b> No período de <b>16/11/2026 a 20/11/2026</b> houve <b>14 prazo(s) vencido(s)</b>, em um total de 1.318 prazos realizados na semana. Status apurado pelas datas da agenda e da baixa.</span>
+  <span><b>Nota:</b> No período de <b>16/11/2026 a 20/11/2026</b> houve <b>4 prazo(s) vencido(s)</b>, em um total de 1.303 prazos realizados na semana. Status apurado pelas datas da agenda e da baixa.</span>
 
 </div>
 
@@ -1485,7 +1485,7 @@ function _loToggleSenha(btn) {
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap">
     <div style="width:4px;height:22px;background:var(--cyan);border-radius:2px"></div>
     <h2 style="font-size:14px;font-weight:700;letter-spacing:.3px">📅 Agendas — 16/11/2026 a 20/11/2026</h2>
-    <span style="font-size:11px;color:var(--tx2);margin-left:4px">3.204 realizadas</span>
+    <span style="font-size:11px;color:var(--tx2);margin-left:4px">3.124 realizadas</span>
   </div>
   <div class="nota-feriado" style="margin-bottom:14px">
     <span style="font-size:14px;flex-shrink:0">⚖️</span>
@@ -1519,7 +1519,7 @@ function _loToggleSenha(btn) {
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap">
     <div style="width:4px;height:22px;background:var(--cyan);border-radius:2px"></div>
     <h2 style="font-size:14px;font-weight:700;letter-spacing:.3px">👥 Agenda Equipe — 16/11/2026 a 20/11/2026</h2>
-    <span style="font-size:11px;color:var(--tx2);margin-left:4px">142 realizadas</span>
+    <span style="font-size:11px;color:var(--tx2);margin-left:4px">141 realizadas</span>
   </div>
   <div class="nota-feriado" style="margin-bottom:14px">
     <span style="font-size:14px;flex-shrink:0">⚖️</span>
@@ -1556,9 +1556,9 @@ function _loToggleSenha(btn) {
     <tbody>
       <tr>
         <td><b>Vencido</b></td>
-        <td class="c"><span class="vbad red">22</span></td>
-        <td class="c"><span class="vbad red">14</span></td>
-        <td class="c"><span class="vbad grn">-8 (-36%)</span></td>
+        <td class="c"><span class="vbad red">5</span></td>
+        <td class="c"><span class="vbad red">4</span></td>
+        <td class="c"><span class="vbad grn">-1 (-20%)</span></td>
         <td class="c"><span class="evolucao melhorando">✓ MELHORANDO</span></td>
       </tr>
       <tr>
@@ -1584,9 +1584,9 @@ function _loToggleSenha(btn) {
       </tr>
       <tr>
         <td><b>Futuro</b></td>
-        <td class="c"><span class="vbad grn">404</span></td>
-        <td class="c"><span class="vbad grn">389</span></td>
-        <td class="c"><span class="vbad red">-15 (-4%)</span></td>
+        <td class="c"><span class="vbad grn">400</span></td>
+        <td class="c"><span class="vbad grn">384</span></td>
+        <td class="c"><span class="vbad red">-16 (-4%)</span></td>
         <td class="c"><span class="evolucao piorando">✗ PIORANDO</span></td>
       </tr>
     </tbody>
@@ -3693,50 +3693,50 @@ function _loToggleSenha(btn) {
     <tr data-timeline-date="2026-11-03" onclick="openTimelineDay('2026-11-03')" title="Clique para ver o resumo do dia">
       <td><b>03/11/2026</b><span class="nome-sigla">terça-feira</span></td>
       <td class="c"><span class="vbad muted">267</span></td>
-      <td class="c"><span class="vbad blu">736</span></td>
+      <td class="c"><span class="vbad blu">729</span></td>
       <td class="c"><span class="vbad grn">46</span></td>
       <td class="c"><span class="vbad red">0</span></td>
       <td class="c"><span class="vbad fat">80</span></td>
       <td class="c"><span class="vbad yel">113</span></td>
       <td class="c"><span class="vbad blu">23</span></td>
       <td class="c"><span class="vbad grn">51</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.049</td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.042</td>
       <td class="c"><span class="risk-chip low">0%</span></td>
     </tr><tr data-timeline-date="2026-11-04" onclick="openTimelineDay('2026-11-04')" title="Clique para ver o resumo do dia">
       <td><b>04/11/2026</b><span class="nome-sigla">quarta-feira</span></td>
       <td class="c"><span class="vbad muted">212</span></td>
-      <td class="c"><span class="vbad blu">479</span></td>
+      <td class="c"><span class="vbad blu">477</span></td>
       <td class="c"><span class="vbad grn">49</span></td>
       <td class="c"><span class="vbad red">0</span></td>
       <td class="c"><span class="vbad fat">47</span></td>
       <td class="c"><span class="vbad yel">90</span></td>
       <td class="c"><span class="vbad blu">19</span></td>
       <td class="c"><span class="vbad grn">56</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">740</td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">738</td>
       <td class="c"><span class="risk-chip low">0%</span></td>
     </tr><tr data-timeline-date="2026-11-05" onclick="openTimelineDay('2026-11-05')" title="Clique para ver o resumo do dia">
       <td><b>05/11/2026</b><span class="nome-sigla">quinta-feira</span></td>
       <td class="c"><span class="vbad muted">228</span></td>
-      <td class="c"><span class="vbad blu">725</span></td>
+      <td class="c"><span class="vbad blu">718</span></td>
       <td class="c"><span class="vbad grn">20</span></td>
       <td class="c"><span class="vbad red">11</span></td>
       <td class="c"><span class="vbad fat">59</span></td>
       <td class="c"><span class="vbad yel">64</span></td>
       <td class="c"><span class="vbad blu">8</span></td>
       <td class="c"><span class="vbad grn">86</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">973</td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">966</td>
       <td class="c"><span class="risk-chip low">1%</span></td>
     </tr><tr data-timeline-date="2026-11-06" onclick="openTimelineDay('2026-11-06')" title="Clique para ver o resumo do dia">
       <td><b>06/11/2026</b><span class="nome-sigla">sexta-feira</span></td>
       <td class="c"><span class="vbad muted">168</span></td>
-      <td class="c"><span class="vbad blu">483</span></td>
-      <td class="c"><span class="vbad grn">39</span></td>
+      <td class="c"><span class="vbad blu">480</span></td>
+      <td class="c"><span class="vbad grn">34</span></td>
       <td class="c"><span class="vbad red">0</span></td>
       <td class="c"><span class="vbad fat">66</span></td>
       <td class="c"><span class="vbad yel">57</span></td>
       <td class="c"><span class="vbad blu">0</span></td>
       <td class="c"><span class="vbad grn">45</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">690</td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">682</td>
       <td class="c"><span class="risk-chip low">0%</span></td>
     </tr><tr data-timeline-date="2026-11-07" onclick="openTimelineDay('2026-11-07')" title="Clique para ver o resumo do dia">
       <td><b>07/11/2026</b><span class="nome-sigla">sábado</span></td>
@@ -3753,75 +3753,75 @@ function _loToggleSenha(btn) {
     </tr><tr data-timeline-date="2026-11-08" onclick="openTimelineDay('2026-11-08')" title="Clique para ver o resumo do dia">
       <td><b>08/11/2026</b><span class="nome-sigla">domingo</span></td>
       <td class="c"><span class="vbad muted">11</span></td>
-      <td class="c"><span class="vbad blu">70</span></td>
+      <td class="c"><span class="vbad blu">69</span></td>
       <td class="c"><span class="vbad grn">1</span></td>
       <td class="c"><span class="vbad red">0</span></td>
       <td class="c"><span class="vbad fat">2</span></td>
       <td class="c"><span class="vbad yel">0</span></td>
       <td class="c"><span class="vbad blu">1</span></td>
       <td class="c"><span class="vbad grn">8</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">82</td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">81</td>
       <td class="c"><span class="risk-chip low">0%</span></td>
     </tr><tr data-timeline-date="2026-11-09" onclick="openTimelineDay('2026-11-09')" title="Clique para ver o resumo do dia">
       <td><b>09/11/2026</b><span class="nome-sigla">segunda-feira</span></td>
-      <td class="c"><span class="vbad muted">250</span></td>
-      <td class="c"><span class="vbad blu">743</span></td>
+      <td class="c"><span class="vbad muted">248</span></td>
+      <td class="c"><span class="vbad blu">734</span></td>
       <td class="c"><span class="vbad grn">44</span></td>
       <td class="c"><span class="vbad red">1</span></td>
       <td class="c"><span class="vbad fat">68</span></td>
       <td class="c"><span class="vbad yel">94</span></td>
       <td class="c"><span class="vbad blu">17</span></td>
-      <td class="c"><span class="vbad grn">70</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.037</td>
+      <td class="c"><span class="vbad grn">68</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.026</td>
       <td class="c"><span class="risk-chip low">0%</span></td>
     </tr><tr data-timeline-date="2026-11-10" onclick="openTimelineDay('2026-11-10')" title="Clique para ver o resumo do dia">
       <td><b>10/11/2026</b><span class="nome-sigla">terça-feira</span></td>
-      <td class="c"><span class="vbad muted">330</span></td>
-      <td class="c"><span class="vbad blu">836</span></td>
+      <td class="c"><span class="vbad muted">320</span></td>
+      <td class="c"><span class="vbad blu">806</span></td>
       <td class="c"><span class="vbad grn">52</span></td>
-      <td class="c"><span class="vbad red">11</span></td>
+      <td class="c"><span class="vbad red">3</span></td>
       <td class="c"><span class="vbad fat">69</span></td>
       <td class="c"><span class="vbad yel">116</span></td>
       <td class="c"><span class="vbad blu">14</span></td>
-      <td class="c"><span class="vbad grn">120</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.218</td>
-      <td class="c"><span class="risk-chip low">1%</span></td>
+      <td class="c"><span class="vbad grn">118</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.178</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
     </tr><tr data-timeline-date="2026-11-11" onclick="openTimelineDay('2026-11-11')" title="Clique para ver o resumo do dia">
       <td><b>11/11/2026</b><span class="nome-sigla">quarta-feira</span></td>
       <td class="c"><span class="vbad muted">250</span></td>
-      <td class="c"><span class="vbad blu">493</span></td>
+      <td class="c"><span class="vbad blu">478</span></td>
       <td class="c"><span class="vbad grn">29</span></td>
       <td class="c"><span class="vbad red">1</span></td>
       <td class="c"><span class="vbad fat">79</span></td>
       <td class="c"><span class="vbad yel">95</span></td>
       <td class="c"><span class="vbad blu">13</span></td>
       <td class="c"><span class="vbad grn">62</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">772</td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">757</td>
       <td class="c"><span class="risk-chip low">0%</span></td>
     </tr><tr data-timeline-date="2026-11-12" onclick="openTimelineDay('2026-11-12')" title="Clique para ver o resumo do dia">
       <td><b>12/11/2026</b><span class="nome-sigla">quinta-feira</span></td>
       <td class="c"><span class="vbad muted">275</span></td>
-      <td class="c"><span class="vbad blu">655</span></td>
+      <td class="c"><span class="vbad blu">650</span></td>
       <td class="c"><span class="vbad grn">23</span></td>
       <td class="c"><span class="vbad red">0</span></td>
       <td class="c"><span class="vbad fat">72</span></td>
       <td class="c"><span class="vbad yel">100</span></td>
       <td class="c"><span class="vbad blu">28</span></td>
       <td class="c"><span class="vbad grn">75</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">953</td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">948</td>
       <td class="c"><span class="risk-chip low">0%</span></td>
     </tr><tr data-timeline-date="2026-11-13" onclick="openTimelineDay('2026-11-13')" title="Clique para ver o resumo do dia">
       <td><b>13/11/2026</b><span class="nome-sigla">sexta-feira</span></td>
-      <td class="c"><span class="vbad muted">223</span></td>
-      <td class="c"><span class="vbad blu">579</span></td>
+      <td class="c"><span class="vbad muted">214</span></td>
+      <td class="c"><span class="vbad blu">574</span></td>
       <td class="c"><span class="vbad grn">29</span></td>
-      <td class="c"><span class="vbad red">9</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
       <td class="c"><span class="vbad fat">52</span></td>
       <td class="c"><span class="vbad yel">86</span></td>
       <td class="c"><span class="vbad blu">0</span></td>
       <td class="c"><span class="vbad grn">76</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">831</td>
-      <td class="c"><span class="risk-chip low">1%</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">817</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
     </tr><tr data-timeline-date="2026-11-14" onclick="openTimelineDay('2026-11-14')" title="Clique para ver o resumo do dia">
       <td><b>14/11/2026</b><span class="nome-sigla">sábado</span></td>
       <td class="c"><span class="vbad muted">4</span></td>
@@ -3848,52 +3848,52 @@ function _loToggleSenha(btn) {
       <td class="c"><span class="risk-chip low">0%</span></td>
     </tr><tr data-timeline-date="2026-11-16" onclick="openTimelineDay('2026-11-16')" title="Clique para ver o resumo do dia">
       <td><b>16/11/2026</b><span class="nome-sigla">segunda-feira</span></td>
-      <td class="c"><span class="vbad muted">266</span></td>
-      <td class="c"><span class="vbad blu">619</span></td>
-      <td class="c"><span class="vbad grn">39</span></td>
+      <td class="c"><span class="vbad muted">263</span></td>
+      <td class="c"><span class="vbad blu">602</span></td>
+      <td class="c"><span class="vbad grn">38</span></td>
       <td class="c"><span class="vbad red">1</span></td>
       <td class="c"><span class="vbad fat">89</span></td>
       <td class="c"><span class="vbad yel">94</span></td>
       <td class="c"><span class="vbad blu">19</span></td>
-      <td class="c"><span class="vbad grn">63</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">924</td>
+      <td class="c"><span class="vbad grn">60</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">903</td>
       <td class="c"><span class="risk-chip low">0%</span></td>
     </tr><tr data-timeline-date="2026-11-17" onclick="openTimelineDay('2026-11-17')" title="Clique para ver o resumo do dia">
       <td><b>17/11/2026</b><span class="nome-sigla">terça-feira</span></td>
       <td class="c"><span class="vbad muted">314</span></td>
-      <td class="c"><span class="vbad blu">726</span></td>
+      <td class="c"><span class="vbad blu">705</span></td>
       <td class="c"><span class="vbad grn">35</span></td>
       <td class="c"><span class="vbad red">0</span></td>
       <td class="c"><span class="vbad fat">97</span></td>
       <td class="c"><span class="vbad yel">114</span></td>
       <td class="c"><span class="vbad blu">27</span></td>
       <td class="c"><span class="vbad grn">76</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.075</td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.054</td>
       <td class="c"><span class="risk-chip low">0%</span></td>
     </tr><tr data-timeline-date="2026-11-18" onclick="openTimelineDay('2026-11-18')" title="Clique para ver o resumo do dia">
       <td><b>18/11/2026</b><span class="nome-sigla">quarta-feira</span></td>
       <td class="c"><span class="vbad muted">368</span></td>
-      <td class="c"><span class="vbad blu">944</span></td>
+      <td class="c"><span class="vbad blu">926</span></td>
       <td class="c"><span class="vbad grn">33</span></td>
       <td class="c"><span class="vbad red">3</span></td>
       <td class="c"><span class="vbad fat">100</span></td>
       <td class="c"><span class="vbad yel">77</span></td>
       <td class="c"><span class="vbad blu">38</span></td>
       <td class="c"><span class="vbad grn">150</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.345</td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.327</td>
       <td class="c"><span class="risk-chip low">0%</span></td>
     </tr><tr data-timeline-date="2026-11-19" onclick="openTimelineDay('2026-11-19')" title="Clique para ver o resumo do dia">
       <td><b>19/11/2026</b><span class="nome-sigla">quinta-feira</span></td>
-      <td class="c"><span class="vbad muted">368</span></td>
-      <td class="c"><span class="vbad blu">892</span></td>
+      <td class="c"><span class="vbad muted">356</span></td>
+      <td class="c"><span class="vbad blu">868</span></td>
       <td class="c"><span class="vbad grn">34</span></td>
-      <td class="c"><span class="vbad red">10</span></td>
+      <td class="c"><span class="vbad red">0</span></td>
       <td class="c"><span class="vbad fat">73</span></td>
       <td class="c"><span class="vbad yel">110</span></td>
       <td class="c"><span class="vbad blu">75</span></td>
-      <td class="c"><span class="vbad grn">100</span></td>
-      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.294</td>
-      <td class="c"><span class="risk-chip low">1%</span></td>
+      <td class="c"><span class="vbad grn">98</span></td>
+      <td class="c" style="font-weight:800;color:var(--pc-escuro)">1.258</td>
+      <td class="c"><span class="risk-chip low">0%</span></td>
     </tr><tr data-timeline-date="2026-11-20" onclick="openTimelineDay('2026-11-20')" title="Clique para ver o resumo do dia">
       <td><b>20/11/2026</b><span class="nome-sigla">sexta-feira</span></td>
       <td class="c"><span class="vbad muted">2</span></td>
@@ -4219,36 +4219,36 @@ function _loToggleSenha(btn) {
         </tr><tr data-acumulo="semana" data-acumulo-key="2026-S45" onclick="openAcumulado('semana','2026-S45')" title="Clique para detalhar o acumulado">
           <td><b>Semana 45 · 03/11 a 08/11</b></td>
           <td class="c"><span class="vbad muted">886</span></td>
-          <td class="c"><span class="vbad blu">2.495</span></td>
-          <td class="c"><span class="vbad grn">155</span></td>
+          <td class="c"><span class="vbad blu">2.475</span></td>
+          <td class="c"><span class="vbad grn">150</span></td>
           <td class="c"><span class="vbad red">11</span></td>
           <td class="c"><span class="vbad fat">254</span></td>
           <td class="c"><span class="vbad yel">324</span></td>
           <td class="c"><span class="vbad blu">51</span></td>
           <td class="c"><span class="vbad grn">246</span></td>
-          <td class="c" style="font-weight:800;color:var(--pc-escuro)">3.536</td>
+          <td class="c" style="font-weight:800;color:var(--pc-escuro)">3.511</td>
         </tr><tr data-acumulo="semana" data-acumulo-key="2026-S46" onclick="openAcumulado('semana','2026-S46')" title="Clique para detalhar o acumulado">
           <td><b>Semana 46 · 09/11 a 15/11</b></td>
-          <td class="c"><span class="vbad muted">1.350</span></td>
-          <td class="c"><span class="vbad blu">3.475</span></td>
+          <td class="c"><span class="vbad muted">1.329</span></td>
+          <td class="c"><span class="vbad blu">3.411</span></td>
           <td class="c"><span class="vbad grn">182</span></td>
-          <td class="c"><span class="vbad red">22</span></td>
+          <td class="c"><span class="vbad red">5</span></td>
           <td class="c"><span class="vbad fat">359</span></td>
           <td class="c"><span class="vbad yel">491</span></td>
           <td class="c"><span class="vbad blu">74</span></td>
-          <td class="c"><span class="vbad grn">404</span></td>
-          <td class="c" style="font-weight:800;color:var(--pc-escuro)">5.007</td>
+          <td class="c"><span class="vbad grn">400</span></td>
+          <td class="c" style="font-weight:800;color:var(--pc-escuro)">4.922</td>
         </tr><tr data-acumulo="semana" data-acumulo-key="2026-S47" onclick="openAcumulado('semana','2026-S47')" title="Clique para detalhar o acumulado">
           <td><b>Semana 47 · 16/11 a 20/11</b></td>
-          <td class="c"><span class="vbad muted">1.318</span></td>
-          <td class="c"><span class="vbad blu">3.204</span></td>
-          <td class="c"><span class="vbad grn">142</span></td>
-          <td class="c"><span class="vbad red">14</span></td>
+          <td class="c"><span class="vbad muted">1.303</span></td>
+          <td class="c"><span class="vbad blu">3.124</span></td>
+          <td class="c"><span class="vbad grn">141</span></td>
+          <td class="c"><span class="vbad red">4</span></td>
           <td class="c"><span class="vbad fat">359</span></td>
           <td class="c"><span class="vbad yel">397</span></td>
           <td class="c"><span class="vbad blu">159</span></td>
-          <td class="c"><span class="vbad grn">389</span></td>
-          <td class="c" style="font-weight:800;color:var(--pc-escuro)">4.664</td>
+          <td class="c"><span class="vbad grn">384</span></td>
+          <td class="c" style="font-weight:800;color:var(--pc-escuro)">4.568</td>
         </tr>
 </tbody>
       </table></div>
@@ -4326,15 +4326,15 @@ function _loToggleSenha(btn) {
           <td class="c" style="font-weight:800;color:var(--pc-escuro)">22.286</td>
         </tr><tr data-acumulo="mes" data-acumulo-key="2026-11" onclick="openAcumulado('mes','2026-11')" title="Clique para detalhar o acumulado">
           <td><b>11/2026 acumulado · 01/11 a 20/11</b></td>
-          <td class="c"><span class="vbad muted">3.580</span></td>
-          <td class="c"><span class="vbad blu">9.222</span></td>
-          <td class="c"><span class="vbad grn">480</span></td>
-          <td class="c"><span class="vbad red">47</span></td>
+          <td class="c"><span class="vbad muted">3.544</span></td>
+          <td class="c"><span class="vbad blu">9.058</span></td>
+          <td class="c"><span class="vbad grn">474</span></td>
+          <td class="c"><span class="vbad red">20</span></td>
           <td class="c"><span class="vbad fat">976</span></td>
           <td class="c"><span class="vbad yel">1.213</span></td>
           <td class="c"><span class="vbad blu">290</span></td>
-          <td class="c"><span class="vbad grn">1.054</span></td>
-          <td class="c" style="font-weight:800;color:var(--pc-escuro)">13.282</td>
+          <td class="c"><span class="vbad grn">1.045</span></td>
+          <td class="c" style="font-weight:800;color:var(--pc-escuro)">13.076</td>
         </tr></tbody>
       </table></div>
     </div>
@@ -4407,7 +4407,7 @@ function _loToggleSenha(btn) {
 </div>
 
 <script>
-const TIMELINE_DATA={"2026-05-22": {"Agenda": 0, "Agenda Equipe": 3, "Prazo": 0, "Total": 3, "Vencido": 3, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-05-27": {"Agenda": 0, "Agenda Equipe": 1, "Prazo": 0, "Total": 1, "Vencido": 1, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-05-29": {"Agenda": 0, "Agenda Equipe": 1, "Prazo": 0, "Total": 1, "Vencido": 1, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-05": {"Agenda": 1, "Agenda Equipe": 1, "Prazo": 0, "Total": 2, "Vencido": 2, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-10": {"Agenda": 1, "Agenda Equipe": 1, "Prazo": 0, "Total": 2, "Vencido": 2, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-11": {"Agenda": 8, "Agenda Equipe": 0, "Prazo": 0, "Total": 8, "Vencido": 8, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-12": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 1, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-15": {"Agenda": 11, "Agenda Equipe": 0, "Prazo": 0, "Total": 11, "Vencido": 11, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-16": {"Agenda": 20, "Agenda Equipe": 3, "Prazo": 0, "Total": 23, "Vencido": 23, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-17": {"Agenda": 34, "Agenda Equipe": 0, "Prazo": 0, "Total": 34, "Vencido": 34, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-18": {"Agenda": 65, "Agenda Equipe": 3, "Prazo": 2, "Total": 70, "Vencido": 69, "Fatal": 1, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-19": {"Agenda": 212, "Agenda Equipe": 21, "Prazo": 41, "Total": 274, "Vencido": 57, "Fatal": 217, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-22": {"Agenda": 626, "Agenda Equipe": 40, "Prazo": 197, "Total": 863, "Vencido": 62, "Fatal": 150, "D-1": 651, "D-2": 0, "Futuro": 0}, "2026-06-23": {"Agenda": 568, "Agenda Equipe": 29, "Prazo": 189, "Total": 786, "Vencido": 93, "Fatal": 204, "D-1": 361, "D-2": 128, "Futuro": 0}, "2026-06-24": {"Agenda": 701, "Agenda Equipe": 43, "Prazo": 217, "Total": 961, "Vencido": 76, "Fatal": 183, "D-1": 540, "D-2": 101, "Futuro": 61}, "2026-06-25": {"Agenda": 541, "Agenda Equipe": 31, "Prazo": 229, "Total": 801, "Vencido": 5, "Fatal": 205, "D-1": 368, "D-2": 134, "Futuro": 89}, "2026-06-26": {"Agenda": 535, "Agenda Equipe": 39, "Prazo": 190, "Total": 764, "Vencido": 0, "Fatal": 60, "D-1": 416, "D-2": 133, "Futuro": 155}, "2026-06-29": {"Agenda": 550, "Agenda Equipe": 44, "Prazo": 252, "Total": 846, "Vencido": 80, "Fatal": 149, "D-1": 350, "D-2": 100, "Futuro": 167}, "2026-06-30": {"Agenda": 773, "Agenda Equipe": 59, "Prazo": 329, "Total": 1161, "Vencido": 16, "Fatal": 251, "D-1": 484, "D-2": 99, "Futuro": 311}, "2026-07-01": {"Agenda": 692, "Agenda Equipe": 54, "Prazo": 251, "Total": 997, "Vencido": 50, "Fatal": 203, "D-1": 435, "D-2": 70, "Futuro": 239}, "2026-07-02": {"Agenda": 771, "Agenda Equipe": 42, "Prazo": 288, "Total": 1101, "Vencido": 106, "Fatal": 224, "D-1": 393, "D-2": 126, "Futuro": 252}, "2026-07-03": {"Agenda": 624, "Agenda Equipe": 53, "Prazo": 197, "Total": 874, "Vencido": 71, "Fatal": 161, "D-1": 351, "D-2": 0, "Futuro": 291}, "2026-07-04": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 1, "Total": 5, "Vencido": 0, "Fatal": 4, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-07-05": {"Agenda": 17, "Agenda Equipe": 0, "Prazo": 2, "Total": 19, "Vencido": 17, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 2}, "2026-07-06": {"Agenda": 49, "Agenda Equipe": 0, "Prazo": 22, "Total": 71, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 71}, "2026-07-07": {"Agenda": 28, "Agenda Equipe": 0, "Prazo": 33, "Total": 61, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 61}, "2026-07-08": {"Agenda": 26, "Agenda Equipe": 0, "Prazo": 19, "Total": 45, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 45}, "2026-07-09": {"Agenda": 23, "Agenda Equipe": 0, "Prazo": 25, "Total": 48, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 48}, "2026-07-10": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 14, "Total": 19, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 19}, "2026-07-13": {"Agenda": 9, "Agenda Equipe": 0, "Prazo": 12, "Total": 21, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 21}, "2026-07-14": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 8, "Total": 12, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 12}, "2026-07-15": {"Agenda": 0, "Agenda Equipe": 0, "Prazo": 2, "Total": 2, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 2}, "2026-07-16": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 3, "Total": 8, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 8}, "2026-07-17": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-07-20": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 3, "Total": 8, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 8}, "2026-07-21": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 3, "Total": 7, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 7}, "2026-07-22": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 0, "Total": 5, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 5}, "2026-07-23": {"Agenda": 6, "Agenda Equipe": 0, "Prazo": 1, "Total": 7, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 7}, "2026-07-24": {"Agenda": 3, "Agenda Equipe": 0, "Prazo": 2, "Total": 5, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 5}, "2026-07-27": {"Agenda": 3, "Agenda Equipe": 0, "Prazo": 0, "Total": 3, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 3}, "2026-07-28": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 1, "Total": 5, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 5}, "2026-07-29": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-07-30": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-07-31": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-08-03": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-08-04": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 0, "Total": 5, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 5}, "2026-08-06": {"Agenda": 7, "Agenda Equipe": 0, "Prazo": 1, "Total": 8, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 8}, "2026-08-07": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-08-10": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-08-11": {"Agenda": 6, "Agenda Equipe": 0, "Prazo": 0, "Total": 6, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 6}, "2026-08-12": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 0, "Total": 5, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 5}, "2026-08-13": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-08-14": {"Agenda": 3, "Agenda Equipe": 0, "Prazo": 0, "Total": 3, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 3}, "2026-08-17": {"Agenda": 10, "Agenda Equipe": 0, "Prazo": 2, "Total": 12, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 12}, "2026-08-18": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-08-19": {"Agenda": 3, "Agenda Equipe": 0, "Prazo": 0, "Total": 3, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 3}, "2026-08-20": {"Agenda": 6, "Agenda Equipe": 0, "Prazo": 0, "Total": 6, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 6}, "2026-08-21": {"Agenda": 10, "Agenda Equipe": 0, "Prazo": 0, "Total": 10, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 10}, "2026-08-24": {"Agenda": 11, "Agenda Equipe": 0, "Prazo": 1, "Total": 12, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 12}, "2026-08-25": {"Agenda": 8, "Agenda Equipe": 0, "Prazo": 0, "Total": 8, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 8}, "2026-08-26": {"Agenda": 6, "Agenda Equipe": 0, "Prazo": 0, "Total": 6, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 6}, "2026-08-27": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-08-28": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 0, "Total": 5, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 5}, "2026-08-31": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-02": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-03": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-04": {"Agenda": 3, "Agenda Equipe": 0, "Prazo": 0, "Total": 3, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 3}, "2026-09-06": {"Agenda": 2, "Agenda Equipe": 0, "Prazo": 0, "Total": 2, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 2}, "2026-09-08": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-11": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-16": {"Agenda": 0, "Agenda Equipe": 0, "Prazo": 1, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-18": {"Agenda": 2, "Agenda Equipe": 0, "Prazo": 0, "Total": 2, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 2}, "2026-09-21": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-22": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-23": {"Agenda": 3, "Agenda Equipe": 0, "Prazo": 0, "Total": 3, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 3}, "2026-09-25": {"Agenda": 2, "Agenda Equipe": 0, "Prazo": 0, "Total": 2, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 2}, "2026-09-28": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-29": {"Agenda": 2, "Agenda Equipe": 0, "Prazo": 0, "Total": 2, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 2}, "2026-09-30": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-10-09": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-10-30": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-11-03": {"Agenda": 736, "Agenda Equipe": 46, "Prazo": 267, "Total": 1049, "Vencido": 0, "Fatal": 80, "D-1": 113, "D-2": 23, "Futuro": 51}, "2026-11-04": {"Agenda": 479, "Agenda Equipe": 49, "Prazo": 212, "Total": 740, "Vencido": 0, "Fatal": 47, "D-1": 90, "D-2": 19, "Futuro": 56}, "2026-11-05": {"Agenda": 725, "Agenda Equipe": 20, "Prazo": 228, "Total": 973, "Vencido": 11, "Fatal": 59, "D-1": 64, "D-2": 8, "Futuro": 86}, "2026-11-06": {"Agenda": 483, "Agenda Equipe": 39, "Prazo": 168, "Total": 690, "Vencido": 0, "Fatal": 66, "D-1": 57, "D-2": 0, "Futuro": 45}, "2026-11-07": {"Agenda": 2, "Agenda Equipe": 0, "Prazo": 0, "Total": 2, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-11-08": {"Agenda": 70, "Agenda Equipe": 1, "Prazo": 11, "Total": 82, "Vencido": 0, "Fatal": 2, "D-1": 0, "D-2": 1, "Futuro": 8}, "2026-11-09": {"Agenda": 743, "Agenda Equipe": 44, "Prazo": 250, "Total": 1037, "Vencido": 1, "Fatal": 68, "D-1": 94, "D-2": 17, "Futuro": 70}, "2026-11-10": {"Agenda": 836, "Agenda Equipe": 52, "Prazo": 330, "Total": 1218, "Vencido": 11, "Fatal": 69, "D-1": 116, "D-2": 14, "Futuro": 120}, "2026-11-11": {"Agenda": 493, "Agenda Equipe": 29, "Prazo": 250, "Total": 772, "Vencido": 1, "Fatal": 79, "D-1": 95, "D-2": 13, "Futuro": 62}, "2026-11-12": {"Agenda": 655, "Agenda Equipe": 23, "Prazo": 275, "Total": 953, "Vencido": 0, "Fatal": 72, "D-1": 100, "D-2": 28, "Futuro": 75}, "2026-11-13": {"Agenda": 579, "Agenda Equipe": 29, "Prazo": 223, "Total": 831, "Vencido": 9, "Fatal": 52, "D-1": 86, "D-2": 0, "Futuro": 76}, "2026-11-14": {"Agenda": 53, "Agenda Equipe": 2, "Prazo": 4, "Total": 59, "Vencido": 0, "Fatal": 4, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-11-15": {"Agenda": 116, "Agenda Equipe": 3, "Prazo": 18, "Total": 137, "Vencido": 0, "Fatal": 15, "D-1": 0, "D-2": 2, "Futuro": 1}, "2026-11-16": {"Agenda": 619, "Agenda Equipe": 39, "Prazo": 266, "Total": 924, "Vencido": 1, "Fatal": 89, "D-1": 94, "D-2": 19, "Futuro": 63}, "2026-11-17": {"Agenda": 726, "Agenda Equipe": 35, "Prazo": 314, "Total": 1075, "Vencido": 0, "Fatal": 97, "D-1": 114, "D-2": 27, "Futuro": 76}, "2026-11-18": {"Agenda": 944, "Agenda Equipe": 33, "Prazo": 368, "Total": 1345, "Vencido": 3, "Fatal": 100, "D-1": 77, "D-2": 38, "Futuro": 150}, "2026-11-19": {"Agenda": 892, "Agenda Equipe": 34, "Prazo": 368, "Total": 1294, "Vencido": 10, "Fatal": 73, "D-1": 110, "D-2": 75, "Futuro": 100}, "2026-11-20": {"Agenda": 23, "Agenda Equipe": 1, "Prazo": 2, "Total": 26, "Vencido": 0, "Fatal": 0, "D-1": 2, "D-2": 0, "Futuro": 0}};
+const TIMELINE_DATA={"2026-05-22": {"Agenda": 0, "Agenda Equipe": 3, "Prazo": 0, "Total": 3, "Vencido": 3, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-05-27": {"Agenda": 0, "Agenda Equipe": 1, "Prazo": 0, "Total": 1, "Vencido": 1, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-05-29": {"Agenda": 0, "Agenda Equipe": 1, "Prazo": 0, "Total": 1, "Vencido": 1, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-05": {"Agenda": 1, "Agenda Equipe": 1, "Prazo": 0, "Total": 2, "Vencido": 2, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-10": {"Agenda": 1, "Agenda Equipe": 1, "Prazo": 0, "Total": 2, "Vencido": 2, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-11": {"Agenda": 8, "Agenda Equipe": 0, "Prazo": 0, "Total": 8, "Vencido": 8, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-12": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 1, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-15": {"Agenda": 11, "Agenda Equipe": 0, "Prazo": 0, "Total": 11, "Vencido": 11, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-16": {"Agenda": 20, "Agenda Equipe": 3, "Prazo": 0, "Total": 23, "Vencido": 23, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-17": {"Agenda": 34, "Agenda Equipe": 0, "Prazo": 0, "Total": 34, "Vencido": 34, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-18": {"Agenda": 65, "Agenda Equipe": 3, "Prazo": 2, "Total": 70, "Vencido": 69, "Fatal": 1, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-19": {"Agenda": 212, "Agenda Equipe": 21, "Prazo": 41, "Total": 274, "Vencido": 57, "Fatal": 217, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-06-22": {"Agenda": 626, "Agenda Equipe": 40, "Prazo": 197, "Total": 863, "Vencido": 62, "Fatal": 150, "D-1": 651, "D-2": 0, "Futuro": 0}, "2026-06-23": {"Agenda": 568, "Agenda Equipe": 29, "Prazo": 189, "Total": 786, "Vencido": 93, "Fatal": 204, "D-1": 361, "D-2": 128, "Futuro": 0}, "2026-06-24": {"Agenda": 701, "Agenda Equipe": 43, "Prazo": 217, "Total": 961, "Vencido": 76, "Fatal": 183, "D-1": 540, "D-2": 101, "Futuro": 61}, "2026-06-25": {"Agenda": 541, "Agenda Equipe": 31, "Prazo": 229, "Total": 801, "Vencido": 5, "Fatal": 205, "D-1": 368, "D-2": 134, "Futuro": 89}, "2026-06-26": {"Agenda": 535, "Agenda Equipe": 39, "Prazo": 190, "Total": 764, "Vencido": 0, "Fatal": 60, "D-1": 416, "D-2": 133, "Futuro": 155}, "2026-06-29": {"Agenda": 550, "Agenda Equipe": 44, "Prazo": 252, "Total": 846, "Vencido": 80, "Fatal": 149, "D-1": 350, "D-2": 100, "Futuro": 167}, "2026-06-30": {"Agenda": 773, "Agenda Equipe": 59, "Prazo": 329, "Total": 1161, "Vencido": 16, "Fatal": 251, "D-1": 484, "D-2": 99, "Futuro": 311}, "2026-07-01": {"Agenda": 692, "Agenda Equipe": 54, "Prazo": 251, "Total": 997, "Vencido": 50, "Fatal": 203, "D-1": 435, "D-2": 70, "Futuro": 239}, "2026-07-02": {"Agenda": 771, "Agenda Equipe": 42, "Prazo": 288, "Total": 1101, "Vencido": 106, "Fatal": 224, "D-1": 393, "D-2": 126, "Futuro": 252}, "2026-07-03": {"Agenda": 624, "Agenda Equipe": 53, "Prazo": 197, "Total": 874, "Vencido": 71, "Fatal": 161, "D-1": 351, "D-2": 0, "Futuro": 291}, "2026-07-04": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 1, "Total": 5, "Vencido": 0, "Fatal": 4, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-07-05": {"Agenda": 17, "Agenda Equipe": 0, "Prazo": 2, "Total": 19, "Vencido": 17, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 2}, "2026-07-06": {"Agenda": 49, "Agenda Equipe": 0, "Prazo": 22, "Total": 71, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 71}, "2026-07-07": {"Agenda": 28, "Agenda Equipe": 0, "Prazo": 33, "Total": 61, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 61}, "2026-07-08": {"Agenda": 26, "Agenda Equipe": 0, "Prazo": 19, "Total": 45, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 45}, "2026-07-09": {"Agenda": 23, "Agenda Equipe": 0, "Prazo": 25, "Total": 48, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 48}, "2026-07-10": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 14, "Total": 19, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 19}, "2026-07-13": {"Agenda": 9, "Agenda Equipe": 0, "Prazo": 12, "Total": 21, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 21}, "2026-07-14": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 8, "Total": 12, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 12}, "2026-07-15": {"Agenda": 0, "Agenda Equipe": 0, "Prazo": 2, "Total": 2, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 2}, "2026-07-16": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 3, "Total": 8, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 8}, "2026-07-17": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-07-20": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 3, "Total": 8, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 8}, "2026-07-21": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 3, "Total": 7, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 7}, "2026-07-22": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 0, "Total": 5, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 5}, "2026-07-23": {"Agenda": 6, "Agenda Equipe": 0, "Prazo": 1, "Total": 7, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 7}, "2026-07-24": {"Agenda": 3, "Agenda Equipe": 0, "Prazo": 2, "Total": 5, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 5}, "2026-07-27": {"Agenda": 3, "Agenda Equipe": 0, "Prazo": 0, "Total": 3, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 3}, "2026-07-28": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 1, "Total": 5, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 5}, "2026-07-29": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-07-30": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-07-31": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-08-03": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-08-04": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 0, "Total": 5, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 5}, "2026-08-06": {"Agenda": 7, "Agenda Equipe": 0, "Prazo": 1, "Total": 8, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 8}, "2026-08-07": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-08-10": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-08-11": {"Agenda": 6, "Agenda Equipe": 0, "Prazo": 0, "Total": 6, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 6}, "2026-08-12": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 0, "Total": 5, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 5}, "2026-08-13": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-08-14": {"Agenda": 3, "Agenda Equipe": 0, "Prazo": 0, "Total": 3, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 3}, "2026-08-17": {"Agenda": 10, "Agenda Equipe": 0, "Prazo": 2, "Total": 12, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 12}, "2026-08-18": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-08-19": {"Agenda": 3, "Agenda Equipe": 0, "Prazo": 0, "Total": 3, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 3}, "2026-08-20": {"Agenda": 6, "Agenda Equipe": 0, "Prazo": 0, "Total": 6, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 6}, "2026-08-21": {"Agenda": 10, "Agenda Equipe": 0, "Prazo": 0, "Total": 10, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 10}, "2026-08-24": {"Agenda": 11, "Agenda Equipe": 0, "Prazo": 1, "Total": 12, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 12}, "2026-08-25": {"Agenda": 8, "Agenda Equipe": 0, "Prazo": 0, "Total": 8, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 8}, "2026-08-26": {"Agenda": 6, "Agenda Equipe": 0, "Prazo": 0, "Total": 6, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 6}, "2026-08-27": {"Agenda": 4, "Agenda Equipe": 0, "Prazo": 0, "Total": 4, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 4}, "2026-08-28": {"Agenda": 5, "Agenda Equipe": 0, "Prazo": 0, "Total": 5, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 5}, "2026-08-31": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-02": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-03": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-04": {"Agenda": 3, "Agenda Equipe": 0, "Prazo": 0, "Total": 3, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 3}, "2026-09-06": {"Agenda": 2, "Agenda Equipe": 0, "Prazo": 0, "Total": 2, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 2}, "2026-09-08": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-11": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-16": {"Agenda": 0, "Agenda Equipe": 0, "Prazo": 1, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-18": {"Agenda": 2, "Agenda Equipe": 0, "Prazo": 0, "Total": 2, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 2}, "2026-09-21": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-22": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-23": {"Agenda": 3, "Agenda Equipe": 0, "Prazo": 0, "Total": 3, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 3}, "2026-09-25": {"Agenda": 2, "Agenda Equipe": 0, "Prazo": 0, "Total": 2, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 2}, "2026-09-28": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-09-29": {"Agenda": 2, "Agenda Equipe": 0, "Prazo": 0, "Total": 2, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 2}, "2026-09-30": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-10-09": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-10-30": {"Agenda": 1, "Agenda Equipe": 0, "Prazo": 0, "Total": 1, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 1}, "2026-11-03": {"Agenda": 729, "Agenda Equipe": 46, "Prazo": 267, "Total": 1042, "Vencido": 0, "Fatal": 80, "D-1": 113, "D-2": 23, "Futuro": 51}, "2026-11-04": {"Agenda": 477, "Agenda Equipe": 49, "Prazo": 212, "Total": 738, "Vencido": 0, "Fatal": 47, "D-1": 90, "D-2": 19, "Futuro": 56}, "2026-11-05": {"Agenda": 718, "Agenda Equipe": 20, "Prazo": 228, "Total": 966, "Vencido": 11, "Fatal": 59, "D-1": 64, "D-2": 8, "Futuro": 86}, "2026-11-06": {"Agenda": 480, "Agenda Equipe": 34, "Prazo": 168, "Total": 682, "Vencido": 0, "Fatal": 66, "D-1": 57, "D-2": 0, "Futuro": 45}, "2026-11-07": {"Agenda": 2, "Agenda Equipe": 0, "Prazo": 0, "Total": 2, "Vencido": 0, "Fatal": 0, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-11-08": {"Agenda": 69, "Agenda Equipe": 1, "Prazo": 11, "Total": 81, "Vencido": 0, "Fatal": 2, "D-1": 0, "D-2": 1, "Futuro": 8}, "2026-11-09": {"Agenda": 734, "Agenda Equipe": 44, "Prazo": 248, "Total": 1026, "Vencido": 1, "Fatal": 68, "D-1": 94, "D-2": 17, "Futuro": 68}, "2026-11-10": {"Agenda": 806, "Agenda Equipe": 52, "Prazo": 320, "Total": 1178, "Vencido": 3, "Fatal": 69, "D-1": 116, "D-2": 14, "Futuro": 118}, "2026-11-11": {"Agenda": 478, "Agenda Equipe": 29, "Prazo": 250, "Total": 757, "Vencido": 1, "Fatal": 79, "D-1": 95, "D-2": 13, "Futuro": 62}, "2026-11-12": {"Agenda": 650, "Agenda Equipe": 23, "Prazo": 275, "Total": 948, "Vencido": 0, "Fatal": 72, "D-1": 100, "D-2": 28, "Futuro": 75}, "2026-11-13": {"Agenda": 574, "Agenda Equipe": 29, "Prazo": 214, "Total": 817, "Vencido": 0, "Fatal": 52, "D-1": 86, "D-2": 0, "Futuro": 76}, "2026-11-14": {"Agenda": 53, "Agenda Equipe": 2, "Prazo": 4, "Total": 59, "Vencido": 0, "Fatal": 4, "D-1": 0, "D-2": 0, "Futuro": 0}, "2026-11-15": {"Agenda": 116, "Agenda Equipe": 3, "Prazo": 18, "Total": 137, "Vencido": 0, "Fatal": 15, "D-1": 0, "D-2": 2, "Futuro": 1}, "2026-11-16": {"Agenda": 602, "Agenda Equipe": 38, "Prazo": 263, "Total": 903, "Vencido": 1, "Fatal": 89, "D-1": 94, "D-2": 19, "Futuro": 60}, "2026-11-17": {"Agenda": 705, "Agenda Equipe": 35, "Prazo": 314, "Total": 1054, "Vencido": 0, "Fatal": 97, "D-1": 114, "D-2": 27, "Futuro": 76}, "2026-11-18": {"Agenda": 926, "Agenda Equipe": 33, "Prazo": 368, "Total": 1327, "Vencido": 3, "Fatal": 100, "D-1": 77, "D-2": 38, "Futuro": 150}, "2026-11-19": {"Agenda": 868, "Agenda Equipe": 34, "Prazo": 356, "Total": 1258, "Vencido": 0, "Fatal": 73, "D-1": 110, "D-2": 75, "Futuro": 98}, "2026-11-20": {"Agenda": 23, "Agenda Equipe": 1, "Prazo": 2, "Total": 26, "Vencido": 0, "Fatal": 0, "D-1": 2, "D-2": 0, "Futuro": 0}};
 function openTimelineDay(dateKey){
   const d = TIMELINE_DATA[dateKey]; if(!d) return;
   const [y,m,day] = dateKey.split('-');
@@ -4528,15 +4528,15 @@ function normalizarNome(nomeOuSigla) {
 }
 
 // Semana 30/31 (27/07 a 02/08) — apenas tipo_agenda=Prazo, computado do Excel semanal
-const RESP=[{"n": "RFE", "grp": "Grupo B1", "ven": 0, "fat": 6, "d1": 27, "d2": 5, "fut": 43, "tot": 81, "fora": 9, "ff": 0}, {"n": "RYL", "grp": "Grupo E2", "ven": 0, "fat": 38, "d1": 32, "d2": 5, "fut": 4, "tot": 79, "fora": 4, "ff": 0}, {"n": "CAL", "grp": "Grupo E2", "ven": 0, "fat": 38, "d1": 14, "d2": 7, "fut": 17, "tot": 76, "fora": 3, "ff": 0}, {"n": "BSO", "grp": "Grupo B1", "ven": 0, "fat": 5, "d1": 22, "d2": 10, "fut": 33, "tot": 70, "fora": 5, "ff": 0}, {"n": "LMI", "grp": "Grupo B3", "ven": 0, "fat": 6, "d1": 33, "d2": 9, "fut": 14, "tot": 62, "fora": 15, "ff": 1}, {"n": "MBF", "grp": "Grupo E2", "ven": 0, "fat": 8, "d1": 20, "d2": 15, "fut": 18, "tot": 61, "fora": 2, "ff": 2}, {"n": "GVM", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 11, "d2": 7, "fut": 35, "tot": 55, "fora": 0, "ff": 0}, {"n": "ARC", "grp": "Grupo E2", "ven": 0, "fat": 10, "d1": 18, "d2": 4, "fut": 21, "tot": 53, "fora": 3, "ff": 2}, {"n": "VSI", "grp": "Grupo C1", "ven": 0, "fat": 31, "d1": 7, "d2": 3, "fut": 11, "tot": 52, "fora": 9, "ff": 9}, {"n": "JRM", "grp": "Grupo E1", "ven": 0, "fat": 18, "d1": 22, "d2": 7, "fut": 4, "tot": 51, "fora": 9, "ff": 6}, {"n": "AEM", "grp": "Grupo B1", "ven": 0, "fat": 8, "d1": 18, "d2": 6, "fut": 18, "tot": 50, "fora": 0, "ff": 0}, {"n": "VCR", "grp": "Grupo B2", "ven": 0, "fat": 19, "d1": 6, "d2": 4, "fut": 20, "tot": 49, "fora": 9, "ff": 1}, {"n": "PSI", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 16, "d2": 13, "fut": 18, "tot": 49, "fora": 0, "ff": 0}, {"n": "LWP", "grp": "Grupo E2", "ven": 0, "fat": 35, "d1": 9, "d2": 0, "fut": 0, "tot": 44, "fora": 2, "ff": 2}, {"n": "TFR", "grp": "Grupo C1", "ven": 0, "fat": 3, "d1": 8, "d2": 9, "fut": 19, "tot": 39, "fora": 10, "ff": 2}, {"n": "BBO", "grp": "Grupo E2", "ven": 0, "fat": 21, "d1": 14, "d2": 1, "fut": 0, "tot": 36, "fora": 2, "ff": 2}, {"n": "BCF", "grp": "Grupo B2", "ven": 0, "fat": 14, "d1": 14, "d2": 4, "fut": 4, "tot": 36, "fora": 12, "ff": 1}, {"n": "TAR", "grp": "Grupo B1", "ven": 0, "fat": 0, "d1": 15, "d2": 0, "fut": 13, "tot": 28, "fora": 9, "ff": 0}, {"n": "ANB", "grp": "Grupo B2", "ven": 0, "fat": 10, "d1": 4, "d2": 7, "fut": 7, "tot": 28, "fora": 7, "ff": 0}, {"n": "VRO", "grp": "Grupo E1", "ven": 0, "fat": 3, "d1": 13, "d2": 4, "fut": 7, "tot": 27, "fora": 0, "ff": 0}, {"n": "BTF", "grp": "Grupo E2", "ven": 3, "fat": 15, "d1": 8, "d2": 0, "fut": 1, "tot": 27, "fora": 11, "ff": 10}, {"n": "RCF", "grp": "Grupo C3", "ven": 0, "fat": 4, "d1": 8, "d2": 5, "fut": 10, "tot": 27, "fora": 2, "ff": 0}, {"n": "GSM", "grp": "Grupo B1", "ven": 0, "fat": 18, "d1": 8, "d2": 0, "fut": 0, "tot": 26, "fora": 3, "ff": 0}, {"n": "TLI", "grp": "Grupo E1", "ven": 0, "fat": 3, "d1": 13, "d2": 8, "fut": 2, "tot": 26, "fora": 3, "ff": 0}, {"n": "NBG", "grp": "Grupo C1", "ven": 0, "fat": 0, "d1": 5, "d2": 6, "fut": 15, "tot": 26, "fora": 0, "ff": 0}, {"n": "JPL", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 5, "d2": 3, "fut": 14, "tot": 23, "fora": 0, "ff": 0}, {"n": "BCF", "grp": "Grupo B1", "ven": 0, "fat": 10, "d1": 4, "d2": 1, "fut": 5, "tot": 20, "fora": 1, "ff": 0}, {"n": "ECO", "grp": "Grupo C2", "ven": 0, "fat": 5, "d1": 2, "d2": 3, "fut": 8, "tot": 18, "fora": 2, "ff": 1}, {"n": "VSI", "grp": "Grupo A3", "ven": 0, "fat": 5, "d1": 0, "d2": 0, "fut": 10, "tot": 15, "fora": 15, "ff": 5}, {"n": "ANB", "grp": "Grupo B3", "ven": 0, "fat": 3, "d1": 4, "d2": 1, "fut": 4, "tot": 12, "fora": 6, "ff": 0}, {"n": "PRAZO", "grp": "Grupo E2", "ven": 8, "fat": 0, "d1": 0, "d2": 0, "fut": 0, "tot": 8, "fora": 0, "ff": 0}, {"n": "RCF", "grp": "Grupo E2", "ven": 0, "fat": 3, "d1": 4, "d2": 0, "fut": 0, "tot": 7, "fora": 0, "ff": 0}, {"n": "AAP", "grp": "Grupo E2", "ven": 0, "fat": 0, "d1": 3, "d2": 2, "fut": 1, "tot": 6, "fora": 1, "ff": 0}, {"n": "SOF", "grp": "Grupo A3", "ven": 1, "fat": 2, "d1": 1, "d2": 1, "fut": 1, "tot": 6, "fora": 1, "ff": 0}, {"n": "TFR", "grp": "Grupo C3", "ven": 0, "fat": 0, "d1": 2, "d2": 1, "fut": 2, "tot": 5, "fora": 1, "ff": 0}, {"n": "GSM", "grp": "Grupo B3", "ven": 0, "fat": 2, "d1": 2, "d2": 0, "fut": 0, "tot": 4, "fora": 0, "ff": 0}, {"n": "ECO", "grp": "Grupo C1", "ven": 0, "fat": 2, "d1": 0, "d2": 1, "fut": 0, "tot": 3, "fora": 0, "ff": 0}, {"n": "VSI", "grp": "Grupo C2", "ven": 0, "fat": 3, "d1": 0, "d2": 0, "fut": 0, "tot": 3, "fora": 2, "ff": 2}, {"n": "NBG", "grp": "Grupo C2", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 1, "tot": 3, "fora": 1, "ff": 1}, {"n": "AAP", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 3, "tot": 3, "fora": 0, "ff": 0}, {"n": "TCE", "grp": "Grupo A1", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 0, "tot": 2, "fora": 0, "ff": 0}, {"n": "JPE", "grp": "Grupo B1", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 0, "tot": 2, "fora": 0, "ff": 0}, {"n": "LDI", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 1, "tot": 2, "fora": 0, "ff": 0}, {"n": "PRAZO", "grp": "Grupo E1", "ven": 2, "fat": 0, "d1": 0, "d2": 0, "fut": 0, "tot": 2, "fora": 0, "ff": 0}, {"n": "NRG", "grp": "Grupo B2", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 1, "tot": 2, "fora": 0, "ff": 0}, {"n": "NBG", "grp": "Grupo A2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "NFS", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 1, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "PRAZO", "grp": "Grupo C1", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "ARC", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "ECO", "grp": "Grupo C3", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "tot": 1, "fora": 0, "ff": 0}, {"n": "RFE", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "SOF", "grp": "Grupo B1", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}];
+const RESP=[{"n": "RFE", "grp": "Grupo B1", "ven": 0, "fat": 6, "d1": 27, "d2": 5, "fut": 43, "tot": 81, "fora": 9, "ff": 0}, {"n": "RYL", "grp": "Grupo E2", "ven": 0, "fat": 38, "d1": 32, "d2": 5, "fut": 4, "tot": 79, "fora": 4, "ff": 0}, {"n": "CAL", "grp": "Grupo E2", "ven": 0, "fat": 38, "d1": 14, "d2": 7, "fut": 17, "tot": 76, "fora": 3, "ff": 0}, {"n": "BSO", "grp": "Grupo B1", "ven": 0, "fat": 5, "d1": 22, "d2": 10, "fut": 33, "tot": 70, "fora": 5, "ff": 0}, {"n": "LMI", "grp": "Grupo B3", "ven": 0, "fat": 6, "d1": 33, "d2": 9, "fut": 14, "tot": 62, "fora": 15, "ff": 1}, {"n": "MBF", "grp": "Grupo E2", "ven": 0, "fat": 8, "d1": 20, "d2": 15, "fut": 18, "tot": 61, "fora": 2, "ff": 2}, {"n": "GVM", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 11, "d2": 7, "fut": 34, "tot": 54, "fora": 0, "ff": 0}, {"n": "ARC", "grp": "Grupo E2", "ven": 0, "fat": 10, "d1": 18, "d2": 4, "fut": 21, "tot": 53, "fora": 3, "ff": 2}, {"n": "VSI", "grp": "Grupo C1", "ven": 0, "fat": 31, "d1": 7, "d2": 3, "fut": 11, "tot": 52, "fora": 9, "ff": 9}, {"n": "JRM", "grp": "Grupo E1", "ven": 0, "fat": 18, "d1": 22, "d2": 7, "fut": 4, "tot": 51, "fora": 9, "ff": 6}, {"n": "AEM", "grp": "Grupo B1", "ven": 0, "fat": 8, "d1": 18, "d2": 6, "fut": 17, "tot": 49, "fora": 0, "ff": 0}, {"n": "VCR", "grp": "Grupo B2", "ven": 0, "fat": 19, "d1": 6, "d2": 4, "fut": 20, "tot": 49, "fora": 9, "ff": 1}, {"n": "PSI", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 16, "d2": 13, "fut": 16, "tot": 47, "fora": 0, "ff": 0}, {"n": "LWP", "grp": "Grupo E2", "ven": 0, "fat": 35, "d1": 9, "d2": 0, "fut": 0, "tot": 44, "fora": 2, "ff": 2}, {"n": "TFR", "grp": "Grupo C1", "ven": 0, "fat": 3, "d1": 8, "d2": 9, "fut": 19, "tot": 39, "fora": 10, "ff": 2}, {"n": "BCF", "grp": "Grupo B2", "ven": 0, "fat": 14, "d1": 14, "d2": 4, "fut": 4, "tot": 36, "fora": 12, "ff": 1}, {"n": "BBO", "grp": "Grupo E2", "ven": 0, "fat": 21, "d1": 14, "d2": 1, "fut": 0, "tot": 36, "fora": 2, "ff": 2}, {"n": "ANB", "grp": "Grupo B2", "ven": 0, "fat": 10, "d1": 4, "d2": 7, "fut": 7, "tot": 28, "fora": 7, "ff": 0}, {"n": "TAR", "grp": "Grupo B1", "ven": 0, "fat": 0, "d1": 15, "d2": 0, "fut": 13, "tot": 28, "fora": 9, "ff": 0}, {"n": "RCF", "grp": "Grupo C3", "ven": 0, "fat": 4, "d1": 8, "d2": 5, "fut": 10, "tot": 27, "fora": 2, "ff": 0}, {"n": "BTF", "grp": "Grupo E2", "ven": 3, "fat": 15, "d1": 8, "d2": 0, "fut": 1, "tot": 27, "fora": 11, "ff": 10}, {"n": "VRO", "grp": "Grupo E1", "ven": 0, "fat": 3, "d1": 13, "d2": 4, "fut": 7, "tot": 27, "fora": 0, "ff": 0}, {"n": "GSM", "grp": "Grupo B1", "ven": 0, "fat": 18, "d1": 8, "d2": 0, "fut": 0, "tot": 26, "fora": 3, "ff": 0}, {"n": "TLI", "grp": "Grupo E1", "ven": 0, "fat": 3, "d1": 13, "d2": 8, "fut": 2, "tot": 26, "fora": 3, "ff": 0}, {"n": "NBG", "grp": "Grupo C1", "ven": 0, "fat": 0, "d1": 5, "d2": 6, "fut": 15, "tot": 26, "fora": 0, "ff": 0}, {"n": "JPL", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 5, "d2": 3, "fut": 14, "tot": 23, "fora": 0, "ff": 0}, {"n": "BCF", "grp": "Grupo B1", "ven": 0, "fat": 10, "d1": 4, "d2": 1, "fut": 5, "tot": 20, "fora": 1, "ff": 0}, {"n": "ECO", "grp": "Grupo C2", "ven": 0, "fat": 5, "d1": 2, "d2": 3, "fut": 7, "tot": 17, "fora": 2, "ff": 1}, {"n": "VSI", "grp": "Grupo A3", "ven": 0, "fat": 5, "d1": 0, "d2": 0, "fut": 10, "tot": 15, "fora": 15, "ff": 5}, {"n": "ANB", "grp": "Grupo B3", "ven": 0, "fat": 3, "d1": 4, "d2": 1, "fut": 4, "tot": 12, "fora": 6, "ff": 0}, {"n": "RCF", "grp": "Grupo E2", "ven": 0, "fat": 3, "d1": 4, "d2": 0, "fut": 0, "tot": 7, "fora": 0, "ff": 0}, {"n": "AAP", "grp": "Grupo E2", "ven": 0, "fat": 0, "d1": 3, "d2": 2, "fut": 1, "tot": 6, "fora": 1, "ff": 0}, {"n": "SOF", "grp": "Grupo A3", "ven": 1, "fat": 2, "d1": 1, "d2": 1, "fut": 1, "tot": 6, "fora": 1, "ff": 0}, {"n": "TFR", "grp": "Grupo C3", "ven": 0, "fat": 0, "d1": 2, "d2": 1, "fut": 2, "tot": 5, "fora": 1, "ff": 0}, {"n": "GSM", "grp": "Grupo B3", "ven": 0, "fat": 2, "d1": 2, "d2": 0, "fut": 0, "tot": 4, "fora": 0, "ff": 0}, {"n": "VSI", "grp": "Grupo C2", "ven": 0, "fat": 3, "d1": 0, "d2": 0, "fut": 0, "tot": 3, "fora": 2, "ff": 2}, {"n": "ECO", "grp": "Grupo C1", "ven": 0, "fat": 2, "d1": 0, "d2": 1, "fut": 0, "tot": 3, "fora": 0, "ff": 0}, {"n": "NBG", "grp": "Grupo C2", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 1, "tot": 3, "fora": 1, "ff": 1}, {"n": "AAP", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 3, "tot": 3, "fora": 0, "ff": 0}, {"n": "JPE", "grp": "Grupo B1", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 0, "tot": 2, "fora": 0, "ff": 0}, {"n": "TCE", "grp": "Grupo A1", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 0, "tot": 2, "fora": 0, "ff": 0}, {"n": "LDI", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 1, "tot": 2, "fora": 0, "ff": 0}, {"n": "NRG", "grp": "Grupo B2", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 1, "tot": 2, "fora": 0, "ff": 0}, {"n": "NBG", "grp": "Grupo A2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "RFE", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "NFS", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 1, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "SOF", "grp": "Grupo B1", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "PRAZO", "grp": "Grupo C1", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "ARC", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "ECO", "grp": "Grupo C3", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "tot": 1, "fora": 0, "ff": 0}];
 
-const GRP_RESP=[{"n": "RFE", "grp": "Grupo B1", "ven": 0, "fat": 6, "d1": 27, "d2": 5, "fut": 43, "tot": 81, "fora": 9, "ff": 0}, {"n": "RYL", "grp": "Grupo E2", "ven": 0, "fat": 38, "d1": 32, "d2": 5, "fut": 4, "tot": 79, "fora": 4, "ff": 0}, {"n": "CAL", "grp": "Grupo E2", "ven": 0, "fat": 38, "d1": 14, "d2": 7, "fut": 17, "tot": 76, "fora": 3, "ff": 0}, {"n": "BSO", "grp": "Grupo B1", "ven": 0, "fat": 5, "d1": 22, "d2": 10, "fut": 33, "tot": 70, "fora": 5, "ff": 0}, {"n": "LMI", "grp": "Grupo B3", "ven": 0, "fat": 6, "d1": 33, "d2": 9, "fut": 14, "tot": 62, "fora": 15, "ff": 1}, {"n": "MBF", "grp": "Grupo E2", "ven": 0, "fat": 8, "d1": 20, "d2": 15, "fut": 18, "tot": 61, "fora": 2, "ff": 2}, {"n": "GVM", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 11, "d2": 7, "fut": 35, "tot": 55, "fora": 0, "ff": 0}, {"n": "ARC", "grp": "Grupo E2", "ven": 0, "fat": 10, "d1": 18, "d2": 4, "fut": 21, "tot": 53, "fora": 3, "ff": 2}, {"n": "VSI", "grp": "Grupo C1", "ven": 0, "fat": 31, "d1": 7, "d2": 3, "fut": 11, "tot": 52, "fora": 9, "ff": 9}, {"n": "JRM", "grp": "Grupo E1", "ven": 0, "fat": 18, "d1": 22, "d2": 7, "fut": 4, "tot": 51, "fora": 9, "ff": 6}, {"n": "AEM", "grp": "Grupo B1", "ven": 0, "fat": 8, "d1": 18, "d2": 6, "fut": 18, "tot": 50, "fora": 0, "ff": 0}, {"n": "VCR", "grp": "Grupo B2", "ven": 0, "fat": 19, "d1": 6, "d2": 4, "fut": 20, "tot": 49, "fora": 9, "ff": 1}, {"n": "PSI", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 16, "d2": 13, "fut": 18, "tot": 49, "fora": 0, "ff": 0}, {"n": "LWP", "grp": "Grupo E2", "ven": 0, "fat": 35, "d1": 9, "d2": 0, "fut": 0, "tot": 44, "fora": 2, "ff": 2}, {"n": "TFR", "grp": "Grupo C1", "ven": 0, "fat": 3, "d1": 8, "d2": 9, "fut": 19, "tot": 39, "fora": 10, "ff": 2}, {"n": "BBO", "grp": "Grupo E2", "ven": 0, "fat": 21, "d1": 14, "d2": 1, "fut": 0, "tot": 36, "fora": 2, "ff": 2}, {"n": "BCF", "grp": "Grupo B2", "ven": 0, "fat": 14, "d1": 14, "d2": 4, "fut": 4, "tot": 36, "fora": 12, "ff": 1}, {"n": "TAR", "grp": "Grupo B1", "ven": 0, "fat": 0, "d1": 15, "d2": 0, "fut": 13, "tot": 28, "fora": 9, "ff": 0}, {"n": "ANB", "grp": "Grupo B2", "ven": 0, "fat": 10, "d1": 4, "d2": 7, "fut": 7, "tot": 28, "fora": 7, "ff": 0}, {"n": "VRO", "grp": "Grupo E1", "ven": 0, "fat": 3, "d1": 13, "d2": 4, "fut": 7, "tot": 27, "fora": 0, "ff": 0}, {"n": "BTF", "grp": "Grupo E2", "ven": 3, "fat": 15, "d1": 8, "d2": 0, "fut": 1, "tot": 27, "fora": 11, "ff": 10}, {"n": "RCF", "grp": "Grupo C3", "ven": 0, "fat": 4, "d1": 8, "d2": 5, "fut": 10, "tot": 27, "fora": 2, "ff": 0}, {"n": "GSM", "grp": "Grupo B1", "ven": 0, "fat": 18, "d1": 8, "d2": 0, "fut": 0, "tot": 26, "fora": 3, "ff": 0}, {"n": "TLI", "grp": "Grupo E1", "ven": 0, "fat": 3, "d1": 13, "d2": 8, "fut": 2, "tot": 26, "fora": 3, "ff": 0}, {"n": "NBG", "grp": "Grupo C1", "ven": 0, "fat": 0, "d1": 5, "d2": 6, "fut": 15, "tot": 26, "fora": 0, "ff": 0}, {"n": "JPL", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 5, "d2": 3, "fut": 14, "tot": 23, "fora": 0, "ff": 0}, {"n": "BCF", "grp": "Grupo B1", "ven": 0, "fat": 10, "d1": 4, "d2": 1, "fut": 5, "tot": 20, "fora": 1, "ff": 0}, {"n": "ECO", "grp": "Grupo C2", "ven": 0, "fat": 5, "d1": 2, "d2": 3, "fut": 8, "tot": 18, "fora": 2, "ff": 1}, {"n": "VSI", "grp": "Grupo A3", "ven": 0, "fat": 5, "d1": 0, "d2": 0, "fut": 10, "tot": 15, "fora": 15, "ff": 5}, {"n": "ANB", "grp": "Grupo B3", "ven": 0, "fat": 3, "d1": 4, "d2": 1, "fut": 4, "tot": 12, "fora": 6, "ff": 0}, {"n": "PRAZO", "grp": "Grupo E2", "ven": 8, "fat": 0, "d1": 0, "d2": 0, "fut": 0, "tot": 8, "fora": 0, "ff": 0}, {"n": "RCF", "grp": "Grupo E2", "ven": 0, "fat": 3, "d1": 4, "d2": 0, "fut": 0, "tot": 7, "fora": 0, "ff": 0}, {"n": "AAP", "grp": "Grupo E2", "ven": 0, "fat": 0, "d1": 3, "d2": 2, "fut": 1, "tot": 6, "fora": 1, "ff": 0}, {"n": "SOF", "grp": "Grupo A3", "ven": 1, "fat": 2, "d1": 1, "d2": 1, "fut": 1, "tot": 6, "fora": 1, "ff": 0}, {"n": "TFR", "grp": "Grupo C3", "ven": 0, "fat": 0, "d1": 2, "d2": 1, "fut": 2, "tot": 5, "fora": 1, "ff": 0}, {"n": "GSM", "grp": "Grupo B3", "ven": 0, "fat": 2, "d1": 2, "d2": 0, "fut": 0, "tot": 4, "fora": 0, "ff": 0}, {"n": "ECO", "grp": "Grupo C1", "ven": 0, "fat": 2, "d1": 0, "d2": 1, "fut": 0, "tot": 3, "fora": 0, "ff": 0}, {"n": "VSI", "grp": "Grupo C2", "ven": 0, "fat": 3, "d1": 0, "d2": 0, "fut": 0, "tot": 3, "fora": 2, "ff": 2}, {"n": "NBG", "grp": "Grupo C2", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 1, "tot": 3, "fora": 1, "ff": 1}, {"n": "AAP", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 3, "tot": 3, "fora": 0, "ff": 0}, {"n": "TCE", "grp": "Grupo A1", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 0, "tot": 2, "fora": 0, "ff": 0}, {"n": "JPE", "grp": "Grupo B1", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 0, "tot": 2, "fora": 0, "ff": 0}, {"n": "LDI", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 1, "tot": 2, "fora": 0, "ff": 0}, {"n": "PRAZO", "grp": "Grupo E1", "ven": 2, "fat": 0, "d1": 0, "d2": 0, "fut": 0, "tot": 2, "fora": 0, "ff": 0}, {"n": "NRG", "grp": "Grupo B2", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 1, "tot": 2, "fora": 0, "ff": 0}, {"n": "NBG", "grp": "Grupo A2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "NFS", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 1, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "PRAZO", "grp": "Grupo C1", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "ARC", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "ECO", "grp": "Grupo C3", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "tot": 1, "fora": 0, "ff": 0}, {"n": "RFE", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "SOF", "grp": "Grupo B1", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}];
-const HR_DIST=[[0, 0], [1, 2], [2, 0], [3, 0], [4, 0], [5, 0], [6, 6], [7, 16], [8, 11], [9, 93], [10, 141], [11, 162], [12, 86], [13, 68], [14, 79], [15, 83], [16, 167], [17, 169], [18, 109], [19, 76], [20, 32], [21, 12], [22, 5], [23, 1]];
-const FAT_FORA=[{"proc": "1001318-73.2026.5.02.0045", "resp": "ARC", "grp": "Grupo E2", "dt": "16/11", "hora_real": "07:11:52", "status": "Fatal"}, {"proc": "1001152-78.2024.5.02.0411", "resp": "LMI", "grp": "Grupo B3", "dt": "16/11", "hora_real": "08:11:00", "status": "Fatal"}, {"proc": "0011205-25.2022.5.15.0030", "resp": "ECO", "grp": "Grupo C2", "dt": "16/11", "hora_real": "08:11:16", "status": "Fatal"}, {"proc": "0011696-51.2025.5.15.0119", "resp": "MBF", "grp": "Grupo E2", "dt": "16/11", "hora_real": "08:11:35", "status": "Fatal"}, {"proc": "0010581-51.2025.5.03.0176", "resp": "JRM", "grp": "Grupo E1", "dt": "17/11", "hora_real": "06:11:16", "status": "Fatal"}, {"proc": "0010863-75.2026.5.15.0126", "resp": "JRM", "grp": "Grupo E1", "dt": "17/11", "hora_real": "06:11:21", "status": "Fatal"}, {"proc": "0010619-83.2025.5.15.0126", "resp": "JRM", "grp": "Grupo E1", "dt": "17/11", "hora_real": "06:11:41", "status": "Fatal"}, {"proc": "0010863-75.2026.5.15.0126", "resp": "JRM", "grp": "Grupo E1", "dt": "17/11", "hora_real": "06:11:44", "status": "Fatal"}, {"proc": "0010179-10.2025.5.15.0087", "resp": "JRM", "grp": "Grupo E1", "dt": "17/11", "hora_real": "06:11:50", "status": "Fatal"}, {"proc": "1001457-38.2025.5.02.0052", "resp": "NBG", "grp": "Grupo C2", "dt": "17/11", "hora_real": "06:11:55", "status": "Fatal"}, {"proc": "0010921-15.2026.5.15.0050", "resp": "MBF", "grp": "Grupo E2", "dt": "17/11", "hora_real": "07:11:05", "status": "Fatal"}, {"proc": "0011605-91.2024.5.15.0087", "resp": "JRM", "grp": "Grupo E1", "dt": "17/11", "hora_real": "07:11:06", "status": "Fatal"}, {"proc": "1000557-62.2026.5.02.0006", "resp": "TFR", "grp": "Grupo C1", "dt": "17/11", "hora_real": "07:11:09", "status": "Fatal"}, {"proc": "1001072-71.2025.5.02.0026", "resp": "TFR", "grp": "Grupo C1", "dt": "17/11", "hora_real": "07:11:26", "status": "Fatal"}, {"proc": "0010990-13.2026.5.15.0126", "resp": "BBO", "grp": "Grupo E2", "dt": "17/11", "hora_real": "08:11:56", "status": "Fatal"}, {"proc": "0001366-30.2026.5.23.0121", "resp": "BTF", "grp": "Grupo E2", "dt": "17/11", "hora_real": "19:11:38", "status": "Fatal"}, {"proc": "0001366-30.2026.5.23.0121", "resp": "BTF", "grp": "Grupo E2", "dt": "17/11", "hora_real": "19:11:38", "status": "Fatal"}, {"proc": "0024648-33.2026.5.24.0004", "resp": "BTF", "grp": "Grupo E2", "dt": "17/11", "hora_real": "19:11:43", "status": "Fatal"}, {"proc": "0001626-08.2026.5.18.0102", "resp": "BTF", "grp": "Grupo E2", "dt": "17/11", "hora_real": "20:11:12", "status": "Fatal"}, {"proc": "0001626-08.2026.5.18.0102", "resp": "BTF", "grp": "Grupo E2", "dt": "17/11", "hora_real": "21:11:02", "status": "Fatal"}, {"proc": "0100193-42.2026.5.01.0007", "resp": "VSI", "grp": "Grupo A3", "dt": "18/11", "hora_real": "19:11:00", "status": "Fatal"}, {"proc": "0100185-94.2026.5.01.0062", "resp": "VSI", "grp": "Grupo A3", "dt": "18/11", "hora_real": "19:11:00", "status": "Fatal"}, {"proc": "1001577-39.2026.5.02.0087", "resp": "VSI", "grp": "Grupo C1", "dt": "18/11", "hora_real": "19:11:00", "status": "Fatal"}, {"proc": "0001491-75.2026.5.07.0013", "resp": "VSI", "grp": "Grupo C1", "dt": "18/11", "hora_real": "19:11:01", "status": "Fatal"}, {"proc": "0001760-47.2026.5.07.0003", "resp": "VSI", "grp": "Grupo C1", "dt": "18/11", "hora_real": "19:11:04", "status": "Fatal"}, {"proc": "0001564-80.2026.5.07.0002", "resp": "VSI", "grp": "Grupo C2", "dt": "18/11", "hora_real": "19:11:04", "status": "Fatal"}, {"proc": "0012965-80.2024.5.15.0016", "resp": "VCR", "grp": "Grupo B2", "dt": "18/11", "hora_real": "19:11:11", "status": "Fatal"}, {"proc": "0100189-72.2026.5.01.0017", "resp": "VSI", "grp": "Grupo A3", "dt": "18/11", "hora_real": "19:11:11", "status": "Fatal"}, {"proc": "0001502-27.2026.5.23.0121", "resp": "BTF", "grp": "Grupo E2", "dt": "18/11", "hora_real": "19:11:16", "status": "Fatal"}, {"proc": "0100191-86.2026.5.01.0067", "resp": "VSI", "grp": "Grupo A3", "dt": "18/11", "hora_real": "19:11:16", "status": "Fatal"}, {"proc": "0001476-30.2026.5.07.0006", "resp": "VSI", "grp": "Grupo C1", "dt": "18/11", "hora_real": "19:11:26", "status": "Fatal"}, {"proc": "0001535-17.2026.5.23.0121", "resp": "BTF", "grp": "Grupo E2", "dt": "18/11", "hora_real": "19:11:29", "status": "Fatal"}, {"proc": "0001575-97.2026.5.18.0101", "resp": "BTF", "grp": "Grupo E2", "dt": "18/11", "hora_real": "19:11:30", "status": "Fatal"}, {"proc": "0001673-47.2025.5.09.0011", "resp": "VSI", "grp": "Grupo C2", "dt": "18/11", "hora_real": "19:11:35", "status": "Fatal"}, {"proc": "0011641-94.2026.5.15.0045", "resp": "BCF", "grp": "Grupo B2", "dt": "18/11", "hora_real": "19:11:36", "status": "Fatal"}, {"proc": "0000016-73.2026.5.09.0128", "resp": "VSI", "grp": "Grupo C1", "dt": "18/11", "hora_real": "19:11:38", "status": "Fatal"}, {"proc": "0000012-13.2026.5.09.0071", "resp": "VSI", "grp": "Grupo C1", "dt": "18/11", "hora_real": "19:11:39", "status": "Fatal"}, {"proc": "0026021-45.2026.5.24.0022", "resp": "BTF", "grp": "Grupo E2", "dt": "18/11", "hora_real": "19:11:41", "status": "Fatal"}, {"proc": "0100203-26.2026.5.01.0027", "resp": "VSI", "grp": "Grupo A3", "dt": "18/11", "hora_real": "19:11:50", "status": "Fatal"}, {"proc": "0024648-33.2026.5.24.0004", "resp": "BTF", "grp": "Grupo E2", "dt": "18/11", "hora_real": "19:11:59", "status": "Fatal"}, {"proc": "0000407-11.2026.5.09.0069", "resp": "VSI", "grp": "Grupo C1", "dt": "18/11", "hora_real": "20:11:13", "status": "Fatal"}, {"proc": "0001599-98.2026.5.07.0015", "resp": "VSI", "grp": "Grupo C1", "dt": "18/11", "hora_real": "20:11:36", "status": "Fatal"}, {"proc": "0001482-16.2026.5.07.0013", "resp": "VSI", "grp": "Grupo C1", "dt": "18/11", "hora_real": "21:11:33", "status": "Fatal"}, {"proc": "0011029-16.2026.5.15.0027", "resp": "LWP", "grp": "Grupo E2", "dt": "19/11", "hora_real": "01:11:38", "status": "Fatal"}, {"proc": "0011029-16.2026.5.15.0027", "resp": "LWP", "grp": "Grupo E2", "dt": "19/11", "hora_real": "01:11:38", "status": "Fatal"}, {"proc": "0012720-14.2026.5.15.0044", "resp": "ARC", "grp": "Grupo E2", "dt": "19/11", "hora_real": "19:11:22", "status": "Fatal"}, {"proc": "0010374-66.2026.5.03.0160", "resp": "BBO", "grp": "Grupo E2", "dt": "19/11", "hora_real": "20:11:53", "status": "Fatal"}];
-const BY_GRUPO={"Grupo E2": {"total": 398, "ven": 11, "fat": 169, "d1": 122, "d2": 34, "fut": 62, "fora": 28, "ff": 18}, "Grupo B1": {"total": 278, "ven": 0, "fat": 49, "d1": 95, "d2": 22, "fut": 112, "fora": 27, "ff": 0}, "Grupo E1": {"total": 237, "ven": 2, "fat": 29, "d1": 81, "d2": 42, "fut": 83, "fora": 12, "ff": 6}, "Grupo C1": {"total": 121, "ven": 0, "fat": 36, "d1": 20, "d2": 20, "fut": 45, "fora": 19, "ff": 11}, "Grupo B2": {"total": 115, "ven": 0, "fat": 43, "d1": 24, "d2": 16, "fut": 32, "fora": 28, "ff": 2}, "Grupo B3": {"total": 78, "ven": 0, "fat": 11, "d1": 39, "d2": 10, "fut": 18, "fora": 21, "ff": 1}, "Grupo C3": {"total": 33, "ven": 0, "fat": 4, "d1": 10, "d2": 6, "fut": 13, "fora": 3, "ff": 0}, "Grupo C2": {"total": 24, "ven": 0, "fat": 9, "d1": 3, "d2": 3, "fut": 9, "fora": 5, "ff": 4}, "Grupo A3": {"total": 24, "ven": 1, "fat": 7, "d1": 1, "d2": 3, "fut": 12, "fora": 16, "ff": 5}, "Grupo A1": {"total": 2, "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 0, "fora": 0, "ff": 0}, "Grupo A2": {"total": 1, "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "fora": 0, "ff": 0}};
+const GRP_RESP=[{"n": "RFE", "grp": "Grupo B1", "ven": 0, "fat": 6, "d1": 27, "d2": 5, "fut": 43, "tot": 81, "fora": 9, "ff": 0}, {"n": "RYL", "grp": "Grupo E2", "ven": 0, "fat": 38, "d1": 32, "d2": 5, "fut": 4, "tot": 79, "fora": 4, "ff": 0}, {"n": "CAL", "grp": "Grupo E2", "ven": 0, "fat": 38, "d1": 14, "d2": 7, "fut": 17, "tot": 76, "fora": 3, "ff": 0}, {"n": "BSO", "grp": "Grupo B1", "ven": 0, "fat": 5, "d1": 22, "d2": 10, "fut": 33, "tot": 70, "fora": 5, "ff": 0}, {"n": "LMI", "grp": "Grupo B3", "ven": 0, "fat": 6, "d1": 33, "d2": 9, "fut": 14, "tot": 62, "fora": 15, "ff": 1}, {"n": "MBF", "grp": "Grupo E2", "ven": 0, "fat": 8, "d1": 20, "d2": 15, "fut": 18, "tot": 61, "fora": 2, "ff": 2}, {"n": "GVM", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 11, "d2": 7, "fut": 34, "tot": 54, "fora": 0, "ff": 0}, {"n": "ARC", "grp": "Grupo E2", "ven": 0, "fat": 10, "d1": 18, "d2": 4, "fut": 21, "tot": 53, "fora": 3, "ff": 2}, {"n": "VSI", "grp": "Grupo C1", "ven": 0, "fat": 31, "d1": 7, "d2": 3, "fut": 11, "tot": 52, "fora": 9, "ff": 9}, {"n": "JRM", "grp": "Grupo E1", "ven": 0, "fat": 18, "d1": 22, "d2": 7, "fut": 4, "tot": 51, "fora": 9, "ff": 6}, {"n": "AEM", "grp": "Grupo B1", "ven": 0, "fat": 8, "d1": 18, "d2": 6, "fut": 17, "tot": 49, "fora": 0, "ff": 0}, {"n": "VCR", "grp": "Grupo B2", "ven": 0, "fat": 19, "d1": 6, "d2": 4, "fut": 20, "tot": 49, "fora": 9, "ff": 1}, {"n": "PSI", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 16, "d2": 13, "fut": 16, "tot": 47, "fora": 0, "ff": 0}, {"n": "LWP", "grp": "Grupo E2", "ven": 0, "fat": 35, "d1": 9, "d2": 0, "fut": 0, "tot": 44, "fora": 2, "ff": 2}, {"n": "TFR", "grp": "Grupo C1", "ven": 0, "fat": 3, "d1": 8, "d2": 9, "fut": 19, "tot": 39, "fora": 10, "ff": 2}, {"n": "BCF", "grp": "Grupo B2", "ven": 0, "fat": 14, "d1": 14, "d2": 4, "fut": 4, "tot": 36, "fora": 12, "ff": 1}, {"n": "BBO", "grp": "Grupo E2", "ven": 0, "fat": 21, "d1": 14, "d2": 1, "fut": 0, "tot": 36, "fora": 2, "ff": 2}, {"n": "ANB", "grp": "Grupo B2", "ven": 0, "fat": 10, "d1": 4, "d2": 7, "fut": 7, "tot": 28, "fora": 7, "ff": 0}, {"n": "TAR", "grp": "Grupo B1", "ven": 0, "fat": 0, "d1": 15, "d2": 0, "fut": 13, "tot": 28, "fora": 9, "ff": 0}, {"n": "RCF", "grp": "Grupo C3", "ven": 0, "fat": 4, "d1": 8, "d2": 5, "fut": 10, "tot": 27, "fora": 2, "ff": 0}, {"n": "BTF", "grp": "Grupo E2", "ven": 3, "fat": 15, "d1": 8, "d2": 0, "fut": 1, "tot": 27, "fora": 11, "ff": 10}, {"n": "VRO", "grp": "Grupo E1", "ven": 0, "fat": 3, "d1": 13, "d2": 4, "fut": 7, "tot": 27, "fora": 0, "ff": 0}, {"n": "GSM", "grp": "Grupo B1", "ven": 0, "fat": 18, "d1": 8, "d2": 0, "fut": 0, "tot": 26, "fora": 3, "ff": 0}, {"n": "TLI", "grp": "Grupo E1", "ven": 0, "fat": 3, "d1": 13, "d2": 8, "fut": 2, "tot": 26, "fora": 3, "ff": 0}, {"n": "NBG", "grp": "Grupo C1", "ven": 0, "fat": 0, "d1": 5, "d2": 6, "fut": 15, "tot": 26, "fora": 0, "ff": 0}, {"n": "JPL", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 5, "d2": 3, "fut": 14, "tot": 23, "fora": 0, "ff": 0}, {"n": "BCF", "grp": "Grupo B1", "ven": 0, "fat": 10, "d1": 4, "d2": 1, "fut": 5, "tot": 20, "fora": 1, "ff": 0}, {"n": "ECO", "grp": "Grupo C2", "ven": 0, "fat": 5, "d1": 2, "d2": 3, "fut": 7, "tot": 17, "fora": 2, "ff": 1}, {"n": "VSI", "grp": "Grupo A3", "ven": 0, "fat": 5, "d1": 0, "d2": 0, "fut": 10, "tot": 15, "fora": 15, "ff": 5}, {"n": "ANB", "grp": "Grupo B3", "ven": 0, "fat": 3, "d1": 4, "d2": 1, "fut": 4, "tot": 12, "fora": 6, "ff": 0}, {"n": "RCF", "grp": "Grupo E2", "ven": 0, "fat": 3, "d1": 4, "d2": 0, "fut": 0, "tot": 7, "fora": 0, "ff": 0}, {"n": "AAP", "grp": "Grupo E2", "ven": 0, "fat": 0, "d1": 3, "d2": 2, "fut": 1, "tot": 6, "fora": 1, "ff": 0}, {"n": "SOF", "grp": "Grupo A3", "ven": 1, "fat": 2, "d1": 1, "d2": 1, "fut": 1, "tot": 6, "fora": 1, "ff": 0}, {"n": "TFR", "grp": "Grupo C3", "ven": 0, "fat": 0, "d1": 2, "d2": 1, "fut": 2, "tot": 5, "fora": 1, "ff": 0}, {"n": "GSM", "grp": "Grupo B3", "ven": 0, "fat": 2, "d1": 2, "d2": 0, "fut": 0, "tot": 4, "fora": 0, "ff": 0}, {"n": "VSI", "grp": "Grupo C2", "ven": 0, "fat": 3, "d1": 0, "d2": 0, "fut": 0, "tot": 3, "fora": 2, "ff": 2}, {"n": "ECO", "grp": "Grupo C1", "ven": 0, "fat": 2, "d1": 0, "d2": 1, "fut": 0, "tot": 3, "fora": 0, "ff": 0}, {"n": "NBG", "grp": "Grupo C2", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 1, "tot": 3, "fora": 1, "ff": 1}, {"n": "AAP", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 3, "tot": 3, "fora": 0, "ff": 0}, {"n": "JPE", "grp": "Grupo B1", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 0, "tot": 2, "fora": 0, "ff": 0}, {"n": "TCE", "grp": "Grupo A1", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 0, "tot": 2, "fora": 0, "ff": 0}, {"n": "LDI", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 1, "tot": 2, "fora": 0, "ff": 0}, {"n": "NRG", "grp": "Grupo B2", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 1, "tot": 2, "fora": 0, "ff": 0}, {"n": "NBG", "grp": "Grupo A2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "RFE", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "NFS", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 1, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "SOF", "grp": "Grupo B1", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "PRAZO", "grp": "Grupo C1", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "ARC", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "ECO", "grp": "Grupo C3", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "tot": 1, "fora": 0, "ff": 0}];
+const HR_DIST=[[0, 0], [1, 2], [2, 0], [3, 0], [4, 0], [5, 0], [6, 6], [7, 16], [8, 11], [9, 93], [10, 131], [11, 162], [12, 86], [13, 68], [14, 79], [15, 82], [16, 164], [17, 169], [18, 108], [19, 76], [20, 32], [21, 12], [22, 5], [23, 1]];
+const FAT_FORA=[{"proc": "1001318-73.2026.5.02.0045", "resp": "ARC", "grp": "Grupo E2", "dt": "16/11", "hora_real": "07:11:52", "status": "Fatal"}, {"proc": "1001152-78.2024.5.02.0411", "resp": "LMI", "grp": "Grupo B3", "dt": "16/11", "hora_real": "08:11:00", "status": "Fatal"}, {"proc": "0011205-25.2022.5.15.0030", "resp": "ECO", "grp": "Grupo C2", "dt": "16/11", "hora_real": "08:11:16", "status": "Fatal"}, {"proc": "0011696-51.2025.5.15.0119", "resp": "MBF", "grp": "Grupo E2", "dt": "16/11", "hora_real": "08:11:35", "status": "Fatal"}, {"proc": "0010581-51.2025.5.03.0176", "resp": "JRM", "grp": "Grupo E1", "dt": "17/11", "hora_real": "06:11:16", "status": "Fatal"}, {"proc": "0010863-75.2026.5.15.0126", "resp": "JRM", "grp": "Grupo E1", "dt": "17/11", "hora_real": "06:11:21", "status": "Fatal"}, {"proc": "0010619-83.2025.5.15.0126", "resp": "JRM", "grp": "Grupo E1", "dt": "17/11", "hora_real": "06:11:41", "status": "Fatal"}, {"proc": "0010863-75.2026.5.15.0126", "resp": "JRM", "grp": "Grupo E1", "dt": "17/11", "hora_real": "06:11:44", "status": "Fatal"}, {"proc": "0010179-10.2025.5.15.0087", "resp": "JRM", "grp": "Grupo E1", "dt": "17/11", "hora_real": "06:11:50", "status": "Fatal"}, {"proc": "1001457-38.2025.5.02.0052", "resp": "NBG", "grp": "Grupo C2", "dt": "17/11", "hora_real": "06:11:55", "status": "Fatal"}, {"proc": "0010921-15.2026.5.15.0050", "resp": "MBF", "grp": "Grupo E2", "dt": "17/11", "hora_real": "07:11:05", "status": "Fatal"}, {"proc": "0011605-91.2024.5.15.0087", "resp": "JRM", "grp": "Grupo E1", "dt": "17/11", "hora_real": "07:11:06", "status": "Fatal"}, {"proc": "1000557-62.2026.5.02.0006", "resp": "TFR", "grp": "Grupo C1", "dt": "17/11", "hora_real": "07:11:09", "status": "Fatal"}, {"proc": "1001072-71.2025.5.02.0026", "resp": "TFR", "grp": "Grupo C1", "dt": "17/11", "hora_real": "07:11:26", "status": "Fatal"}, {"proc": "0010990-13.2026.5.15.0126", "resp": "BBO", "grp": "Grupo E2", "dt": "17/11", "hora_real": "08:11:56", "status": "Fatal"}, {"proc": "0001366-30.2026.5.23.0121", "resp": "BTF", "grp": "Grupo E2", "dt": "17/11", "hora_real": "19:11:38", "status": "Fatal"}, {"proc": "0001366-30.2026.5.23.0121", "resp": "BTF", "grp": "Grupo E2", "dt": "17/11", "hora_real": "19:11:38", "status": "Fatal"}, {"proc": "0024648-33.2026.5.24.0004", "resp": "BTF", "grp": "Grupo E2", "dt": "17/11", "hora_real": "19:11:43", "status": "Fatal"}, {"proc": "0001626-08.2026.5.18.0102", "resp": "BTF", "grp": "Grupo E2", "dt": "17/11", "hora_real": "20:11:12", "status": "Fatal"}, {"proc": "0001626-08.2026.5.18.0102", "resp": "BTF", "grp": "Grupo E2", "dt": "17/11", "hora_real": "21:11:02", "status": "Fatal"}, {"proc": "1001577-39.2026.5.02.0087", "resp": "VSI", "grp": "Grupo C1", "dt": "18/11", "hora_real": "19:11:00", "status": "Fatal"}, {"proc": "0100193-42.2026.5.01.0007", "resp": "VSI", "grp": "Grupo A3", "dt": "18/11", "hora_real": "19:11:00", "status": "Fatal"}, {"proc": "0100185-94.2026.5.01.0062", "resp": "VSI", "grp": "Grupo A3", "dt": "18/11", "hora_real": "19:11:00", "status": "Fatal"}, {"proc": "0001491-75.2026.5.07.0013", "resp": "VSI", "grp": "Grupo C1", "dt": "18/11", "hora_real": "19:11:01", "status": "Fatal"}, {"proc": "0001760-47.2026.5.07.0003", "resp": "VSI", "grp": "Grupo C1", "dt": "18/11", "hora_real": "19:11:04", "status": "Fatal"}, {"proc": "0001564-80.2026.5.07.0002", "resp": "VSI", "grp": "Grupo C2", "dt": "18/11", "hora_real": "19:11:04", "status": "Fatal"}, {"proc": "0012965-80.2024.5.15.0016", "resp": "VCR", "grp": "Grupo B2", "dt": "18/11", "hora_real": "19:11:11", "status": "Fatal"}, {"proc": "0100189-72.2026.5.01.0017", "resp": "VSI", "grp": "Grupo A3", "dt": "18/11", "hora_real": "19:11:11", "status": "Fatal"}, {"proc": "0100191-86.2026.5.01.0067", "resp": "VSI", "grp": "Grupo A3", "dt": "18/11", "hora_real": "19:11:16", "status": "Fatal"}, {"proc": "0001502-27.2026.5.23.0121", "resp": "BTF", "grp": "Grupo E2", "dt": "18/11", "hora_real": "19:11:16", "status": "Fatal"}, {"proc": "0001476-30.2026.5.07.0006", "resp": "VSI", "grp": "Grupo C1", "dt": "18/11", "hora_real": "19:11:26", "status": "Fatal"}, {"proc": "0001535-17.2026.5.23.0121", "resp": "BTF", "grp": "Grupo E2", "dt": "18/11", "hora_real": "19:11:29", "status": "Fatal"}, {"proc": "0001575-97.2026.5.18.0101", "resp": "BTF", "grp": "Grupo E2", "dt": "18/11", "hora_real": "19:11:30", "status": "Fatal"}, {"proc": "0001673-47.2025.5.09.0011", "resp": "VSI", "grp": "Grupo C2", "dt": "18/11", "hora_real": "19:11:35", "status": "Fatal"}, {"proc": "0011641-94.2026.5.15.0045", "resp": "BCF", "grp": "Grupo B2", "dt": "18/11", "hora_real": "19:11:36", "status": "Fatal"}, {"proc": "0000016-73.2026.5.09.0128", "resp": "VSI", "grp": "Grupo C1", "dt": "18/11", "hora_real": "19:11:38", "status": "Fatal"}, {"proc": "0000012-13.2026.5.09.0071", "resp": "VSI", "grp": "Grupo C1", "dt": "18/11", "hora_real": "19:11:39", "status": "Fatal"}, {"proc": "0026021-45.2026.5.24.0022", "resp": "BTF", "grp": "Grupo E2", "dt": "18/11", "hora_real": "19:11:41", "status": "Fatal"}, {"proc": "0100203-26.2026.5.01.0027", "resp": "VSI", "grp": "Grupo A3", "dt": "18/11", "hora_real": "19:11:50", "status": "Fatal"}, {"proc": "0024648-33.2026.5.24.0004", "resp": "BTF", "grp": "Grupo E2", "dt": "18/11", "hora_real": "19:11:59", "status": "Fatal"}, {"proc": "0000407-11.2026.5.09.0069", "resp": "VSI", "grp": "Grupo C1", "dt": "18/11", "hora_real": "20:11:13", "status": "Fatal"}, {"proc": "0001599-98.2026.5.07.0015", "resp": "VSI", "grp": "Grupo C1", "dt": "18/11", "hora_real": "20:11:36", "status": "Fatal"}, {"proc": "0001482-16.2026.5.07.0013", "resp": "VSI", "grp": "Grupo C1", "dt": "18/11", "hora_real": "21:11:33", "status": "Fatal"}, {"proc": "0011029-16.2026.5.15.0027", "resp": "LWP", "grp": "Grupo E2", "dt": "19/11", "hora_real": "01:11:38", "status": "Fatal"}, {"proc": "0011029-16.2026.5.15.0027", "resp": "LWP", "grp": "Grupo E2", "dt": "19/11", "hora_real": "01:11:38", "status": "Fatal"}, {"proc": "0012720-14.2026.5.15.0044", "resp": "ARC", "grp": "Grupo E2", "dt": "19/11", "hora_real": "19:11:22", "status": "Fatal"}, {"proc": "0010374-66.2026.5.03.0160", "resp": "BBO", "grp": "Grupo E2", "dt": "19/11", "hora_real": "20:11:53", "status": "Fatal"}];
+const BY_GRUPO={"Grupo E2": {"total": 390, "ven": 3, "fat": 169, "d1": 122, "d2": 34, "fut": 62, "fora": 28, "ff": 18}, "Grupo B1": {"total": 277, "ven": 0, "fat": 49, "d1": 95, "d2": 22, "fut": 111, "fora": 27, "ff": 0}, "Grupo E1": {"total": 232, "ven": 0, "fat": 29, "d1": 81, "d2": 42, "fut": 80, "fora": 12, "ff": 6}, "Grupo C1": {"total": 121, "ven": 0, "fat": 36, "d1": 20, "d2": 20, "fut": 45, "fora": 19, "ff": 11}, "Grupo B2": {"total": 115, "ven": 0, "fat": 43, "d1": 24, "d2": 16, "fut": 32, "fora": 28, "ff": 2}, "Grupo B3": {"total": 78, "ven": 0, "fat": 11, "d1": 39, "d2": 10, "fut": 18, "fora": 21, "ff": 1}, "Grupo C3": {"total": 33, "ven": 0, "fat": 4, "d1": 10, "d2": 6, "fut": 13, "fora": 3, "ff": 0}, "Grupo A3": {"total": 24, "ven": 1, "fat": 7, "d1": 1, "d2": 3, "fut": 12, "fora": 16, "ff": 5}, "Grupo C2": {"total": 23, "ven": 0, "fat": 9, "d1": 3, "d2": 3, "fut": 8, "fora": 5, "ff": 4}, "Grupo A1": {"total": 2, "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 0, "fora": 0, "ff": 0}, "Grupo A2": {"total": 1, "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "fora": 0, "ff": 0}};
 
 // Semana 28 (06/07 a 12/07) - apenas tipo_agenda=Prazo
-const RESP_S20=[{"n": "RFE", "grp": "Grupo B1", "ven": 0, "fat": 11, "d1": 46, "d2": 3, "fut": 32, "tot": 92, "fora": 35, "ff": 0}, {"n": "BSO", "grp": "Grupo B1", "ven": 0, "fat": 6, "d1": 37, "d2": 4, "fut": 40, "tot": 87, "fora": 16, "ff": 2}, {"n": "LMI", "grp": "Grupo B3", "ven": 0, "fat": 2, "d1": 64, "d2": 5, "fut": 9, "tot": 80, "fora": 0, "ff": 0}, {"n": "RYL", "grp": "Grupo E2", "ven": 0, "fat": 46, "d1": 24, "d2": 1, "fut": 8, "tot": 79, "fora": 31, "ff": 12}, {"n": "CAL", "grp": "Grupo E2", "ven": 0, "fat": 44, "d1": 17, "d2": 0, "fut": 16, "tot": 77, "fora": 1, "ff": 1}, {"n": "VSI", "grp": "Grupo C1", "ven": 0, "fat": 12, "d1": 17, "d2": 4, "fut": 34, "tot": 67, "fora": 17, "ff": 0}, {"n": "BBO", "grp": "Grupo E2", "ven": 0, "fat": 23, "d1": 27, "d2": 1, "fut": 15, "tot": 66, "fora": 4, "ff": 1}, {"n": "GVM", "grp": "Grupo E1", "ven": 1, "fat": 1, "d1": 18, "d2": 9, "fut": 34, "tot": 63, "fora": 2, "ff": 0}, {"n": "GSM", "grp": "Grupo B1", "ven": 0, "fat": 14, "d1": 17, "d2": 2, "fut": 24, "tot": 57, "fora": 1, "ff": 1}, {"n": "LWP", "grp": "Grupo E2", "ven": 0, "fat": 44, "d1": 7, "d2": 2, "fut": 1, "tot": 54, "fora": 9, "ff": 9}, {"n": "MBF", "grp": "Grupo E2", "ven": 0, "fat": 3, "d1": 31, "d2": 7, "fut": 11, "tot": 52, "fora": 8, "ff": 0}, {"n": "VRO", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 19, "d2": 3, "fut": 20, "tot": 43, "fora": 0, "ff": 0}, {"n": "BCF", "grp": "Grupo B2", "ven": 0, "fat": 20, "d1": 0, "d2": 1, "fut": 19, "tot": 40, "fora": 9, "ff": 0}, {"n": "ARC", "grp": "Grupo E2", "ven": 1, "fat": 20, "d1": 3, "d2": 4, "fut": 11, "tot": 39, "fora": 9, "ff": 6}, {"n": "JRM", "grp": "Grupo E1", "ven": 0, "fat": 5, "d1": 29, "d2": 2, "fut": 1, "tot": 37, "fora": 12, "ff": 0}, {"n": "PSI", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 15, "d2": 6, "fut": 12, "tot": 35, "fora": 16, "ff": 1}, {"n": "TFR", "grp": "Grupo C1", "ven": 0, "fat": 6, "d1": 19, "d2": 5, "fut": 3, "tot": 33, "fora": 7, "ff": 2}, {"n": "JPL", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 10, "d2": 0, "fut": 22, "tot": 33, "fora": 6, "ff": 0}, {"n": "AEM", "grp": "Grupo B1", "ven": 0, "fat": 9, "d1": 10, "d2": 0, "fut": 12, "tot": 31, "fora": 4, "ff": 0}, {"n": "BTF", "grp": "Grupo E2", "ven": 2, "fat": 27, "d1": 1, "d2": 1, "fut": 0, "tot": 31, "fora": 6, "ff": 5}, {"n": "TLI", "grp": "Grupo E1", "ven": 0, "fat": 3, "d1": 17, "d2": 3, "fut": 5, "tot": 28, "fora": 7, "ff": 0}, {"n": "TAR", "grp": "Grupo B1", "ven": 0, "fat": 1, "d1": 13, "d2": 1, "fut": 11, "tot": 26, "fora": 0, "ff": 0}, {"n": "ANB", "grp": "Grupo B2", "ven": 0, "fat": 5, "d1": 11, "d2": 2, "fut": 5, "tot": 23, "fora": 2, "ff": 2}, {"n": "ECO", "grp": "Grupo C2", "ven": 0, "fat": 5, "d1": 8, "d2": 0, "fut": 9, "tot": 22, "fora": 3, "ff": 0}, {"n": "ANB", "grp": "Grupo B3", "ven": 0, "fat": 8, "d1": 7, "d2": 0, "fut": 3, "tot": 18, "fora": 1, "ff": 1}, {"n": "RCF", "grp": "Grupo C3", "ven": 0, "fat": 2, "d1": 4, "d2": 0, "fut": 11, "tot": 17, "fora": 11, "ff": 1}, {"n": "AAP", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 1, "d2": 1, "fut": 11, "tot": 14, "fora": 0, "ff": 0}, {"n": "AAP", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 1, "d2": 3, "fut": 8, "tot": 12, "fora": 0, "ff": 0}, {"n": "PRAZO", "grp": "Grupo E2", "ven": 9, "fat": 0, "d1": 0, "d2": 0, "fut": 0, "tot": 9, "fora": 0, "ff": 0}, {"n": "WSF", "grp": "Grupo E2", "ven": 0, "fat": 9, "d1": 0, "d2": 0, "fut": 0, "tot": 9, "fora": 0, "ff": 0}, {"n": "GSM", "grp": "Grupo B3", "ven": 0, "fat": 2, "d1": 1, "d2": 0, "fut": 6, "tot": 9, "fora": 2, "ff": 0}, {"n": "BCF", "grp": "Grupo B1", "ven": 0, "fat": 4, "d1": 1, "d2": 0, "fut": 1, "tot": 6, "fora": 0, "ff": 0}, {"n": "RCF", "grp": "Grupo E2", "ven": 0, "fat": 2, "d1": 0, "d2": 2, "fut": 1, "tot": 5, "fora": 0, "ff": 0}, {"n": "PRAZO", "grp": "Grupo C2", "ven": 4, "fat": 0, "d1": 0, "d2": 0, "fut": 0, "tot": 4, "fora": 0, "ff": 0}, {"n": "VSI", "grp": "Grupo C2", "ven": 0, "fat": 1, "d1": 2, "d2": 0, "fut": 1, "tot": 4, "fora": 0, "ff": 0}, {"n": "SOF", "grp": "Grupo A3", "ven": 0, "fat": 2, "d1": 2, "d2": 0, "fut": 0, "tot": 4, "fora": 0, "ff": 0}, {"n": "NRG", "grp": "Grupo B1", "ven": 0, "fat": 2, "d1": 1, "d2": 0, "fut": 1, "tot": 4, "fora": 0, "ff": 0}, {"n": "NFS", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 4, "d2": 0, "fut": 0, "tot": 4, "fora": 2, "ff": 0}, {"n": "NRG", "grp": "Grupo B2", "ven": 0, "fat": 4, "d1": 0, "d2": 0, "fut": 0, "tot": 4, "fora": 1, "ff": 1}, {"n": "TFR", "grp": "Grupo C3", "ven": 0, "fat": 1, "d1": 2, "d2": 0, "fut": 1, "tot": 4, "fora": 1, "ff": 1}, {"n": "NBG", "grp": "Grupo A2", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 1, "tot": 2, "fora": 0, "ff": 0}, {"n": "ECO", "grp": "Grupo C3", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 2, "tot": 2, "fora": 0, "ff": 0}, {"n": "ARC", "grp": "Grupo A3", "ven": 0, "fat": 2, "d1": 0, "d2": 0, "fut": 0, "tot": 2, "fora": 0, "ff": 0}, {"n": "ECO", "grp": "Grupo C1", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 0, "tot": 2, "fora": 2, "ff": 1}, {"n": "PRAZO", "grp": "Grupo B1", "ven": 2, "fat": 0, "d1": 0, "d2": 0, "fut": 0, "tot": 2, "fora": 0, "ff": 0}, {"n": "JPE", "grp": "Grupo B1", "ven": 0, "fat": 2, "d1": 0, "d2": 0, "fut": 0, "tot": 2, "fora": 1, "ff": 1}, {"n": "NBG", "grp": "Grupo C2", "ven": 0, "fat": 0, "d1": 1, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "LDI", "grp": "Grupo A3", "ven": 1, "fat": 0, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "PRAZO", "grp": "Grupo C1", "ven": 1, "fat": 0, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "KBM", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "PRAZO", "grp": "Grupo C3", "ven": 1, "fat": 0, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "VSI", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "tot": 1, "fora": 1, "ff": 0}];
+const RESP_S20=[{"n": "RFE", "grp": "Grupo B1", "ven": 0, "fat": 11, "d1": 46, "d2": 3, "fut": 32, "tot": 92, "fora": 35, "ff": 0}, {"n": "BSO", "grp": "Grupo B1", "ven": 0, "fat": 6, "d1": 37, "d2": 4, "fut": 40, "tot": 87, "fora": 16, "ff": 2}, {"n": "LMI", "grp": "Grupo B3", "ven": 0, "fat": 2, "d1": 64, "d2": 5, "fut": 9, "tot": 80, "fora": 0, "ff": 0}, {"n": "RYL", "grp": "Grupo E2", "ven": 0, "fat": 46, "d1": 24, "d2": 1, "fut": 8, "tot": 79, "fora": 31, "ff": 12}, {"n": "CAL", "grp": "Grupo E2", "ven": 0, "fat": 44, "d1": 17, "d2": 0, "fut": 16, "tot": 77, "fora": 1, "ff": 1}, {"n": "VSI", "grp": "Grupo C1", "ven": 0, "fat": 12, "d1": 17, "d2": 4, "fut": 34, "tot": 67, "fora": 17, "ff": 0}, {"n": "BBO", "grp": "Grupo E2", "ven": 0, "fat": 23, "d1": 27, "d2": 1, "fut": 15, "tot": 66, "fora": 4, "ff": 1}, {"n": "GVM", "grp": "Grupo E1", "ven": 1, "fat": 1, "d1": 18, "d2": 9, "fut": 34, "tot": 63, "fora": 2, "ff": 0}, {"n": "GSM", "grp": "Grupo B1", "ven": 0, "fat": 14, "d1": 17, "d2": 2, "fut": 24, "tot": 57, "fora": 1, "ff": 1}, {"n": "LWP", "grp": "Grupo E2", "ven": 0, "fat": 44, "d1": 7, "d2": 2, "fut": 1, "tot": 54, "fora": 9, "ff": 9}, {"n": "MBF", "grp": "Grupo E2", "ven": 0, "fat": 3, "d1": 31, "d2": 7, "fut": 11, "tot": 52, "fora": 8, "ff": 0}, {"n": "VRO", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 19, "d2": 3, "fut": 20, "tot": 43, "fora": 0, "ff": 0}, {"n": "BCF", "grp": "Grupo B2", "ven": 0, "fat": 20, "d1": 0, "d2": 1, "fut": 19, "tot": 40, "fora": 9, "ff": 0}, {"n": "ARC", "grp": "Grupo E2", "ven": 1, "fat": 20, "d1": 3, "d2": 4, "fut": 11, "tot": 39, "fora": 9, "ff": 6}, {"n": "JRM", "grp": "Grupo E1", "ven": 0, "fat": 5, "d1": 29, "d2": 2, "fut": 1, "tot": 37, "fora": 12, "ff": 0}, {"n": "PSI", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 15, "d2": 6, "fut": 12, "tot": 35, "fora": 16, "ff": 1}, {"n": "JPL", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 10, "d2": 0, "fut": 22, "tot": 33, "fora": 6, "ff": 0}, {"n": "TFR", "grp": "Grupo C1", "ven": 0, "fat": 6, "d1": 19, "d2": 5, "fut": 3, "tot": 33, "fora": 7, "ff": 2}, {"n": "BTF", "grp": "Grupo E2", "ven": 2, "fat": 27, "d1": 1, "d2": 1, "fut": 0, "tot": 31, "fora": 6, "ff": 5}, {"n": "AEM", "grp": "Grupo B1", "ven": 0, "fat": 9, "d1": 10, "d2": 0, "fut": 12, "tot": 31, "fora": 4, "ff": 0}, {"n": "TLI", "grp": "Grupo E1", "ven": 0, "fat": 3, "d1": 17, "d2": 3, "fut": 5, "tot": 28, "fora": 7, "ff": 0}, {"n": "TAR", "grp": "Grupo B1", "ven": 0, "fat": 1, "d1": 13, "d2": 1, "fut": 11, "tot": 26, "fora": 0, "ff": 0}, {"n": "ANB", "grp": "Grupo B2", "ven": 0, "fat": 5, "d1": 11, "d2": 2, "fut": 5, "tot": 23, "fora": 2, "ff": 2}, {"n": "ANB", "grp": "Grupo B3", "ven": 0, "fat": 8, "d1": 7, "d2": 0, "fut": 3, "tot": 18, "fora": 1, "ff": 1}, {"n": "ECO", "grp": "Grupo C2", "ven": 0, "fat": 5, "d1": 8, "d2": 0, "fut": 5, "tot": 18, "fora": 1, "ff": 0}, {"n": "RCF", "grp": "Grupo C3", "ven": 0, "fat": 2, "d1": 4, "d2": 0, "fut": 11, "tot": 17, "fora": 11, "ff": 1}, {"n": "AAP", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 1, "d2": 1, "fut": 11, "tot": 14, "fora": 0, "ff": 0}, {"n": "AAP", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 1, "d2": 3, "fut": 8, "tot": 12, "fora": 0, "ff": 0}, {"n": "WSF", "grp": "Grupo E2", "ven": 0, "fat": 9, "d1": 0, "d2": 0, "fut": 0, "tot": 9, "fora": 0, "ff": 0}, {"n": "GSM", "grp": "Grupo B3", "ven": 0, "fat": 2, "d1": 1, "d2": 0, "fut": 6, "tot": 9, "fora": 2, "ff": 0}, {"n": "BCF", "grp": "Grupo B1", "ven": 0, "fat": 4, "d1": 1, "d2": 0, "fut": 1, "tot": 6, "fora": 0, "ff": 0}, {"n": "RCF", "grp": "Grupo E2", "ven": 0, "fat": 2, "d1": 0, "d2": 2, "fut": 1, "tot": 5, "fora": 0, "ff": 0}, {"n": "TFR", "grp": "Grupo C3", "ven": 0, "fat": 1, "d1": 2, "d2": 0, "fut": 1, "tot": 4, "fora": 1, "ff": 1}, {"n": "NFS", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 4, "d2": 0, "fut": 0, "tot": 4, "fora": 2, "ff": 0}, {"n": "NRG", "grp": "Grupo B1", "ven": 0, "fat": 2, "d1": 1, "d2": 0, "fut": 1, "tot": 4, "fora": 0, "ff": 0}, {"n": "SOF", "grp": "Grupo A3", "ven": 0, "fat": 2, "d1": 2, "d2": 0, "fut": 0, "tot": 4, "fora": 0, "ff": 0}, {"n": "VSI", "grp": "Grupo C2", "ven": 0, "fat": 1, "d1": 2, "d2": 0, "fut": 1, "tot": 4, "fora": 0, "ff": 0}, {"n": "NRG", "grp": "Grupo B2", "ven": 0, "fat": 4, "d1": 0, "d2": 0, "fut": 0, "tot": 4, "fora": 1, "ff": 1}, {"n": "ECO", "grp": "Grupo C1", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 0, "tot": 2, "fora": 2, "ff": 1}, {"n": "ECO", "grp": "Grupo C3", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 2, "tot": 2, "fora": 0, "ff": 0}, {"n": "JPE", "grp": "Grupo B1", "ven": 0, "fat": 2, "d1": 0, "d2": 0, "fut": 0, "tot": 2, "fora": 1, "ff": 1}, {"n": "NBG", "grp": "Grupo A2", "ven": 0, "fat": 0, "d1": 0, "d2": 1, "fut": 1, "tot": 2, "fora": 0, "ff": 0}, {"n": "ARC", "grp": "Grupo A3", "ven": 0, "fat": 2, "d1": 0, "d2": 0, "fut": 0, "tot": 2, "fora": 0, "ff": 0}, {"n": "KBM", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "NBG", "grp": "Grupo C2", "ven": 0, "fat": 0, "d1": 1, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}, {"n": "VSI", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 0, "d2": 0, "fut": 1, "tot": 1, "fora": 1, "ff": 0}, {"n": "LDI", "grp": "Grupo A3", "ven": 1, "fat": 0, "d1": 0, "d2": 0, "fut": 0, "tot": 1, "fora": 0, "ff": 0}];
 
 // Semana 21 (11/05 a 17/05) — apenas tipo_agenda=Prazo
 const RESP_S21=[{"n": "AAP", "grp": "Grupo E2", "ven": 0, "fat": 0, "d1": 2, "d2": 1, "fut": 5, "fora": 1, "ff": 0, "tot": 8}, {"n": "ALF", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 7, "d2": 0, "fut": 24, "fora": 4, "ff": 0, "tot": 31}, {"n": "ANB", "grp": "Grupo B2", "ven": 0, "fat": 7, "d1": 17, "d2": 7, "fut": 16, "fora": 3, "ff": 0, "tot": 47}, {"n": "ARC", "grp": "Grupo E2", "ven": 0, "fat": 16, "d1": 1, "d2": 0, "fut": 12, "fora": 1, "ff": 1, "tot": 29}, {"n": "BBO", "grp": "Grupo D1", "ven": 0, "fat": 1, "d1": 23, "d2": 0, "fut": 0, "fora": 8, "ff": 0, "tot": 24}, {"n": "BCF", "grp": "Grupo B2", "ven": 0, "fat": 6, "d1": 17, "d2": 3, "fut": 22, "fora": 1, "ff": 1, "tot": 48}, {"n": "BSO", "grp": "Grupo B1", "ven": 0, "fat": 1, "d1": 23, "d2": 9, "fut": 55, "fora": 1, "ff": 0, "tot": 88}, {"n": "CAL", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 45, "d2": 21, "fut": 12, "fora": 5, "ff": 1, "tot": 79}, {"n": "DPR", "grp": "Grupo E1", "ven": 0, "fat": 9, "d1": 5, "d2": 0, "fut": 6, "fora": 4, "ff": 3, "tot": 20}, {"n": "ECO", "grp": "Grupo C", "ven": 0, "fat": 7, "d1": 8, "d2": 4, "fut": 5, "fora": 0, "ff": 0, "tot": 24}, {"n": "FCG", "grp": "Grupo E2", "ven": 0, "fat": 8, "d1": 5, "d2": 2, "fut": 19, "fora": 0, "ff": 0, "tot": 34}, {"n": "GSM", "grp": "Grupo B1", "ven": 0, "fat": 26, "d1": 23, "d2": 6, "fut": 30, "fora": 25, "ff": 4, "tot": 85}, {"n": "JNE", "grp": "Grupo E2", "ven": 0, "fat": 4, "d1": 4, "d2": 0, "fut": 4, "fora": 0, "ff": 0, "tot": 12}, {"n": "JPE", "grp": "Grupo B1", "ven": 0, "fat": 5, "d1": 20, "d2": 5, "fut": 39, "fora": 27, "ff": 2, "tot": 69}, {"n": "JPL", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 14, "d2": 0, "fut": 43, "fora": 0, "ff": 0, "tot": 59}, {"n": "JQS", "grp": "Grupo D1", "ven": 0, "fat": 0, "d1": 18, "d2": 0, "fut": 41, "fora": 0, "ff": 0, "tot": 59}, {"n": "JRM", "grp": "Grupo E1", "ven": 0, "fat": 2, "d1": 28, "d2": 7, "fut": 0, "fora": 0, "ff": 0, "tot": 37}, {"n": "JRT", "grp": "Grupo E2", "ven": 0, "fat": 25, "d1": 27, "d2": 5, "fut": 9, "fora": 32, "ff": 4, "tot": 66}, {"n": "KBM", "grp": "Grupo E1", "ven": 1, "fat": 5, "d1": 0, "d2": 0, "fut": 3, "fora": 0, "ff": 0, "tot": 9}, {"n": "LMI", "grp": "Grupo B3", "ven": 0, "fat": 3, "d1": 47, "d2": 1, "fut": 24, "fora": 16, "ff": 0, "tot": 75}, {"n": "MBF", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 22, "d2": 6, "fut": 5, "fora": 7, "ff": 0, "tot": 34}, {"n": "NBG", "grp": "Grupo A2", "ven": 0, "fat": 1, "d1": 1, "d2": 0, "fut": 1, "fora": 1, "ff": 0, "tot": 3}, {"n": "NRG", "grp": "Grupo B1", "ven": 0, "fat": 0, "d1": 2, "d2": 0, "fut": 2, "fora": 0, "ff": 0, "tot": 4}, {"n": "PBS", "grp": "", "ven": 2, "fat": 0, "d1": 0, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 2}, {"n": "PSI", "grp": "Grupo E1", "ven": 0, "fat": 0, "d1": 10, "d2": 6, "fut": 22, "fora": 17, "ff": 0, "tot": 38}, {"n": "RCF", "grp": "Grupo E2", "ven": 0, "fat": 3, "d1": 14, "d2": 2, "fut": 20, "fora": 0, "ff": 0, "tot": 39}, {"n": "RFE", "grp": "Grupo B1", "ven": 0, "fat": 9, "d1": 43, "d2": 0, "fut": 25, "fora": 14, "ff": 1, "tot": 77}, {"n": "RRU", "grp": "Grupo E2", "ven": 0, "fat": 12, "d1": 25, "d2": 3, "fut": 8, "fora": 5, "ff": 0, "tot": 48}, {"n": "RYL", "grp": "Grupo E2", "ven": 0, "fat": 16, "d1": 41, "d2": 4, "fut": 0, "fora": 16, "ff": 1, "tot": 61}, {"n": "SOF", "grp": "Grupo A3", "ven": 0, "fat": 0, "d1": 4, "d2": 0, "fut": 4, "fora": 0, "ff": 0, "tot": 8}, {"n": "TAM", "grp": "Grupo B1", "ven": 0, "fat": 8, "d1": 19, "d2": 2, "fut": 10, "fora": 2, "ff": 1, "tot": 39}, {"n": "TFR", "grp": "Grupo C", "ven": 0, "fat": 11, "d1": 14, "d2": 3, "fut": 6, "fora": 9, "ff": 4, "tot": 34}, {"n": "TLI", "grp": "Grupo E1", "ven": 0, "fat": 3, "d1": 17, "d2": 0, "fut": 3, "fora": 2, "ff": 1, "tot": 23}, {"n": "VCR", "grp": "Grupo B2", "ven": 0, "fat": 2, "d1": 21, "d2": 0, "fut": 34, "fora": 3, "ff": 0, "tot": 57}, {"n": "VRO", "grp": "Grupo E1", "ven": 0, "fat": 1, "d1": 32, "d2": 9, "fut": 34, "fora": 7, "ff": 0, "tot": 76}, {"n": "VSI", "grp": "Grupo C", "ven": 0, "fat": 10, "d1": 12, "d2": 0, "fut": 7, "fora": 1, "ff": 1, "tot": 29}, {"n": "WSF", "grp": "Grupo E2", "ven": 0, "fat": 1, "d1": 0, "d2": 0, "fut": 0, "fora": 0, "ff": 0, "tot": 1}];
@@ -5038,10 +5038,10 @@ function downloadExcel() {
 }
 
 // ══ AGENDAS — SEPARADAS ══
-const AG_EQUIPE=[{"equipe": "Equipe E", "tot": 1456, "atrasada": 283, "fatal": 294, "d1": 458, "d2": 169, "futuro": 252}, {"equipe": "Equipe B", "tot": 1181, "atrasada": 196, "fatal": 286, "d1": 346, "d2": 161, "futuro": 192}, {"equipe": "Equipe C", "tot": 251, "atrasada": 56, "fatal": 30, "d1": 79, "d2": 40, "futuro": 46}, {"equipe": "Equipe A", "tot": 215, "atrasada": 2, "fatal": 17, "d1": 85, "d2": 38, "futuro": 73}, {"equipe": "Equipe D", "tot": 96, "atrasada": 12, "fatal": 16, "d1": 62, "d2": 5, "futuro": 1}, {"equipe": "TRIBUTÁRIO", "tot": 5, "atrasada": 0, "fatal": 0, "d1": 3, "d2": 0, "futuro": 2}];
-const AG_RESP=[{"n": "RFE", "grp": "Equipe B", "tot": 214, "atrasada": 2, "fatal": 60, "d1": 88, "d2": 18, "futuro": 46}, {"n": "RYL", "grp": "Equipe E", "tot": 192, "atrasada": 55, "fatal": 98, "d1": 31, "d2": 5, "futuro": 3}, {"n": "BSO", "grp": "Equipe B", "tot": 181, "atrasada": 0, "fatal": 30, "d1": 60, "d2": 53, "futuro": 38}, {"n": "NBG", "grp": "Equipe A", "tot": 178, "atrasada": 1, "fatal": 6, "d1": 68, "d2": 31, "futuro": 72}, {"n": "GVM", "grp": "Equipe E", "tot": 174, "atrasada": 0, "fatal": 0, "d1": 115, "d2": 40, "futuro": 19}, {"n": "ARC", "grp": "Equipe E", "tot": 172, "atrasada": 29, "fatal": 19, "d1": 32, "d2": 31, "futuro": 61}, {"n": "ANB", "grp": "Equipe B", "tot": 170, "atrasada": 82, "fatal": 30, "d1": 32, "d2": 14, "futuro": 12}, {"n": "MBF", "grp": "Equipe E", "tot": 150, "atrasada": 0, "fatal": 16, "d1": 91, "d2": 16, "futuro": 27}, {"n": "CAL", "grp": "Equipe E", "tot": 141, "atrasada": 1, "fatal": 69, "d1": 38, "d2": 9, "futuro": 24}, {"n": "VCR", "grp": "Equipe B", "tot": 134, "atrasada": 19, "fatal": 25, "d1": 40, "d2": 25, "futuro": 25}, {"n": "BCF", "grp": "Equipe B", "tot": 133, "atrasada": 57, "fatal": 35, "d1": 14, "d2": 8, "futuro": 19}, {"n": "JRM", "grp": "Equipe E", "tot": 126, "atrasada": 78, "fatal": 23, "d1": 5, "d2": 2, "futuro": 18}, {"n": "LMI", "grp": "Equipe B", "tot": 120, "atrasada": 0, "fatal": 35, "d1": 49, "d2": 13, "futuro": 23}, {"n": "VSI", "grp": "Equipe C", "tot": 105, "atrasada": 29, "fatal": 6, "d1": 36, "d2": 13, "futuro": 21}, {"n": "BBO", "grp": "Equipe D", "tot": 96, "atrasada": 12, "fatal": 16, "d1": 62, "d2": 5, "futuro": 1}, {"n": "PSI", "grp": "Equipe E", "tot": 90, "atrasada": 1, "fatal": 4, "d1": 15, "d2": 39, "futuro": 31}, {"n": "AEM", "grp": "Equipe B", "tot": 84, "atrasada": 2, "fatal": 50, "d1": 13, "d2": 11, "futuro": 8}, {"n": "TFR", "grp": "Equipe C", "tot": 77, "atrasada": 19, "fatal": 14, "d1": 23, "d2": 7, "futuro": 14}, {"n": "JPL", "grp": "Equipe E", "tot": 74, "atrasada": 4, "fatal": 2, "d1": 46, "d2": 1, "futuro": 21}, {"n": "TLI", "grp": "Equipe E", "tot": 74, "atrasada": 42, "fatal": 23, "d1": 5, "d2": 2, "futuro": 2}, {"n": "TAR", "grp": "Equipe B", "tot": 70, "atrasada": 0, "fatal": 0, "d1": 40, "d2": 15, "futuro": 15}, {"n": "ECO", "grp": "Equipe C", "tot": 69, "atrasada": 8, "fatal": 10, "d1": 20, "d2": 20, "futuro": 11}, {"n": "LWP", "grp": "Equipe E", "tot": 64, "atrasada": 60, "fatal": 2, "d1": 1, "d2": 1, "futuro": 0}, {"n": "VRO", "grp": "Equipe E", "tot": 63, "atrasada": 4, "fatal": 8, "d1": 22, "d2": 9, "futuro": 20}, {"n": "RCF", "grp": "Equipe E", "tot": 59, "atrasada": 0, "fatal": 20, "d1": 23, "d2": 2, "futuro": 14}, {"n": "GSM", "grp": "Equipe B", "tot": 54, "atrasada": 26, "fatal": 17, "d1": 7, "d2": 1, "futuro": 3}, {"n": "BTF", "grp": "Equipe E", "tot": 39, "atrasada": 9, "fatal": 5, "d1": 19, "d2": 2, "futuro": 4}, {"n": "AAP", "grp": "Equipe E", "tot": 38, "atrasada": 0, "fatal": 5, "d1": 15, "d2": 10, "futuro": 8}, {"n": "SOF", "grp": "Equipe A", "tot": 33, "atrasada": 0, "fatal": 11, "d1": 14, "d2": 7, "futuro": 1}, {"n": "NRG", "grp": "Equipe B", "tot": 18, "atrasada": 7, "fatal": 2, "d1": 3, "d2": 3, "futuro": 3}, {"n": "LDI", "grp": "TRIBUTÁRIO", "tot": 5, "atrasada": 0, "fatal": 0, "d1": 3, "d2": 0, "futuro": 2}, {"n": "TCE", "grp": "Equipe A", "tot": 4, "atrasada": 1, "fatal": 0, "d1": 3, "d2": 0, "futuro": 0}, {"n": "JPE", "grp": "Equipe B", "tot": 3, "atrasada": 1, "fatal": 2, "d1": 0, "d2": 0, "futuro": 0}];
-const AGEQ_EQUIPE=[{"equipe": "Equipe E", "tot": 65, "atrasada": 18, "fatal": 14, "d1": 16, "d2": 7, "futuro": 10}, {"equipe": "Equipe B", "tot": 61, "atrasada": 3, "fatal": 14, "d1": 22, "d2": 6, "futuro": 16}, {"equipe": "Equipe A", "tot": 7, "atrasada": 0, "fatal": 1, "d1": 4, "d2": 1, "futuro": 1}, {"equipe": "Equipe C", "tot": 5, "atrasada": 3, "fatal": 1, "d1": 1, "d2": 0, "futuro": 0}, {"equipe": "Equipe D", "tot": 4, "atrasada": 2, "fatal": 2, "d1": 0, "d2": 0, "futuro": 0}];
-const AGEQ_RESP=[{"n": "BSO", "grp": "Equipe B", "tot": 27, "atrasada": 1, "fatal": 4, "d1": 15, "d2": 4, "futuro": 3}, {"n": "JPL", "grp": "Equipe E", "tot": 17, "atrasada": 1, "fatal": 0, "d1": 6, "d2": 6, "futuro": 4}, {"n": "RYL", "grp": "Equipe E", "tot": 13, "atrasada": 8, "fatal": 5, "d1": 0, "d2": 0, "futuro": 0}, {"n": "BTF", "grp": "Equipe E", "tot": 12, "atrasada": 5, "fatal": 3, "d1": 1, "d2": 1, "futuro": 2}, {"n": "NRG", "grp": "Equipe B", "tot": 11, "atrasada": 1, "fatal": 0, "d1": 0, "d2": 1, "futuro": 9}, {"n": "VCR", "grp": "Equipe B", "tot": 5, "atrasada": 0, "fatal": 3, "d1": 2, "d2": 0, "futuro": 0}, {"n": "NBG", "grp": "Equipe A", "tot": 5, "atrasada": 0, "fatal": 1, "d1": 2, "d2": 1, "futuro": 1}, {"n": "MBF", "grp": "Equipe E", "tot": 5, "atrasada": 0, "fatal": 1, "d1": 2, "d2": 0, "futuro": 2}, {"n": "AEM", "grp": "Equipe B", "tot": 5, "atrasada": 0, "fatal": 3, "d1": 1, "d2": 0, "futuro": 1}, {"n": "RFE", "grp": "Equipe B", "tot": 5, "atrasada": 0, "fatal": 1, "d1": 2, "d2": 1, "futuro": 1}, {"n": "GVM", "grp": "Equipe E", "tot": 4, "atrasada": 0, "fatal": 0, "d1": 4, "d2": 0, "futuro": 0}, {"n": "BBO", "grp": "Equipe D", "tot": 4, "atrasada": 2, "fatal": 2, "d1": 0, "d2": 0, "futuro": 0}, {"n": "TFR", "grp": "Equipe C", "tot": 4, "atrasada": 3, "fatal": 1, "d1": 0, "d2": 0, "futuro": 0}, {"n": "TLI", "grp": "Equipe E", "tot": 4, "atrasada": 2, "fatal": 1, "d1": 1, "d2": 0, "futuro": 0}, {"n": "LMI", "grp": "Equipe B", "tot": 3, "atrasada": 0, "fatal": 2, "d1": 1, "d2": 0, "futuro": 0}, {"n": "RCF", "grp": "Equipe E", "tot": 3, "atrasada": 0, "fatal": 2, "d1": 1, "d2": 0, "futuro": 0}, {"n": "TAR", "grp": "Equipe B", "tot": 3, "atrasada": 0, "fatal": 1, "d1": 1, "d2": 0, "futuro": 1}, {"n": "ARC", "grp": "Equipe E", "tot": 2, "atrasada": 1, "fatal": 0, "d1": 0, "d2": 0, "futuro": 1}, {"n": "PSI", "grp": "Equipe E", "tot": 2, "atrasada": 0, "fatal": 0, "d1": 1, "d2": 0, "futuro": 1}, {"n": "BCF", "grp": "Equipe B", "tot": 2, "atrasada": 1, "fatal": 0, "d1": 0, "d2": 0, "futuro": 1}, {"n": "SOF", "grp": "Equipe A", "tot": 2, "atrasada": 0, "fatal": 0, "d1": 2, "d2": 0, "futuro": 0}, {"n": "JRM", "grp": "Equipe E", "tot": 2, "atrasada": 1, "fatal": 1, "d1": 0, "d2": 0, "futuro": 0}, {"n": "ECO", "grp": "Equipe C", "tot": 1, "atrasada": 0, "fatal": 0, "d1": 1, "d2": 0, "futuro": 0}, {"n": "CAL", "grp": "Equipe E", "tot": 1, "atrasada": 0, "fatal": 1, "d1": 0, "d2": 0, "futuro": 0}];
+const AG_EQUIPE=[{"equipe": "Equipe E", "tot": 1418, "atrasada": 283, "fatal": 294, "d1": 458, "d2": 169, "futuro": 214}, {"equipe": "Equipe B", "tot": 1151, "atrasada": 196, "fatal": 286, "d1": 346, "d2": 161, "futuro": 162}, {"equipe": "Equipe C", "tot": 250, "atrasada": 56, "fatal": 30, "d1": 79, "d2": 40, "futuro": 45}, {"equipe": "Equipe A", "tot": 204, "atrasada": 2, "fatal": 17, "d1": 85, "d2": 38, "futuro": 62}, {"equipe": "Equipe D", "tot": 96, "atrasada": 12, "fatal": 16, "d1": 62, "d2": 5, "futuro": 1}, {"equipe": "TRIBUTÁRIO", "tot": 5, "atrasada": 0, "fatal": 0, "d1": 3, "d2": 0, "futuro": 2}];
+const AG_RESP=[{"n": "RFE", "grp": "Equipe B", "tot": 211, "atrasada": 2, "fatal": 60, "d1": 88, "d2": 18, "futuro": 43}, {"n": "RYL", "grp": "Equipe E", "tot": 192, "atrasada": 55, "fatal": 98, "d1": 31, "d2": 5, "futuro": 3}, {"n": "BSO", "grp": "Equipe B", "tot": 174, "atrasada": 0, "fatal": 30, "d1": 60, "d2": 53, "futuro": 31}, {"n": "GVM", "grp": "Equipe E", "tot": 173, "atrasada": 0, "fatal": 0, "d1": 115, "d2": 40, "futuro": 18}, {"n": "ANB", "grp": "Equipe B", "tot": 170, "atrasada": 82, "fatal": 30, "d1": 32, "d2": 14, "futuro": 12}, {"n": "NBG", "grp": "Equipe A", "tot": 167, "atrasada": 1, "fatal": 6, "d1": 68, "d2": 31, "futuro": 61}, {"n": "ARC", "grp": "Equipe E", "tot": 161, "atrasada": 29, "fatal": 19, "d1": 32, "d2": 31, "futuro": 50}, {"n": "MBF", "grp": "Equipe E", "tot": 146, "atrasada": 0, "fatal": 16, "d1": 91, "d2": 16, "futuro": 23}, {"n": "CAL", "grp": "Equipe E", "tot": 138, "atrasada": 1, "fatal": 69, "d1": 38, "d2": 9, "futuro": 21}, {"n": "BCF", "grp": "Equipe B", "tot": 131, "atrasada": 57, "fatal": 35, "d1": 14, "d2": 8, "futuro": 17}, {"n": "JRM", "grp": "Equipe E", "tot": 126, "atrasada": 78, "fatal": 23, "d1": 5, "d2": 2, "futuro": 18}, {"n": "VCR", "grp": "Equipe B", "tot": 121, "atrasada": 19, "fatal": 25, "d1": 40, "d2": 25, "futuro": 12}, {"n": "LMI", "grp": "Equipe B", "tot": 120, "atrasada": 0, "fatal": 35, "d1": 49, "d2": 13, "futuro": 23}, {"n": "VSI", "grp": "Equipe C", "tot": 105, "atrasada": 29, "fatal": 6, "d1": 36, "d2": 13, "futuro": 21}, {"n": "BBO", "grp": "Equipe D", "tot": 96, "atrasada": 12, "fatal": 16, "d1": 62, "d2": 5, "futuro": 1}, {"n": "PSI", "grp": "Equipe E", "tot": 89, "atrasada": 1, "fatal": 4, "d1": 15, "d2": 39, "futuro": 30}, {"n": "AEM", "grp": "Equipe B", "tot": 82, "atrasada": 2, "fatal": 50, "d1": 13, "d2": 11, "futuro": 6}, {"n": "TFR", "grp": "Equipe C", "tot": 77, "atrasada": 19, "fatal": 14, "d1": 23, "d2": 7, "futuro": 14}, {"n": "TLI", "grp": "Equipe E", "tot": 73, "atrasada": 42, "fatal": 23, "d1": 5, "d2": 2, "futuro": 1}, {"n": "JPL", "grp": "Equipe E", "tot": 70, "atrasada": 4, "fatal": 2, "d1": 46, "d2": 1, "futuro": 17}, {"n": "TAR", "grp": "Equipe B", "tot": 70, "atrasada": 0, "fatal": 0, "d1": 40, "d2": 15, "futuro": 15}, {"n": "ECO", "grp": "Equipe C", "tot": 68, "atrasada": 8, "fatal": 10, "d1": 20, "d2": 20, "futuro": 10}, {"n": "LWP", "grp": "Equipe E", "tot": 64, "atrasada": 60, "fatal": 2, "d1": 1, "d2": 1, "futuro": 0}, {"n": "VRO", "grp": "Equipe E", "tot": 57, "atrasada": 4, "fatal": 8, "d1": 22, "d2": 9, "futuro": 14}, {"n": "GSM", "grp": "Equipe B", "tot": 53, "atrasada": 26, "fatal": 17, "d1": 7, "d2": 1, "futuro": 2}, {"n": "RCF", "grp": "Equipe E", "tot": 53, "atrasada": 0, "fatal": 20, "d1": 23, "d2": 2, "futuro": 8}, {"n": "BTF", "grp": "Equipe E", "tot": 39, "atrasada": 9, "fatal": 5, "d1": 19, "d2": 2, "futuro": 4}, {"n": "AAP", "grp": "Equipe E", "tot": 37, "atrasada": 0, "fatal": 5, "d1": 15, "d2": 10, "futuro": 7}, {"n": "SOF", "grp": "Equipe A", "tot": 33, "atrasada": 0, "fatal": 11, "d1": 14, "d2": 7, "futuro": 1}, {"n": "NRG", "grp": "Equipe B", "tot": 16, "atrasada": 7, "fatal": 2, "d1": 3, "d2": 3, "futuro": 1}, {"n": "LDI", "grp": "TRIBUTÁRIO", "tot": 5, "atrasada": 0, "fatal": 0, "d1": 3, "d2": 0, "futuro": 2}, {"n": "TCE", "grp": "Equipe A", "tot": 4, "atrasada": 1, "fatal": 0, "d1": 3, "d2": 0, "futuro": 0}, {"n": "JPE", "grp": "Equipe B", "tot": 3, "atrasada": 1, "fatal": 2, "d1": 0, "d2": 0, "futuro": 0}];
+const AGEQ_EQUIPE=[{"equipe": "Equipe E", "tot": 64, "atrasada": 18, "fatal": 14, "d1": 16, "d2": 7, "futuro": 9}, {"equipe": "Equipe B", "tot": 61, "atrasada": 3, "fatal": 14, "d1": 22, "d2": 6, "futuro": 16}, {"equipe": "Equipe A", "tot": 7, "atrasada": 0, "fatal": 1, "d1": 4, "d2": 1, "futuro": 1}, {"equipe": "Equipe C", "tot": 5, "atrasada": 3, "fatal": 1, "d1": 1, "d2": 0, "futuro": 0}, {"equipe": "Equipe D", "tot": 4, "atrasada": 2, "fatal": 2, "d1": 0, "d2": 0, "futuro": 0}];
+const AGEQ_RESP=[{"n": "BSO", "grp": "Equipe B", "tot": 27, "atrasada": 1, "fatal": 4, "d1": 15, "d2": 4, "futuro": 3}, {"n": "JPL", "grp": "Equipe E", "tot": 17, "atrasada": 1, "fatal": 0, "d1": 6, "d2": 6, "futuro": 4}, {"n": "RYL", "grp": "Equipe E", "tot": 13, "atrasada": 8, "fatal": 5, "d1": 0, "d2": 0, "futuro": 0}, {"n": "BTF", "grp": "Equipe E", "tot": 11, "atrasada": 5, "fatal": 3, "d1": 1, "d2": 1, "futuro": 1}, {"n": "NRG", "grp": "Equipe B", "tot": 11, "atrasada": 1, "fatal": 0, "d1": 0, "d2": 1, "futuro": 9}, {"n": "VCR", "grp": "Equipe B", "tot": 5, "atrasada": 0, "fatal": 3, "d1": 2, "d2": 0, "futuro": 0}, {"n": "NBG", "grp": "Equipe A", "tot": 5, "atrasada": 0, "fatal": 1, "d1": 2, "d2": 1, "futuro": 1}, {"n": "AEM", "grp": "Equipe B", "tot": 5, "atrasada": 0, "fatal": 3, "d1": 1, "d2": 0, "futuro": 1}, {"n": "RFE", "grp": "Equipe B", "tot": 5, "atrasada": 0, "fatal": 1, "d1": 2, "d2": 1, "futuro": 1}, {"n": "MBF", "grp": "Equipe E", "tot": 5, "atrasada": 0, "fatal": 1, "d1": 2, "d2": 0, "futuro": 2}, {"n": "TFR", "grp": "Equipe C", "tot": 4, "atrasada": 3, "fatal": 1, "d1": 0, "d2": 0, "futuro": 0}, {"n": "BBO", "grp": "Equipe D", "tot": 4, "atrasada": 2, "fatal": 2, "d1": 0, "d2": 0, "futuro": 0}, {"n": "TLI", "grp": "Equipe E", "tot": 4, "atrasada": 2, "fatal": 1, "d1": 1, "d2": 0, "futuro": 0}, {"n": "GVM", "grp": "Equipe E", "tot": 4, "atrasada": 0, "fatal": 0, "d1": 4, "d2": 0, "futuro": 0}, {"n": "TAR", "grp": "Equipe B", "tot": 3, "atrasada": 0, "fatal": 1, "d1": 1, "d2": 0, "futuro": 1}, {"n": "LMI", "grp": "Equipe B", "tot": 3, "atrasada": 0, "fatal": 2, "d1": 1, "d2": 0, "futuro": 0}, {"n": "RCF", "grp": "Equipe E", "tot": 3, "atrasada": 0, "fatal": 2, "d1": 1, "d2": 0, "futuro": 0}, {"n": "BCF", "grp": "Equipe B", "tot": 2, "atrasada": 1, "fatal": 0, "d1": 0, "d2": 0, "futuro": 1}, {"n": "JRM", "grp": "Equipe E", "tot": 2, "atrasada": 1, "fatal": 1, "d1": 0, "d2": 0, "futuro": 0}, {"n": "SOF", "grp": "Equipe A", "tot": 2, "atrasada": 0, "fatal": 0, "d1": 2, "d2": 0, "futuro": 0}, {"n": "PSI", "grp": "Equipe E", "tot": 2, "atrasada": 0, "fatal": 0, "d1": 1, "d2": 0, "futuro": 1}, {"n": "ARC", "grp": "Equipe E", "tot": 2, "atrasada": 1, "fatal": 0, "d1": 0, "d2": 0, "futuro": 1}, {"n": "CAL", "grp": "Equipe E", "tot": 1, "atrasada": 0, "fatal": 1, "d1": 0, "d2": 0, "futuro": 0}, {"n": "ECO", "grp": "Equipe C", "tot": 1, "atrasada": 0, "fatal": 0, "d1": 1, "d2": 0, "futuro": 0}];
 const AG_COLORS={"Grupo A2":"#00A9E0","Grupo A3":"#007EAA","Grupo B1":"#003B5C","Grupo B2":"#00557B","Grupo B3":"#00A9E0","Grupo C":"#006D96","Grupo D":"#004D73","Grupo D1":"#004D73","Grupo E1":"#008FC2","Grupo E2":"#003B5C","CONTRATAÇÕES ESPECIAIS":"#5F7E92"};
 function shortGrupo(g){ return String(g||'').replace(/^Grupo\s+/,'').replace(/^Equipe\s+/,''); }
 
@@ -8084,25 +8084,25 @@ window.TIPOS_DATA = {
         "Embargos de Declaração + conferir interesse em recorrer": 79,
         "Regularizar representação processual": 43,
         "Protocolar defesa": 39,
-        "Elaborar defesa": 38,
         "Recurso Ordinário": 38,
-        "Habilitar processo Pje": 35,
+        "Elaborar defesa": 38,
         "Manifestação": 35,
+        "Habilitar processo Pje": 35,
         "Recurso de Revista": 33,
         "Analisar exceção de incompetência / solicitar agendamento do prazo de protocolo": 25,
         "Contrarrazões de Recurso Ordinário": 24,
         "Manifestação sobre esclarecimentos periciais": 22,
         "Manifestação sobre laudo": 21,
-        "Informar TST/TRT em caso de execução provisória": 18,
         "Embargos à execução": 18,
+        "Informar TST/TRT em caso de execução provisória": 18,
         "Comprovar pagamento/solicitar dilação de prazo": 17,
         "Embargos de Declaração": 16,
         "Apresentar quesitos e indicar assistentes": 15,
         "Agravo": 14,
         "Razões finais": 14,
         "Embargos Infringentes": 11,
-        "Embargos de Divergência": 10,
         "Manifestação - testemunhas": 10,
+        "Embargos de Divergência": 10,
         "Manifestação de cálculos": 9,
         "Juntar documentos": 9,
         "Recurso Extraordinário": 8,
@@ -8111,105 +8111,105 @@ window.TIPOS_DATA = {
         "Contraminutar Agravo de Instrumento": 8,
         "Comprovar pagamento": 7,
         "Comprovar honorários prévios": 7,
-        "Apresentação de cálculos": 6,
         "Agravo interno": 6,
         "Manifestação aos Embargos de Declaração": 6,
+        "Apresentação de cálculos": 6,
         "Contraminuta ao Agravo Interno": 5,
-        "Manifestação - Indicar dados bancários": 4,
         "Agravo de Instrumento": 4,
+        "Manifestação - Indicar dados bancários": 4,
         "Protocolar defesa (2 dias antes da audiência)": 3,
-        "Embargos de Declaração + conferir interesse em recorrer / Inserir pagamento  no sistema do Cliente": 3,
         "Razões finais escritas": 3,
+        "Embargos de Declaração + conferir interesse em recorrer / Inserir pagamento  no sistema do Cliente": 3,
         "Manifestação - Testemunhas": 3,
+        "Manifestação - juízo 100%": 2,
+        "Manifestação\r\nIncluida por [CIC] para [MBF]": 2,
         "Manifestação sobre laudo - Perícia Médica": 2,
         "Contrarrazões de Recurso Ordinário Adesivo": 2,
-        "Manifestação - juízo 100%": 2,
-        "Manifestação\nIncluida por [CIC] para [MBF]": 2,
-        "Apresentar quesitos e indicar assistente técnico": 2,
+        "Contraminuta ao Agravo de Petição": 2,
+        "Produção de provas": 2,
         "Razões finais por memoriais": 2,
+        "Apresentar quesitos e indicar assistente técnico": 2,
         "Rol de testemunha": 2,
         "Manifestação - Diferenças": 2,
-        "Produção de provas": 2,
-        "Contraminuta ao Agravo de Petição": 2,
         "Impugnação aos Embargos à Execução": 2,
-        "Juntada de documentos - Perícia": 1,
-        "Apresentar quesitos e indicar assistentes - Perícia médica e de insalubridade": 1,
-        "Comprovar honorários prévios - Perícia médica e de insalubridade": 1,
-        "Juntar planilha discriminatória das verbas": 1,
-        "Entrega de PPP": 1,
-        "Manifestação - PLANILHA DE CALCULOS no formato PDF": 1,
-        "Embargos de Declaração + conferir interesse em recorrer\nIncluida por [CIC] para [MBF]": 1,
-        "Arrolar Testemunhas": 1,
-        "Informar endereço eletrônico": 1,
-        "Comprovar pagamento dos recolhimentos previdenciarios e honorarios periciais": 1,
-        "Manifestação - pedido de participação telepresencial": 1,
-        "Comprovar pagamento/solicitar dilação de prazo.": 1,
-        "Manifestação - Entregar PPP": 1,
         "Manifestação - Indicar conteúdos a serem removidos": 1,
-        "Regularizar representação processual\n\nIncluida por [LSN] para [PSI]": 1,
-        "Manifestação -juízo 100%": 1,
-        "Manifestação -obrigação de fazer": 1,
-        "Manifestação acerca dos relatórios gerados (Docs. 4032-4034.2026)": 1,
-        "Embargos de Declaração + conferir interesse em recorrer\nIncluida por [CIC] para [RYL]": 1,
-        "Comprovar pagamento - Honorários do Perito": 1,
-        "Manifestação - requerimentos que pretendiam formular na audiência": 1,
-        "Peticionar requerendo a disponibilidade da ata de audiência": 1,
-        "Comprovar pagamento - 2ª Parcela": 1,
-        "Manifestação sobre a denúncia transcrita no último despacho ministerial": 1,
-        "Manifestação\nIncluida por [CIC] para [BBO]": 1,
-        "Embargos de Declaração + conferir interesse em recorrer\nIncluida por [CIC] para [LWP]": 1,
-        "Manifestação - participação da parte por videoconferência": 1,
-        "Manifestação - impedimento ou a suspeição do perito": 1,
-        "Comprovar pagamento - 5ª parcela, no valor de R$3.000,00, até 10/11/2026.": 1,
-        "Oposição ao julgamento virtual": 1,
-        "Agravo\nconenação em h.extra e equiparação súmula 126.": 1,
-        "Regularizar representação processual\n\nIncluida por [LSN] para [TFR]": 1,
-        "Manifestação  CTPS": 1,
-        "Comprovar pagamento/solicitar dilação de prazo\nIncluida por [CIC] para [RYL]": 1,
-        "Manifestação - Juntada de documentos do reclamante": 1,
-        "Comprovar Recolhimentos Previdenciários": 1,
-        "Comprovar pagamento honorários": 1,
-        "Rol de testemunhas": 1,
-        "Manifestação/ Comprovar pagamento de pensão": 1,
-        "Manifestação - Provas": 1,
-        "Manifestação - sobre os documentos apresentados": 1,
-        "Comprovar pagamento custas": 1,
         "Manifestação sobre laudo - Pericia de Engenharia": 1,
         "Mandado de Segurança": 1,
+        "Regularizar representação processual\r\n\r\nIncluida por [LSN] para [PSI]": 1,
+        "Regularizar representação processual\r\n\r\nIncluida por [LSN] para [CAL]": 1,
+        "Juntada de documentos - Perícia": 1,
+        "Apresentar quesitos e indicar assistentes - Perícia médica e de insalubridade": 1,
         "Manifestação sobre os fatos noticiados": 1,
+        "Manifestação -juízo 100%": 1,
+        "Embargos de Declaração + conferir interesse em recorrer\r\nIncluida por [CIC] para [MBF]": 1,
+        "Manifestação\r\nIncluida por [CIC] para [LWP]": 1,
+        "Manifestação -obrigação de fazer": 1,
+        "Apresentar quesitos e indicar assistentes - Perícia médica": 1,
+        "Comprovar honorários prévios - Perícia médica e de insalubridade": 1,
+        "Informar endereço eletrônico": 1,
+        "Protocolar  defesa": 1,
+        "Arrolar Testemunhas": 1,
+        "Embargos à execução.": 1,
+        "Juntar planilha discriminatória das verbas": 1,
+        "Comprovar pagamento dos recolhimentos previdenciarios e honorarios periciais": 1,
+        "Manifestação sobre esclarecimentos periciais - Perícia de Engenharia": 1,
+        "Manifestação requerimentos que pretendiam formular na audiência": 1,
         "Manifestação sobre laudo - Perícia de Engenharia": 1,
         "Retificar PPP": 1,
-        "Embargos a Execução": 1,
-        "Comprovar recolhimentos ficais e previdenciários": 1,
-        "Apresentar quesitos e indicar assistentes - Perícia médica": 1,
-        "Manifestação requerimentos que pretendiam formular na audiência": 1,
+        "Manifestação - pedido de participação telepresencial": 1,
+        "Comprovar pagamento/solicitar dilação de prazo.": 1,
         "Apresentar quesitos e indicar assistentes - Perícia técnica": 1,
+        "Entrega de PPP": 1,
         "Manifestação Juízo 100% digital": 1,
         "Apresentar manifestação e documentos": 1,
+        "Manifestação - Entregar PPP": 1,
         "Manifestação - Inexatidão material da transcrição": 1,
         "Manifestação - Complementação das razões finais": 1,
-        "Embargos à execução.": 1,
-        "Manifestação sobre esclarecimentos periciais - Perícia de Engenharia": 1,
+        "Embargos a Execução": 1,
+        "Manifestação - Testemunha": 1,
+        "Manifestação - PLANILHA DE CALCULOS no formato PDF": 1,
         "Embargos a execução": 1,
         "Manifestação - obrigação de fazer": 1,
-        "Regularizar representação processual\n\nIncluida por [LSN] para [CAL]": 1,
-        "Manifestação\nIncluida por [CIC] para [LWP]": 1,
-        "Protocolar  defesa": 1,
-        "Manifestação - Testemunha": 1,
+        "Comprovar recolhimentos ficais e previdenciários": 1,
+        "Manifestação acerca dos relatórios gerados (Docs. 4032-4034.2026)": 1,
+        "Rol de testemunhas": 1,
+        "Agravo\r\nconenação em h.extra e equiparação súmula 126.": 1,
+        "Regularizar representação processual\r\n\r\nIncluida por [LSN] para [TFR]": 1,
+        "Manifestação sobre a denúncia transcrita no último despacho ministerial": 1,
+        "Manifestação  CTPS": 1,
+        "Comprovar pagamento do saldo da execução, depósito recursal.": 1,
+        "Manifestação\r\nIncluida por [CIC] para [BBO]": 1,
+        "Embargos de Declaração + conferir interesse em recorrer\r\nIncluida por [CIC] para [RYL]": 1,
+        "Comprovar pagamento/solicitar dilação de prazo\r\nIncluida por [CIC] para [RYL]": 1,
+        "Embargos de Declaração + conferir interesse em recorrer\r\nIncluida por [CIC] para [LWP]": 1,
         "Fornecer endereço eletrônico": 1,
         "Apresentar manifestação": 1,
-        "Manifestação - Obrigação de fazer": 1,
-        "Manifestação - juntar inscrição na OAB-GO": 1,
-        "Manifestação- interesse em conciliar": 1,
-        "Manifestação - Proposta de acordo": 1,
-        "Manifestação sobre o laudo pericial": 1,
-        "Comprovar pagamento do saldo da execução, depósito recursal.": 1,
-        "Juntar provas emprestadas": 1,
-        "Manifestação sobre laudo (médico + técnico)": 1,
+        "Manifestação - participação da parte por videoconferência": 1,
         "Manifestação - Eventual requerimentos sobre a participação": 1,
         "Manifestação rol de testemunhas": 1,
+        "Comprovar pagamento - Honorários do Perito": 1,
+        "Manifestação - Obrigação de fazer": 1,
         "Manifestação - PPP": 1,
-        "Elaborar defesa (10 dias antes da audiência)": 1
+        "Manifestação - juntar inscrição na OAB-GO": 1,
+        "Manifestação - Juntada de documentos do reclamante": 1,
+        "Manifestação - requerimentos que pretendiam formular na audiência": 1,
+        "Peticionar requerendo a disponibilidade da ata de audiência": 1,
+        "Manifestação/ Comprovar pagamento de pensão": 1,
+        "Manifestação - impedimento ou a suspeição do perito": 1,
+        "Manifestação- interesse em conciliar": 1,
+        "Juntar provas emprestadas": 1,
+        "Manifestação sobre laudo (médico + técnico)": 1,
+        "Comprovar pagamento - 2ª Parcela": 1,
+        "Comprovar Recolhimentos Previdenciários": 1,
+        "Manifestação - Provas": 1,
+        "Comprovar pagamento - 5ª parcela, no valor de R$3.000,00, até 10/11/2026.": 1,
+        "Manifestação - Proposta de acordo": 1,
+        "Oposição ao julgamento virtual": 1,
+        "Manifestação sobre o laudo pericial": 1,
+        "Manifestação - sobre os documentos apresentados": 1,
+        "Elaborar defesa (10 dias antes da audiência)": 1,
+        "Comprovar pagamento custas": 1,
+        "Comprovar pagamento honorários": 1
     },
     "2026-S46": {
         "Embargos de Declaração + conferir interesse em recorrer": 156,
@@ -8219,7 +8219,7 @@ window.TIPOS_DATA = {
         "Analisar exceção de incompetência / solicitar agendamento do prazo de protocolo": 70,
         "Habilitar processo Pje": 60,
         "Protocolar defesa": 59,
-        "Elaborar defesa": 56,
+        "Elaborar defesa": 55,
         "Recurso Ordinário": 50,
         "Recurso de Revista": 50,
         "Comprovar pagamento/solicitar dilação de prazo": 41,
@@ -8233,138 +8233,122 @@ window.TIPOS_DATA = {
         "Embargos de Declaração": 14,
         "Apresentação de cálculos": 13,
         "Recurso Extraordinário": 12,
-        "Manifestação - testemunhas": 12,
         "Razões finais": 10,
         "Agravo de Petição": 9,
+        "Manifestação - testemunhas": 9,
         "Embargos de Declaração + conferir interesse em recorrer / Inserir pagamento  no sistema do Cliente": 9,
         "Informar TST/TRT em caso de execução provisória": 8,
-        "Agravo de Instrumento": 7,
         "Comprovar honorários prévios": 7,
+        "Agravo de Instrumento": 7,
+        "Contrarrazões de Recurso de Revista": 6,
         "Embargos de Divergência": 6,
         "Embargos Infringentes": 6,
-        "Contrarrazões de Recurso de Revista": 6,
         "Juntar documentos": 6,
+        "Peticionar requerendo a disponibilidade da ata de audiência": 5,
         "Comprovar pagamento": 5,
         "Agravo interno": 5,
         "Razões finais escritas": 5,
-        "Razões finais por memoriais": 5,
         "Manifestação - Indicar dados bancários": 5,
-        "Peticionar requerendo a disponibilidade da ata de audiência": 5,
+        "Razões finais por memoriais": 5,
         "Contraminutar Agravo de Instrumento": 4,
         "Manifestação aos Embargos de Declaração": 4,
         "Embargos à execução.": 4,
-        "Manifestação - OAB": 4,
         "Rol de testemunha": 4,
+        "Manifestação - OAB": 4,
         "Razões Finais": 3,
         "Contrarrazões de Recurso de Apelação": 3,
         "Contraminuta ao Agravo Interno": 3,
-        "Comprovar pagamento honorários prévios": 3,
-        "Rol de testemunhas": 3,
         "Manifestação - Juntar documentos": 3,
         "Embargos à Execução": 3,
+        "Comprovar pagamento honorários prévios": 3,
         "Manifestação - provas": 3,
         "Apresentar manifestação e documentos": 2,
-        "Recurso Especial": 2,
+        "Elaborar defesa (10 dias antes da audiência)": 2,
+        "Vista dos documentos juntados pela parte contrária": 2,
         "Apresentar quesitos e indicar assistente técnico": 2,
         "Intimar Testemunhas": 2,
         "Comprovar recolhimentos previdenciários": 2,
+        "Rol de testemunhas": 2,
+        "Manifestação - juízo 100%": 2,
+        "Comprovar recolhimentos ficais e previdenciários": 2,
+        "Recurso Especial": 2,
+        "Protocolar defesa (2 dias antes da audiência)": 2,
         "Contrarrazões": 2,
         "Manifestação - Provas": 2,
-        "Comprovar recolhimentos ficais e previdenciários": 2,
         "3ª Parcela Comprovar pagamento": 2,
-        "Manifestar sobre Impugnação à Sentença de Liquidação": 2,
-        "Manifestação - dados bancários": 2,
-        "Protocolar defesa (2 dias antes da audiência)": 2,
-        "Manifestação - juízo 100%": 2,
-        "Manifestação - PPP": 2,
-        "Elaborar defesa (10 dias antes da audiência)": 2,
-        "Vista dos documentos juntados pela parte contrária": 2,
         "Manifestação - verificar obrigação de fazer": 2,
-        "Embargos de Declaração + conferir interesse em recorrer\nIncluida por [CIC] para [ECO]": 1,
-        "Analisar exceção de incompetência / solicitar agendamento do prazo de protocolo\n\nIncluida por [SPS] para [CAL]": 1,
-        "Habilitar processo Pje\n\nIncluida por [SPS] para [CAL]": 1,
-        "Recurso de Revista\nIncluida por [CIC] para [ECO]": 1,
-        "Manifestação ao juízo 100% digita": 1,
-        "Manifestação ao juízo 100% digita \nIncluida por [SPS] para [CAL]": 1,
-        "Comprovar honorários periciais prévios": 1,
-        "Discriminação das parcelas": 1,
-        "Recurso de Revista\nIncluida por [CIC] para [MBF]": 1,
+        "Manifestar sobre Impugnação à Sentença de Liquidação": 2,
+        "Manifestação - PPP": 2,
+        "Manifestação - dados bancários": 2,
+        "Manifestação - Regularizar PPP": 1,
+        "Manifestação - Fornecer PPP": 1,
+        "Manifestação + Juntar docuemntos": 1,
+        "Comprovar pagamento - 1 parcela": 1,
+        "Ação consignação em pagamento - Carlos Henrique Morais Rossi | OUR": 1,
+        "consignação em pagamento (Araçatuba/SP)": 1,
+        "Comprovar pagamento - 6ª parcela, no valor de R$ 23.674,67, até 10/11/2026.": 1,
         "Manifestação sobre laudo - perícia insalubridade": 1,
-        "Comprovar pagamento honorários periciais": 1,
+        "Manifestação - Apresentar minuta retificativa": 1,
+        "Manifestação - diferenças": 1,
         "Manifestação/Concordar de cálculos": 1,
-        "Comprovar pagamento da 6ª parcela": 1,
-        "Manifestação-  informações  solicitadas  pelo  perito": 1,
-        "Manifestação - Dados Testemunhas": 1,
+        "Manifestação - Proposta de acordo": 1,
+        "Manifestação ao juízo 100% digita": 1,
         "Razões Finais + Proposta Acordo": 1,
+        "Oposição ao julgamento virtual": 1,
+        "Comprovar pagamento da 6ª parcela": 1,
+        "Comprovar pagamento honorários periciais": 1,
+        "Manifestação - e-mails e\r\ntelefones de contato.": 1,
         "Dar baixa na CTPS Digital do reclamante": 1,
+        "Manifestação - alteração quanto ao assistente técnico": 1,
+        "Encaminhar defesa para o cliente validar": 1,
+        "Manifestação-  informações  solicitadas  pelo  perito": 1,
+        "Apresentar nova avaliação de calor que atenda a metodologia e procedimentos descritos no relatório técnico n. 103420.2026, de 09.10.2026, nos\r\ntermos dos seus itens 4 e 5.": 1,
+        "Comprovar honorários periciais prévios": 1,
+        "Manifestação  - testemunhas": 1,
+        "Discriminação das parcelas": 1,
+        "Manifestação sobre esclarecimentos periciais contábeis": 1,
+        "Manifestação - Dados Testemunhas": 1,
+        "Comprovar pagamento do acordo 3 parcela + Honorarios advocaticios": 1,
         "Comprovar pagamento recohimentos": 1,
-        "Recurso Ordinário\nIncluida por [CIC] para [RYL]": 1,
-        "Recurso Especial.\n\nNão iremos interpor REsp nesse caso. - LDI": 1,
-        "Manifestação sobre esclarecimentos periciais\nIncluida por [CIC] para [ARC]": 1,
-        "Manifestação -requerimentos da parte autora": 1,
-        "Manifestação -requerimentos da parte autora \nIncluida por [CIC] para [ARC]": 1,
-        "Razões Finais + Proposta acordo": 1,
-        "Manifestação - documentos": 1,
-        "Recurso Ordinário\nIncluida por [CIC] para [LWP]": 1,
-        "Apresentar quesitos e indicar assistentes - tambem enviar por e-mail  fabianocmed@gmail.com": 1,
-        "Contraminuta ao Agravo de Petição": 1,
-        "Mandado de Segurança": 1,
-        "Juntar documentos obrigatórios": 1,
-        "Comprovar pagamento contribuições": 1,
-        "Comprovar pagamento de honorários periciais": 1,
-        "Embargos à execução\nIncluida por [CIC] para [RYL]": 1,
+        "Apresentar informação e documentos": 1,
         "Contraminuta": 1,
-        "Razões finais \nIncluida por [LSN] para [TFR]": 1,
-        "Manifestação - dados audiência": 1,
-        "Manifestação - discriminação das verbas": 1,
-        "Juntar cartões de ponto": 1,
-        "Comprovar pagamento de acordo 2ª parcela": 1,
-        "Comprovação de intimação para testemunha": 1,
         "Apresentação de defesa": 1,
         "Apresentar defesa": 1,
         "Manifestação sobre Tutela": 1,
+        "Recurso Especial.\r\n\r\nNão iremos interpor REsp nesse caso. - LDI": 1,
         "Manifestação - CTPS": 1,
+        "Apresentar quesitos e indicar assistentes - tambem enviar por e-mail  fabianocmed@gmail.com": 1,
+        "Contraminuta ao Agravo de Petição": 1,
+        "Manifestação - dados audiência": 1,
+        "Mandado de Segurança": 1,
+        "Manifestação - discriminação das verbas": 1,
+        "Manifestação -requerimentos da parte autora": 1,
         "Manifestação - juntar documentos": 1,
+        "Razões Finais + Proposta acordo": 1,
+        "Juntar documentos obrigatórios": 1,
         "Arguição de suspeição ou impedimento do perito": 1,
-        "Manifestação - interesse na designacao de audiencia": 1,
-        "Apresentar documentos": 1,
-        "Manifestação sobre o juízo 100% digital": 1,
-        "Manifestação - Fornecer PPP": 1,
-        "Manifestação - Proposta de acordo": 1,
-        "Informar TST/TRT em caso de execução provisória\n\nIncluida por [LSN] para [BSO]": 1,
-        "Apresentar nova avaliação de calor que atenda a metodologia e procedimentos descritos no relatório técnico n. 103420.2026, de 09.10.2026, nos\ntermos dos seus itens 4 e 5.": 1,
-        "Manifestação sobre esclarecimentos periciais contábeis": 1,
-        "Comprovar pagamento do acordo 3 parcela + Honorarios advocaticios": 1,
-        "Manifestação - Regularizar PPP": 1,
-        "Manifestação + Juntar docuemntos": 1,
-        "Ação consignação em pagamento - Carlos Henrique Morais Rossi | OUR": 1,
-        "consignação em pagamento (Araçatuba/SP)": 1,
-        "Manifestação - Apresentar minuta retificativa": 1,
-        "Manifestação - diferenças": 1,
-        "Manifestação - e-mails e\ntelefones de contato.": 1,
-        "Manifestação  - testemunhas": 1,
-        "Encaminhar defesa para o cliente validar": 1,
-        "Manifestação de cálculos\nIncluida por [CIC] para [RCF]": 1,
-        "Comprovar pagamento - 1 parcela": 1,
-        "Comprovar pagamento - 6ª parcela, no valor de R$ 23.674,67, até 10/11/2026.": 1,
-        "Oposição ao julgamento virtual": 1,
-        "Manifestação - alteração quanto ao assistente técnico": 1,
-        "Embargos de Declaração\nIncluida por [CIC] para [ECO]": 1,
-        "Agravo de Petição\nIncluida por [CIC] para [ECO]": 1,
         "Especificação de provas": 1,
-        "Recurso ordinário": 1,
-        "Comprovar pagamento - 3ª parcela": 1,
-        "Manifestação - extratos do FGTS": 1,
-        "Comprovar pagamento de honorários prévios": 1,
-        "Apresentar informação e documentos": 1,
-        "Manifestação sobre laudo - Pericia Médica": 1,
-        "Manifestação sobre laudo - Pericia Engenharia": 1,
-        "Comprovar pagamento - 2ª Parcela": 1,
         "Comprovar pagamento/solicitar dilação de prazo.": 1,
         "Manifestação - representação processual": 1,
+        "Manifestação - interesse na designacao de audiencia": 1,
         "Manifestação - Testemunhas": 1,
+        "Manifestação sobre laudo - Pericia Médica": 1,
+        "Recurso ordinário": 1,
+        "Comprovar pagamento contribuições": 1,
+        "Juntar cartões de ponto": 1,
+        "Manifestação - documentos": 1,
+        "Apresentar documentos": 1,
         "Manifestação - representacao processual.": 1,
-        "Manifestação sobre laudo médico": 1
+        "Manifestação sobre laudo médico": 1,
+        "Manifestação sobre laudo - Pericia Engenharia": 1,
+        "Comprovar pagamento - 3ª parcela": 1,
+        "Comprovar pagamento - 2ª Parcela": 1,
+        "Comprovar pagamento de acordo 2ª parcela": 1,
+        "Manifestação - extratos do FGTS": 1,
+        "Manifestação sobre o juízo 100% digital": 1,
+        "Comprovação de intimação para testemunha": 1,
+        "Comprovar pagamento de honorários prévios": 1,
+        "Comprovar pagamento de honorários periciais": 1
     },
     "2026-S47": {
         "Juntada da certidão de registro da apólice": 155,
@@ -8381,142 +8365,130 @@ window.TIPOS_DATA = {
         "Manifestação sobre laudo": 29,
         "Manifestação de cálculos": 25,
         "Agravo": 24,
-        "Apresentar quesitos e indicar assistentes": 23,
         "Embargos à execução": 23,
+        "Apresentar quesitos e indicar assistentes": 23,
         "Manifestação sobre esclarecimentos periciais": 20,
         "Apresentação de cálculos": 17,
-        "Embargos de Declaração": 17,
-        "Comprovar pagamento/solicitar dilação de prazo": 17,
         "Juntar documentos": 17,
+        "Comprovar pagamento/solicitar dilação de prazo": 17,
+        "Embargos de Declaração": 17,
         "Comprovar honorários prévios": 15,
         "Contrarrazões de Recurso de Revista": 12,
         "Agravo interno": 12,
         "Contraminutar Agravo de Instrumento": 10,
-        "Manifestação - testemunhas": 10,
         "Agravo de Instrumento": 9,
-        "Razões finais escritas": 7,
-        "Manifestação sobre o juízo 100% digital": 7,
+        "Manifestação - testemunhas": 9,
         "Manifestação aos Embargos de Declaração": 7,
+        "Manifestação sobre o juízo 100% digital": 7,
+        "Razões finais escritas": 7,
+        "Protocolar defesa (2 dias antes da audiência)": 6,
         "Embargos de Divergência": 6,
         "Embargos Infringentes": 6,
         "Recurso Extraordinário": 6,
         "Comprovar pagamento": 6,
-        "Manifestação - juízo 100%": 6,
         "Informar TST/TRT em caso de execução provisória": 6,
-        "Protocolar defesa (2 dias antes da audiência)": 6,
-        "Embargos de Declaração + conferir interesse em recorrer / Inserir pagamento  no sistema do Cliente": 5,
-        "Manifestação - obrigação de fazer": 5,
-        "Embargos à execução.": 5,
-        "Rol de testemunhas": 5,
+        "Manifestação - juízo 100%": 6,
         "Agravo de Petição": 5,
+        "Embargos à execução.": 5,
+        "Manifestação - obrigação de fazer": 5,
+        "Embargos de Declaração + conferir interesse em recorrer / Inserir pagamento  no sistema do Cliente": 5,
+        "Razões finais": 4,
+        "Rol de testemunhas": 4,
         "Contraminuta ao Agravo Interno": 4,
         "Apresentar quesitos e indicar assistente técnico": 4,
-        "Razões finais": 4,
         "Manifestação - Indicar dados bancários": 3,
         "Razões Finais": 3,
         "Manifestação - Testemunhas": 3,
-        "Contrarrazões de Recurso Ordinário Adesivo": 3,
-        "Rol de testemunha": 3,
-        "Apresentar documentos": 3,
         "Comprovar recolhimentos ficais e previdenciários": 3,
+        "Contrarrazões de Recurso Ordinário Adesivo": 3,
+        "Apresentar documentos": 3,
+        "Rol de testemunha": 3,
         "Elaborar defesa (10 dias antes da audiência)": 2,
         "Contraminuta ao Agravo de Petição": 2,
         "Razões finais por memoriais": 2,
-        "Manifestação - diferenças": 2,
         "Comprovar pagamento honorários prévios": 2,
         "Manifestação sobre laudo - perícia médica": 2,
-        "Embargos de Declaração + conferir interesse em recorrer\nIncluida por [CIC] para [RYL]": 2,
-        "Manifestação - OAB": 2,
-        "Manifestação - provas": 2,
+        "Manifestação - diferenças": 2,
         "Oposição ao julgamento virtual": 2,
-        "1ª Parcela Comprovar pagamento": 1,
-        "Manifestação - Provas emprestadas": 1,
-        "Manifestação - Indicar dados bancários\nIncluida por [CIC] para [CAL]": 1,
-        "Manifestação - prova emprestada": 1,
-        "Recolhimento de contribuições previdenciárias e encargos fiscais": 1,
-        "Comprovar contribuições previdenciárias": 1,
+        "Manifestação - provas": 2,
+        "Manifestação - OAB": 2,
         "Comprovar pagamento 2ª parcela": 1,
+        "1ª Parcela Comprovar pagamento": 1,
         "Manifestação sobre laudo e minuta de TAC": 1,
-        "Juntada da certidão de registro da apólice\nIncluida por [CIC] para [MBF]": 1,
-        "Manifestação sobre os documentos apresentados": 1,
-        "Apresentar quesitos e indicar assistentes (técnicos/médicos)": 1,
-        "Manifestação - Juntar documentos para perícia": 1,
-        "Juntar endereços eletrônicos": 1,
-        "Comprovar pagamento de honorários prévios (técnicos/médicos)": 1,
-        "Comprovar pagamento de honorários periciais": 1,
-        "Regularizar representação processual\n\nIncluida por [LSN] para [MBF]": 1,
-        "Manifestação - interesse em conciliação": 1,
-        "Manifestação -comprovar homologação  do  acordo  no  processo  principal": 1,
-        "Entrar em contato com perito por e-mail": 1,
         "Comprovar pagamento - 1 parcela": 1,
+        "Manifestação - Informar nos autos eventual coincidência de horário": 1,
         "Peticionar requerendo a disponibilidade da ata de audiência": 1,
+        "Comprovar pagamento - Acordo": 1,
+        "Manifestação - interesse em conciliação": 1,
+        "Manifestação - Provas emprestadas": 1,
+        "Contraminuta de Agravo de Instrumento": 1,
+        "Manifestação - prova emprestada": 1,
         "Manifestação - arquivo de áudio/imagem com degravação e minutagem": 1,
-        "Analisar exceção de incompetência / solicitar agendamento do prazo de protocolo\nIncluida por [ANYTASK] para [NBG]": 1,
-        "Comprovar pagamento contribuições fiscais": 1,
-        "Comprovar pagamento honorários periciais": 1,
-        "Juntada da certidão de registro da apólice\nIncluida por [CIC] para [RYL]": 1,
-        "Manifestação - Juntar PPP": 1,
-        "Manifestação -  interesse na remessa dos autos ao CEJUSC2": 1,
-        "Embargos de Declaração.\n\nEmpresa decidiu que não irá recorrer. - LDI": 1,
-        "Recurso Especial.\n\nEmpresa decidiu que não irá recorrer. Nada a fazer. - LDI": 1,
-        "Recurso Especial": 1,
-        "Juntada da certidão de registro da apólice\nIncluida por [CIC] para [LWP]": 1,
+        "Solicitar retorno do cliente com validação da defesa": 1,
+        "Razões finais com manifestação sobre carta convite da reclamante": 1,
+        "Apresentar quesitos e indicar assistentes - Perícia médica": 1,
+        "Manifestação sobre os documentos apresentados": 1,
+        "Manifestação - Rol Substituídos": 1,
+        "Manifestação - Juizo 100%": 1,
+        "manifestação - testemunhas": 1,
+        "Manifestação - Comprovar  no  processo eventual enquadramento no SIMPLE": 1,
+        "Manifestação -comprovar homologação  do  acordo  no  processo  principal": 1,
+        "Manifestação -  retificacao CTPS": 1,
+        "Manifestação - PPP": 1,
+        "Apresentar quesitos e indicar assistentes (técnicos/médicos)": 1,
+        "Comprovar pagamento contribuições previdenciárias": 1,
+        "Manifestação - Juntar documentos para perícia": 1,
+        "Manifestar sobre Impugnação à Sentença de Liquidação": 1,
+        "Manifestação - interesse na realizacao de audiencia de conciliacao": 1,
+        "Comprovar pagamento honorários  periciais": 1,
+        "Manifestação - acordo": 1,
+        "Manifestação  - Provas": 1,
+        "Entrar em contato com perito por e-mail": 1,
+        "Analisar exceção de incompetência / solicitar agendamento do prazo de protocolo\r\nIncluida por [ANYTASK] para [NBG]": 1,
+        "Comprovar recolhimento previdenciários": 1,
+        "Juntar endereços eletrônicos": 1,
+        "Manifestação- juízo 100%": 1,
+        "Comprovar pagamento de honorários prévios (técnicos/médicos)": 1,
+        "Manifestação - possibilidade de conciliação": 1,
+        "Recolhimento de contribuições previdenciárias e encargos fiscais": 1,
+        "Comprovar pagamento de honorários periciais": 1,
+        "Manifestação sobre laudo - Perícia de Engenharia": 1,
+        "Juntar laudos paradigmas": 1,
         "5ª Parcela Comprovar pagamento": 1,
         "Manifestação - juntada de declaração do reclamante": 1,
         "Manifestação - Diferenças": 1,
         "Apresentar minuta de acordo": 1,
-        "Manifestação sobre laudo/quesitos suplementares,": 1,
-        "Manifestação - reintegração do empregado": 1,
-        "Embargos de Declaração + conferir interesse em recorrer\nIncluida por [CIC] para [CAL]": 1,
-        "Manifestação sobre esclarecimentos periciais - Perícia Técnica": 1,
-        "Juntar cópia da ata em processo abarcado por este acordo": 1,
-        "Ciência da Publicação": 1,
-        "Manifestação sobre laudo - Perícia de Engenharia": 1,
-        "Regularizar representação processual\n\nIncluida por [LSN] para [JRM]": 1,
-        "Juntar documentos\nIncluida por [LSN] para [JRM]": 1,
-        "Manifestação - documentos e manifestação juntada pela parte autora": 1,
-        "Manifestação -comprovar homologação  do  acordo  no  processo  principalincipal": 1,
-        "Comprovar pagamento - 4ª parcela, no valor de R$6.400,00, até 23/11/2026.": 1,
-        "Arguição de suspeição ou impedimentos do perito": 1,
-        "Comprovar pagamento da 4ª parcela do acordo": 1,
-        "Juntar documentos - Perícia": 1,
-        "Comprovar pagamento recolhimentos previdenciários e fiscais": 1,
-        "Contraminuta de Agravo de Instrumento": 1,
-        "Manifestação - Juizo 100%": 1,
-        "manifestação - testemunhas": 1,
-        "Manifestação - interesse na realizacao de audiencia de conciliacao": 1,
-        "Manifestação- juízo 100%": 1,
-        "Manifestação - possibilidade de conciliação": 1,
-        "Manifestação - Informar nos autos eventual coincidência de horário": 1,
-        "Manifestação - Rol Substituídos": 1,
-        "Manifestação - PPP": 1,
-        "Manifestar sobre Impugnação à Sentença de Liquidação": 1,
-        "Comprovar pagamento - Acordo": 1,
-        "Solicitar retorno do cliente com validação da defesa": 1,
-        "Apresentar quesitos e indicar assistentes - Perícia médica": 1,
-        "Manifestação - Comprovar  no  processo eventual enquadramento no SIMPLE": 1,
-        "Razões finais com manifestação sobre carta convite da reclamante": 1,
-        "Manifestação -  retificacao CTPS": 1,
-        "Comprovar pagamento contribuições previdenciárias": 1,
-        "Comprovar pagamento honorários  periciais": 1,
-        "Manifestação - acordo": 1,
-        "Manifestação  - Provas": 1,
-        "Comprovar recolhimento previdenciários": 1,
-        "Juntar laudos paradigmas": 1,
-        "Manifestação sobre laudo/quesitos suplementares": 1,
-        "Manifestação - laudos juntados": 1,
-        "Memoriais": 1,
         "Manifestação - Comprovar testemunhas": 1,
+        "Manifestação - Juntar PPP": 1,
+        "Manifestação sobre laudo/quesitos suplementares": 1,
+        "Manifestação sobre laudo/quesitos suplementares,": 1,
+        "Manifestação - laudos juntados": 1,
+        "Manifestação sobre esclarecimentos periciais - Perícia Técnica": 1,
         "Manifestação - documentos que forem juntados": 1,
-        "Razões Finais  +  interesse em conciliar": 1,
         "Manifestação - juntar documentos": 1,
         "Manifestação de cálculos /atualização monetária": 1,
-        "Comprovar pagamento - 5ª parcela, no valor de R$2.400,00, até 23/11/2026.": 1,
         "Impugnação aos Embargos à Execução": 1,
+        "Juntar cópia da ata em processo abarcado por este acordo": 1,
+        "Manifestação - documentos e manifestação juntada pela parte autora": 1,
         "Comprovar pagamento da 6ª parcela": 1,
+        "Manifestação -comprovar homologação  do  acordo  no  processo  principalincipal": 1,
+        "Memoriais": 1,
+        "Manifestação - reintegração do empregado": 1,
+        "Manifestação -  interesse na remessa dos autos ao CEJUSC2": 1,
         "exceção de incompetência": 1,
+        "Embargos de Declaração.\r\n\r\nEmpresa decidiu que não irá recorrer. - LDI": 1,
+        "Ciência da Publicação": 1,
         "Comprovar profissional que representa a testemunha": 1,
-        "Manifestação - Profissional que representa a testemunha": 1
+        "Comprovar pagamento - 4ª parcela, no valor de R$6.400,00, até 23/11/2026.": 1,
+        "Arguição de suspeição ou impedimentos do perito": 1,
+        "Razões Finais  +  interesse em conciliar": 1,
+        "Comprovar pagamento da 4ª parcela do acordo": 1,
+        "Manifestação - Profissional que representa a testemunha": 1,
+        "Comprovar pagamento - 5ª parcela, no valor de R$2.400,00, até 23/11/2026.": 1,
+        "Juntar documentos - Perícia": 1,
+        "Recurso Especial.\r\n\r\nEmpresa decidiu que não irá recorrer. Nada a fazer. - LDI": 1,
+        "Recurso Especial": 1,
+        "Comprovar pagamento recolhimentos previdenciários e fiscais": 1
     }
 };
 const SEMANA_LABELS_MAP = {
@@ -8612,7 +8584,7 @@ function renderJustificativas(){
   }).join('');
 }
 
-const ACUMULADO_DATA={"semana": {"2026-S29": {"Prazo": 1100, "Agenda": 2869, "Agenda Equipe": 209, "Vencido": 0, "Fatal": 268, "D-1": 422, "D-2": 122, "Futuro": 288, "Total": 4178}, "2026-S19": {"Prazo": 1451, "Agenda": 4122, "Agenda Equipe": 246, "Vencido": 905, "Fatal": 1053, "D-1": 2174, "D-2": 487, "Futuro": 1200, "Total": 5819}, "2026-S20": {"Prazo": 1396, "Agenda": 3788, "Agenda Equipe": 179, "Total": 5363, "Vencido": 556, "Fatal": 892, "D-1": 2226, "D-2": 469, "Futuro": 1220}, "2026-S21": {"Prazo": 1390, "Agenda": 3814, "Agenda Equipe": 206, "Vencido": 488, "Fatal": 882, "D-1": 2239, "D-2": 575, "Futuro": 1226, "Total": 5410}, "2026-S26": {"Prazo": 1476, "Agenda": 4026, "Agenda Equipe": 224, "Vencido": 448, "Fatal": 1020, "D-1": 2336, "D-2": 518, "Futuro": 1404, "Total": 5726}, "2026-S27": {"Prazo": 1320, "Agenda": 3431, "Agenda Equipe": 252, "Vencido": 0, "Fatal": 227, "D-1": 511, "D-2": 125, "Futuro": 457, "Total": 5003}, "2026-S22": {"Prazo": 1277, "Agenda": 4043, "Agenda Equipe": 200, "Vencido": 0, "Fatal": 156, "D-1": 551, "D-2": 121, "Futuro": 540, "Total": 5611}, "2026-S23": {"Prazo": 1195, "Agenda": 4046, "Agenda Equipe": 218, "Vencido": 1, "Fatal": 161, "D-1": 498, "D-2": 133, "Futuro": 530, "Total": 5441}, "2026-S24": {"Prazo": 1277, "Agenda": 3451, "Agenda Equipe": 220, "Vencido": 3, "Fatal": 237, "D-1": 441, "D-2": 133, "Futuro": 463, "Total": 4951}, "2026-S25": {"Prazo": 1418, "Agenda": 3838, "Agenda Equipe": 195, "Vencido": 1, "Fatal": 240, "D-1": 558, "D-2": 259, "Futuro": 619, "Total": 5646}, "2026-S28": {"Prazo": 1080, "Agenda": 3270, "Agenda Equipe": 168, "Vencido": 1, "Fatal": 146, "D-1": 373, "D-2": 129, "Futuro": 431, "Total": 4518}, "2026-S30": {"Prazo": 1137, "Agenda": 3394, "Agenda Equipe": 261, "Vencido": 0, "Fatal": 228, "D-1": 436, "D-2": 94, "Futuro": 379, "Total": 4792}, "2026-S31": {"Prazo": 1173, "Agenda": 3009, "Agenda Equipe": 202, "Vencido": 0, "Fatal": 209, "D-1": 519, "D-2": 116, "Futuro": 329, "Total": 4384}, "2026-S32": {"Prazo": 1150, "Agenda": 3362, "Agenda Equipe": 261, "Vencido": 0, "Fatal": 251, "D-1": 454, "D-2": 86, "Futuro": 359, "Total": 4773}, "2026-S33": {"Prazo": 1249, "Agenda": 3137, "Agenda Equipe": 272, "Vencido": 2, "Fatal": 202, "D-1": 579, "D-2": 105, "Futuro": 361, "Total": 4658}, "2026-S34": {"Prazo": 1323, "Agenda": 4009, "Agenda Equipe": 326, "Vencido": 1, "Fatal": 274, "D-1": 507, "D-2": 122, "Futuro": 419, "Total": 5658}, "2026-S35": {"Prazo": 1418, "Agenda": 3631, "Agenda Equipe": 250, "Vencido": 2, "Fatal": 261, "D-1": 551, "D-2": 99, "Futuro": 505, "Total": 5299}, "2026-S36": {"Prazo": 1517, "Agenda": 4322, "Agenda Equipe": 297, "Vencido": 2, "Fatal": 251, "D-1": 482, "D-2": 153, "Futuro": 629, "Total": 6136}, "2026-S37": {"Prazo": 1015, "Agenda": 2681, "Agenda Equipe": 169, "Vencido": 2, "Fatal": 333, "D-1": 369, "D-2": 73, "Futuro": 238, "Total": 3865}, "2026-S38": {"Prazo": 1344, "Agenda": 3657, "Agenda Equipe": 203, "Vencido": 1, "Fatal": 301, "D-1": 466, "D-2": 111, "Futuro": 465, "Total": 5204}, "2026-S39": {"Prazo": 1494, "Agenda": 3827, "Agenda Equipe": 212, "Vencido": 0, "Fatal": 283, "D-1": 628, "D-2": 145, "Futuro": 438, "Total": 5533}, "2026-S40": {"Prazo": 1404, "Agenda": 3458, "Agenda Equipe": 209, "Vencido": 3, "Fatal": 263, "D-1": 606, "D-2": 129, "Futuro": 403, "Total": 5071}, "2026-S41": {"Prazo": 1432, "Agenda": 3784, "Agenda Equipe": 214, "Vencido": 1, "Fatal": 227, "D-1": 586, "D-2": 111, "Futuro": 507, "Total": 5430}, "2026-S42": {"Prazo": 1023, "Agenda": 2929, "Agenda Equipe": 162, "Vencido": 0, "Fatal": 260, "D-1": 443, "D-2": 62, "Futuro": 258, "Total": 4114}, "2026-S43": {"Prazo": 1291, "Agenda": 3527, "Agenda Equipe": 182, "Vencido": 1, "Fatal": 288, "D-1": 530, "D-2": 106, "Futuro": 366, "Total": 5000}, "2026-S44": {"Prazo": 1501, "Agenda": 3819, "Agenda Equipe": 208, "Vencido": 0, "Fatal": 341, "D-1": 499, "D-2": 128, "Futuro": 533, "Total": 5528}, "2026-S45": {"Prazo": 886, "Agenda": 2495, "Agenda Equipe": 155, "Vencido": 11, "Fatal": 254, "D-1": 324, "D-2": 51, "Futuro": 246, "Total": 3536}, "2026-S46": {"Prazo": 1350, "Agenda": 3475, "Agenda Equipe": 182, "Vencido": 22, "Fatal": 359, "D-1": 491, "D-2": 74, "Futuro": 404, "Total": 5007}, "2026-S47": {"Prazo": 1318, "Agenda": 3204, "Agenda Equipe": 142, "Vencido": 14, "Fatal": 359, "D-1": 397, "D-2": 159, "Futuro": 389, "Total": 4664}}, "mes": {"2026-05": {"Prazo": 2847, "Agenda": 7910, "Agenda Equipe": 425, "Vencido": 1461, "Fatal": 1945, "D-1": 4400, "D-2": 956, "Futuro": 2420, "Total": 11182}, "2026-06": {"Prazo": 5493, "Agenda": 15824, "Agenda Equipe": 918, "Vencido": 337, "Fatal": 1840, "D-1": 4667, "D-2": 1220, "Futuro": 783, "Total": 22235}, "2026-07": {"Prazo": 5217, "Agenda": 14836, "Agenda Equipe": 983, "Vencido": 1, "Fatal": 965, "D-1": 2013, "D-2": 527, "Futuro": 1711, "Total": 21036}, "2026-08": {"Prazo": 5450, "Agenda": 14968, "Agenda Equipe": 1180, "Vencido": 5, "Fatal": 1054, "D-1": 2207, "D-2": 451, "Futuro": 1733, "Total": 21598}, "2026-09": {"Prazo": 5879, "Agenda": 15568, "Agenda Equipe": 925, "Vencido": 7, "Fatal": 1261, "D-1": 2214, "D-2": 525, "Futuro": 1872, "Total": 22372}, "2026-10": {"Prazo": 5818, "Agenda": 15602, "Agenda Equipe": 866, "Vencido": 3, "Fatal": 1220, "D-1": 2278, "D-2": 451, "Futuro": 1866, "Total": 22286}, "2026-11": {"Prazo": 3580, "Agenda": 9222, "Agenda Equipe": 480, "Vencido": 47, "Fatal": 976, "D-1": 1213, "D-2": 290, "Futuro": 1054, "Total": 13282}}};
+const ACUMULADO_DATA={"semana": {"2026-S29": {"Prazo": 1100, "Agenda": 2869, "Agenda Equipe": 209, "Vencido": 0, "Fatal": 268, "D-1": 422, "D-2": 122, "Futuro": 288, "Total": 4178}, "2026-S19": {"Prazo": 1451, "Agenda": 4122, "Agenda Equipe": 246, "Vencido": 905, "Fatal": 1053, "D-1": 2174, "D-2": 487, "Futuro": 1200, "Total": 5819}, "2026-S20": {"Prazo": 1396, "Agenda": 3788, "Agenda Equipe": 179, "Total": 5363, "Vencido": 556, "Fatal": 892, "D-1": 2226, "D-2": 469, "Futuro": 1220}, "2026-S21": {"Prazo": 1390, "Agenda": 3814, "Agenda Equipe": 206, "Vencido": 488, "Fatal": 882, "D-1": 2239, "D-2": 575, "Futuro": 1226, "Total": 5410}, "2026-S26": {"Prazo": 1476, "Agenda": 4026, "Agenda Equipe": 224, "Vencido": 448, "Fatal": 1020, "D-1": 2336, "D-2": 518, "Futuro": 1404, "Total": 5726}, "2026-S27": {"Prazo": 1320, "Agenda": 3431, "Agenda Equipe": 252, "Vencido": 0, "Fatal": 227, "D-1": 511, "D-2": 125, "Futuro": 457, "Total": 5003}, "2026-S22": {"Prazo": 1277, "Agenda": 4043, "Agenda Equipe": 200, "Vencido": 0, "Fatal": 156, "D-1": 551, "D-2": 121, "Futuro": 540, "Total": 5611}, "2026-S23": {"Prazo": 1195, "Agenda": 4046, "Agenda Equipe": 218, "Vencido": 1, "Fatal": 161, "D-1": 498, "D-2": 133, "Futuro": 530, "Total": 5441}, "2026-S24": {"Prazo": 1277, "Agenda": 3451, "Agenda Equipe": 220, "Vencido": 3, "Fatal": 237, "D-1": 441, "D-2": 133, "Futuro": 463, "Total": 4951}, "2026-S25": {"Prazo": 1418, "Agenda": 3838, "Agenda Equipe": 195, "Vencido": 1, "Fatal": 240, "D-1": 558, "D-2": 259, "Futuro": 619, "Total": 5646}, "2026-S28": {"Prazo": 1080, "Agenda": 3270, "Agenda Equipe": 168, "Vencido": 1, "Fatal": 146, "D-1": 373, "D-2": 129, "Futuro": 431, "Total": 4518}, "2026-S30": {"Prazo": 1137, "Agenda": 3394, "Agenda Equipe": 261, "Vencido": 0, "Fatal": 228, "D-1": 436, "D-2": 94, "Futuro": 379, "Total": 4792}, "2026-S31": {"Prazo": 1173, "Agenda": 3009, "Agenda Equipe": 202, "Vencido": 0, "Fatal": 209, "D-1": 519, "D-2": 116, "Futuro": 329, "Total": 4384}, "2026-S32": {"Prazo": 1150, "Agenda": 3362, "Agenda Equipe": 261, "Vencido": 0, "Fatal": 251, "D-1": 454, "D-2": 86, "Futuro": 359, "Total": 4773}, "2026-S33": {"Prazo": 1249, "Agenda": 3137, "Agenda Equipe": 272, "Vencido": 2, "Fatal": 202, "D-1": 579, "D-2": 105, "Futuro": 361, "Total": 4658}, "2026-S34": {"Prazo": 1323, "Agenda": 4009, "Agenda Equipe": 326, "Vencido": 1, "Fatal": 274, "D-1": 507, "D-2": 122, "Futuro": 419, "Total": 5658}, "2026-S35": {"Prazo": 1418, "Agenda": 3631, "Agenda Equipe": 250, "Vencido": 2, "Fatal": 261, "D-1": 551, "D-2": 99, "Futuro": 505, "Total": 5299}, "2026-S36": {"Prazo": 1517, "Agenda": 4322, "Agenda Equipe": 297, "Vencido": 2, "Fatal": 251, "D-1": 482, "D-2": 153, "Futuro": 629, "Total": 6136}, "2026-S37": {"Prazo": 1015, "Agenda": 2681, "Agenda Equipe": 169, "Vencido": 2, "Fatal": 333, "D-1": 369, "D-2": 73, "Futuro": 238, "Total": 3865}, "2026-S38": {"Prazo": 1344, "Agenda": 3657, "Agenda Equipe": 203, "Vencido": 1, "Fatal": 301, "D-1": 466, "D-2": 111, "Futuro": 465, "Total": 5204}, "2026-S39": {"Prazo": 1494, "Agenda": 3827, "Agenda Equipe": 212, "Vencido": 0, "Fatal": 283, "D-1": 628, "D-2": 145, "Futuro": 438, "Total": 5533}, "2026-S40": {"Prazo": 1404, "Agenda": 3458, "Agenda Equipe": 209, "Vencido": 3, "Fatal": 263, "D-1": 606, "D-2": 129, "Futuro": 403, "Total": 5071}, "2026-S41": {"Prazo": 1432, "Agenda": 3784, "Agenda Equipe": 214, "Vencido": 1, "Fatal": 227, "D-1": 586, "D-2": 111, "Futuro": 507, "Total": 5430}, "2026-S42": {"Prazo": 1023, "Agenda": 2929, "Agenda Equipe": 162, "Vencido": 0, "Fatal": 260, "D-1": 443, "D-2": 62, "Futuro": 258, "Total": 4114}, "2026-S43": {"Prazo": 1291, "Agenda": 3527, "Agenda Equipe": 182, "Vencido": 1, "Fatal": 288, "D-1": 530, "D-2": 106, "Futuro": 366, "Total": 5000}, "2026-S44": {"Prazo": 1501, "Agenda": 3819, "Agenda Equipe": 208, "Vencido": 0, "Fatal": 341, "D-1": 499, "D-2": 128, "Futuro": 533, "Total": 5528}, "2026-S45": {"Prazo": 886, "Agenda": 2475, "Agenda Equipe": 150, "Vencido": 11, "Fatal": 254, "D-1": 324, "D-2": 51, "Futuro": 246, "Total": 3511}, "2026-S46": {"Prazo": 1329, "Agenda": 3411, "Agenda Equipe": 182, "Vencido": 5, "Fatal": 359, "D-1": 491, "D-2": 74, "Futuro": 400, "Total": 4922}, "2026-S47": {"Prazo": 1303, "Agenda": 3124, "Agenda Equipe": 141, "Vencido": 4, "Fatal": 359, "D-1": 397, "D-2": 159, "Futuro": 384, "Total": 4568}}, "mes": {"2026-05": {"Prazo": 2847, "Agenda": 7910, "Agenda Equipe": 425, "Vencido": 1461, "Fatal": 1945, "D-1": 4400, "D-2": 956, "Futuro": 2420, "Total": 11182}, "2026-06": {"Prazo": 5493, "Agenda": 15824, "Agenda Equipe": 918, "Vencido": 337, "Fatal": 1840, "D-1": 4667, "D-2": 1220, "Futuro": 783, "Total": 22235}, "2026-07": {"Prazo": 5217, "Agenda": 14836, "Agenda Equipe": 983, "Vencido": 1, "Fatal": 965, "D-1": 2013, "D-2": 527, "Futuro": 1711, "Total": 21036}, "2026-08": {"Prazo": 5450, "Agenda": 14968, "Agenda Equipe": 1180, "Vencido": 5, "Fatal": 1054, "D-1": 2207, "D-2": 451, "Futuro": 1733, "Total": 21598}, "2026-09": {"Prazo": 5879, "Agenda": 15568, "Agenda Equipe": 925, "Vencido": 7, "Fatal": 1261, "D-1": 2214, "D-2": 525, "Futuro": 1872, "Total": 22372}, "2026-10": {"Prazo": 5818, "Agenda": 15602, "Agenda Equipe": 866, "Vencido": 3, "Fatal": 1220, "D-1": 2278, "D-2": 451, "Futuro": 1866, "Total": 22286}, "2026-11": {"Prazo": 3544, "Agenda": 9058, "Agenda Equipe": 474, "Vencido": 20, "Fatal": 976, "D-1": 1213, "D-2": 290, "Futuro": 1045, "Total": 13076}}};
 function openAcumulado(tipo, key){
   const d=(ACUMULADO_DATA[tipo]||{})[key]; if(!d) return;
   const titulo=tipo==='semana'?'📊 Acumulado semanal':'📅 Consolidado mensal';
@@ -8783,7 +8755,7 @@ function renderHistoricoResp(){
   const good=rows.filter(r=>r.lei.c==='good').length;
   const resumo=document.getElementById('hist-summary');
   if(resumo) resumo.innerHTML=`
-    <div class="hist-card"><div class="hlabel">Prazos S47</div><div class="vbad muted">${fmtNum(1318)}</div></div>
+    <div class="hist-card"><div class="hlabel">Prazos S47</div><div class="vbad muted">${fmtNum(1303)}</div></div>
     <div class="hist-card"><div class="hlabel">Pontos de atenção</div><div class="hvalue" style="color:#C0392B">${high}</div></div>
     <div class="hist-card"><div class="hlabel">Monitorar</div><div class="hvalue" style="color:#E67E22">${mid}</div></div>
     <div class="hist-card"><div class="hlabel">Positivos</div><div class="hvalue" style="color:#003B5C">${good}</div></div>`;
@@ -9315,7 +9287,7 @@ function initDashboard() {
   ];
   // Totais alinhados a BY_GRUPO da semana 16/11/2026 a 20/11/2026 (S47).
   // Mantém o TOTAL como total real de prazos do grupo; fatal aparece destacado à direita.
-  const SOCIOS_TOTAL_PLANILHA = {"Grupo E2": 398, "Grupo B1": 278, "Grupo E1": 237, "Grupo C1": 121, "Grupo B2": 115, "Grupo B3": 78, "Grupo C3": 33, "Grupo C2": 24, "Grupo A3": 24, "Grupo A1": 2, "Grupo A2": 1};
+  const SOCIOS_TOTAL_PLANILHA = {"Grupo E2": 390, "Grupo B1": 277, "Grupo E1": 232, "Grupo C1": 121, "Grupo B2": 115, "Grupo B3": 78, "Grupo C3": 33, "Grupo A3": 24, "Grupo C2": 23, "Grupo A1": 2, "Grupo A2": 1};
   grupos.forEach(({g,cor})=>{
     const base=BY_GRUPO[g]; if(!base) return;
     const v={...base,total:(SOCIOS_TOTAL_PLANILHA[g]||base.total)};

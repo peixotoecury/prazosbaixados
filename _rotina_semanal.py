@@ -119,7 +119,30 @@ def _json_const(t, nome):
             if dep == 0: return json.loads(t[i:j + 1])
 
 
-def _tabela_grupo_sigla(contagem, cor):
+def _nomes(t):
+    """sigla -> nome: mapas da própria página (NOMES e MAPA_SIGLAS) + cadastro de profissionais."""
+    m = {}
+    try:
+        import openpyxl
+        it = openpyxl.load_workbook(AQUI / "Profissionais trabalhistas.xlsx", read_only=True)["Planilha2"].iter_rows(values_only=True); next(it)
+        for r in it:
+            if r[0] and r[1]: m[str(r[0]).strip().upper()] = str(r[1]).replace(" ", " ").strip()
+    except Exception: pass
+    for nome in ("NOMES", "MAPA_SIGLAS"):
+        k = t.find("const " + nome)
+        if k >= 0:
+            bloco = t[k:t.index("}", k)]
+            m.update({a: b for a, b in re.findall(r"'([A-Z]{2,4})'\s*:\s*'([^']+)'", bloco)})
+    m["PRAZO"] = "Conta genérica PRAZO"
+    return m
+
+
+def _curto(n):
+    p = n.split()
+    return " ".join(p[:2]) if len(p) <= 2 or p[1].lower() not in ("de", "da", "do", "dos", "das") else " ".join(p[:3])
+
+
+def _tabela_grupo_sigla(contagem, cor, NOM=None):
     """Uma tabela só: Grupo (mesclado, com o total do grupo) | Sigla | barra | Qtde."""
     import collections
     pg = collections.Counter()
@@ -128,8 +151,8 @@ def _tabela_grupo_sigla(contagem, cor):
         return f'<p style="font-family:Segoe UI,Arial;font-size:13px;color:{CINZA};margin:4px 0 18px">Nenhum caso na semana.</p>'
     mx = max(contagem.values())
     th = f'style="background:{NAVY};color:#ffffff;font-size:11px;text-transform:uppercase;letter-spacing:.5px;padding:7px 10px;text-align:left"'
-    h = (f'<table cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-family:Segoe UI,Arial;font-size:13px;width:520px;margin:4px 0 22px">'
-         f'<tr><th {th}>Grupo</th><th {th}>Sigla</th><th {th} colspan="2">Qtde</th></tr>')
+    h = (f'<table cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-family:Segoe UI,Arial;font-size:13px;width:620px;margin:4px 0 22px">'
+         f'<tr><th {th}>Grupo</th><th {th}>Profissional</th><th {th} colspan="2">Qtde</th></tr>')
     for g, tot in pg.most_common():
         itens = sorted(((sg, n) for (gg, sg), n in contagem.items() if gg == g), key=lambda x: (-x[1], x[0]))
         for k, (sg, n) in enumerate(itens):
@@ -137,8 +160,9 @@ def _tabela_grupo_sigla(contagem, cor):
             cel_g = (f'<td rowspan="{len(itens)}" style="{borda}padding:7px 10px;vertical-align:top;background:#F4F7FA;width:120px">'
                      f'<b style="color:{NAVY}">{g}</b><br><span style="font-size:11px;color:{CINZA}">{tot} no grupo</span></td>') if k == 0 else ""
             barra = max(4, round(150 * n / mx))
-            rot = f'{sg}<br><span style="font-size:10px;color:{CINZA};font-weight:400">conta genérica</span>' if sg == "PRAZO" else sg
-            h += (f'<tr>{cel_g}<td style="{borda}padding:6px 10px;font-weight:600;width:90px">{rot}</td>'
+            nome = _curto((NOM or {}).get(sg, sg))
+            rot = f'{nome}<br><span style="font-size:10px;color:{CINZA};font-weight:400">{sg}</span>'
+            h += (f'<tr>{cel_g}<td style="{borda}padding:6px 10px;font-weight:600;width:170px">{rot}</td>'
                   f'<td style="{borda}padding:6px 4px 6px 10px;width:160px"><table cellpadding="0" cellspacing="0"><tr>'
                   f'<td style="background:{cor};height:10px;width:{barra}px;font-size:1px;line-height:1px">&nbsp;</td></tr></table></td>'
                   f'<td style="{borda}padding:6px 10px;text-align:right;font-weight:700;color:{cor};width:40px">{n}</td></tr>')
@@ -154,6 +178,7 @@ def montar_email(ini, fim):
     ven = collections.Counter({(r["grp"], r["n"]): r["ven"] for r in resp if r.get("ven")})
     ffc = collections.Counter((x["grp"], x["resp"]) for x in ff)
     n_ven, n_ff = sum(ven.values()), len(ff)
+    NOM = _nomes(t)
 
     def tile(rot, val, cor, sub=""):
         return (f'<td style="padding:4px"><table cellpadding="0" cellspacing="0" style="width:160px;border-collapse:collapse"><tr>'
@@ -176,7 +201,7 @@ def montar_email(ini, fim):
                 f'<div style="font-size:11px;color:{CINZA};padding-left:12px;margin-bottom:6px">{sub}</div></div>')
 
     td = f'style="padding:4px 8px;border-top:1px solid {LINHA}"'
-    casos = "".join(f'<tr><td {td}>{x["dt"]}</td><td {td}>{x["hora_real"][:2]}h</td><td {td}><b>{x["resp"]}</b></td><td {td}>{x["grp"]}</td><td {td}>{x["proc"]}</td></tr>' for x in ff)
+    casos = "".join(f'<tr><td {td}>{x["dt"]}</td><td {td}>{x["hora_real"][:2]}h</td><td {td}><b>{_curto(NOM.get(x["resp"], x["resp"]))}</b></td><td {td}>{x["grp"]}</td><td {td}>{x["proc"]}</td></tr>' for x in ff)
     th2 = f'style="text-align:left;padding:5px 8px;font-size:10px;color:{CINZA};text-transform:uppercase;border-bottom:2px solid {NAVY}"'
     corpo = (f'<div style="font-family:Segoe UI,Arial;color:#1A2130;max-width:700px">'
              f'<table cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:700px"><tr>'
@@ -187,12 +212,12 @@ def montar_email(ini, fim):
              f'<img src="cid:logo_pc" alt="Peixoto &amp; Cury Advogados" height="44" style="height:44px;display:block;margin-left:auto"></td>'
              f'</tr><tr><td colspan="2" style="background:{CIANO};height:3px;font-size:1px;line-height:1px">&nbsp;</td></tr></table>'
              + cards
-             + secao(f"Vencidos · {n_ven}", "prazos baixados depois do dia fatal, por grupo e sigla")
-             + _tabela_grupo_sigla(ven, "#C0392B")
-             + secao(f"Fatais fora do horário · {n_ff}", "prazos baixados no dia fatal antes das 9h ou a partir das 19h, por grupo e sigla")
-             + _tabela_grupo_sigla(ffc, "#E74C3C")
+             + secao(f"Vencidos · {n_ven}", "prazos baixados depois do dia fatal, por grupo e profissional")
+             + _tabela_grupo_sigla(ven, "#C0392B", NOM)
+             + secao(f"Fatais fora do horário · {n_ff}", "prazos baixados no dia fatal antes das 9h ou a partir das 19h, por grupo e profissional")
+             + _tabela_grupo_sigla(ffc, "#E74C3C", NOM)
              + secao("Casos de fatal fora do horário", "a hora aparece só cheia, porque o LM grava os minutos com erro")
-             + f'<table cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-size:11.5px;width:620px;margin:4px 0 18px"><tr><th {th2}>Dia</th><th {th2}>Hora</th><th {th2}>Sigla</th><th {th2}>Grupo</th><th {th2}>Processo</th></tr>{casos}</table>'
+             + f'<table cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-size:11.5px;width:620px;margin:4px 0 18px"><tr><th {th2}>Dia</th><th {th2}>Hora</th><th {th2}>Profissional</th><th {th2}>Grupo</th><th {th2}>Processo</th></tr>{casos}</table>'
              + f'<div style="font-size:12px;margin:10px 0">Painel completo: <a href="https://peixotoecury.github.io/prazosbaixados/" style="color:{CIANO}">peixotoecury.github.io/prazosbaixados</a></div>'
              + f'<div style="font-size:10px;color:{CINZA};border-top:1px solid {LINHA};padding-top:6px">Enviado automaticamente pela rotina semanal da Controladoria. Peixoto &amp; Cury Advogados.</div></div>')
     assunto = f"Prazos baixados {ini:%d/%m} a {fim:%d/%m}: {n_ven} vencidos e {n_ff} fatais fora do horário"

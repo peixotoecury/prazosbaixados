@@ -101,6 +101,8 @@ def _filtra(tabelas):
             if str(g("area")).strip().upper() != "TRABALHISTA": continue
             # tarefas automáticas (incluídas pelo usuário PRAZO e baixadas por robô WMS/ASR-LM) não entram no Compilado
             if "quem_incluiu" in cab and str(g("quem_incluiu") or "").strip().upper() == "PRAZO": continue
+            # prazo na conta genérica PRAZO fechado pelo robô (WMS/ASR-LM) não é baixa de advogado (decisão da usuária em 21/11/2026)
+            if str(g("responsavel") or "").strip().upper() == "PRAZO" and "-LM-" in str(g("quem_realizou") or "").upper(): continue
             da, dr = dat(g("data_agenda")), dat(g("data_realizacao"))
             if not da or not dr: continue
             chave = (g("codigo_processo"), str(g("responsavel")).strip().upper(), da, dr, str(g("hora_realizacao")), str(g("descricao")).strip())

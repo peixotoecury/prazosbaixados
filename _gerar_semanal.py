@@ -85,6 +85,8 @@ def _filtra(tabelas, desde, nome):
             g = lambda k: r[cab[k]]
             if str(g("status")).strip() != "Realizado" or str(g("area")).strip().upper() != "TRABALHISTA": continue
             if str(g("quem_incluiu") or "").strip().upper() == "PRAZO": continue
+            # prazo na conta genérica PRAZO fechado pelo robô (WMS/ASR-LM) não é baixa de advogado (decisão da usuária em 21/11/2026)
+            if str(g("responsavel") or "").strip().upper() == "PRAZO" and "-LM-" in str(g("quem_realizou") or "").upper(): continue
             tipo = str(g("tipo_agenda")).strip()
             if tipo not in ("Prazo", "Agenda", "Agenda Equipe"): continue
             da, dr = dat(g("data_agenda")), dat(g("data_realizacao"))
