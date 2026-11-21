@@ -1,0 +1,3640 @@
+{
+ "meses": [
+  "Janeiro/2026",
+  "Fevereiro/2026",
+  "Março/2026",
+  "Abril/2026",
+  "Maio/2026",
+  "Junho/2026",
+  "Julho/2026",
+  "Agosto/2026",
+  "Setembro/2026",
+  "Outubro/2026"
+ ],
+ "profissional": {
+  "Janeiro/2026": [
+   {
+    "Profissional": "Jackeline Romeu Torres",
+    "Fatal": 76,
+    "D-1": 66,
+    "D-2": 22,
+    "Futuro": 37,
+    "Vencido": 2,
+    "Total": 203
+   },
+   {
+    "Profissional": "Thiago Frid Figueiredo Rossi",
+    "Fatal": 45,
+    "D-1": 82,
+    "D-2": 34,
+    "Futuro": 19,
+    "Vencido": 15,
+    "Total": 195
+   },
+   {
+    "Profissional": "Rafael Yepez do Lago",
+    "Fatal": 116,
+    "D-1": 42,
+    "D-2": 3,
+    "Futuro": 10,
+    "Vencido": 0,
+    "Total": 171
+   },
+   {
+    "Profissional": "Richard Ruan Leo da Silva",
+    "Fatal": 34,
+    "D-1": 75,
+    "D-2": 10,
+    "Futuro": 28,
+    "Vencido": 0,
+    "Total": 147
+   },
+   {
+    "Profissional": "Vinícius Ronchi Arruda",
+    "Fatal": 29,
+    "D-1": 69,
+    "D-2": 21,
+    "Futuro": 24,
+    "Vencido": 0,
+    "Total": 143
+   },
+   {
+    "Profissional": "Camila Alves Magalhães de Paula",
+    "Fatal": 66,
+    "D-1": 12,
+    "D-2": 8,
+    "Futuro": 52,
+    "Vencido": 0,
+    "Total": 138
+   },
+   {
+    "Profissional": "Juliana Perucci",
+    "Fatal": 13,
+    "D-1": 45,
+    "D-2": 10,
+    "Futuro": 60,
+    "Vencido": 0,
+    "Total": 128
+   },
+   {
+    "Profissional": "Rafael Rocha Ferreira",
+    "Fatal": 7,
+    "D-1": 75,
+    "D-2": 6,
+    "Futuro": 40,
+    "Vencido": 0,
+    "Total": 128
+   },
+   {
+    "Profissional": "Jessica Cerqueira Silva",
+    "Fatal": 6,
+    "D-1": 46,
+    "D-2": 17,
+    "Futuro": 50,
+    "Vencido": 0,
+    "Total": 119
+   },
+   {
+    "Profissional": "Natália Biondi Gaggini Robles",
+    "Fatal": 3,
+    "D-1": 43,
+    "D-2": 40,
+    "Futuro": 31,
+    "Vencido": 0,
+    "Total": 117
+   },
+   {
+    "Profissional": "Bianca Sayuri Matsunaga",
+    "Fatal": 54,
+    "D-1": 29,
+    "D-2": 9,
+    "Futuro": 17,
+    "Vencido": 0,
+    "Total": 109
+   },
+   {
+    "Profissional": "Júlia Priego Lopes da Silva",
+    "Fatal": 9,
+    "D-1": 29,
+    "D-2": 18,
+    "Futuro": 37,
+    "Vencido": 2,
+    "Total": 95
+   },
+   {
+    "Profissional": "Daniela Prandi Pedro Ricca",
+    "Fatal": 47,
+    "D-1": 13,
+    "D-2": 1,
+    "Futuro": 27,
+    "Vencido": 1,
+    "Total": 89
+   },
+   {
+    "Profissional": "Rafael Camargo Felisbino",
+    "Fatal": 18,
+    "D-1": 31,
+    "D-2": 5,
+    "Futuro": 32,
+    "Vencido": 2,
+    "Total": 88
+   },
+   {
+    "Profissional": "Joice Ramos Miranda",
+    "Fatal": 21,
+    "D-1": 37,
+    "D-2": 12,
+    "Futuro": 15,
+    "Vencido": 1,
+    "Total": 86
+   },
+   {
+    "Profissional": "Aline Ferreira Miron",
+    "Fatal": 2,
+    "D-1": 30,
+    "D-2": 11,
+    "Futuro": 35,
+    "Vencido": 0,
+    "Total": 78
+   },
+   {
+    "Profissional": "Gabriela Pereira Sousa",
+    "Fatal": 20,
+    "D-1": 35,
+    "D-2": 6,
+    "Futuro": 16,
+    "Vencido": 1,
+    "Total": 78
+   },
+   {
+    "Profissional": "Bianca Bolanhi Camacho",
+    "Fatal": 3,
+    "D-1": 58,
+    "D-2": 6,
+    "Futuro": 7,
+    "Vencido": 0,
+    "Total": 74
+   },
+   {
+    "Profissional": "Sergio Cricca Filho",
+    "Fatal": 29,
+    "D-1": 10,
+    "D-2": 2,
+    "Futuro": 31,
+    "Vencido": 0,
+    "Total": 72
+   },
+   {
+    "Profissional": "Bruna Cembranelli Fazenda",
+    "Fatal": 16,
+    "D-1": 14,
+    "D-2": 5,
+    "Futuro": 27,
+    "Vencido": 4,
+    "Total": 66
+   },
+   {
+    "Profissional": "Guilherme Silva Morimoto",
+    "Fatal": 23,
+    "D-1": 16,
+    "D-2": 0,
+    "Futuro": 24,
+    "Vencido": 0,
+    "Total": 63
+   },
+   {
+    "Profissional": "Anna Carolina Balbino Gatti Baani",
+    "Fatal": 8,
+    "D-1": 12,
+    "D-2": 12,
+    "Futuro": 24,
+    "Vencido": 6,
+    "Total": 62
+   },
+   {
+    "Profissional": "Mariana Borges de Menezes Fávaro",
+    "Fatal": 6,
+    "D-1": 20,
+    "D-2": 16,
+    "Futuro": 17,
+    "Vencido": 0,
+    "Total": 59
+   },
+   {
+    "Profissional": "Jenifer de Jesus Silva",
+    "Fatal": 20,
+    "D-1": 28,
+    "D-2": 5,
+    "Futuro": 3,
+    "Vencido": 0,
+    "Total": 56
+   },
+   {
+    "Profissional": "Letícia Meneghini Fontes",
+    "Fatal": 12,
+    "D-1": 18,
+    "D-2": 3,
+    "Futuro": 23,
+    "Vencido": 0,
+    "Total": 56
+   },
+   {
+    "Profissional": "Vanessa de Cassia Castrequini Rosa",
+    "Fatal": 17,
+    "D-1": 15,
+    "D-2": 3,
+    "Futuro": 21,
+    "Vencido": 0,
+    "Total": 56
+   },
+   {
+    "Profissional": "Arthur Rodrigues Rios Toledo de Castro",
+    "Fatal": 24,
+    "D-1": 9,
+    "D-2": 6,
+    "Futuro": 15,
+    "Vencido": 0,
+    "Total": 54
+   },
+   {
+    "Profissional": "Getúlio Bernardo Flora da Silva",
+    "Fatal": 10,
+    "D-1": 18,
+    "D-2": 7,
+    "Futuro": 18,
+    "Vencido": 0,
+    "Total": 53
+   },
+   {
+    "Profissional": "Erik Mota Coppi",
+    "Fatal": 20,
+    "D-1": 8,
+    "D-2": 6,
+    "Futuro": 18,
+    "Vencido": 0,
+    "Total": 52
+   },
+   {
+    "Profissional": "Sofia Freire",
+    "Fatal": 6,
+    "D-1": 9,
+    "D-2": 3,
+    "Futuro": 12,
+    "Vencido": 0,
+    "Total": 30
+   },
+   {
+    "Profissional": "André Alessandro de Paula",
+    "Fatal": 0,
+    "D-1": 11,
+    "D-2": 7,
+    "Futuro": 10,
+    "Vencido": 0,
+    "Total": 28
+   },
+   {
+    "Profissional": "Paloma da Silva Santos",
+    "Fatal": 0,
+    "D-1": 16,
+    "D-2": 5,
+    "Futuro": 6,
+    "Vencido": 0,
+    "Total": 27
+   },
+   {
+    "Profissional": "Nicolau Rafael Guimarães Coelho",
+    "Fatal": 11,
+    "D-1": 3,
+    "D-2": 0,
+    "Futuro": 10,
+    "Vencido": 0,
+    "Total": 24
+   },
+   {
+    "Profissional": "Vinicius da Silva Cerqueira",
+    "Fatal": 1,
+    "D-1": 11,
+    "D-2": 0,
+    "Futuro": 7,
+    "Vencido": 1,
+    "Total": 20
+   },
+   {
+    "Profissional": "Washington Soares Silva Filho",
+    "Fatal": 0,
+    "D-1": 3,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 0,
+    "Total": 3
+   },
+   {
+    "Profissional": "Marina de Novaes Brechiani",
+    "Fatal": 0,
+    "D-1": 0,
+    "D-2": 1,
+    "Futuro": 0,
+    "Vencido": 0,
+    "Total": 1
+   },
+   {
+    "Profissional": "Natalia Bezerra Baliero",
+    "Fatal": 0,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 1,
+    "Total": 1
+   }
+  ],
+  "Fevereiro/2026": [
+   {
+    "Profissional": "Jackeline Romeu Torres",
+    "Fatal": 107,
+    "D-1": 44,
+    "D-2": 29,
+    "Futuro": 65,
+    "Vencido": 11,
+    "Total": 256
+   },
+   {
+    "Profissional": "Richard Ruan Leo da Silva",
+    "Fatal": 155,
+    "D-1": 28,
+    "D-2": 4,
+    "Futuro": 63,
+    "Vencido": 6,
+    "Total": 256
+   },
+   {
+    "Profissional": "Camila Alves Magalhães de Paula",
+    "Fatal": 94,
+    "D-1": 34,
+    "D-2": 6,
+    "Futuro": 99,
+    "Vencido": 0,
+    "Total": 233
+   },
+   {
+    "Profissional": "Sergio Cricca Filho",
+    "Fatal": 111,
+    "D-1": 34,
+    "D-2": 11,
+    "Futuro": 58,
+    "Vencido": 15,
+    "Total": 229
+   },
+   {
+    "Profissional": "Guilherme Silva Morimoto",
+    "Fatal": 78,
+    "D-1": 42,
+    "D-2": 11,
+    "Futuro": 73,
+    "Vencido": 12,
+    "Total": 216
+   },
+   {
+    "Profissional": "Rafael Rocha Ferreira",
+    "Fatal": 17,
+    "D-1": 105,
+    "D-2": 5,
+    "Futuro": 82,
+    "Vencido": 3,
+    "Total": 212
+   },
+   {
+    "Profissional": "Bianca Sayuri Matsunaga",
+    "Fatal": 94,
+    "D-1": 48,
+    "D-2": 3,
+    "Futuro": 23,
+    "Vencido": 10,
+    "Total": 178
+   },
+   {
+    "Profissional": "Thiago Frid Figueiredo Rossi",
+    "Fatal": 15,
+    "D-1": 115,
+    "D-2": 7,
+    "Futuro": 32,
+    "Vencido": 8,
+    "Total": 177
+   },
+   {
+    "Profissional": "Rafael Yepez do Lago",
+    "Fatal": 87,
+    "D-1": 39,
+    "D-2": 2,
+    "Futuro": 39,
+    "Vencido": 4,
+    "Total": 171
+   },
+   {
+    "Profissional": "Letícia Meneghini Fontes",
+    "Fatal": 5,
+    "D-1": 125,
+    "D-2": 9,
+    "Futuro": 23,
+    "Vencido": 0,
+    "Total": 162
+   },
+   {
+    "Profissional": "Júlia Priego Lopes da Silva",
+    "Fatal": 12,
+    "D-1": 42,
+    "D-2": 10,
+    "Futuro": 88,
+    "Vencido": 8,
+    "Total": 160
+   },
+   {
+    "Profissional": "Getúlio Bernardo Flora da Silva",
+    "Fatal": 25,
+    "D-1": 42,
+    "D-2": 23,
+    "Futuro": 68,
+    "Vencido": 1,
+    "Total": 159
+   },
+   {
+    "Profissional": "Paloma da Silva Santos",
+    "Fatal": 11,
+    "D-1": 85,
+    "D-2": 18,
+    "Futuro": 43,
+    "Vencido": 0,
+    "Total": 157
+   },
+   {
+    "Profissional": "Juliana Perucci",
+    "Fatal": 10,
+    "D-1": 40,
+    "D-2": 8,
+    "Futuro": 96,
+    "Vencido": 0,
+    "Total": 154
+   },
+   {
+    "Profissional": "Jessica Cerqueira Silva",
+    "Fatal": 4,
+    "D-1": 47,
+    "D-2": 15,
+    "Futuro": 83,
+    "Vencido": 3,
+    "Total": 152
+   },
+   {
+    "Profissional": "Aline Ferreira Miron",
+    "Fatal": 2,
+    "D-1": 26,
+    "D-2": 7,
+    "Futuro": 105,
+    "Vencido": 1,
+    "Total": 141
+   },
+   {
+    "Profissional": "Anna Carolina Balbino Gatti Baani",
+    "Fatal": 59,
+    "D-1": 28,
+    "D-2": 20,
+    "Futuro": 30,
+    "Vencido": 1,
+    "Total": 138
+   },
+   {
+    "Profissional": "Joice Ramos Miranda",
+    "Fatal": 61,
+    "D-1": 38,
+    "D-2": 4,
+    "Futuro": 25,
+    "Vencido": 1,
+    "Total": 129
+   },
+   {
+    "Profissional": "Rafael Camargo Felisbino",
+    "Fatal": 23,
+    "D-1": 50,
+    "D-2": 6,
+    "Futuro": 47,
+    "Vencido": 0,
+    "Total": 126
+   },
+   {
+    "Profissional": "Vanessa de Cassia Castrequini Rosa",
+    "Fatal": 34,
+    "D-1": 39,
+    "D-2": 11,
+    "Futuro": 35,
+    "Vencido": 3,
+    "Total": 122
+   },
+   {
+    "Profissional": "Arthur Rodrigues Rios Toledo de Castro",
+    "Fatal": 40,
+    "D-1": 8,
+    "D-2": 2,
+    "Futuro": 51,
+    "Vencido": 12,
+    "Total": 113
+   },
+   {
+    "Profissional": "Mariana Borges de Menezes Fávaro",
+    "Fatal": 11,
+    "D-1": 64,
+    "D-2": 10,
+    "Futuro": 21,
+    "Vencido": 1,
+    "Total": 107
+   },
+   {
+    "Profissional": "Bruna Cembranelli Fazenda",
+    "Fatal": 17,
+    "D-1": 29,
+    "D-2": 9,
+    "Futuro": 51,
+    "Vencido": 0,
+    "Total": 106
+   },
+   {
+    "Profissional": "Bianca Bolanhi Camacho",
+    "Fatal": 14,
+    "D-1": 45,
+    "D-2": 32,
+    "Futuro": 7,
+    "Vencido": 5,
+    "Total": 103
+   },
+   {
+    "Profissional": "Vinícius Ronchi Arruda",
+    "Fatal": 30,
+    "D-1": 41,
+    "D-2": 10,
+    "Futuro": 13,
+    "Vencido": 3,
+    "Total": 97
+   },
+   {
+    "Profissional": "Jenifer de Jesus Silva",
+    "Fatal": 52,
+    "D-1": 23,
+    "D-2": 7,
+    "Futuro": 4,
+    "Vencido": 1,
+    "Total": 87
+   },
+   {
+    "Profissional": "Natália Biondi Gaggini Robles",
+    "Fatal": 13,
+    "D-1": 19,
+    "D-2": 12,
+    "Futuro": 41,
+    "Vencido": 0,
+    "Total": 85
+   },
+   {
+    "Profissional": "Daniela Prandi Pedro Ricca",
+    "Fatal": 22,
+    "D-1": 26,
+    "D-2": 3,
+    "Futuro": 19,
+    "Vencido": 8,
+    "Total": 78
+   },
+   {
+    "Profissional": "Erik Mota Coppi",
+    "Fatal": 39,
+    "D-1": 13,
+    "D-2": 5,
+    "Futuro": 13,
+    "Vencido": 1,
+    "Total": 71
+   },
+   {
+    "Profissional": "Gabriela Pereira Sousa",
+    "Fatal": 5,
+    "D-1": 28,
+    "D-2": 6,
+    "Futuro": 28,
+    "Vencido": 0,
+    "Total": 67
+   },
+   {
+    "Profissional": "André Alessandro de Paula",
+    "Fatal": 5,
+    "D-1": 18,
+    "D-2": 5,
+    "Futuro": 23,
+    "Vencido": 0,
+    "Total": 51
+   },
+   {
+    "Profissional": "Nicolau Rafael Guimarães Coelho",
+    "Fatal": 14,
+    "D-1": 6,
+    "D-2": 1,
+    "Futuro": 25,
+    "Vencido": 0,
+    "Total": 46
+   },
+   {
+    "Profissional": "Sofia Freire",
+    "Fatal": 9,
+    "D-1": 6,
+    "D-2": 1,
+    "Futuro": 16,
+    "Vencido": 1,
+    "Total": 33
+   },
+   {
+    "Profissional": "Vinicius da Silva Cerqueira",
+    "Fatal": 2,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 1,
+    "Vencido": 3,
+    "Total": 6
+   },
+   {
+    "Profissional": "Keyla Maria Barbosa Silva Moraes",
+    "Fatal": 0,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 1,
+    "Total": 1
+   },
+   {
+    "Profissional": "Natalia Bezerra Baliero",
+    "Fatal": 0,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 1,
+    "Vencido": 0,
+    "Total": 1
+   }
+  ],
+  "Março/2026": [
+   {
+    "Profissional": "Rafael Yepez do Lago",
+    "Fatal": 196,
+    "D-1": 90,
+    "D-2": 3,
+    "Futuro": 26,
+    "Vencido": 0,
+    "Total": 315
+   },
+   {
+    "Profissional": "Camila Alves Magalhães de Paula",
+    "Fatal": 135,
+    "D-1": 62,
+    "D-2": 15,
+    "Futuro": 100,
+    "Vencido": 0,
+    "Total": 312
+   },
+   {
+    "Profissional": "Jackeline Romeu Torres",
+    "Fatal": 114,
+    "D-1": 64,
+    "D-2": 26,
+    "Futuro": 87,
+    "Vencido": 20,
+    "Total": 311
+   },
+   {
+    "Profissional": "Richard Ruan Leo da Silva",
+    "Fatal": 185,
+    "D-1": 34,
+    "D-2": 8,
+    "Futuro": 64,
+    "Vencido": 7,
+    "Total": 298
+   },
+   {
+    "Profissional": "Rafael Rocha Ferreira",
+    "Fatal": 22,
+    "D-1": 131,
+    "D-2": 10,
+    "Futuro": 128,
+    "Vencido": 0,
+    "Total": 291
+   },
+   {
+    "Profissional": "Guilherme Silva Morimoto",
+    "Fatal": 137,
+    "D-1": 35,
+    "D-2": 12,
+    "Futuro": 91,
+    "Vencido": 0,
+    "Total": 275
+   },
+   {
+    "Profissional": "Juliana Perucci",
+    "Fatal": 26,
+    "D-1": 93,
+    "D-2": 6,
+    "Futuro": 133,
+    "Vencido": 0,
+    "Total": 258
+   },
+   {
+    "Profissional": "Letícia Meneghini Fontes",
+    "Fatal": 11,
+    "D-1": 192,
+    "D-2": 24,
+    "Futuro": 31,
+    "Vencido": 0,
+    "Total": 258
+   },
+   {
+    "Profissional": "Anna Carolina Balbino Gatti Baani",
+    "Fatal": 95,
+    "D-1": 62,
+    "D-2": 42,
+    "Futuro": 56,
+    "Vencido": 0,
+    "Total": 255
+   },
+   {
+    "Profissional": "Bianca Sayuri Matsunaga",
+    "Fatal": 147,
+    "D-1": 48,
+    "D-2": 13,
+    "Futuro": 40,
+    "Vencido": 2,
+    "Total": 250
+   },
+   {
+    "Profissional": "Getúlio Bernardo Flora da Silva",
+    "Fatal": 43,
+    "D-1": 50,
+    "D-2": 34,
+    "Futuro": 115,
+    "Vencido": 7,
+    "Total": 249
+   },
+   {
+    "Profissional": "Sergio Cricca Filho",
+    "Fatal": 128,
+    "D-1": 14,
+    "D-2": 4,
+    "Futuro": 95,
+    "Vencido": 1,
+    "Total": 242
+   },
+   {
+    "Profissional": "Paloma da Silva Santos",
+    "Fatal": 13,
+    "D-1": 84,
+    "D-2": 18,
+    "Futuro": 116,
+    "Vencido": 0,
+    "Total": 231
+   },
+   {
+    "Profissional": "Júlia Priego Lopes da Silva",
+    "Fatal": 17,
+    "D-1": 74,
+    "D-2": 14,
+    "Futuro": 124,
+    "Vencido": 0,
+    "Total": 229
+   },
+   {
+    "Profissional": "Joice Ramos Miranda",
+    "Fatal": 100,
+    "D-1": 93,
+    "D-2": 10,
+    "Futuro": 12,
+    "Vencido": 0,
+    "Total": 215
+   },
+   {
+    "Profissional": "Jessica Cerqueira Silva",
+    "Fatal": 7,
+    "D-1": 72,
+    "D-2": 11,
+    "Futuro": 117,
+    "Vencido": 0,
+    "Total": 207
+   },
+   {
+    "Profissional": "Vanessa de Cassia Castrequini Rosa",
+    "Fatal": 88,
+    "D-1": 26,
+    "D-2": 6,
+    "Futuro": 77,
+    "Vencido": 0,
+    "Total": 197
+   },
+   {
+    "Profissional": "Jenifer de Jesus Silva",
+    "Fatal": 128,
+    "D-1": 51,
+    "D-2": 10,
+    "Futuro": 5,
+    "Vencido": 1,
+    "Total": 195
+   },
+   {
+    "Profissional": "Bianca Bolanhi Camacho",
+    "Fatal": 37,
+    "D-1": 99,
+    "D-2": 26,
+    "Futuro": 25,
+    "Vencido": 2,
+    "Total": 189
+   },
+   {
+    "Profissional": "Bruna Cembranelli Fazenda",
+    "Fatal": 44,
+    "D-1": 56,
+    "D-2": 4,
+    "Futuro": 75,
+    "Vencido": 0,
+    "Total": 179
+   },
+   {
+    "Profissional": "Erik Mota Coppi",
+    "Fatal": 82,
+    "D-1": 38,
+    "D-2": 12,
+    "Futuro": 37,
+    "Vencido": 1,
+    "Total": 170
+   },
+   {
+    "Profissional": "Aline Ferreira Miron",
+    "Fatal": 6,
+    "D-1": 55,
+    "D-2": 13,
+    "Futuro": 92,
+    "Vencido": 0,
+    "Total": 166
+   },
+   {
+    "Profissional": "Rafael Camargo Felisbino",
+    "Fatal": 28,
+    "D-1": 55,
+    "D-2": 5,
+    "Futuro": 72,
+    "Vencido": 0,
+    "Total": 160
+   },
+   {
+    "Profissional": "Arthur Rodrigues Rios Toledo de Castro",
+    "Fatal": 62,
+    "D-1": 22,
+    "D-2": 11,
+    "Futuro": 61,
+    "Vencido": 0,
+    "Total": 156
+   },
+   {
+    "Profissional": "Thiago Frid Figueiredo Rossi",
+    "Fatal": 31,
+    "D-1": 74,
+    "D-2": 13,
+    "Futuro": 20,
+    "Vencido": 0,
+    "Total": 138
+   },
+   {
+    "Profissional": "Natália Biondi Gaggini Robles",
+    "Fatal": 13,
+    "D-1": 48,
+    "D-2": 28,
+    "Futuro": 40,
+    "Vencido": 1,
+    "Total": 130
+   },
+   {
+    "Profissional": "Mariana Borges de Menezes Fávaro",
+    "Fatal": 11,
+    "D-1": 88,
+    "D-2": 7,
+    "Futuro": 18,
+    "Vencido": 0,
+    "Total": 124
+   },
+   {
+    "Profissional": "Daniela Prandi Pedro Ricca",
+    "Fatal": 36,
+    "D-1": 27,
+    "D-2": 2,
+    "Futuro": 30,
+    "Vencido": 0,
+    "Total": 95
+   },
+   {
+    "Profissional": "Vinícius Ronchi Arruda",
+    "Fatal": 12,
+    "D-1": 44,
+    "D-2": 13,
+    "Futuro": 26,
+    "Vencido": 0,
+    "Total": 95
+   },
+   {
+    "Profissional": "Vinicius da Silva Cerqueira",
+    "Fatal": 15,
+    "D-1": 37,
+    "D-2": 10,
+    "Futuro": 7,
+    "Vencido": 2,
+    "Total": 71
+   },
+   {
+    "Profissional": "Sofia Freire",
+    "Fatal": 22,
+    "D-1": 7,
+    "D-2": 3,
+    "Futuro": 9,
+    "Vencido": 0,
+    "Total": 41
+   },
+   {
+    "Profissional": "André Alessandro de Paula",
+    "Fatal": 4,
+    "D-1": 9,
+    "D-2": 6,
+    "Futuro": 21,
+    "Vencido": 0,
+    "Total": 40
+   },
+   {
+    "Profissional": "Nicolau Rafael Guimarães Coelho",
+    "Fatal": 5,
+    "D-1": 10,
+    "D-2": 0,
+    "Futuro": 18,
+    "Vencido": 0,
+    "Total": 33
+   },
+   {
+    "Profissional": "Keyla Maria Barbosa Silva Moraes",
+    "Fatal": 4,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 1,
+    "Total": 5
+   },
+   {
+    "Profissional": "Amanda Pereira Reis de Paula Cardoso",
+    "Fatal": 0,
+    "D-1": 2,
+    "D-2": 0,
+    "Futuro": 2,
+    "Vencido": 0,
+    "Total": 4
+   },
+   {
+    "Profissional": "Beatriz Santiago de Souza",
+    "Fatal": 0,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 2,
+    "Total": 2
+   },
+   {
+    "Profissional": "Natalia Bezerra Baliero",
+    "Fatal": 1,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 0,
+    "Total": 1
+   },
+   {
+    "Profissional": "Poliana Banqueri da Silva Guimarães",
+    "Fatal": 1,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 0,
+    "Total": 1
+   }
+  ],
+  "Abril/2026": [
+   {
+    "Profissional": "Rafael Rocha Ferreira",
+    "Fatal": 61,
+    "D-1": 103,
+    "D-2": 9,
+    "Futuro": 106,
+    "Vencido": 0,
+    "Total": 279
+   },
+   {
+    "Profissional": "Jackeline Romeu Torres",
+    "Fatal": 117,
+    "D-1": 44,
+    "D-2": 29,
+    "Futuro": 73,
+    "Vencido": 9,
+    "Total": 272
+   },
+   {
+    "Profissional": "Camila Alves Magalhães de Paula",
+    "Fatal": 100,
+    "D-1": 30,
+    "D-2": 15,
+    "Futuro": 120,
+    "Vencido": 1,
+    "Total": 266
+   },
+   {
+    "Profissional": "Júlia Priego Lopes da Silva",
+    "Fatal": 9,
+    "D-1": 78,
+    "D-2": 18,
+    "Futuro": 140,
+    "Vencido": 6,
+    "Total": 251
+   },
+   {
+    "Profissional": "Rafael Yepez do Lago",
+    "Fatal": 166,
+    "D-1": 62,
+    "D-2": 6,
+    "Futuro": 15,
+    "Vencido": 0,
+    "Total": 249
+   },
+   {
+    "Profissional": "Juliana Perucci",
+    "Fatal": 14,
+    "D-1": 98,
+    "D-2": 10,
+    "Futuro": 118,
+    "Vencido": 5,
+    "Total": 245
+   },
+   {
+    "Profissional": "Richard Ruan Leo da Silva",
+    "Fatal": 120,
+    "D-1": 40,
+    "D-2": 21,
+    "Futuro": 55,
+    "Vencido": 9,
+    "Total": 245
+   },
+   {
+    "Profissional": "Guilherme Silva Morimoto",
+    "Fatal": 76,
+    "D-1": 58,
+    "D-2": 10,
+    "Futuro": 85,
+    "Vencido": 1,
+    "Total": 230
+   },
+   {
+    "Profissional": "Letícia Meneghini Fontes",
+    "Fatal": 22,
+    "D-1": 137,
+    "D-2": 26,
+    "Futuro": 26,
+    "Vencido": 0,
+    "Total": 211
+   },
+   {
+    "Profissional": "Jenifer de Jesus Silva",
+    "Fatal": 103,
+    "D-1": 66,
+    "D-2": 18,
+    "Futuro": 15,
+    "Vencido": 8,
+    "Total": 210
+   },
+   {
+    "Profissional": "Paloma da Silva Santos",
+    "Fatal": 19,
+    "D-1": 64,
+    "D-2": 25,
+    "Futuro": 87,
+    "Vencido": 5,
+    "Total": 200
+   },
+   {
+    "Profissional": "Bianca Sayuri Matsunaga",
+    "Fatal": 85,
+    "D-1": 34,
+    "D-2": 20,
+    "Futuro": 37,
+    "Vencido": 13,
+    "Total": 189
+   },
+   {
+    "Profissional": "Vinícius Ronchi Arruda",
+    "Fatal": 23,
+    "D-1": 73,
+    "D-2": 25,
+    "Futuro": 60,
+    "Vencido": 0,
+    "Total": 181
+   },
+   {
+    "Profissional": "Anna Carolina Balbino Gatti Baani",
+    "Fatal": 26,
+    "D-1": 34,
+    "D-2": 42,
+    "Futuro": 47,
+    "Vencido": 7,
+    "Total": 156
+   },
+   {
+    "Profissional": "Rafael Camargo Felisbino",
+    "Fatal": 27,
+    "D-1": 43,
+    "D-2": 4,
+    "Futuro": 74,
+    "Vencido": 1,
+    "Total": 149
+   },
+   {
+    "Profissional": "Aline Ferreira Miron",
+    "Fatal": 4,
+    "D-1": 31,
+    "D-2": 21,
+    "Futuro": 92,
+    "Vencido": 0,
+    "Total": 148
+   },
+   {
+    "Profissional": "Jessica Cerqueira Silva",
+    "Fatal": 7,
+    "D-1": 42,
+    "D-2": 12,
+    "Futuro": 82,
+    "Vencido": 2,
+    "Total": 145
+   },
+   {
+    "Profissional": "Bianca Bolanhi Camacho",
+    "Fatal": 17,
+    "D-1": 50,
+    "D-2": 43,
+    "Futuro": 20,
+    "Vencido": 6,
+    "Total": 136
+   },
+   {
+    "Profissional": "Vanessa de Cassia Castrequini Rosa",
+    "Fatal": 31,
+    "D-1": 30,
+    "D-2": 18,
+    "Futuro": 57,
+    "Vencido": 0,
+    "Total": 136
+   },
+   {
+    "Profissional": "Arthur Rodrigues Rios Toledo de Castro",
+    "Fatal": 44,
+    "D-1": 9,
+    "D-2": 3,
+    "Futuro": 74,
+    "Vencido": 3,
+    "Total": 133
+   },
+   {
+    "Profissional": "Beatriz Santiago de Souza",
+    "Fatal": 33,
+    "D-1": 53,
+    "D-2": 25,
+    "Futuro": 20,
+    "Vencido": 1,
+    "Total": 132
+   },
+   {
+    "Profissional": "Mariana Borges de Menezes Fávaro",
+    "Fatal": 16,
+    "D-1": 64,
+    "D-2": 7,
+    "Futuro": 35,
+    "Vencido": 1,
+    "Total": 123
+   },
+   {
+    "Profissional": "Natália Biondi Gaggini Robles",
+    "Fatal": 13,
+    "D-1": 27,
+    "D-2": 12,
+    "Futuro": 71,
+    "Vencido": 0,
+    "Total": 123
+   },
+   {
+    "Profissional": "Joice Ramos Miranda",
+    "Fatal": 30,
+    "D-1": 70,
+    "D-2": 9,
+    "Futuro": 9,
+    "Vencido": 0,
+    "Total": 118
+   },
+   {
+    "Profissional": "Daniela Prandi Pedro Ricca",
+    "Fatal": 45,
+    "D-1": 32,
+    "D-2": 6,
+    "Futuro": 34,
+    "Vencido": 0,
+    "Total": 117
+   },
+   {
+    "Profissional": "Bruna Cembranelli Fazenda",
+    "Fatal": 34,
+    "D-1": 35,
+    "D-2": 7,
+    "Futuro": 31,
+    "Vencido": 1,
+    "Total": 108
+   },
+   {
+    "Profissional": "Erik Mota Coppi",
+    "Fatal": 31,
+    "D-1": 20,
+    "D-2": 9,
+    "Futuro": 38,
+    "Vencido": 1,
+    "Total": 99
+   },
+   {
+    "Profissional": "Getúlio Bernardo Flora da Silva",
+    "Fatal": 0,
+    "D-1": 8,
+    "D-2": 18,
+    "Futuro": 59,
+    "Vencido": 0,
+    "Total": 85
+   },
+   {
+    "Profissional": "Thiago Frid Figueiredo Rossi",
+    "Fatal": 33,
+    "D-1": 20,
+    "D-2": 5,
+    "Futuro": 6,
+    "Vencido": 0,
+    "Total": 64
+   },
+   {
+    "Profissional": "Sofia Freire",
+    "Fatal": 14,
+    "D-1": 13,
+    "D-2": 3,
+    "Futuro": 25,
+    "Vencido": 2,
+    "Total": 57
+   },
+   {
+    "Profissional": "Vinicius da Silva Cerqueira",
+    "Fatal": 11,
+    "D-1": 21,
+    "D-2": 0,
+    "Futuro": 13,
+    "Vencido": 0,
+    "Total": 45
+   },
+   {
+    "Profissional": "André Alessandro de Paula",
+    "Fatal": 0,
+    "D-1": 5,
+    "D-2": 8,
+    "Futuro": 19,
+    "Vencido": 0,
+    "Total": 32
+   },
+   {
+    "Profissional": "Nicolau Rafael Guimarães Coelho",
+    "Fatal": 5,
+    "D-1": 4,
+    "D-2": 3,
+    "Futuro": 14,
+    "Vencido": 0,
+    "Total": 26
+   },
+   {
+    "Profissional": "Sergio Cricca Filho",
+    "Fatal": 0,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 22,
+    "Vencido": 0,
+    "Total": 22
+   },
+   {
+    "Profissional": "Amanda Pereira Reis de Paula Cardoso",
+    "Fatal": 5,
+    "D-1": 0,
+    "D-2": 3,
+    "Futuro": 11,
+    "Vencido": 0,
+    "Total": 19
+   },
+   {
+    "Profissional": "Keyla Maria Barbosa Silva Moraes",
+    "Fatal": 2,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 1,
+    "Total": 3
+   },
+   {
+    "Profissional": "Marina de Novaes Brechiani",
+    "Fatal": 1,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 1,
+    "Total": 2
+   }
+  ],
+  "Maio/2026": [
+   {
+    "Profissional": "Rafael Rocha Ferreira",
+    "Fatal": 22,
+    "D-1": 163,
+    "D-2": 7,
+    "Futuro": 150,
+    "Vencido": 0,
+    "Total": 342
+   },
+   {
+    "Profissional": "Jackeline Romeu Torres",
+    "Fatal": 64,
+    "D-1": 91,
+    "D-2": 52,
+    "Futuro": 111,
+    "Vencido": 0,
+    "Total": 318
+   },
+   {
+    "Profissional": "Camila Alves Magalhães de Paula",
+    "Fatal": 41,
+    "D-1": 176,
+    "D-2": 25,
+    "Futuro": 68,
+    "Vencido": 0,
+    "Total": 310
+   },
+   {
+    "Profissional": "Rafael Yepez do Lago",
+    "Fatal": 147,
+    "D-1": 121,
+    "D-2": 4,
+    "Futuro": 25,
+    "Vencido": 0,
+    "Total": 297
+   },
+   {
+    "Profissional": "Jenifer de Jesus Silva",
+    "Fatal": 66,
+    "D-1": 162,
+    "D-2": 27,
+    "Futuro": 26,
+    "Vencido": 0,
+    "Total": 281
+   },
+   {
+    "Profissional": "Júlia Priego Lopes da Silva",
+    "Fatal": 4,
+    "D-1": 70,
+    "D-2": 14,
+    "Futuro": 173,
+    "Vencido": 0,
+    "Total": 261
+   },
+   {
+    "Profissional": "Richard Ruan Leo da Silva",
+    "Fatal": 33,
+    "D-1": 122,
+    "D-2": 6,
+    "Futuro": 87,
+    "Vencido": 0,
+    "Total": 248
+   },
+   {
+    "Profissional": "Beatriz Santiago de Souza",
+    "Fatal": 12,
+    "D-1": 88,
+    "D-2": 31,
+    "Futuro": 113,
+    "Vencido": 0,
+    "Total": 244
+   },
+   {
+    "Profissional": "Letícia Meneghini Fontes",
+    "Fatal": 10,
+    "D-1": 168,
+    "D-2": 30,
+    "Futuro": 35,
+    "Vencido": 0,
+    "Total": 243
+   },
+   {
+    "Profissional": "Guilherme Silva Morimoto",
+    "Fatal": 27,
+    "D-1": 94,
+    "D-2": 15,
+    "Futuro": 101,
+    "Vencido": 0,
+    "Total": 237
+   },
+   {
+    "Profissional": "Juliana Perucci",
+    "Fatal": 9,
+    "D-1": 97,
+    "D-2": 19,
+    "Futuro": 103,
+    "Vencido": 0,
+    "Total": 228
+   },
+   {
+    "Profissional": "Vinícius Ronchi Arruda",
+    "Fatal": 15,
+    "D-1": 92,
+    "D-2": 19,
+    "Futuro": 95,
+    "Vencido": 0,
+    "Total": 221
+   },
+   {
+    "Profissional": "Arthur Rodrigues Rios Toledo de Castro",
+    "Fatal": 94,
+    "D-1": 26,
+    "D-2": 6,
+    "Futuro": 82,
+    "Vencido": 1,
+    "Total": 209
+   },
+   {
+    "Profissional": "Mariana Borges de Menezes Fávaro",
+    "Fatal": 11,
+    "D-1": 101,
+    "D-2": 42,
+    "Futuro": 47,
+    "Vencido": 0,
+    "Total": 201
+   },
+   {
+    "Profissional": "Paloma da Silva Santos",
+    "Fatal": 6,
+    "D-1": 90,
+    "D-2": 17,
+    "Futuro": 76,
+    "Vencido": 0,
+    "Total": 189
+   },
+   {
+    "Profissional": "Rafael Camargo Felisbino",
+    "Fatal": 41,
+    "D-1": 46,
+    "D-2": 12,
+    "Futuro": 88,
+    "Vencido": 0,
+    "Total": 187
+   },
+   {
+    "Profissional": "Jessica Cerqueira Silva",
+    "Fatal": 5,
+    "D-1": 57,
+    "D-2": 10,
+    "Futuro": 92,
+    "Vencido": 0,
+    "Total": 164
+   },
+   {
+    "Profissional": "Aline Ferreira Miron",
+    "Fatal": 2,
+    "D-1": 27,
+    "D-2": 15,
+    "Futuro": 110,
+    "Vencido": 0,
+    "Total": 154
+   },
+   {
+    "Profissional": "Anna Carolina Balbino Gatti Baani",
+    "Fatal": 11,
+    "D-1": 39,
+    "D-2": 46,
+    "Futuro": 53,
+    "Vencido": 0,
+    "Total": 149
+   },
+   {
+    "Profissional": "Vanessa de Cassia Castrequini Rosa",
+    "Fatal": 6,
+    "D-1": 38,
+    "D-2": 23,
+    "Futuro": 82,
+    "Vencido": 0,
+    "Total": 149
+   },
+   {
+    "Profissional": "Thiago Frid Figueiredo Rossi",
+    "Fatal": 36,
+    "D-1": 64,
+    "D-2": 32,
+    "Futuro": 8,
+    "Vencido": 0,
+    "Total": 140
+   },
+   {
+    "Profissional": "Bruna Cembranelli Fazenda",
+    "Fatal": 25,
+    "D-1": 47,
+    "D-2": 9,
+    "Futuro": 50,
+    "Vencido": 0,
+    "Total": 131
+   },
+   {
+    "Profissional": "Joice Ramos Miranda",
+    "Fatal": 13,
+    "D-1": 104,
+    "D-2": 7,
+    "Futuro": 5,
+    "Vencido": 0,
+    "Total": 129
+   },
+   {
+    "Profissional": "Bianca Bolanhi Camacho",
+    "Fatal": 6,
+    "D-1": 60,
+    "D-2": 29,
+    "Futuro": 17,
+    "Vencido": 0,
+    "Total": 112
+   },
+   {
+    "Profissional": "Vinicius da Silva Cerqueira",
+    "Fatal": 12,
+    "D-1": 52,
+    "D-2": 21,
+    "Futuro": 25,
+    "Vencido": 0,
+    "Total": 110
+   },
+   {
+    "Profissional": "Erik Mota Coppi",
+    "Fatal": 29,
+    "D-1": 17,
+    "D-2": 9,
+    "Futuro": 36,
+    "Vencido": 0,
+    "Total": 91
+   },
+   {
+    "Profissional": "Daniela Prandi Pedro Ricca",
+    "Fatal": 21,
+    "D-1": 33,
+    "D-2": 9,
+    "Futuro": 21,
+    "Vencido": 0,
+    "Total": 84
+   },
+   {
+    "Profissional": "Fabiana Correia dos Anjos Gomes",
+    "Fatal": 5,
+    "D-1": 13,
+    "D-2": 8,
+    "Futuro": 27,
+    "Vencido": 0,
+    "Total": 53
+   },
+   {
+    "Profissional": "André Alessandro de Paula",
+    "Fatal": 4,
+    "D-1": 7,
+    "D-2": 10,
+    "Futuro": 27,
+    "Vencido": 0,
+    "Total": 48
+   },
+   {
+    "Profissional": "Natália Biondi Gaggini Robles",
+    "Fatal": 6,
+    "D-1": 8,
+    "D-2": 3,
+    "Futuro": 17,
+    "Vencido": 0,
+    "Total": 34
+   },
+   {
+    "Profissional": "Nicolau Rafael Guimarães Coelho",
+    "Fatal": 2,
+    "D-1": 13,
+    "D-2": 3,
+    "Futuro": 13,
+    "Vencido": 0,
+    "Total": 31
+   },
+   {
+    "Profissional": "Tamires Lins Costa",
+    "Fatal": 8,
+    "D-1": 17,
+    "D-2": 3,
+    "Futuro": 1,
+    "Vencido": 0,
+    "Total": 29
+   },
+   {
+    "Profissional": "Sofia Freire",
+    "Fatal": 7,
+    "D-1": 5,
+    "D-2": 4,
+    "Futuro": 8,
+    "Vencido": 1,
+    "Total": 25
+   },
+   {
+    "Profissional": "Amanda Pereira Reis de Paula Cardoso",
+    "Fatal": 2,
+    "D-1": 6,
+    "D-2": 1,
+    "Futuro": 4,
+    "Vencido": 0,
+    "Total": 13
+   },
+   {
+    "Profissional": "Keyla Maria Barbosa Silva Moraes",
+    "Fatal": 3,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 0,
+    "Total": 3
+   },
+   {
+    "Profissional": "Washington Soares Silva Filho",
+    "Fatal": 0,
+    "D-1": 2,
+    "D-2": 0,
+    "Futuro": 1,
+    "Vencido": 0,
+    "Total": 3
+   },
+   {
+    "Profissional": "Bianca Sayuri Matsunaga",
+    "Fatal": 0,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 2,
+    "Vencido": 0,
+    "Total": 2
+   },
+   {
+    "Profissional": "Getúlio Bernardo Flora da Silva",
+    "Fatal": 0,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 2,
+    "Vencido": 0,
+    "Total": 2
+   },
+   {
+    "Profissional": "Poliana Banqueri da Silva Guimarães",
+    "Fatal": 0,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 2,
+    "Total": 2
+   }
+  ],
+  "Junho/2026": [
+   {
+    "Profissional": "Rafael Rocha Ferreira",
+    "Fatal": 53,
+    "D-1": 170,
+    "D-2": 8,
+    "Futuro": 158,
+    "Vencido": 0,
+    "Total": 389
+   },
+   {
+    "Profissional": "Rafael Yepez do Lago",
+    "Fatal": 109,
+    "D-1": 166,
+    "D-2": 29,
+    "Futuro": 47,
+    "Vencido": 1,
+    "Total": 352
+   },
+   {
+    "Profissional": "Jackeline Romeu Torres",
+    "Fatal": 84,
+    "D-1": 92,
+    "D-2": 37,
+    "Futuro": 103,
+    "Vencido": 3,
+    "Total": 319
+   },
+   {
+    "Profissional": "Camila Alves Magalhães de Paula",
+    "Fatal": 9,
+    "D-1": 174,
+    "D-2": 65,
+    "Futuro": 53,
+    "Vencido": 0,
+    "Total": 301
+   },
+   {
+    "Profissional": "Juliana Perucci",
+    "Fatal": 33,
+    "D-1": 101,
+    "D-2": 32,
+    "Futuro": 123,
+    "Vencido": 0,
+    "Total": 289
+   },
+   {
+    "Profissional": "Letícia Meneghini Fontes",
+    "Fatal": 10,
+    "D-1": 158,
+    "D-2": 21,
+    "Futuro": 86,
+    "Vencido": 0,
+    "Total": 275
+   },
+   {
+    "Profissional": "Júlia Priego Lopes da Silva",
+    "Fatal": 6,
+    "D-1": 72,
+    "D-2": 8,
+    "Futuro": 182,
+    "Vencido": 0,
+    "Total": 268
+   },
+   {
+    "Profissional": "Beatriz Santiago de Souza",
+    "Fatal": 16,
+    "D-1": 90,
+    "D-2": 33,
+    "Futuro": 121,
+    "Vencido": 0,
+    "Total": 260
+   },
+   {
+    "Profissional": "Vinícius Ronchi Arruda",
+    "Fatal": 19,
+    "D-1": 87,
+    "D-2": 33,
+    "Futuro": 118,
+    "Vencido": 0,
+    "Total": 257
+   },
+   {
+    "Profissional": "Richard Ruan Leo da Silva",
+    "Fatal": 71,
+    "D-1": 106,
+    "D-2": 15,
+    "Futuro": 54,
+    "Vencido": 0,
+    "Total": 246
+   },
+   {
+    "Profissional": "Guilherme Silva Morimoto",
+    "Fatal": 78,
+    "D-1": 61,
+    "D-2": 16,
+    "Futuro": 59,
+    "Vencido": 0,
+    "Total": 214
+   },
+   {
+    "Profissional": "Paloma da Silva Santos",
+    "Fatal": 8,
+    "D-1": 63,
+    "D-2": 20,
+    "Futuro": 118,
+    "Vencido": 0,
+    "Total": 209
+   },
+   {
+    "Profissional": "Vanessa de Cassia Castrequini Rosa",
+    "Fatal": 13,
+    "D-1": 80,
+    "D-2": 16,
+    "Futuro": 90,
+    "Vencido": 0,
+    "Total": 199
+   },
+   {
+    "Profissional": "Jessica Cerqueira Silva",
+    "Fatal": 5,
+    "D-1": 48,
+    "D-2": 15,
+    "Futuro": 121,
+    "Vencido": 0,
+    "Total": 189
+   },
+   {
+    "Profissional": "Anna Carolina Balbino Gatti Baani",
+    "Fatal": 29,
+    "D-1": 62,
+    "D-2": 35,
+    "Futuro": 59,
+    "Vencido": 0,
+    "Total": 185
+   },
+   {
+    "Profissional": "Aline Ferreira Miron",
+    "Fatal": 3,
+    "D-1": 35,
+    "D-2": 13,
+    "Futuro": 124,
+    "Vencido": 0,
+    "Total": 175
+   },
+   {
+    "Profissional": "Mariana Borges de Menezes Fávaro",
+    "Fatal": 6,
+    "D-1": 93,
+    "D-2": 30,
+    "Futuro": 43,
+    "Vencido": 0,
+    "Total": 172
+   },
+   {
+    "Profissional": "Arthur Rodrigues Rios Toledo de Castro",
+    "Fatal": 77,
+    "D-1": 12,
+    "D-2": 3,
+    "Futuro": 77,
+    "Vencido": 1,
+    "Total": 170
+   },
+   {
+    "Profissional": "Rafael Camargo Felisbino",
+    "Fatal": 18,
+    "D-1": 45,
+    "D-2": 9,
+    "Futuro": 74,
+    "Vencido": 0,
+    "Total": 146
+   },
+   {
+    "Profissional": "Bruna Cembranelli Fazenda",
+    "Fatal": 29,
+    "D-1": 42,
+    "D-2": 6,
+    "Futuro": 61,
+    "Vencido": 0,
+    "Total": 138
+   },
+   {
+    "Profissional": "Fabiana Correia dos Anjos Gomes",
+    "Fatal": 20,
+    "D-1": 27,
+    "D-2": 9,
+    "Futuro": 79,
+    "Vencido": 3,
+    "Total": 138
+   },
+   {
+    "Profissional": "Thiago Frid Figueiredo Rossi",
+    "Fatal": 28,
+    "D-1": 36,
+    "D-2": 30,
+    "Futuro": 41,
+    "Vencido": 0,
+    "Total": 135
+   },
+   {
+    "Profissional": "Joice Ramos Miranda",
+    "Fatal": 4,
+    "D-1": 107,
+    "D-2": 15,
+    "Futuro": 6,
+    "Vencido": 0,
+    "Total": 132
+   },
+   {
+    "Profissional": "Vinicius da Silva Cerqueira",
+    "Fatal": 38,
+    "D-1": 49,
+    "D-2": 4,
+    "Futuro": 28,
+    "Vencido": 0,
+    "Total": 119
+   },
+   {
+    "Profissional": "Bianca Bolanhi Camacho",
+    "Fatal": 9,
+    "D-1": 52,
+    "D-2": 7,
+    "Futuro": 44,
+    "Vencido": 0,
+    "Total": 112
+   },
+   {
+    "Profissional": "Erik Mota Coppi",
+    "Fatal": 29,
+    "D-1": 27,
+    "D-2": 9,
+    "Futuro": 45,
+    "Vencido": 0,
+    "Total": 110
+   },
+   {
+    "Profissional": "Daniela Prandi Pedro Ricca",
+    "Fatal": 43,
+    "D-1": 23,
+    "D-2": 5,
+    "Futuro": 24,
+    "Vencido": 0,
+    "Total": 95
+   },
+   {
+    "Profissional": "Jenifer de Jesus Silva",
+    "Fatal": 22,
+    "D-1": 25,
+    "D-2": 8,
+    "Futuro": 11,
+    "Vencido": 0,
+    "Total": 66
+   },
+   {
+    "Profissional": "Nicolau Rafael Guimarães Coelho",
+    "Fatal": 11,
+    "D-1": 7,
+    "D-2": 6,
+    "Futuro": 35,
+    "Vencido": 0,
+    "Total": 59
+   },
+   {
+    "Profissional": "Tamara Silva Marcílio",
+    "Fatal": 19,
+    "D-1": 31,
+    "D-2": 3,
+    "Futuro": 5,
+    "Vencido": 0,
+    "Total": 58
+   },
+   {
+    "Profissional": "Tamires Lins Costa",
+    "Fatal": 7,
+    "D-1": 41,
+    "D-2": 2,
+    "Futuro": 5,
+    "Vencido": 0,
+    "Total": 55
+   },
+   {
+    "Profissional": "André Alessandro de Paula",
+    "Fatal": 0,
+    "D-1": 14,
+    "D-2": 6,
+    "Futuro": 26,
+    "Vencido": 0,
+    "Total": 46
+   },
+   {
+    "Profissional": "Sofia Freire",
+    "Fatal": 7,
+    "D-1": 6,
+    "D-2": 0,
+    "Futuro": 13,
+    "Vencido": 0,
+    "Total": 26
+   },
+   {
+    "Profissional": "JNE",
+    "Fatal": 7,
+    "D-1": 9,
+    "D-2": 0,
+    "Futuro": 4,
+    "Vencido": 0,
+    "Total": 20
+   },
+   {
+    "Profissional": "Natália Biondi Gaggini Robles",
+    "Fatal": 3,
+    "D-1": 7,
+    "D-2": 1,
+    "Futuro": 7,
+    "Vencido": 0,
+    "Total": 18
+   },
+   {
+    "Profissional": "Keyla Maria Barbosa Silva Moraes",
+    "Fatal": 12,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 1,
+    "Total": 13
+   },
+   {
+    "Profissional": "Amanda Pereira Reis de Paula Cardoso",
+    "Fatal": 0,
+    "D-1": 1,
+    "D-2": 2,
+    "Futuro": 5,
+    "Vencido": 0,
+    "Total": 8
+   },
+   {
+    "Profissional": "Poliana Banqueri da Silva Guimarães",
+    "Fatal": 0,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 2,
+    "Total": 2
+   },
+   {
+    "Profissional": "Washington Soares Silva Filho",
+    "Fatal": 2,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 0,
+    "Total": 2
+   },
+   {
+    "Profissional": "Lorena Rodrigues Costa Gonçalves",
+    "Fatal": 1,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 0,
+    "Total": 1
+   }
+  ],
+  "Julho/2026": [
+   {
+    "Profissional": "Camila Alves Magalhães de Paula",
+    "Fatal": 93,
+    "D-1": 136,
+    "D-2": 40,
+    "Futuro": 61,
+    "Vencido": 0,
+    "Total": 330
+   },
+   {
+    "Profissional": "Guilherme Silva Morimoto",
+    "Fatal": 125,
+    "D-1": 70,
+    "D-2": 16,
+    "Futuro": 82,
+    "Vencido": 0,
+    "Total": 293
+   },
+   {
+    "Profissional": "Rafael Yepez do Lago",
+    "Fatal": 155,
+    "D-1": 101,
+    "D-2": 9,
+    "Futuro": 9,
+    "Vencido": 0,
+    "Total": 274
+   },
+   {
+    "Profissional": "Letícia Meneghini Fontes",
+    "Fatal": 74,
+    "D-1": 117,
+    "D-2": 14,
+    "Futuro": 60,
+    "Vencido": 0,
+    "Total": 265
+   },
+   {
+    "Profissional": "Beatriz Santiago de Souza",
+    "Fatal": 45,
+    "D-1": 61,
+    "D-2": 24,
+    "Futuro": 106,
+    "Vencido": 1,
+    "Total": 237
+   },
+   {
+    "Profissional": "Tamara Silva Marcílio",
+    "Fatal": 62,
+    "D-1": 101,
+    "D-2": 10,
+    "Futuro": 62,
+    "Vencido": 0,
+    "Total": 235
+   },
+   {
+    "Profissional": "Juliana Perucci",
+    "Fatal": 48,
+    "D-1": 57,
+    "D-2": 17,
+    "Futuro": 108,
+    "Vencido": 0,
+    "Total": 230
+   },
+   {
+    "Profissional": "Richard Ruan Leo da Silva",
+    "Fatal": 95,
+    "D-1": 64,
+    "D-2": 10,
+    "Futuro": 48,
+    "Vencido": 0,
+    "Total": 217
+   },
+   {
+    "Profissional": "Mariana Borges de Menezes Fávaro",
+    "Fatal": 50,
+    "D-1": 79,
+    "D-2": 32,
+    "Futuro": 53,
+    "Vencido": 0,
+    "Total": 214
+   },
+   {
+    "Profissional": "Fabiana Correia dos Anjos Gomes",
+    "Fatal": 84,
+    "D-1": 37,
+    "D-2": 7,
+    "Futuro": 83,
+    "Vencido": 0,
+    "Total": 211
+   },
+   {
+    "Profissional": "Vinícius Ronchi Arruda",
+    "Fatal": 36,
+    "D-1": 62,
+    "D-2": 19,
+    "Futuro": 90,
+    "Vencido": 0,
+    "Total": 207
+   },
+   {
+    "Profissional": "Tamires Lins Costa",
+    "Fatal": 46,
+    "D-1": 86,
+    "D-2": 13,
+    "Futuro": 56,
+    "Vencido": 0,
+    "Total": 201
+   },
+   {
+    "Profissional": "Arthur Rodrigues Rios Toledo de Castro",
+    "Fatal": 81,
+    "D-1": 7,
+    "D-2": 8,
+    "Futuro": 90,
+    "Vencido": 0,
+    "Total": 186
+   },
+   {
+    "Profissional": "Jessica Cerqueira Silva",
+    "Fatal": 20,
+    "D-1": 46,
+    "D-2": 9,
+    "Futuro": 104,
+    "Vencido": 0,
+    "Total": 179
+   },
+   {
+    "Profissional": "JNE",
+    "Fatal": 76,
+    "D-1": 41,
+    "D-2": 16,
+    "Futuro": 36,
+    "Vencido": 0,
+    "Total": 169
+   },
+   {
+    "Profissional": "Anna Carolina Balbino Gatti Baani",
+    "Fatal": 48,
+    "D-1": 52,
+    "D-2": 25,
+    "Futuro": 31,
+    "Vencido": 0,
+    "Total": 156
+   },
+   {
+    "Profissional": "Rafael Rocha Ferreira",
+    "Fatal": 28,
+    "D-1": 47,
+    "D-2": 5,
+    "Futuro": 76,
+    "Vencido": 0,
+    "Total": 156
+   },
+   {
+    "Profissional": "Júlia Priego Lopes da Silva",
+    "Fatal": 26,
+    "D-1": 11,
+    "D-2": 3,
+    "Futuro": 109,
+    "Vencido": 0,
+    "Total": 149
+   },
+   {
+    "Profissional": "Vanessa de Cassia Castrequini Rosa",
+    "Fatal": 28,
+    "D-1": 48,
+    "D-2": 3,
+    "Futuro": 64,
+    "Vencido": 0,
+    "Total": 143
+   },
+   {
+    "Profissional": "Bianca Bolanhi Camacho",
+    "Fatal": 56,
+    "D-1": 31,
+    "D-2": 39,
+    "Futuro": 7,
+    "Vencido": 0,
+    "Total": 133
+   },
+   {
+    "Profissional": "Paloma da Silva Santos",
+    "Fatal": 29,
+    "D-1": 17,
+    "D-2": 10,
+    "Futuro": 76,
+    "Vencido": 0,
+    "Total": 132
+   },
+   {
+    "Profissional": "Aline Ferreira Miron",
+    "Fatal": 19,
+    "D-1": 18,
+    "D-2": 11,
+    "Futuro": 83,
+    "Vencido": 0,
+    "Total": 131
+   },
+   {
+    "Profissional": "Daniela Prandi Pedro Ricca",
+    "Fatal": 75,
+    "D-1": 21,
+    "D-2": 11,
+    "Futuro": 18,
+    "Vencido": 0,
+    "Total": 125
+   },
+   {
+    "Profissional": "Bruna Cembranelli Fazenda",
+    "Fatal": 28,
+    "D-1": 15,
+    "D-2": 20,
+    "Futuro": 58,
+    "Vencido": 0,
+    "Total": 121
+   },
+   {
+    "Profissional": "Thiago Frid Figueiredo Rossi",
+    "Fatal": 47,
+    "D-1": 25,
+    "D-2": 16,
+    "Futuro": 28,
+    "Vencido": 0,
+    "Total": 116
+   },
+   {
+    "Profissional": "Vinicius da Silva Cerqueira",
+    "Fatal": 54,
+    "D-1": 25,
+    "D-2": 2,
+    "Futuro": 20,
+    "Vencido": 0,
+    "Total": 101
+   },
+   {
+    "Profissional": "Erik Mota Coppi",
+    "Fatal": 27,
+    "D-1": 19,
+    "D-2": 17,
+    "Futuro": 35,
+    "Vencido": 0,
+    "Total": 98
+   },
+   {
+    "Profissional": "Jackeline Romeu Torres",
+    "Fatal": 22,
+    "D-1": 25,
+    "D-2": 11,
+    "Futuro": 34,
+    "Vencido": 0,
+    "Total": 92
+   },
+   {
+    "Profissional": "Rafael Camargo Felisbino",
+    "Fatal": 34,
+    "D-1": 15,
+    "D-2": 4,
+    "Futuro": 37,
+    "Vencido": 0,
+    "Total": 90
+   },
+   {
+    "Profissional": "Joice Ramos Miranda",
+    "Fatal": 15,
+    "D-1": 27,
+    "D-2": 13,
+    "Futuro": 9,
+    "Vencido": 0,
+    "Total": 64
+   },
+   {
+    "Profissional": "André Alessandro de Paula",
+    "Fatal": 5,
+    "D-1": 9,
+    "D-2": 8,
+    "Futuro": 19,
+    "Vencido": 0,
+    "Total": 41
+   },
+   {
+    "Profissional": "Sofia Freire",
+    "Fatal": 10,
+    "D-1": 8,
+    "D-2": 1,
+    "Futuro": 14,
+    "Vencido": 0,
+    "Total": 33
+   },
+   {
+    "Profissional": "Nicolau Rafael Guimarães Coelho",
+    "Fatal": 10,
+    "D-1": 9,
+    "D-2": 0,
+    "Futuro": 6,
+    "Vencido": 0,
+    "Total": 25
+   },
+   {
+    "Profissional": "Natália Biondi Gaggini Robles",
+    "Fatal": 5,
+    "D-1": 6,
+    "D-2": 5,
+    "Futuro": 8,
+    "Vencido": 0,
+    "Total": 24
+   },
+   {
+    "Profissional": "Keyla Maria Barbosa Silva Moraes",
+    "Fatal": 8,
+    "D-1": 1,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 0,
+    "Total": 9
+   },
+   {
+    "Profissional": "Washington Soares Silva Filho",
+    "Fatal": 2,
+    "D-1": 0,
+    "D-2": 1,
+    "Futuro": 0,
+    "Vencido": 0,
+    "Total": 3
+   },
+   {
+    "Profissional": "Natalia Bezerra Baliero",
+    "Fatal": 0,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 2,
+    "Vencido": 0,
+    "Total": 2
+   },
+   {
+    "Profissional": "Guilherme Roxo Staingel",
+    "Fatal": 1,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 0,
+    "Total": 1
+   },
+   {
+    "Profissional": "Poliana Banqueri da Silva Guimarães",
+    "Fatal": 1,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 0,
+    "Total": 1
+   }
+  ],
+  "Agosto/2026": [
+   {
+    "Profissional": "Rafael Yepez do Lago",
+    "Fatal": 135,
+    "D-1": 186,
+    "D-2": 9,
+    "Futuro": 12,
+    "Vencido": 0,
+    "Total": 342
+   },
+   {
+    "Profissional": "Camila Alves Magalhães de Paula",
+    "Fatal": 72,
+    "D-1": 136,
+    "D-2": 37,
+    "Futuro": 63,
+    "Vencido": 0,
+    "Total": 308
+   },
+   {
+    "Profissional": "Rafael Rocha Ferreira",
+    "Fatal": 28,
+    "D-1": 144,
+    "D-2": 7,
+    "Futuro": 82,
+    "Vencido": 0,
+    "Total": 261
+   },
+   {
+    "Profissional": "Guilherme Silva Morimoto",
+    "Fatal": 103,
+    "D-1": 55,
+    "D-2": 19,
+    "Futuro": 83,
+    "Vencido": 0,
+    "Total": 260
+   },
+   {
+    "Profissional": "Mariana Borges de Menezes Fávaro",
+    "Fatal": 22,
+    "D-1": 138,
+    "D-2": 53,
+    "Futuro": 46,
+    "Vencido": 0,
+    "Total": 259
+   },
+   {
+    "Profissional": "Richard Ruan Leo da Silva",
+    "Fatal": 177,
+    "D-1": 39,
+    "D-2": 5,
+    "Futuro": 32,
+    "Vencido": 0,
+    "Total": 253
+   },
+   {
+    "Profissional": "Tamara Silva Marcílio",
+    "Fatal": 49,
+    "D-1": 104,
+    "D-2": 15,
+    "Futuro": 71,
+    "Vencido": 0,
+    "Total": 239
+   },
+   {
+    "Profissional": "Beatriz Santiago de Souza",
+    "Fatal": 30,
+    "D-1": 77,
+    "D-2": 33,
+    "Futuro": 96,
+    "Vencido": 0,
+    "Total": 236
+   },
+   {
+    "Profissional": "Letícia Meneghini Fontes",
+    "Fatal": 13,
+    "D-1": 180,
+    "D-2": 8,
+    "Futuro": 24,
+    "Vencido": 0,
+    "Total": 225
+   },
+   {
+    "Profissional": "Arthur Rodrigues Rios Toledo de Castro",
+    "Fatal": 88,
+    "D-1": 24,
+    "D-2": 11,
+    "Futuro": 64,
+    "Vencido": 1,
+    "Total": 188
+   },
+   {
+    "Profissional": "Júlia Priego Lopes da Silva",
+    "Fatal": 32,
+    "D-1": 64,
+    "D-2": 9,
+    "Futuro": 81,
+    "Vencido": 0,
+    "Total": 186
+   },
+   {
+    "Profissional": "Juliana Perucci",
+    "Fatal": 42,
+    "D-1": 72,
+    "D-2": 10,
+    "Futuro": 49,
+    "Vencido": 2,
+    "Total": 175
+   },
+   {
+    "Profissional": "Vinicius da Silva Cerqueira",
+    "Fatal": 36,
+    "D-1": 79,
+    "D-2": 7,
+    "Futuro": 51,
+    "Vencido": 0,
+    "Total": 173
+   },
+   {
+    "Profissional": "Bruna Cembranelli Fazenda",
+    "Fatal": 44,
+    "D-1": 61,
+    "D-2": 12,
+    "Futuro": 41,
+    "Vencido": 0,
+    "Total": 158
+   },
+   {
+    "Profissional": "Paloma da Silva Santos",
+    "Fatal": 25,
+    "D-1": 68,
+    "D-2": 13,
+    "Futuro": 46,
+    "Vencido": 0,
+    "Total": 152
+   },
+   {
+    "Profissional": "Tamires Lins Costa",
+    "Fatal": 19,
+    "D-1": 88,
+    "D-2": 8,
+    "Futuro": 32,
+    "Vencido": 0,
+    "Total": 147
+   },
+   {
+    "Profissional": "Vanessa de Cassia Castrequini Rosa",
+    "Fatal": 22,
+    "D-1": 67,
+    "D-2": 1,
+    "Futuro": 51,
+    "Vencido": 1,
+    "Total": 142
+   },
+   {
+    "Profissional": "Anna Carolina Balbino Gatti Baani",
+    "Fatal": 36,
+    "D-1": 60,
+    "D-2": 25,
+    "Futuro": 20,
+    "Vencido": 0,
+    "Total": 141
+   },
+   {
+    "Profissional": "Vinícius Ronchi Arruda",
+    "Fatal": 15,
+    "D-1": 68,
+    "D-2": 19,
+    "Futuro": 38,
+    "Vencido": 0,
+    "Total": 140
+   },
+   {
+    "Profissional": "Thiago Frid Figueiredo Rossi",
+    "Fatal": 44,
+    "D-1": 64,
+    "D-2": 20,
+    "Futuro": 7,
+    "Vencido": 0,
+    "Total": 135
+   },
+   {
+    "Profissional": "Bianca Bolanhi Camacho",
+    "Fatal": 19,
+    "D-1": 60,
+    "D-2": 31,
+    "Futuro": 23,
+    "Vencido": 1,
+    "Total": 134
+   },
+   {
+    "Profissional": "Aline Ferreira Miron",
+    "Fatal": 34,
+    "D-1": 33,
+    "D-2": 10,
+    "Futuro": 53,
+    "Vencido": 0,
+    "Total": 130
+   },
+   {
+    "Profissional": "Fabiana Correia dos Anjos Gomes",
+    "Fatal": 49,
+    "D-1": 36,
+    "D-2": 3,
+    "Futuro": 36,
+    "Vencido": 0,
+    "Total": 124
+   },
+   {
+    "Profissional": "Jessica Cerqueira Silva",
+    "Fatal": 15,
+    "D-1": 41,
+    "D-2": 3,
+    "Futuro": 61,
+    "Vencido": 0,
+    "Total": 120
+   },
+   {
+    "Profissional": "Erik Mota Coppi",
+    "Fatal": 21,
+    "D-1": 41,
+    "D-2": 5,
+    "Futuro": 47,
+    "Vencido": 0,
+    "Total": 114
+   },
+   {
+    "Profissional": "Giulia Vendramini Milani",
+    "Fatal": 8,
+    "D-1": 66,
+    "D-2": 7,
+    "Futuro": 31,
+    "Vencido": 0,
+    "Total": 112
+   },
+   {
+    "Profissional": "Joice Ramos Miranda",
+    "Fatal": 9,
+    "D-1": 86,
+    "D-2": 6,
+    "Futuro": 1,
+    "Vencido": 0,
+    "Total": 102
+   },
+   {
+    "Profissional": "JNE",
+    "Fatal": 36,
+    "D-1": 28,
+    "D-2": 7,
+    "Futuro": 5,
+    "Vencido": 0,
+    "Total": 76
+   },
+   {
+    "Profissional": "Rafael Camargo Felisbino",
+    "Fatal": 35,
+    "D-1": 9,
+    "D-2": 0,
+    "Futuro": 23,
+    "Vencido": 0,
+    "Total": 67
+   },
+   {
+    "Profissional": "André Alessandro de Paula",
+    "Fatal": 8,
+    "D-1": 10,
+    "D-2": 3,
+    "Futuro": 18,
+    "Vencido": 0,
+    "Total": 39
+   },
+   {
+    "Profissional": "Sofia Freire",
+    "Fatal": 13,
+    "D-1": 9,
+    "D-2": 6,
+    "Futuro": 8,
+    "Vencido": 0,
+    "Total": 36
+   },
+   {
+    "Profissional": "Nicolau Rafael Guimarães Coelho",
+    "Fatal": 12,
+    "D-1": 5,
+    "D-2": 4,
+    "Futuro": 10,
+    "Vencido": 0,
+    "Total": 31
+   },
+   {
+    "Profissional": "Daniela Prandi Pedro Ricca",
+    "Fatal": 10,
+    "D-1": 4,
+    "D-2": 4,
+    "Futuro": 4,
+    "Vencido": 0,
+    "Total": 22
+   },
+   {
+    "Profissional": "Natália Biondi Gaggini Robles",
+    "Fatal": 2,
+    "D-1": 5,
+    "D-2": 1,
+    "Futuro": 9,
+    "Vencido": 0,
+    "Total": 17
+   },
+   {
+    "Profissional": "Keyla Maria Barbosa Silva Moraes",
+    "Fatal": 2,
+    "D-1": 0,
+    "D-2": 1,
+    "Futuro": 1,
+    "Vencido": 0,
+    "Total": 4
+   },
+   {
+    "Profissional": "Natalia Bezerra Baliero",
+    "Fatal": 1,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 1,
+    "Vencido": 0,
+    "Total": 2
+   },
+   {
+    "Profissional": "Antonio Carlos Aguiar",
+    "Fatal": 1,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 0,
+    "Total": 1
+   },
+   {
+    "Profissional": "Guilherme Roxo Staingel",
+    "Fatal": 1,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 0,
+    "Total": 1
+   },
+   {
+    "Profissional": "Jackeline Romeu Torres",
+    "Fatal": 0,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 1,
+    "Vencido": 0,
+    "Total": 1
+   },
+   {
+    "Profissional": "Poliana Banqueri da Silva Guimarães",
+    "Fatal": 0,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 1,
+    "Vencido": 0,
+    "Total": 1
+   }
+  ],
+  "Setembro/2026": [
+   {
+    "Profissional": "Rafael Yepez do Lago",
+    "Fatal": 219,
+    "D-1": 161,
+    "D-2": 23,
+    "Futuro": 33,
+    "Vencido": 0,
+    "Total": 436
+   },
+   {
+    "Profissional": "Camila Alves Magalhães de Paula",
+    "Fatal": 48,
+    "D-1": 163,
+    "D-2": 62,
+    "Futuro": 129,
+    "Vencido": 0,
+    "Total": 402
+   },
+   {
+    "Profissional": "Beatriz Santiago de Souza",
+    "Fatal": 13,
+    "D-1": 108,
+    "D-2": 41,
+    "Futuro": 145,
+    "Vencido": 1,
+    "Total": 308
+   },
+   {
+    "Profissional": "Giulia Vendramini Milani",
+    "Fatal": 22,
+    "D-1": 133,
+    "D-2": 40,
+    "Futuro": 113,
+    "Vencido": 0,
+    "Total": 308
+   },
+   {
+    "Profissional": "Rafael Rocha Ferreira",
+    "Fatal": 14,
+    "D-1": 139,
+    "D-2": 14,
+    "Futuro": 122,
+    "Vencido": 0,
+    "Total": 289
+   },
+   {
+    "Profissional": "Letícia Meneghini Fontes",
+    "Fatal": 41,
+    "D-1": 149,
+    "D-2": 46,
+    "Futuro": 46,
+    "Vencido": 0,
+    "Total": 282
+   },
+   {
+    "Profissional": "Tamara Silva Marcílio",
+    "Fatal": 44,
+    "D-1": 114,
+    "D-2": 10,
+    "Futuro": 113,
+    "Vencido": 0,
+    "Total": 281
+   },
+   {
+    "Profissional": "Bianca Bolanhi Camacho",
+    "Fatal": 36,
+    "D-1": 131,
+    "D-2": 12,
+    "Futuro": 85,
+    "Vencido": 0,
+    "Total": 264
+   },
+   {
+    "Profissional": "Arthur Rodrigues Rios Toledo de Castro",
+    "Fatal": 102,
+    "D-1": 22,
+    "D-2": 10,
+    "Futuro": 109,
+    "Vencido": 1,
+    "Total": 244
+   },
+   {
+    "Profissional": "Guilherme Silva Morimoto",
+    "Fatal": 98,
+    "D-1": 53,
+    "D-2": 16,
+    "Futuro": 54,
+    "Vencido": 0,
+    "Total": 221
+   },
+   {
+    "Profissional": "Vinícius Ronchi Arruda",
+    "Fatal": 14,
+    "D-1": 75,
+    "D-2": 31,
+    "Futuro": 97,
+    "Vencido": 0,
+    "Total": 217
+   },
+   {
+    "Profissional": "Mariana Borges de Menezes Fávaro",
+    "Fatal": 20,
+    "D-1": 73,
+    "D-2": 24,
+    "Futuro": 89,
+    "Vencido": 0,
+    "Total": 206
+   },
+   {
+    "Profissional": "Vanessa de Cassia Castrequini Rosa",
+    "Fatal": 73,
+    "D-1": 63,
+    "D-2": 5,
+    "Futuro": 63,
+    "Vencido": 0,
+    "Total": 204
+   },
+   {
+    "Profissional": "Paloma da Silva Santos",
+    "Fatal": 4,
+    "D-1": 61,
+    "D-2": 18,
+    "Futuro": 117,
+    "Vencido": 0,
+    "Total": 200
+   },
+   {
+    "Profissional": "Vinicius da Silva Cerqueira",
+    "Fatal": 54,
+    "D-1": 85,
+    "D-2": 8,
+    "Futuro": 45,
+    "Vencido": 0,
+    "Total": 192
+   },
+   {
+    "Profissional": "Joice Ramos Miranda",
+    "Fatal": 29,
+    "D-1": 136,
+    "D-2": 8,
+    "Futuro": 8,
+    "Vencido": 0,
+    "Total": 181
+   },
+   {
+    "Profissional": "Bruna Cembranelli Fazenda",
+    "Fatal": 69,
+    "D-1": 43,
+    "D-2": 8,
+    "Futuro": 54,
+    "Vencido": 0,
+    "Total": 174
+   },
+   {
+    "Profissional": "Tamires Lins Costa",
+    "Fatal": 9,
+    "D-1": 89,
+    "D-2": 34,
+    "Futuro": 41,
+    "Vencido": 1,
+    "Total": 174
+   },
+   {
+    "Profissional": "Anna Carolina Balbino Gatti Baani",
+    "Fatal": 30,
+    "D-1": 53,
+    "D-2": 39,
+    "Futuro": 49,
+    "Vencido": 0,
+    "Total": 171
+   },
+   {
+    "Profissional": "Rafael Camargo Felisbino",
+    "Fatal": 40,
+    "D-1": 41,
+    "D-2": 12,
+    "Futuro": 72,
+    "Vencido": 0,
+    "Total": 165
+   },
+   {
+    "Profissional": "Thiago Frid Figueiredo Rossi",
+    "Fatal": 44,
+    "D-1": 87,
+    "D-2": 18,
+    "Futuro": 13,
+    "Vencido": 0,
+    "Total": 162
+   },
+   {
+    "Profissional": "Juliana Perucci",
+    "Fatal": 18,
+    "D-1": 54,
+    "D-2": 9,
+    "Futuro": 70,
+    "Vencido": 0,
+    "Total": 151
+   },
+   {
+    "Profissional": "Lucas Willott Pereira",
+    "Fatal": 102,
+    "D-1": 17,
+    "D-2": 5,
+    "Futuro": 10,
+    "Vencido": 1,
+    "Total": 135
+   },
+   {
+    "Profissional": "Júlia Priego Lopes da Silva",
+    "Fatal": 12,
+    "D-1": 41,
+    "D-2": 5,
+    "Futuro": 70,
+    "Vencido": 0,
+    "Total": 128
+   },
+   {
+    "Profissional": "Richard Ruan Leo da Silva",
+    "Fatal": 47,
+    "D-1": 36,
+    "D-2": 5,
+    "Futuro": 35,
+    "Vencido": 1,
+    "Total": 124
+   },
+   {
+    "Profissional": "Erik Mota Coppi",
+    "Fatal": 18,
+    "D-1": 40,
+    "D-2": 14,
+    "Futuro": 39,
+    "Vencido": 0,
+    "Total": 111
+   },
+   {
+    "Profissional": "Jessica Cerqueira Silva",
+    "Fatal": 3,
+    "D-1": 2,
+    "D-2": 2,
+    "Futuro": 72,
+    "Vencido": 0,
+    "Total": 79
+   },
+   {
+    "Profissional": "André Alessandro de Paula",
+    "Fatal": 4,
+    "D-1": 12,
+    "D-2": 10,
+    "Futuro": 47,
+    "Vencido": 0,
+    "Total": 73
+   },
+   {
+    "Profissional": "Aline Ferreira Miron",
+    "Fatal": 0,
+    "D-1": 7,
+    "D-2": 7,
+    "Futuro": 46,
+    "Vencido": 0,
+    "Total": 60
+   },
+   {
+    "Profissional": "Bruno Tanganelli Farah",
+    "Fatal": 15,
+    "D-1": 14,
+    "D-2": 1,
+    "Futuro": 4,
+    "Vencido": 0,
+    "Total": 34
+   },
+   {
+    "Profissional": "Sofia Freire",
+    "Fatal": 9,
+    "D-1": 6,
+    "D-2": 4,
+    "Futuro": 11,
+    "Vencido": 0,
+    "Total": 30
+   },
+   {
+    "Profissional": "Nicolau Rafael Guimarães Coelho",
+    "Fatal": 8,
+    "D-1": 3,
+    "D-2": 1,
+    "Futuro": 16,
+    "Vencido": 0,
+    "Total": 28
+   },
+   {
+    "Profissional": "Natália Biondi Gaggini Robles",
+    "Fatal": 1,
+    "D-1": 1,
+    "D-2": 1,
+    "Futuro": 5,
+    "Vencido": 0,
+    "Total": 8
+   },
+   {
+    "Profissional": "Keyla Maria Barbosa Silva Moraes",
+    "Fatal": 4,
+    "D-1": 1,
+    "D-2": 0,
+    "Futuro": 2,
+    "Vencido": 0,
+    "Total": 7
+   },
+   {
+    "Profissional": "Fabiana Correia dos Anjos Gomes",
+    "Fatal": 0,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 1,
+    "Vencido": 0,
+    "Total": 1
+   },
+   {
+    "Profissional": "Gabriel Neder De Donato",
+    "Fatal": 0,
+    "D-1": 1,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 0,
+    "Total": 1
+   },
+   {
+    "Profissional": "Washington Soares Silva Filho",
+    "Fatal": 1,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 0,
+    "Total": 1
+   }
+  ],
+  "Outubro/2026": [
+   {
+    "Profissional": "Camila Alves Magalhães de Paula",
+    "Fatal": 32,
+    "D-1": 165,
+    "D-2": 30,
+    "Futuro": 118,
+    "Vencido": 0,
+    "Total": 345
+   },
+   {
+    "Profissional": "Rafael Yepez do Lago",
+    "Fatal": 142,
+    "D-1": 159,
+    "D-2": 17,
+    "Futuro": 26,
+    "Vencido": 0,
+    "Total": 344
+   },
+   {
+    "Profissional": "Rafael Rocha Ferreira",
+    "Fatal": 43,
+    "D-1": 149,
+    "D-2": 12,
+    "Futuro": 128,
+    "Vencido": 0,
+    "Total": 332
+   },
+   {
+    "Profissional": "Beatriz Santiago de Souza",
+    "Fatal": 15,
+    "D-1": 131,
+    "D-2": 39,
+    "Futuro": 132,
+    "Vencido": 0,
+    "Total": 317
+   },
+   {
+    "Profissional": "Giulia Vendramini Milani",
+    "Fatal": 31,
+    "D-1": 116,
+    "D-2": 25,
+    "Futuro": 116,
+    "Vencido": 1,
+    "Total": 289
+   },
+   {
+    "Profissional": "Paloma da Silva Santos",
+    "Fatal": 15,
+    "D-1": 128,
+    "D-2": 30,
+    "Futuro": 106,
+    "Vencido": 0,
+    "Total": 279
+   },
+   {
+    "Profissional": "Mariana Borges de Menezes Fávaro",
+    "Fatal": 35,
+    "D-1": 148,
+    "D-2": 25,
+    "Futuro": 65,
+    "Vencido": 0,
+    "Total": 273
+   },
+   {
+    "Profissional": "Guilherme Silva Morimoto",
+    "Fatal": 96,
+    "D-1": 62,
+    "D-2": 12,
+    "Futuro": 102,
+    "Vencido": 0,
+    "Total": 272
+   },
+   {
+    "Profissional": "Joice Ramos Miranda",
+    "Fatal": 79,
+    "D-1": 155,
+    "D-2": 10,
+    "Futuro": 21,
+    "Vencido": 0,
+    "Total": 265
+   },
+   {
+    "Profissional": "Letícia Meneghini Fontes",
+    "Fatal": 14,
+    "D-1": 168,
+    "D-2": 31,
+    "Futuro": 26,
+    "Vencido": 0,
+    "Total": 239
+   },
+   {
+    "Profissional": "Erik Mota Coppi",
+    "Fatal": 52,
+    "D-1": 92,
+    "D-2": 19,
+    "Futuro": 73,
+    "Vencido": 0,
+    "Total": 236
+   },
+   {
+    "Profissional": "Bianca Bolanhi Camacho",
+    "Fatal": 61,
+    "D-1": 103,
+    "D-2": 21,
+    "Futuro": 33,
+    "Vencido": 0,
+    "Total": 218
+   },
+   {
+    "Profissional": "Arthur Rodrigues Rios Toledo de Castro",
+    "Fatal": 94,
+    "D-1": 28,
+    "D-2": 6,
+    "Futuro": 89,
+    "Vencido": 0,
+    "Total": 217
+   },
+   {
+    "Profissional": "Vanessa de Cassia Castrequini Rosa",
+    "Fatal": 77,
+    "D-1": 39,
+    "D-2": 17,
+    "Futuro": 75,
+    "Vencido": 0,
+    "Total": 208
+   },
+   {
+    "Profissional": "Anna Carolina Balbino Gatti Baani",
+    "Fatal": 46,
+    "D-1": 66,
+    "D-2": 40,
+    "Futuro": 41,
+    "Vencido": 0,
+    "Total": 193
+   },
+   {
+    "Profissional": "Tamara Silva Marcílio",
+    "Fatal": 9,
+    "D-1": 100,
+    "D-2": 6,
+    "Futuro": 76,
+    "Vencido": 0,
+    "Total": 191
+   },
+   {
+    "Profissional": "Lucas Willott Pereira",
+    "Fatal": 122,
+    "D-1": 52,
+    "D-2": 1,
+    "Futuro": 3,
+    "Vencido": 0,
+    "Total": 178
+   },
+   {
+    "Profissional": "Tamires Lins Costa",
+    "Fatal": 11,
+    "D-1": 80,
+    "D-2": 25,
+    "Futuro": 45,
+    "Vencido": 0,
+    "Total": 161
+   },
+   {
+    "Profissional": "Thiago Frid Figueiredo Rossi",
+    "Fatal": 28,
+    "D-1": 72,
+    "D-2": 28,
+    "Futuro": 22,
+    "Vencido": 0,
+    "Total": 150
+   },
+   {
+    "Profissional": "Vinicius da Silva Cerqueira",
+    "Fatal": 10,
+    "D-1": 55,
+    "D-2": 20,
+    "Futuro": 65,
+    "Vencido": 0,
+    "Total": 150
+   },
+   {
+    "Profissional": "Júlia Priego Lopes da Silva",
+    "Fatal": 9,
+    "D-1": 37,
+    "D-2": 5,
+    "Futuro": 90,
+    "Vencido": 0,
+    "Total": 141
+   },
+   {
+    "Profissional": "Bruna Cembranelli Fazenda",
+    "Fatal": 46,
+    "D-1": 33,
+    "D-2": 3,
+    "Futuro": 37,
+    "Vencido": 0,
+    "Total": 119
+   },
+   {
+    "Profissional": "Rafael Camargo Felisbino",
+    "Fatal": 16,
+    "D-1": 38,
+    "D-2": 4,
+    "Futuro": 44,
+    "Vencido": 1,
+    "Total": 103
+   },
+   {
+    "Profissional": "Vinícius Ronchi Arruda",
+    "Fatal": 2,
+    "D-1": 17,
+    "D-2": 13,
+    "Futuro": 65,
+    "Vencido": 0,
+    "Total": 97
+   },
+   {
+    "Profissional": "Bruno Tanganelli Farah",
+    "Fatal": 32,
+    "D-1": 12,
+    "D-2": 3,
+    "Futuro": 10,
+    "Vencido": 1,
+    "Total": 58
+   },
+   {
+    "Profissional": "André Alessandro de Paula",
+    "Fatal": 6,
+    "D-1": 8,
+    "D-2": 5,
+    "Futuro": 35,
+    "Vencido": 0,
+    "Total": 54
+   },
+   {
+    "Profissional": "Juliana Perucci",
+    "Fatal": 10,
+    "D-1": 8,
+    "D-2": 4,
+    "Futuro": 29,
+    "Vencido": 0,
+    "Total": 51
+   },
+   {
+    "Profissional": "Thais Amaral Rocca",
+    "Fatal": 4,
+    "D-1": 29,
+    "D-2": 6,
+    "Futuro": 7,
+    "Vencido": 0,
+    "Total": 46
+   },
+   {
+    "Profissional": "Sofia Freire",
+    "Fatal": 8,
+    "D-1": 3,
+    "D-2": 4,
+    "Futuro": 15,
+    "Vencido": 0,
+    "Total": 30
+   },
+   {
+    "Profissional": "Nicolau Rafael Guimarães Coelho",
+    "Fatal": 7,
+    "D-1": 3,
+    "D-2": 1,
+    "Futuro": 13,
+    "Vencido": 0,
+    "Total": 24
+   },
+   {
+    "Profissional": "Richard Ruan Leo da Silva",
+    "Fatal": 7,
+    "D-1": 12,
+    "D-2": 5,
+    "Futuro": 0,
+    "Vencido": 0,
+    "Total": 24
+   },
+   {
+    "Profissional": "Natália Biondi Gaggini Robles",
+    "Fatal": 7,
+    "D-1": 2,
+    "D-2": 1,
+    "Futuro": 7,
+    "Vencido": 0,
+    "Total": 17
+   },
+   {
+    "Profissional": "Natalia Ferreira dos Santos",
+    "Fatal": 0,
+    "D-1": 7,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 0,
+    "Total": 7
+   },
+   {
+    "Profissional": "Keyla Maria Barbosa Silva Moraes",
+    "Fatal": 2,
+    "D-1": 0,
+    "D-2": 1,
+    "Futuro": 2,
+    "Vencido": 0,
+    "Total": 5
+   },
+   {
+    "Profissional": "Poliana Banqueri da Silva Guimarães",
+    "Fatal": 4,
+    "D-1": 1,
+    "D-2": 0,
+    "Futuro": 0,
+    "Vencido": 0,
+    "Total": 5
+   },
+   {
+    "Profissional": "Jessica Cerqueira Silva",
+    "Fatal": 0,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 4,
+    "Vencido": 0,
+    "Total": 4
+   },
+   {
+    "Profissional": "Aline Ferreira Miron",
+    "Fatal": 0,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 2,
+    "Vencido": 0,
+    "Total": 2
+   },
+   {
+    "Profissional": "Gabriel Neder De Donato",
+    "Fatal": 0,
+    "D-1": 0,
+    "D-2": 0,
+    "Futuro": 2,
+    "Vencido": 0,
+    "Total": 2
+   }
+  ]
+ },
+ "fataisGrupo": {
+  "Grupo E2": {
+   "Janeiro/2026": 382,
+   "Fevereiro/2026": 596,
+   "Março/2026": 855,
+   "Abril/2026": 654,
+   "Maio/2026": 425,
+   "Junho/2026": 388,
+   "Julho/2026": 680,
+   "Agosto/2026": 607,
+   "Setembro/2026": 616,
+   "Outubro/2026": 537
+  },
+  "Grupo B1": {
+   "Janeiro/2026": 138,
+   "Fevereiro/2026": 271,
+   "Março/2026": 418,
+   "Abril/2026": 275,
+   "Maio/2026": 134,
+   "Junho/2026": 217,
+   "Julho/2026": 302,
+   "Agosto/2026": 246,
+   "Setembro/2026": 190,
+   "Outubro/2026": 186
+  },
+  "Grupo E1": {
+   "Janeiro/2026": 120,
+   "Fevereiro/2026": 169,
+   "Março/2026": 233,
+   "Abril/2026": 134,
+   "Maio/2026": 73,
+   "Junho/2026": 106,
+   "Julho/2026": 258,
+   "Agosto/2026": 158,
+   "Setembro/2026": 95,
+   "Outubro/2026": 151
+  },
+  "Grupo B2": {
+   "Janeiro/2026": 48,
+   "Fevereiro/2026": 109,
+   "Março/2026": 206,
+   "Abril/2026": 89,
+   "Maio/2026": 40,
+   "Junho/2026": 66,
+   "Julho/2026": 83,
+   "Agosto/2026": 92,
+   "Setembro/2026": 158,
+   "Outubro/2026": 141
+  },
+  "Grupo C": {
+   "Janeiro/2026": 29,
+   "Fevereiro/2026": 62,
+   "Março/2026": 140,
+   "Abril/2026": 100,
+   "Maio/2026": 91,
+   "Junho/2026": 104,
+   "Julho/2026": 136,
+   "Agosto/2026": 111,
+   "Setembro/2026": 132,
+   "Outubro/2026": 17
+  },
+  "Grupo B3": {
+   "Janeiro/2026": 35,
+   "Fevereiro/2026": 37,
+   "Março/2026": 64,
+   "Abril/2026": 40,
+   "Maio/2026": 16,
+   "Junho/2026": 31,
+   "Julho/2026": 111,
+   "Agosto/2026": 41,
+   "Setembro/2026": 60,
+   "Outubro/2026": 41
+  },
+  "Grupo D1": {
+   "Janeiro/2026": 9,
+   "Fevereiro/2026": 18,
+   "Março/2026": 44,
+   "Abril/2026": 24,
+   "Maio/2026": 11,
+   "Junho/2026": 14,
+   "Julho/2026": 76,
+   "Agosto/2026": 34,
+   "Setembro/2026": 1,
+   "Outubro/2026": 0
+  },
+  "Grupo A3": {
+   "Janeiro/2026": 8,
+   "Fevereiro/2026": 10,
+   "Março/2026": 43,
+   "Abril/2026": 20,
+   "Maio/2026": 8,
+   "Junho/2026": 9,
+   "Julho/2026": 16,
+   "Agosto/2026": 15,
+   "Setembro/2026": 11,
+   "Outubro/2026": 12
+  },
+  "Grupo C1": {
+   "Janeiro/2026": 0,
+   "Fevereiro/2026": 0,
+   "Março/2026": 0,
+   "Abril/2026": 0,
+   "Maio/2026": 0,
+   "Junho/2026": 0,
+   "Julho/2026": 0,
+   "Agosto/2026": 0,
+   "Setembro/2026": 0,
+   "Outubro/2026": 50
+  },
+  "Grupo A2": {
+   "Janeiro/2026": 2,
+   "Fevereiro/2026": 4,
+   "Março/2026": 2,
+   "Abril/2026": 7,
+   "Maio/2026": 7,
+   "Junho/2026": 3,
+   "Julho/2026": 6,
+   "Agosto/2026": 2,
+   "Setembro/2026": 2,
+   "Outubro/2026": 5
+  },
+  "Grupo C2": {
+   "Janeiro/2026": 0,
+   "Fevereiro/2026": 0,
+   "Março/2026": 0,
+   "Abril/2026": 0,
+   "Maio/2026": 0,
+   "Junho/2026": 0,
+   "Julho/2026": 0,
+   "Agosto/2026": 0,
+   "Setembro/2026": 0,
+   "Outubro/2026": 20
+  },
+  "Grupo C3": {
+   "Janeiro/2026": 0,
+   "Fevereiro/2026": 0,
+   "Março/2026": 0,
+   "Abril/2026": 0,
+   "Maio/2026": 0,
+   "Junho/2026": 0,
+   "Julho/2026": 0,
+   "Agosto/2026": 0,
+   "Setembro/2026": 0,
+   "Outubro/2026": 12
+  },
+  "Grupo A1": {
+   "Janeiro/2026": 0,
+   "Fevereiro/2026": 1,
+   "Março/2026": 1,
+   "Abril/2026": 1,
+   "Maio/2026": 0,
+   "Junho/2026": 0,
+   "Julho/2026": 0,
+   "Agosto/2026": 1,
+   "Setembro/2026": 0,
+   "Outubro/2026": 0
+  },
+  "Grupo B4": {
+   "Janeiro/2026": 1,
+   "Fevereiro/2026": 0,
+   "Março/2026": 0,
+   "Abril/2026": 0,
+   "Maio/2026": 0,
+   "Junho/2026": 0,
+   "Julho/2026": 0,
+   "Agosto/2026": 1,
+   "Setembro/2026": 0,
+   "Outubro/2026": 0
+  }
+ },
+ "origem": "páginas publicadas em 03/11/2026 (status congelado pelos semanais)",
+ "notasEvolucao": [
+  "📌 No total, os prazos Fatais concluídos passaram de 1265 em Setembro/2026 para 1172 em Outubro/2026 (queda de 7%). Grupo E2 concentra o maior volume acumulado no período (5740 fatais). Maior melhora de Setembro/2026 para Outubro/2026: Grupo D1, de 1 para 0 fatais (-100%).",
+  "📌 Rafael Yepez do Lago tem o maior volume acumulado de fatais no período (1472). Maior melhora individual de Setembro/2026 para Outubro/2026: Jessica Cerqueira Silva, de 3 para 0 fatais (-100%). "
+ ]
+}
