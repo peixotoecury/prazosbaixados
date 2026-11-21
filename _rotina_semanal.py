@@ -87,11 +87,21 @@ def email(ini, fim):
     m = re.search(r"const FAT_FORA\s*=\s*(\[.*?\]);", t, re.S)
     ff = json.loads(m.group(1)) if m else []
     kp = dict(re.findall(r'<div class="klbl">([^<]+)</div><div class="kval[^"]*"[^>]*>([^<]+)</div>', t))
-    linhas = "".join(f"<tr><td>{x['dt']}</td><td>{x['hora_real'][:5]}</td><td>{x['resp']}</td><td>{x['grp']}</td><td>{x['proc']}</td></tr>" for x in ff)
+    # o LM grava a hora com o mês no lugar dos minutos (ex.: 19:11:44 em novembro), então só a hora cheia é confiável
+    linhas = "".join(f"<tr><td>{x['dt']}</td><td>{x['hora_real'][:2]}h</td><td>{x['resp']}</td><td>{x['grp']}</td><td>{x['proc']}</td></tr>" for x in ff)
+    import collections
+    pg = collections.Counter(x["grp"] for x in ff)
+    ps = collections.Counter((x["grp"], x["resp"]) for x in ff)
+    resumo = "".join(f"<tr><td>{g}</td><td>{sg}</td><td style='text-align:center'><b>{n}</b></td></tr>"
+                     for (g, sg), n in sorted(ps.items(), key=lambda kv: (-pg[kv[0][0]], kv[0][0], -kv[1], kv[0][1])))
+    por_grupo = "".join(f"<tr><td>{g}</td><td style='text-align:center'><b>{n}</b></td></tr>" for g, n in pg.most_common())
+    estilo = "border='1' cellpadding='4' style='border-collapse:collapse;font-size:12px;margin-bottom:14px'"
     corpo = (f"<p>Prazos baixados de {ini:%d/%m} a {fim:%d/%m/%Y}:</p><ul>"
              + "".join(f"<li>{k}: <b>{v}</b></li>" for k, v in kp.items())
              + f"</ul><p><b>Fatais fora do horário (antes das 9h ou a partir das 19h): {len(ff)}</b></p>"
-             + f"<table border='1' cellpadding='4' style='border-collapse:collapse;font-size:12px'><tr><th>Dia</th><th>Hora</th><th>Responsável</th><th>Grupo</th><th>Processo</th></tr>{linhas}</table>"
+             + f"<p>Por grupo:</p><table {estilo}><tr><th>Grupo</th><th>Quantidade</th></tr>{por_grupo}</table>"
+             + f"<p>Por grupo e sigla:</p><table {estilo}><tr><th>Grupo</th><th>Sigla</th><th>Quantidade</th></tr>{resumo}</table>"
+             + f"<p>Casos:</p><table {estilo}><tr><th>Dia</th><th>Hora</th><th>Responsável</th><th>Grupo</th><th>Processo</th></tr>{linhas}</table>"
              + "<p>Painel completo: https://peixotoecury.github.io/prazosbaixados/</p>")
     import win32com.client
     ol = win32com.client.Dispatch("Outlook.Application")
