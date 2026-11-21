@@ -86,7 +86,7 @@ def email(ini, fim):
     t = (AQUI / "protocolados.html").read_text(encoding="utf-8")
     m = re.search(r"const FAT_FORA\s*=\s*(\[.*?\]);", t, re.S)
     ff = json.loads(m.group(1)) if m else []
-    kp = dict(re.findall(r'<div class="klbl">([^<]+)</div><div class="kval[^"]*"[^>]*>([^<]+)</div>', t))
+    kp = {k: v for k, v in re.findall(r'<div class="klbl">([^<]+)</div><div class="kval[^"]*"[^>]*>([^<]+)</div>', t) if "${" not in k + v}  # só os cards fixos, não o código da página
     # o LM grava a hora com o mês no lugar dos minutos (ex.: 19:11:44 em novembro), então só a hora cheia é confiável
     linhas = "".join(f"<tr><td>{x['dt']}</td><td>{x['hora_real'][:2]}h</td><td>{x['resp']}</td><td>{x['grp']}</td><td>{x['proc']}</td></tr>" for x in ff)
     import collections
