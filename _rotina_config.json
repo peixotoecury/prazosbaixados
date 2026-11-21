@@ -1,1 +1,9 @@
-{"email_para": ["eu"]}
+{
+ "email_para": [
+  "poliana.banqueri@peixotoecury.com.br",
+  "marcel.alves@peixotoecury.com.br"
+ ],
+ "email_cc": [
+  "controladoria@peixotoecury.com.br"
+ ]
+}

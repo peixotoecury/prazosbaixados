@@ -92,6 +92,7 @@ def email(ini, fim):
         eu = (u.GetExchangeUser().PrimarySmtpAddress if u.GetExchangeUser() else u.Address)
         para = [eu if x == "eu" else x for x in para]
     mail.To = "; ".join(para)
+    if cfg.get("email_cc"): mail.CC = "; ".join(cfg["email_cc"])
     mail.Subject = assunto
     logo = AQUI.parent / "BAND" / "Bases" / "logo_pc_branca.png"
     if logo.exists():  # logo embutido no corpo (cid), o Outlook não mostra imagem em data URI
@@ -99,7 +100,7 @@ def email(ini, fim):
         anexo.PropertyAccessor.SetProperty("http://schemas.microsoft.com/mapi/proptag/0x3712001F", "logo_pc")
     mail.HTMLBody = corpo
     mail.Send()
-    log(f"e-mail enviado para {', '.join(para)}")
+    log(f"e-mail enviado para {', '.join(para)}" + (f" (cc {', '.join(cfg['email_cc'])})" if cfg.get("email_cc") else ""))
 
 
 # ---------------------------------------------------------------- e-mail visual (tabelas e estilos inline, para o Outlook)
