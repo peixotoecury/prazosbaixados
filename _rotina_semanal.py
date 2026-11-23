@@ -28,12 +28,19 @@ def log(msg):
     with open(LOG, "a", encoding="utf-8") as f: f.write(linha + "\n")
 
 
-def roda(*args, cwd=AQUI):
-    r = subprocess.run(list(args), cwd=cwd, capture_output=True, text=True, encoding="utf-8", errors="replace", env=os.environ)
-    saida = (r.stdout + r.stderr).strip()
-    if saida: log("  " + saida.replace("\n", "\n  ")[-1500:])
-    if r.returncode: raise RuntimeError(f"falhou: {' '.join(map(str, args))}")
-    return saida
+def roda(*args, cwd=AQUI, tentativas=3):
+    """Roda uma etapa; se falhar, tenta de novo após 2 min (às 8h o LM ou o OneDrive às vezes ainda não responde; 23/11/2026)."""
+    import time
+    for t in range(1, tentativas + 1):
+        r = subprocess.run(list(args), cwd=cwd, capture_output=True, text=True, encoding="utf-8", errors="replace", env=os.environ)
+        saida = (r.stdout + r.stderr).strip()
+        if saida: log("  " + saida.replace("\n", "\n  ")[-1500:])
+        if not r.returncode:
+            return saida
+        if t < tentativas:
+            log(f"  etapa falhou (código {r.returncode}), nova tentativa em 2 min")
+            time.sleep(120)
+    raise RuntimeError(f"falhou: {' '.join(map(str, args))}")
 
 
 def ultima_semana():
